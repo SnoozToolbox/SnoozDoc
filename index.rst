@@ -4,12 +4,10 @@ Welcome to Snooz Toolbox documentation!
 **Snooz Toolbox** is a Python software for the analysis of sleep recordings (Polysomnography).
 Is is developped by the team at the CARSM (Center for Advanced Research in Sleep Medicine) of Montreal.
 
-| To get started, check out the :doc:`installation`.
-| For any programming questions, check out the :doc:`cookbook` section
-
-.. note::
-
-   This project is under active development.
+| To understand how it all works, check out the :doc:`technical_overview/technical_overview`.
+| To get started, see the :doc:`installation/installation` steps.
+| For any programming questions, check out the :doc:`howtos/howtos` section.
+|
 
 Contents
 --------
@@ -17,5 +15,9 @@ Contents
 .. toctree::
    :maxdepth: 2
 
-   installation
-   Cookbook/cookbook
+   technical_overview/technical_overview
+   installation/installation
+   howtos/howtos
+
+.. note::
+   This project is under active development.
