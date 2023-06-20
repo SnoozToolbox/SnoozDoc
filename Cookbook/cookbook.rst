@@ -1,0 +1,7 @@
+Cookbook
+========
+
+.. _cookbook:
+
+Cookbook
+--------
