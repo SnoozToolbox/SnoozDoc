@@ -3,7 +3,7 @@
 # -- Project information
 
 project = 'Snooz Toolbox'
-copyright = '2023, CIUSSS NIM, David Lévesque, Karine Lacourse'
+copyright = '2023, CIUSSS NIM'
 author = 'David Lévesque, Karine Lacourse'
 
 release = '0.1'
