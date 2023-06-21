@@ -13,6 +13,8 @@ User's Guide
 
 .. toctree::
    :maxdepth: 3
+   :hidden:
+   :caption: User's Guide
 
    user_guide/getting_started
    user_guide/installation/installation
@@ -27,7 +29,8 @@ Developer's Guide
 
 .. toctree::
    :maxdepth: 3
-
+   :hidden:
+   :caption: Developer's Guide
 
    dev_guide/technical_overview/technical_overview
    dev_guide/howtos/howtos
