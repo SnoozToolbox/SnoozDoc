@@ -1,5 +1,5 @@
-Module How Tos
-==============
+How Tos - Module 
+================
 
 .. _module_howtos:
 

@@ -1,5 +1,5 @@
-Package How Tos
-===============
+How Tos - Package
+=================
 
 .. _package_howtos:
 

@@ -1,5 +1,5 @@
-Tool How Tos
-============
+How Tos - Tool
+==============
 
 .. _tool_howtos:
 

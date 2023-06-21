@@ -5,8 +5,8 @@ Documentation about the Snooz application
 
 pip install sphinx
 pip install sphinx_rtd_theme
-pip install sphinx-pdj-theme
 
 # To create the documentation from the root folder:
 
+source python_envs/sphinx_doc_env/bin/activate
 sphinx-build -b html . html
