@@ -4,7 +4,7 @@
 
 project = 'Snooz Toolbox'
 copyright = '2023, CIUSSS NIM'
-author = 'David Lévesque, Karine Lacourse'
+author = 'Karine Lacourse, David Lévesque'
 
 release = '0.1'
 version = '0.1.0'
