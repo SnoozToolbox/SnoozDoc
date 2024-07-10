@@ -15,8 +15,10 @@ Download and install Snooz
 .. warning::
 
     Snooz is not signed yet!
-    If you get this warning below
+    If you get this warning below :  
+     
     1. Click on More info.
+  
     2. Select Run anyway.
     
     .. image:: ./Windows_protected.png
