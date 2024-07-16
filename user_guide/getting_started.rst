@@ -1,12 +1,14 @@
+==========================
 Getting Started with Snooz
 ==========================
 
 The goal of this document is to  detail how to download, install and launch Snooz.
 
-First Download of Snooz
---------------------------
+First Snooz installation
+==========================
 
-**On Windows platforms** 
+On Windows platforms 
+---------------------
 
 1. Download the Installer zipped : `SnoozSetup_beta-030.zip <link https://drive.google.com/file/d/1CpVBJt2cciP9Zhg1nIXDW7XWWMAoc9E4/view?usp=sharing>`_ 
 2. Double click on the zip file downloaded.
@@ -31,13 +33,15 @@ When the installation is complete click “Next” to finish the install.
 Click “Finish”.
 You are done!
 
-**On MAC platforms** 
+On MAC platforms
+--------------------- 
 
 .. warning::  
 
     The installer is no longer updated since Apple requires a certified author.  Our team is working on it…
 
-**On Linux platforms** 
+On Linux platforms
+---------------------
 
 1. Download the Installer : `SnoozSetup_beta-030.deb <link https://drive.google.com/file/d/1aE4roYK3TxvyhA57im0Jug52FfVdu5IJ/view?usp=sharing>`_   
 
@@ -52,7 +56,7 @@ You are done!
 
 
 Download from the Snooz interface
----------------------------------
+=================================
 
 1. Launch the Snooz application already installed on your desktop.  
 2. TO BE complete (download the installer). 
@@ -63,17 +67,20 @@ Download from the Snooz interface
 7. Activate the latest version of the packages you are interested in. Navigate to File > Settings > Packages in Snooz. Check/uncheck the right versions.  
 
 Launch Snooz
-------------
+=================================
 
-**On Windows platforms**  
+On Windows platforms
+--------------------- 
 
 Type Snooz in the Windows Search.
 
-**On MAC platforms** 
+On MAC platforms
+--------------------- 
 
 Use Finder to locate Snooz in Applications.
 
-**On Linux platforms** 
+On Linux platforms
+--------------------- 
 
 From the Applications -> Snooz
 
