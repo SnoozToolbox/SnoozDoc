@@ -11,6 +11,7 @@ User's Guide
 ------------
 
 * Follow this guide to get you started using Snooz: :doc:`user_guide/getting_started`
+* Follow this guide to manage the Snooz packages: :doc:`user_guide/manage_package`
 * For information about a specific tool, see here: :doc:`user_guide/tools/tools`
 
 .. toctree::
@@ -19,7 +20,7 @@ User's Guide
    :caption: User's Guide
 
    user_guide/getting_started
-   user_guide/installation/installation
+   user_guide/manage_package
    user_guide/tools/tools
    
 Developer's Guide
@@ -37,3 +38,4 @@ Developer's Guide
    dev_guide/technical_overview/technical_overview
    dev_guide/howtos/howtos
    dev_guide/installation/installation
+
