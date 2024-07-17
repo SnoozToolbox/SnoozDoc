@@ -2,10 +2,11 @@
 Define Snooz packages
 =======================
 
-To manage the packages go to the menu File -> Settings -> Packages
+To manage the packages go to the menu File -> Settings -> Packages  
+
 For the first install of Snooz, the packages installed with Snooz are activated (checked). 
 
     .. image:: ./packages.png
-      :width: 400
+      :width: 800
       :alt: Alternative text   
 
