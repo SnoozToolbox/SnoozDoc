@@ -11,7 +11,6 @@ User's Guide
 ------------
 
 * Follow this guide to get you started using Snooz: :doc:`user_guide/getting_started`
-* Follow this guide for the installation: :doc:`user_guide/installation/installation`
 * For information about a specific tool, see here: :doc:`user_guide/tools/tools`
 
 .. toctree::
