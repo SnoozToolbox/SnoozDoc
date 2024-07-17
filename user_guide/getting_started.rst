@@ -1,3 +1,5 @@
+.. _getting_started:
+
 ==========================
 Getting Started with Snooz
 ==========================
@@ -45,7 +47,8 @@ On Linux platforms
 
 1. Download the Installer : `SnoozSetup_beta-030.deb <link https://drive.google.com/file/d/1aE4roYK3TxvyhA57im0Jug52FfVdu5IJ/view?usp=sharing>`_   
 
-2. Install Snooz
+2. Install Snooz.
+   
    Open the installer via the Ubuntu software center or Software install and click install  
 
    or install Snooz via the terminal
@@ -54,17 +57,6 @@ On Linux platforms
 
       $ sudo dpkg -i SnoozSetup_beta-030.deb
 
-
-Download from the Snooz interface
-=================================
-
-1. Launch the Snooz application already installed on your desktop.  
-2. TO BE complete (download the installer). 
-3. Close Snooz to avoid errors during the installation.  
-4. You can uninstall the previous version of Snooz to delete obsolete packages (this step is optional).  
-5. Run the installer.  
-6. After installation, launch the new version of Snooz.  
-7. Activate the latest version of the packages you are interested in. Navigate to File > Settings > Packages in Snooz. Check/uncheck the right versions.  
 
 Launch Snooz
 =================================
@@ -85,4 +77,14 @@ On Linux platforms
 From the Applications -> Snooz
 
 
-.. _getting_started:
+Update Snooz from the interface
+=================================
+
+1. Launch the Snooz application already installed on your desktop.  
+2. TO BE complete (download the installer). 
+3. Close Snooz to avoid errors during the installation.  
+4. You can uninstall the previous version of Snooz to delete obsolete packages (this step is optional).  
+5. Run the installer.  
+6. After installation, launch the new version of Snooz.  
+7. Activate the latest version of the packages you are interested in. Navigate to File > Settings > Packages in Snooz. Check/uncheck the right versions.  
+   
