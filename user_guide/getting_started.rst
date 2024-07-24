@@ -81,10 +81,11 @@ Update Snooz from the interface
 =================================
 
 1. Launch the Snooz application already installed on your desktop.  
-2. TO BE complete (download the installer). 
-3. Close Snooz to avoid errors during the installation.  
-4. You can uninstall the previous version of Snooz to delete obsolete packages (this step is optional).  
-5. Run the installer.  
-6. After installation, launch the new version of Snooz.  
-7. Activate the latest version of the packages you are interested in. Navigate to File > Settings > Packages in Snooz. Check/uncheck the right versions.  
+2. Navigate to the menu About > About Snooz
+3. If the installed version is older than the released version download Snooz for your Operating System.
+4. Close Snooz to avoid errors during the installation.  
+5. You can uninstall the previous version of Snooz to delete obsolete packages (this step is optional).  
+6. Run the installer.  
+7. After installation, launch the new version of Snooz.  
+8. Activate the latest version of the packages you are interested in. Navigate to File > Settings > Packages in Snooz. Check/uncheck the right versions.  
    
