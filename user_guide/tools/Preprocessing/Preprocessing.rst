@@ -11,3 +11,5 @@ The Preprocessing category includes importers, converters, extractors, and the a
     Artifact_Detection
     DominoScreen_Converter
     EDFbrowser_Converter
+    Extract_Annotations
+    Sleep_Stages_Importer
