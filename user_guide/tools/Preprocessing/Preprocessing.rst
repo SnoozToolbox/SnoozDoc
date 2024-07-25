@@ -1,8 +1,8 @@
+.. _Preprocessing:
+
 ==============
 Preprocessing
 ==============
-
-.. _Preprocessing:
 
 The Preprocessing category includes importers, converters, extractors, and the artifact detection tool.
 
@@ -13,3 +13,4 @@ The Preprocessing category includes importers, converters, extractors, and the a
     EDFbrowser_Converter
     Extract_Annotations
     Sleep_Stages_Importer
+    XML_Converter

@@ -1,8 +1,8 @@
+.. _tools:
+
 =====
 Tools
 =====
-
-.. _tools:
 
 This section describes how to use tools within Snooz.
 

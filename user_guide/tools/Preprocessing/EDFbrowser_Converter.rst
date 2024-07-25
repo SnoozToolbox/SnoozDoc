@@ -1,3 +1,5 @@
+.. _EDFbrowser_Converter:
+
 ======================
 EDFbrowser Converter
 ======================
@@ -51,7 +53,3 @@ Edit the annotation group as you wish.  The default group is EDFbrowser.
 	i.e. ``subject1.edf`` and ``subject1.tsv`` **is valid** 
     
         i.e. ``subject1.edf`` and ``subject1_annotation.tsv`` **is not valid**
-
-
-.. _Processing:
-    Annotations_Editor

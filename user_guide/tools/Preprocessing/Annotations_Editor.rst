@@ -1,3 +1,5 @@
+.. _Annotations_Editor: 
+
 ===================
 Annotations Editor
 ===================
@@ -33,7 +35,3 @@ Press 'Export' to display all the changes that will be applied at runtime.
 .. note::
 
     Look at the "Annotations Editor" home page for more information. 
-
-
-.. _Processing:
-    Annotations_Editor

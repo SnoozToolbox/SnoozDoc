@@ -1,3 +1,5 @@
+.. _Artifact_Detection:
+
 ===================
 Artifact Detection
 ===================
@@ -46,7 +48,3 @@ The user must select the detectors to run and select the sleep stages to potenti
 .. note::
 
     Look at the "Artifact Detection" home page and the "Detectors Settings" step for more information. 
-
-
-.. _Processing:
-    Annotations_Editor

@@ -1,3 +1,5 @@
+.. _Sleep_Stages_Importer:
+
 ======================
 Sleep Stages Importer
 ======================
@@ -30,6 +32,3 @@ Define the original sleep stage labels from the text file to import to ensure pr
 
     The user will be informed in the log if no sleep stages file is found for a PSG file or if any original label for sleep stages is missing from the renaming table.
 	
-
-.. _Processing:
-    Annotations_Editor
