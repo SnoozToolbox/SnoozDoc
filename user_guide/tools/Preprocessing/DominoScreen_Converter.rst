@@ -39,22 +39,6 @@ Supported Formats
         00:54:16,219-00:55:26,219; 70;Obstructive Apnea
         01:36:57,630-01:37:16,870; 19;Flow Limitation
 
-**Unsupported format**
-
-* Recorded or computed values 
-
-    .. code-block:: rst
-
-        Signal ID: SchlafFFT
-        Start Time: 17/11/2010 23:57:00
-        Unit: Hz
-        Signal Type: Analog
-        
-        23:57:00,000; 11
-        23:57:01,000; 11
-        23:57:02,000; 12
-        23:57:03,000; 14
-
 **Examples of supported accessory files**
 
 * Cardiac Events
@@ -70,6 +54,24 @@ Supported Formats
 * Snore Events
 * Spindle  K
 * SpO2 Events
+
+
+Unsupported format
+-------------------
+
+* Recorded or computed values 
+
+    .. code-block:: rst
+
+        Signal ID: SchlafFFT
+        Start Time: 17/11/2010 23:57:00
+        Unit: Hz
+        Signal Type: Analog
+        
+        23:57:00,000; 11
+        23:57:01,000; 11
+        23:57:02,000; 12
+        23:57:03,000; 14
 
 **Examples of unsupported accessory files**
 
