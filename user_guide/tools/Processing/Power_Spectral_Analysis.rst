@@ -58,8 +58,10 @@ Steps
     .. note::
 
         The frequency bin resolution (Hz) depends of the window length (s) used to perform each FFT.
+
         Frequency bin resolution : 1 / [fft windows length (s)]
-            I.e. 1 / 5 s = 0.2 Hz or 1 / 4 s = 0.25 Hz
+        
+        I.e. 1 / 5 s = 0.2 Hz or 1 / 4 s = 0.25 Hz
 
     It is common to average the power from a few frequency bins in order to estimate the spectral power in a frequency band.
     Define the width (Hz) of the frequency bands you are interested in. 

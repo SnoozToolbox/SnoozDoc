@@ -1,0 +1,49 @@
+name	description
+filename	PSG filename
+group	Subject Group
+sex	Subject Sex
+birthdate	The birthdate of the subject, yyyy-mm-dd
+creation_date	The creation date of the analysed file, yyyy-mm-dd
+age	Subject age at the recording date
+height	Subject height
+weight	Subject weight
+bmi	Subject BMI
+waistline	Subject Waistlist size
+window_length_sec	Windows length (s) used to compute the temporal link.
+record_min	Duration of the recording (min) used to compute the temporal link index.
+event1_class	events 1 : the class of the events
+event1_group	events 1 : the group of the events
+event1_name	events 1 : the name of the events
+event2_class	events 2 : the class of the events
+event2_group	events 2 : the group of the events
+event2_name	events 2 : the name of the events
+1start_before_2start_count	event1 starts before the event 2 starts : number
+1start_before_2start_delay_sec	event1 starts before the event 2 starts : mean delay (s)
+1start_before_2start_index	event1 starts before the event 2 starts : density per hour
+1start_before_2start_evt1_percent	event1 starts before the event 2 starts : percentage of event1 linked
+1start_before_2start_evt2_percent	event1 starts before the event 2 starts : percentage of event2 linked
+1end_before_2start_count	event1 ends before the event 2 starts : number
+1end_before_2start_delay_sec	event1 ends before the event 2 starts : mean delay (s)
+1end_before_2start_index	event1 ends before the event 2 starts : density per hour
+1end_before_2start_evt1_percent	event1 ends before the event 2 starts : percentage of event1 linked
+1end_before_2start_evt2_percent	event1 ends before the event 2 starts : percentage of event2 linked
+2start_before_1start_count	event2 starts before the event 1 starts : number
+2start_before_1start_delay_sec	event2 starts before the event 1 starts : mean delay (s)
+2start_before_1start_index	event2 starts before the event 1 starts : density per hour
+2start_before_1start_evt1_percent	event2 starts before the event 1 starts : percentage of event1 linked
+2start_before_1start_evt2_percent	event2 starts before the event 1 starts : percentage of event2 linked
+2end_before_1start_count	event2 ends before the event 1 starts : number
+2end_before_1start_delay_sec	event2 ends before the event 1 starts : mean delay (s)
+2end_before_1start_index	event2 ends before the event 1 starts : density per hour
+2end_before_1start_evt1_percent	event2 ends before the event 1 starts : percentage of event1 linked
+2end_before_1start_evt2_percent	event2 ends before the event 1 starts : percentage of event2 linked
+overlap_count	overlaps of events1 and events2 : number
+overlap_index	overlaps of events1 and events2 : density per hour
+overlap_evt1_percent	overlaps of events1 and events2 : percentage of event1 overlapped
+overlap_evt2_percent	overlaps of events1 and events2 : percentage of event2 overlapped
+evt1_linked_count	event 1 linked : number of events 1 linked
+evt1_index	event 1 linked : density per hour of events 1 linked per hour
+evt1_link_percent	event 1 linked : percentage of events 1 linked
+evt2_linked_count	event 2 linked : number of events 1 linked
+evt2_index	event 2 linked : density per hour of events 2 linked per hour
+evt2_link_percent	event 2 linked : percentage of events 2 linked

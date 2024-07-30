@@ -86,7 +86,7 @@ Load workspace
 
    .. warning::  
       
-      The .json file includes the API version of Snooz (``package_api_version": "1.0.0"``) and all the package dependencies, if any.  Make sure to use a valid workspace for the vesion of Snooz installed. 
+      The .json file includes the API version of Snooz (``package_api_version": "1.0.0"``) and all the package dependencies, if any.  Make sure to use a valid workspace for the version of Snooz installed. 
 
 
 Tools Categories
