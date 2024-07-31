@@ -9,9 +9,11 @@ Description
 
 The PSA is an algorithm designed to assess the intensity of a time-domain signal across various frequency bands.
 
+The PSA can be performed on chosen annotations (see :ref:`PSA_per_event_info_csv` for the variable definition) or can be carried out for each sleep stage (see :ref:`PSA_per_stage_info_csv` for the variable definition). 
+
 .. note::
 
-    The PSA can be performed on chosen annotations or can be carried out for each sleep stage. You must specify the stages to be incorporated into the PSA.  There is also the possibility to run the PSA on "unscored" data.
+    For the report per sleep stages, you must specify the stages to be incorporated into the PSA, but there is also the possibility to run the PSA on "unscored" data.
 
 .. warning::
 
@@ -82,3 +84,7 @@ Steps
 .. warning::
     
     The PSA data is added (appended) to the output file, the output file will be modified each time the PSA tool is run.
+
+.. toctree::
+   Power_Spectral_Analysis/PSA_per_stage_info_csv
+   Power_Spectral_Analysis/PSA_per_event_info_csv
