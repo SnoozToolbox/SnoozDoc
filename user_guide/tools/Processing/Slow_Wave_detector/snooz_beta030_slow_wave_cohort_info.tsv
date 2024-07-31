@@ -1,0 +1,579 @@
+A	filename	PSG filename
+B	id1	subject identification
+C	cyc_def_option	"Method used to split the sleep period in sleep cycles, it defines the criteria. I.e. : ""Minimum criteria""  ""Aeschbach 1993""  ""Feinberg 1979"""
+D	cyc_def_include_soremp	Include a REM sleep periods (REMP) that occur within 15 minutes of sleep onset.
+E	cyc_def_include_last_incomplete	Include the last sleep cycle even if the NREM period (NREMP) or REMP does not meet the minimum duration criteria.
+F	cyc_def_rem_min	Minimum length without R stage to end the REMP.
+G	cyc_def_first_nrem_min	Minimum length of the first NREMP in minutes.
+H	cyc_def_mid_last_nrem_min	Minimum length of the middle and last NREMP in minutes.
+I	cyc_def_last_nrem_valid_min	Minimum length of the NREMP in minutes to validate the last sleep cycle.
+J	cyc_def_first_rem_min	Minimum length of the first REMP in minutes.
+K	cyc_def_mid_rem_min	Minimum length of the middle REMP in minutes.
+L	cyc_def_last_rem_min	Minimum length of the last REMP in minutes.
+M	cyc_def_move_end_rem	"Move the end of the REMP to the start of the following NREMP, eliminating the temporal ""gap"" between 2 cycles."
+N	cyc_def_sleep_stages	"List of valid stages used to define the sleep cycles:  ""N1, N2, N3, R"" or ""N2, N3, R"""
+O	stage_sel	Sleep stages selection to detect slow waves in.
+P	detect_excl_remp	Flag to exclude rem period from the slow wave detection.
+Q	sw_event_name	Slow wave event name (specific to the detection algorithm).
+R	filt_low_Hz	Low frequency of the bandpass filter (Hz).
+S	filt_high_Hz	High frequency of the bandpass filter (Hz).
+T	min_amp_pkpk_uV	Minimum peak-to-peak amplitude (uV).
+U	min_neg_amp_uV	Minimum negative amplitude (uV).
+V	min_neg_ms	Minimum duration of negative part of the slow wave (ms).
+W	max_neg_ms	Maximum duration of negative part of the slow wave (ms).
+X	min_pos_ms	Minimum duration of positive part of the slow wave (ms).
+Y	max_pos_ms	Maximum duration of positive part of the slow wave (ms).
+Z	artefact_group_name	List of groups and names of the artifact excluded from the detection
+AA	chan_label	The label of the channel.
+AB	chan_fs	The sampling rate (Hz) of the channel.
+AC	cyc_count	Number of sleep cycles.
+AD	recording_min	Recording duration (min) from lights off to lights on.
+AE	sleep_period_min	Total period for detection - Duration (min) of the sleep period.
+AF	total_N1_valid_min	Valid (no artifact) period for detection - Valid duration (min) of the sleep period in N1 stage minus the REM periods if excluded.
+AG	total_N2_valid_min	Valid (no artifact) period for detection - Valid duration (min) of the sleep period in N2 stage minus the REM periods if excluded.
+AH	total_N3_valid_min	Valid (no artifact) period for detection - Valid duration (min) of the sleep period in N3 stage minus the REM periods if excluded.
+AI	total_R_valid_min	Valid (no artifact) period for detection - Valid duration (min) of the sleep period in REM stage.
+AJ	total_valid_min	Valid (no artifact) period for detection - Valid duration (min) of the sleep stage selected minus thoses included in REM periods if remps are excluded.
+AK	total_N1_sw_count	Total - SW count in N1 stage.
+AL	total_N2_sw_count	Total - SW count in N2 stage.
+AM	total_N3_sw_count	Total - SW count in N3 stage.
+AN	total_R_sw_count	Total - SW count in REM stage.
+AO	total_sw_count	Total - SW count in all stages.
+AP	total_N1_sw_sec	Total - Average slow wave duration (s) in N1 stage.
+AQ	total_N2_sw_sec	Total - Average slow wave duration (s) in N2 stage.
+AR	total_N3_sw_sec	Total - Average slow wave duration (s) in N3 stage.
+AS	total_R_sw_sec	Total - Average slow wave duration (s) in REM stage.
+AT	total_sw_sec	Total - Average slow wave duration (s)
+AU	total_N1_pkpk_amp_uV	Total - Average slow wave peak-to-peak amplitude (uV) in N1 stage.
+AV	total_N2_pkpk_amp_uV	Total - Average slow wave peak-to-peak amplitude (uV) in N2 stage.
+AW	total_N3_pkpk_amp_uV	Total - Average slow wave peak-to-peak amplitude (uV) in N3 stage.
+AX	total_R_pkpk_amp_uV	Total - Average slow wave peak-to-peak amplitude (uV) in REM stage.
+AY	total_pkpk_amp_uV	Total - Average slow wave peak-to-peak amplitude (uV)
+AZ	total_N1_freq_Hz	Total - Slow wave frequency (Hz) (inverse of the duration) in N1 stage.
+BA	total_N2_freq_Hz	Total - Slow wave frequency (Hz) (inverse of the duration) in N2 stage.
+BB	total_N3_freq_Hz	Total - Slow wave frequency (Hz) (inverse of the duration) in N3 stage.
+BC	total_R_freq_Hz	Total - Slow wave frequency (Hz) (inverse of the duration) in REM stage.
+BD	total_freq_Hz	Total - Slow wave frequency (Hz) (inverse of the duration).
+BE	total_N1_neg_amp_uV	Total - Average slow wave negative peak amplitude (uV) in N1 stage.
+BF	total_N2_neg_amp_uV	Total - Average slow wave negative peak amplitude (uV) in N2 stage.
+BG	total_N3_neg_amp_uV	Total - Average slow wave negative peak amplitude (uV) in N3 stage.
+BH	total_R_neg_amp_uV	Total - Average slow wave negative peak amplitude (uV) in REM stage.
+BI	total_neg_amp_uV	Total - Average slow wave negative peak amplitude (uV).
+BJ	total_N1_neg_sec	Total - Average slow wave negative duration (ms) in N1 stage.
+BK	total_N2_neg_sec	Total - Average slow wave negative duration (ms) in N2 stage.
+BL	total_N3_neg_sec	Total - Average slow wave negative duration (ms) in N3 stage.
+BM	total_R_neg_sec	Total - Average slow wave negative duration (ms) in REM stage.
+BN	total_neg_sec	Total - Average slow wave negative duration (ms)
+BO	total_N1_pos_sec	Total - Average slow wave positive duration (ms) in N1 stage.
+BP	total_N2_pos_sec	Total - Average slow wave positive duration (ms) in N2 stage.
+BQ	total_N3_pos_sec	Total - Average slow wave positive duration (ms) in N3 stage.
+BR	total_R_pos_sec	Total - Average slow wave positive duration (ms) in REM stage.
+BS	total_pos_sec	Total -  Average slow wave positive duration (ms)
+BT	total_N1_slope_0_min	Total - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N1 stage.
+BU	total_N2_slope_0_min	Total - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N2 stage.
+BV	total_N3_slope_0_min	Total - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N3 stage.
+BW	total_R_slope_0_min	Total - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in REM stage.
+BX	total_slope_0_min	Total -  Average slow wave slope (uV/s) from 0 crossing to the min of the negative component.
+BY	total_N1_slope_min_max	Total - Average slow wave slope (uV/s) from min to the max in N1 stage.
+BZ	total_N2_slope_min_max	Total - Average slow wave slope (uV/s) from min to the max in N2 stage.
+CA	total_N3_slope_min_max	Total - Average slow wave slope (uV/s) from min to the max in N3 stage.
+CB	total_R_slope_min_max	Total - Average slow wave slope (uV/s) from min to the max in REM stage.
+CC	total_slope_min_max	Total -  Average slow wave slope (uV/s) from min to the max.
+CD	total_N1_slope_max_0	Total - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N1 stage.
+CE	total_N2_slope_max_0	Total - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N2 stage.
+CF	total_N3_slope_max_0	Total - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N3 stage.
+CG	total_R_slope_max_0	Total - Average slow wave slope (uV/s) from max of positive to the 0 crossing in REM stage.
+CH	total_slope_max_0	Total -  Average slow wave slope (uV/s) from max of positive to the 0 crossing.
+CI	total_N1_trans_freq_Hz	Total -  Average slow wave transition frequency (Hz) in N1 stage.
+CJ	total_N2_trans_freq_Hz	Total -  Average slow wave transition frequency (Hz) in N2 stage.
+CK	total_N3_trans_freq_Hz	Total -  Average slow wave transition frequency (Hz) in N3 stage.
+CL	total_R_trans_freq_Hz	Total -  Average slow wave transition frequency (Hz) in REM stage.
+CM	total_trans_freq_Hz	Total -   Average slow wave transition frequency (Hz)
+CN	cyc1_valid_min	Cycle 1 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+CO	cyc1_N1_valid_min	Cycle 1 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+CP	cyc1_N2_valid_min	Cycle 1 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+CQ	cyc1_N3_valid_min	Cycle 1 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+CR	cyc1_R_valid_min	Cycle 1 - Valid (no artifact) duration (min) in REM stage available for detection.
+CS	cyc1_min	Cycle 1 duration (min) minus the REM periods if excluded.
+CT	cyc1_N1_sw_count	Cycle 1 - Slow wave count in N1 stage.
+CU	cyc1_N2_sw_count	Cycle 1 - Slow wave count in N2 stage.
+CV	cyc1_N3_sw_count	Cycle 1 - Slow wave count in N3 stage.
+CW	cyc1_R_sw_count	Cycle 1 - Slow wave count in REM stage.
+CX	cyc1_sw_count	Cycle 1 - Slow wave count in all stages.
+CY	cyc1_N1_sw_sec	Cycle 1 - Average slow wave duration (s) in N1 stage.
+CZ	cyc1_N2_sw_sec	Cycle 1 - Average slow wave duration (s) in N2 stage.
+DA	cyc1_N3_sw_sec	Cycle 1 - Average slow wave duration (s) in N3 stage.
+DB	cyc1_R_sw_sec	Cycle 1 - Average slow wave duration (s) in REM stage.
+DC	cyc1_sw_sec	Cycle 1 - Average slow wave duration (s)
+DD	cyc1_N1_pkpk_amp_uV	Cycle 1 - Average slow wave peak-to-peak amplitude (uV) in N1 stage.
+DE	cyc1_N2_pkpk_amp_uV	Cycle 1 - Average slow wave peak-to-peak amplitude (uV) in N2 stage.
+DF	cyc1_N3_pkpk_amp_uV	Cycle 1 - Average slow wave peak-to-peak amplitude (uV) in N3 stage.
+DG	cyc1_R_pkpk_amp_uV	Cycle 1 - Average slow wave peak-to-peak amplitude (uV) in REM stage.
+DH	cyc1_pkpk_amp_uV	Cycle 1 - Average slow wave peak-to-peak amplitude (uV)
+DI	cyc1_N1_freq_Hz	Cycle 1 - Slow wave frequency (Hz) (inverse of the duration) in N1 stage.
+DJ	cyc1_N2_freq_Hz	Cycle 1 - Slow wave frequency (Hz) (inverse of the duration) in N2 stage.
+DK	cyc1_N3_freq_Hz	Cycle 1 - Slow wave frequency (Hz) (inverse of the duration) in N3 stage.
+DL	cyc1_R_freq_Hz	Cycle 1 - Slow wave frequency (Hz) (inverse of the duration) in REM stage.
+DM	cyc1_freq_Hz	Cycle 1 - Slow wave frequency (Hz) (inverse of the duration).
+DN	cyc1_N1_neg_amp_uV	Cycle 1 - Average slow wave negative peak amplitude (uV) in N1 stage.
+DO	cyc1_N2_neg_amp_uV	Cycle 1 - Average slow wave negative peak amplitude (uV) in N2 stage.
+DP	cyc1_N3_neg_amp_uV	Cycle 1 - Average slow wave negative peak amplitude (uV) in N3 stage.
+DQ	cyc1_R_neg_amp_uV	Cycle 1 - Average slow wave negative peak amplitude (uV) in REM stage.
+DR	cyc1_neg_amp_uV	Cycle 1 - Average slow wave negative peak amplitude (uV).
+DS	cyc1_N1_neg_sec	Cycle 1 - Average slow wave negative duration (ms) in N1 stage.
+DT	cyc1_N2_neg_sec	Cycle 1 - Average slow wave negative duration (ms) in N2 stage.
+DU	cyc1_N3_neg_sec	Cycle 1 - Average slow wave negative duration (ms) in N3 stage.
+DV	cyc1_R_neg_sec	Cycle 1 - Average slow wave negative duration (ms) in REM stage.
+DW	cyc1_neg_sec	Cycle 1 - Average slow wave negative duration (ms)
+DX	cyc1_N1_pos_sec	Cycle 1 - Average slow wave positive duration (ms) in N1 stage.
+DY	cyc1_N2_pos_sec	Cycle 1 - Average slow wave positive duration (ms) in N2 stage.
+DZ	cyc1_N3_pos_sec	Cycle 1 - Average slow wave positive duration (ms) in N3 stage.
+EA	cyc1_R_pos_sec	Cycle 1 - Average slow wave positive duration (ms) in REM stage.
+EB	cyc1_pos_sec	Cycle 1 -  Average slow wave positive duration (ms)
+EC	cyc1_N1_slope_0_min	Cycle 1 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N1 stage.
+ED	cyc1_N2_slope_0_min	Cycle 1 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N2 stage.
+EE	cyc1_N3_slope_0_min	Cycle 1 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N3 stage.
+EF	cyc1_R_slope_0_min	Cycle 1 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in REM stage.
+EG	cyc1_slope_0_min	Cycle 1 -  Average slow wave slope (uV/s) from 0 crossing to the min of the negative component.
+EH	cyc1_N1_slope_min_max	Cycle 1 - Average slow wave slope (uV/s) from min to the max in N1 stage.
+EI	cyc1_N2_slope_min_max	Cycle 1 - Average slow wave slope (uV/s) from min to the max in N2 stage.
+EJ	cyc1_N3_slope_min_max	Cycle 1 - Average slow wave slope (uV/s) from min to the max in N3 stage.
+EK	cyc1_R_slope_min_max	Cycle 1 - Average slow wave slope (uV/s) from min to the max in REM stage.
+EL	cyc1_slope_min_max	Cycle 1 -  Average slow wave slope (uV/s) from min to the max.
+EM	cyc1_N1_slope_max_0	Cycle 1 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N1 stage.
+EN	cyc1_N2_slope_max_0	Cycle 1 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N2 stage.
+EO	cyc1_N3_slope_max_0	Cycle 1 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N3 stage.
+EP	cyc1_R_slope_max_0	Cycle 1 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in REM stage.
+EQ	cyc1_slope_max_0	Cycle 1 -  Average slow wave slope (uV/s) from max of positive to the 0 crossing.
+ER	cyc1_N1_trans_freq_Hz	Cycle 1 -  Average slow wave transition frequency (Hz) in N1 stage.
+ES	cyc1_N2_trans_freq_Hz	Cycle 1 -  Average slow wave transition frequency (Hz) in N2 stage.
+ET	cyc1_N3_trans_freq_Hz	Cycle 1 -  Average slow wave transition frequency (Hz) in N3 stage.
+EU	cyc1_R_trans_freq_Hz	Cycle 1 -  Average slow wave transition frequency (Hz) in REM stage.
+EV	cyc1_trans_freq_Hz	Cycle 1 -   Average slow wave transition frequency (Hz)
+EW	cyc2_valid_min	Cycle 2 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+EX	cyc2_N1_valid_min	Cycle 2 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+EY	cyc2_N2_valid_min	Cycle 2 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+EZ	cyc2_N3_valid_min	Cycle 2 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+FA	cyc2_R_valid_min	Cycle 2 - Valid (no artifact) duration (min) in REM stage available for detection.
+FB	cyc2_min	Cycle 2 duration (min) minus the REM periods if excluded.
+FC	cyc2_N1_sw_count	Cycle 2 - Slow wave count in N1 stage.
+FD	cyc2_N2_sw_count	Cycle 2 - Slow wave count in N2 stage.
+FE	cyc2_N3_sw_count	Cycle 2 - Slow wave count in N3 stage.
+FF	cyc2_R_sw_count	Cycle 2 - Slow wave count in REM stage.
+FG	cyc2_sw_count	Cycle 2 - Slow wave count in all stages.
+FH	cyc2_N1_sw_sec	Cycle 2 - Average slow wave duration (s) in N1 stage.
+FI	cyc2_N2_sw_sec	Cycle 2 - Average slow wave duration (s) in N2 stage.
+FJ	cyc2_N3_sw_sec	Cycle 2 - Average slow wave duration (s) in N3 stage.
+FK	cyc2_R_sw_sec	Cycle 2 - Average slow wave duration (s) in REM stage.
+FL	cyc2_sw_sec	Cycle 2 - Average slow wave duration (s)
+FM	cyc2_N1_pkpk_amp_uV	Cycle 2 - Average slow wave peak-to-peak amplitude (uV) in N1 stage.
+FN	cyc2_N2_pkpk_amp_uV	Cycle 2 - Average slow wave peak-to-peak amplitude (uV) in N2 stage.
+FO	cyc2_N3_pkpk_amp_uV	Cycle 2 - Average slow wave peak-to-peak amplitude (uV) in N3 stage.
+FP	cyc2_R_pkpk_amp_uV	Cycle 2 - Average slow wave peak-to-peak amplitude (uV) in REM stage.
+FQ	cyc2_pkpk_amp_uV	Cycle 2 - Average slow wave peak-to-peak amplitude (uV)
+FR	cyc2_N1_freq_Hz	Cycle 2 - Slow wave frequency (Hz) (inverse of the duration) in N1 stage.
+FS	cyc2_N2_freq_Hz	Cycle 2 - Slow wave frequency (Hz) (inverse of the duration) in N2 stage.
+FT	cyc2_N3_freq_Hz	Cycle 2 - Slow wave frequency (Hz) (inverse of the duration) in N3 stage.
+FU	cyc2_R_freq_Hz	Cycle 2 - Slow wave frequency (Hz) (inverse of the duration) in REM stage.
+FV	cyc2_freq_Hz	Cycle 2 - Slow wave frequency (Hz) (inverse of the duration).
+FW	cyc2_N1_neg_amp_uV	Cycle 2 - Average slow wave negative peak amplitude (uV) in N1 stage.
+FX	cyc2_N2_neg_amp_uV	Cycle 2 - Average slow wave negative peak amplitude (uV) in N2 stage.
+FY	cyc2_N3_neg_amp_uV	Cycle 2 - Average slow wave negative peak amplitude (uV) in N3 stage.
+FZ	cyc2_R_neg_amp_uV	Cycle 2 - Average slow wave negative peak amplitude (uV) in REM stage.
+GA	cyc2_neg_amp_uV	Cycle 2 - Average slow wave negative peak amplitude (uV).
+GB	cyc2_N1_neg_sec	Cycle 2 - Average slow wave negative duration (ms) in N1 stage.
+GC	cyc2_N2_neg_sec	Cycle 2 - Average slow wave negative duration (ms) in N2 stage.
+GD	cyc2_N3_neg_sec	Cycle 2 - Average slow wave negative duration (ms) in N3 stage.
+GE	cyc2_R_neg_sec	Cycle 2 - Average slow wave negative duration (ms) in REM stage.
+GF	cyc2_neg_sec	Cycle 2 - Average slow wave negative duration (ms)
+GG	cyc2_N1_pos_sec	Cycle 2 - Average slow wave positive duration (ms) in N1 stage.
+GH	cyc2_N2_pos_sec	Cycle 2 - Average slow wave positive duration (ms) in N2 stage.
+GI	cyc2_N3_pos_sec	Cycle 2 - Average slow wave positive duration (ms) in N3 stage.
+GJ	cyc2_R_pos_sec	Cycle 2 - Average slow wave positive duration (ms) in REM stage.
+GK	cyc2_pos_sec	Cycle 2 -  Average slow wave positive duration (ms)
+GL	cyc2_N1_slope_0_min	Cycle 2 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N1 stage.
+GM	cyc2_N2_slope_0_min	Cycle 2 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N2 stage.
+GN	cyc2_N3_slope_0_min	Cycle 2 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N3 stage.
+GO	cyc2_R_slope_0_min	Cycle 2 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in REM stage.
+GP	cyc2_slope_0_min	Cycle 2 -  Average slow wave slope (uV/s) from 0 crossing to the min of the negative component.
+GQ	cyc2_N1_slope_min_max	Cycle 2 - Average slow wave slope (uV/s) from min to the max in N1 stage.
+GR	cyc2_N2_slope_min_max	Cycle 2 - Average slow wave slope (uV/s) from min to the max in N2 stage.
+GS	cyc2_N3_slope_min_max	Cycle 2 - Average slow wave slope (uV/s) from min to the max in N3 stage.
+GT	cyc2_R_slope_min_max	Cycle 2 - Average slow wave slope (uV/s) from min to the max in REM stage.
+GU	cyc2_slope_min_max	Cycle 2 -  Average slow wave slope (uV/s) from min to the max.
+GV	cyc2_N1_slope_max_0	Cycle 2 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N1 stage.
+GW	cyc2_N2_slope_max_0	Cycle 2 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N2 stage.
+GX	cyc2_N3_slope_max_0	Cycle 2 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N3 stage.
+GY	cyc2_R_slope_max_0	Cycle 2 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in REM stage.
+GZ	cyc2_slope_max_0	Cycle 2 -  Average slow wave slope (uV/s) from max of positive to the 0 crossing.
+HA	cyc2_N1_trans_freq_Hz	Cycle 2 -  Average slow wave transition frequency (Hz) in N1 stage.
+HB	cyc2_N2_trans_freq_Hz	Cycle 2 -  Average slow wave transition frequency (Hz) in N2 stage.
+HC	cyc2_N3_trans_freq_Hz	Cycle 2 -  Average slow wave transition frequency (Hz) in N3 stage.
+HD	cyc2_R_trans_freq_Hz	Cycle 2 -  Average slow wave transition frequency (Hz) in REM stage.
+HE	cyc2_trans_freq_Hz	Cycle 2 -   Average slow wave transition frequency (Hz)
+HF	cyc3_valid_min	Cycle 3 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+HG	cyc3_N1_valid_min	Cycle 3 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+HH	cyc3_N2_valid_min	Cycle 3 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+HI	cyc3_N3_valid_min	Cycle 3 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+HJ	cyc3_R_valid_min	Cycle 3 - Valid (no artifact) duration (min) in REM stage available for detection.
+HK	cyc3_min	Cycle 3 duration (min) minus the REM periods if excluded.
+HL	cyc3_N1_sw_count	Cycle 3 - Slow wave count in N1 stage.
+HM	cyc3_N2_sw_count	Cycle 3 - Slow wave count in N2 stage.
+HN	cyc3_N3_sw_count	Cycle 3 - Slow wave count in N3 stage.
+HO	cyc3_R_sw_count	Cycle 3 - Slow wave count in REM stage.
+HP	cyc3_sw_count	Cycle 3 - Slow wave count in all stages.
+HQ	cyc3_N1_sw_sec	Cycle 3 - Average slow wave duration (s) in N1 stage.
+HR	cyc3_N2_sw_sec	Cycle 3 - Average slow wave duration (s) in N2 stage.
+HS	cyc3_N3_sw_sec	Cycle 3 - Average slow wave duration (s) in N3 stage.
+HT	cyc3_R_sw_sec	Cycle 3 - Average slow wave duration (s) in REM stage.
+HU	cyc3_sw_sec	Cycle 3 - Average slow wave duration (s)
+HV	cyc3_N1_pkpk_amp_uV	Cycle 3 - Average slow wave peak-to-peak amplitude (uV) in N1 stage.
+HW	cyc3_N2_pkpk_amp_uV	Cycle 3 - Average slow wave peak-to-peak amplitude (uV) in N2 stage.
+HX	cyc3_N3_pkpk_amp_uV	Cycle 3 - Average slow wave peak-to-peak amplitude (uV) in N3 stage.
+HY	cyc3_R_pkpk_amp_uV	Cycle 3 - Average slow wave peak-to-peak amplitude (uV) in REM stage.
+HZ	cyc3_pkpk_amp_uV	Cycle 3 - Average slow wave peak-to-peak amplitude (uV)
+IA	cyc3_N1_freq_Hz	Cycle 3 - Slow wave frequency (Hz) (inverse of the duration) in N1 stage.
+IB	cyc3_N2_freq_Hz	Cycle 3 - Slow wave frequency (Hz) (inverse of the duration) in N2 stage.
+IC	cyc3_N3_freq_Hz	Cycle 3 - Slow wave frequency (Hz) (inverse of the duration) in N3 stage.
+ID	cyc3_R_freq_Hz	Cycle 3 - Slow wave frequency (Hz) (inverse of the duration) in REM stage.
+IE	cyc3_freq_Hz	Cycle 3 - Slow wave frequency (Hz) (inverse of the duration).
+IF	cyc3_N1_neg_amp_uV	Cycle 3 - Average slow wave negative peak amplitude (uV) in N1 stage.
+IG	cyc3_N2_neg_amp_uV	Cycle 3 - Average slow wave negative peak amplitude (uV) in N2 stage.
+IH	cyc3_N3_neg_amp_uV	Cycle 3 - Average slow wave negative peak amplitude (uV) in N3 stage.
+II	cyc3_R_neg_amp_uV	Cycle 3 - Average slow wave negative peak amplitude (uV) in REM stage.
+IJ	cyc3_neg_amp_uV	Cycle 3 - Average slow wave negative peak amplitude (uV).
+IK	cyc3_N1_neg_sec	Cycle 3 - Average slow wave negative duration (ms) in N1 stage.
+IL	cyc3_N2_neg_sec	Cycle 3 - Average slow wave negative duration (ms) in N2 stage.
+IM	cyc3_N3_neg_sec	Cycle 3 - Average slow wave negative duration (ms) in N3 stage.
+IN	cyc3_R_neg_sec	Cycle 3 - Average slow wave negative duration (ms) in REM stage.
+IO	cyc3_neg_sec	Cycle 3 - Average slow wave negative duration (ms)
+IP	cyc3_N1_pos_sec	Cycle 3 - Average slow wave positive duration (ms) in N1 stage.
+IQ	cyc3_N2_pos_sec	Cycle 3 - Average slow wave positive duration (ms) in N2 stage.
+IR	cyc3_N3_pos_sec	Cycle 3 - Average slow wave positive duration (ms) in N3 stage.
+IS	cyc3_R_pos_sec	Cycle 3 - Average slow wave positive duration (ms) in REM stage.
+IT	cyc3_pos_sec	Cycle 3 -  Average slow wave positive duration (ms)
+IU	cyc3_N1_slope_0_min	Cycle 3 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N1 stage.
+IV	cyc3_N2_slope_0_min	Cycle 3 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N2 stage.
+IW	cyc3_N3_slope_0_min	Cycle 3 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N3 stage.
+IX	cyc3_R_slope_0_min	Cycle 3 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in REM stage.
+IY	cyc3_slope_0_min	Cycle 3 -  Average slow wave slope (uV/s) from 0 crossing to the min of the negative component.
+IZ	cyc3_N1_slope_min_max	Cycle 3 - Average slow wave slope (uV/s) from min to the max in N1 stage.
+JA	cyc3_N2_slope_min_max	Cycle 3 - Average slow wave slope (uV/s) from min to the max in N2 stage.
+JB	cyc3_N3_slope_min_max	Cycle 3 - Average slow wave slope (uV/s) from min to the max in N3 stage.
+JC	cyc3_R_slope_min_max	Cycle 3 - Average slow wave slope (uV/s) from min to the max in REM stage.
+JD	cyc3_slope_min_max	Cycle 3 -  Average slow wave slope (uV/s) from min to the max.
+JE	cyc3_N1_slope_max_0	Cycle 3 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N1 stage.
+JF	cyc3_N2_slope_max_0	Cycle 3 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N2 stage.
+JG	cyc3_N3_slope_max_0	Cycle 3 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N3 stage.
+JH	cyc3_R_slope_max_0	Cycle 3 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in REM stage.
+JI	cyc3_slope_max_0	Cycle 3 -  Average slow wave slope (uV/s) from max of positive to the 0 crossing.
+JJ	cyc3_N1_trans_freq_Hz	Cycle 3 -  Average slow wave transition frequency (Hz) in N1 stage.
+JK	cyc3_N2_trans_freq_Hz	Cycle 3 -  Average slow wave transition frequency (Hz) in N2 stage.
+JL	cyc3_N3_trans_freq_Hz	Cycle 3 -  Average slow wave transition frequency (Hz) in N3 stage.
+JM	cyc3_R_trans_freq_Hz	Cycle 3 -  Average slow wave transition frequency (Hz) in REM stage.
+JN	cyc3_trans_freq_Hz	Cycle 3 -   Average slow wave transition frequency (Hz)
+JO	cyc4_valid_min	Cycle 4 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+JP	cyc4_N1_valid_min	Cycle 4 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+JQ	cyc4_N2_valid_min	Cycle 4 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+JR	cyc4_N3_valid_min	Cycle 4 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+JS	cyc4_R_valid_min	Cycle 4 - Valid (no artifact) duration (min) in REM stage available for detection.
+JT	cyc4_min	Cycle 4 duration (min) minus the REM periods if excluded.
+JU	cyc4_N1_sw_count	Cycle 4 - Slow wave count in N1 stage.
+JV	cyc4_N2_sw_count	Cycle 4 - Slow wave count in N2 stage.
+JW	cyc4_N3_sw_count	Cycle 4 - Slow wave count in N3 stage.
+JX	cyc4_R_sw_count	Cycle 4 - Slow wave count in REM stage.
+JY	cyc4_sw_count	Cycle 4 - Slow wave count in all stages.
+JZ	cyc4_N1_sw_sec	Cycle 4 - Average slow wave duration (s) in N1 stage.
+KA	cyc4_N2_sw_sec	Cycle 4 - Average slow wave duration (s) in N2 stage.
+KB	cyc4_N3_sw_sec	Cycle 4 - Average slow wave duration (s) in N3 stage.
+KC	cyc4_R_sw_sec	Cycle 4 - Average slow wave duration (s) in REM stage.
+KD	cyc4_sw_sec	Cycle 4 - Average slow wave duration (s)
+KE	cyc4_N1_pkpk_amp_uV	Cycle 4 - Average slow wave peak-to-peak amplitude (uV) in N1 stage.
+KF	cyc4_N2_pkpk_amp_uV	Cycle 4 - Average slow wave peak-to-peak amplitude (uV) in N2 stage.
+KG	cyc4_N3_pkpk_amp_uV	Cycle 4 - Average slow wave peak-to-peak amplitude (uV) in N3 stage.
+KH	cyc4_R_pkpk_amp_uV	Cycle 4 - Average slow wave peak-to-peak amplitude (uV) in REM stage.
+KI	cyc4_pkpk_amp_uV	Cycle 4 - Average slow wave peak-to-peak amplitude (uV)
+KJ	cyc4_N1_freq_Hz	Cycle 4 - Slow wave frequency (Hz) (inverse of the duration) in N1 stage.
+KK	cyc4_N2_freq_Hz	Cycle 4 - Slow wave frequency (Hz) (inverse of the duration) in N2 stage.
+KL	cyc4_N3_freq_Hz	Cycle 4 - Slow wave frequency (Hz) (inverse of the duration) in N3 stage.
+KM	cyc4_R_freq_Hz	Cycle 4 - Slow wave frequency (Hz) (inverse of the duration) in REM stage.
+KN	cyc4_freq_Hz	Cycle 4 - Slow wave frequency (Hz) (inverse of the duration).
+KO	cyc4_N1_neg_amp_uV	Cycle 4 - Average slow wave negative peak amplitude (uV) in N1 stage.
+KP	cyc4_N2_neg_amp_uV	Cycle 4 - Average slow wave negative peak amplitude (uV) in N2 stage.
+KQ	cyc4_N3_neg_amp_uV	Cycle 4 - Average slow wave negative peak amplitude (uV) in N3 stage.
+KR	cyc4_R_neg_amp_uV	Cycle 4 - Average slow wave negative peak amplitude (uV) in REM stage.
+KS	cyc4_neg_amp_uV	Cycle 4 - Average slow wave negative peak amplitude (uV).
+KT	cyc4_N1_neg_sec	Cycle 4 - Average slow wave negative duration (ms) in N1 stage.
+KU	cyc4_N2_neg_sec	Cycle 4 - Average slow wave negative duration (ms) in N2 stage.
+KV	cyc4_N3_neg_sec	Cycle 4 - Average slow wave negative duration (ms) in N3 stage.
+KW	cyc4_R_neg_sec	Cycle 4 - Average slow wave negative duration (ms) in REM stage.
+KX	cyc4_neg_sec	Cycle 4 - Average slow wave negative duration (ms)
+KY	cyc4_N1_pos_sec	Cycle 4 - Average slow wave positive duration (ms) in N1 stage.
+KZ	cyc4_N2_pos_sec	Cycle 4 - Average slow wave positive duration (ms) in N2 stage.
+LA	cyc4_N3_pos_sec	Cycle 4 - Average slow wave positive duration (ms) in N3 stage.
+LB	cyc4_R_pos_sec	Cycle 4 - Average slow wave positive duration (ms) in REM stage.
+LC	cyc4_pos_sec	Cycle 4 -  Average slow wave positive duration (ms)
+LD	cyc4_N1_slope_0_min	Cycle 4 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N1 stage.
+LE	cyc4_N2_slope_0_min	Cycle 4 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N2 stage.
+LF	cyc4_N3_slope_0_min	Cycle 4 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N3 stage.
+LG	cyc4_R_slope_0_min	Cycle 4 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in REM stage.
+LH	cyc4_slope_0_min	Cycle 4 -  Average slow wave slope (uV/s) from 0 crossing to the min of the negative component.
+LI	cyc4_N1_slope_min_max	Cycle 4 - Average slow wave slope (uV/s) from min to the max in N1 stage.
+LJ	cyc4_N2_slope_min_max	Cycle 4 - Average slow wave slope (uV/s) from min to the max in N2 stage.
+LK	cyc4_N3_slope_min_max	Cycle 4 - Average slow wave slope (uV/s) from min to the max in N3 stage.
+LL	cyc4_R_slope_min_max	Cycle 4 - Average slow wave slope (uV/s) from min to the max in REM stage.
+LM	cyc4_slope_min_max	Cycle 4 -  Average slow wave slope (uV/s) from min to the max.
+LN	cyc4_N1_slope_max_0	Cycle 4 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N1 stage.
+LO	cyc4_N2_slope_max_0	Cycle 4 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N2 stage.
+LP	cyc4_N3_slope_max_0	Cycle 4 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N3 stage.
+LQ	cyc4_R_slope_max_0	Cycle 4 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in REM stage.
+LR	cyc4_slope_max_0	Cycle 4 -  Average slow wave slope (uV/s) from max of positive to the 0 crossing.
+LS	cyc4_N1_trans_freq_Hz	Cycle 4 -  Average slow wave transition frequency (Hz) in N1 stage.
+LT	cyc4_N2_trans_freq_Hz	Cycle 4 -  Average slow wave transition frequency (Hz) in N2 stage.
+LU	cyc4_N3_trans_freq_Hz	Cycle 4 -  Average slow wave transition frequency (Hz) in N3 stage.
+LV	cyc4_R_trans_freq_Hz	Cycle 4 -  Average slow wave transition frequency (Hz) in REM stage.
+LW	cyc4_trans_freq_Hz	Cycle 4 -   Average slow wave transition frequency (Hz)
+LX	cyc5_valid_min	Cycle 5 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+LY	cyc5_N1_valid_min	Cycle 5 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+LZ	cyc5_N2_valid_min	Cycle 5 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+MA	cyc5_N3_valid_min	Cycle 5 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+MB	cyc5_R_valid_min	Cycle 5 - Valid (no artifact) duration (min) in REM stage available for detection.
+MC	cyc5_min	Cycle 5 duration (min) minus the REM periods if excluded.
+MD	cyc5_N1_sw_count	Cycle 5 - Slow wave count in N1 stage.
+ME	cyc5_N2_sw_count	Cycle 5 - Slow wave count in N2 stage.
+MF	cyc5_N3_sw_count	Cycle 5 - Slow wave count in N3 stage.
+MG	cyc5_R_sw_count	Cycle 5 - Slow wave count in REM stage.
+MH	cyc5_sw_count	Cycle 5 - Slow wave count in all stages.
+MI	cyc5_N1_sw_sec	Cycle 5 - Average slow wave duration (s) in N1 stage.
+MJ	cyc5_N2_sw_sec	Cycle 5 - Average slow wave duration (s) in N2 stage.
+MK	cyc5_N3_sw_sec	Cycle 5 - Average slow wave duration (s) in N3 stage.
+ML	cyc5_R_sw_sec	Cycle 5 - Average slow wave duration (s) in REM stage.
+MM	cyc5_sw_sec	Cycle 5 - Average slow wave duration (s)
+MN	cyc5_N1_pkpk_amp_uV	Cycle 5 - Average slow wave peak-to-peak amplitude (uV) in N1 stage.
+MO	cyc5_N2_pkpk_amp_uV	Cycle 5 - Average slow wave peak-to-peak amplitude (uV) in N2 stage.
+MP	cyc5_N3_pkpk_amp_uV	Cycle 5 - Average slow wave peak-to-peak amplitude (uV) in N3 stage.
+MQ	cyc5_R_pkpk_amp_uV	Cycle 5 - Average slow wave peak-to-peak amplitude (uV) in REM stage.
+MR	cyc5_pkpk_amp_uV	Cycle 5 - Average slow wave peak-to-peak amplitude (uV)
+MS	cyc5_N1_freq_Hz	Cycle 5 - Slow wave frequency (Hz) (inverse of the duration) in N1 stage.
+MT	cyc5_N2_freq_Hz	Cycle 5 - Slow wave frequency (Hz) (inverse of the duration) in N2 stage.
+MU	cyc5_N3_freq_Hz	Cycle 5 - Slow wave frequency (Hz) (inverse of the duration) in N3 stage.
+MV	cyc5_R_freq_Hz	Cycle 5 - Slow wave frequency (Hz) (inverse of the duration) in REM stage.
+MW	cyc5_freq_Hz	Cycle 5 - Slow wave frequency (Hz) (inverse of the duration).
+MX	cyc5_N1_neg_amp_uV	Cycle 5 - Average slow wave negative peak amplitude (uV) in N1 stage.
+MY	cyc5_N2_neg_amp_uV	Cycle 5 - Average slow wave negative peak amplitude (uV) in N2 stage.
+MZ	cyc5_N3_neg_amp_uV	Cycle 5 - Average slow wave negative peak amplitude (uV) in N3 stage.
+NA	cyc5_R_neg_amp_uV	Cycle 5 - Average slow wave negative peak amplitude (uV) in REM stage.
+NB	cyc5_neg_amp_uV	Cycle 5 - Average slow wave negative peak amplitude (uV).
+NC	cyc5_N1_neg_sec	Cycle 5 - Average slow wave negative duration (ms) in N1 stage.
+ND	cyc5_N2_neg_sec	Cycle 5 - Average slow wave negative duration (ms) in N2 stage.
+NE	cyc5_N3_neg_sec	Cycle 5 - Average slow wave negative duration (ms) in N3 stage.
+NF	cyc5_R_neg_sec	Cycle 5 - Average slow wave negative duration (ms) in REM stage.
+NG	cyc5_neg_sec	Cycle 5 - Average slow wave negative duration (ms)
+NH	cyc5_N1_pos_sec	Cycle 5 - Average slow wave positive duration (ms) in N1 stage.
+NI	cyc5_N2_pos_sec	Cycle 5 - Average slow wave positive duration (ms) in N2 stage.
+NJ	cyc5_N3_pos_sec	Cycle 5 - Average slow wave positive duration (ms) in N3 stage.
+NK	cyc5_R_pos_sec	Cycle 5 - Average slow wave positive duration (ms) in REM stage.
+NL	cyc5_pos_sec	Cycle 5 -  Average slow wave positive duration (ms)
+NM	cyc5_N1_slope_0_min	Cycle 5 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N1 stage.
+NN	cyc5_N2_slope_0_min	Cycle 5 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N2 stage.
+NO	cyc5_N3_slope_0_min	Cycle 5 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N3 stage.
+NP	cyc5_R_slope_0_min	Cycle 5 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in REM stage.
+NQ	cyc5_slope_0_min	Cycle 5 -  Average slow wave slope (uV/s) from 0 crossing to the min of the negative component.
+NR	cyc5_N1_slope_min_max	Cycle 5 - Average slow wave slope (uV/s) from min to the max in N1 stage.
+NS	cyc5_N2_slope_min_max	Cycle 5 - Average slow wave slope (uV/s) from min to the max in N2 stage.
+NT	cyc5_N3_slope_min_max	Cycle 5 - Average slow wave slope (uV/s) from min to the max in N3 stage.
+NU	cyc5_R_slope_min_max	Cycle 5 - Average slow wave slope (uV/s) from min to the max in REM stage.
+NV	cyc5_slope_min_max	Cycle 5 -  Average slow wave slope (uV/s) from min to the max.
+NW	cyc5_N1_slope_max_0	Cycle 5 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N1 stage.
+NX	cyc5_N2_slope_max_0	Cycle 5 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N2 stage.
+NY	cyc5_N3_slope_max_0	Cycle 5 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N3 stage.
+NZ	cyc5_R_slope_max_0	Cycle 5 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in REM stage.
+OA	cyc5_slope_max_0	Cycle 5 -  Average slow wave slope (uV/s) from max of positive to the 0 crossing.
+OB	cyc5_N1_trans_freq_Hz	Cycle 5 -  Average slow wave transition frequency (Hz) in N1 stage.
+OC	cyc5_N2_trans_freq_Hz	Cycle 5 -  Average slow wave transition frequency (Hz) in N2 stage.
+OD	cyc5_N3_trans_freq_Hz	Cycle 5 -  Average slow wave transition frequency (Hz) in N3 stage.
+OE	cyc5_R_trans_freq_Hz	Cycle 5 -  Average slow wave transition frequency (Hz) in REM stage.
+OF	cyc5_trans_freq_Hz	Cycle 5 -   Average slow wave transition frequency (Hz)
+OG	cyc6_valid_min	Cycle 6 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+OH	cyc6_N1_valid_min	Cycle 6 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+OI	cyc6_N2_valid_min	Cycle 6 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+OJ	cyc6_N3_valid_min	Cycle 6 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+OK	cyc6_R_valid_min	Cycle 6 - Valid (no artifact) duration (min) in REM stage available for detection.
+OL	cyc6_min	Cycle 6 duration (min) minus the REM periods if excluded.
+OM	cyc6_N1_sw_count	Cycle 6 - Slow wave count in N1 stage.
+ON	cyc6_N2_sw_count	Cycle 6 - Slow wave count in N2 stage.
+OO	cyc6_N3_sw_count	Cycle 6 - Slow wave count in N3 stage.
+OP	cyc6_R_sw_count	Cycle 6 - Slow wave count in REM stage.
+OQ	cyc6_sw_count	Cycle 6 - Slow wave count in all stages.
+OR	cyc6_N1_sw_sec	Cycle 6 - Average slow wave duration (s) in N1 stage.
+OS	cyc6_N2_sw_sec	Cycle 6 - Average slow wave duration (s) in N2 stage.
+OT	cyc6_N3_sw_sec	Cycle 6 - Average slow wave duration (s) in N3 stage.
+OU	cyc6_R_sw_sec	Cycle 6 - Average slow wave duration (s) in REM stage.
+OV	cyc6_sw_sec	Cycle 6 - Average slow wave duration (s)
+OW	cyc6_N1_pkpk_amp_uV	Cycle 6 - Average slow wave peak-to-peak amplitude (uV) in N1 stage.
+OX	cyc6_N2_pkpk_amp_uV	Cycle 6 - Average slow wave peak-to-peak amplitude (uV) in N2 stage.
+OY	cyc6_N3_pkpk_amp_uV	Cycle 6 - Average slow wave peak-to-peak amplitude (uV) in N3 stage.
+OZ	cyc6_R_pkpk_amp_uV	Cycle 6 - Average slow wave peak-to-peak amplitude (uV) in REM stage.
+PA	cyc6_pkpk_amp_uV	Cycle 6 - Average slow wave peak-to-peak amplitude (uV)
+PB	cyc6_N1_freq_Hz	Cycle 6 - Slow wave frequency (Hz) (inverse of the duration) in N1 stage.
+PC	cyc6_N2_freq_Hz	Cycle 6 - Slow wave frequency (Hz) (inverse of the duration) in N2 stage.
+PD	cyc6_N3_freq_Hz	Cycle 6 - Slow wave frequency (Hz) (inverse of the duration) in N3 stage.
+PE	cyc6_R_freq_Hz	Cycle 6 - Slow wave frequency (Hz) (inverse of the duration) in REM stage.
+PF	cyc6_freq_Hz	Cycle 6 - Slow wave frequency (Hz) (inverse of the duration).
+PG	cyc6_N1_neg_amp_uV	Cycle 6 - Average slow wave negative peak amplitude (uV) in N1 stage.
+PH	cyc6_N2_neg_amp_uV	Cycle 6 - Average slow wave negative peak amplitude (uV) in N2 stage.
+PI	cyc6_N3_neg_amp_uV	Cycle 6 - Average slow wave negative peak amplitude (uV) in N3 stage.
+PJ	cyc6_R_neg_amp_uV	Cycle 6 - Average slow wave negative peak amplitude (uV) in REM stage.
+PK	cyc6_neg_amp_uV	Cycle 6 - Average slow wave negative peak amplitude (uV).
+PL	cyc6_N1_neg_sec	Cycle 6 - Average slow wave negative duration (ms) in N1 stage.
+PM	cyc6_N2_neg_sec	Cycle 6 - Average slow wave negative duration (ms) in N2 stage.
+PN	cyc6_N3_neg_sec	Cycle 6 - Average slow wave negative duration (ms) in N3 stage.
+PO	cyc6_R_neg_sec	Cycle 6 - Average slow wave negative duration (ms) in REM stage.
+PP	cyc6_neg_sec	Cycle 6 - Average slow wave negative duration (ms)
+PQ	cyc6_N1_pos_sec	Cycle 6 - Average slow wave positive duration (ms) in N1 stage.
+PR	cyc6_N2_pos_sec	Cycle 6 - Average slow wave positive duration (ms) in N2 stage.
+PS	cyc6_N3_pos_sec	Cycle 6 - Average slow wave positive duration (ms) in N3 stage.
+PT	cyc6_R_pos_sec	Cycle 6 - Average slow wave positive duration (ms) in REM stage.
+PU	cyc6_pos_sec	Cycle 6 -  Average slow wave positive duration (ms)
+PV	cyc6_N1_slope_0_min	Cycle 6 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N1 stage.
+PW	cyc6_N2_slope_0_min	Cycle 6 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N2 stage.
+PX	cyc6_N3_slope_0_min	Cycle 6 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N3 stage.
+PY	cyc6_R_slope_0_min	Cycle 6 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in REM stage.
+PZ	cyc6_slope_0_min	Cycle 6 -  Average slow wave slope (uV/s) from 0 crossing to the min of the negative component.
+QA	cyc6_N1_slope_min_max	Cycle 6 - Average slow wave slope (uV/s) from min to the max in N1 stage.
+QB	cyc6_N2_slope_min_max	Cycle 6 - Average slow wave slope (uV/s) from min to the max in N2 stage.
+QC	cyc6_N3_slope_min_max	Cycle 6 - Average slow wave slope (uV/s) from min to the max in N3 stage.
+QD	cyc6_R_slope_min_max	Cycle 6 - Average slow wave slope (uV/s) from min to the max in REM stage.
+QE	cyc6_slope_min_max	Cycle 6 -  Average slow wave slope (uV/s) from min to the max.
+QF	cyc6_N1_slope_max_0	Cycle 6 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N1 stage.
+QG	cyc6_N2_slope_max_0	Cycle 6 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N2 stage.
+QH	cyc6_N3_slope_max_0	Cycle 6 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N3 stage.
+QI	cyc6_R_slope_max_0	Cycle 6 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in REM stage.
+QJ	cyc6_slope_max_0	Cycle 6 -  Average slow wave slope (uV/s) from max of positive to the 0 crossing.
+QK	cyc6_N1_trans_freq_Hz	Cycle 6 -  Average slow wave transition frequency (Hz) in N1 stage.
+QL	cyc6_N2_trans_freq_Hz	Cycle 6 -  Average slow wave transition frequency (Hz) in N2 stage.
+QM	cyc6_N3_trans_freq_Hz	Cycle 6 -  Average slow wave transition frequency (Hz) in N3 stage.
+QN	cyc6_R_trans_freq_Hz	Cycle 6 -  Average slow wave transition frequency (Hz) in REM stage.
+QO	cyc6_trans_freq_Hz	Cycle 6 -   Average slow wave transition frequency (Hz)
+QP	cyc7_valid_min	Cycle 7 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+QQ	cyc7_N1_valid_min	Cycle 7 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+QR	cyc7_N2_valid_min	Cycle 7 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+QS	cyc7_N3_valid_min	Cycle 7 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+QT	cyc7_R_valid_min	Cycle 7 - Valid (no artifact) duration (min) in REM stage available for detection.
+QU	cyc7_min	Cycle 7 duration (min) minus the REM periods if excluded.
+QV	cyc7_N1_sw_count	Cycle 7 - Slow wave count in N1 stage.
+QW	cyc7_N2_sw_count	Cycle 7 - Slow wave count in N2 stage.
+QX	cyc7_N3_sw_count	Cycle 7 - Slow wave count in N3 stage.
+QY	cyc7_R_sw_count	Cycle 7 - Slow wave count in REM stage.
+QZ	cyc7_sw_count	Cycle 7 - Slow wave count in all stages.
+RA	cyc7_N1_sw_sec	Cycle 7 - Average slow wave duration (s) in N1 stage.
+RB	cyc7_N2_sw_sec	Cycle 7 - Average slow wave duration (s) in N2 stage.
+RC	cyc7_N3_sw_sec	Cycle 7 - Average slow wave duration (s) in N3 stage.
+RD	cyc7_R_sw_sec	Cycle 7 - Average slow wave duration (s) in REM stage.
+RE	cyc7_sw_sec	Cycle 7 - Average slow wave duration (s)
+RF	cyc7_N1_pkpk_amp_uV	Cycle 7 - Average slow wave peak-to-peak amplitude (uV) in N1 stage.
+RG	cyc7_N2_pkpk_amp_uV	Cycle 7 - Average slow wave peak-to-peak amplitude (uV) in N2 stage.
+RH	cyc7_N3_pkpk_amp_uV	Cycle 7 - Average slow wave peak-to-peak amplitude (uV) in N3 stage.
+RI	cyc7_R_pkpk_amp_uV	Cycle 7 - Average slow wave peak-to-peak amplitude (uV) in REM stage.
+RJ	cyc7_pkpk_amp_uV	Cycle 7 - Average slow wave peak-to-peak amplitude (uV)
+RK	cyc7_N1_freq_Hz	Cycle 7 - Slow wave frequency (Hz) (inverse of the duration) in N1 stage.
+RL	cyc7_N2_freq_Hz	Cycle 7 - Slow wave frequency (Hz) (inverse of the duration) in N2 stage.
+RM	cyc7_N3_freq_Hz	Cycle 7 - Slow wave frequency (Hz) (inverse of the duration) in N3 stage.
+RN	cyc7_R_freq_Hz	Cycle 7 - Slow wave frequency (Hz) (inverse of the duration) in REM stage.
+RO	cyc7_freq_Hz	Cycle 7 - Slow wave frequency (Hz) (inverse of the duration).
+RP	cyc7_N1_neg_amp_uV	Cycle 7 - Average slow wave negative peak amplitude (uV) in N1 stage.
+RQ	cyc7_N2_neg_amp_uV	Cycle 7 - Average slow wave negative peak amplitude (uV) in N2 stage.
+RR	cyc7_N3_neg_amp_uV	Cycle 7 - Average slow wave negative peak amplitude (uV) in N3 stage.
+RS	cyc7_R_neg_amp_uV	Cycle 7 - Average slow wave negative peak amplitude (uV) in REM stage.
+RT	cyc7_neg_amp_uV	Cycle 7 - Average slow wave negative peak amplitude (uV).
+RU	cyc7_N1_neg_sec	Cycle 7 - Average slow wave negative duration (ms) in N1 stage.
+RV	cyc7_N2_neg_sec	Cycle 7 - Average slow wave negative duration (ms) in N2 stage.
+RW	cyc7_N3_neg_sec	Cycle 7 - Average slow wave negative duration (ms) in N3 stage.
+RX	cyc7_R_neg_sec	Cycle 7 - Average slow wave negative duration (ms) in REM stage.
+RY	cyc7_neg_sec	Cycle 7 - Average slow wave negative duration (ms)
+RZ	cyc7_N1_pos_sec	Cycle 7 - Average slow wave positive duration (ms) in N1 stage.
+SA	cyc7_N2_pos_sec	Cycle 7 - Average slow wave positive duration (ms) in N2 stage.
+SB	cyc7_N3_pos_sec	Cycle 7 - Average slow wave positive duration (ms) in N3 stage.
+SC	cyc7_R_pos_sec	Cycle 7 - Average slow wave positive duration (ms) in REM stage.
+SD	cyc7_pos_sec	Cycle 7 -  Average slow wave positive duration (ms)
+SE	cyc7_N1_slope_0_min	Cycle 7 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N1 stage.
+SF	cyc7_N2_slope_0_min	Cycle 7 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N2 stage.
+SG	cyc7_N3_slope_0_min	Cycle 7 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N3 stage.
+SH	cyc7_R_slope_0_min	Cycle 7 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in REM stage.
+SI	cyc7_slope_0_min	Cycle 7 -  Average slow wave slope (uV/s) from 0 crossing to the min of the negative component.
+SJ	cyc7_N1_slope_min_max	Cycle 7 - Average slow wave slope (uV/s) from min to the max in N1 stage.
+SK	cyc7_N2_slope_min_max	Cycle 7 - Average slow wave slope (uV/s) from min to the max in N2 stage.
+SL	cyc7_N3_slope_min_max	Cycle 7 - Average slow wave slope (uV/s) from min to the max in N3 stage.
+SM	cyc7_R_slope_min_max	Cycle 7 - Average slow wave slope (uV/s) from min to the max in REM stage.
+SN	cyc7_slope_min_max	Cycle 7 -  Average slow wave slope (uV/s) from min to the max.
+SO	cyc7_N1_slope_max_0	Cycle 7 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N1 stage.
+SP	cyc7_N2_slope_max_0	Cycle 7 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N2 stage.
+SQ	cyc7_N3_slope_max_0	Cycle 7 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N3 stage.
+SR	cyc7_R_slope_max_0	Cycle 7 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in REM stage.
+SS	cyc7_slope_max_0	Cycle 7 -  Average slow wave slope (uV/s) from max of positive to the 0 crossing.
+ST	cyc7_N1_trans_freq_Hz	Cycle 7 -  Average slow wave transition frequency (Hz) in N1 stage.
+SU	cyc7_N2_trans_freq_Hz	Cycle 7 -  Average slow wave transition frequency (Hz) in N2 stage.
+SV	cyc7_N3_trans_freq_Hz	Cycle 7 -  Average slow wave transition frequency (Hz) in N3 stage.
+SW	cyc7_R_trans_freq_Hz	Cycle 7 -  Average slow wave transition frequency (Hz) in REM stage.
+SX	cyc7_trans_freq_Hz	Cycle 7 -   Average slow wave transition frequency (Hz)
+SY	cyc8_valid_min	Cycle 8 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+SZ	cyc8_N1_valid_min	Cycle 8 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+TA	cyc8_N2_valid_min	Cycle 8 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+TB	cyc8_N3_valid_min	Cycle 8 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+TC	cyc8_R_valid_min	Cycle 8 - Valid (no artifact) duration (min) in REM stage available for detection.
+TD	cyc8_min	Cycle 8 duration (min) minus the REM periods if excluded.
+TE	cyc8_N1_sw_count	Cycle 8 - Slow wave count in N1 stage.
+TF	cyc8_N2_sw_count	Cycle 8 - Slow wave count in N2 stage.
+TG	cyc8_N3_sw_count	Cycle 8 - Slow wave count in N3 stage.
+TH	cyc8_R_sw_count	Cycle 8 - Slow wave count in REM stage.
+TI	cyc8_sw_count	Cycle 8 - Slow wave count in all stages.
+TJ	cyc8_N1_sw_sec	Cycle 8 - Average slow wave duration (s) in N1 stage.
+TK	cyc8_N2_sw_sec	Cycle 8 - Average slow wave duration (s) in N2 stage.
+TL	cyc8_N3_sw_sec	Cycle 8 - Average slow wave duration (s) in N3 stage.
+TM	cyc8_R_sw_sec	Cycle 8 - Average slow wave duration (s) in REM stage.
+TN	cyc8_sw_sec	Cycle 8 - Average slow wave duration (s)
+TO	cyc8_N1_pkpk_amp_uV	Cycle 8 - Average slow wave peak-to-peak amplitude (uV) in N1 stage.
+TP	cyc8_N2_pkpk_amp_uV	Cycle 8 - Average slow wave peak-to-peak amplitude (uV) in N2 stage.
+TQ	cyc8_N3_pkpk_amp_uV	Cycle 8 - Average slow wave peak-to-peak amplitude (uV) in N3 stage.
+TR	cyc8_R_pkpk_amp_uV	Cycle 8 - Average slow wave peak-to-peak amplitude (uV) in REM stage.
+TS	cyc8_pkpk_amp_uV	Cycle 8 - Average slow wave peak-to-peak amplitude (uV)
+TT	cyc8_N1_freq_Hz	Cycle 8 - Slow wave frequency (Hz) (inverse of the duration) in N1 stage.
+TU	cyc8_N2_freq_Hz	Cycle 8 - Slow wave frequency (Hz) (inverse of the duration) in N2 stage.
+TV	cyc8_N3_freq_Hz	Cycle 8 - Slow wave frequency (Hz) (inverse of the duration) in N3 stage.
+TW	cyc8_R_freq_Hz	Cycle 8 - Slow wave frequency (Hz) (inverse of the duration) in REM stage.
+TX	cyc8_freq_Hz	Cycle 8 - Slow wave frequency (Hz) (inverse of the duration).
+TY	cyc8_N1_neg_amp_uV	Cycle 8 - Average slow wave negative peak amplitude (uV) in N1 stage.
+TZ	cyc8_N2_neg_amp_uV	Cycle 8 - Average slow wave negative peak amplitude (uV) in N2 stage.
+UA	cyc8_N3_neg_amp_uV	Cycle 8 - Average slow wave negative peak amplitude (uV) in N3 stage.
+UB	cyc8_R_neg_amp_uV	Cycle 8 - Average slow wave negative peak amplitude (uV) in REM stage.
+UC	cyc8_neg_amp_uV	Cycle 8 - Average slow wave negative peak amplitude (uV).
+UD	cyc8_N1_neg_sec	Cycle 8 - Average slow wave negative duration (ms) in N1 stage.
+UE	cyc8_N2_neg_sec	Cycle 8 - Average slow wave negative duration (ms) in N2 stage.
+UF	cyc8_N3_neg_sec	Cycle 8 - Average slow wave negative duration (ms) in N3 stage.
+UG	cyc8_R_neg_sec	Cycle 8 - Average slow wave negative duration (ms) in REM stage.
+UH	cyc8_neg_sec	Cycle 8 - Average slow wave negative duration (ms)
+UI	cyc8_N1_pos_sec	Cycle 8 - Average slow wave positive duration (ms) in N1 stage.
+UJ	cyc8_N2_pos_sec	Cycle 8 - Average slow wave positive duration (ms) in N2 stage.
+UK	cyc8_N3_pos_sec	Cycle 8 - Average slow wave positive duration (ms) in N3 stage.
+UL	cyc8_R_pos_sec	Cycle 8 - Average slow wave positive duration (ms) in REM stage.
+UM	cyc8_pos_sec	Cycle 8 -  Average slow wave positive duration (ms)
+UN	cyc8_N1_slope_0_min	Cycle 8 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N1 stage.
+UO	cyc8_N2_slope_0_min	Cycle 8 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N2 stage.
+UP	cyc8_N3_slope_0_min	Cycle 8 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in N3 stage.
+UQ	cyc8_R_slope_0_min	Cycle 8 - Average slow wave slope (uV/s) from 0 crossing to the min of the negative component in REM stage.
+UR	cyc8_slope_0_min	Cycle 8 -  Average slow wave slope (uV/s) from 0 crossing to the min of the negative component.
+US	cyc8_N1_slope_min_max	Cycle 8 - Average slow wave slope (uV/s) from min to the max in N1 stage.
+UT	cyc8_N2_slope_min_max	Cycle 8 - Average slow wave slope (uV/s) from min to the max in N2 stage.
+UU	cyc8_N3_slope_min_max	Cycle 8 - Average slow wave slope (uV/s) from min to the max in N3 stage.
+UV	cyc8_R_slope_min_max	Cycle 8 - Average slow wave slope (uV/s) from min to the max in REM stage.
+UW	cyc8_slope_min_max	Cycle 8 -  Average slow wave slope (uV/s) from min to the max.
+UX	cyc8_N1_slope_max_0	Cycle 8 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N1 stage.
+UY	cyc8_N2_slope_max_0	Cycle 8 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N2 stage.
+UZ	cyc8_N3_slope_max_0	Cycle 8 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in N3 stage.
+VA	cyc8_R_slope_max_0	Cycle 8 - Average slow wave slope (uV/s) from max of positive to the 0 crossing in REM stage.
+VB	cyc8_slope_max_0	Cycle 8 -  Average slow wave slope (uV/s) from max of positive to the 0 crossing.
+VC	cyc8_N1_trans_freq_Hz	Cycle 8 -  Average slow wave transition frequency (Hz) in N1 stage.
+VD	cyc8_N2_trans_freq_Hz	Cycle 8 -  Average slow wave transition frequency (Hz) in N2 stage.
+VE	cyc8_N3_trans_freq_Hz	Cycle 8 -  Average slow wave transition frequency (Hz) in N3 stage.
+VF	cyc8_R_trans_freq_Hz	Cycle 8 -  Average slow wave transition frequency (Hz) in REM stage.
+VG	cyc8_trans_freq_Hz	Cycle 8 -   Average slow wave transition frequency (Hz)
