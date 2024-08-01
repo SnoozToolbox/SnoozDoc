@@ -85,6 +85,10 @@ Steps
     
     The PSA data is added (appended) to the output file, the output file will be modified each time the PSA tool is run.
 
+
+Report
+---------
+
 .. toctree::
    Power_Spectral_Analysis/PSA_per_stage_info_csv
    Power_Spectral_Analysis/PSA_per_event_info_csv

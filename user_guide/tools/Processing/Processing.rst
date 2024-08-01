@@ -13,4 +13,6 @@ The Processing category includes sleep analyses, event detectors, and power spec
     Sleep_cycles_export
     Sleep_Report
     Slow_wave_detection
+    Spindle_detection_Martin
+    
 

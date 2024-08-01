@@ -91,6 +91,10 @@ The "Sleep Reports" are .tsv files.  Each row corresponds to a PSG recording and
 
 Each variable is defined in the _info.tsv file generated with the report, see pages below:
 
+
+Report
+-----------------
+
 .. toctree::
    Sleep_Report/sleep_report_info_csv
    Sleep_Report/event_report_info_csv

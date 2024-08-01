@@ -65,6 +65,7 @@ Three additional output reports are available :
    
    The Three outputs are needed for the slow wave classifier.
 
+
 Steps
 -----------------
 
@@ -95,13 +96,13 @@ Steps
    Select which reports to generate.
 
 
-References
------------------
-[1] Bouchard, M., Lina, J.-M., Gaudreault, P.-O., Lafrenière, A., Dubé, J., Gosselin, N., Carrier, J., 2021. Sleeping at the switch. Elife 10, e64337. https://doi.org/10.7554/eLife.64337 
-
-
-Slow wave cohort report
+Report
 ---------------------------------------------------
 
 .. toctree::
    Slow_Wave_detector/slow_wave_cohort_info_csv
+
+
+References
+-----------------
+[1] Bouchard, M., Lina, J.-M., Gaudreault, P.-O., Lafrenière, A., Dubé, J., Gosselin, N., Carrier, J., 2021. Sleeping at the switch. Elife 10, e64337. https://doi.org/10.7554/eLife.64337 
