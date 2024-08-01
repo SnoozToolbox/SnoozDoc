@@ -1,6 +1,8 @@
-==============
-Postprocessing
-==============
-
 .. _Postprocessing:
 
+================
+Postprocessing
+================
+
+.. toctree::
+    Compare_PSG_events
