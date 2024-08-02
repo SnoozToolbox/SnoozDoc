@@ -22,6 +22,7 @@ User's Guide
    user_guide/getting_started
    user_guide/manage_package
    user_guide/tools/tools
+   user_guide/apps/apps
    
 Developer's Guide
 -----------------

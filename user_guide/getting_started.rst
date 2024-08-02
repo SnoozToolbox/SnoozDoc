@@ -27,7 +27,7 @@ On Windows platforms
     2. Select Run anyway.
     
     .. image:: ./Windows_protected.png
-      :width: 400
+      :width: 700
       :alt: Alternative text    
 
 The installation may take a few seconds.
@@ -81,7 +81,7 @@ Update Snooz from the interface
 =================================
 
 1. Launch the Snooz application already installed on your desktop.  
-2. Navigate to the menu About > About Snooz
+2. Navigate to the menu Help > About Snooz
 3. If the installed version is older than the released version download Snooz for your Operating System.
 4. Close Snooz to avoid errors during the installation.  
 5. You can uninstall the previous version of Snooz to delete obsolete packages (this step is optional).  

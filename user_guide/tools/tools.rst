@@ -1,20 +1,19 @@
-=====
-Tools
-=====
-
 .. _tools:
+
+======
+Tools
+======
 
 This section describes how to use tools within Snooz.
 
 Launch tools from the menu
 =============================
 
-The tools installed within Snooz are divided into four categories. Each category has direct access from the menu bar of Snooz.
+The tools installed within Snooz are divided into three categories. Each category has direct access from the menu bar of Snooz.
 
 1. **Preprocessing**: Includes importers/converters/extractors and the artifact detection tool.
 2. **Processing**: Includes sleep stages analyses, event detectors, and power spectral analysis.
 3. **Postprocessing**: Includes secondary analyses such as performance evaluation of detectors, transposition of cohort reports, and slow wave events analysis.
-4. **Viewers**: Includes tools to explore data.
 
 A new user
 -----------
@@ -38,6 +37,7 @@ Viewer
 -------
 
 The only available Viewer is the Oximeter, which allows you to select bad sections to generate a valid Oxygen Saturation Report.
+The Oximeter is an application that operates within Snooz.  (See :ref:`apps` for more details.)
 
 
 Navigate in the step-by-step interface
@@ -86,7 +86,7 @@ Load workspace
 
    .. warning::  
       
-      The .json file includes the API version of Snooz (``package_api_version": "1.0.0"``) and all the package dependencies, if any.  Make sure to use a valid workspace for the vesion of Snooz installed. 
+      The .json file includes the API version of Snooz (``package_api_version": "1.0.0"``) and all the package dependencies, if any.  Make sure to use a valid workspace for the version of Snooz installed. 
 
 
 Tools Categories

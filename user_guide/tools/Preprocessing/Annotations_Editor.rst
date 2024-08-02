@@ -1,6 +1,11 @@
+.. _Annotations_Editor: 
+
 ===================
 Annotations Editor
 ===================
+
+Description
+-----------------
 
 This tool allows you to delete or edit annotations in batches. Useful for making annotations across a cohort more concise. 
 
@@ -30,7 +35,3 @@ Press 'Export' to display all the changes that will be applied at runtime.
 .. note::
 
     Look at the "Annotations Editor" home page for more information. 
-
-
-.. _Processing:
-    Annotations_Editor

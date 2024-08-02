@@ -1,0 +1,147 @@
+name	description
+filename	PSG filename
+group	Subject Group
+sex	Subject Sex
+birthdate	The birthdate of the subject, yyyy-mm-dd
+creation_date	The creation date of the analysed file, yyyy-mm-dd
+age	Subject age at the recording date
+height	Subject height
+weight	Subject weight
+bmi	Subject BMI
+waistline	Subject Waistlist size
+event_class	The class of the events for the report
+event_group	The group of the events for the report
+event_name	The name of the events for the report
+crit_evt_section	Report Event Criteria : event selection (Sleep only, recording time, Awake in sleep period, Before sleep onset)
+crit_evt_min_sec	Report Event Criteria : minimum event duration (s). i.e. 0.5
+crit_evt_max_sec	Report Event Criteria : maximum event duration (s). i.e. 10
+crit_evt_min_interval_sec	Report Event Criteria : minimum interval (s) to create a series. i.e. 5
+crit_evt_max_interval_sec	Report Event Criteria :  maximum interval (s) to create a series. i.e. 90
+crit_evt_min_count_series	Report Event Criteria : minimum number of events into a series. i.e. 4
+crit_excl_min_interval_resp_sec	Report Event Criteria : exclude event that starts during the minimum interval (s) with a respiratory event end. i.e. -3.5
+crit_excl_max_interval_resp_sec	Report Event Criteria : exclude event that starts during the maximum interval (s) with a respiratory event end. i.e. 8
+crit_end_period_delay_min	Report Event Criteria : Delay (min) without events to end a period. i.e. 15
+evt_asso_to_resp_count	Results :  Number of events associated with respiratory events.
+evt_excl_count	Results : Number of events excluded after criteria application.
+periods_delay_count	Results : number of periods based on the end_period_delay criteria.
+evt_sleep_first_wake_count	Results : number of events in sleep or in the first awake epoch (preceding epoch must be sleep).
+evt_sleep_first_wake_index	Results : event index (number of events/hour) in sleep or first awake epoch (evt_sleep_first_wake_count/hours of sleep stage).
+evt_asso_arousal_count	Results : number of events associated with an arousal i.e. The event occurs in sleep but the next epoch is awake or the event occurs in awake but the preceding epoch is sleep.
+asleep_percent	Results: '%' of time slept occupied by the event
+record_percent	Results: '%' of recording (from sleep onset to last asleep stage) occupied by the event
+third1_evt_count	third 1 : number of events
+third1_evt_avg_sec	third 1 : average duration of the events (s)
+third1_evt_interval_count	third 1 : number of intervals
+third1_evt_interval_avg_sec	third 1 : average interval (s)
+third1_evt_index	third 1 : number of events per hour in asleep stage
+third2_evt_count	third 2 : number of events
+third2_evt_avg_sec	third 2 : average duration of the events (s)
+third2_evt_interval_count	third 2 : number of intervals
+third2_evt_interval_avg_sec	third 2 : average interval (s)
+third2_evt_index	third 2 : number of events per hour in asleep stage
+third3_evt_count	third 3 : number of events
+third3_evt_avg_sec	third 3 : average duration of the events (s)
+third3_evt_interval_count	third 3 : number of intervals
+third3_evt_interval_avg_sec	third 3 : average interval (s)
+third3_evt_index	third 3 : number of events per hour in asleep stage
+half1_evt_count	half 1 : number of events
+half1_evt_avg_sec	half 1 : average duration of the events (s)
+half1_evt_interval_count	half 1 : number of intervals
+half1_evt_interval_avg_sec	half 1 : average interval (s)
+half1_evt_index	half 1 : number of events per hour in asleep stage
+half2_evt_count	half 2 : number of events
+half2_evt_avg_sec	half 2 : average duration of the events (s)
+half2_evt_interval_count	half 2 : number of intervals
+half2_evt_interval_avg_sec	half 2 : average interval (s)
+half2_evt_index	half 2 : number of events per hour in asleep stage
+total_evt_count	Total : number of events
+total_evt_avg_sec	Total : average duration of the events (s)
+total_evt_interval_count	Total : number of intervals
+total_evt_interval_avg_sec	Total : average interval (s)
+total_evt_index	Total : number of events per hour in asleep stage
+W_evt_count	W : number of events
+W_evt_avg_sec	W : average duration of the events (s)
+W_evt_interval_count	W : number of intervals
+W_evt_interval_avg_sec	W : average interval (s)
+W_evt_index	W : number of events per hour (epochs from stage['0'])
+N1_evt_count	N1 : number of events
+N1_evt_avg_sec	N1 : average duration of the events (s)
+N1_evt_interval_count	N1 : number of intervals
+N1_evt_interval_avg_sec	N1 : average interval (s)
+N1_evt_index	N1 : number of events per hour (epochs from stage['1'])
+N2_evt_count	N2 : number of events
+N2_evt_avg_sec	N2 : average duration of the events (s)
+N2_evt_interval_count	N2 : number of intervals
+N2_evt_interval_avg_sec	N2 : average interval (s)
+N2_evt_index	N2 : number of events per hour (epochs from stage['2'])
+N3_evt_count	N3 : number of events
+N3_evt_avg_sec	N3 : average duration of the events (s)
+N3_evt_interval_count	N3 : number of intervals
+N3_evt_interval_avg_sec	N3 : average interval (s)
+N3_evt_index	N3 : number of events per hour (epochs from stage['3'])
+NREM_evt_count	NREM : number of events
+NREM_evt_avg_sec	NREM : average duration of the events (s)
+NREM_evt_interval_count	NREM : number of intervals
+NREM_evt_interval_avg_sec	NREM : average interval (s)
+NREM_evt_index	NREM : number of events per hour (epochs from stage['1', '2', '3'])
+R_evt_count	R : number of events
+R_evt_avg_sec	R : average duration of the events (s)
+R_evt_interval_count	R : number of intervals
+R_evt_interval_avg_sec	R : average interval (s)
+R_evt_index	R : number of events per hour (epochs from stage['5'])
+Unscored_evt_count	Unscored : number of events
+Unscored_evt_avg_sec	Unscored : average duration of the events (s)
+Unscored_evt_interval_count	Unscored : number of intervals
+Unscored_evt_interval_avg_sec	Unscored : average interval (s)
+Unscored_evt_index	Unscored : number of events per hour (epochs from stage['9', '8'])
+cycles_count	number of cycles
+cyc1_evt_count	cycle 1 : Number of events
+cyc1_evt_avg_sec	cycle 1 : average duration of the events (s)
+cyc1_evt_interval_count	cycle 1 : number of intervals
+cyc1_evt_interval_avg_sec	cycle 1 : average interval (s)
+cyc1_evt_index	cycle 1 : number of events per hour
+cyc2_evt_count	cycle 2 : Number of events
+cyc2_evt_avg_sec	cycle 2 : average duration of the events (s)
+cyc2_evt_interval_count	cycle 2 : number of intervals
+cyc2_evt_interval_avg_sec	cycle 2 : average interval (s)
+cyc2_evt_index	cycle 2 : number of events per hour
+cyc3_evt_count	cycle 3 : Number of events
+cyc3_evt_avg_sec	cycle 3 : average duration of the events (s)
+cyc3_evt_interval_count	cycle 3 : number of intervals
+cyc3_evt_interval_avg_sec	cycle 3 : average interval (s)
+cyc3_evt_index	cycle 3 : number of events per hour
+cyc4_evt_count	cycle 4 : Number of events
+cyc4_evt_avg_sec	cycle 4 : average duration of the events (s)
+cyc4_evt_interval_count	cycle 4 : number of intervals
+cyc4_evt_interval_avg_sec	cycle 4 : average interval (s)
+cyc4_evt_index	cycle 4 : number of events per hour
+cyc5_evt_count	cycle 5 : Number of events
+cyc5_evt_avg_sec	cycle 5 : average duration of the events (s)
+cyc5_evt_interval_count	cycle 5 : number of intervals
+cyc5_evt_interval_avg_sec	cycle 5 : average interval (s)
+cyc5_evt_index	cycle 5 : number of events per hour
+cyc6_evt_count	cycle 6 : Number of events
+cyc6_evt_avg_sec	cycle 6 : average duration of the events (s)
+cyc6_evt_interval_count	cycle 6 : number of intervals
+cyc6_evt_interval_avg_sec	cycle 6 : average interval (s)
+cyc6_evt_index	cycle 6 : number of events per hour
+cyc7_evt_count	cycle 7 : Number of events
+cyc7_evt_avg_sec	cycle 7 : average duration of the events (s)
+cyc7_evt_interval_count	cycle 7 : number of intervals
+cyc7_evt_interval_avg_sec	cycle 7 : average interval (s)
+cyc7_evt_index	cycle 7 : number of events per hour
+cyc8_evt_count	cycle 8 : Number of events
+cyc8_evt_avg_sec	cycle 8 : average duration of the events (s)
+cyc8_evt_interval_count	cycle 8 : number of intervals
+cyc8_evt_interval_avg_sec	cycle 8 : average interval (s)
+cyc8_evt_index	cycle 8 : number of events per hour
+cyc9_evt_count	cycle 9 : Number of events
+cyc9_evt_avg_sec	cycle 9 : average duration of the events (s)
+cyc9_evt_interval_count	cycle 9 : number of intervals
+cyc9_evt_interval_avg_sec	cycle 9 : average interval (s)
+cyc9_evt_index	cycle 9 : number of events per hour
+cyc10_evt_count	cycle 10 : Number of events
+cyc10_evt_avg_sec	cycle 10 : average duration of the events (s)
+cyc10_evt_interval_count	cycle 10 : number of intervals
+cyc10_evt_interval_avg_sec	cycle 10 : average interval (s)
+cyc10_evt_index	cycle 10 : number of events per hour
