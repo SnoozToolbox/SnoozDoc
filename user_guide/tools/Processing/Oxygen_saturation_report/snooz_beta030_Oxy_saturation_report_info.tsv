@@ -1,0 +1,163 @@
+A	filename	PSG filename
+B	id1	subject identification
+C	cyc_def_option	"Method used to split the sleep period in sleep cycles, it defines the criteria. I.e. : ""Minimum criteria""  ""Aeschbach 1993""  ""Feinberg 1979"""
+D	cyc_def_include_soremp	Include a REM sleep periods (REMP) that occur within 15 minutes of sleep onset.
+E	cyc_def_include_last_incomplete	Include the last sleep cycle even if the NREM period (NREMP) or REMP does not meet the minimum duration criteria.
+F	cyc_def_rem_min	Minimum length without R stage to end the REMP.
+G	cyc_def_first_nrem_min	Minimum length of the first NREMP in minutes.
+H	cyc_def_mid_last_nrem_min	Minimum length of the middle and last NREMP in minutes.
+I	cyc_def_last_nrem_valid_min	Minimum length of the NREMP in minutes to validate the last sleep cycle.
+J	cyc_def_first_rem_min	Minimum length of the first REMP in minutes.
+K	cyc_def_mid_rem_min	Minimum length of the middle REMP in minutes.
+L	cyc_def_last_rem_min	Minimum length of the last REMP in minutes.
+M	cyc_def_move_end_rem	"Move the end of the REMP to the start of the following NREMP, eliminating the temporal ""gap"" between 2 cycles."
+N	cyc_def_sleep_stages	"List of valid stages used to define the sleep cycles:  ""N1, N2, N3, R"" or ""N2, N3, R"""
+O	sleep_cycle_count	Number of sleep cycles
+P	desaturation_drop_percent	"Drop level (%) for the oxygen desaturation ""3 or 4"""
+Q	max_slope_drop_sec	"The maximum duration (s) during which the oxygen level is dropping ""120 or 20"""
+R	min_hold_drop_sec	"Minimum duration (s) during which the oxygen level drop is maintained ""10 or 5"""
+S	invalid_events	Group and name annotation labels removed from the oxygen saturation analysis
+T	chan_label	The label of the oxygen channel used for the anlysis
+U	chan_fs	The sampling rate (Hz) of the oxygen channel used for the anlysis
+V	total_invalid_min	Invalid duration for oxygen saturation analysis (min).
+W	total_valid_min	Valid (no invalid section) duration for oxygen saturation analysis (min) from lights off to lights on.
+X	total_saturation_avg	The average value of the oxygen saturation (%) during lights off (the recording).
+Y	total_saturation_std	The standard deviation value of the oxygen saturation (%) during lights off (the recording).
+Z	total_saturation_min	The minimum value of the oxygen saturation (%) during lights off (the recording).
+AA	total_saturation_max	The maximum value of the oxygen saturation (%) during lights off (the recording).
+AB	total_below_96_min	The time spent (min) with an oxygen saturation under 96 % during the recording.
+AC	total_below_94_min	The time spent (min) with an oxygen saturation under 94 % during the recording.
+AD	total_below_92_min	The time spent (min) with an oxygen saturation under 92 % during the recording.
+AE	total_below_90_min	The time spent (min) with an oxygen saturation under 90 % during the recording.
+AF	total_below_85_min	The time spent (min) with an oxygen saturation under 85 % during the recording.
+AG	total_below_80_min	The time spent (min) with an oxygen saturation under 80 % during the recording.
+AH	total_below_75_min	The time spent (min) with an oxygen saturation under 75 % during the recording.
+AI	total_below_70_min	The time spent (min) with an oxygen saturation under 70 % during the recording.
+AJ	total_below_60_min	The time spent (min) with an oxygen saturation under 60 % during the recording.
+AK	third1_saturation_avg	The average value of the oxygen saturation (%) for the first third of the recording.
+AL	third1_saturation_std	The standard deviation value of the oxygen saturation (%) for the first third of the recording.
+AM	third1_saturation_min	The minimum value of the oxygen saturation (%) for the first third of the recording.
+AN	third1_saturation_max	The maximum value of the oxygen saturation (%) for the first third of the recording.
+AO	third2_saturation_avg	The average value of the oxygen saturation (%) for the second third of the recording.
+AP	third2_saturation_std	The standard deviation value of the oxygen saturation (%) for the second third of the recording.
+AQ	third2_saturation_min	The minimum value of the oxygen saturation (%) for the second third of the recording.
+AR	third2_saturation_max	The maximum value of the oxygen saturation (%) for the second third of the recording.
+AS	third3_saturation_avg	The average value of the oxygen saturation (%) for the last third of the recording.
+AT	third3_saturation_std	The standard deviation value of the oxygen saturation (%) for the last third of the recording.
+AU	third3_saturation_min	The minimum value of the oxygen saturation (%) for the last third of the recording.
+AV	third3_saturation_max	The maximum value of the oxygen saturation (%) for the last third of the recording.
+AW	half1_saturation_avg	The average value of the oxygen saturation (%) for the first half of the recording.
+AX	half1_saturation_std	The standard deviation value of the oxygen saturation (%) for the first half of the recording.
+AY	half1_saturation_min	The minimum value of the oxygen saturation (%) for the first half of the recording.
+AZ	half1_saturation_max	The maximum value of the oxygen saturation (%) for the first half of the recording.
+BA	half2_saturation_avg	The average value of the oxygen saturation (%) for the last half of the recording.
+BB	half2_saturation_std	The standard deviation value of the oxygen saturation (%) for the last half of the recording.
+BC	half2_saturation_min	The minimum value of the oxygen saturation (%) for the last half of the recording.
+BD	half2_saturation_max	The maximum value of the oxygen saturation (%) for the last half of the recording.
+BE	N1_saturation_avg	The average value of the oxygen saturation (%) for the N1 stages during lights off.
+BF	N1_saturation_std	The standard deviation value of the oxygen saturation (%) for the N1 stages during lights off.
+BG	N1_saturation_min	The minimum value of the oxygen saturation (%) for the N1 stages during lights off.
+BH	N1_saturation_max	The maximum value of the oxygen saturation (%) for the N1 stages during lights off.
+BI	N1_below_96_min	The time spent (min) with an oxygen saturation under 96 % in stage N1.
+BJ	N1_below_94_min	The time spent (min) with an oxygen saturation under 94 % in stage N1.
+BK	N1_below_92_min	The time spent (min) with an oxygen saturation under 92 % in stage N1.
+BL	N1_below_90_min	The time spent (min) with an oxygen saturation under 90 % in stage N1.
+BM	N1_below_85_min	The time spent (min) with an oxygen saturation under 85 % in stage N1.
+BN	N1_below_80_min	The time spent (min) with an oxygen saturation under 80 % in stage N1.
+BO	N1_below_75_min	The time spent (min) with an oxygen saturation under 75 % in stage N1.
+BP	N1_below_70_min	The time spent (min) with an oxygen saturation under 70 % in stage N1.
+BQ	N1_below_60_min	The time spent (min) with an oxygen saturation under 60 % in stage N1.
+BR	N2_saturation_avg	The average value of the oxygen saturation (%) for the N2 stages during lights off.
+BS	N2_saturation_std	The standard deviation value of the oxygen saturation (%) for the N2 stages during lights off.
+BT	N2_saturation_min	The minimum value of the oxygen saturation (%) for the N2 stages during lights off.
+BU	N2_saturation_max	The maximum value of the oxygen saturation (%) for the N2 stages during lights off.
+BV	N2_below_96_min	The time spent (min) with an oxygen saturation under 96 % in stage N2.
+BW	N2_below_94_min	The time spent (min) with an oxygen saturation under 94 % in stage N2.
+BX	N2_below_92_min	The time spent (min) with an oxygen saturation under 92 % in stage N2.
+BY	N2_below_90_min	The time spent (min) with an oxygen saturation under 90 % in stage N2.
+BZ	N2_below_85_min	The time spent (min) with an oxygen saturation under 85 % in stage N2.
+CA	N2_below_80_min	The time spent (min) with an oxygen saturation under 80 % in stage N2.
+CB	N2_below_75_min	The time spent (min) with an oxygen saturation under 75 % in stage N2.
+CC	N2_below_70_min	The time spent (min) with an oxygen saturation under 70 % in stage N2.
+CD	N2_below_60_min	The time spent (min) with an oxygen saturation under 60 % in stage N2.
+CE	N3_saturation_avg	The average value of the oxygen saturation (%) for the N3 stages during lights off.
+CF	N3_saturation_std	The standard deviation value of the oxygen saturation (%) for the N3 stages during lights off.
+CG	N3_saturation_min	The minimum value of the oxygen saturation (%) for the N3 stages during lights off.
+CH	N3_saturation_max	The maximum value of the oxygen saturation (%) for the N3 stages during lights off.
+CI	N3_below_96_min	The time spent (min) with an oxygen saturation under 96 % in stage N3.
+CJ	N3_below_94_min	The time spent (min) with an oxygen saturation under 94 % in stage N3.
+CK	N3_below_92_min	The time spent (min) with an oxygen saturation under 92 % in stage N3.
+CL	N3_below_90_min	The time spent (min) with an oxygen saturation under 90 % in stage N3.
+CM	N3_below_85_min	The time spent (min) with an oxygen saturation under 85 % in stage N3.
+CN	N3_below_80_min	The time spent (min) with an oxygen saturation under 80 % in stage N3.
+CO	N3_below_75_min	The time spent (min) with an oxygen saturation under 75 % in stage N3.
+CP	N3_below_70_min	The time spent (min) with an oxygen saturation under 70 % in stage N3.
+CQ	N3_below_60_min	The time spent (min) with an oxygen saturation under 60 % in stage N3.
+CR	R_saturation_avg	The average value of the oxygen saturation (%) for the R stages during lights off.
+CS	R_saturation_std	The standard deviation value of the oxygen saturation (%) for the R stages during lights off.
+CT	R_saturation_min	The minimum value of the oxygen saturation (%) for the R stages during lights off.
+CU	R_saturation_max	The maximum value of the oxygen saturation (%) for the R stages during lights off.
+CV	R_below_96_min	The time spent (min) with an oxygen saturation under 96 % in stage R.
+CW	R_below_94_min	The time spent (min) with an oxygen saturation under 94 % in stage R.
+CX	R_below_92_min	The time spent (min) with an oxygen saturation under 92 % in stage R.
+CY	R_below_90_min	The time spent (min) with an oxygen saturation under 90 % in stage R.
+CZ	R_below_85_min	The time spent (min) with an oxygen saturation under 85 % in stage R.
+DA	R_below_80_min	The time spent (min) with an oxygen saturation under 80 % in stage R.
+DB	R_below_75_min	The time spent (min) with an oxygen saturation under 75 % in stage R.
+DC	R_below_70_min	The time spent (min) with an oxygen saturation under 70 % in stage R.
+DD	R_below_60_min	The time spent (min) with an oxygen saturation under 60 % in stage R.
+DE	W_saturation_avg	The average value of the oxygen saturation (%) for the W stages during lights off.
+DF	W_saturation_std	The standard deviation value of the oxygen saturation (%) for the W stages during lights off.
+DG	W_saturation_min	The minimum value of the oxygen saturation (%) for the W stages during lights off.
+DH	W_saturation_max	The maximum value of the oxygen saturation (%) for the W stages during lights off.
+DI	W_below_96_min	The time spent (min) with an oxygen saturation under 96 % in stage W.
+DJ	W_below_94_min	The time spent (min) with an oxygen saturation under 94 % in stage W.
+DK	W_below_92_min	The time spent (min) with an oxygen saturation under 92 % in stage W.
+DL	W_below_90_min	The time spent (min) with an oxygen saturation under 90 % in stage W.
+DM	W_below_85_min	The time spent (min) with an oxygen saturation under 85 % in stage W.
+DN	W_below_80_min	The time spent (min) with an oxygen saturation under 80 % in stage W.
+DO	W_below_75_min	The time spent (min) with an oxygen saturation under 75 % in stage W.
+DP	W_below_70_min	The time spent (min) with an oxygen saturation under 70 % in stage W.
+DQ	W_below_60_min	The time spent (min) with an oxygen saturation under 60 % in stage W.
+DR	cyc1_saturation_avg	Cycle 1 - The average value of the oxygen saturation (%).
+DS	cyc1_saturation_std	Cycle 1 - The standard deviation value of the oxygen saturation (%).
+DT	cyc1_saturation_min	Cycle 1 - The minimum value of the oxygen saturation (%).
+DU	cyc1_saturation_max	Cycle 1 - The maximum value of the oxygen saturation (%).
+DV	cyc2_saturation_avg	Cycle 2 - The average value of the oxygen saturation (%).
+DW	cyc2_saturation_std	Cycle 2 - The standard deviation value of the oxygen saturation (%).
+DX	cyc2_saturation_min	Cycle 2 - The minimum value of the oxygen saturation (%).
+DY	cyc2_saturation_max	Cycle 2 - The maximum value of the oxygen saturation (%).
+DZ	cyc3_saturation_avg	Cycle 3 - The average value of the oxygen saturation (%).
+EA	cyc3_saturation_std	Cycle 3 - The standard deviation value of the oxygen saturation (%).
+EB	cyc3_saturation_min	Cycle 3 - The minimum value of the oxygen saturation (%).
+EC	cyc3_saturation_max	Cycle 3 - The maximum value of the oxygen saturation (%).
+ED	cyc4_saturation_avg	Cycle 4 - The average value of the oxygen saturation (%).
+EE	cyc4_saturation_std	Cycle 4 - The standard deviation value of the oxygen saturation (%).
+EF	cyc4_saturation_min	Cycle 4 - The minimum value of the oxygen saturation (%).
+EG	cyc4_saturation_max	Cycle 4 - The maximum value of the oxygen saturation (%).
+EH	cyc5_saturation_avg	Cycle 5 - The average value of the oxygen saturation (%).
+EI	cyc5_saturation_std	Cycle 5 - The standard deviation value of the oxygen saturation (%).
+EJ	cyc5_saturation_min	Cycle 5 - The minimum value of the oxygen saturation (%).
+EK	cyc5_saturation_max	Cycle 5 - The maximum value of the oxygen saturation (%).
+EL	cyc6_saturation_avg	Cycle 6 - The average value of the oxygen saturation (%).
+EM	cyc6_saturation_std	Cycle 6 - The standard deviation value of the oxygen saturation (%).
+EN	cyc6_saturation_min	Cycle 6 - The minimum value of the oxygen saturation (%).
+EO	cyc6_saturation_max	Cycle 6 - The maximum value of the oxygen saturation (%).
+EP	cyc7_saturation_avg	Cycle 7 - The average value of the oxygen saturation (%).
+EQ	cyc7_saturation_std	Cycle 7 - The standard deviation value of the oxygen saturation (%).
+ER	cyc7_saturation_min	Cycle 7 - The minimum value of the oxygen saturation (%).
+ES	cyc7_saturation_max	Cycle 7 - The maximum value of the oxygen saturation (%).
+ET	cyc8_saturation_avg	Cycle 8 - The average value of the oxygen saturation (%).
+EU	cyc8_saturation_std	Cycle 8 - The standard deviation value of the oxygen saturation (%).
+EV	cyc8_saturation_min	Cycle 8 - The minimum value of the oxygen saturation (%).
+EW	cyc8_saturation_max	Cycle 8 - The maximum value of the oxygen saturation (%).
+EX	cyc9_saturation_avg	Cycle 9 - The average value of the oxygen saturation (%).
+EY	cyc9_saturation_std	Cycle 9 - The standard deviation value of the oxygen saturation (%).
+EZ	cyc9_saturation_min	Cycle 9 - The minimum value of the oxygen saturation (%).
+FA	cyc9_saturation_max	Cycle 9 - The maximum value of the oxygen saturation (%).
+FB	desat_count	The number of oxygen desaturation from lights off to lights on in asleep stages only.
+FC	desat_avg_sec	The average duration in sec of the oxygen desaturation events occuring in asleep stages.
+FD	desat_std_sec	The standard deviation value of the duration in sec of the oxygen desaturation events occuring in asleep stages.
+FE	desat_med_sec	The median value of the duration in sec of the oxygen desaturation events occuring in asleep stages.
+FF	desat_sleep_percent	The percentage of time spent in desaturation during the asleep stages.
+FG	desat_ODI	The Oxygen Desaturation Index (ODI) : number of desaturation per sleep hour.

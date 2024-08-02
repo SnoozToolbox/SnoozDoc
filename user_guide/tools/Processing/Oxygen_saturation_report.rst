@@ -7,7 +7,7 @@ Oxygen Saturation Report
 Description
 -----------------
 
-A tool to analyze the oxygen saturation, detect oxygen desaturations and export oxygen saturation report.
+A tool to analyze the oxygen saturation, detect oxygen desaturations and export :ref:`Oxygen_saturation_report_csv`.
 Sleep staging is essential because oxygen saturation is particularly relevant during sleep.
 
 .. warning::
@@ -53,3 +53,12 @@ The Oxygen Saturation Report comprises 2 main categories:
  
 These variables are stored in the Oxygen Saturation Report, with one line per recording. Each new recording is appended to the report file.
 The user needs to define the file to save the Oxygen Saturation Report.
+
+
+Report
+---------
+
+.. toctree::
+   Oxygen_saturation_report/Oxygen_saturation_report_csv
+
+   

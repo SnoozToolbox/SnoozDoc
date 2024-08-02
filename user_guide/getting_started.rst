@@ -27,7 +27,7 @@ On Windows platforms
     2. Select Run anyway.
     
     .. image:: ./Windows_protected.png
-      :width: 600
+      :width: 700
       :alt: Alternative text    
 
 The installation may take a few seconds.
