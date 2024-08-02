@@ -12,7 +12,7 @@ Sleep staging is essential because oxygen saturation is particularly relevant du
 
 .. warning::
 
-    Invalid sections must be annotated in the accessory file before running this tool.  The :ref:`Oxymeter` viewer can be used to mark the invalid section. 
+    Invalid sections must be annotated in the accessory file before running this tool.  The :ref:`Oximeter` viewer can be used to mark the invalid section. 
 
 .. note::
 

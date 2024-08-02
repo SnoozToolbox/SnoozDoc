@@ -13,4 +13,4 @@ Multiple apps can be registered in Snooz but only one app can run at the time.
 For now, there is only a single app in Snooz, which is the Oximeter viewer.
 
 .. toctree::
-    Oxymeter
+    Oximeter
