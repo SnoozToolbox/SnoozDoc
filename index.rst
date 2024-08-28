@@ -9,6 +9,7 @@ It is developped by the team at the CARSM (Center for Advanced Research in Sleep
 
 User's Guide
 ------------
+Want to install and use Snooz? Follow this guide!
 
 * Follow this guide to get you started using Snooz: :doc:`user_guide/getting_started`
 * Follow this guide to manage the Snooz packages: :doc:`user_guide/manage_package`
@@ -26,9 +27,11 @@ User's Guide
    
 Developer's Guide
 -----------------
+Are you a programmer? Want to integrate your process into Snooz? Follow this guide!
 
 * To understand how it all works, check out the :doc:`dev_guide/technical_overview/technical_overview`
 * To get the code and start coding, click here: :doc:`dev_guide/installation/installation`
+* To run Snooz from the source code, see : :doc:`dev_guide/run_snooz`
 * For specific programming questions, check out the How Tos section: :doc:`dev_guide/howtos/howtos`
 
 .. toctree::
@@ -37,6 +40,7 @@ Developer's Guide
    :caption: Developer's Guide
 
    dev_guide/technical_overview/technical_overview
-   dev_guide/howtos/howtos
    dev_guide/installation/installation
+   dev_guide/run_snooz
+   dev_guide/howtos/howtos
 
