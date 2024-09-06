@@ -12,7 +12,7 @@ First Snooz installation
 On Windows platforms 
 ---------------------
 
-1. Download the Installer zipped : `SnoozSetup_beta-030.zip <link https://drive.google.com/file/d/1CpVBJt2cciP9Zhg1nIXDW7XWWMAoc9E4/view?usp=sharing>`_ 
+1. Download the Installer zipped : `SnoozSetup_beta-100.zip <link https://drive.google.com/file/d/1JP-ZZcuXF166GKt5zalVbVnqJ4I9lppu/view?usp=drive_link>`_ 
 2. Double click on the zip file downloaded.
 3. Double click on the SnoozSetup.exe included in the zip file.
 4. Follow the instructions (make sure the previous version of Snooz is closed).
@@ -35,17 +35,24 @@ When the installation is complete click “Next” to finish the install.
 Click “Finish”.
 You are done!
 
-On MAC platforms
+On macOS platforms
 --------------------- 
 
-.. warning::  
+1. Download the Installer : `SnoozSetup_beta-100.dmg <link https://drive.google.com/file/d/1emYvCY9Q9bYfg-jLg34bbRwralP04x-d/view?usp=drive_link>`_  
 
-    The installer is no longer updated since Apple requires a certified author.  Our team is working on it…
+2. Double-click on the downloaded file to install.
+   
+3. Drag and drop the Snooz application in the Applications folder. 
+   
+4. Since Snooz is not signed yet, you need to mark it as an exception. Open a terminal and type: ``xattr -cr /Applications/Snooz.app``
+
+5. To launch Snooz for the first time, type the following in the terminal: ``/Applications/Snooz.app/Contents/MacOS/Snooz``
+
 
 On Linux platforms
 ---------------------
 
-1. Download the Installer : `SnoozSetup_beta-030.deb <link https://drive.google.com/file/d/1aE4roYK3TxvyhA57im0Jug52FfVdu5IJ/view?usp=sharing>`_   
+1. Download the Installer : `SnoozSetup_beta-100.deb <link https://drive.google.com/file/d/13jE4wG47iI4741PIVriBUOEVHCaFigyH/view?usp=drive_link>`_   
 
 2. Install Snooz.
    
@@ -81,11 +88,13 @@ Update Snooz from the interface
 =================================
 
 1. Launch the Snooz application already installed on your desktop.  
-2. Navigate to the menu Help > About Snooz
-3. If the installed version is older than the released version download Snooz for your Operating System.
+2. Navigate to the menu Help > About Snooz (macOS : Snooz > About Snooz)
+3. If the installed version is older than the released version **download** Snooz for your OS.
 4. Close Snooz to avoid errors during the installation.  
-5. You can uninstall the previous version of Snooz to delete obsolete packages (this step is optional).  
+5. (Optional) You can uninstall the previous version of Snooz to delete obsolete packages.  
 6. Run the installer.  
 7. After installation, launch the new version of Snooz.  
-8. Activate the latest version of the packages you are interested in. Navigate to File > Settings > Packages in Snooz. Check/uncheck the right versions.  
+8. Activate the latest version of the packages you are interested in. Navigate to File > Settings > Packages (macOS Snooz > Preferences > Packages) in Snooz. Check/uncheck the right versions.
+9. To activate only the most recent version of the packages installed with Snooz, you can press **Reset to default** in the General Settings.
+
    
