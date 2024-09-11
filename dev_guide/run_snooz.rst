@@ -1,7 +1,7 @@
 .. _run_snooz:
 
 =======================================
-Run Snooz
+Run Snooz from the source code
 =======================================
 
 To run Snooz from the source code, you need to have your Snooz workspace configured for VS Code.  See :ref:`installation` for more details.
@@ -92,6 +92,8 @@ You can still add and activate these packages in Snooz, and you'll follow the sa
    - Add the "my_snooz_repo/modules/ExampleModulesPackage" folder in the Snooz package settings
    - Add the "my_snooz_repo/tools/ExampleToolsPackage" folder in the Snooz package settings
    - For more details, see :ref:`manage_package`
+
+We suggest exploring the provided examples before starting your own development. See :ref:`explore_ex` to continue.
 
 .. toctree::
 

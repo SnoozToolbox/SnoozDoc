@@ -1,8 +1,8 @@
 .. _installation:
 
-=============
-Installation
-=============
+==========================
+Developer Installation
+==========================
 This section will guide you through the steps of installing and configuring your development environment.
 
 .. contents::

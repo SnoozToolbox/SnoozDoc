@@ -32,6 +32,7 @@ Are you a programmer? Want to integrate your process into Snooz? Follow this gui
 * To understand how it all works, check out the :doc:`dev_guide/technical_overview/technical_overview`
 * To get the code and start coding, click here: :doc:`dev_guide/installation/installation`
 * To run Snooz from the source code, see : :doc:`dev_guide/run_snooz`
+* To explore examples before creating your first package, see : :doc:`dev_guide/explore_ex`
 * For specific programming questions, check out the How Tos section: :doc:`dev_guide/howtos/howtos`
 
 .. toctree::
@@ -42,5 +43,6 @@ Are you a programmer? Want to integrate your process into Snooz? Follow this gui
    dev_guide/technical_overview/technical_overview
    dev_guide/installation/installation
    dev_guide/run_snooz
+   dev_guide/explore_ex
    dev_guide/howtos/howtos
 
