@@ -24,7 +24,11 @@ A package can contain four different types of items:
 To manage the packages
 =======================
 
-Navigate to **File -> Settings -> Packages**.
+To manage the packages via Snooz.
+
+- Launch Snooz
+- Navigate to **File -> Settings -> Packages**.
+   - (On macOS : Navigate to **Snooz -> Preferences or Settings -> Packages**)
 
 During the initial installation of Snooz, the packages that come with Snooz are activated (checked) by default. Each package can be expanded, allowing you to activate (check) or deactivate (uncheck) individual tools, modules or apps within the package.
 
@@ -34,7 +38,7 @@ During the initial installation of Snooz, the packages that come with Snooz are 
 
 
 To add a package
-=================
+---------------------
 
 1. Press **Add from folder**.
 2. Browse to the folder containing the tool or module package you want to add.  The folder must include the JSON file of the package (e.g., `ceams_package/moduled/CEAMSModules/CEAMSModules.json`).
@@ -47,10 +51,21 @@ To add a package
 
 
 Problem with the Snooz Settings?
-================================
+----------------------------------
+When you reinstall Snooz or add/remove different packages (during development), 
+you may encounter conflicting settings. Here is a procedure to reset Snooz to its default settings:
 
-Navigate to **File -> Settings -> General Settings**.  
+- Launch Snooz
+- Navigate to **File -> Settings -> General Settings** 
+   - (On macOS : **Snooz -> Preferences or Settings -> General Settings**)
+- Press **Reset to default**.  
 
-Press **Reset to default**.  
-Only the original packages installed within Snooz will be added and activated.
+This will reset Snooz to its original state, with only the default packages added and activated.
+
+If you're unable to launch Snooz on Windows (especially for developers), try removing the registry keys for Snooz:
+
+ - Close Snooz
+ - Open the Registry Editor (type **Registry Editor** in the Windows search bar)
+ - Delete the **Snooz** folder under "HKEY_CURRENT_USER\Software\CEAMS"
+ - Relaunch Snooz and manage your packages properly
 

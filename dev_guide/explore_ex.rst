@@ -8,10 +8,11 @@ In order to explore the examples provided for developers, you must be able to ru
 and your own repository forked from ``snooz_package_template`` must be added to your VS Code workspace, see :ref:`run_snooz`.
 
 Make sure the example packages for tools (``ExampleToolsPackage``) and modules (``ExampleModulesPackage``) are added and activated in Snooz. 
+See :ref:`manage_package` for more details.
 
 Once your environment is properly configured, you should find a new tool under the **Examples** menu in Snooz called **Signal Generator**.
 
-Tools : Try out the Signal Generator tool
+Explore the Signal Generator tool
 ==========================================
 
 The Signal Generator tool is a demo tool used to create a signal and export a preview as a PNG file. 
@@ -39,11 +40,13 @@ Each tool defines a series of configuration steps, and once the user is satisfie
 .. note::
    To learn more about navigating the graphical interface of Snooz, see :ref:`tools`. You will also find a list of tools installed with Snooz.
 
-Process: Explore the execution pipeline
-==========================================
-
+Process
+==============
 A tool is a user-friendly abstraction layer that sits above a process. 
 When the user presses Run in the step-by-step interface, it is the process that gets executed. 
+
+Explore a process
+--------------------------------------
 To view the process behind a tool, simply press the **Process** button in the vertical navigation bar on the left (the third one).
 
 .. image:: ./explore_ex/SignalGeneratorProcess.png
@@ -56,7 +59,7 @@ The step-by-step interface is simply a user-friendly way to configure each modul
 
 
 Create a process
-==========================================
+--------------------------------------
 
 Let's explore how to create a process using the same modules as the Signal Generator tool.
 
@@ -69,7 +72,7 @@ Let's explore how to create a process using the same modules as the Signal Gener
 - Connect the outputs with the inputs by clicking on the circle and dragging the link to the input.
 
 Configure a process
-==========================================
+--------------------------------------
 
 Configuring a process involves setting up each module instantiated within the process.
 To configure an instantiated module, double-click on it. 
@@ -92,7 +95,7 @@ This will open a dialog with three tabs:
       We'll go into more detail on how to do that in a later section.
 
 Save, open and run a process
-==========================================
+--------------------------------------
 
 Once the process is configured to your liking, your new process is now ready to be saved. 
 
@@ -285,8 +288,11 @@ Follow these steps to test your new module:
 - Save the new process **Dev Tools -> Save process as** and name the file ``SignalGeneratorV2_process.json``
 - Select **Dev Tools -> Run** (or Ctrl-r) to execute it
 
-Create a new tool
+Tools
 ==========================================
+
+Create a new tool
+-----------------------------------------
 
 We use a command line tool to help create new tools. This makes the process much easier than writing all the necessary files from scratch.
 To have access to the terminal in VS Code make sure to close Snooz. 
@@ -610,6 +616,9 @@ The tool's attribute to create :
     Module Identifier
         Each time a module is instantiated in a process, it gets a unique identifier. If you delete the instance and drag a new one, the identifier will change.
 
+Design the UI
+----------------
+
 For the current example, only the first step is a custom step, and you will have to design the UI.  
 The other steps uses the settings view from the modules instanciated in the process.
 
@@ -622,6 +631,9 @@ Qt Designer should open, allowing you to edit your UI through the software. The 
 
 Once your .ui file is edited and saved, you can compile the python file, right-click on the file, and select "Compile Qt UI File".
 
+Test your tool
+------------------------
+
 You are now ready to test your tool.
 
 - In VS Code, launch Snooz (press F5)
@@ -631,8 +643,11 @@ You are now ready to test your tool.
 
 You have a lot of flexibility in creating tools. I suggest exploring the :ref:`howtos` section to learn about all the possibilities.
 
-Create a new package
+Packages
 ==========================================
+
+Create a new package
+-----------------------------------------
 
 We use a command line tool to help create a package. To have access to the terminal in VS Code make sure to close Snooz. 
 
@@ -644,6 +659,8 @@ We use a command line tool to help create a package. To have access to the termi
 - Fill the information
 
 You can now find your new package under the tools or modules subfolder. From this point you can create new modules and tools into this package.
+
+To add your package and activate it in Snooz, see : :ref:`manage_package`.
 
 .. Note::
    Note that you can move a module or a tool to another package, but you'll need to modify the **json** file of the old and new package.
