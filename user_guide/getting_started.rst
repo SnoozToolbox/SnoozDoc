@@ -38,7 +38,7 @@ You are done!
 On macOS platforms
 --------------------- 
 
-1. Download the Installer : `SnoozSetup_beta-100.dmg <link https://drive.google.com/file/d/1emYvCY9Q9bYfg-jLg34bbRwralP04x-d/view?usp=drive_link>`_  
+1. Download the Installer : `SnoozSetup_beta-100.dmg <link https://drive.google.com/file/d/1emYvCY9Q9bYfg-jLg34bbRwralP04x-d/view>`_  
 
 2. Double-click on the downloaded file to install.
    

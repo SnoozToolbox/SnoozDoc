@@ -34,6 +34,7 @@ Are you a programmer? Want to integrate your process into Snooz? Follow this gui
 * To run Snooz from the source code, see : :doc:`dev_guide/run_snooz`
 * To explore examples before creating your first package, see : :doc:`dev_guide/explore_ex`
 * For specific programming questions, check out the How Tos section: :doc:`dev_guide/howtos/howtos`
+* For more details about the Snooz architecture, check out the Information section: :doc:`dev_guide/information/information`
 
 .. toctree::
    :maxdepth: 3
@@ -45,4 +46,5 @@ Are you a programmer? Want to integrate your process into Snooz? Follow this gui
    dev_guide/run_snooz
    dev_guide/explore_ex
    dev_guide/howtos/howtos
+   dev_guide/information/information
 
