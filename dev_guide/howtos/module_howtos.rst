@@ -42,7 +42,7 @@ In VS Code:
 
 How to update a module
 ==================================
-To modify the behavior of a module, you can modify the compute function and adjust the module version according to these guidelines : ???. 
+To modify the behavior of a module, you can modify the compute function and adjust the module version according to these :ref:`Versioning Guidelines<versioning>`. 
 
 To modify the inputs and outputs of a module, you need to update a few files. For a list of files included in the module structure, see  :ref:`info_modules`.
 
@@ -158,7 +158,7 @@ Handling the input parameter from the SettingsView.py :
 
 Modifying an output does not affect the Settings View.
 
-For more details about the Settings View, see :ref:`module_SettingsView_file` and :ref:`howto_settingsView`
+For more details about the Settings View, see :ref:`SettingsView Info<module_SettingsView_file>` and :ref:`howto_settingsView`.
 
 Results View
 -------------------------
