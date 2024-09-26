@@ -17,7 +17,6 @@ Here some additional information about the :ref:`Packages<info_packages>`, :ref:
   info_modules
   info_apps
 
-=======================================
 Architecture
 =======================================
 
@@ -25,7 +24,7 @@ Architecture
    :local:
 
 Meet the managers
-=======================================
+---------------------------------------------
 Managers in Snooz are the core of the application. Each manager oversees a specific set of related features. 
 For instance, the PackageManager handles loading and unloading packages and package items, 
 while the ContentManager displays the content managed by other managers, such as the ProcessManager, the ToolManager, and the AppManager.

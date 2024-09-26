@@ -31,9 +31,12 @@ This flexibility is made possible by the concept of Modules, Process, Tools and 
 
 4. **Apps** : An app is an application that operates within Snooz. (See :ref:`apps` for more information.)
 
+To have more information about the architecture, see :ref:`information`.
+
 Package and versioning
 ------------------------------
-A challenge with a system like this is that when changes are made to a module, it has the potential to disrupt all processes and tools that depend on it. This poses issues on multiple fronts. 
+A challenge with a system like this is that when changes are made to a module, it has the potential to disrupt all processes and tools that depend on it. 
+This poses issues on multiple fronts. 
 
 * Firstly, it complicates the reproduction of past analyses. 
 * Secondly, any modification to a module results in a cascade of adjustments needed for all tools utilizing it.
@@ -49,3 +52,4 @@ In Snooz, the process of adding a new tool consists of importing a new package.
 This way, you can develop a new process with a step-by-step interface and new modules. 
 Then, you only need to send your package to a colleague for them to start using it by importing it into Snooz.
 
+To have more information about the versioning, see :ref:`versioning`.

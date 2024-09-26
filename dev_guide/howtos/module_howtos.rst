@@ -42,7 +42,7 @@ In VS Code:
 
 How to update a module
 ==================================
-To modify the behavior of a module, you can modify the compute function and adjust the module version according to these :ref:`Versioning Guidelines<versioning>`. 
+To modify the behavior of a module, you can modify the ``compute()`` function and adjust the module version according to these :ref:`Versioning Guidelines<versioning>`. 
 
 To modify the inputs and outputs of a module, you need to update a few files. For a list of files included in the module structure, see  :ref:`info_modules`.
 
@@ -65,12 +65,12 @@ For an example of a JSON file, see :ref:`module_json_file`.
 Module python file
 -------------------------
 
-The main module python file (referred :ref:`here<info_modules>` as [MODULE].py) contains the compute function and interacts with the inputs/outputs of the module.  
+The main module python file (referred :ref:`here<info_modules>` as [MODULE].py) contains the ``compute()`` function and interacts with the inputs/outputs of the module.  
 To update the inputs/outputs properly you need to update 3 sections:
 
    1. The init function
-   2. The compute function parameters
-   3. The code of the compute function
+   2. The ``compute()`` function parameters
+   3. The code of the ``compute()`` function
 
 1. The init function
 
@@ -96,7 +96,7 @@ For example, let's remove the ``signal_1`` input and add an output called ``stat
 
 2. The compute function parameters
 
-To update the compute function, add or remove the necessary parameters. The compute function of the class is called when the module is executed within a process. 
+To update the ``compute()`` function, add or remove the necessary parameters. The ``compute()`` function of the class is called when the module is executed within a process. 
 The parameters should match exactly (and be in the same order) as the inputs defined in the JSON file and registered in the init function.
 
 For example, let's remove the input called ``signal_1`` and add an output called ``statistics``.
@@ -120,9 +120,9 @@ To this:
          'statitics': some_stats # ADD THIS KEY/VALUE PAIR
          }
 
-3. The code of the compute function
+3. The code of the ``compute()`` function
 
-Ensure that you remove any code that references the removed parameter and add the necessary code to handle the new parameter within the compute function.
+Ensure that you remove any code that references the removed parameter and add the necessary code to handle the new parameter within the ``compute()`` function.
 
 Settings View
 -------------------------
@@ -205,9 +205,68 @@ How to show information in the log tab
 ====================================================================
 TODO
 
-How to generate a runtime exception in a module
+How to handle exceptions
 ====================================================================
-TODO
+In Snooz, when a module is executing we define two types of possible problems: 
+
+- input problems
+- runtime problems
+ 
+The module is responsible for detecting these problems and raise the appropriate exception when they happens. 
+
+NodeInputException
+---------------------
+An input problem occurs when an input module is not of the expected type. When this happens, the module must raise a ``NodeInputException``. 
+A ``NodeInputException`` is considered a critical error and will stop the execution of Snooz.
+
+This error typically occurs during the development phase, when the process has not yet been fully validated. 
+It may result from an input parameter being poorly defined or modules in the process not being properly connected.
+
+Once the process is integrated into a tool, any user-editable parameters should be validated before execution begins.
+
+The best practice is to verify the type of the input parameters at the start of the ``compute()`` function in your module.
+
+.. code-block:: python
+   
+   def compute(self, signal_1):
+      # Make appropriate checks to input values
+      if not isinstance(signal_1, dict):
+         raise NodeInputException(self.identifier, "signal_1", "signal_1 must be a dictionary")
+
+.. note::
+
+   self.identifier informs which instance of a module is responsible for generating the exception, this is useful when you have multiple instances of the same module inside a process.
+
+NodeRuntimeException
+---------------------
+A runtime exception occurs when there is a problem during the execution of the ``compute()`` function, 
+after the initial checks for input validity have passed. When this happens, the module must raise a ``NodeRuntimeException``.
+
+A runtime exception is not considered as critical as ``NodeInputException``, since the error can be caused by the content being analyzed rather than the developer's code. 
+If the process is set up to run on multiple files (using a master node), only the current iteration will fail, and the process will continue with the next iteration. 
+At the end of all iterations, the user will be informed that an error occurred during one or more iterations.
+
+Here are a few examples where your module should raise a ``NodeRuntimeException``:
+
+- A file you are trying to open is locked by another software and cannot be accessed.
+- The file you are trying to read is empty or improperly formatted.
+- There isn't enough disk space to save a file.
+- You lack the necessary credentials to perform an action on the file system.
+
+It is important that the developer catches these errors to help the user understand why Snooz failed to analyze their data.
+
+Here's an example of how to handle a runtime error in a ``compute()`` function:
+
+.. code-block:: python
+
+   try : 
+         dataframe.to_csv(path_or_buf=filename, sep='\t', \
+            index=False, index_label='False', mode='a', header=write_header, encoding="utf_8")
+   except :
+         error_message = f"Snooz can not write in the file {filename}."+\
+            f" Check if the drive is accessible and ensure the file is not already open."
+         raise NodeRuntimeException(self.identifier, "SpindlesDetails", error_message)     
+
 
 How to run a process over multiple files
 ====================================================================
@@ -215,3 +274,12 @@ TODO
 
 More information about the modules
 ====================================================================
+See :ref:`info_modules`.
+
+More information about the tools
+====================================================================
+See :ref:`info_tools`.
+
+More information about the packages
+====================================================================
+See :ref:`info_packages`.
