@@ -51,7 +51,7 @@ The description of each needed attribute of the package :
      - 
    * - package_version
      - The version of the package.
-     - The version follows this guidelines : .  This version may be used by other packages if any dependencies.
+     - The version follows this guidelines : :ref:`versioning`.  This version may be used by other packages if any dependencies.
    * - package_api_version
      - The version of the structure of this file. 
      - The api version is linked to the Snooz architecture (for Snooz beta the api version is 1.0.0).

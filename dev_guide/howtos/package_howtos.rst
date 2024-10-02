@@ -65,6 +65,15 @@ Here is an example of a release folder structure that includes 3 types of packag
 The idea is to share the folder named according to the version of the package in order to emphasize the version number.
 
 How to import a package in Snooz
---------------------------------
+----------------------------------
 
 To add your package and activate it in Snooz, see : :ref:`manage_package`.
+
+How to update the package version
+-----------------------------------------
+
+The package version is specified in the JSON file that describes the package. To update the version, simply edit the JSON file manually.
+Change the value of the ``package_version`` field.
+
+For an example of a JSON file, see :ref:`info_packages`
+
