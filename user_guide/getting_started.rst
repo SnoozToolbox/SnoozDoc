@@ -12,7 +12,7 @@ First Snooz installation
 On Windows platforms 
 ---------------------
 
-1. Download the Installer zipped : `SnoozSetup_beta-100.zip <link https://drive.google.com/file/d/1JP-ZZcuXF166GKt5zalVbVnqJ4I9lppu/view?usp=drive_link>`_ 
+1. Download the Installer zipped : `SnoozSetup_beta-100.zip <https://drive.google.com/file/d/1JP-ZZcuXF166GKt5zalVbVnqJ4I9lppu/view?usp=drive_link>`_ 
 2. Double click on the zip file downloaded.
 3. Double click on the SnoozSetup.exe included in the zip file.
 4. Follow the instructions (make sure the previous version of Snooz is closed).
@@ -38,7 +38,7 @@ You are done!
 On macOS platforms
 --------------------- 
 
-1. Download the Installer : `SnoozSetup_beta-100.dmg <link https://drive.google.com/file/d/1emYvCY9Q9bYfg-jLg34bbRwralP04x-d/view>`_  
+1. Download the Installer : `SnoozSetup_beta-100.dmg <https://drive.google.com/file/d/1emYvCY9Q9bYfg-jLg34bbRwralP04x-d/view>`_  
 
 2. Double-click on the downloaded file to install.
    
@@ -52,7 +52,7 @@ On macOS platforms
 On Linux platforms
 ---------------------
 
-1. Download the Installer : `SnoozSetup_beta-100.deb <link https://drive.google.com/file/d/13jE4wG47iI4741PIVriBUOEVHCaFigyH/view?usp=drive_link>`_   
+1. Download the Installer : `SnoozSetup_beta-100.deb <https://drive.google.com/file/d/13jE4wG47iI4741PIVriBUOEVHCaFigyH/view?usp=drive_link>`_   
 
 2. Install Snooz.
    
