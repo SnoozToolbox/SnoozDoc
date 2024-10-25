@@ -48,8 +48,8 @@ Diagrams of the interactions between managers are presented below.
 
 .. _versioning:
 
-How module, tool and package versioning works
-===============================================
+How module, tool, app and package versioning works
+===================================================
 The main purpose of versioning is to ensure the ability to reproduce past analyses, even if new developments alter how modules and tools function. 
 The idea is to increment the version (in XX.XX.XX format) of the modules, tools, apps, and packages involved in a design modification, 
 ensuring the old design remains intact and usable with the previous version.

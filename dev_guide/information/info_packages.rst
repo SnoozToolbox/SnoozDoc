@@ -66,8 +66,8 @@ The description of each needed attribute of the package :
      - Valid values are: **module**, **tool**, **process** and **app**.
    * - items.item_version
      - The type of items.
-     - For modules item, this must follow the guidelines : .
+     - For modules item, this must follow the guidelines : :ref:`versioning`.
    * - items.item_hooks
      - Which Snooz endpoint it will interact with.
-     - For more details on hooks and endpoint : .
+     - For more details on hooks and endpoint : TODO.
 
