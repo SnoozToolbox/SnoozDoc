@@ -20,6 +20,7 @@ A new user
 
 If you are new to Snooz, we recommend beginning with the Preprocessing category.  
 The Preprocessing category includes importers, converters, extractors, and the artifact detection tool.
+The main goal of the user is to create a cohort compatible with Snooz, see :ref:`accepted_format` for more details.
 
 Ready for the analysis  
 -----------------------
@@ -39,6 +40,35 @@ Viewer
 The only available Viewer is the Oximeter, which allows you to select bad sections to generate a valid Oxygen Saturation Report.
 The Oximeter is an application that operates within Snooz.  (See :ref:`apps` for more details.)
 
+.. _accepted_format:
+
+Accepted file formats
+==========================================================
+
+**Polysomnography file format**
+
+The only accepted format for polysomnography is the European Data Format (EDF). For more details, see `European Data Format <https://www.edfplus.info/specs/edf.html>`_.
+Snooz can also read signals from the EDF+ format; however, annotations must be imported from the EDF+ file into a .tsv (Tab-Separated Value) format compatible with Snooz.
+See :ref:`EDF_Annotations_Importer` for more details.
+
+.. note::
+
+   CEAMS users have access to two additional PSG file formats: Harmonie and NATUS.
+
+**Annotations file format**
+
+The columns of the annotations file are as follows:
+
+1. **group** : The category of the annotation (annotations with different names can be grouped into the same category), e.g. artifact
+2. **name**: The text label of the annotation, e.g., art_snooz
+3. **start_sec**: The onset of the annotation in seconds, e.g., 300
+4. **duration_sec** : The duration of the annotation in second, e.g., 30
+5. **channels** : The list of channels on which the annotation occurs, e.g., ['LOC', 'ROC']
+
+To have an example of the Snooz annotations file see `Snooz_accessory_file.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/Snooz_accessory_file.tsv>`_
+
+Many converters have been implemented in Snooz. 
+I recommend exploring the preprocessing category to see if your annotation files can be converted into Snooz accessory files.
 
 Navigate in the step-by-step interface
 ==========================================================
