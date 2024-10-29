@@ -7,7 +7,7 @@ Explore examples
 In order to explore the examples provided for developers, you must be able to run Snooz from the source code, 
 and your own repository forked from ``snooz_package_template`` must be added to your VS Code workspace, see :ref:`run_snooz`.
 
-Make sure the example packages for tools (``ExampleToolsPackage``) and modules (``ExampleModulesPackage``) are added and activated in Snooz. 
+Make sure the example packages for tools (``ExampleToolsPackage``), modules (``ExampleModulesPackage``) and apps (``ExampleAppsPackage``) are added and activated in Snooz. 
 See :ref:`manage_package` for more details.
 
 Once your environment is properly configured, you should find a new tool under the **Examples** menu in Snooz called **Signal Generator**.
@@ -636,7 +636,7 @@ Design the UI
 
 For the current example, only the first step is a custom step, and you will have to design the UI.  
 The other steps uses the settings view from the modules instanciated in the process.
-
+s
 Select the file "ExampleToolsPackage/SignalGeneratorV2/IntroStep/Ui_introStep.ui", right-click and select 'Edit Qt UI File'.
 Qt Designer should open, allowing you to edit your UI through the software. The introduction page typically contains text describing the tool.
 
@@ -657,6 +657,76 @@ You are now ready to test your tool.
 - You should be able to navigate through the steps.
 
 You have a lot of flexibility in creating tools. I suggest exploring the :ref:`howtos` section to learn about all the possibilities.
+
+Explore the Display Annotations App
+==========================================
+The Display Annotations App is a demo app used to display the annotations listed in the Snooz .tsv accessory file linked to a PSG file.
+
+To launch the Display Annotations App :
+
+   - Launch Snooz (F5) from VS Code
+   - Option 1
+      - In Snooz, navigate to **File -> Open** menu.
+      - Select the Display Annotations.
+   - Option 2
+      - In Snooz, navigate to **Examples -> Display Annotations** menu.
+      - Press **Open File** button in the left panel.
+   - Choose the PSG file for which you want to display annotations.
+
+
+.. image:: ./explore_ex/DisplayAnnotations.png
+   :width: 900
+   :alt: Alternative text   
+
+The app includes two buttons: "UI Button A" in the app interface and "Open File" in the left panel of Snooz.
+Annotations are displayed in a QTableWidget and read using the PSGReader from the CEAMSModules package.
+
+Create a new app
+--------------------------
+
+We use a command line tool to help create new apps. This makes the process much easier than writing all the necessary files from scratch.
+To have access to the terminal in VS Code make sure to close Snooz. 
+
+- In VS Code navigate to **Terminal -> New Terminal**
+- Select your repository you forked from snooz_package_template (e.g. my_snooz_repo)
+- Make sure the virtual environment **snooz_310_env** is activated (see :ref:`installation`)
+- In the terminal type : ``python main_utils.py``
+- Select **5- Create an app**
+   - Package name : ExampleAppsPackage
+   - App class name : AppA
+   - App label : App A
+   - App menu category : Examples
+
+Your new app is located under ``/apps/ExampleAppsPackage/AppA``.
+For more details about the different files generated, see :ref:`info_apps`.
+
+Your new app is also added to the description file (``ExampleAppsPackage.json``) of the app package.
+
+.. code-block:: JSON
+
+    {
+        "item_name": "AppA",
+        "item_type": "app",
+        "item_version": "0.0.0",
+        "item_hooks": [
+            {
+                "endpoint_name": "menu_endpoint",
+                "parameters": {
+                    "menu_category": "Examples",
+                    "menu_label": "App A"
+                }
+            },
+            {
+                "endpoint_name": "file_menu_endpoint",
+                "parameters": {
+                    "app_label": "App A"
+                }
+            }
+        ]
+    }
+
+The two ``endpoint_name`` added mean that the app can be accessed by the **File -> Open** and the **Examples** menu.
+
 
 Packages
 ==========================================

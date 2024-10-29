@@ -67,6 +67,8 @@ The columns of the annotations file are as follows:
 
 To have an example of the Snooz annotations file see `Snooz_accessory_file.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/Snooz_accessory_file.tsv>`_
 
+Many converters have been implemented in Snooz. 
+I recommend exploring the preprocessing category to see if your annotation files can be converted into Snooz accessory files.
 
 Navigate in the step-by-step interface
 ==========================================================
