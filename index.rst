@@ -24,6 +24,7 @@ Want to install and use Snooz? Follow this guide!
    user_guide/manage_package
    user_guide/tools/tools
    user_guide/apps/apps
+   user_guide/EDFbrowser_compatibility
    
 Developer's Guide
 -----------------

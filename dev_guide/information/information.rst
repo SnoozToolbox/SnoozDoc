@@ -16,6 +16,7 @@ Here some additional information about the :ref:`Packages<info_packages>`, :ref:
   info_tools
   info_modules
   info_apps
+  info_PSG_accessory
 
 Architecture
 =======================================
@@ -112,3 +113,5 @@ Package item interaction with endpoints and hooks
 ====================================================
 Snooz is a highly flexible application. Endpoints and hooks were designed to facilitate communication between Apps and Tools, 
 but this concept has been extended throughout the application to manage the interaction of PackageItems (Modules, Tools, Apps) with the core Snooz application.
+
+

@@ -67,8 +67,18 @@ The columns of the annotations file are as follows:
 
 To have an example of the Snooz annotations file see `Snooz_accessory_file.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/Snooz_accessory_file.tsv>`_
 
-Many converters have been implemented in Snooz. 
+The Snooz accessory .tsv file is human-readable and can be opened in any text editor or spreadsheet application (such as Excel). 
+Items are separated by tabs, and decimal points are marked with a dot. 
+The encoding format is UTF-8.
+
+- **Item separator** : \t
+- **Decimal separator** : .
+- **Encoder format** : UTF-8
+
+Many converters have been implemented in Snooz in order to create the Snooz accessory file for your cohort.
 I recommend exploring the preprocessing category to see if your annotation files can be converted into Snooz accessory files.
+The Snooz accessory file can be imported in the open-source universal viewer `EDFbrowser <https://www.teuniz.net/edfbrowser/>`_.
+For more details, see :ref:`EDFbrowser_compatibility`.
 
 Navigate in the step-by-step interface
 ==========================================================
