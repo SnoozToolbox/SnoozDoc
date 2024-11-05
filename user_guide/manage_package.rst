@@ -49,16 +49,25 @@ To add a package
 7. Close the window.
 8. Verify the version of the tools available in the menu.
 
+.. warning::
+   
+   **Packages in Development**
+
+   Users may receive packages to validate before a Snooz release. The received zipped file typically includes two folders named with the version number, such as CEAMSModule_6_9_1 and CEAMSTools_6_9_1.
+   To add the packages in Snooz, use the folders named **CEAMSModules** and **CEAMSTools** located within the version-numbered folders.
+
 
 Problem with the Snooz Settings?
 ----------------------------------
 When you reinstall Snooz or add/remove different packages (during development), 
 you may encounter conflicting settings. Here is a procedure to reset Snooz to its default settings:
 
-- Launch Snooz
+- Launch Snooz.
 - Navigate to **File -> Settings -> General Settings** 
    - (On macOS : **Snooz -> Preferences or Settings -> General Settings**)
 - Press **Reset to default**.  
+- Close Snooz.
+- Relaunch Snooz.
 
 This will reset Snooz to its original state, with only the default packages added and activated.
 
@@ -66,6 +75,6 @@ If you're unable to launch Snooz on Windows (especially for developers), try rem
 
  - Close Snooz
  - Open the Registry Editor (type **Registry Editor** in the Windows search bar)
- - Delete the **Snooz** folder under "HKEY_CURRENT_USER\Software\CEAMS"
+ - Delete the **Snooz** folder under "HKEY_CURRENT_USER/Software/CEAMS"
  - Relaunch Snooz and manage your packages properly
 
