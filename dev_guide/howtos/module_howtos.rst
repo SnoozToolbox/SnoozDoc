@@ -292,6 +292,14 @@ In Snooz, when a module is executing we define two types of possible problems:
  
 The module is responsible for detecting these problems and raise the appropriate exception when they happens. 
 
+The classes are imported as below : 
+
+.. code-block:: python
+
+   from commons.NodeInputException import NodeInputException
+   from commons.NodeRuntimeException import NodeRuntimeException
+
+
 NodeInputException
 ---------------------
 An input problem occurs when an input module is not of the expected type. When this happens, the module must raise a ``NodeInputException``. 
