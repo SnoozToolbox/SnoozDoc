@@ -18,24 +18,24 @@ Install a Git client to download the code.
 Snooz Workspace
 ==========================
 First, manually create a folder called "snooz_workspace". 
-This will be the root directory of the project and will contain at first only the Snooz repository.
+This will be the root directory of the project and will contain at first only the snooz-toolbox repository.
 
-Snooz repository
+Snooz Toolbox repository
 -----------------------------------
 
-The "scinodes_poc" repository contains the main application code (the architecture of Snooz), which is essential for running the application in debug mode. 
+The "snooz-toolbox" repository contains the main application code (the architecture of Snooz), which is essential for running the application in debug mode. 
 However, you generally won't need to make modifications to this code unless you are working on a core feature of Snooz rather than on a specific tool.
 
-Clone this repository into your new "snooz_workspace" folder. Type this command line in a terminal (or "Git Bash" on Windows): ``git clone https://bitbucket.org/ceamscarsm/scinodes_poc.git``
+Clone this repository into your new "snooz_workspace" folder. Type this command line in a terminal (or "Git Bash" on Windows): ``git clone https://github.com/SnoozToolbox/snooz-toolbox.git``
 
 .. note::
-   It is advised to tell Git to ignore the file **scinodes_poc.code-workspace** once downloaded because it will end up containing values that are specific to your installation. 
+   It is advised to tell Git to ignore the file **snooz.code-workspace** once downloaded because it will end up containing values that are specific to your installation. 
    
    Run this command to do it: ``git update-index --skip-worktree ./snooz.code-workspace``
 
-The repository "scinodes_poc" also contains the tools and modules released with the Snooz application, located in the resources folder. 
+The repository "snooz-toolbox" also contains the tools, modules and apps released with the Snooz Toolbox, located in the resources folder. 
 This allows you to run many tools using a single repository. 
-However, any modifications to tools or modules must be made in a different repository, which you will learn about in another step.
+However, any modifications to tools, modules and apps must be made in a different repository, which you will learn about in another step.
 
 Python 
 =============
@@ -76,10 +76,10 @@ Activate the virtual environment in the terminal or Command Prompt:
    * For Windows : ``call /path_to_virtual_environment/snooz_310_env/Scripts/activate.bat``
    * For Linux and macOS : ``source /path_to_virtual_environment/snooz_310_env/bin/activate``
 
-You should see the name of the virtual environment in parenthesis in the terminal.
+Once activated, you should see the name of the virtual environment in parenthesis in the terminal.
 
 To complete the setup of your virtual environment, install the external libraries required to run Snooz.
-The ``requirements.txt`` file is saved in the root folder of the "scinodes_poc" repository you cloned previously.
+The ``requirements.txt`` file is saved in the root folder of the "snooz-toolbox" repository you cloned previously.
 
 To install the requirements, type in the terminal or Command Prompt:
  | ``pip install -r requirements.txt``
@@ -111,7 +111,7 @@ Define the Python intepreter from the virtual environment ``snooz_310_env``.
 
 * Open VS Code
 * Navigate to File-> Open workspace from file
-* Choose the file snooz.code-workspace from the "scinodes_poc" repository you cloned.
+* Choose the file snooz.code-workspace from the "snooz-toolbox" repository you cloned.
 * Navigate to View -> Command Palette (Ctrl-Shift-p)  
   
    - Select "Python:Select Interpreter"

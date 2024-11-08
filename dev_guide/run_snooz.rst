@@ -8,7 +8,7 @@ To run Snooz from the source code, you need to have your Snooz workspace configu
 
 * Open VS Code
 * Navigate to File-> Open workspace from file
-* Choose the file snooz.code-workspace from the "scinodes_poc" repository
+* Choose the file snooz.code-workspace from the "snooz-toolbox" repository
 * Navigate to Run -> Start Debugging (F5)
 
 If everything is properly set up, the Snooz application should start.
@@ -22,7 +22,7 @@ Depending on your selection, follow the steps below.
 
 Tools released with Snooz
 -------------------------------------------
-Different versions of the CEAMS package are available in the "scinodes_poc" repository.
+Different versions of the CEAMS packages are available in the "snooz-toolbox" repository.
 Those packages can be activated via the Snooz menu.
 
 * Launch Snooz (F5)
@@ -34,53 +34,53 @@ Tools from the development version
 -------------------------------------------
 You want to work with the latest development version of the CEAMS package?
 
-* Clone the "ceams_package" repository into your "snooz_workspace" folder.
+* Clone the "snooz-package-ceams" repository into your "snooz_workspace" folder.
 
-   - ``git clone https://bitbucket.org/ceamscarsm/ceams_package.git``
+   - ``git clone https://github.com/SnoozToolbox/snooz-package-ceams.git``
    - See :ref:`installation` for more details about the "snooz_workspace" folder.
 
-* Add the folder "ceams_package" into the VS Code workspace.
+* Add the folder "snooz-package-ceams" into the VS Code workspace.
 
    - Open VS Code
    - Navigate to File-> Open workspace from file
-   - Choose the file snooz.code-workspace from the "scinodes_poc" repository
+   - Choose the file snooz.code-workspace from the "snooz-toolbox" repository
    - Navigate to File-> Add Folder to Workspace
-   - Select the folder "ceams_package"
-   - The file snooz.code-workspace in the "scinode_poc" folder will be updated automatically. 
+   - Select the folder "snooz-package-ceams"
+   - The file snooz.code-workspace in the "snooz-toolbox" folder will be updated automatically. 
 
 * Add and activate the development version of the CEAMS package in Snooz.
 
    - Launch Snooz (F5)
    - In Snooz, navigate to File -> Settings -> Packages
-   - Add the "ceams_package/modules/CEAMSModules" folder in the Snooz package settings
-   - Add the "ceams_package/tools/CEAMSTools" folder in the Snooz package settings
+   - Add the "snooz-package-ceams/modules/CEAMSModules" folder in the Snooz package settings
+   - Add the "snooz-package-ceams/tools/CEAMSTools" folder in the Snooz package settings
    - Check these 2 packages
    - For more details, see :ref:`manage_package`
 
 Tools from your own package
 -------------------------------------------
 You want to create modules and tools for your own purpose?
-Fork and clone the "snooz_package_template" repository to get started with all the needed structure to develop a package within Snooz.
+Fork and clone the "snooz-package-template" repository to get started with all the needed structure to develop a package within Snooz.
 
-The "snooz_package_template" repository contains the empty structure needed to create your own modules and tools. 
+The "snooz-package-template" repository contains the empty structure needed to create your own modules, tools and apps. 
 
-* Fork the "snooz_package_template" repository
+* Fork the "snooz-package-template" repository
 
-   - go to `snooz_package_template <https://bitbucket.org/ceamscarsm/snooz_package_template/src/master/>`_
-   - click on the ... and fork this repository   
+   - go to `snooz-package-template <https://github.com/SnoozToolbox/snooz-package-template.git>`_
+   - click on fork   
    - You should rename the repository to identify your work, e.g., my_snooz_repo.
 
-* Clone your forked "snooz_package_template" repository, e.g., my_snooz_repo.
+* Clone your forked "snooz-package-template" repository, e.g., my_snooz_repo.
 * Read the README.md in this repository to know how to use it.  Complete the setup before starting development.
 
 * Add the folder of your new repository into the VS Code workspace.
 
    - Open VS Code
    - Navigate to File-> Open workspace from file
-   - Choose the file snooz.code-workspace from the "scinodes_poc" repository
+   - Choose the file snooz.code-workspace from the "snooz-toolbox" repository
    - Navigate to File-> Add Folder to Workspace
    - Select your folder, e.g., my_snooz_repo.
-   - The file snooz.code-workspace in the "scinode_poc" folder will be updated automatically. 
+   - The file snooz.code-workspace in the "snooz-toolbox" folder will be updated automatically. 
 
 For now, your repository contains only the provided examples, e.g., ExampleModulesPackage and ExampleToolsPackage.  
 You can still add and activate these packages in Snooz, and you'll follow the same procedure with your own packages once they are created.

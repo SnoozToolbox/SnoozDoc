@@ -27,16 +27,16 @@ EdfReader
 
 Snooz is configured to load the appropriate compiled code extensions automatically based on the user's operating system.
 
-Snooz architecture repository: ``scinodes_poc``
+Snooz architecture repository: ``snooz-toolbox``
 
-- Bitbucket Address : https://bitbucket.org/ceamscarsm/scinodes_poc/
-- To clone : git@bitbucket.org:ceamscarsm/scinodes_poc.git
+- Github Address : https://github.com/SnoozToolbox/snooz-toolbox.git
+- To clone : ``git clone https://github.com/SnoozToolbox/snooz-toolbox.git``
 
 **Resources Folder path for the Edf reader**
 
-- Windows : scinodes_poc/src/main/resources/windows/extension/PSGReader
-- macOS : scinodes_poc/src/main/resources/mac/extension/PSGReader
-- Linux : scinodes_poc/src/main/resources/linux/extension/PSGReader
+- Windows : snooz-toolbox/src/main/resources/windows/extension/PSGReader
+- macOS : snooz-toolbox/src/main/resources/mac/extension/PSGReader
+- Linux : snooz-toolbox/src/main/resources/linux/extension/PSGReader
 
 .. note::
 

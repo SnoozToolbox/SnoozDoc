@@ -26,7 +26,7 @@ How to create a module
 We use a command line tool to help create new modules. To access the terminal in VS Code, make sure to close Snooz beforehand. 
 
 - In VS Code navigate to **Terminal -> New Terminal**
-- Select your repository you forked from snooz_package_template (e.g. my_snooz_repo)
+- Select your repository you forked from snooz-package-template (e.g. my_snooz_repo)
 - Make sure the virtual environment **snooz_310_env** is activated (see :ref:`installation`)
 - In the terminal type : ``python main_utils.py``
 - Select **2- Create a module**
@@ -250,7 +250,7 @@ However, all fields are initially defined as user-editable text fields (e.g., th
 Ui_[MODULE]SettingsView.ui
 
 To configure more appropriate fields, edit the **Ui_[MODULE]SettingsView.ui** file using Qt Designer. Right-click the file and select **Edit Qt UI File (designer)** to replace the widgets and define your parameters.
-Explaining how Qt Designer works is beyond the scope of this documentation, but there are many tutorials available online. You can also refer to the CEAMS package for several examples: https://bitbucket.org/ceamscarsm/ceams_package/src/master/.
+Explaining how Qt Designer works is beyond the scope of this documentation, but there are many tutorials available online. You can also refer to the CEAMS packages for several examples: https://github.com/SnoozToolbox/snooz-package-ceams.git.
 Once you are satisfied with the UI of your Settings View, save the file and compile the Python version. Right-click on Ui_[MODULE]SettingsView.ui and select **Compile Qt UI File**.
 
 [MODULE]SettingsView.py

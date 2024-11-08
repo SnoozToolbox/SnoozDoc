@@ -1,5 +1,5 @@
 # SnoozDoc
-Documentation about the Snooz application
+Documentation about the Snooz Toolbox
 
 # Create a virtual python environment
 ```

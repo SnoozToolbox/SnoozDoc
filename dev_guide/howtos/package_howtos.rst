@@ -18,7 +18,7 @@ How to create create a package
 We use a command-line tool to help create a package. To access the terminal in VS Code, make sure to close Snooz beforehand. 
 
 - In VS Code navigate to **Terminal -> New Terminal**
-- Select your repository you forked from snooz_package_template (e.g. my_snooz_repo)
+- Select your repository you forked from snooz-package-template (e.g. my_snooz_repo)
 - Make sure the virtual environment **snooz_310_env** is activated (see :ref:`installation`)
 - In the terminal type : ``python main_utils.py``
 - Select **1- Create a package**
@@ -49,7 +49,7 @@ When you are ready to share your package with others, it's best practice to rele
 We use a command-line tool to assist with the release process. To access the terminal in VS Code, make sure to close Snooz beforehand.
 
 - In VS Code navigate to **Terminal -> New Terminal**
-- Select your repository you forked from snooz_package_template (e.g. my_snooz_repo)
+- Select your repository you forked from snooz-package-template (e.g. my_snooz_repo)
 - Make sure the virtual environment **snooz_310_env** is activated (see :ref:`installation`)
 - In the terminal, type : ``python main_utils.py``
 - Select **6- Create a release package**
