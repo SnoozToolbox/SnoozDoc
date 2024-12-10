@@ -6,6 +6,11 @@ Getting Started with Snooz
 
 The goal of this document is to  detail how to download, install and launch Snooz.
 
+.. note::
+
+  **CÉAMS members** if you need access to the Snooz Toolbox, which supports reading NATUS PSG files (version 9.1), please send an email to snooztoolbox.cnmtl@ssss.gouv.qc.ca—we'll be happy to assist!
+
+
 First Snooz installation
 ==========================
 
@@ -97,4 +102,6 @@ Update Snooz from the interface
 8. Activate the latest version of the packages you are interested in. Navigate to File > Settings > Packages (macOS Snooz > Preferences > Packages) in Snooz. Check/uncheck the right versions.
 9. To activate only the most recent version of the packages installed with Snooz, you can press **Reset to default** in the General Settings.
 
-   
+.. warning::
+
+  **CÉAMS members** if you need an update for the Snooz Toolbox, which supports reading NATUS PSG files (version 9.1), please send an email to snooztoolbox.cnmtl@ssss.gouv.qc.ca—we'll be happy to assist!   

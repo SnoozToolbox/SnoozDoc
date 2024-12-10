@@ -53,7 +53,10 @@ See :ref:`EDF_Annotations_Importer` for more details.
 
 .. note::
 
-   CEAMS users have access to two additional PSG file formats: Harmonie and NATUS.
+   **CEAMS users have access to two additional PSG file formats:**
+
+   - **Harmonie (up to version 6.2)**: The signal recording file is a .SIG file, while the accessory file for sleep staging and annotations is a .STS file.
+   - **NATUS (version 9.1)**: The entire recording folder is required. This folder typically includes files such as .eeg, .ent, .epo, among others.
 
 **Annotations file format**
 
