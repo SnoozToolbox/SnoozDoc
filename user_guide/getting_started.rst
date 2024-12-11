@@ -10,14 +10,15 @@ The goal of this document is to  detail how to download, install and launch Snoo
 
   **CÉAMS members** if you need access to the Snooz Toolbox, which supports reading NATUS PSG files (version 9.1), please send an email to snooztoolbox.cnmtl@ssss.gouv.qc.ca—we'll be happy to assist!
 
-
 First Snooz installation
 ==========================
+
+The link to download the Snooz installer is provided by email. To request it, please visit https://snooztoolbox.com/ and fill out the form in the `Download section <https://snooztoolbox.com/download/>`_, then submit it.
 
 On Windows platforms 
 ---------------------
 
-1. Download the Installer zipped : `SnoozSetup_beta-100.zip <https://drive.google.com/file/d/1JP-ZZcuXF166GKt5zalVbVnqJ4I9lppu/view?usp=drive_link>`_ 
+1. Download the Installer using the link provided in the Snooz email after submitting your profile.
 2. Double click on the zip file downloaded.
 3. Double click on the SnoozSetup.exe included in the zip file.
 4. Follow the instructions (make sure the previous version of Snooz is closed).
@@ -28,7 +29,6 @@ On Windows platforms
     If you get this warning below :  
      
     1. Click on More info.
-  
     2. Select Run anyway.
     
     .. image:: ./Windows_protected.png
@@ -43,22 +43,17 @@ You are done!
 On macOS platforms
 --------------------- 
 
-1. Download the Installer : `SnoozSetup_beta-100.dmg <https://drive.google.com/file/d/1emYvCY9Q9bYfg-jLg34bbRwralP04x-d/view>`_  
-
+1. Download the Installer using the link provided in the Snooz email after submitting your profile.
 2. Double-click on the downloaded file to install.
-   
 3. Drag and drop the Snooz application in the Applications folder. 
-   
 4. Since Snooz is not signed yet, you need to mark it as an exception. Open a terminal and type: ``xattr -cr /Applications/Snooz.app``
-
 5. To launch Snooz for the first time, type the following in the terminal: ``/Applications/Snooz.app/Contents/MacOS/Snooz``
 
 
 On Linux platforms
 ---------------------
 
-1. Download the Installer : `SnoozSetup_beta-100.deb <https://drive.google.com/file/d/13jE4wG47iI4741PIVriBUOEVHCaFigyH/view?usp=drive_link>`_   
-
+1. Download the Installer using the link provided in the Snooz email after submitting your profile.
 2. Install Snooz.
    
    Open the installer via the Ubuntu software center or Software install and click install  
@@ -67,7 +62,7 @@ On Linux platforms
 
   .. code-block::  
 
-      $ sudo dpkg -i SnoozSetup_beta-030.deb
+      $ sudo dpkg -i SnoozSetup_beta-100.deb
 
 
 Launch Snooz
