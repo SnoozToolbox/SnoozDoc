@@ -95,5 +95,12 @@ You can still add and activate these packages in Snooz, and you'll follow the sa
 
 We suggest exploring the provided examples before starting your own development. See :ref:`explore_ex` to continue.
 
-.. toctree::
+.. note::
 
+   **Syncing a fork**
+
+   Sync your fork (e.g., "my_snooz_repo") to keep it up-to-date with the upstream repository "snooz-package-template".  
+   You will be notified on GitHub if your fork is outdated compared to the upstream repository.
+   Follow the guide on `syncing-a-fork <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork>`_ from GitHub.
+
+.. toctree::
