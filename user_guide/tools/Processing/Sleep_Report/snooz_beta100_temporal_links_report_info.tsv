@@ -11,10 +11,10 @@ bmi	Subject BMI
 waistline	Subject Waistlist size
 window_length_sec	Windows length (s) used to compute the temporal link.
 record_min	Duration of the recording (min) used to compute the temporal link index.
-event1_class	events 1 : the class of the events
+event1_class	events 1 : the class of the events (currently undefined)
 event1_group	events 1 : the group of the events
 event1_name	events 1 : the name of the events
-event2_class	events 2 : the class of the events
+event2_class	events 2 : the class of the events (currently undefined)
 event2_group	events 2 : the group of the events
 event2_name	events 2 : the name of the events
 1start_before_2start_count	event1 starts before the event 2 starts : number

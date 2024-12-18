@@ -19,8 +19,9 @@ This tool generates three types of reports:
 
 * **Events Sleep Report**
 
-   A breakdown of selected events by sleep stage, cycle, and thirds and halves of the night.
-   To look at the report variables and their definitions, see : :ref:`event_report_info_csv`  
+    A breakdown of selected events based on the report criteria, categorized by sleep stage, cycle, and thirds and halves of the night.  
+    Predefined report criteria included in Snooz: Arousals Report, Bruxism Report, PLM Report, Respiratory Events Report, Snoring report.
+    To look at the report variables and their definitions, see : :ref:`event_report_info_csv`  
 
 * **Temporal Links Report**: 
 

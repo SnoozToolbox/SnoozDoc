@@ -12,10 +12,10 @@ The list of the variables included in the sleep report.
 
 .. note::
 
-   To download the original info.tsv file : `snooz_beta030_sleep_report_info.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/snooz_beta030_sleep_report_info.tsv>`_
+   To download the original info.tsv file : `snooz_beta100_sleep_report_info.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/snooz_beta100_sleep_report_info.tsv>`_
 
 .. csv-table:: Sleep Report
    :header: "Column", "Variable Label", "Variable Definition"
-   :file: snooz_beta030_sleep_report_info.tsv
+   :file: snooz_beta100_sleep_report_info.tsv
    :delim: tab
 
