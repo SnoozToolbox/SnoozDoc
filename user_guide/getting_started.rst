@@ -49,6 +49,19 @@ On macOS platforms
 4. Since Snooz is not signed yet, you need to mark it as an exception. Open a terminal and type: ``xattr -cr /Applications/Snooz.app``
 5. To launch Snooz for the first time, type the following in the terminal: ``/Applications/Snooz.app/Contents/MacOS/Snooz``
 
+.. warning::  
+
+  Ensure that Snooz has full disk access by following these steps:
+
+  1. Open System Settings.
+  2. Navigate to Privacy & Security.
+  3. Click on Full Disk Access.
+  4. If Snooz is not listed, click the + (plus) icon, then select Snooz from the Applications folder.
+  5. Click Quit & Reopen when prompted.
+  6. Relaunch Snooz.
+
+  Snooz will hang when loading a file chosen via the Snooz interface if it does not have full disk access.
+
 
 On Linux platforms
 ---------------------
@@ -62,7 +75,7 @@ On Linux platforms
 
   .. code-block::  
 
-      $ sudo dpkg -i SnoozSetup_beta-100.deb
+      $ sudo dpkg -i SnoozSetup.deb
 
 
 Launch Snooz
