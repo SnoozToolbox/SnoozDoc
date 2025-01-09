@@ -46,7 +46,7 @@ On macOS platforms
 1. Download the Installer using the link provided in the Snooz email after submitting your profile.
 2. Double-click on the downloaded file to install.
 3. Drag and drop the Snooz application in the Applications folder. 
-4. Since Snooz is not signed yet, you need to mark it as an exception. Open a terminal and type: ``xattr -cr /Applications/Snooz.app``
+4. Since Snooz is not signed yet, you need to mark it as an exception. Open a terminal and type: ``find /Applications/Snooz.app -exec xattr -c {} \;``
 5. To launch Snooz for the first time, type the following in the terminal: ``/Applications/Snooz.app/Contents/MacOS/Snooz``
 
 .. warning::  
