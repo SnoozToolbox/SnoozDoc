@@ -6,8 +6,8 @@ project = 'Snooz Toolbox'
 copyright = '2023, CIUSSS NIM'
 author = 'Karine Lacourse, David Lévesque'
 
-release = '0.1'
-version = '0.1.0'
+release = 'beta-1.1.0'
+version = 'beta-1.1.0'
 
 # -- General configuration
 
