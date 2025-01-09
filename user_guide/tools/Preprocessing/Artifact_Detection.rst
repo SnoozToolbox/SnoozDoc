@@ -1,7 +1,7 @@
 .. _Artifact_Detection:
 
 ===================
-Artifact Detection
+Detect Artifact
 ===================
 
 Description

@@ -1,8 +1,8 @@
 .. _EDF_Annotations_Importer: 
 
-==========================
-EDF Annotations Importer
-==========================
+=============================
+Import EDF Plus Annotations
+=============================
 
 Description
 -----------------

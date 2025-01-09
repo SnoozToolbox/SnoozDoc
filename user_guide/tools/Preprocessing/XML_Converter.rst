@@ -1,13 +1,46 @@
 .. _XML_Converter:
 
-===================
-XML converter
-===================
+================================
+Convert Annotations from XML
+================================
 
 Description
 -----------------
 
-To convert the Compumedics XML annotation files to the Snooz .tsv annotation file.
+Convert Compumedics (ProFusion) XML annotation files into Snooz '.tsv' annotation files.
+
+The converter looks for the following fields:
+
+    - **EpochLength** (optional)
+    - **ScoredEvents**
+
+      - Name
+      - Start
+      - Duration
+      - Input
+      - EventName (optional)
+    - **SleepStages**
+
+An example of an XML file is shown below : 
+
+.. code-block:: XML
+
+    <CMPStudyConfig>
+        <EpochLength>30</EpochLength>
+    <ScoredEvents>
+        <ScoredEvent>
+            <Name>SpO2 artifact</Name>
+            <Start>0</Start>
+            <Duration>10</Duration>
+            <Input>SaO2</Input>
+            <EventName>Art</EventName>
+        </ScoredEvent>
+    </ScoredEvents>
+    <SleepStages>
+        <SleepStage>0</SleepStage>
+        <SleepStage>0</SleepStage>
+    </SleepStages>
+
 
 .. note::
 

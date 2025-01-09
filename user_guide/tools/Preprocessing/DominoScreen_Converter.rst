@@ -1,7 +1,7 @@
 .. _DominoScreen_Converter:
 
 ============================
-DOMINOScreen Converter
+Convert DOMINO
 ============================
 
 Description

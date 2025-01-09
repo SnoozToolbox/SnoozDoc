@@ -1,7 +1,7 @@
 .. _Annotations_Editor: 
 
 ===================
-Annotations Editor
+Edit Annotations
 ===================
 
 Description

@@ -1,7 +1,7 @@
 .. _EDFbrowser_Converter:
 
 ======================
-EDFbrowser Converter
+Convert EDFbrowser
 ======================
 
 Description
