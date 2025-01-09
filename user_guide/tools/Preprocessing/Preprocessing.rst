@@ -15,3 +15,4 @@ The Preprocessing category includes importers, converters, extractors, and the a
     Extract_Annotations
     EDF_Annotations_Importer
     Sleep_Stages_Importer
+    Rename_files

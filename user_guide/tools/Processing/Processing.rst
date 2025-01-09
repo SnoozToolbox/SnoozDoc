@@ -14,5 +14,6 @@ The Processing category includes sleep analyses, event detectors, and power spec
     Sleep_Report
     Slow_wave_detection
     Spindle_detection_Martin
+    Spindle_detection_A7
     
 

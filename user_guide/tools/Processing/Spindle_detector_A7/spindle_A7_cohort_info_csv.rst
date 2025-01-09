@@ -1,7 +1,7 @@
-.. _spindle_Martin_cohort_info_csv:
+.. _spindle_A7_cohort_info_csv:
 
 ===============================
-Spindle cohort report (Martin)
+Spindle cohort report (A7)
 ===============================
 
 The list of the variables included in the spindle cohort report. 
@@ -12,10 +12,10 @@ The list of the variables included in the spindle cohort report.
 
 .. note::
 
-   To download the original info.tsv file : `snooz_beta030_spindle_Martin_cohort_info.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/snooz_beta030_spindle_Martin_cohort_info.tsv>`_
+   To download the original info.tsv file : `snooz_beta110_spindle_A7_cohort_info.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/snooz_beta110_spindle_A7_cohort_info.tsv>`_
 
-.. csv-table:: Spindle Martin cohort report
+.. csv-table:: Spindle A7 cohort report
    :header: "Column", "Variable Label", "Variable Definition"
-   :file: snooz_beta030_spindle_Martin_cohort_info.tsv
+   :file: snooz_beta110_spindle_A7_cohort_info.tsv
    :delim: tab
 
