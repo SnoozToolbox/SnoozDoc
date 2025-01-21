@@ -10,6 +10,29 @@ The goal of this document is to  detail how to download, install and launch Snoo
 
   **CÉAMS members** if you need access to the Snooz Toolbox, which supports reading NATUS PSG files (version 9.1), please send an email to snooztoolbox.cnmtl@ssss.gouv.qc.ca—we'll be happy to assist!
 
+.. _OS_Compatibility:
+
+System Compatibility and Requirements for Snooz
+====================================================
+
+Windows
+--------
+
+Snooz has been developed and validated exclusively on Windows 11.
+
+macOS
+------
+
+- Snooz is compatible only with Macs featuring the T2 security chip on Intel processors.  
+- It is not supported on Macs with M1 or newer Apple Silicon processors.
+- Snooz is compatible with macOS versions 14.3 (Sonoma) through 15.2 (Sequoia).
+
+Linux
+------
+
+Snooz has been developed and validated on Ubuntu 22.04 LTS and should be compatible with Ubuntu 24.04 LTS.
+
+
 First Snooz installation
 ==========================
 
@@ -40,28 +63,37 @@ When the installation is complete click “Next” to finish the install.
 Click “Finish”.
 You are done!
 
+If you encounter issues, see the requirements in :ref:`OS_Compatibility`.
+
 On macOS platforms
 --------------------- 
 
 1. Download the Installer using the link provided in the Snooz email after submitting your profile.
 2. Double-click on the downloaded file to install.
 3. Drag and drop the Snooz application in the Applications folder. 
-4. Since Snooz is not signed yet, you need to mark it as an exception. Open a terminal and type: ``find /Applications/Snooz.app -exec xattr -c {} \;``
-5. To launch Snooz for the first time, type the following in the terminal: ``/Applications/Snooz.app/Contents/MacOS/Snooz``
+4. Since Snooz is not signed yet, you need to mark it as an exception (see the note lower). 
+5. To launch Snooz type the following in the terminal: ``/Applications/Snooz.app/Contents/MacOS/Snooz``
+
+.. note::
+  To mark Snooz as an exception: 
+    | Open a terminal and type either :
+    | ``find /Applications/Snooz.app -exec xattr -c {} \;`` or 
+    | ``xattr -cr /Applications/Snooz.app``, depending on your environment.
 
 .. warning::  
+  Ensure that Snooz has full disk access to launch it from the Launchpad by following these steps:
 
-  Ensure that Snooz has full disk access by following these steps:
+     1. Open System Settings.
+     2. Navigate to Privacy & Security.
+     3. Click on Full Disk Access.
+     4. If Snooz is not listed, click the + (plus) icon, then select Snooz from the Applications folder.
+     5. Click Quit & Reopen when prompted.
+     6. Relaunch Snooz.
 
-  1. Open System Settings.
-  2. Navigate to Privacy & Security.
-  3. Click on Full Disk Access.
-  4. If Snooz is not listed, click the + (plus) icon, then select Snooz from the Applications folder.
-  5. Click Quit & Reopen when prompted.
-  6. Relaunch Snooz.
+  If Snooz does not have full disk access, it may hang when loading a file chosen via the Snooz interface.
+  Launching Snooz from the terminal provides broader disk access than the Launchpad, so using the terminal is recommended if you prefer not to change the settings.
 
-  Snooz will hang when loading a file chosen via the Snooz interface if it does not have full disk access.
-
+If you encounter issues, see the requirements in :ref:`OS_Compatibility`.
 
 On Linux platforms
 ---------------------
@@ -71,12 +103,12 @@ On Linux platforms
    
    Open the installer via the Ubuntu software center or Software install and click install  
 
-   or install Snooz via the terminal
+   or install Snooz via the terminal : ``sudo dpkg -i SnoozSetup.deb``
 
-  .. code-block::  
+.. note::
+  Use the filename of the .deb file you have downloaded.
 
-      $ sudo dpkg -i SnoozSetup.deb
-
+If you encounter issues, see the requirements in :ref:`OS_Compatibility`.
 
 Launch Snooz
 =================================

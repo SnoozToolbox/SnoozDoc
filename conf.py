@@ -3,11 +3,11 @@
 # -- Project information
 
 project = 'Snooz Toolbox'
-copyright = '2023, CIUSSS NIM'
+copyright = '2023, Valorisation Recherche HSCM, Société en Commandite'
 author = 'Karine Lacourse, David Lévesque'
 
-release = 'beta-1.1.0'
-version = 'beta-1.1.0'
+release = 'beta-1.2.0'
+version = 'beta-1.2.0'
 
 # -- General configuration
 
