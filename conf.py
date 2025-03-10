@@ -7,7 +7,7 @@ copyright = '2023, Valorisation Recherche HSCM, Société en Commandite'
 author = 'Karine Lacourse, David Lévesque'
 
 release = 'beta-1.2.0'
-version = 'beta-1.2.0'
+version = 'beta-1.3.0'
 
 # -- General configuration
 
