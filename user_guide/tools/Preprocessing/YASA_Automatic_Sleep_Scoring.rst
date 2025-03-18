@@ -23,27 +23,27 @@ Algorithm Details
 The YASA sleep staging algorithm is an open-source tool trained on over 30,000 hours of polysomnographic (PSG) sleep data across diverse populations.
 
 **Data Processing:**
-- The algorithm uses a central EEG channel, along with optional EOG and EMG channels.
-- Signals are downsampled to 100 Hz and bandpass-filtered between 0.4 Hz and 30 Hz.
+   - The algorithm uses a central EEG channel, along with optional EOG and EMG channels.
+   - Signals are downsampled to 100 Hz and bandpass-filtered between 0.4 Hz and 30 Hz.
 
 **Feature Extraction:**
-- Time and frequency domain features are extracted from the EEG signal, and optionally from the EOG and EMG signals.
-- Features are calculated for each 30-second epoch of raw data.
+   - Time and frequency domain features are extracted from the EEG signal, and optionally from the EOG and EMG signals.
+   - Features are calculated for each 30-second epoch of raw data.
 
 **Smoothing and Normalization:**
-- A smoothing approach is applied to incorporate contextual information across features.
-- Smoothed features are z-scored for each night.
+   - A smoothing approach is applied to incorporate contextual information across features.
+   - Smoothed features are z-scored for each night.
 
 **Machine Learning Classification:**
-- A LightGBM classifier, a tree-based gradient-boosting model, is used for sleep stage classification.
+   - A LightGBM classifier, a tree-based gradient-boosting model, is used for sleep stage classification.
 
 **Performance Evaluation:**
-- The algorithm's performance is evaluated using standardized metrics, including:
-  - Accuracy
-  - Cohen's kappa
-  - Matthews correlation coefficient
-  - Confusion matrices
-  - F1-scores
+   - The algorithm's performance is evaluated using standardized metrics, including:
+      - Accuracy
+      - Cohen's kappa
+      - Matthews correlation coefficient
+      - Confusion matrices
+      - F1-scores
 
 Output Files
 ------------
@@ -55,16 +55,16 @@ Steps
 -----
 
 **1. Input Files**
-- Open your PSG files (e.g., .edf, .eeg, or .sts).
+   - Open your PSG files (e.g., .edf, .eeg, or .sts).
   
   **Validation Mode:**
-  - If validating the automatic scoring, provide the following accessory files in the same folder as the PSG file:
-    - For EDF format: A .tsv file is required.
-    - For Stellate format: A .sig file is required.
-    - For NATUS format: The entire subject folder is required.
-  
+   - If validating the automatic scoring, provide the following accessory files in the same folder as the PSG file:
+      - For EDF format: A .tsv file is required.
+      - For Stellate format: A .sig file is required.
+      - For NATUS format: The entire subject folder is required.
+   
   **Prediction Mode:**
-  - No accessory files are needed.
+   - No accessory files are needed.
 
 - Use the settings from PSGreader to select the montage and channels for sleep scoring.
 - You can run the tool in batch mode to score multiple files simultaneously.
@@ -73,8 +73,8 @@ Steps
 - Ensure that aliases are assigned to distinguish the selected channels.
 
 **2. Export Scoring**
-- Choose between prediction or validation mode.
-- Define a new group name for the predicted scoring in the accessory file.
+   - Choose between prediction or validation mode.
+   - Define a new group name for the predicted scoring in the accessory file.
 
   .. warning::
      Changing the group name "stage" to a different value may prevent Snooz from correctly identifying sleep stages in other tools.
@@ -89,8 +89,10 @@ Evaluation of YASA Sleep Scoring Algorithm
 The YASA sleep scoring algorithm underwent rigorous evaluation on multiple datasets before its integration into Snooz. Below are some key findings from this evaluation:
 
 1. **Correlation Between Accuracy, Confidence and Sleep Efficiency**
+
    - The algorithm's accuracy on the SS3 subset of the MASS dataset demonstrates a positive correlation with the average confidence in the decision-making process. It also has a positive correlation with the sleep efficiency. These relationships are illustrated in **Figure 1**.
    - These findings align with the results reported in the original YASA paper [1]_, further validating the algorithm's reliability.
+
 
 .. _fig-accuracy-confidence:
 
@@ -112,8 +114,10 @@ The YASA sleep scoring algorithm underwent rigorous evaluation on multiple datas
 
 
 2. **Performance on a Private NATUS Dataset**
+
    - YASA was also evaluated on a private dataset in NATUS format, where it achieved a high and acceptable level of accuracy.
    - The relationship between accuracy and the Apnea-Hypopnea Index (AHI) is depicted in **Figure 2**, showcasing the same pattern reported in the paper across varying AHI values.
+
 
 .. _fig-accuracy-ahi:
 
