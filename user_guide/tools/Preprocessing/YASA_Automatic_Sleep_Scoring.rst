@@ -88,8 +88,8 @@ Evaluation of YASA Sleep Scoring Algorithm
 
 The YASA sleep scoring algorithm underwent rigorous evaluation on multiple datasets before its integration into Snooz. Below are some key findings from this evaluation:
 
-1. **Correlation Between Accuracy and Confidence**
-   - The algorithm's accuracy on the SS3 subset of the MASS dataset demonstrates a positive correlation with the average confidence in the decision-making process. This relationship is illustrated in **Figure 1**.
+1. **Correlation Between Accuracy, Confidence and Sleep Efficiency**
+   - The algorithm's accuracy on the SS3 subset of the MASS dataset demonstrates a positive correlation with the average confidence in the decision-making process. It also has a positive correlation with the sleep efficiency. These relationships are illustrated in **Figure 1**.
    - These findings align with the results reported in the original YASA paper [1]_, further validating the algorithm's reliability.
 
 .. _fig-accuracy-confidence:
@@ -100,7 +100,15 @@ The YASA sleep scoring algorithm underwent rigorous evaluation on multiple datas
    :align: center
 .. rst-class:: center-caption
 
-**Figure 1:** Correlation between accuracy and confidence
+.. _fig-accuracy-Efficiency:
+
+.. image:: ./YASA_Automatic_Sleep_Scoring/AccVSEfficiency.png
+   :width: 500
+   :alt: Accuracy vs Efficiency
+   :align: center
+.. rst-class:: center-caption
+
+         **Figure 1:** Correlation between accuracy and confidence, and accuracy and sleep efficiency
 
 
 2. **Performance on a Private NATUS Dataset**
