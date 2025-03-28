@@ -42,10 +42,8 @@ The Oximeter is an application that operates within Snooz.  (See :ref:`apps` for
 
 .. _accepted_format:
 
-Accepted file formats
+Polysomnography file format
 ==========================================================
-
-**Polysomnography file format**
 
 The only accepted format for polysomnography is the European Data Format (EDF). For more details, see `European Data Format <https://www.edfplus.info/specs/edf.html>`_.
 Snooz can also read signals from the EDF+ format; however, annotations must be imported from the EDF+ file into a .tsv (Tab-Separated Value) format compatible with Snooz.
@@ -58,7 +56,8 @@ See :ref:`EDF_Annotations_Importer` for more details.
    - **Harmonie (up to version 6.2)**: The signal recording file is a .SIG file, while the accessory file for sleep staging and annotations is a .STS file.
    - **NATUS (version 9.1)**: The entire recording folder is required. This folder typically includes files such as .eeg, .ent, .epo, among others.
 
-**Annotations file format**
+Annotations file format
+==========================================================
 
 The columns of the annotations file are as follows:
 
@@ -82,6 +81,45 @@ Many converters have been implemented in Snooz in order to create the Snooz acce
 I recommend exploring the preprocessing category to see if your annotation files can be converted into Snooz accessory files.
 The Snooz accessory file can be imported in the open-source universal viewer `EDFbrowser <https://www.teuniz.net/edfbrowser/>`_.
 For more details, see :ref:`EDFbrowser_compatibility`.
+
+Sleep staging
+==========================================================
+
+Sleep stages are represented by numbers in Snooz, as shown in the lookup table below:
+
+.. list-table:: Sleep Stages Definition Table
+   :widths: 30 30
+   :header-rows: 1
+
+   * - Description
+     - name
+   * - Awake
+     - 0
+   * - N1
+     - 1
+   * - N2
+     - 2
+   * - N3
+     - 3
+   * - REM
+     - 5
+   * - Unscored
+     - 9
+
+Sleep staging is included in the annotation file. Snooz expects sleep staging annotations to be grouped by **stage**, and the annotation name represents the corresponding stage.
+
+.. csv-table:: The Snooz annotations for sleep stages
+   :header: "group", "name", "start_sec", "duration_sec", "channels"
+   :file: snooz_sleep_stages.tsv
+   :delim: tab
+
+.. warning::
+   Users can rename their sleep stages according to this table using the "Edit Annotations" tool under the Preprocessing menu.  
+   **S4 stages are not supported in Snooz**—please rename them as N3 for minimal compatibility.
+
+.. note::
+   To download a sample accessory file containing only sleep stages : `snooz_sleep_stages.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/snooz_sleep_stages.tsv>`_
+
 
 Navigate in the step-by-step interface
 ==========================================================
