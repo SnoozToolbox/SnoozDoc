@@ -158,7 +158,7 @@ To have access to the terminal in VS Code make sure to close Snooz.
 
 - In VS Code navigate to **Terminal -> New Terminal**
 - Select your repository you forked from snooz-package-template (e.g. my_snooz_repo)
-- Make sure the virtual environment **snooz_310_env** is activated (see :ref:`installation`)
+- Make sure the virtual environment **snooz_310_env** is activated (you should see ``(snooz_310_env)`` in the VS Code terminal).  See :ref:`activate_venv` for more details.
 - In the terminal type : ``python main_utils.py``
 - Select **2- Create a module**
 - Fill the rest with the information from above. If you make any mistakes, just repeat the steps and it will ask to overwrite the previous one.
@@ -314,7 +314,7 @@ To have access to the terminal in VS Code make sure to close Snooz.
 
 - In VS Code navigate to **Terminal -> New Terminal**
 - Select your repository you forked from snooz-package-template (e.g. my_snooz_repo)
-- Make sure the virtual environment **snooz_310_env** is activated (see :ref:`installation`)
+- Make sure the virtual environment **snooz_310_env** is activated (you should see ``(snooz_310_env)`` in the VS Code terminal).  See :ref:`activate_venv` for more details.
 - In the terminal type : ``python main_utils.py``
 - Select **3- Create a tool**
 - Answer the script questions with the attributes below
@@ -595,7 +595,7 @@ We use the main_utils script to add steps to the tool.
 
 - In VS Code navigate to **Terminal -> New Terminal**
 - Select your repository you forked from snooz-package-template (e.g. my_snooz_repo)
-- Make sure the virtual environment **snooz_310_env** is activated (see :ref:`installation`)
+- Make sure the virtual environment **snooz_310_env** is activated (you should see ``(snooz_310_env)`` in the VS Code terminal).  See :ref:`activate_venv` for more details.
 - In the terminal type : ``python main_utils.py``
 - Select **4- Create a tool step**
 - Answer the script questions with the attributes below : 
@@ -689,7 +689,7 @@ To have access to the terminal in VS Code make sure to close Snooz.
 
 - In VS Code navigate to **Terminal -> New Terminal**
 - Select your repository you forked from snooz-package-template (e.g. my_snooz_repo)
-- Make sure the virtual environment **snooz_310_env** is activated (see :ref:`installation`)
+- Make sure the virtual environment **snooz_310_env** is activated (you should see ``(snooz_310_env)`` in the VS Code terminal).  See :ref:`activate_venv` for more details.
 - In the terminal type : ``python main_utils.py``
 - Select **5- Create an app**
    - Package name : ExampleAppsPackage

@@ -71,10 +71,16 @@ Here an example of the command to type in the Command Prompt for Windows ``C:\Us
 
 A folder called ``snooz_310_env`` should be created.
 
-Activate the virtual environment in the terminal or Command Prompt:
+.. _activate_venv:
 
-   * For Windows : ``call /path_to_virtual_environment/snooz_310_env/Scripts/activate.bat``
-   * For Linux and macOS : ``source /path_to_virtual_environment/snooz_310_env/bin/activate``
+To activate the virtual environment
+--------------------------------------
+Activate the virtual environment in the Terminal, Command Prompt or PowerShell:
+
+   * For Windows (CMD): ``call /path_to_virtual_environment/snooz_310_env/Scripts/activate.bat``
+   * For Windows (PowerShell or the VS Code terminal) : ``/path_to_virtual_environment/snooz_310_env/Scripts/Activate.ps1``
+   * For macOS (Terminal) : ``source /path_to_virtual_environment/snooz_310_env/bin/activate``
+   * For Linux (Terminal) : ``source /path_to_virtual_environment/snooz_310_env/bin/activate``
 
 Once activated, you should see the name of the virtual environment in parenthesis in the terminal.
 
@@ -125,17 +131,21 @@ Define the Python intepreter from the virtual environment ``snooz_310_env``.
       * Linux and macOS : "snooz_310_env/bin/python"
 
 .. warning::
-   On macOS
-
-   You may need to add the path to Python in the settings (when you virtual env does not appear in the selection.)
+   You may need to add the path to Python in the settings or the snooz.code-workspace file (when you virtual env does not appear in the selection.)
 
    * Open Visual Studio Code
-   * Open .vscode/settings.json
-   * Add the following setting::
-
+   * Open .vscode/settings.json or snooz.code-workspace
+   * Add the following setting :
       {
+         // macOS and linux
          "python.defaultInterpreterPath": "/path_to_virtual_environment/snooz_310_env/bin/python"
+
+         // windows
+         "python.defaultInterpreterPath": "C:\\Users\\path_to_virtual_environment\\snooz_310_env\\Scripts\\python.exe"
+
       }
+
+
 
 Run Snooz
 =======================================
