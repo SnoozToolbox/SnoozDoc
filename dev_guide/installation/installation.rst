@@ -61,7 +61,7 @@ Some software may require specific versions of these libraries, so it's strongly
 
 You can follow this guide to set up a Python virtual environment: `Python venv <https://docs.python.org/3/library/venv.html>`_
 
-Name the virtual environment ``snooz_310_env``.
+Name the virtual environment ``snooz_310_env`` and create it under the "snooz_workspace" folder.
 
 If you have multiple versions of Python installed, make sure you use Python 3.10 to create the virtual environment.
 Here an example of the command to type in the Command Prompt for Windows ``C:\Users\UserName\AppData\Local\Programs\Python\Python310\python -m venv .\snooz_310_env``
@@ -69,7 +69,7 @@ Here an example of the command to type in the Command Prompt for Windows ``C:\Us
 .. note::
    On Linux, you might need to run this command first: ``sudo apt install python3.10-venv``.
 
-A folder called ``snooz_310_env`` should be created.
+A folder called ``snooz_310_env`` should be created under the "snooz_workspace" folder.
 
 .. _activate_venv:
 
@@ -106,7 +106,7 @@ VS Code is used for all kinds of programming tasks. To work with Python, you nee
 * Open VS Code
 * From the navigation bar on the left, navigate to the extension panel(Ctrl-Shift-X).
 * Install "Python" extension from Microsoft.
-* Install "Qt for Python"
+* Install "Qt for Python" : this extension is required to edit ``.ui`` files in Qt Designer and compile them into Python code.
 
 Configure your workspace
 ----------------------------
@@ -134,17 +134,41 @@ Define the Python intepreter from the virtual environment ``snooz_310_env``.
    You may need to add the path to Python in the settings or the snooz.code-workspace file (when you virtual env does not appear in the selection.)
 
    * Open Visual Studio Code
-   * Open .vscode/settings.json or snooz.code-workspace
+   * Open snooz.code-workspace
    * Add the following setting :
       {
          // macOS and linux
          "python.defaultInterpreterPath": "/path_to_virtual_environment/snooz_310_env/bin/python"
 
          // windows
-         "python.defaultInterpreterPath": "C:\\Users\\path_to_virtual_environment\\snooz_310_env\\Scripts\\python.exe"
+         "python.defaultInterpreterPath": "C:/path_to_virtual_environment/snooz_310_env/Scripts/python.exe"
 
       }
 
+   An example of a ``snooz.code-workspace`` file with the ``python.defaultInterpreterPath`` defined.
+
+   .. code-block:: json
+      
+      {
+         "folders": [
+            {
+               "path": "."
+            }
+         ],
+         "settings": {
+            "python.defaultInterpreterPath": "C:/Users/klacourse/Documents/snooz_workspace/snooz_310_env/Scripts/python.exe",
+            "python.analysis.extraPaths": ["./src/main/python/"],
+            "editor.rulers": [80],
+            "python.terminal.activateEnvironment": true,
+            "qtForPython.rcc.liveExecution.enabled": false,
+            "qtForPython.uic.liveExecution.enabled": false,
+            "qtForPython.qmlls.enabled": false,
+            "qtForPython.uic.options": [
+               "-o",
+               "${resourceDirname}${pathSeparator}${resourceBasenameNoExtension}.py"
+            ]
+         }
+      }
 
 
 Run Snooz

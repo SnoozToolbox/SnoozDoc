@@ -640,6 +640,9 @@ s
 Select the file "ExampleToolsPackage/SignalGeneratorV2/IntroStep/Ui_introStep.ui", right-click and select 'Edit Qt UI File'.
 Qt Designer should open, allowing you to edit your UI through the software. The introduction page typically contains text describing the tool.
 
+.. warning::
+    If Qt Designer does not open, try reinstalling the VS Code extension "Qt for Python". By default, VS Code extensions are installed in the following path: ``C:/Users/<YourUsername>/.vscode/extensions``
+
 .. image:: ./explore_ex/QtDesigner.png
    :width: 900
    :alt: Alternative text   
