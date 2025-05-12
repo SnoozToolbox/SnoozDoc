@@ -17,6 +17,8 @@ For more details, refer to the official YASA documentation: https://raphaelvalla
 Additionally, in Snooz, you can select up to four high-priority EEG channels as input. 
 This allows the tool to determine the result with the highest confidence for each channel.
 
+.. note:: Based on the internal analysis of Snooz, configurations combining central channels with one frontal and one occipital channel typically demonstrate marginally better performance.
+
 Algorithm Details
 -----------------
 
@@ -57,13 +59,13 @@ Steps
 **1. Input Files**
    - Open your PSG files (e.g., .edf, .eeg, or .sts).
   
-  **Validation Mode:**
+  **Compare with Expert Scoring Mode:**
    - If validating the automatic scoring, provide the following accessory files in the same folder as the PSG file:
       - For EDF format: A .tsv file is required.
       - For Stellate format: A .sig file is required.
       - For NATUS format: The entire subject folder is required.
    
-  **Prediction Mode:**
+  **Automatic Scoring Mode:**
    - No accessory files are needed.
 
 - Use the settings from PSGreader to select the montage and channels for sleep scoring.
@@ -73,64 +75,28 @@ Steps
 - Ensure that aliases are assigned to distinguish the selected channels.
 
 **2. Export Scoring**
-   - Choose between prediction or validation mode.
+   - Choose between Automatic Scoring or Compare with Expert Scoring mode.
    - Define a new group name for the predicted scoring in the accessory file.
 
   .. warning::
      Changing the group name "stage" to a different value may prevent Snooz from correctly identifying sleep stages in other tools.
 
-- For prediction, no accessory files are required.
-- For validation, provide the necessary accessory files and specify the destination to save the results.
+- For Automatic Scoring, no accessory files are required.
+- For Compare with Expert Scoring, provide the necessary accessory files and specify the destination to save the results.
+- To validate sleep stage scoring, expert annotations must be added to the accessory file (such as the TSV file associated with the EDF format) before running this tool. 
+- Sleep stage annotations for gold standard are defined with group="stage", and the name values correspond to: 0 (W), 1 (N1), 2 (N2), 3 (N3), 5 (R), and 9 (Unscored).
 
+.. note::
+      Snooz cannot write sleep staging data to NATUS or Stellate formats. 
+      However, the tool can still be used to compare YASA scoring with existing sleep staging in these formats.
 
 Evaluation of YASA Sleep Scoring Algorithm
 =========================================
 
-The YASA sleep scoring algorithm underwent rigorous evaluation on multiple datasets before its integration into Snooz. Below are some key findings from this evaluation:
+The YASA sleep scoring algorithm underwent rigorous evaluation on multiple datasets before its integration into Snooz and it achieved the same performance as the original YASA paper.
 
-1. **Correlation Between Accuracy, Confidence and Sleep Efficiency**
-
-   - The algorithm's accuracy on the SS3 subset of the MASS dataset demonstrates a positive correlation with the average confidence in the decision-making process. It also has a positive correlation with the sleep efficiency. These relationships are illustrated in **Figure 1**.
-   - These findings align with the results reported in the original YASA paper [1]_, further validating the algorithm's reliability.
-
-
-.. _fig-accuracy-confidence:
-
-.. image:: ./YASA_Automatic_Sleep_Scoring/AccVSConf.png
-   :width: 500
-   :alt: Accuracy vs Confidence
-   :align: center
-.. rst-class:: center-caption
-
-.. _fig-accuracy-Efficiency:
-
-.. image:: ./YASA_Automatic_Sleep_Scoring/AccVSEfficiency.png
-   :width: 500
-   :alt: Accuracy vs Efficiency
-   :align: center
-.. rst-class:: center-caption
-
-         **Figure 1:** Correlation between accuracy and confidence, and accuracy and sleep efficiency
-
-
-2. **Performance on a Private NATUS Dataset**
-
-   - YASA was also evaluated on a private dataset in NATUS format, where it achieved a high and acceptable level of accuracy.
-   - The relationship between accuracy and the Apnea-Hypopnea Index (AHI) is depicted in **Figure 2**, showcasing the same pattern reported in the paper across varying AHI values.
-
-
-.. _fig-accuracy-ahi:
-
-.. image:: ./YASA_Automatic_Sleep_Scoring/AccVSAHI.png
-   :width: 500
-   :alt: Accuracy vs AHI
-   :align: center
-.. rst-class:: center-caption
-
-**Figure 2:** Correlation between accuracy and AHI
-
-3. **An Overview of the results**
-   - The expert annotated hypnogram, confusion matrix, accuracy, and average confidence for a subject are shown in **Figure 3**.
+**An Overview of the results**
+   - The expert annotated hypnogram, confusion matrix, accuracy, and average confidence for a subject are shown in **Figure 1**.
 
 .. _results:
 
@@ -148,7 +114,7 @@ The YASA sleep scoring algorithm underwent rigorous evaluation on multiple datas
    :align: center
 .. rst-class:: center-caption
 
-**Figure 3:** The exported results of the YASA sleep scoring tool
+**Figure 1:** The exported results of the YASA sleep scoring tool
    
 References
 ----------
