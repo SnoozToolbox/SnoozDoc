@@ -40,6 +40,10 @@ Region Of Interest :
 
 	You can add ROI at the cohort level to average many channels together.  Once you press the "Add ROI" button : check the channels to include in the ROI (this list will be adapted to the cohort loaded).  Check the blank option if you want the ROI empty (blank) when data is missing for the mean otherwise missing data is just ignored.
 
+   .. warning::
+      
+      Rename your channel labels first. Adding the ROIs must be the final step.
+      
 **2 - Frequency Band**
 
 	You can add a new band with the button "Add" or load an existing file with the button "Load".  You can edit a frequency band loaded.
