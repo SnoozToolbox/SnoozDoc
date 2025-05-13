@@ -161,14 +161,43 @@ Here is an example of an empty tool to show you around.
 Load workspace
 =============================
 
+A workspace can correspond to a tool with some or all of its settings predefined for a specific analysis—including recordings and channel selections.
+
 * To open a previously saved workspace, navigate to the menu **File** -> **Load Workspace**.
 
-* Select the .json file via the browse window and press "Open".
+* In the file browser window, select the ``.json`` file and click Open.
 
-   .. warning::  
-      
-      The .json file includes the API version of Snooz (``package_api_version": "1.0.0"``) and all the package dependencies, if any.  Make sure to use a valid workspace for the version of Snooz installed. 
+.. warning::  
+   
+   The `.json` file includes the Snooz API version (e.g., ``"package_api_version": "2.0.0"``) as well as any package dependencies.  
+   Make sure to use a workspace compatible with your installed version of Snooz.  
+   If you're continuing an analysis started with an older version of Snooz, the workspace file may be obsolete.  
+   As a workaround, simply import the recordings and the corresponding channel selection directly into the tool using the menu from the newly installed version of Snooz. See :ref:`import_file_selection`.
 
+.. _import_file_selection:
+
+Import recordings with corresponding channels
+==================================================
+
+Many tools offer the option to import recordings along with their corresponding channel selections, typically in Step ``1 - Input Files``.  
+You must first export the file selection in order to be able to import it.
+
+Export file selection
+-----------------------
+
+To use the import feature, you must first add your PSG files, select the montage and channels, and define any aliases if needed. 
+Then, export the recordings along with their channel selections by clicking the **Export** button in Step ``1 - Input Files``, as shown in the figure below.
+
+.. image:: ./Import_files_channel_selection.png
+   :width: 700
+   :alt: Alternative text
+
+The user will be prompted to select an existing folder where the file selection will be exported. A confirmation message will indicate whether the export was successful.
+
+Two files will be exported:
+
+- **Snooz-Chan-log-{current date}.txt** : A text file logging the selected channels for each recording.
+- **Snooz-Files-{current date}.txt** : A text file used by Snooz to import a predefined list of files along with their corresponding channels.
 
 Tools Categories
 =============================
