@@ -19,3 +19,4 @@ The Preprocessing category includes importers, converters, extractors, and the a
     YASA_Automatic_Sleep_Scoring
     ValidateSnoozTSVFile
     DetectREMsYASA
+    EditPathsInSnoozWorkspace
