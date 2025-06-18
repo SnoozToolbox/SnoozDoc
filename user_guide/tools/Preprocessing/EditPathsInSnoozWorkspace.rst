@@ -27,9 +27,13 @@ How to Use
 -----------
 
  - Select one or more Snooz workspaces (with .json extension), or choose an entire folder
- - Batch-process multiple workspaces at once
- - An error is shown if a selected path does not exist
- - Preview all path changes before saving the modified files
+ - Snooz can batch-process multiple workspaces at once
+ - A warning is shown if an edited path does not exist
+ - Preview all path changes before running the tool or saving the modified files in the select all mode
+ - **A warning** is displayed if the exact same path appears in more than one selected workspace. To avoid confusion during path replacement, users must load only workspaces with unique paths.
+
+.. note::
+      Please ensure that all intended workspaces **are selected** before running the tool. If no workspaces are selected, the path modifications will not be applied, even if the workspaces are loaded.
 
 
 Input
