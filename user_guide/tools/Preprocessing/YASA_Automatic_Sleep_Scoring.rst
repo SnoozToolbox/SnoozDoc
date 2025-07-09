@@ -90,6 +90,10 @@ Steps
       Snooz cannot write sleep staging data to NATUS or Stellate formats. 
       However, the tool can still be used to compare YASA scoring with existing sleep staging in these formats.
 
+.. note::
+      Snooz is capable of processing discontinuous NATUS and Stellate files, which is a valuable feature given the prevalence of discontinuous clinical recordings.
+      This feature is not available outside of Snooz, as YASA requires continuous files to run.
+      
 Evaluation of YASA Sleep Scoring Algorithm
 =========================================
 
