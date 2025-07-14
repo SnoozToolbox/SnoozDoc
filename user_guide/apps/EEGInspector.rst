@@ -7,7 +7,7 @@ EEGInspector
 Description
 -----------------
 
-**EEGInspector** is an interactive app for visually inspecting EEG data and creating artifact annotations for further analysis in Snooz.
+**EEGInspector** is an interactive app for visually inspecting EEG data and creating artifact annotations for further analysis in Snooz.  
 With EEGInspector, you can easily mark non-brain channels, bad channels, and noisy epochs to generate reliable annotations for preprocessing.
 
 The tool works in several simple steps:
@@ -19,19 +19,41 @@ The tool works in several simple steps:
 5. **Review the Power Spectral Density (PSD)** of the cleaned signal.
 6. **Save your annotations** for use in Snooz or other analysis tools.
 
-.. image:: ./snooz_beta030__EEGInspector_overview.png
+Here is the overview of the steps taken to prepare annotations for a sample dataset:
+
+.. figure:: ./snooz_beta030__EEGInspector_overview_Step1.png
    :width: 800
-   :alt: EEGInspector full workflow
+   :alt: EEGInspector Step 1 - Open File
+
+   **Step 1** – Open the EEGInspector app and select a montage, then select non-brain channels (e.g., ECG, EOG) for exclusion.
+
+.. figure:: ./snooz_beta030__EEGInspector_overview_Step2.png
+   :width: 800
+   :alt: EEGInspector Step 2 - Mark Bad Channels
+
+   **Step 2** – Visually inspect the EEG and mark fully artifact channels.
+
+.. figure:: ./snooz_beta030__EEGInspector_overview_Step3.png
+   :width: 800
+   :alt: EEGInspector Step 3 - Mark Noisy Epochs
+
+   **Step 3** – Segment the data into epochs and mark noisy ones.
+
+.. figure:: ./snooz_beta030__EEGInspector_overview_Step4.png
+   :width: 800
+   :alt: EEGInspector Step 4 - Check the PSD of cleaned signal.
+
+   **Step 4** – Check the PSD of cleaned signal and save the annotations properly.
+
 
 Open your EEG file
 -----------------------
 
-There are two ways to open EEGInspector in Snooz:
+To open EEGInspector in Snooz:
 
-1. Go to **"File" → "Open"** and select the **EEGInspector** app.
-2. Or navigate to **"Manual Review" → "EEGInspector"**.
+* Navigate to **"Manual Review" → "EEGInspector"**.
 
-Use the **Browse** button to select your EEG file.
+Then, use the **Browse** button to select your EEG file.
 
 * After opening, select the appropriate montage.
 * A table will list all available channels.
@@ -53,18 +75,13 @@ Wait for the data to load.
 
 .. warning::
 
-   EEGInspector currently supports only **continuous EEG signals**.
-   If your signal is discontinuous, you will see an error.
+   EEGInspector currently supports only **continuous EEG signals**.  
+   If your signal is discontinuous, you will see an error.  
    Support for discontinuous signals will be added in a future release.
 
 .. note::
 
    For visualization only, signals are downsampled to 250 Hz (if needed) and low-pass filtered at 100 Hz. This does **not** modify your original data.
-
-.. image:: ./snooz_beta030_EEGInspector_channelselection.png
-   :width: 800
-   :alt: EEGInspector – Select non-brain channels 
-
 
 Mark fully artifact channels
 ---------------------------------
@@ -122,6 +139,7 @@ Annotations are saved as:
 * `channels`: list of affected channels
 
 Your EEG data is now ready for reliable further processing in Snooz.
+
 
 
 
