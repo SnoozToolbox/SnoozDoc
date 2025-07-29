@@ -21,29 +21,29 @@ The tool works in several simple steps:
 
 Here is the overview of the steps taken to prepare annotations for a sample dataset:
 
-.. figure:: ./snooz_beta030__EEGInspector_overview_Step1.png
+.. image:: ./snooz_beta-2.1.0__EEGInspector_overview_Step1.png
    :width: 800
    :alt: EEGInspector Step 1 - Open File
 
-   **Step 1** – Open the EEGInspector app and select a montage, then select non-brain channels (e.g., ECG, EOG) for exclusion.
+**Step 1** – Open the EEGInspector app and select a montage, then select non-brain channels (e.g., ECG, EOG) for exclusion.
 
-.. figure:: ./snooz_beta030__EEGInspector_overview_Step2.png
+.. image:: ./snooz_beta-2.1.0__EEGInspector_overview_Step2.png
    :width: 800
    :alt: EEGInspector Step 2 - Mark Bad Channels
 
-   **Step 2** – Visually inspect the EEG and mark fully artifact channels.
+**Step 2** – Visually inspect the EEG and mark fully artifact channels.
 
-.. figure:: ./snooz_beta030__EEGInspector_overview_Step3.png
+.. image:: ./snooz_beta-2.1.0__EEGInspector_overview_Step3.png
    :width: 800
    :alt: EEGInspector Step 3 - Mark Noisy Epochs
 
-   **Step 3** – Segment the data into epochs and mark noisy ones.
+**Step 3** – Segment the data into epochs and mark noisy ones.
 
-.. figure:: ./snooz_beta030__EEGInspector_overview_Step4.png
+.. image:: ./snooz_beta-2.1.0__EEGInspector_overview_Step4.png
    :width: 800
    :alt: EEGInspector Step 4 - Check the PSD of cleaned signal.
 
-   **Step 4** – Check the PSD of cleaned signal and save the annotations properly.
+**Step 4** – Check the PSD of cleaned signal and save the annotations properly.
 
 
 Open your EEG file
