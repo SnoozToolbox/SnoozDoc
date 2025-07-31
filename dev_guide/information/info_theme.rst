@@ -69,6 +69,14 @@ The following lines appear in the .ui file for a tool step (the path may differ 
     </resources>
 
 
-When the .ui file is compiled into Python (using pyuic5), the resource file itself is not embedded — only an import statement for the compiled resource module ``import themes_rc`` is added at the beginning of the generated .py file.
-That’s why the user must copy and paste a newly compiled themes_rc.py file into Snooz’s root directory:
+When the .ui file is compiled into Python, the referenced resource file (e.g., themes.qrc) is not embedded in the generated .py file. 
+Instead, the compiled Python file will simply include an import statement like:
+
+.. code-block:: python
+    
+    import themes_rc
+
+For this import to work correctly, the compiled themes_rc.py file must be available in Snooz’s root source directory:
 ``snooz_workspace\snooz-toolbox-ceams\src\main\python``
+
+This is why you need to **copy and paste the newly compiled** ``themes_rc.py`` file into that location after recompiling the resources.
