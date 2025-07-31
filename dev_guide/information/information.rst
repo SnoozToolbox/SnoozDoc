@@ -17,6 +17,7 @@ Here some additional information about the :ref:`Packages<info_packages>`, :ref:
   info_modules
   info_apps
   info_PSG_accessory
+  info_theme
 
 Architecture
 =======================================
