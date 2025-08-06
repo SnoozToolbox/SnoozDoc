@@ -70,9 +70,31 @@ Steps
 
 **3 - Spindle Detector**
 
-   Define the minimum and maximum duration of kept spindles.  
-   Define in which sleep stage you want to detect spindles.  
-   You can also choose to detect spindle in the sleep cycles only or to exclude sleep periods from the analysis.
+   - Define the minimum and maximum duration of kept spindles.
+
+   - Define in which sleep stage you want to detect spindles.  
+
+   - You can also choose to detect spindle in the sleep cycles only or to exclude sleep periods from the analysis.
+
+   **- A7 Settings**
+
+      In this section, you can specify a custom frequency range for spindle detection. The algorithm will compute its features based on the range defined here.
+      
+      By default, the values are set to 11–16 Hz (sigma band), the standard frequency range for spindle detection.
+      
+      The calculated features for spindle detection are as follows:
+
+      * **Absolute power in specified frequency band**: log10(mean squared band power)
+
+      * **Relative band power**: z-score(log10(PSA: desired frequency band Hz / PSA:4.5-30Hz))
+
+      * **Specified frequency band covariance**: z-score(log10(cov(EEG:0.3-30Hz, EEG: desired frequency band Hz)))
+
+      * **specified frequency band correlation**:  cov(EEG:0.3-30Hz, EEG: desired frequency band Hz) / (std(EEG:0.3-30Hz) * std(EEG:desired frequency band Hz))
+
+   .. warning::
+      
+      The spindle detection thresholds are pre-set and validated specifically for the sigma frequency band (11-16 Hz). If you change the frequency band from the default values, you must define new thresholds to ensure accurate spindle detection.
 
 **4 - Output Files**
 

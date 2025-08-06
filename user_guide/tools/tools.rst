@@ -66,6 +66,12 @@ The columns of the annotations file are as follows:
 3. **start_sec**: The onset of the annotation in seconds, e.g., 300
 4. **duration_sec** : The duration of the annotation in second, e.g., 30
 5. **channels** : The list of channels on which the annotation occurs, e.g., ['LOC', 'ROC']
+6. [Optional Column: **time elapsed (HH:MM:SS)**] : The time elapsed since the beginning of the recording, e.g., 00:05:00
+
+.. note::
+   - The **time elapsed (HH:MM:SS)** column is optional and intended solely for human readability; it is not processed by Snooz.  
+   - If this column is omitted, all tools will function normally.  
+   - When Snooz generates output .tsv files, the time elapsed column is automatically calculated from the start of the recording using the **start_sec** column.
 
 To have an example of the Snooz annotations file see `Snooz_accessory_file.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/Snooz_accessory_file.tsv>`_
 
