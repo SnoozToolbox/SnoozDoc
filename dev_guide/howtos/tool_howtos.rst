@@ -65,9 +65,9 @@ To modify the context dictionary
 ------------------------------------
 Edit the Python file of the step that modifies the context dictionary (e.g., ``Step1.py``):
 
-- Define the context key as a class attribute (e.g., ``context_choice = "choice_1"``).
+- Define the context key as a class attribute (e.g., ``context_choice = "choice"``).
 - In the constructor, set the default value for that key in the ``_context_manager`` dictionary (inherited from ``BaseStepView``):  
-     e.g., ``self._context_manager[self.context_choice] = "choice_1"``
+     e.g., ``self._context_manager[self.context_choice] = "1"``
 - Ensure the value of the key is kept in sync with the UI by updating it every time the user interacts with the interface.
 
 To listen to the context dictionary
