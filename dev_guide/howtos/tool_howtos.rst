@@ -86,6 +86,19 @@ Edit the Python file of the step that listens to the context dictionary (e.g., `
                   context_value = self._context_manager[Step1Class.context_choice]
                   # Adapt the settings based on the value read
 
+.. warning::
+   If the communication between two steps is bidirectional, or if multiple steps need to listen to the same context key, the recommended strategy is to define the context key in a separate file (e.g., ``commons.py``).  
+   This allows all relevant steps to write to the same dictionary.
+
+
+Examples to look at
+--------------------
+The tool **PowerSpectralAnalysis** from the CEAMS package shares information between the steps ``SelectionStep`` and ``AnnotationsSelStep``.
+
+For an example that uses a context key defined in a separate file, see the tool **ConvertEDFBrowser** from the CEAMS package.  
+The steps ``InputFilesStep`` and ``GroupDefinition`` both write to the data model shared through the context manager.
+
+
 
 
    
