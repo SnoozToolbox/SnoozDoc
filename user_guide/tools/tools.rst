@@ -73,6 +73,15 @@ The columns of the annotations file are as follows:
    - If this column is omitted, all tools will function normally.  
    - When Snooz generates output .tsv files, the time elapsed column is automatically calculated from the start of the recording using the **start_sec** column.
 
+.. warning::
+   The cells regarding the **time elapsed (HH:MM:SS)** column need to be properly configured in Excel or any other spreadsheet application to ensure that the time elapsed column has the correct format.
+   
+   For example, the following figure shows the configuration in **Excel** for the **time elapsed (HH:MM:SS)** column.
+
+.. image:: ./Time_elapsed_configuration_Excel.png
+   :width: 700
+   :alt: Alternative text    
+
 To have an example of the Snooz annotations file see `Snooz_accessory_file.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/Snooz_accessory_file.tsv>`_
 
 The Snooz accessory .tsv file is human-readable and can be opened in any text editor or spreadsheet application (such as Excel). 
