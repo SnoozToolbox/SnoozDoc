@@ -17,7 +17,7 @@ The invalid sections marked are saved as annotations in the accessory file.
 | The user can open a PSG file by navigating to the Snnoz menu :
 
 1. "File" -> "Open", and select the Oximeter app.
-2. "Viewers" -> "Oximeter", and click on "Open File" in the left panel of the Oximeter Viewer.
+2. "Manual Review" -> "Oximeter", and click on "Open File" in the left panel of the Oximeter Viewer.
 
 Select the "Montage" and the label to identify the "Oximeter channel".
 
