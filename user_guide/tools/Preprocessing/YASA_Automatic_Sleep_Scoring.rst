@@ -95,7 +95,7 @@ Steps
       This feature is not available outside of Snooz, as YASA requires continuous files to run.
       
 Evaluation of YASA Sleep Scoring Algorithm
-=========================================
+===========================================
 
 The YASA sleep scoring algorithm underwent rigorous evaluation on multiple datasets before its integration into Snooz and it achieved the same performance as the original YASA paper.
 

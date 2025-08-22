@@ -9,10 +9,6 @@ Description
 
 This tool detects artifacts from PSG files.
 
-Detection is performed on the entire recording. However, you can select specific sleep stages to potentially establish a cleaner baseline for the algorithms using a 3-component Gaussian Mixture Model (GMM). It is recommended to select sleep stages where the signal is typically cleaner (i.e. N1, N2, N3, R). 
-
-While sleep stages are mandatory for sleep recordings, artifact detection can be run on any EEG recording if "Unscored" is selected for the sleep stages.
-
 **Types of artifacts**
 
 Different types of artifacts are targeted.
@@ -23,6 +19,20 @@ Different types of artifacts are targeted.
 * Power Line Contamination : Segments corrupted by 50 or 60 Hz power.
 * Baseline Variation (Breathing, Sweat) : Segments with high power in the low frequency band (<0.4 Hz).
 * Muscle artifact : Segments with burst of activity in the frequency band 20.25-32 Hz.
+
+Artifact detection performs better when similar sleep stages are selected, as the power distribution can be modeled more accurately.
+Some detectors use a 3-component Gaussian Mixture Model (GMM) to estimate the standard deviation of non-corrupted data, 
+which is then used to define the threshold value.
+
+.. note::
+    We recommend running artifact detection separately for NREM, REM, and Awake stages.
+    Threshold values for the different algorithms can be edited; however, two sets of default values are also available.
+
+.. warning::
+    Make sure to use different annotation groups or names to avoid confusion when running artifact detection twice.
+    The default labels reflect the selected sleep stages and the chosen set of default values.
+
+While sleep stages are mandatory for sleep recordings, artifact detection can also be run on any EEG recording if "Unscored" is selected for the sleep stages.
 
 Steps
 -----------------
