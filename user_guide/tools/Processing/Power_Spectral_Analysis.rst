@@ -76,8 +76,9 @@ Steps
 
             - Choose "Total" to generate the average through the whole recording.
             - Choose "Distribution per hour" to generate the average for each elapsed hour (clock hour) from hour 1 to 12. The starting point is the sleep onset.
+            - Choose "Distribution per hour spent in each sleep stage" to generate the average for each stage hour from hour 1 to 12. The starting point is the sleep onset.
             - Choose "Distribution per sleep cycle" to generate the average per sleep cycle, from sleep cycle 1 to 6.  The starting point is the sleep onset.
-
+ 
     The output file is a .tsv (tab separated values) file. Each line is specific to a subject, a channel and a frequency band. 
 
 
