@@ -14,7 +14,7 @@ The primary purpose of apps is to explore a single polysomnography (PSG) recordi
 For this reason, apps can be opened through the **File**-> **Open** menu, which may prompt the user to select a file. 
 Apps can also be accessed through the category menu, similar to how tools are accessed.
 
-For now, there are two apps in Snooz, which are the Oximeter viewer and EEG Inspector.
+For now, Snooz includes two apps, the "Oximeter Viewer" and "EEG Inspector", both accessible from the "Manual Review" menu.
 
 .. toctree::
     Oximeter
