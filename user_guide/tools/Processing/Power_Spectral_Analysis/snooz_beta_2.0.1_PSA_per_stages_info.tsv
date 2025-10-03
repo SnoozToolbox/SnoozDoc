@@ -1,0 +1,703 @@
+A	filename	PSG filename
+B	id1	subject identification
+C	cyc_def_option	"Method used to split the sleep period in sleep cycles, it defines the criteria. I.e. : ""Minimum criteria""  ""Aeschbach 1993""  ""Feinberg 1979"""
+D	cyc_def_include_soremp	Include a REM sleep periods (REMP) that occur within 15 minutes of sleep onset.
+E	cyc_def_include_last_incomplete	Include the last sleep cycle even if the NREM period (NREMP) or REMP does not meet the minimum duration criteria.
+F	cyc_def_rem_min	Minimum length without R stage to end the REMP.
+G	cyc_def_first_nrem_min	Minimum length of the first NREMP in minutes.
+H	cyc_def_mid_last_nrem_min	Minimum length of the middle and last NREMP in minutes.
+I	cyc_def_last_nrem_valid_min	Minimum length of the NREMP in minutes to validate the last sleep cycle.
+J	cyc_def_first_rem_min	Minimum length of the first REMP in minutes.
+K	cyc_def_mid_rem_min	Minimum length of the middle REMP in minutes.
+L	cyc_def_last_rem_min	Minimum length of the last REMP in minutes.
+M	cyc_def_move_end_rem	"Move the end of the REMP to the start of the following NREMP, eliminating the temporal ""gap"" between 2 cycles."
+N	cyc_def_sleep_stages	"List of valid stages used to define the sleep cycles:  ""N1, N2, N3, R"" or ""N2, N3, R"""
+O	artefact_group_name_list	List of groups and names of the artefact excluded from the Power Spectral Analysis
+P	channel_label	The label of the channel.
+Q	channel_fs	The sampling rate (Hz) of the channel.
+R	channel_artefact_count	The number of artefacts marked on the channel (i.e. number of events).
+S	fft_win_sec	The window length in sec used to perform the FFT.
+T	fft_step_sec	The step in sec between each start point of the window used for the FFT.
+U	freq_low_Hz	The low frequency (Hz) of the mini band.
+V	freq_high_Hz	The high frequency (Hz) of the mini band.
+W	total_W_fft_win_count	Total - The number of fft windows in awake.
+X	total_W_fft_win_valid_count	Total - The number of valid fft windows in awake.
+Y	total_N1_fft_win_count	Total - The number of fft windows in N1.
+Z	total_N1_fft_win_valid_count	Total - The number of valid fft windows in N1.
+AA	total_N2_fft_win_count	Total - The number of fft windows in N2.
+AB	total_N2_fft_win_valid_count	Total - The number of valid fft windows in N2.
+AC	total_N3_fft_win_count	Total - The number of fft windows in N3.
+AD	total_N3_fft_win_valid_count	Total - The number of valid fft windows in N3.
+AE	total_N2N3_fft_win_count	Total - The number of fft windows in N2 and N3.
+AF	total_N2N3_fft_win_valid_count	Total - The number of valid fft windows in N2 and N3.
+AG	total_NREM_fft_win_count	Total - The number of fft windows in NREM (N1, N2 and N3).
+AH	total_NREM_fft_win_valid_count	Total - The number of valid fft windows in NREM (N1, N2 and N3).
+AI	total_R_fft_win_count	Total - The number of fft windows in R.
+AJ	total_R_fft_win_valid_count	Total - The number of valid fft windows in R.
+AK	total_Unscored_fft_win_count	Total - The number of fft windows unscored.
+AL	total_Unscored_fft_win_valid_count	Total - The number of valid fft windows unscored.
+AM	total_fft_win_count	Total - The total number of fft windows.
+AN	total_fft_win_valid_count	Total - The total number of valid fft windows.
+AO	total_act	Total - The total spectral power (uV^2)
+AP	total_W_act	Total - The total spectral power (uV^2) in awake.
+AQ	total_N1_act	Total - The total spectral power (uV^2) in N1.
+AR	total_N2_act	Total - The total spectral power (uV^2) in N2.
+AS	total_N3_act	Total - The total spectral power (uV^2) in N3.
+AT	total_N2N3_act	Total - The total spectral power (uV^2) in N2 and N3.
+AU	total_NREM_act	Total - The total spectral power (uV^2) in NREM.
+AV	total_R_act	Total - The total spectral power (uV^2) in rem.
+AW	total_Unscored_act	Total - The total spectral power (uV^2) unscored.
+AX	clock_h1_W_fft_win_count	Real Clock Hour 1 - The number of FFT windows in Wake during the first real clock hour.
+AY	clock_h1_W_fft_win_valid_count	Real Clock Hour 1 - The number of valid FFT windows in Wake during the first real clock hour.
+AZ	clock_h1_N1_fft_win_count	Real Clock Hour 1 - The number of FFT windows in N1 during the first real clock hour.
+BA	clock_h1_N1_fft_win_valid_count	Real Clock Hour 1 - The number of valid FFT windows in N1 during the first real clock hour.
+BB	clock_h1_N2_fft_win_count	Real Clock Hour 1 - The number of FFT windows in N2 during the first real clock hour.
+BC	clock_h1_N2_fft_win_valid_count	Real Clock Hour 1 - The number of valid FFT windows in N2 during the first real clock hour.
+BD	clock_h1_N3_fft_win_count	Real Clock Hour 1 - The number of FFT windows in N3 during the first real clock hour.
+BE	clock_h1_N3_fft_win_valid_count	Real Clock Hour 1 - The number of valid FFT windows in N3 during the first real clock hour.
+BF	clock_h1_N2N3_fft_win_count	Real Clock Hour 1 - The number of FFT windows in N2 and N3 during the first real clock hour.
+BG	clock_h1_N2N3_fft_win_valid_count	Real Clock Hour 1 - The number of valid FFT windows in N2 and N3 during the first real clock hour.
+BH	clock_h1_NREM_fft_win_count	Real Clock Hour 1 - The number of FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+BI	clock_h1_NREM_fft_win_valid_count	Real Clock Hour 1 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+BJ	clock_h1_R_fft_win_count	Real Clock Hour 1 - The number of FFT windows in REM during the first real clock hour.
+BK	clock_h1_R_fft_win_valid_count	Real Clock Hour 1 - The number of valid FFT windows in REM during the first real clock hour.
+BL	clock_h1_Unscored_fft_win_count	Real Clock Hour 1 - The number of FFT windows unscored during the first real clock hour.
+BM	clock_h1_Unscored_fft_win_valid_count	Real Clock Hour 1 - The number of valid FFT windows unscored during the first real clock hour.
+BN	clock_h1_fft_win_count	Real Clock Hour 1 - The total number of FFT windows during the first real clock hour.
+BO	clock_h1_fft_win_valid_count	Real Clock Hour 1 - The total number of valid FFT windows during the first real clock hour.
+BP	clock_h2_W_fft_win_count	Real Clock Hour 2 - The number of FFT windows in Wake during the first real clock hour.
+BQ	clock_h2_W_fft_win_valid_count	Real Clock Hour 2 - The number of valid FFT windows in Wake during the first real clock hour.
+BR	clock_h2_N1_fft_win_count	Real Clock Hour 2 - The number of FFT windows in N1 during the first real clock hour.
+BS	clock_h2_N1_fft_win_valid_count	Real Clock Hour 2 - The number of valid FFT windows in N1 during the first real clock hour.
+BT	clock_h2_N2_fft_win_count	Real Clock Hour 2 - The number of FFT windows in N2 during the first real clock hour.
+BU	clock_h2_N2_fft_win_valid_count	Real Clock Hour 2 - The number of valid FFT windows in N2 during the first real clock hour.
+BV	clock_h2_N3_fft_win_count	Real Clock Hour 2 - The number of FFT windows in N3 during the first real clock hour.
+BW	clock_h2_N3_fft_win_valid_count	Real Clock Hour 2 - The number of valid FFT windows in N3 during the first real clock hour.
+BX	clock_h2_N2N3_fft_win_count	Real Clock Hour 2 - The number of FFT windows in N2 and N3 during the first real clock hour.
+BY	clock_h2_N2N3_fft_win_valid_count	Real Clock Hour 2 - The number of valid FFT windows in N2 and N3 during the first real clock hour.
+BZ	clock_h2_NREM_fft_win_count	Real Clock Hour 2 - The number of FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+CA	clock_h2_NREM_fft_win_valid_count	Real Clock Hour 2 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+CB	clock_h2_R_fft_win_count	Real Clock Hour 2 - The number of FFT windows in REM during the first real clock hour.
+CC	clock_h2_R_fft_win_valid_count	Real Clock Hour 2 - The number of valid FFT windows in REM during the first real clock hour.
+CD	clock_h2_Unscored_fft_win_count	Real Clock Hour 2 - The number of FFT windows unscored during the first real clock hour.
+CE	clock_h2_Unscored_fft_win_valid_count	Real Clock Hour 2 - The number of valid FFT windows unscored during the first real clock hour.
+CF	clock_h2_fft_win_count	Real Clock Hour 2 - The total number of FFT windows during the first real clock hour.
+CG	clock_h2_fft_win_valid_count	Real Clock Hour 2 - The total number of valid FFT windows during the first real clock hour.
+CH	clock_h3_W_fft_win_count	Real Clock Hour 3 - The number of FFT windows in Wake during the first real clock hour.
+CI	clock_h3_W_fft_win_valid_count	Real Clock Hour 3 - The number of valid FFT windows in Wake during the first real clock hour.
+CJ	clock_h3_N1_fft_win_count	Real Clock Hour 3 - The number of FFT windows in N1 during the first real clock hour.
+CK	clock_h3_N1_fft_win_valid_count	Real Clock Hour 3 - The number of valid FFT windows in N1 during the first real clock hour.
+CL	clock_h3_N2_fft_win_count	Real Clock Hour 3 - The number of FFT windows in N2 during the first real clock hour.
+CM	clock_h3_N2_fft_win_valid_count	Real Clock Hour 3 - The number of valid FFT windows in N2 during the first real clock hour.
+CN	clock_h3_N3_fft_win_count	Real Clock Hour 3 - The number of FFT windows in N3 during the first real clock hour.
+CO	clock_h3_N3_fft_win_valid_count	Real Clock Hour 3 - The number of valid FFT windows in N3 during the first real clock hour.
+CP	clock_h3_N2N3_fft_win_count	Real Clock Hour 3 - The number of FFT windows in N2 and N3 during the first real clock hour.
+CQ	clock_h3_N2N3_fft_win_valid_count	Real Clock Hour 3 - The number of valid FFT windows in N2 and N3 during the first real clock hour.
+CR	clock_h3_NREM_fft_win_count	Real Clock Hour 3 - The number of FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+CS	clock_h3_NREM_fft_win_valid_count	Real Clock Hour 3 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+CT	clock_h3_R_fft_win_count	Real Clock Hour 3 - The number of FFT windows in REM during the first real clock hour.
+CU	clock_h3_R_fft_win_valid_count	Real Clock Hour 3 - The number of valid FFT windows in REM during the first real clock hour.
+CV	clock_h3_Unscored_fft_win_count	Real Clock Hour 3 - The number of FFT windows unscored during the first real clock hour.
+CW	clock_h3_Unscored_fft_win_valid_count	Real Clock Hour 3 - The number of valid FFT windows unscored during the first real clock hour.
+CX	clock_h3_fft_win_count	Real Clock Hour 3 - The total number of FFT windows during the first real clock hour.
+CY	clock_h3_fft_win_valid_count	Real Clock Hour 3 - The total number of valid FFT windows during the first real clock hour.
+CZ	clock_h4_W_fft_win_count	Real Clock Hour 4 - The number of FFT windows in Wake during the first real clock hour.
+DA	clock_h4_W_fft_win_valid_count	Real Clock Hour 4 - The number of valid FFT windows in Wake during the first real clock hour.
+DB	clock_h4_N1_fft_win_count	Real Clock Hour 4 - The number of FFT windows in N1 during the first real clock hour.
+DC	clock_h4_N1_fft_win_valid_count	Real Clock Hour 4 - The number of valid FFT windows in N1 during the first real clock hour.
+DD	clock_h4_N2_fft_win_count	Real Clock Hour 4 - The number of FFT windows in N2 during the first real clock hour.
+DE	clock_h4_N2_fft_win_valid_count	Real Clock Hour 4 - The number of valid FFT windows in N2 during the first real clock hour.
+DF	clock_h4_N3_fft_win_count	Real Clock Hour 4 - The number of FFT windows in N3 during the first real clock hour.
+DG	clock_h4_N3_fft_win_valid_count	Real Clock Hour 4 - The number of valid FFT windows in N3 during the first real clock hour.
+DH	clock_h4_N2N3_fft_win_count	Real Clock Hour 4 - The number of FFT windows in N2 and N3 during the first real clock hour.
+DI	clock_h4_N2N3_fft_win_valid_count	Real Clock Hour 4 - The number of valid FFT windows in N2 and N3 during the first real clock hour.
+DJ	clock_h4_NREM_fft_win_count	Real Clock Hour 4 - The number of FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+DK	clock_h4_NREM_fft_win_valid_count	Real Clock Hour 4 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+DL	clock_h4_R_fft_win_count	Real Clock Hour 4 - The number of FFT windows in REM during the first real clock hour.
+DM	clock_h4_R_fft_win_valid_count	Real Clock Hour 4 - The number of valid FFT windows in REM during the first real clock hour.
+DN	clock_h4_Unscored_fft_win_count	Real Clock Hour 4 - The number of FFT windows unscored during the first real clock hour.
+DO	clock_h4_Unscored_fft_win_valid_count	Real Clock Hour 4 - The number of valid FFT windows unscored during the first real clock hour.
+DP	clock_h4_fft_win_count	Real Clock Hour 4 - The total number of FFT windows during the first real clock hour.
+DQ	clock_h4_fft_win_valid_count	Real Clock Hour 4 - The total number of valid FFT windows during the first real clock hour.
+DR	clock_h5_W_fft_win_count	Real Clock Hour 5 - The number of FFT windows in Wake during the first real clock hour.
+DS	clock_h5_W_fft_win_valid_count	Real Clock Hour 5 - The number of valid FFT windows in Wake during the first real clock hour.
+DT	clock_h5_N1_fft_win_count	Real Clock Hour 5 - The number of FFT windows in N1 during the first real clock hour.
+DU	clock_h5_N1_fft_win_valid_count	Real Clock Hour 5 - The number of valid FFT windows in N1 during the first real clock hour.
+DV	clock_h5_N2_fft_win_count	Real Clock Hour 5 - The number of FFT windows in N2 during the first real clock hour.
+DW	clock_h5_N2_fft_win_valid_count	Real Clock Hour 5 - The number of valid FFT windows in N2 during the first real clock hour.
+DX	clock_h5_N3_fft_win_count	Real Clock Hour 5 - The number of FFT windows in N3 during the first real clock hour.
+DY	clock_h5_N3_fft_win_valid_count	Real Clock Hour 5 - The number of valid FFT windows in N3 during the first real clock hour.
+DZ	clock_h5_N2N3_fft_win_count	Real Clock Hour 5 - The number of FFT windows in N2 and N3 during the first real clock hour.
+EA	clock_h5_N2N3_fft_win_valid_count	Real Clock Hour 5 - The number of valid FFT windows in N2 and N3 during the first real clock hour.
+EB	clock_h5_NREM_fft_win_count	Real Clock Hour 5 - The number of FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+EC	clock_h5_NREM_fft_win_valid_count	Real Clock Hour 5 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+ED	clock_h5_R_fft_win_count	Real Clock Hour 5 - The number of FFT windows in REM during the first real clock hour.
+EE	clock_h5_R_fft_win_valid_count	Real Clock Hour 5 - The number of valid FFT windows in REM during the first real clock hour.
+EF	clock_h5_Unscored_fft_win_count	Real Clock Hour 5 - The number of FFT windows unscored during the first real clock hour.
+EG	clock_h5_Unscored_fft_win_valid_count	Real Clock Hour 5 - The number of valid FFT windows unscored during the first real clock hour.
+EH	clock_h5_fft_win_count	Real Clock Hour 5 - The total number of FFT windows during the first real clock hour.
+EI	clock_h5_fft_win_valid_count	Real Clock Hour 5 - The total number of valid FFT windows during the first real clock hour.
+EJ	clock_h6_W_fft_win_count	Real Clock Hour 6 - The number of FFT windows in Wake during the first real clock hour.
+EK	clock_h6_W_fft_win_valid_count	Real Clock Hour 6 - The number of valid FFT windows in Wake during the first real clock hour.
+EL	clock_h6_N1_fft_win_count	Real Clock Hour 6 - The number of FFT windows in N1 during the first real clock hour.
+EM	clock_h6_N1_fft_win_valid_count	Real Clock Hour 6 - The number of valid FFT windows in N1 during the first real clock hour.
+EN	clock_h6_N2_fft_win_count	Real Clock Hour 6 - The number of FFT windows in N2 during the first real clock hour.
+EO	clock_h6_N2_fft_win_valid_count	Real Clock Hour 6 - The number of valid FFT windows in N2 during the first real clock hour.
+EP	clock_h6_N3_fft_win_count	Real Clock Hour 6 - The number of FFT windows in N3 during the first real clock hour.
+EQ	clock_h6_N3_fft_win_valid_count	Real Clock Hour 6 - The number of valid FFT windows in N3 during the first real clock hour.
+ER	clock_h6_N2N3_fft_win_count	Real Clock Hour 6 - The number of FFT windows in N2 and N3 during the first real clock hour.
+ES	clock_h6_N2N3_fft_win_valid_count	Real Clock Hour 6 - The number of valid FFT windows in N2 and N3 during the first real clock hour.
+ET	clock_h6_NREM_fft_win_count	Real Clock Hour 6 - The number of FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+EU	clock_h6_NREM_fft_win_valid_count	Real Clock Hour 6 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+EV	clock_h6_R_fft_win_count	Real Clock Hour 6 - The number of FFT windows in REM during the first real clock hour.
+EW	clock_h6_R_fft_win_valid_count	Real Clock Hour 6 - The number of valid FFT windows in REM during the first real clock hour.
+EX	clock_h6_Unscored_fft_win_count	Real Clock Hour 6 - The number of FFT windows unscored during the first real clock hour.
+EY	clock_h6_Unscored_fft_win_valid_count	Real Clock Hour 6 - The number of valid FFT windows unscored during the first real clock hour.
+EZ	clock_h6_fft_win_count	Real Clock Hour 6 - The total number of FFT windows during the first real clock hour.
+FA	clock_h6_fft_win_valid_count	Real Clock Hour 6 - The total number of valid FFT windows during the first real clock hour.
+FB	clock_h7_W_fft_win_count	Real Clock Hour 7 - The number of FFT windows in Wake during the first real clock hour.
+FC	clock_h7_W_fft_win_valid_count	Real Clock Hour 7 - The number of valid FFT windows in Wake during the first real clock hour.
+FD	clock_h7_N1_fft_win_count	Real Clock Hour 7 - The number of FFT windows in N1 during the first real clock hour.
+FE	clock_h7_N1_fft_win_valid_count	Real Clock Hour 7 - The number of valid FFT windows in N1 during the first real clock hour.
+FF	clock_h7_N2_fft_win_count	Real Clock Hour 7 - The number of FFT windows in N2 during the first real clock hour.
+FG	clock_h7_N2_fft_win_valid_count	Real Clock Hour 7 - The number of valid FFT windows in N2 during the first real clock hour.
+FH	clock_h7_N3_fft_win_count	Real Clock Hour 7 - The number of FFT windows in N3 during the first real clock hour.
+FI	clock_h7_N3_fft_win_valid_count	Real Clock Hour 7 - The number of valid FFT windows in N3 during the first real clock hour.
+FJ	clock_h7_N2N3_fft_win_count	Real Clock Hour 7 - The number of FFT windows in N2 and N3 during the first real clock hour.
+FK	clock_h7_N2N3_fft_win_valid_count	Real Clock Hour 7 - The number of valid FFT windows in N2 and N3 during the first real clock hour.
+FL	clock_h7_NREM_fft_win_count	Real Clock Hour 7 - The number of FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+FM	clock_h7_NREM_fft_win_valid_count	Real Clock Hour 7 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+FN	clock_h7_R_fft_win_count	Real Clock Hour 7 - The number of FFT windows in REM during the first real clock hour.
+FO	clock_h7_R_fft_win_valid_count	Real Clock Hour 7 - The number of valid FFT windows in REM during the first real clock hour.
+FP	clock_h7_Unscored_fft_win_count	Real Clock Hour 7 - The number of FFT windows unscored during the first real clock hour.
+FQ	clock_h7_Unscored_fft_win_valid_count	Real Clock Hour 7 - The number of valid FFT windows unscored during the first real clock hour.
+FR	clock_h7_fft_win_count	Real Clock Hour 7 - The total number of FFT windows during the first real clock hour.
+FS	clock_h7_fft_win_valid_count	Real Clock Hour 7 - The total number of valid FFT windows during the first real clock hour.
+FT	clock_h8_W_fft_win_count	Real Clock Hour 8 - The number of FFT windows in Wake during the first real clock hour.
+FU	clock_h8_W_fft_win_valid_count	Real Clock Hour 8 - The number of valid FFT windows in Wake during the first real clock hour.
+FV	clock_h8_N1_fft_win_count	Real Clock Hour 8 - The number of FFT windows in N1 during the first real clock hour.
+FW	clock_h8_N1_fft_win_valid_count	Real Clock Hour 8 - The number of valid FFT windows in N1 during the first real clock hour.
+FX	clock_h8_N2_fft_win_count	Real Clock Hour 8 - The number of FFT windows in N2 during the first real clock hour.
+FY	clock_h8_N2_fft_win_valid_count	Real Clock Hour 8 - The number of valid FFT windows in N2 during the first real clock hour.
+FZ	clock_h8_N3_fft_win_count	Real Clock Hour 8 - The number of FFT windows in N3 during the first real clock hour.
+GA	clock_h8_N3_fft_win_valid_count	Real Clock Hour 8 - The number of valid FFT windows in N3 during the first real clock hour.
+GB	clock_h8_N2N3_fft_win_count	Real Clock Hour 8 - The number of FFT windows in N2 and N3 during the first real clock hour.
+GC	clock_h8_N2N3_fft_win_valid_count	Real Clock Hour 8 - The number of valid FFT windows in N2 and N3 during the first real clock hour.
+GD	clock_h8_NREM_fft_win_count	Real Clock Hour 8 - The number of FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+GE	clock_h8_NREM_fft_win_valid_count	Real Clock Hour 8 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+GF	clock_h8_R_fft_win_count	Real Clock Hour 8 - The number of FFT windows in REM during the first real clock hour.
+GG	clock_h8_R_fft_win_valid_count	Real Clock Hour 8 - The number of valid FFT windows in REM during the first real clock hour.
+GH	clock_h8_Unscored_fft_win_count	Real Clock Hour 8 - The number of FFT windows unscored during the first real clock hour.
+GI	clock_h8_Unscored_fft_win_valid_count	Real Clock Hour 8 - The number of valid FFT windows unscored during the first real clock hour.
+GJ	clock_h8_fft_win_count	Real Clock Hour 8 - The total number of FFT windows during the first real clock hour.
+GK	clock_h8_fft_win_valid_count	Real Clock Hour 8 - The total number of valid FFT windows during the first real clock hour.
+GL	clock_h9_W_fft_win_count	Real Clock Hour 9 - The number of FFT windows in Wake during the first real clock hour.
+GM	clock_h9_W_fft_win_valid_count	Real Clock Hour 9 - The number of valid FFT windows in Wake during the first real clock hour.
+GN	clock_h9_N1_fft_win_count	Real Clock Hour 9 - The number of FFT windows in N1 during the first real clock hour.
+GO	clock_h9_N1_fft_win_valid_count	Real Clock Hour 9 - The number of valid FFT windows in N1 during the first real clock hour.
+GP	clock_h9_N2_fft_win_count	Real Clock Hour 9 - The number of FFT windows in N2 during the first real clock hour.
+GQ	clock_h9_N2_fft_win_valid_count	Real Clock Hour 9 - The number of valid FFT windows in N2 during the first real clock hour.
+GR	clock_h9_N3_fft_win_count	Real Clock Hour 9 - The number of FFT windows in N3 during the first real clock hour.
+GS	clock_h9_N3_fft_win_valid_count	Real Clock Hour 9 - The number of valid FFT windows in N3 during the first real clock hour.
+GT	clock_h9_N2N3_fft_win_count	Real Clock Hour 9 - The number of FFT windows in N2 and N3 during the first real clock hour.
+GU	clock_h9_N2N3_fft_win_valid_count	Real Clock Hour 9 - The number of valid FFT windows in N2 and N3 during the first real clock hour.
+GV	clock_h9_NREM_fft_win_count	Real Clock Hour 9 - The number of FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+GW	clock_h9_NREM_fft_win_valid_count	Real Clock Hour 9 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first real clock hour.
+GX	clock_h9_R_fft_win_count	Real Clock Hour 9 - The number of FFT windows in REM during the first real clock hour.
+GY	clock_h9_R_fft_win_valid_count	Real Clock Hour 9 - The number of valid FFT windows in REM during the first real clock hour.
+GZ	clock_h9_Unscored_fft_win_count	Real Clock Hour 9 - The number of FFT windows unscored during the first real clock hour.
+HA	clock_h9_Unscored_fft_win_valid_count	Real Clock Hour 9 - The number of valid FFT windows unscored during the first real clock hour.
+HB	clock_h9_fft_win_count	Real Clock Hour 9 - The total number of FFT windows during the first real clock hour.
+HC	clock_h9_fft_win_valid_count	Real Clock Hour 9 - The total number of valid FFT windows during the first real clock hour.
+HD	clock_h1_act	Hour 1 - The spectral power (uV^2)
+HE	clock_h1_W_act	Hour 1 - The spectral power (uV^2) in awake.
+HF	clock_h1_N1_act	Hour 1 - The spectral power (uV^2) in N1.
+HG	clock_h1_N2_act	Hour 1 - The spectral power (uV^2) in N2.
+HH	clock_h1_N3_act	Hour 1 - The spectral power (uV^2) in N3.
+HI	clock_h1_N2N3_act	Hour 1 - The spectral power (uV^2) in N2 and N3.
+HJ	clock_h1_NREM_act	Hour 1 - The spectral power (uV^2) in NREM.
+HK	clock_h1_R_act	Hour 1 - The spectral power (uV^2) in rem.
+HL	clock_h1_Unscored_act	Hour 1 - The spectral power (uV^2) unscored.
+HM	clock_h2_act	Hour 2 - The spectral power (uV^2)
+HN	clock_h2_W_act	Hour 2 - The spectral power (uV^2) in awake.
+HO	clock_h2_N1_act	Hour 2 - The spectral power (uV^2) in N1.
+HP	clock_h2_N2_act	Hour 2 - The spectral power (uV^2) in N2.
+HQ	clock_h2_N3_act	Hour 2 - The spectral power (uV^2) in N3.
+HR	clock_h2_N2N3_act	Hour 2 - The spectral power (uV^2) in N2 and N3.
+HS	clock_h2_NREM_act	Hour 2 - The spectral power (uV^2) in NREM.
+HT	clock_h2_R_act	Hour 2 - The spectral power (uV^2) in rem.
+HU	clock_h2_Unscored_act	Hour 2 - The spectral power (uV^2) unscored.
+HV	clock_h3_act	Hour 3 - The spectral power (uV^2)
+HW	clock_h3_W_act	Hour 3 - The spectral power (uV^2) in awake.
+HX	clock_h3_N1_act	Hour 3 - The spectral power (uV^2) in N1.
+HY	clock_h3_N2_act	Hour 3 - The spectral power (uV^2) in N2.
+HZ	clock_h3_N3_act	Hour 3 - The spectral power (uV^2) in N3.
+IA	clock_h3_N2N3_act	Hour 3 - The spectral power (uV^2) in N2 and N3.
+IB	clock_h3_NREM_act	Hour 3 - The spectral power (uV^2) in NREM.
+IC	clock_h3_R_act	Hour 3 - The spectral power (uV^2) in rem.
+ID	clock_h3_Unscored_act	Hour 3 - The spectral power (uV^2) unscored.
+IE	clock_h4_act	Hour 4 - The spectral power (uV^2)
+IF	clock_h4_W_act	Hour 4 - The spectral power (uV^2) in awake.
+IG	clock_h4_N1_act	Hour 4 - The spectral power (uV^2) in N1.
+IH	clock_h4_N2_act	Hour 4 - The spectral power (uV^2) in N2.
+II	clock_h4_N3_act	Hour 4 - The spectral power (uV^2) in N3.
+IJ	clock_h4_N2N3_act	Hour 4 - The spectral power (uV^2) in N2 and N3.
+IK	clock_h4_NREM_act	Hour 4 - The spectral power (uV^2) in NREM.
+IL	clock_h4_R_act	Hour 4 - The spectral power (uV^2) in rem.
+IM	clock_h4_Unscored_act	Hour 4 - The spectral power (uV^2) unscored.
+IN	clock_h5_act	Hour 5 - The spectral power (uV^2)
+IO	clock_h5_W_act	Hour 5 - The spectral power (uV^2) in awake.
+IP	clock_h5_N1_act	Hour 5 - The spectral power (uV^2) in N1.
+IQ	clock_h5_N2_act	Hour 5 - The spectral power (uV^2) in N2.
+IR	clock_h5_N3_act	Hour 5 - The spectral power (uV^2) in N3.
+IS	clock_h5_N2N3_act	Hour 5 - The spectral power (uV^2) in N2 and N3.
+IT	clock_h5_NREM_act	Hour 5 - The spectral power (uV^2) in NREM.
+IU	clock_h5_R_act	Hour 5 - The spectral power (uV^2) in rem.
+IV	clock_h5_Unscored_act	Hour 5 - The spectral power (uV^2) unscored.
+IW	clock_h6_act	Hour 6 - The spectral power (uV^2)
+IX	clock_h6_W_act	Hour 6 - The spectral power (uV^2) in awake.
+IY	clock_h6_N1_act	Hour 6 - The spectral power (uV^2) in N1.
+IZ	clock_h6_N2_act	Hour 6 - The spectral power (uV^2) in N2.
+JA	clock_h6_N3_act	Hour 6 - The spectral power (uV^2) in N3.
+JB	clock_h6_N2N3_act	Hour 6 - The spectral power (uV^2) in N2 and N3.
+JC	clock_h6_NREM_act	Hour 6 - The spectral power (uV^2) in NREM.
+JD	clock_h6_R_act	Hour 6 - The spectral power (uV^2) in rem.
+JE	clock_h6_Unscored_act	Hour 6 - The spectral power (uV^2) unscored.
+JF	clock_h7_act	Hour 7 - The spectral power (uV^2)
+JG	clock_h7_W_act	Hour 7 - The spectral power (uV^2) in awake.
+JH	clock_h7_N1_act	Hour 7 - The spectral power (uV^2) in N1.
+JI	clock_h7_N2_act	Hour 7 - The spectral power (uV^2) in N2.
+JJ	clock_h7_N3_act	Hour 7 - The spectral power (uV^2) in N3.
+JK	clock_h7_N2N3_act	Hour 7 - The spectral power (uV^2) in N2 and N3.
+JL	clock_h7_NREM_act	Hour 7 - The spectral power (uV^2) in NREM.
+JM	clock_h7_R_act	Hour 7 - The spectral power (uV^2) in rem.
+JN	clock_h7_Unscored_act	Hour 7 - The spectral power (uV^2) unscored.
+JO	clock_h8_act	Hour 8 - The spectral power (uV^2)
+JP	clock_h8_W_act	Hour 8 - The spectral power (uV^2) in awake.
+JQ	clock_h8_N1_act	Hour 8 - The spectral power (uV^2) in N1.
+JR	clock_h8_N2_act	Hour 8 - The spectral power (uV^2) in N2.
+JS	clock_h8_N3_act	Hour 8 - The spectral power (uV^2) in N3.
+JT	clock_h8_N2N3_act	Hour 8 - The spectral power (uV^2) in N2 and N3.
+JU	clock_h8_NREM_act	Hour 8 - The spectral power (uV^2) in NREM.
+JV	clock_h8_R_act	Hour 8 - The spectral power (uV^2) in rem.
+JW	clock_h8_Unscored_act	Hour 8 - The spectral power (uV^2) unscored.
+JX	clock_h9_act	Hour 9 - The spectral power (uV^2)
+JY	clock_h9_W_act	Hour 9 - The spectral power (uV^2) in awake.
+JZ	clock_h9_N1_act	Hour 9 - The spectral power (uV^2) in N1.
+KA	clock_h9_N2_act	Hour 9 - The spectral power (uV^2) in N2.
+KB	clock_h9_N3_act	Hour 9 - The spectral power (uV^2) in N3.
+KC	clock_h9_N2N3_act	Hour 9 - The spectral power (uV^2) in N2 and N3.
+KD	clock_h9_NREM_act	Hour 9 - The spectral power (uV^2) in NREM.
+KE	clock_h9_R_act	Hour 9 - The spectral power (uV^2) in rem.
+KF	clock_h9_Unscored_act	Hour 9 - The spectral power (uV^2) unscored.
+KG	cyc1_length_min	Cycle 1 - Duration of the cycle 1 in minutes.
+KH	cyc1_W_fft_win_count	Cycle 1 - The number of fft windows in awake.
+KI	cyc1_W_fft_win_valid_count	Cycle 1 - The number of valid fft windows in awake.
+KJ	cyc1_N1_fft_win_count	Cycle 1 - The number of fft windows in N1.
+KK	cyc1_N1_fft_win_valid_count	Cycle 1 - The number of valid fft windows in N1.
+KL	cyc1_N2_fft_win_count	Cycle 1 - The number of fft windows in N2.
+KM	cyc1_N2_fft_win_valid_count	Cycle 1 - The number of valid fft windows in N2.
+KN	cyc1_N3_fft_win_count	Cycle 1 - The number of fft windows in N3.
+KO	cyc1_N3_fft_win_valid_count	Cycle 1 - The number of valid fft windows in N3.
+KP	cyc1_N2N3_fft_win_count	Cycle 1 - The number of fft windows in N2 and N3.
+KQ	cyc1_N2N3_fft_win_valid_count	Cycle 1 - The number of valid fft windows in N2 and N3.
+KR	cyc1_NREM_fft_win_count	Cycle 1 - The number of fft windows in NREM (N1, N2 and N3).
+KS	cyc1_NREM_fft_win_valid_count	Cycle 1 - The number of valid fft windows in NREM (N1, N2 and N3).
+KT	cyc1_R_fft_win_count	Cycle 1 - The number of fft windows in rem.
+KU	cyc1_R_fft_win_valid_count	Cycle 1 - The number of valid fft windows in rem.
+KV	cyc1_Unscored_fft_win_count	Cycle 1 - The number of fft windows unscored.
+KW	cyc1_Unscored_fft_win_valid_count	Cycle 1 - The number of valid fft windows unscored.
+KX	cyc1_fft_win_count	Cycle 1 - The total number of fft windows.
+KY	cyc1_fft_win_valid_count	Cycle 1 - The total number of valid fft windows.
+KZ	cyc2_length_min	Cycle 2 - Duration of the cycle 1 in minutes.
+LA	cyc2_W_fft_win_count	Cycle 2 - The number of fft windows in awake.
+LB	cyc2_W_fft_win_valid_count	Cycle 2 - The number of valid fft windows in awake.
+LC	cyc2_N1_fft_win_count	Cycle 2 - The number of fft windows in N1.
+LD	cyc2_N1_fft_win_valid_count	Cycle 2 - The number of valid fft windows in N1.
+LE	cyc2_N2_fft_win_count	Cycle 2 - The number of fft windows in N2.
+LF	cyc2_N2_fft_win_valid_count	Cycle 2 - The number of valid fft windows in N2.
+LG	cyc2_N3_fft_win_count	Cycle 2 - The number of fft windows in N3.
+LH	cyc2_N3_fft_win_valid_count	Cycle 2 - The number of valid fft windows in N3.
+LI	cyc2_N2N3_fft_win_count	Cycle 2 - The number of fft windows in N2 and N3.
+LJ	cyc2_N2N3_fft_win_valid_count	Cycle 2 - The number of valid fft windows in N2 and N3.
+LK	cyc2_NREM_fft_win_count	Cycle 2 - The number of fft windows in NREM (N1, N2 and N3).
+LL	cyc2_NREM_fft_win_valid_count	Cycle 2 - The number of valid fft windows in NREM (N1, N2 and N3).
+LM	cyc2_R_fft_win_count	Cycle 2 - The number of fft windows in rem.
+LN	cyc2_R_fft_win_valid_count	Cycle 2 - The number of valid fft windows in rem.
+LO	cyc2_Unscored_fft_win_count	Cycle 2 - The number of fft windows unscored.
+LP	cyc2_Unscored_fft_win_valid_count	Cycle 2 - The number of valid fft windows unscored.
+LQ	cyc2_fft_win_count	Cycle 2 - The total number of fft windows.
+LR	cyc2_fft_win_valid_count	Cycle 2 - The total number of valid fft windows.
+LS	cyc3_length_min	Cycle 3 - Duration of the cycle 1 in minutes.
+LT	cyc3_W_fft_win_count	Cycle 3 - The number of fft windows in awake.
+LU	cyc3_W_fft_win_valid_count	Cycle 3 - The number of valid fft windows in awake.
+LV	cyc3_N1_fft_win_count	Cycle 3 - The number of fft windows in N1.
+LW	cyc3_N1_fft_win_valid_count	Cycle 3 - The number of valid fft windows in N1.
+LX	cyc3_N2_fft_win_count	Cycle 3 - The number of fft windows in N2.
+LY	cyc3_N2_fft_win_valid_count	Cycle 3 - The number of valid fft windows in N2.
+LZ	cyc3_N3_fft_win_count	Cycle 3 - The number of fft windows in N3.
+MA	cyc3_N3_fft_win_valid_count	Cycle 3 - The number of valid fft windows in N3.
+MB	cyc3_N2N3_fft_win_count	Cycle 3 - The number of fft windows in N2 and N3.
+MC	cyc3_N2N3_fft_win_valid_count	Cycle 3 - The number of valid fft windows in N2 and N3.
+MD	cyc3_NREM_fft_win_count	Cycle 3 - The number of fft windows in NREM (N1, N2 and N3).
+ME	cyc3_NREM_fft_win_valid_count	Cycle 3 - The number of valid fft windows in NREM (N1, N2 and N3).
+MF	cyc3_R_fft_win_count	Cycle 3 - The number of fft windows in rem.
+MG	cyc3_R_fft_win_valid_count	Cycle 3 - The number of valid fft windows in rem.
+MH	cyc3_Unscored_fft_win_count	Cycle 3 - The number of fft windows unscored.
+MI	cyc3_Unscored_fft_win_valid_count	Cycle 3 - The number of valid fft windows unscored.
+MJ	cyc3_fft_win_count	Cycle 3 - The total number of fft windows.
+MK	cyc3_fft_win_valid_count	Cycle 3 - The total number of valid fft windows.
+ML	cyc4_length_min	Cycle 4 - Duration of the cycle 1 in minutes.
+MM	cyc4_W_fft_win_count	Cycle 4 - The number of fft windows in awake.
+MN	cyc4_W_fft_win_valid_count	Cycle 4 - The number of valid fft windows in awake.
+MO	cyc4_N1_fft_win_count	Cycle 4 - The number of fft windows in N1.
+MP	cyc4_N1_fft_win_valid_count	Cycle 4 - The number of valid fft windows in N1.
+MQ	cyc4_N2_fft_win_count	Cycle 4 - The number of fft windows in N2.
+MR	cyc4_N2_fft_win_valid_count	Cycle 4 - The number of valid fft windows in N2.
+MS	cyc4_N3_fft_win_count	Cycle 4 - The number of fft windows in N3.
+MT	cyc4_N3_fft_win_valid_count	Cycle 4 - The number of valid fft windows in N3.
+MU	cyc4_N2N3_fft_win_count	Cycle 4 - The number of fft windows in N2 and N3.
+MV	cyc4_N2N3_fft_win_valid_count	Cycle 4 - The number of valid fft windows in N2 and N3.
+MW	cyc4_NREM_fft_win_count	Cycle 4 - The number of fft windows in NREM (N1, N2 and N3).
+MX	cyc4_NREM_fft_win_valid_count	Cycle 4 - The number of valid fft windows in NREM (N1, N2 and N3).
+MY	cyc4_R_fft_win_count	Cycle 4 - The number of fft windows in rem.
+MZ	cyc4_R_fft_win_valid_count	Cycle 4 - The number of valid fft windows in rem.
+NA	cyc4_Unscored_fft_win_count	Cycle 4 - The number of fft windows unscored.
+NB	cyc4_Unscored_fft_win_valid_count	Cycle 4 - The number of valid fft windows unscored.
+NC	cyc4_fft_win_count	Cycle 4 - The total number of fft windows.
+ND	cyc4_fft_win_valid_count	Cycle 4 - The total number of valid fft windows.
+NE	cyc5_length_min	Cycle 5 - Duration of the cycle 1 in minutes.
+NF	cyc5_W_fft_win_count	Cycle 5 - The number of fft windows in awake.
+NG	cyc5_W_fft_win_valid_count	Cycle 5 - The number of valid fft windows in awake.
+NH	cyc5_N1_fft_win_count	Cycle 5 - The number of fft windows in N1.
+NI	cyc5_N1_fft_win_valid_count	Cycle 5 - The number of valid fft windows in N1.
+NJ	cyc5_N2_fft_win_count	Cycle 5 - The number of fft windows in N2.
+NK	cyc5_N2_fft_win_valid_count	Cycle 5 - The number of valid fft windows in N2.
+NL	cyc5_N3_fft_win_count	Cycle 5 - The number of fft windows in N3.
+NM	cyc5_N3_fft_win_valid_count	Cycle 5 - The number of valid fft windows in N3.
+NN	cyc5_N2N3_fft_win_count	Cycle 5 - The number of fft windows in N2 and N3.
+NO	cyc5_N2N3_fft_win_valid_count	Cycle 5 - The number of valid fft windows in N2 and N3.
+NP	cyc5_NREM_fft_win_count	Cycle 5 - The number of fft windows in NREM (N1, N2 and N3).
+NQ	cyc5_NREM_fft_win_valid_count	Cycle 5 - The number of valid fft windows in NREM (N1, N2 and N3).
+NR	cyc5_R_fft_win_count	Cycle 5 - The number of fft windows in rem.
+NS	cyc5_R_fft_win_valid_count	Cycle 5 - The number of valid fft windows in rem.
+NT	cyc5_Unscored_fft_win_count	Cycle 5 - The number of fft windows unscored.
+NU	cyc5_Unscored_fft_win_valid_count	Cycle 5 - The number of valid fft windows unscored.
+NV	cyc5_fft_win_count	Cycle 5 - The total number of fft windows.
+NW	cyc5_fft_win_valid_count	Cycle 5 - The total number of valid fft windows.
+NX	cyc6_length_min	Cycle 6 - Duration of the cycle 1 in minutes.
+NY	cyc6_W_fft_win_count	Cycle 6 - The number of fft windows in awake.
+NZ	cyc6_W_fft_win_valid_count	Cycle 6 - The number of valid fft windows in awake.
+OA	cyc6_N1_fft_win_count	Cycle 6 - The number of fft windows in N1.
+OB	cyc6_N1_fft_win_valid_count	Cycle 6 - The number of valid fft windows in N1.
+OC	cyc6_N2_fft_win_count	Cycle 6 - The number of fft windows in N2.
+OD	cyc6_N2_fft_win_valid_count	Cycle 6 - The number of valid fft windows in N2.
+OE	cyc6_N3_fft_win_count	Cycle 6 - The number of fft windows in N3.
+OF	cyc6_N3_fft_win_valid_count	Cycle 6 - The number of valid fft windows in N3.
+OG	cyc6_N2N3_fft_win_count	Cycle 6 - The number of fft windows in N2 and N3.
+OH	cyc6_N2N3_fft_win_valid_count	Cycle 6 - The number of valid fft windows in N2 and N3.
+OI	cyc6_NREM_fft_win_count	Cycle 6 - The number of fft windows in NREM (N1, N2 and N3).
+OJ	cyc6_NREM_fft_win_valid_count	Cycle 6 - The number of valid fft windows in NREM (N1, N2 and N3).
+OK	cyc6_R_fft_win_count	Cycle 6 - The number of fft windows in rem.
+OL	cyc6_R_fft_win_valid_count	Cycle 6 - The number of valid fft windows in rem.
+OM	cyc6_Unscored_fft_win_count	Cycle 6 - The number of fft windows unscored.
+ON	cyc6_Unscored_fft_win_valid_count	Cycle 6 - The number of valid fft windows unscored.
+OO	cyc6_fft_win_count	Cycle 6 - The total number of fft windows.
+OP	cyc6_fft_win_valid_count	Cycle 6 - The total number of valid fft windows.
+OQ	cyc1_act	Cycle 1 - The spectral power (uV^2)
+OR	cyc1_W_act	Cycle 1 - The spectral power (uV^2) in awake.
+OS	cyc1_N1_act	Cycle 1 - The spectral power (uV^2) in N1.
+OT	cyc1_N2_act	Cycle 1 - The spectral power (uV^2) in N2.
+OU	cyc1_N3_act	Cycle 1 - The spectral power (uV^2) in N3.
+OV	cyc1_N2N3_act	Cycle 1 - The spectral power (uV^2) in N2 and N3.
+OW	cyc1_NREM_act	Cycle 1 - The spectral power (uV^2) in NREM.
+OX	cyc1_R_act	Cycle 1 - The spectral power (uV^2) in rem.
+OY	cyc1_Unscored_act	Cycle 1 - The spectral power (uV^2) unscored.
+OZ	cyc2_act	Cycle 2 - The spectral power (uV^2)
+PA	cyc2_W_act	Cycle 2 - The spectral power (uV^2) in awake.
+PB	cyc2_N1_act	Cycle 2 - The spectral power (uV^2) in N1.
+PC	cyc2_N2_act	Cycle 2 - The spectral power (uV^2) in N2.
+PD	cyc2_N3_act	Cycle 2 - The spectral power (uV^2) in N3.
+PE	cyc2_N2N3_act	Cycle 2 - The spectral power (uV^2) in N2 and N3.
+PF	cyc2_NREM_act	Cycle 2 - The spectral power (uV^2) in NREM.
+PG	cyc2_R_act	Cycle 2 - The spectral power (uV^2) in rem.
+PH	cyc2_Unscored_act	Cycle 2 - The spectral power (uV^2) unscored.
+PI	cyc3_act	Cycle 3 - The spectral power (uV^2)
+PJ	cyc3_W_act	Cycle 3 - The spectral power (uV^2) in awake.
+PK	cyc3_N1_act	Cycle 3 - The spectral power (uV^2) in N1.
+PL	cyc3_N2_act	Cycle 3 - The spectral power (uV^2) in N2.
+PM	cyc3_N3_act	Cycle 3 - The spectral power (uV^2) in N3.
+PN	cyc3_N2N3_act	Cycle 3 - The spectral power (uV^2) in N2 and N3.
+PO	cyc3_NREM_act	Cycle 3 - The spectral power (uV^2) in NREM.
+PP	cyc3_R_act	Cycle 3 - The spectral power (uV^2) in rem.
+PQ	cyc3_Unscored_act	Cycle 3 - The spectral power (uV^2) unscored.
+PR	cyc4_act	Cycle 4 - The spectral power (uV^2)
+PS	cyc4_W_act	Cycle 4 - The spectral power (uV^2) in awake.
+PT	cyc4_N1_act	Cycle 4 - The spectral power (uV^2) in N1.
+PU	cyc4_N2_act	Cycle 4 - The spectral power (uV^2) in N2.
+PV	cyc4_N3_act	Cycle 4 - The spectral power (uV^2) in N3.
+PW	cyc4_N2N3_act	Cycle 4 - The spectral power (uV^2) in N2 and N3.
+PX	cyc4_NREM_act	Cycle 4 - The spectral power (uV^2) in NREM.
+PY	cyc4_R_act	Cycle 4 - The spectral power (uV^2) in rem.
+PZ	cyc4_Unscored_act	Cycle 4 - The spectral power (uV^2) unscored.
+QA	cyc5_act	Cycle 5 - The spectral power (uV^2)
+QB	cyc5_W_act	Cycle 5 - The spectral power (uV^2) in awake.
+QC	cyc5_N1_act	Cycle 5 - The spectral power (uV^2) in N1.
+QD	cyc5_N2_act	Cycle 5 - The spectral power (uV^2) in N2.
+QE	cyc5_N3_act	Cycle 5 - The spectral power (uV^2) in N3.
+QF	cyc5_N2N3_act	Cycle 5 - The spectral power (uV^2) in N2 and N3.
+QG	cyc5_NREM_act	Cycle 5 - The spectral power (uV^2) in NREM.
+QH	cyc5_R_act	Cycle 5 - The spectral power (uV^2) in rem.
+QI	cyc5_Unscored_act	Cycle 5 - The spectral power (uV^2) unscored.
+QJ	cyc6_act	Cycle 6 - The spectral power (uV^2)
+QK	cyc6_W_act	Cycle 6 - The spectral power (uV^2) in awake.
+QL	cyc6_N1_act	Cycle 6 - The spectral power (uV^2) in N1.
+QM	cyc6_N2_act	Cycle 6 - The spectral power (uV^2) in N2.
+QN	cyc6_N3_act	Cycle 6 - The spectral power (uV^2) in N3.
+QO	cyc6_N2N3_act	Cycle 6 - The spectral power (uV^2) in N2 and N3.
+QP	cyc6_NREM_act	Cycle 6 - The spectral power (uV^2) in NREM.
+QQ	cyc6_R_act	Cycle 6 - The spectral power (uV^2) in rem.
+QR	cyc6_Unscored_act	Cycle 6 - The spectral power (uV^2) unscored.
+QS	stage_h1_W_fft_win_count	Selected sleep Stage Hour 1 - The number of FFT windows in Wake during the first hour spent in that stage.
+QT	stage_h1_W_fft_win_valid_count	Selected sleep Stage Hour 1 - The number of valid FFT windows in Wake during the first hour spent in that stage.
+QU	stage_h1_N1_fft_win_count	Selected sleep Stage Hour 1 - The number of FFT windows in N1 during the first hour spent in that stage.
+QV	stage_h1_N1_fft_win_valid_count	Selected sleep Stage Hour 1 - The number of valid FFT windows in N1 during the first hour spent in that stage.
+QW	stage_h1_N2_fft_win_count	Selected sleep Stage Hour 1 - The number of FFT windows in N2 during the first hour spent in that stage.
+QX	stage_h1_N2_fft_win_valid_count	Selected sleep Stage Hour 1 - The number of valid FFT windows in N2 during the first hour spent in that stage.
+QY	stage_h1_N3_fft_win_count	Selected sleep Stage Hour 1 - The number of FFT windows in N3 during the first hour spent in that stage.
+QZ	stage_h1_N3_fft_win_valid_count	Selected sleep Stage Hour 1 - The number of valid FFT windows in N3 during the first hour spent in that stage.
+RA	stage_h1_N2N3_fft_win_count	Selected sleep Stage Hour 1 - The number of FFT windows in N2 and N3 during the first hour spent in that stage.
+RB	stage_h1_N2N3_fft_win_valid_count	Selected sleep Stage Hour 1 - The number of valid FFT windows in N2 and N3 during the first hour spent in that stage.
+RC	stage_h1_NREM_fft_win_count	Selected sleep Stage Hour 1 - The number of FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+RD	stage_h1_NREM_fft_win_valid_count	Selected sleep Stage Hour 1 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+RE	stage_h1_R_fft_win_count	Selected sleep Stage Hour 1 - The number of FFT windows in REM during the first hour spent in that stage.
+RF	stage_h1_R_fft_win_valid_count	Selected sleep Stage Hour 1 - The number of valid FFT windows in REM during the first hour spent in that stage.
+RG	stage_h1_Unscored_fft_win_count	Selected sleep Stage Hour 1 - The number of FFT windows unscored during the first hour spent in that stage.
+RH	stage_h1_Unscored_fft_win_valid_count	Selected sleep Stage Hour 1 - The number of valid FFT windows unscored during the first hour spent in that stage.
+RI	stage_h1_fft_win_count	Selected sleep Stage Hour 1 - The total number of FFT windows during the first hour spent in that stage.
+RJ	stage_h1_fft_win_valid_count	Selected sleep Stage Hour 1 - The total number of valid FFT windows during the first hour spent in that stage.
+RK	stage_h2_W_fft_win_count	Selected sleep Stage Hour 2 - The number of FFT windows in Wake during the first hour spent in that stage.
+RL	stage_h2_W_fft_win_valid_count	Selected sleep Stage Hour 2 - The number of valid FFT windows in Wake during the first hour spent in that stage.
+RM	stage_h2_N1_fft_win_count	Selected sleep Stage Hour 2 - The number of FFT windows in N1 during the first hour spent in that stage.
+RN	stage_h2_N1_fft_win_valid_count	Selected sleep Stage Hour 2 - The number of valid FFT windows in N1 during the first hour spent in that stage.
+RO	stage_h2_N2_fft_win_count	Selected sleep Stage Hour 2 - The number of FFT windows in N2 during the first hour spent in that stage.
+RP	stage_h2_N2_fft_win_valid_count	Selected sleep Stage Hour 2 - The number of valid FFT windows in N2 during the first hour spent in that stage.
+RQ	stage_h2_N3_fft_win_count	Selected sleep Stage Hour 2 - The number of FFT windows in N3 during the first hour spent in that stage.
+RR	stage_h2_N3_fft_win_valid_count	Selected sleep Stage Hour 2 - The number of valid FFT windows in N3 during the first hour spent in that stage.
+RS	stage_h2_N2N3_fft_win_count	Selected sleep Stage Hour 2 - The number of FFT windows in N2 and N3 during the first hour spent in that stage.
+RT	stage_h2_N2N3_fft_win_valid_count	Selected sleep Stage Hour 2 - The number of valid FFT windows in N2 and N3 during the first hour spent in that stage.
+RU	stage_h2_NREM_fft_win_count	Selected sleep Stage Hour 2 - The number of FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+RV	stage_h2_NREM_fft_win_valid_count	Selected sleep Stage Hour 2 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+RW	stage_h2_R_fft_win_count	Selected sleep Stage Hour 2 - The number of FFT windows in REM during the first hour spent in that stage.
+RX	stage_h2_R_fft_win_valid_count	Selected sleep Stage Hour 2 - The number of valid FFT windows in REM during the first hour spent in that stage.
+RY	stage_h2_Unscored_fft_win_count	Selected sleep Stage Hour 2 - The number of FFT windows unscored during the first hour spent in that stage.
+RZ	stage_h2_Unscored_fft_win_valid_count	Selected sleep Stage Hour 2 - The number of valid FFT windows unscored during the first hour spent in that stage.
+SA	stage_h2_fft_win_count	Selected sleep Stage Hour 2 - The total number of FFT windows during the first hour spent in that stage.
+SB	stage_h2_fft_win_valid_count	Selected sleep Stage Hour 2 - The total number of valid FFT windows during the first hour spent in that stage.
+SC	stage_h3_W_fft_win_count	Selected sleep Stage Hour 3 - The number of FFT windows in Wake during the first hour spent in that stage.
+SD	stage_h3_W_fft_win_valid_count	Selected sleep Stage Hour 3 - The number of valid FFT windows in Wake during the first hour spent in that stage.
+SE	stage_h3_N1_fft_win_count	Selected sleep Stage Hour 3 - The number of FFT windows in N1 during the first hour spent in that stage.
+SF	stage_h3_N1_fft_win_valid_count	Selected sleep Stage Hour 3 - The number of valid FFT windows in N1 during the first hour spent in that stage.
+SG	stage_h3_N2_fft_win_count	Selected sleep Stage Hour 3 - The number of FFT windows in N2 during the first hour spent in that stage.
+SH	stage_h3_N2_fft_win_valid_count	Selected sleep Stage Hour 3 - The number of valid FFT windows in N2 during the first hour spent in that stage.
+SI	stage_h3_N3_fft_win_count	Selected sleep Stage Hour 3 - The number of FFT windows in N3 during the first hour spent in that stage.
+SJ	stage_h3_N3_fft_win_valid_count	Selected sleep Stage Hour 3 - The number of valid FFT windows in N3 during the first hour spent in that stage.
+SK	stage_h3_N2N3_fft_win_count	Selected sleep Stage Hour 3 - The number of FFT windows in N2 and N3 during the first hour spent in that stage.
+SL	stage_h3_N2N3_fft_win_valid_count	Selected sleep Stage Hour 3 - The number of valid FFT windows in N2 and N3 during the first hour spent in that stage.
+SM	stage_h3_NREM_fft_win_count	Selected sleep Stage Hour 3 - The number of FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+SN	stage_h3_NREM_fft_win_valid_count	Selected sleep Stage Hour 3 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+SO	stage_h3_R_fft_win_count	Selected sleep Stage Hour 3 - The number of FFT windows in REM during the first hour spent in that stage.
+SP	stage_h3_R_fft_win_valid_count	Selected sleep Stage Hour 3 - The number of valid FFT windows in REM during the first hour spent in that stage.
+SQ	stage_h3_Unscored_fft_win_count	Selected sleep Stage Hour 3 - The number of FFT windows unscored during the first hour spent in that stage.
+SR	stage_h3_Unscored_fft_win_valid_count	Selected sleep Stage Hour 3 - The number of valid FFT windows unscored during the first hour spent in that stage.
+SS	stage_h3_fft_win_count	Selected sleep Stage Hour 3 - The total number of FFT windows during the first hour spent in that stage.
+ST	stage_h3_fft_win_valid_count	Selected sleep Stage Hour 3 - The total number of valid FFT windows during the first hour spent in that stage.
+SU	stage_h4_W_fft_win_count	Selected sleep Stage Hour 4 - The number of FFT windows in Wake during the first hour spent in that stage.
+SV	stage_h4_W_fft_win_valid_count	Selected sleep Stage Hour 4 - The number of valid FFT windows in Wake during the first hour spent in that stage.
+SW	stage_h4_N1_fft_win_count	Selected sleep Stage Hour 4 - The number of FFT windows in N1 during the first hour spent in that stage.
+SX	stage_h4_N1_fft_win_valid_count	Selected sleep Stage Hour 4 - The number of valid FFT windows in N1 during the first hour spent in that stage.
+SY	stage_h4_N2_fft_win_count	Selected sleep Stage Hour 4 - The number of FFT windows in N2 during the first hour spent in that stage.
+SZ	stage_h4_N2_fft_win_valid_count	Selected sleep Stage Hour 4 - The number of valid FFT windows in N2 during the first hour spent in that stage.
+TA	stage_h4_N3_fft_win_count	Selected sleep Stage Hour 4 - The number of FFT windows in N3 during the first hour spent in that stage.
+TB	stage_h4_N3_fft_win_valid_count	Selected sleep Stage Hour 4 - The number of valid FFT windows in N3 during the first hour spent in that stage.
+TC	stage_h4_N2N3_fft_win_count	Selected sleep Stage Hour 4 - The number of FFT windows in N2 and N3 during the first hour spent in that stage.
+TD	stage_h4_N2N3_fft_win_valid_count	Selected sleep Stage Hour 4 - The number of valid FFT windows in N2 and N3 during the first hour spent in that stage.
+TE	stage_h4_NREM_fft_win_count	Selected sleep Stage Hour 4 - The number of FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+TF	stage_h4_NREM_fft_win_valid_count	Selected sleep Stage Hour 4 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+TG	stage_h4_R_fft_win_count	Selected sleep Stage Hour 4 - The number of FFT windows in REM during the first hour spent in that stage.
+TH	stage_h4_R_fft_win_valid_count	Selected sleep Stage Hour 4 - The number of valid FFT windows in REM during the first hour spent in that stage.
+TI	stage_h4_Unscored_fft_win_count	Selected sleep Stage Hour 4 - The number of FFT windows unscored during the first hour spent in that stage.
+TJ	stage_h4_Unscored_fft_win_valid_count	Selected sleep Stage Hour 4 - The number of valid FFT windows unscored during the first hour spent in that stage.
+TK	stage_h4_fft_win_count	Selected sleep Stage Hour 4 - The total number of FFT windows during the first hour spent in that stage.
+TL	stage_h4_fft_win_valid_count	Selected sleep Stage Hour 4 - The total number of valid FFT windows during the first hour spent in that stage.
+TM	stage_h5_W_fft_win_count	Selected sleep Stage Hour 5 - The number of FFT windows in Wake during the first hour spent in that stage.
+TN	stage_h5_W_fft_win_valid_count	Selected sleep Stage Hour 5 - The number of valid FFT windows in Wake during the first hour spent in that stage.
+TO	stage_h5_N1_fft_win_count	Selected sleep Stage Hour 5 - The number of FFT windows in N1 during the first hour spent in that stage.
+TP	stage_h5_N1_fft_win_valid_count	Selected sleep Stage Hour 5 - The number of valid FFT windows in N1 during the first hour spent in that stage.
+TQ	stage_h5_N2_fft_win_count	Selected sleep Stage Hour 5 - The number of FFT windows in N2 during the first hour spent in that stage.
+TR	stage_h5_N2_fft_win_valid_count	Selected sleep Stage Hour 5 - The number of valid FFT windows in N2 during the first hour spent in that stage.
+TS	stage_h5_N3_fft_win_count	Selected sleep Stage Hour 5 - The number of FFT windows in N3 during the first hour spent in that stage.
+TT	stage_h5_N3_fft_win_valid_count	Selected sleep Stage Hour 5 - The number of valid FFT windows in N3 during the first hour spent in that stage.
+TU	stage_h5_N2N3_fft_win_count	Selected sleep Stage Hour 5 - The number of FFT windows in N2 and N3 during the first hour spent in that stage.
+TV	stage_h5_N2N3_fft_win_valid_count	Selected sleep Stage Hour 5 - The number of valid FFT windows in N2 and N3 during the first hour spent in that stage.
+TW	stage_h5_NREM_fft_win_count	Selected sleep Stage Hour 5 - The number of FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+TX	stage_h5_NREM_fft_win_valid_count	Selected sleep Stage Hour 5 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+TY	stage_h5_R_fft_win_count	Selected sleep Stage Hour 5 - The number of FFT windows in REM during the first hour spent in that stage.
+TZ	stage_h5_R_fft_win_valid_count	Selected sleep Stage Hour 5 - The number of valid FFT windows in REM during the first hour spent in that stage.
+UA	stage_h5_Unscored_fft_win_count	Selected sleep Stage Hour 5 - The number of FFT windows unscored during the first hour spent in that stage.
+UB	stage_h5_Unscored_fft_win_valid_count	Selected sleep Stage Hour 5 - The number of valid FFT windows unscored during the first hour spent in that stage.
+UC	stage_h5_fft_win_count	Selected sleep Stage Hour 5 - The total number of FFT windows during the first hour spent in that stage.
+UD	stage_h5_fft_win_valid_count	Selected sleep Stage Hour 5 - The total number of valid FFT windows during the first hour spent in that stage.
+UE	stage_h6_W_fft_win_count	Selected sleep Stage Hour 6 - The number of FFT windows in Wake during the first hour spent in that stage.
+UF	stage_h6_W_fft_win_valid_count	Selected sleep Stage Hour 6 - The number of valid FFT windows in Wake during the first hour spent in that stage.
+UG	stage_h6_N1_fft_win_count	Selected sleep Stage Hour 6 - The number of FFT windows in N1 during the first hour spent in that stage.
+UH	stage_h6_N1_fft_win_valid_count	Selected sleep Stage Hour 6 - The number of valid FFT windows in N1 during the first hour spent in that stage.
+UI	stage_h6_N2_fft_win_count	Selected sleep Stage Hour 6 - The number of FFT windows in N2 during the first hour spent in that stage.
+UJ	stage_h6_N2_fft_win_valid_count	Selected sleep Stage Hour 6 - The number of valid FFT windows in N2 during the first hour spent in that stage.
+UK	stage_h6_N3_fft_win_count	Selected sleep Stage Hour 6 - The number of FFT windows in N3 during the first hour spent in that stage.
+UL	stage_h6_N3_fft_win_valid_count	Selected sleep Stage Hour 6 - The number of valid FFT windows in N3 during the first hour spent in that stage.
+UM	stage_h6_N2N3_fft_win_count	Selected sleep Stage Hour 6 - The number of FFT windows in N2 and N3 during the first hour spent in that stage.
+UN	stage_h6_N2N3_fft_win_valid_count	Selected sleep Stage Hour 6 - The number of valid FFT windows in N2 and N3 during the first hour spent in that stage.
+UO	stage_h6_NREM_fft_win_count	Selected sleep Stage Hour 6 - The number of FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+UP	stage_h6_NREM_fft_win_valid_count	Selected sleep Stage Hour 6 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+UQ	stage_h6_R_fft_win_count	Selected sleep Stage Hour 6 - The number of FFT windows in REM during the first hour spent in that stage.
+UR	stage_h6_R_fft_win_valid_count	Selected sleep Stage Hour 6 - The number of valid FFT windows in REM during the first hour spent in that stage.
+US	stage_h6_Unscored_fft_win_count	Selected sleep Stage Hour 6 - The number of FFT windows unscored during the first hour spent in that stage.
+UT	stage_h6_Unscored_fft_win_valid_count	Selected sleep Stage Hour 6 - The number of valid FFT windows unscored during the first hour spent in that stage.
+UU	stage_h6_fft_win_count	Selected sleep Stage Hour 6 - The total number of FFT windows during the first hour spent in that stage.
+UV	stage_h6_fft_win_valid_count	Selected sleep Stage Hour 6 - The total number of valid FFT windows during the first hour spent in that stage.
+UW	stage_h7_W_fft_win_count	Selected sleep Stage Hour 7 - The number of FFT windows in Wake during the first hour spent in that stage.
+UX	stage_h7_W_fft_win_valid_count	Selected sleep Stage Hour 7 - The number of valid FFT windows in Wake during the first hour spent in that stage.
+UY	stage_h7_N1_fft_win_count	Selected sleep Stage Hour 7 - The number of FFT windows in N1 during the first hour spent in that stage.
+UZ	stage_h7_N1_fft_win_valid_count	Selected sleep Stage Hour 7 - The number of valid FFT windows in N1 during the first hour spent in that stage.
+VA	stage_h7_N2_fft_win_count	Selected sleep Stage Hour 7 - The number of FFT windows in N2 during the first hour spent in that stage.
+VB	stage_h7_N2_fft_win_valid_count	Selected sleep Stage Hour 7 - The number of valid FFT windows in N2 during the first hour spent in that stage.
+VC	stage_h7_N3_fft_win_count	Selected sleep Stage Hour 7 - The number of FFT windows in N3 during the first hour spent in that stage.
+VD	stage_h7_N3_fft_win_valid_count	Selected sleep Stage Hour 7 - The number of valid FFT windows in N3 during the first hour spent in that stage.
+VE	stage_h7_N2N3_fft_win_count	Selected sleep Stage Hour 7 - The number of FFT windows in N2 and N3 during the first hour spent in that stage.
+VF	stage_h7_N2N3_fft_win_valid_count	Selected sleep Stage Hour 7 - The number of valid FFT windows in N2 and N3 during the first hour spent in that stage.
+VG	stage_h7_NREM_fft_win_count	Selected sleep Stage Hour 7 - The number of FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+VH	stage_h7_NREM_fft_win_valid_count	Selected sleep Stage Hour 7 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+VI	stage_h7_R_fft_win_count	Selected sleep Stage Hour 7 - The number of FFT windows in REM during the first hour spent in that stage.
+VJ	stage_h7_R_fft_win_valid_count	Selected sleep Stage Hour 7 - The number of valid FFT windows in REM during the first hour spent in that stage.
+VK	stage_h7_Unscored_fft_win_count	Selected sleep Stage Hour 7 - The number of FFT windows unscored during the first hour spent in that stage.
+VL	stage_h7_Unscored_fft_win_valid_count	Selected sleep Stage Hour 7 - The number of valid FFT windows unscored during the first hour spent in that stage.
+VM	stage_h7_fft_win_count	Selected sleep Stage Hour 7 - The total number of FFT windows during the first hour spent in that stage.
+VN	stage_h7_fft_win_valid_count	Selected sleep Stage Hour 7 - The total number of valid FFT windows during the first hour spent in that stage.
+VO	stage_h8_W_fft_win_count	Selected sleep Stage Hour 8 - The number of FFT windows in Wake during the first hour spent in that stage.
+VP	stage_h8_W_fft_win_valid_count	Selected sleep Stage Hour 8 - The number of valid FFT windows in Wake during the first hour spent in that stage.
+VQ	stage_h8_N1_fft_win_count	Selected sleep Stage Hour 8 - The number of FFT windows in N1 during the first hour spent in that stage.
+VR	stage_h8_N1_fft_win_valid_count	Selected sleep Stage Hour 8 - The number of valid FFT windows in N1 during the first hour spent in that stage.
+VS	stage_h8_N2_fft_win_count	Selected sleep Stage Hour 8 - The number of FFT windows in N2 during the first hour spent in that stage.
+VT	stage_h8_N2_fft_win_valid_count	Selected sleep Stage Hour 8 - The number of valid FFT windows in N2 during the first hour spent in that stage.
+VU	stage_h8_N3_fft_win_count	Selected sleep Stage Hour 8 - The number of FFT windows in N3 during the first hour spent in that stage.
+VV	stage_h8_N3_fft_win_valid_count	Selected sleep Stage Hour 8 - The number of valid FFT windows in N3 during the first hour spent in that stage.
+VW	stage_h8_N2N3_fft_win_count	Selected sleep Stage Hour 8 - The number of FFT windows in N2 and N3 during the first hour spent in that stage.
+VX	stage_h8_N2N3_fft_win_valid_count	Selected sleep Stage Hour 8 - The number of valid FFT windows in N2 and N3 during the first hour spent in that stage.
+VY	stage_h8_NREM_fft_win_count	Selected sleep Stage Hour 8 - The number of FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+VZ	stage_h8_NREM_fft_win_valid_count	Selected sleep Stage Hour 8 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+WA	stage_h8_R_fft_win_count	Selected sleep Stage Hour 8 - The number of FFT windows in REM during the first hour spent in that stage.
+WB	stage_h8_R_fft_win_valid_count	Selected sleep Stage Hour 8 - The number of valid FFT windows in REM during the first hour spent in that stage.
+WC	stage_h8_Unscored_fft_win_count	Selected sleep Stage Hour 8 - The number of FFT windows unscored during the first hour spent in that stage.
+WD	stage_h8_Unscored_fft_win_valid_count	Selected sleep Stage Hour 8 - The number of valid FFT windows unscored during the first hour spent in that stage.
+WE	stage_h8_fft_win_count	Selected sleep Stage Hour 8 - The total number of FFT windows during the first hour spent in that stage.
+WF	stage_h8_fft_win_valid_count	Selected sleep Stage Hour 8 - The total number of valid FFT windows during the first hour spent in that stage.
+WG	stage_h9_W_fft_win_count	Selected sleep Stage Hour 9 - The number of FFT windows in Wake during the first hour spent in that stage.
+WH	stage_h9_W_fft_win_valid_count	Selected sleep Stage Hour 9 - The number of valid FFT windows in Wake during the first hour spent in that stage.
+WI	stage_h9_N1_fft_win_count	Selected sleep Stage Hour 9 - The number of FFT windows in N1 during the first hour spent in that stage.
+WJ	stage_h9_N1_fft_win_valid_count	Selected sleep Stage Hour 9 - The number of valid FFT windows in N1 during the first hour spent in that stage.
+WK	stage_h9_N2_fft_win_count	Selected sleep Stage Hour 9 - The number of FFT windows in N2 during the first hour spent in that stage.
+WL	stage_h9_N2_fft_win_valid_count	Selected sleep Stage Hour 9 - The number of valid FFT windows in N2 during the first hour spent in that stage.
+WM	stage_h9_N3_fft_win_count	Selected sleep Stage Hour 9 - The number of FFT windows in N3 during the first hour spent in that stage.
+WN	stage_h9_N3_fft_win_valid_count	Selected sleep Stage Hour 9 - The number of valid FFT windows in N3 during the first hour spent in that stage.
+WO	stage_h9_N2N3_fft_win_count	Selected sleep Stage Hour 9 - The number of FFT windows in N2 and N3 during the first hour spent in that stage.
+WP	stage_h9_N2N3_fft_win_valid_count	Selected sleep Stage Hour 9 - The number of valid FFT windows in N2 and N3 during the first hour spent in that stage.
+WQ	stage_h9_NREM_fft_win_count	Selected sleep Stage Hour 9 - The number of FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+WR	stage_h9_NREM_fft_win_valid_count	Selected sleep Stage Hour 9 - The number of valid FFT windows in NREM (N1, N2 and N3) during the first hour spent in that stage.
+WS	stage_h9_R_fft_win_count	Selected sleep Stage Hour 9 - The number of FFT windows in REM during the first hour spent in that stage.
+WT	stage_h9_R_fft_win_valid_count	Selected sleep Stage Hour 9 - The number of valid FFT windows in REM during the first hour spent in that stage.
+WU	stage_h9_Unscored_fft_win_count	Selected sleep Stage Hour 9 - The number of FFT windows unscored during the first hour spent in that stage.
+WV	stage_h9_Unscored_fft_win_valid_count	Selected sleep Stage Hour 9 - The number of valid FFT windows unscored during the first hour spent in that stage.
+WW	stage_h9_fft_win_count	Selected sleep Stage Hour 9 - The total number of FFT windows during the first hour spent in that stage.
+WX	stage_h9_fft_win_valid_count	Selected sleep Stage Hour 9 - The total number of valid FFT windows during the first hour spent in that stage.
+WY	stage_h1_act	Hour 1 - The spectral power (uV^2)
+WZ	stage_h1_W_act	Hour 1 - The spectral power (uV^2) in awake.
+XA	stage_h1_N1_act	Hour 1 - The spectral power (uV^2) in N1.
+XB	stage_h1_N2_act	Hour 1 - The spectral power (uV^2) in N2.
+XC	stage_h1_N3_act	Hour 1 - The spectral power (uV^2) in N3.
+XD	stage_h1_N2N3_act	Hour 1 - The spectral power (uV^2) in N2 and N3.
+XE	stage_h1_NREM_act	Hour 1 - The spectral power (uV^2) in NREM.
+XF	stage_h1_R_act	Hour 1 - The spectral power (uV^2) in rem.
+XG	stage_h1_Unscored_act	Hour 1 - The spectral power (uV^2) unscored.
+XH	stage_h2_act	Hour 2 - The spectral power (uV^2)
+XI	stage_h2_W_act	Hour 2 - The spectral power (uV^2) in awake.
+XJ	stage_h2_N1_act	Hour 2 - The spectral power (uV^2) in N1.
+XK	stage_h2_N2_act	Hour 2 - The spectral power (uV^2) in N2.
+XL	stage_h2_N3_act	Hour 2 - The spectral power (uV^2) in N3.
+XM	stage_h2_N2N3_act	Hour 2 - The spectral power (uV^2) in N2 and N3.
+XN	stage_h2_NREM_act	Hour 2 - The spectral power (uV^2) in NREM.
+XO	stage_h2_R_act	Hour 2 - The spectral power (uV^2) in rem.
+XP	stage_h2_Unscored_act	Hour 2 - The spectral power (uV^2) unscored.
+XQ	stage_h3_act	Hour 3 - The spectral power (uV^2)
+XR	stage_h3_W_act	Hour 3 - The spectral power (uV^2) in awake.
+XS	stage_h3_N1_act	Hour 3 - The spectral power (uV^2) in N1.
+XT	stage_h3_N2_act	Hour 3 - The spectral power (uV^2) in N2.
+XU	stage_h3_N3_act	Hour 3 - The spectral power (uV^2) in N3.
+XV	stage_h3_N2N3_act	Hour 3 - The spectral power (uV^2) in N2 and N3.
+XW	stage_h3_NREM_act	Hour 3 - The spectral power (uV^2) in NREM.
+XX	stage_h3_R_act	Hour 3 - The spectral power (uV^2) in rem.
+XY	stage_h3_Unscored_act	Hour 3 - The spectral power (uV^2) unscored.
+XZ	stage_h4_act	Hour 4 - The spectral power (uV^2)
+YA	stage_h4_W_act	Hour 4 - The spectral power (uV^2) in awake.
+YB	stage_h4_N1_act	Hour 4 - The spectral power (uV^2) in N1.
+YC	stage_h4_N2_act	Hour 4 - The spectral power (uV^2) in N2.
+YD	stage_h4_N3_act	Hour 4 - The spectral power (uV^2) in N3.
+YE	stage_h4_N2N3_act	Hour 4 - The spectral power (uV^2) in N2 and N3.
+YF	stage_h4_NREM_act	Hour 4 - The spectral power (uV^2) in NREM.
+YG	stage_h4_R_act	Hour 4 - The spectral power (uV^2) in rem.
+YH	stage_h4_Unscored_act	Hour 4 - The spectral power (uV^2) unscored.
+YI	stage_h5_act	Hour 5 - The spectral power (uV^2)
+YJ	stage_h5_W_act	Hour 5 - The spectral power (uV^2) in awake.
+YK	stage_h5_N1_act	Hour 5 - The spectral power (uV^2) in N1.
+YL	stage_h5_N2_act	Hour 5 - The spectral power (uV^2) in N2.
+YM	stage_h5_N3_act	Hour 5 - The spectral power (uV^2) in N3.
+YN	stage_h5_N2N3_act	Hour 5 - The spectral power (uV^2) in N2 and N3.
+YO	stage_h5_NREM_act	Hour 5 - The spectral power (uV^2) in NREM.
+YP	stage_h5_R_act	Hour 5 - The spectral power (uV^2) in rem.
+YQ	stage_h5_Unscored_act	Hour 5 - The spectral power (uV^2) unscored.
+YR	stage_h6_act	Hour 6 - The spectral power (uV^2)
+YS	stage_h6_W_act	Hour 6 - The spectral power (uV^2) in awake.
+YT	stage_h6_N1_act	Hour 6 - The spectral power (uV^2) in N1.
+YU	stage_h6_N2_act	Hour 6 - The spectral power (uV^2) in N2.
+YV	stage_h6_N3_act	Hour 6 - The spectral power (uV^2) in N3.
+YW	stage_h6_N2N3_act	Hour 6 - The spectral power (uV^2) in N2 and N3.
+YX	stage_h6_NREM_act	Hour 6 - The spectral power (uV^2) in NREM.
+YY	stage_h6_R_act	Hour 6 - The spectral power (uV^2) in rem.
+YZ	stage_h6_Unscored_act	Hour 6 - The spectral power (uV^2) unscored.
+ZA	stage_h7_act	Hour 7 - The spectral power (uV^2)
+ZB	stage_h7_W_act	Hour 7 - The spectral power (uV^2) in awake.
+ZC	stage_h7_N1_act	Hour 7 - The spectral power (uV^2) in N1.
+ZD	stage_h7_N2_act	Hour 7 - The spectral power (uV^2) in N2.
+ZE	stage_h7_N3_act	Hour 7 - The spectral power (uV^2) in N3.
+ZF	stage_h7_N2N3_act	Hour 7 - The spectral power (uV^2) in N2 and N3.
+ZG	stage_h7_NREM_act	Hour 7 - The spectral power (uV^2) in NREM.
+ZH	stage_h7_R_act	Hour 7 - The spectral power (uV^2) in rem.
+ZI	stage_h7_Unscored_act	Hour 7 - The spectral power (uV^2) unscored.
+ZJ	stage_h8_act	Hour 8 - The spectral power (uV^2)
+ZK	stage_h8_W_act	Hour 8 - The spectral power (uV^2) in awake.
+ZL	stage_h8_N1_act	Hour 8 - The spectral power (uV^2) in N1.
+ZM	stage_h8_N2_act	Hour 8 - The spectral power (uV^2) in N2.
+ZN	stage_h8_N3_act	Hour 8 - The spectral power (uV^2) in N3.
+ZO	stage_h8_N2N3_act	Hour 8 - The spectral power (uV^2) in N2 and N3.
+ZP	stage_h8_NREM_act	Hour 8 - The spectral power (uV^2) in NREM.
+ZQ	stage_h8_R_act	Hour 8 - The spectral power (uV^2) in rem.
+ZR	stage_h8_Unscored_act	Hour 8 - The spectral power (uV^2) unscored.
+ZS	stage_h9_act	Hour 9 - The spectral power (uV^2)
+ZT	stage_h9_W_act	Hour 9 - The spectral power (uV^2) in awake.
+ZU	stage_h9_N1_act	Hour 9 - The spectral power (uV^2) in N1.
+ZV	stage_h9_N2_act	Hour 9 - The spectral power (uV^2) in N2.
+ZW	stage_h9_N3_act	Hour 9 - The spectral power (uV^2) in N3.
+ZX	stage_h9_N2N3_act	Hour 9 - The spectral power (uV^2) in N2 and N3.
+ZY	stage_h9_NREM_act	Hour 9 - The spectral power (uV^2) in NREM.
+ZZ	stage_h9_R_act	Hour 9 - The spectral power (uV^2) in rem.
+AAA	stage_h9_Unscored_act	Hour 9 - The spectral power (uV^2) unscored.

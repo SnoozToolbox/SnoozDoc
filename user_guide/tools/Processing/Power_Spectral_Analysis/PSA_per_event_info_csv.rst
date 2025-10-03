@@ -12,10 +12,10 @@ The list of the variables included in the PSA report per selected events.
 
 .. note::
 
-   To download the original info.tsv file : `snooz_beta030_PSA_per_events_info.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/snooz_beta030_PSA_per_events_info.tsv>`_
+   To download the original info.tsv file : `snooz_beta_2.1.0_PSA_per_events_info.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/snooz_beta_2.1.0_PSA_per_events_info.tsv>`_
 
 .. csv-table:: PSA report per events
    :header: "Variable Label", "Variable Definition"
-   :file: snooz_beta030_PSA_per_events_info.tsv
+   :file: snooz_beta_2.1.0_PSA_per_events_info.tsv
    :delim: tab
 
