@@ -12,10 +12,10 @@ The list of the variables included in the spindle cohort report.
 
 .. note::
 
-   To download the original info.tsv file : `snooz_beta130_spindle_SUMO_cohort_info.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/snooz_beta130_spindle_SUMO_cohort_info.tsv>`_
+   To download the original info.tsv file : `snooz_beta_2_1_0_spindle_SUMO_cohort_info.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/snooz_beta_2_1_0_spindle_SUMO_cohort_info.tsv>`_
 
 .. csv-table:: Spindle SUMO cohort report
    :header: "Column", "Variable Label", "Variable Definition"
-   :file: snooz_beta130_spindle_SUMO_cohort_info.tsv
+   :file: snooz_beta_2_1_0_spindle_SUMO_cohort_info.tsv
    :delim: tab
 

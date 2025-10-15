@@ -44,6 +44,8 @@ Two additional output reports are available :
          - total (all selected stages)
          - per sleep stage
          - per sleep cycle
+         - per clock hour
+         - per hour spent in each sleep stage
 
       See :ref:`spindle_A7_cohort_info_csv` for the variable definition. 
 
