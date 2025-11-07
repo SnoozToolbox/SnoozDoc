@@ -44,10 +44,139 @@ TODO
 
 How to use a module's settings page inside a step
 -------------------------------------------------
-TODO
+When using the ``main_utils.py`` Python script with the option **3- Create a tool**, make sure to answer **N** to the prompt "Is this a custom step?"
+
+The script will then ask for a **module_id** — this corresponds to the identifier field automatically generated when the module is instantiated in the tool's process view.
+If the instance has not yet been created, you can leave this field empty and edit the JSON file later.
+
+**Example:**
+
+The tool **SleepCycleExport** from the CEAMS package includes a module's settings view at the steps ``2 - Cycle Definition``.
+The step is described in the JSON file ``SleepCycleExport.json`` as follows:
+
+.. code-block:: JSON
+
+      {
+         "name": "Cycle Definition",
+         "description": "Define your sleep cycle.",
+         "module_id": "4ae3d940-e282-414a-a1a7-c71f0a7acc98",
+         "show_index": true
+      },
+
+The **module_id** can be found in the same ``SleepCycleExport.json`` file under the module definition, as shown below:
+
+.. code-block:: JSON
+
+      },
+         "module": "CEAMSModules.SleepCyclesDelimiter",
+         "identifier": "4ae3d940-e282-414a-a1a7-c71f0a7acc98",
+         "pos_x": -204.20408163265301,
+         "pos_y": -156.0453514739229,
+         "activation_state": "activated",
+         "package": {
+            "package_name": "CEAMSModules"
+      }
+
+.. warning::
+
+   If you change the module instance in the process view (e.g., delete and recreate it), make sure to update the **module_id** in the JSON file accordingly.
+   
+.. note::
+
+   If multiple instances of the same module exist in the process view, you can distinguish them by their position or their connections.
+
+   A useful tip is to temporarily modify the value of an input field by adding a unique keyword to identify the instance more easily.
+
+
+How to add picture to a step
+======================================
+Sometimes you may want to display a static image (e.g., a diagram, logo, or illustration) directly in your tool's interface.
+To do this in Snooz, you can convert your image into Base64 format and then load it dynamically into a QLabel in your PyQt UI.
+
+**Step 1 — Convert your image to Base64**
+
+Use the following Python script to convert your image file(s) into a Base64-encoded .py file that can be safely included in your package.
+
+.. code-block:: python
+
+   import base64
+   import os
+
+   # List of images to convert
+   image_files = ['image_to_convert.png']
+
+   # Variable names for each image
+   variable_names = ['IMAGE_BASE64']
+
+   # Get script directory
+   script_dir = os.path.dirname(os.path.abspath(__file__))
+
+   # Create the output data file
+   output_file = os.path.join(script_dir, 'image_data_base64.py')
+
+   with open(output_file, 'w') as f:
+      f.write('"""\n')
+      f.write('Base64 encoded images\n')
+      f.write('"""\n\n')
+
+      for image_file, var_name in zip(image_files, variable_names):
+         try:
+               with open(os.path.join(script_dir, image_file), 'rb') as img_f:
+                  image_data = base64.b64encode(img_f.read()).decode()
+                  f.write(f'{var_name} = """\n')
+                  f.write(image_data)
+                  f.write('\n""".strip()\n\n')
+         except FileNotFoundError:
+               print(f"Warning: {image_file} not found in {script_dir}")
+               f.write(f'{var_name} = ""\n\n')
+
+   print(f"Created {output_file}")
+
+After running this script, a new file named ``image_data_base64.py`` will be created in the same folder.
+It will contain one variable (e.g., ``IMAGE_BASE64``) storing your image data.
+
+**Step 2 — Add a QLabel to your UI**
+
+In Qt Designer, place a QLabel in your form where you want the image to appear.
+Rename it clearly (for example: ``label_illustration``).
+
+.. note::
+   Make sure the label has an appropriate size policy (e.g., Fixed or Preferred) and optionally set scaledContents to True if you want the image to resize with the label.
+
+**Step 3 — Display the image in your code**
+
+In your Python class that manages the UI, import the Base64 variable and set the image on the QLabel as follows:
+
+.. code-block:: python
+
+   import base64
+   from qtpy.QtGui import QPixmap
+   from .image_data_base64 import IMAGE_BASE64
+
+   image_bytes = base64.b64decode(IMAGE_BASE64)
+   pixmap = QPixmap()
+   pixmap.loadFromData(image_bytes)
+   self.label_illustration.setPixmap(pixmap)
+
+**Example:**
+
+The **SleepBouts** tool from the CEAMS package includes an image on its introduction page.
+The file ``sleep_bouts.png`` is converted to Base64 and stored in ``art_image_data.py``.
+The file ``IntroStep.py`` then loads the image and sets it on the QLabel as follows:
+
+.. code-block:: python
+
+    def _load_embedded_image(self):
+        """Load the embedded base64 image data into label_5."""
+        from .art_image_data import SLEEP_BOUTS_IMAGE_BASE64
+        image_bytes = base64.b64decode(SLEEP_BOUTS_IMAGE_BASE64)
+        pixmap = QPixmap()
+        pixmap.loadFromData(image_bytes)
+        self.label_5.setPixmap(pixmap)
+
 
 How to add a resource to a step
--------------------------------
+======================================
 TODO
 
 How to Share Information Between Steps
