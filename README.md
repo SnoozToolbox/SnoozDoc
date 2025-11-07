@@ -47,12 +47,13 @@ Ensure the `.readthedocs.yaml` is present and correctly configured for remote bu
 
 ### ✅ Add a versioned release to the documentation
 
-1. Tag the commit in the `main` branch.
+1. Create a new branch.
 2. Visit: [ReadTheDocs Project](https://app.readthedocs.org/projects/snooz-toolbox-documentation/)
-3. Click **+ Add version** and select your tag.
+3. Click **+ Add version** and select your branch. (You need to be connected.)
 4. Then go to:  
    [Version Settings](https://app.readthedocs.org/dashboard/snooz-toolbox-documentation/edit/)  
    Set **Default version** to the one you want displayed to visitors.
+
 
 ---
 
@@ -101,3 +102,19 @@ $ sphinx-build -b html . html
 ```
 
 > This will generate an `html/` folder (locally only — it's ignored by git).
+
+## 👩‍💻 3. Instructions for a Snooz release
+
+### ✅ Add a versioned release to the documentation
+
+1. Create a new branch for the release if it does not already exist.
+2. Go to the [ReadTheDocs Project](https://app.readthedocs.org/projects/snooz-toolbox-documentation/)
+3. Click **+ Add version**, then select the newly created branch for the release (make sure you are logged in).
+4. Navigate to the:  
+   [Version Settings](https://app.readthedocs.org/dashboard/snooz-toolbox-documentation/edit/)  
+   Set **Default version** to the branch you want displayed to visitors.
+
+### ✅ Update the configuration file (conf.py)
+
+1. Update the "release" variable to match the current branch, e.g. 'beta-2.0.0'
+2. Update "version" variable accordingly, e.g. 'beta-2.0.0'
