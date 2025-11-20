@@ -8,8 +8,8 @@ The Preprocessing category includes importers, converters, extractors, and the a
 
 .. toctree::
     DominoScreen_Converter
-    XML_Converter
     EDFbrowser_Converter
+    XML_Converter
     Artifact_Detection
     Annotations_Editor
     Extract_Annotations

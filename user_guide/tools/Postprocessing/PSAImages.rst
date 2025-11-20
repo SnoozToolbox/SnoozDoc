@@ -48,7 +48,7 @@ Steps
 
 
 Example of the Generated Images
------------------------------
+---------------------------------
 
 .. image:: ./PSA_Images/Picture_Cohort.png
    :width: 500

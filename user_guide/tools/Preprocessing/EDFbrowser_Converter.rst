@@ -1,8 +1,8 @@
 .. _EDFbrowser_Converter:
 
-======================
-Convert EDFbrowser
-======================
+===========================================
+Convert Annotations from EDFbrowser
+===========================================
 
 Description
 -----------------
@@ -43,7 +43,7 @@ Edit the annotation group as you wish.  The default group is EDFbrowser.
     
     Enjoy the push button "Apply to all files" to convert files in batch.
 
-    Look at the "EDFbrowser Converter" home page and the step pages for more information.
+    Look at the "Convert Annotations from EDFbrowser" home page and the step pages for more information.
      
 .. warning::
 

@@ -1,7 +1,7 @@
 .. _DetectREMsYASA:
 
 ===============================
-Detect REMs YASA
+Detect REM events with YASA
 ===============================
 
 Description
@@ -38,9 +38,19 @@ Input
 -----
 PSG files including header and events are needed (all saved in the same directory).
 
- - European Data Format (EDF) : .edf and .tsv files with the exact same filename.
- - Stellate : .sig and .sts files with the exact same filename.
- - NATUS :  the whole NATUS subject folder
+- **European Data Format (EDF)** : 
+  
+  The corresponding .tsv file is required. Both files must be saved in the same directory and share the exact same filename.
+
+- **Stellate format (up to version 6.2)** : 
+  
+  The corresponding .sig file is required with the .sts. Both files must be saved in the same directory and share the exact same filename.
+
+- **NATUS format (version 9.1)** : 
+  
+  (*CEAMS users only*) The entire NATUS subject folder is required.
+
+For more details on accepted formats, see :ref:`accepted_format`.
 
 The annotations files have to include the sleep staging.
 

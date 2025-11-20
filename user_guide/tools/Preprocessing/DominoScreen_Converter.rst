@@ -1,8 +1,8 @@
 .. _DominoScreen_Converter:
 
-============================
-Convert DOMINO
-============================
+==============================================
+Convert Annotations from DOMINOScreen
+==============================================
 
 Description
 -----------------
@@ -106,4 +106,4 @@ Unsupported format
 
 .. note::
 
-    Look at the "Input Folders" step of the "DOMINOScreen Converter" tool to know how to organize the files in order to convert them to the Snooz accessory .tsv file.
+    Look at the "Input Folders" step of the "Convert Annotations from DOMINOScreen" tool to know how to organize the files in order to convert them to the Snooz accessory .tsv file.

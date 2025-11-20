@@ -1,13 +1,13 @@
 .. _Artifact_Detection:
 
-===================
-Detect Artifact
-===================
+=====================
+Detect EEG Artifacts
+=====================
 
 Description
 -----------------
 
-This tool detects artifacts from PSG files.
+This tool detects artifacts on EEG channels from PSG files.
 
 **Types of artifacts**
 
@@ -17,7 +17,7 @@ Different types of artifacts are targeted.
 * High Frequency burst : Segments with a burst of high frequency power (>25 Hz).
 * Persistent Noise : Segments with high frequency noise (>25 Hz).
 * Power Line Contamination : Segments corrupted by 50 or 60 Hz power.
-* Baseline Variation (Breathing, Sweat) : Segments with high power in the low frequency band (<0.4 Hz).
+* Baseline Variation (Breathing) : Segments with high power in the low frequency band (<0.4 Hz).
 * Muscle artifact : Segments with burst of activity in the frequency band 20.25-32 Hz.
 
 Artifact detection performs better when similar sleep stages are selected, as the power distribution can be modeled more accurately.
@@ -39,17 +39,48 @@ Steps
 
 **1 - Input Files**
 
-Start by opening your PSG files (.edf, .eeg or .sts). 
+Start by opening your PSG files (.edf, .sts or .eeg). 
 
-- The .tsv file is also needed for the EDF format. 
+- **European Data Format (EDF)** : 
+  
+  The corresponding .tsv file is required. Both files must be saved in the same directory and share the exact same filename.
 
-- The .sig file is also needed for Stellate format. 
+- **Stellate format (up to version 6.2)** : 
+  
+  The corresponding .sig file is required. Both files must be saved in the same directory and share the exact same filename.
 
-- The whole NATUS subject folder is also needed for the .eeg format.
+- **NATUS format (version 9.1)** : 
+  
+  (*CEAMS users only*) The entire NATUS subject folder is required.
+
+For more details on accepted formats, see :ref:`accepted_format`.
 
 **2 - Filter the EEG signals**
 
-The user must define the bandwidth of the bandpass filter and can optionally add a power line notch filter. 
+The user must define the bandwidth of the bandpass filter and can optionally add a power-line notch filter.
+
+Filters are applied to the EEG signals prior to running the detectors to focus on the relevant frequency bands for artifact detection. 
+The original signals stored in the PSG files remain unchanged; only the filtered signals are used internally by the detectors.
+
+The filter is a Butterworth design implemented in second-order-section (SOS) form and applied using bidirectional zero-phase filtering. 
+This approach preserves the requested magnitude response while eliminating phase distortion.
+
+**Bandpass filter parameters:**
+
+- Type : IIR bandpass
+- Family : Butterworth
+- Order : 6 (internally halved before the forward/backward pass)
+- Form : second-order sections (SOS)
+- Application : bidirectional zero-phase filtering (filtfilt)
+
+**Notch filter parameters:**
+
+- Type : IIR stopband
+- Family : Butterworth
+- Order : 20 (internally halved before the forward/backward pass)
+- Form : second-order sections (SOS)
+- Application : bidirectional zero-phase filtering (filtfilt)
+
 
 **3 - Detectors Settings**
 

@@ -1,44 +1,39 @@
 .. _tools:
 
-======
-Tools
-======
+==================
+Tools and Apps
+==================
 
-This section describes how to use tools within Snooz.
+This section describes how to use tools or apps available in Snooz.
 
-Launch tools from the menu
-=============================
+Launch tools or apps from the menu
+==========================================
 
-The tools installed within Snooz are divided into three categories. Each category has direct access from the menu bar of Snooz.
+The tools and apps installed in Snooz are organized into three categories, each accessible directly from the Snooz menu bar:
 
-1. **Preprocessing**: Includes importers/converters/extractors and the artifact detection tool.
-2. **Processing**: Includes sleep stages analyses, event detectors, and power spectral analysis.
-3. **Postprocessing**: Includes secondary analyses such as performance evaluation of detectors, transposition of cohort reports, and slow wave events analysis.
+1. **Preprocessing**: Includes importers, converters, extractors, inspectors, and the artifact detector.
+2. **Processing**: Includes sleep reports, event detectors, and EEG spectral power analysis.
+3. **Postprocessing**: Includes secondary analyses such as performance evaluation of detected events, review of cohort reports, and tools for visualizing results.
 
 A new user
 -----------
 
-If you are new to Snooz, we recommend beginning with the Preprocessing category.  
-The Preprocessing category includes importers, converters, extractors, and the artifact detection tool.
-The main goal of the user is to create a cohort compatible with Snooz, see :ref:`accepted_format` for more details.
+If you are new to Snooz, we recommend beginning with the Preprocessing category.
+This category includes importers, converters, extractors, inspectors, and the artifact detection tool.
+The main goal at this stage is to prepare a cohort that is fully compatible with Snooz. See :ref:`accepted_format` for more details.
 
-Ready for the analysis  
+Ready for analysis
 -----------------------
 
-Once your PSG files are compatible with Snooz, proceed to the Processing category.  
-The Processing category includes sleep analyses, event detectors, and power spectral analysis.
+Once your PSG files are compatible with Snooz, proceed to the Processing category.
+This category includes sleep reports, event detectors, and EEG spectral power analysis.
 
 Cohort analysis  
 ----------------
 
-The Postprocessing category includes secondary analyses, such as performance evaluation of detectors,
-transposition of cohort reports, and slow wave events analysis.
+The Postprocessing category includes secondary analyses, such as performance evaluation of detected events,
+table transposition and review of cohort reports, and tools for visualizing the results.
 
-Viewer
--------
-
-The only available Viewer is the Oximeter, which allows you to select bad sections to generate a valid Oxygen Saturation Report.
-The Oximeter is an application that operates within Snooz.  (See :ref:`apps` for more details.)
 
 .. _accepted_format:
 
@@ -51,10 +46,12 @@ See :ref:`EDF_Annotations_Importer` for more details.
 
 .. note::
 
-   **CEAMS users have access to two additional PSG file formats:**
+   **CEAMS * : users have access to two additional PSG file formats:** 
 
    - **Harmonie (up to version 6.2)**: The signal recording file is a .SIG file, while the accessory file for sleep staging and annotations is a .STS file.
    - **NATUS (version 9.1)**: The entire recording folder is required. This folder typically includes files such as .eeg, .ent, .epo, among others.
+  
+  .. [*] CÉAMS - Centre d'études avancées en médecine du sommeil (`ceams-carsm <https://ceams-carsm.ca/en/>`_)
 
 Annotations file format
 ==========================================================
@@ -136,10 +133,10 @@ Sleep staging is included in the annotation file. Snooz expects sleep staging an
    To download a sample accessory file containing only sleep stages : `snooz_sleep_stages.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/snooz_sleep_stages.tsv>`_
 
 
-Navigate in the step-by-step interface
+Navigate the step-by-step tool interface
 ==========================================================
 
-Here is an example of an empty tool to show you around.
+Below is an example of an empty tool to guide you through the interface.
 
 .. image:: ./ToolA_example_edited_small.png
    :width: 700
