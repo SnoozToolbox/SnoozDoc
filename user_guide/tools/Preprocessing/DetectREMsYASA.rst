@@ -36,7 +36,7 @@ The example of the REMs events in two EOG channels left and right are shown in *
 
 Input
 -----
-PSG files including header and events are needed (all saved in the same directory).
+PSG files including header and events are needed.
 
 - **European Data Format (EDF)** : 
   

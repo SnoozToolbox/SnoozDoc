@@ -43,11 +43,11 @@ Start by opening your PSG files (.edf, .sts or .eeg).
 
 - **European Data Format (EDF)** : 
   
-  The corresponding .tsv file is required. Both files must be saved in the same directory and share the exact same filename.
+  The corresponding .tsv file is required with .edf. Both files must be saved in the same directory and share the exact same filename.
 
 - **Stellate format (up to version 6.2)** : 
   
-  The corresponding .sig file is required. Both files must be saved in the same directory and share the exact same filename.
+  The corresponding .sig file is required with the .sts. Both files must be saved in the same directory and share the exact same filename.
 
 - **NATUS format (version 9.1)** : 
   

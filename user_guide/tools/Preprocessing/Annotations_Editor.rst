@@ -1,8 +1,8 @@
 .. _Annotations_Editor: 
 
-===================
-Edit Annotations
-===================
+========================
+Edit Snooz Annotations
+========================
 
 Description
 -----------------
@@ -19,13 +19,22 @@ Steps
 
 **1 - Input Files**
 
-Start by opening your PSG files (.edf, .eeg or .sts). 
+PSG files including header and events are needed. Start by opening your PSG files (.edf, .sts or .eeg). 
 
-- The .tsv file is also needed for the EDF format. 
+- **European Data Format (EDF)** : 
+  
+  The corresponding .tsv file is required with the .edf. Both files must be saved in the same directory and share the exact same filename.
 
-- The .sig file is also needed for Stellate format. 
+- **Stellate format (up to version 6.2)** : 
+  
+  The corresponding .sig file is required with the .sts. Both files must be saved in the same directory and share the exact same filename.
 
-- The whole NATUS subject folder is also needed for the .eeg format.
+- **NATUS format (version 9.1)** : 
+  
+  (*CEAMS users only*) The entire NATUS subject folder is required.
+
+For more details on accepted formats, see :ref:`accepted_format`.
+
 
 **2 - Remove or edit annotations**
 
