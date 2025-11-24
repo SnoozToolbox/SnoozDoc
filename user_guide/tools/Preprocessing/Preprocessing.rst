@@ -4,12 +4,14 @@
 Preprocessing
 ==============
 
-The Preprocessing category includes importers, converters, extractors, and the artifact detection tool.
+The Preprocessing category includes importers, converters, extractors, inspectors and the artifact detection tool.
 
 .. toctree::
     :maxdepth: 1
     :caption: Contents:
     
+    EEGInspector
+    Oximeter
     DominoScreen_Converter
     EDFbrowser_Converter
     XML_Converter

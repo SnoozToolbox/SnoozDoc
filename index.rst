@@ -13,7 +13,7 @@ Want to install and use Snooz? Follow this guide!
 
 * Follow this guide to get you started using Snooz: :doc:`user_guide/getting_started`
 * Follow this guide to manage the Snooz packages: :doc:`user_guide/manage_package`
-* For information about a specific tool, see here: :doc:`user_guide/tools/tools`
+* For information about a specific tool or app, see here: :doc:`user_guide/tools/tools`
 
 .. toctree::
    :maxdepth: 3
@@ -23,7 +23,6 @@ Want to install and use Snooz? Follow this guide!
    user_guide/getting_started
    user_guide/manage_package
    user_guide/tools/tools
-   user_guide/apps/apps
    user_guide/EDFbrowser_compatibility
    
 Developer's Guide

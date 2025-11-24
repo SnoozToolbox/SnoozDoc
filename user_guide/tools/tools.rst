@@ -40,18 +40,24 @@ table transposition and review of cohort reports, and tools for visualizing the 
 Polysomnography file format
 ==========================================================
 
-The only accepted format for polysomnography is the European Data Format (EDF). For more details, see `European Data Format <https://www.edfplus.info/specs/edf.html>`_.
-Snooz can also read signals from the EDF+ format; however, annotations must be imported from the EDF+ file into a .tsv (Tab-Separated Value) format compatible with Snooz.
-See :ref:`EDF_Annotations_Importer` for more details.
+European Data Format (EDF)
+----------------------------------------------------------
+| The primary accepted polysomnography format in Snooz is the European Data Format (EDF).
+| For more details, see `European Data Format <https://www.edfplus.info/specs/edf.html>`_.
+
+| Snooz can also read signals from EDF+. However, annotations must first be imported from the EDF+ file into a .tsv (Tab-Separated Value) file compatible with Snooz.
+| See :ref:`EDF_Annotations_Importer` for more details.
+
+Additional PSG formats 
+----------------------------------------------------------
+| **Harmonie / Stellate (.SIG/.STS, up to version 6.2)**
+| Available to all users.  The reader includes no proprietary code. The .SIG signal file and the .STS annotation file must share the same filename and be stored in the same directory.
+
+| **NATUS (version 9.1) — Restricted to CÉAMS users only**
+| The reader includes proprietary code and cannot be distributed publicly. The entire subject folder is required (typically including .eeg, .ent, .epo, etc.).
 
 .. note::
-
-   **CEAMS * : users have access to two additional PSG file formats:** 
-
-   - **Harmonie (up to version 6.2)**: The signal recording file is a .SIG file, while the accessory file for sleep staging and annotations is a .STS file.
-   - **NATUS (version 9.1)**: The entire recording folder is required. This folder typically includes files such as .eeg, .ent, .epo, among others.
-  
-  .. [*] CÉAMS - Centre d'études avancées en médecine du sommeil (`ceams-carsm <https://ceams-carsm.ca/en/>`_)
+    CÉAMS - Centre d'études avancées en médecine du sommeil (`ceams-carsm <https://ceams-carsm.ca/en/>`_)
 
 Annotations file format
 ==========================================================
@@ -170,8 +176,8 @@ Below is an example of an empty tool to guide you through the interface.
       The user will be informed if a required setting for the run has not been defined by the user.
 
 
-Load workspace
-=============================
+Load a Workspace for a Specific Tool
+=======================================
 
 A workspace can correspond to a tool with some or all of its settings predefined for a specific analysis—including recordings and channel selections.
 
@@ -211,7 +217,7 @@ Two files will be exported:
 - **Snooz-Chan-log-{current date}.txt** : A text file logging the selected channels for each recording.
 - **Snooz-Files-{current date}.txt** : A text file used by Snooz to import a predefined list of files along with their corresponding channels.
 
-Tools Categories
+Tool and App Categories
 =============================
 
 .. toctree::

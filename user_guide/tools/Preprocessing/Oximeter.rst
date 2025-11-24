@@ -1,8 +1,8 @@
 .. _Oximeter: 
 
-===================
-Oximeter
-===================
+==========================
+Inspect Oximeter channel 
+==========================
 
 Description
 -----------------
@@ -13,11 +13,9 @@ The invalid sections marked are saved as annotations in the accessory file.
 
 **Open a PSG file**
 
-| There are two mays to open a PSG for the Oximeter Viewer.
-| The user can open a PSG file by navigating to the Snnoz menu :
+To open the Oximeter inspector:
 
-1. "File" -> "Open", and select the Oximeter app.
-2. "Manual Review" -> "Oximeter", and click on "Open File" in the left panel of the Oximeter Viewer.
+Navigate to the Snooz menu **"Preprocessing" → "Inspect EEG channels"**, and click on "Open File" in the left panel of the Viewer.
 
 Select the "Montage" and the label to identify the "Oximeter channel".
 

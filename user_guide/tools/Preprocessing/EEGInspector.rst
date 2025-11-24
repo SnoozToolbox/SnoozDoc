@@ -1,14 +1,14 @@
 .. _EEGInspector: 
 
-===================
-EEGInspector
-===================
+=======================
+Inspect EEG channels
+=======================
 
 Description
 -----------------
 
-**EEGInspector** is an interactive app for visually inspecting EEG data and creating artifact annotations for further analysis in Snooz.  
-With EEGInspector, you can easily mark non-brain channels, bad channels, and noisy epochs to generate reliable annotations for preprocessing.
+**EEG Inspector** is an interactive app for visually inspecting EEG data and creating artifact annotations for further analysis in Snooz.  
+With the EEG Inspector, you can easily mark non-brain channels, bad channels, and noisy epochs to generate reliable annotations for preprocessing.
 
 The tool works in several simple steps:
 
@@ -23,25 +23,25 @@ Here is the overview of the steps taken to prepare annotations for a sample data
 
 .. image:: ./snooz_beta-2.1.0__EEGInspector_overview_Step1.png
    :width: 800
-   :alt: EEGInspector Step 1 - Open File
+   :alt: EEG Inspector Step 1 - Open File
 
-**Step 1** – Open the EEGInspector app and select a montage, then select non-brain channels (e.g., ECG, EOG) for exclusion.
+**Step 1** – Open the EEG Inspector app and select a montage, then select non-brain channels (e.g., ECG, EOG) for exclusion.
 
 .. image:: ./snooz_beta-2.1.0__EEGInspector_overview_Step2.png
    :width: 800
-   :alt: EEGInspector Step 2 - Mark Bad Channels
+   :alt: EEG Inspector Step 2 - Mark Bad Channels
 
 **Step 2** – Visually inspect the EEG and mark fully artifact channels.
 
 .. image:: ./snooz_beta-2.1.0__EEGInspector_overview_Step3.png
    :width: 800
-   :alt: EEGInspector Step 3 - Mark Noisy Epochs
+   :alt: EEG Inspector Step 3 - Mark Noisy Epochs
 
 **Step 3** – Segment the data into epochs and mark noisy ones.
 
 .. image:: ./snooz_beta-2.1.0__EEGInspector_overview_Step4.png
    :width: 800
-   :alt: EEGInspector Step 4 - Check the PSD of cleaned signal.
+   :alt: EEG Inspector Step 4 - Check the PSD of cleaned signal.
 
 **Step 4** – Check the PSD of cleaned signal and save the annotations properly.
 
@@ -49,9 +49,9 @@ Here is the overview of the steps taken to prepare annotations for a sample data
 Open your EEG file
 -----------------------
 
-To open EEGInspector in Snooz:
+To open the EEG Inspector in Snooz:
 
-* Navigate to **"Manual Review" → "EEGInspector"**.
+* Navigate to **"Preprocessing" → "Inspect EEG channels"**.
 
 Then, use the **Browse** button to select your EEG file.
 
@@ -61,7 +61,7 @@ Then, use the **Browse** button to select your EEG file.
 Select non-brain channels
 -----------------------------
 
-EEGInspector may automatically suggest some common non-brain channels.
+The app may automatically suggest some common non-brain channels.
 
 * If the suggested selection is not correct, you can **uncheck** any channels or **check** the correct ones manually.
 * Mark channels such as EOG, EMG, ECG, or other sensors that should be excluded.
@@ -75,7 +75,7 @@ Wait for the data to load.
 
 .. warning::
 
-   EEGInspector currently supports only **continuous EEG signals**.  
+   The EEG Inspector currently supports only **continuous EEG signals**.  
    If your signal is discontinuous, you will see an error.  
    Support for discontinuous signals will be added in a future release.
 
@@ -117,7 +117,7 @@ Click **Next** when finished.
 Review the PSD
 -------------------
 
-In the final step, EEGInspector shows the **Power Spectral Density (PSD)** of the cleaned data.
+In the final step, the app shows the **Power Spectral Density (PSD)** of the cleaned data.
 
 * Check the PSD to confirm that your signal is clean.
 
@@ -131,7 +131,8 @@ Save annotations
 
 Press **Save File** — a dialog will confirm that the annotations were saved.
 
-Annotations are saved as:
+Annotations are saved as: 
+
 * `group`: `art_inspector`
 * `name`: `non_brain`, `art_channel` or `art_epoch`
 * `start_sec`: start time in seconds
@@ -139,10 +140,6 @@ Annotations are saved as:
 * `channels`: list of affected channels
 
 Your EEG data is now ready for reliable further processing in Snooz.
-
-
-
-
 
 
 
