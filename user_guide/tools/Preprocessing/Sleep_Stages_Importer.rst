@@ -1,8 +1,8 @@
 .. _Sleep_Stages_Importer:
 
-==============================
-Import Sleep Stages Vector
-==============================
+===============================
+Import Sleep Stage Text Vector
+===============================
 
 Description
 -----------------

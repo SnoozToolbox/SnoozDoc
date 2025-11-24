@@ -1,7 +1,7 @@
 .. _YASA_Automatic_Sleep_Scoring:
 
 ===============================
-YASA Automatic Sleep Scoring
+Score Sleep Stages with YASA 
 ===============================
 
 Description
@@ -63,7 +63,9 @@ Steps
    - If validating the automatic scoring, provide the following accessory files in the same folder as the PSG file:
       - For EDF format: A .tsv file is required.
       - For Stellate format: A .sig file is required.
-      - For NATUS format: The entire subject folder is required.
+      - (*CEAMS users only*) For NATUS format: The entire subject folder is required.
+
+   For more details on accepted formats, see :ref:`accepted_format`.
    
   **Automatic Scoring Mode:**
    - No accessory files are needed.
