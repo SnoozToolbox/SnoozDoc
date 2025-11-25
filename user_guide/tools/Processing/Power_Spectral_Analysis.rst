@@ -7,9 +7,9 @@ Analyze EEG Spectral Power
 Description
 -----------------
 
-The PSA is an algorithm designed to assess the intensity of a time-domain signal across various frequency bands.
+The tool assess the intensity (or power) of a time-domain signal across various frequency bands.
 
-The PSA can be performed on chosen annotations (see :ref:`PSA_per_event_info_csv` for the variable definition) or can be carried out for each sleep stage (see :ref:`PSA_per_stage_info_csv` for the variable definition). 
+The analysis can be performed on chosen annotations (see :ref:`PSA_per_event_info_csv` for the variable definition) or can be carried out for each sleep stage (see :ref:`PSA_per_stage_info_csv` for the variable definition). 
 
 .. note::
 
@@ -22,11 +22,13 @@ The PSA can be performed on chosen annotations (see :ref:`PSA_per_event_info_csv
 Steps
 -----------------
 
-**Common settings**
-    Define the sleep cycles criteria for your study. 
+| **Common settings** 
+| Define the sleep cycles criteria for your study. 
+| For more information, see :ref:`Sleep_Cycles_definition`.
 
 **1 - Input Files**
-    Start by opening your PSG files (.edf, .sts or .eeg). 
+
+Start by opening your PSG files (.edf, .sts or .eeg). 
 
 - **European Data Format (EDF)** : 
   
@@ -43,25 +45,47 @@ Steps
 For more details on accepted formats, see :ref:`accepted_format`.
 
 **2 - Events to exclude**
-    Select events to exclude from the PSA (i.e. artefacts previously detected and saved in the accessory file).
+    Select events to exclude from the analysis (i.e. artefacts previously detected and saved in the accessory file).
 
 **3 - Filtering**
-    Define the appropriate filtering to match your research analyses.
+    The user must define the bandwidth of the bandpass filter and can optionally add a power-line notch filter.
+
+    Filters are applied to the signals prior to running the tool. 
+    The original signals stored in the PSG files remain unchanged.
+
+    The filter is a Butterworth design implemented in second-order-section (SOS) form and applied using bidirectional zero-phase filtering. 
+    This approach preserves the requested magnitude response while eliminating phase distortion.
+
+    **Bandpass filter parameters:**
+
+    - Type : IIR bandpass
+    - Family : Butterworth
+    - Order : 6 (internally halved before the forward/backward pass)
+    - Form : second-order sections (SOS)
+    - Application : bidirectional zero-phase filtering (filtfilt)
+
+    **Notch filter parameters:**
+
+    - Type : IIR stopband
+    - Family : Butterworth
+    - Order : 20 (internally halved before the forward/backward pass)
+    - Form : second-order sections (SOS)
+    - Application : bidirectional zero-phase filtering (filtfilt)
 
 **4 - Section selection**
-    Specify the segment of the signal on which you intend to perform the PSA.
-        - The PSA can be performed on chosen annotations.
-        - The PSA can be carried out for each sleep stage. You must specify the stages to be incorporated into the PSA.
+    Specify the segment of the signal on which you intend to perform the analysis:
+        - on chosen annotations
+        - for each sleep stage selected by the user
     Additionally, you have the following options:
-        1. Run the PSA exclusively on the signal within the sleep cycles.
-        2. Run the PSA on the signal within the sleep cycles while excluding NREM periods.
-        3. Run the PSA on the signal within the sleep cycles while excluding REM periods.
+        1. Run the analysis exclusively on the signal within the sleep cycles.
+        2. Run the analysis on the signal within the sleep cycles while excluding NREM periods.
+        3. Run the analysis on the signal within the sleep cycles while excluding REM periods.
 
 **5 - Annotations Selection**
-    If the PSA is performed on chosen annotations, select them.
+    If the analysis is performed on chosen annotations, select them.
 
 **6 - Spectral Settings**
-    The PSA is performed through many short windows in order to estimate the spectral power.  
+    The analysis is performed through many short windows in order to estimate the spectral power.  
     The procedure is called Short Time Fourier Transform (STFT).
     Define the window length (s) used to perform each FFT (Fast Fourier Transform) and at which window steps (s) each FFT is performed.
     
@@ -78,22 +102,23 @@ For more details on accepted formats, see :ref:`accepted_format`.
     Define also the first and last frequency to analyze (the maximum is half the sampling frequency (Hz) of the channels to analyze).
 
 **7 - Output File**
-    If the PSA is performed per sleep stage :  
+    If the analysis is performed per sleep stage :  
 
         Define how to average the spectral power across the recording.
 
             - Choose "Total" to generate the average through the whole recording.
-            - Choose "Distribution per hour" to generate the average for each elapsed hour (clock hour) from hour 1 to 12. The starting point is the sleep onset.
-            - Choose "Distribution per hour spent in each sleep stage" to generate the average for each stage hour from hour 1 to 12. The starting point is the sleep onset.
-            - Choose "Distribution per sleep cycle" to generate the average per sleep cycle, from sleep cycle 1 to 6.  The starting point is the sleep onset.
+            - Choose "Distribution per hour" to generate the average for each elapsed clock hour from hour 1 to 9.
+            - Choose "Distribution per hour spent in each sleep stage" to generate the average for each stage hour from hour 1 to 9.
+            - Choose "Distribution per sleep cycle" to generate the average per sleep cycle, from sleep cycle 1 to 6.
+        
+        The maximum number of hours or sleep cycles are defined in the configuration page "Hours and Cycles".
+        The starting point is either the first sleep stage or the sleep onset, depending on the settings in "step 4 - Section Selection".
  
     The output file is a .tsv (tab separated values) file. Each line is specific to a subject, a channel and a frequency band. 
 
-
 .. warning::
     
-    The PSA data is added (appended) to the output file, the output file will be modified each time the PSA tool is run.
-
+    The output data is added (appended) to the output file, the output file will be modified each time the tool is run.
 
 Report
 ---------
