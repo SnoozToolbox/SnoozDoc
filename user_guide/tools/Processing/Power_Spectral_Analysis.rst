@@ -1,7 +1,7 @@
 .. _Power_Spectral_Analysis:
 
 ===============================
-Power Spectral Analysis (PSA)
+Analyze EEG Spectral Power
 ===============================
 
 Description
@@ -13,7 +13,7 @@ The PSA can be performed on chosen annotations (see :ref:`PSA_per_event_info_csv
 
 .. note::
 
-    For the report per sleep stages, you must specify the stages to be incorporated into the PSA, but there is also the possibility to run the PSA on "unscored" data.
+    For the report per sleep stages, you must specify the stages to be incorporated into the analysis, but there is also the possibility to run the tool on "unscored" data.
 
 .. warning::
 
@@ -26,13 +26,21 @@ Steps
     Define the sleep cycles criteria for your study. 
 
 **1 - Input Files**
-    Start by opening your PSG files (.edf, .eeg or .sts).
+    Start by opening your PSG files (.edf, .sts or .eeg). 
 
-    * The .tsv file is also needed for the EDF format.
+- **European Data Format (EDF)** : 
+  
+  The corresponding .tsv file is required with .edf. Both files must be saved in the same directory and share the exact same filename.
 
-    * The .sig file is also needed for Stellate format.
+- **Stellate format (up to version 6.2)** : 
+  
+  The corresponding .sig file is required with the .sts. Both files must be saved in the same directory and share the exact same filename.
 
-    * The whole NATUS subject folder is also needed for the .eeg format.
+- **NATUS format (version 9.1)** : 
+  
+  (*CEAMS users only*) The entire NATUS subject folder is required.
+
+For more details on accepted formats, see :ref:`accepted_format`.
 
 **2 - Events to exclude**
     Select events to exclude from the PSA (i.e. artefacts previously detected and saved in the accessory file).

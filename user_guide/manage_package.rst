@@ -14,7 +14,7 @@ A package can contain four different types of items:
 
 3. **Tools** : Tools are an abstraction layer over a process that provides a user-friendly step-by-step interface. (See :ref:`tools` for more information.)
 
-4. **Apps** : An app is an application that operates within Snooz. (See :ref:`apps` for more information.)
+4. **Apps** : An app is an application that operates within Snooz. (See :ref:`tools` for more information.)
 
 .. note::
 

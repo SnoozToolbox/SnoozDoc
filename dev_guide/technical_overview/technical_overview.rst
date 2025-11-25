@@ -29,7 +29,7 @@ This flexibility is made possible by the concept of Modules, Process, Tools and 
 
 3. **Tools** : Tools are an abstraction layer over a process that provides a user-friendly step-by-step interface. (See :ref:`tools` for more information.)
 
-4. **Apps** : An app is an application that operates within Snooz. (See :ref:`apps` for more information.)
+4. **Apps** : An app is an application that operates within Snooz. (See :ref:`tools` for more information.)
 
 To have more information about the architecture, see :ref:`information`.
 

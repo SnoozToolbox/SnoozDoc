@@ -11,9 +11,11 @@ User's Guide
 ------------
 Want to install and use Snooz? Follow this guide!
 
-* Follow this guide to get you started using Snooz: :doc:`user_guide/getting_started`
-* Follow this guide to manage the Snooz packages: :doc:`user_guide/manage_package`
-* For information about a specific tool or app, see here: :doc:`user_guide/tools/tools`
+* To get started with Snooz: :doc:`user_guide/getting_started`
+* To manage Snooz packages: :doc:`user_guide/manage_package`
+* For details on required data formats: :doc:`user_guide/accepted_format`
+* For information about a specific tool or app: :doc:`user_guide/tools/tools`
+* For details on EDFbrowser compatibility when using it as a polysomnography viewer with Snooz: :doc:`user_guide/EDFbrowser_compatibility`
 
 .. toctree::
    :maxdepth: 3
@@ -22,6 +24,7 @@ Want to install and use Snooz? Follow this guide!
 
    user_guide/getting_started
    user_guide/manage_package
+   user_guide/accepted_format
    user_guide/tools/tools
    user_guide/EDFbrowser_compatibility
    
