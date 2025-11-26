@@ -5,12 +5,15 @@ Postprocessing
 ================
 
 .. toctree::
-    Compare_PSG_events
-    Detections_Cohort_Review
-    PSA_Cohort_Review
-    PSAImages
+    :maxdepth: 1
+    :caption: Contents:
+    
     Slow_wave_classifier
+    Compare_PSG_events
+    PSA_Cohort_Review
+    Detections_Cohort_Review
     Slow_Wave_Images_Generator
+    PSAImages
     
     
 

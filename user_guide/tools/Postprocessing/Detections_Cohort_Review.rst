@@ -1,11 +1,8 @@
 .. _Detections_Cohort_Review:
 
-===============================
-Detections Cohort Review
-===============================
-
-Description
------------------
+==================================
+Review Detections for the Cohort 
+==================================
 
 A tool to explore, clean (such as removing bad channels or renaming channels), and transpose the 'Detailed Events Cohort Report' to have one subject per row.
 
@@ -46,12 +43,12 @@ Check the reports you want to generate:
    * the report cleaned (with edited channels)
    * the report transposed
 
-If you want to export the transposed report, define how to average the events characteristics across the recording.
+To export the transposed report, define how to average the events characteristics across the recording by selecting :
 
-   * Select "Total" to output the average through the whole recording.
-   * Select "Distribution per clock hour" to output the average for each real clock hour.
-   * Select "Distribution per hour spent in each sleep stage" to output the average for each stage hour.
-   * Select "Distribution per sleep cycle" to output the average per sleep cycle, from sleep cycle 1 to 9.  The start point is the sleep onset.
+    * **Total** to output the average through the whole recording.
+    * **Distribution per clock hour** to output the average per real clock hour, from hour 1 to 9. 
+    * **Distribution per hour spent in each sleep stage** to output the average per stage when it reaches an hour, from hour 1 to 9. 
+    * **Distribution per sleep cycle** to output the average per sleep cycle, from sleep cycle 1 to 6. 
 
 Define the filename to save the exported files (the sufix _clean or _transposed will be added to the filename)
 The output file is a .tsv (tab separated values) file. 

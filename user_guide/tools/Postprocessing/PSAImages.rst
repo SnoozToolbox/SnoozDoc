@@ -1,22 +1,19 @@
 .. _PSAImages:
 
 =================================================
-PSA Images
+Visualize EEG Spectral Power
 =================================================
 
-Description
------------------
-
-This tool allows to generate images of power spectral analysis (PSA) of signals, channels, and region of interestes (ROIs).
-Besides, the user can generate images based on the prefered sleep stages, hour, cycle, and the total duration of the sleep.
+This tool allows you to visualize the EEG spectral power for specific signals, channels and region of interestes (ROIs).
+Besides, the user can generate images based on the prefered sleep stages, hour, cycle, or the total duration of the sleep.
 
 Steps
 -----------------
 
 **1 - Input Files :**
 
-	- Add your PSA report file (.tsv), which is generated from the PSA tool.
-	- Select the channels in the "Subject Channel List" or "Cohort Channel List".
+	- Add your EEG spectral power report (.tsv), which is generated from the :ref:`Power_Spectral_Analysis`.
+	- Select the channels in the **Subject Channel List** or **Cohort Channel List**.
 
 	- ROIs :
 	    - Add ROIs and select them. 
@@ -25,8 +22,7 @@ Steps
 
 .. NOTE::
 
-     To modify the channel names displayed on the plot, we recommend first using the "PSA Cohort Review" tool.
-     Customize the names in the generated report, then use that report in this tool for visualization purposes.
+     To modify the channel names displayed on the plot, we recommend first using the :ref:`PSA_Cohort_Review` tool. Once the channel names are customized, use the generated clean report as input to this tool for visualization.
 
 
 **2 - Group Definition :**

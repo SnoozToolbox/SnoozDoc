@@ -1,11 +1,8 @@
 .. _Compare_PSG_events:
 
 ===============================
-Compare events from a PSG file
+Evaluate Detected Events
 ===============================
-
-Description
------------------
 
 A tool to compare two sets of events, such as detections versus expert annotations, to evaluate the performance of a detector. 
 This tool can also be used to evaluate the concordance between the scoring of two experts.
@@ -53,13 +50,21 @@ Steps
 
 **1 - Input Files**
 
-Start by opening your PSG files (.edf, .eeg or .sts).
+Start by opening your PSG files (.edf, .sts or .eeg). 
 
-* The .tsv file is also needed for the EDF format.
+- **European Data Format (EDF)** : 
+  
+  The corresponding .tsv file is required with .edf. Both files must be saved in the same directory and share the exact same filename.
 
-* The .sig file is also needed for Stellate format.
+- **Stellate format (up to version 6.2)** : 
+  
+  The corresponding .sig file is required with the .sts. Both files must be saved in the same directory and share the exact same filename.
 
-* The whole NATUS subject folder is also needed for the .eeg format.
+- **NATUS format (version 9.1)** : 
+  
+  (*CEAMS users only*) The entire NATUS subject folder is required.
+
+For more details on accepted formats, see :ref:`accepted_format`.
 
 **2 - Expert Annotation**
 	

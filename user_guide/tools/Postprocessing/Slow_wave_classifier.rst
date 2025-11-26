@@ -1,11 +1,8 @@
 .. _Slow_wave_classifier:
 
 =================================================
-Slow Wave Classifier
+Classify Slow Waves
 =================================================
-
-Description
------------------
 
 This tool classifies slow waves into categories based on their transition frequency.
 
