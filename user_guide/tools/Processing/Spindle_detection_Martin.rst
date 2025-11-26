@@ -1,11 +1,8 @@
 .. _Spindle_detection_Martin:
 
 ===============================
-Spindle Detection (Martin)
+Detect Spindles with Martin
 ===============================
-
-Description
------------------
 
 A spindle is "a train of distinct waves with frequency 11–16 Hz (most commonly 12–14 Hz) with a duration ≥0.5 s, usually maximal in amplitude using central derivations" [1]
 
@@ -54,42 +51,54 @@ Two additional output reports are available :
 Steps
 -----------------
 
+| **Common settings** 
+| Define the sleep cycles criteria for your study. 
+| For more information, see :ref:`Sleep_Cycles_definition`.
+
 **1 - Input Files**
 
-   Start by opening your PSG files (.edf, .eeg or .sts).
+Start by opening your PSG files (.edf, .sts or .eeg). 
 
-   * The .tsv file is also needed for the EDF format.
+- **European Data Format (EDF)** : 
+  
+  The corresponding .tsv file is required with .edf. Both files must be saved in the same directory and share the exact same filename.
 
-   * The .sig file is also needed for Stellate format.
+- **Stellate format (up to version 6.2)** : 
+  
+  The corresponding .sig file is required with the .sts. Both files must be saved in the same directory and share the exact same filename.
 
-   * The whole NATUS subject folder is also needed for the .eeg format.
+- **NATUS format (version 9.1)** : 
+  
+  (*CEAMS users only*) The entire NATUS subject folder is required.
+
+For more details on accepted formats, see :ref:`accepted_format`.
 
 **2 - Non valid events**
 
-   Select events to disable the spindle detection.
+Select events to disable the spindle detection.
 
-   .. warning::
-      
-      Artefacts must be previously detected and saved in the accessory file.
+.. warning::
+   
+   Artefacts must be previously detected and saved in the accessory file.
 
-**3 - Spindle Detector**
+**3 - Detection Settings**
 
-   Define the minimum and maximum duration of kept spindles.  
-   Define in which sleep stage you want to detect spindles.  
-   You can also choose to detect spindle in the sleep cycles only or to exclude sleep periods from the analysis.
+| The user must define the following parameters:
+|  **Spindle Duration**: Define the minimum and maximum duration of retained spindles.  
+|  **Sleep Stage**: Choose the sleep stage(s) in which to detect spindles.
+|  **Sleep Cycle**: Optionally detect spindles only within sleep cycles.
+|  **REM Period**: Optionally exclude REM periods from the analysis.
 
 **4 - Output Files**
 
-   Select which reports to generate.
-
+Select which reports to generate.
 
 Report
 -----------------
 
-   .. toctree::
-      Spindle_detector_Martin/spindle_Martin_cohort_info_csv
+.. toctree::
+   Spindle_detector_Martin/spindle_Martin_cohort_info_csv
       
-
 References
 -----------------
 

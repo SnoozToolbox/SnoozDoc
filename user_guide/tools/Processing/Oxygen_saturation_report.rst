@@ -1,11 +1,8 @@
 .. _Oxygen_saturation_report:
 
 =========================
-Oxygen Saturation Report
+Report Oxygen Saturation
 =========================
-
-Description
------------------
 
 A tool to analyze the oxygen saturation, detect oxygen desaturations and export :ref:`Oxygen_saturation_report_csv`.
 Sleep staging is essential because oxygen saturation is particularly relevant during sleep.
@@ -21,16 +18,27 @@ Sleep staging is essential because oxygen saturation is particularly relevant du
 Steps
 -----------------
 
+| **Common settings** 
+| Define the sleep cycles criteria for your study. 
+| For more information, see :ref:`Sleep_Cycles_definition`.
+
 **1 - Input Files**
 
-Start by opening your PSG files (.edf, .eeg or .sts).
+Start by opening your PSG files (.edf, .sts or .eeg). 
 
-* The .tsv file is also needed for the EDF format.
+- **European Data Format (EDF)** : 
+  
+  The corresponding .tsv file is required with .edf. Both files must be saved in the same directory and share the exact same filename.
 
-* The .sig file is also needed for Stellate format.
+- **Stellate format (up to version 6.2)** : 
+  
+  The corresponding .sig file is required with the .sts. Both files must be saved in the same directory and share the exact same filename.
 
-* The whole NATUS subject folder is also needed for the .eeg format.
+- **NATUS format (version 9.1)** : 
+  
+  (*CEAMS users only*) The entire NATUS subject folder is required.
 
+For more details on accepted formats, see :ref:`accepted_format`.
 
 **2 - Invalid sections**
 

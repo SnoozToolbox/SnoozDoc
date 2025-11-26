@@ -4,9 +4,6 @@
 Analyze EEG Spectral Power
 ===============================
 
-Description
------------------
-
 The tool assess the intensity (or power) of a time-domain signal across various frequency bands.
 
 The analysis can be performed on chosen annotations (see :ref:`PSA_per_event_info_csv` for the variable definition) or can be carried out for each sleep stage (see :ref:`PSA_per_stage_info_csv` for the variable definition). 

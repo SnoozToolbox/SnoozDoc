@@ -4,9 +4,6 @@
 Inspect Oximeter channel 
 ==========================
 
-Description
------------------
-
 This viewer allows you to mark invalid sections on the oximeter channel in order 
 to generate a valid :ref:`Oxygen_saturation_report_csv` via the tool :ref:`Oxygen_saturation_report`. 
 The invalid sections marked are saved as annotations in the accessory file.

@@ -4,9 +4,6 @@
 Edit Snooz Annotations
 ========================
 
-Description
------------------
-
 This tool allows you to delete or edit annotations in batches. Useful for making annotations across a cohort more concise. 
 
 .. warning::

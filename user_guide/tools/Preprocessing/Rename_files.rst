@@ -4,9 +4,6 @@
 Rename files
 ===================
 
-Description
------------------
-
 Rename a list of files based on user-defined renaming rules.  A common use case is renaming accessory files to ensure they match the corresponding PSG recording.
 
 .. note::

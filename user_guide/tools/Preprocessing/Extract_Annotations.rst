@@ -4,9 +4,6 @@
 Extract Snooz Annotations 
 ==========================
 
-Description
------------------
-
 To extract (selected) annotations from EDF(.tsv), Stellate(.sts) or (for CEAMS users) Natus(.ent) and write them in a Snooz .tsv file.
 
 .. warning::

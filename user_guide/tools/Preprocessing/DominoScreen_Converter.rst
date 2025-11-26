@@ -4,9 +4,6 @@
 Convert Annotations from DOMINOScreen
 ==============================================
 
-Description
------------------
-
 To convert the DOMINO ASCII accessory files (without sleep stages) to the Snooz accessory .tsv file.
 
 Supported Formats

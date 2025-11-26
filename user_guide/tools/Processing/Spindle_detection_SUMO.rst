@@ -1,19 +1,16 @@
 .. _Spindle_detection_SUMO:
 
 ===============================
-Spindle Detection (SUMO)
+Detect Spindles with SUMO
 ===============================
 
-Description
------------------
-
-A spindle is "a train of distinct waves with frequency 11–16 Hz (most commonly 12–14 Hz) with a duration ≥0.5 s, usually maximal in amplitude using central derivations" [1]
+A spindle is "a train of distinct waves with frequency 11-16 Hz (most commonly 12-14 Hz) with a duration ≥0.5 s, usually maximal in amplitude using central derivations" [1]
 
 .. This tool allows for the detection of spindles in specific sleep stages using the algorithms from (Kaulen et al. 2022) [2].
 
-This tool enables the automated detection of sleep spindles in specific sleep stages using SUMO (Slim U-Net trained on MODA), a deep learning model inspired by the U-Net architecture (Kaulen et al. 2022) [2]. 
-SUMO is designed to approximate expert consensus annotations derived from the Massive Online Data Annotation (MODA) project, which aggregates scores from multiple human experts to enhance reliability. Unlike traditional feature-based spindle detection methods, SUMO leverages deep convolutional networks to process minimally preprocessed EEG signals, achieving a higher level of agreement with expert consensus than previous algorithms, such as A7. 
-The model has been shown to surpass expert-level accuracy, particularly in challenging cases, such as older individuals whose spindle characteristics are more difficult to detect. By automating the spindle identification process with superior precision, SUMO facilitates large-scale spindle studies while reducing the impact of intra- and inter-rater variability observed in manual scoring.
+This tool detects sleep spindles in specific sleep stages using SUMO (Slim U-Net trained on MODA), a deep learning model inspired by the U-Net architecture (Kaulen et al. 2022) [2]. 
+SUMO leverages deep convolutional networks to process minimally preprocessed EEG signals, achieving a higher level of agreement with expert consensus.
+By automating the spindle identification process with superior precision, SUMO facilitates large-scale spindle studies while reducing the impact of intra- and inter-rater variability observed in manual scoring.
 
 The spindle events detected are added into the accessory file (.tsv, .STS or .ent).
 
@@ -56,40 +53,53 @@ Two additional output reports are available :
 Steps
 -----------------
 
+| **Common settings** 
+| Define the sleep cycles criteria for your study. 
+| For more information, see :ref:`Sleep_Cycles_definition`.
+
 **1 - Input Files**
 
-   Start by opening your PSG files (.edf, .eeg or .sts).
+Start by opening your PSG files (.edf, .sts or .eeg). 
 
-   * The .tsv file is also needed for the EDF format.
+- **European Data Format (EDF)** : 
+  
+  The corresponding .tsv file is required with .edf. Both files must be saved in the same directory and share the exact same filename.
 
-   * The .sig file is also needed for Stellate format.
+- **Stellate format (up to version 6.2)** : 
+  
+  The corresponding .sig file is required with the .sts. Both files must be saved in the same directory and share the exact same filename.
 
-   * The whole NATUS subject folder is also needed for the .eeg format.
+- **NATUS format (version 9.1)** : 
+  
+  (*CEAMS users only*) The entire NATUS subject folder is required.
+
+For more details on accepted formats, see :ref:`accepted_format`.
 
 **2 - Non valid events**
 
-   Select events to disable the spindle detection.
+Select events to disable the spindle detection.
 
-   .. note::
+.. note::
 
-      If artefacts have not already been identified and saved in the accessory file, it is recommended to use the :ref:`Artifact_Detection` tool in the *Preprocessing* module before running SUMO for better detection accuracy.  
+   If artefacts have not already been identified and saved in the accessory file, it is recommended to use the :ref:`Artifact_Detection` tool in the *Preprocessing* module before running SUMO for better detection accuracy.  
 
-**3 - Spindle Detector**
+**3 - Detection Settings**
 
-   Define the minimum and maximum duration of kept spindles.  
-   Define in which sleep stage you want to detect spindles.  
-   You can also choose to detect spindle in the sleep cycles only or to exclude sleep periods from the analysis.
+| The user must define the following parameters:
+|  **Spindle Duration**: Define the minimum and maximum duration of retained spindles.  
+|  **Sleep Stage**: Choose the sleep stage(s) in which to detect spindles.
+|  **Sleep Cycle**: Optionally detect spindles only within sleep cycles.
+|  **REM Period**: Optionally exclude REM periods from the analysis.
 
 **4 - Output Files**
 
    Select which reports to generate.
 
-
 Report
 -----------------
 
-   .. toctree::
-      Spindle_detector_SUMO/spindle_SUMO_cohort_info_csv
+.. toctree::
+   Spindle_detector_SUMO/spindle_SUMO_cohort_info_csv
       
 
 References

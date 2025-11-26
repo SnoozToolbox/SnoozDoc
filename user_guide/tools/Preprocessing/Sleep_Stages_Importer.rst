@@ -4,9 +4,6 @@
 Import Sleep Stage Text Vector
 ===============================
 
-Description
------------------
-
 Tool to import sleep stages from a text file (.csv, .tsv, .txt) into the accessory .tsv file for Snooz.
 
 .. warning::

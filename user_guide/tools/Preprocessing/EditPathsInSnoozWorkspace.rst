@@ -4,9 +4,6 @@
 Edit Paths in Snooz Workspace
 ===============================
 
-Description
------------
-
 This tool helps you update the internal paths in your Snooz workspaces (JSON files) to ensure compatibility across different systems.
 
 

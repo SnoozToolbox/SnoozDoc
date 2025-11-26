@@ -4,9 +4,6 @@
 Import Annotations from Text 
 ==============================
 
-Description
------------------
-
 Tool to import annotations from a text file (.csv, .tsv, .txt) into the accessory .tsv file used by Snooz.
 
 Steps

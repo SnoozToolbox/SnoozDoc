@@ -4,9 +4,6 @@
 Convert Annotations from EDFbrowser
 ===========================================
 
-Description
------------------
-
 This tool converts EDFbrowser .txt annotation files to Snooz .tsv annotation files. 
 In Snooz, annotations are grouped, a feature that does not exist in EDFbrowser. 
 This tool allows you to add annotations to the 'stage' and 'art_snooz' groups.

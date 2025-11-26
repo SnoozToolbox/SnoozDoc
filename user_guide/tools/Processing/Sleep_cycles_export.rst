@@ -1,7 +1,7 @@
 .. _Sleep_cycles_export:
 
 ===============================
-Sleep cycles
+Report Sleep cycles
 ===============================
 
 This tool computes and report the sleep cycles. 

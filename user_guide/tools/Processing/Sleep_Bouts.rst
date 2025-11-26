@@ -1,47 +1,43 @@
 .. _Sleep_Bouts:
 
 ===============================
-Sleep Bouts
+Report Sleep Bouts
 ===============================
 
-Description
------------------
+This tool reports statistics about Sleep bouts from Polysomnography (PSG) files.
 
-This tool detects and reports continuous periods of sleep stages. 
-
-This tool detects three **types** of sleep bouts:
+Sleep bouts are defined as continuous periods of three sleep stage combinations : 
 
    1. Continuous period of N2 and N3 stages
    2. Continuous period of N2, N3 and REM stages
-   3. Continuous period of REM stage
+   3. Continuous period of REM stage alone
 
 Steps
 -----------------
 
+| **Common settings** 
+| Define the sleep cycles criteria for your study. 
+| For more information, see :ref:`Sleep_Cycles_definition`.
+
 **1 - Input Files**
 
-Start by opening your PSG files (.edf, .eeg or .sts).
+Start by opening your PSG files (.edf, .sts or .eeg). 
 
-* The .tsv file is also needed for the EDF format.
+- **European Data Format (EDF)** : 
+  
+  The corresponding .tsv file is required with .edf. Both files must be saved in the same directory and share the exact same filename.
 
-* The .sig file is also needed for Stellate format.
+- **Stellate format (up to version 6.2)** : 
+  
+  The corresponding .sig file is required with the .sts. Both files must be saved in the same directory and share the exact same filename.
 
-* The whole NATUS subject folder is also needed for the .eeg format.
+- **NATUS format (version 9.1)** : 
+  
+  (*CEAMS users only*) The entire NATUS subject folder is required.
+
+For more details on accepted formats, see :ref:`accepted_format`.
 
 **2 - Output Files**
     
-The output is a CSV (Comma separated Values) file. 
-A new row is added for every file analyzed. 
-
-The columns of the file are as follows:
-
-* The name of the PSG file
-  
-* The ten longest sleep bouts of type 1
-  
-* The mean value of all sleep bouts of type 1
-  
-* The standard deviation value of all sleep bouts of type 1
-
-Repeat for type 2 and 3.
-
+The output is a TSV (Tab Separated Values) file containing one row per recording, including the ten longest sleep bouts, 
+as well as the mean and standard deviation of both the ten longest and all sleep bouts for each combination listed above.

@@ -4,9 +4,6 @@
 Inspect EEG channels
 =======================
 
-Description
------------------
-
 **EEG Inspector** is an interactive app for visually inspecting EEG data and creating artifact annotations for further analysis in Snooz.  
 With the EEG Inspector, you can easily mark non-brain channels, bad channels, and noisy epochs to generate reliable annotations for preprocessing.
 

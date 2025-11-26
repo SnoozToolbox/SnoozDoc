@@ -4,9 +4,6 @@
 Detect Slow Waves
 ===============================
 
-Description
------------------
-
 This tool detects slow waves, on specific sleep stages, with the algorithms inspired from (Bouchard et al. 2021) [1]
 
 The detection criteria are editable, but below are the default ones, along with a schematic of a typical slow wave signal to help the user understand the slow wave characteristics included in the output report. 

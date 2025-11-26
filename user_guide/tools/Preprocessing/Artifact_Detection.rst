@@ -4,9 +4,6 @@
 Detect EEG Artifacts
 =====================
 
-Description
------------------
-
 This tool detects artifacts on EEG channels from PSG files.
 
 **Types of artifacts**

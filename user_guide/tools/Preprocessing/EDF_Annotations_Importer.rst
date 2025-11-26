@@ -4,9 +4,6 @@
 Import Annotations from EDF+ 
 =============================
 
-Description
------------------
-
 This tool allows you to import annotations from an EDF+ file (from the signal EDF Annotations) and write them into the Snooz accessory .tsv file.
 
 The PSG signals file is mandatory to determine the start time of the recording, which can differ from the start time of the annotations file. Snooz adjusts the start time of the annotations to match the start time of the PSG signals file. 
