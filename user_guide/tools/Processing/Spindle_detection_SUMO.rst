@@ -50,6 +50,22 @@ Two additional output reports are available :
 
       See :ref:`spindle_SUMO_cohort_info_csv` for the variable definition. 
 
+Filtering Information
+---------------------------
+
+Before spindle detection, the EEG signal is band-pass filtered to 0.3-30 Hz (10th order, but halved before the forward/backward pass) and downsampled to 100 Hz as preprocessing steps.
+The filter is a Butterworth designs implemented in second-order sections (SOS) and applied with bidirectional zero-phase filtering.
+This approach preserves the desired magnitude response while eliminating phase distortion.
+
+**Bandpass filter parameters:**
+
+- Type: IIR bandpass
+- Family: Butterworth
+- Frequency band: 0.3-30 Hz
+- Order: 10 (internally halved before the forward/backward pass)
+- Form: second-order sections (SOS)
+- Application: bidirectional zero-phase filtering (filtfilt)
+
 Steps
 -----------------
 

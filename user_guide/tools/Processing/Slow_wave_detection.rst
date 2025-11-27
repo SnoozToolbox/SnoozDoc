@@ -64,6 +64,21 @@ Three additional output reports are available :
    
    The Three outputs are needed for the slow wave classifier.
 
+Filter Information
+--------------------
+
+The filter used in the Slow Wave detector is a Butterworth design implemented in second-order-section (SOS) form and applied using bidirectional zero-phase filtering. 
+This approach preserves the requested magnitude response while eliminating phase distortion.
+
+**Bandpass filter parameters:**
+
+- Type: IIR bandpass
+- Family: Butterworth
+- Frequency band: 0.16 Hz to 4 Hz
+- Order: 30 (internally halved before the forward/backward pass)
+- Form: second-order sections (SOS)
+- Application: bidirectional zero-phase filtering (filtfilt)
+
 
 Steps
 -----------------

@@ -4,7 +4,7 @@
 Detect Spindles with Martin
 ===============================
 
-A spindle is "a train of distinct waves with frequency 11–16 Hz (most commonly 12–14 Hz) with a duration ≥0.5 s, usually maximal in amplitude using central derivations" [1]
+A spindle is "a train of distinct waves with frequency 11-16 Hz (most commonly 12-14 Hz) with a duration ≥0.5 s, usually maximal in amplitude using central derivations" [1]
 
 This tool allows for the detection of spindles in specific sleep stages using the algorithms from Martin et al. (2013) [2].
 
@@ -47,6 +47,23 @@ Two additional output reports are available :
          - per hour spent in each sleep stage
 
       See :ref:`spindle_Martin_cohort_info_csv` for the variable definition. 
+
+Filtering Information
+---------------------------
+
+During feature extraction, the EEG signal is band-pass filtered in the sigma band (11.1-14.9 Hz; 30th order).
+The filter is a Butterworth design implemented in second-order sections (SOS) and applied using bidirectional zero-phase filtering.
+This approach preserves the desired magnitude response while eliminating phase distortion.
+
+**Bandpass filter parameters:**
+
+- Type: IIR bandpass
+- Family: Butterworth
+- Frequency band: 11.1-14.9 Hz
+- Order: 30 (internally halved before the forward and backward passes)
+- Form: second-order sections (SOS)
+- Application: bidirectional zero-phase filtering (filtfilt)
+
 
 Steps
 -----------------
@@ -104,5 +121,5 @@ References
 
    [1] Iber, C., American Academy of Sleep Medicine, 2007. The AASM Manual for the Scoring of Sleep and Associated Events: Rules, Terminology and Technical Specifications. American Academy of Sleep Medicine. 
 
-   [2] N. Martin et al., “Topography of age-related changes in sleep spindles,” Neurobiol. Aging, vol. 34, no. 2, pp. 468–476, Feb. 2013, doi: 10.1016/j.neurobiolaging.2012.05.020. 
+   [2] N. Martin et al., “Topography of age-related changes in sleep spindles,” Neurobiol. Aging, vol. 34, no. 2, pp. 468-476, Feb. 2013, doi: 10.1016/j.neurobiolaging.2012.05.020. 
 
