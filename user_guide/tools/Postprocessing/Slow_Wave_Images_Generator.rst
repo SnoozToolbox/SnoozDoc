@@ -73,12 +73,44 @@ Select the channel or ROI you are interested in. You can choose to analyze eithe
 
 **6 - Output Files**
 
-Define the parameters for generating the images. 
-Images can be generated at either the subject level or the cohort level, or both. 
-You have the option to generate individual pictures for each channel/ROI or combine them into a single picture. 
+Define the parameters for generating the images.
 
-If the :ref:`Slow_wave_classifier` tool has been run on the data, slow wave categories can be distinguished in the pictures.
+Images can be generated at the subject level, the cohort level, or both. 
 
-Specify desired display options, such as plotting the mean slow wave signal curve and setting axis limits. (For more options look at the "Colors" settings page in the left panel).
-Select the output folder to save the images.
+**Subject level:**
+
+You can generate individual images for each channel/ROI to examine the set of slow-wave events, or combine all channels/ROIs into a single image showing the averaged slow-wave curve.
+
+Below are two examples: the first image shows all slow-wave events detected for one channel, and the second image shows the averaged slow-wave curve with its standard deviation for that same channel.
+
+.. image:: ./Slow_Wave_images/Snooz_beta210_SW_SUBJECT_ALL_35.png
+   :width: 340
+   :alt: All slow-wave events detected for one channel.    
+
+.. image:: ./Slow_Wave_images/Snooz_beta210_SW_SUBJECT_AVG-STD_35.png
+   :width: 340
+   :alt: Averaged slow-wave curve with STD for one channel.
+
+**Cohort level:**
+
+Start by selecting a display option—for example, plotting the mean with or without the standard deviation (STD), or plotting all subjects within each group.
+You can generate a single image for the entire cohort, where curves are averaged across all selected channels/ROIs, or generate one image per channel/ROI.
+
+Below are two examples: the first image shows the averaged slow-wave curve with standard deviation across all subjects in each group, and the second image shows the individual averaged curves for each subject within each group.
+
+.. image:: ./Slow_Wave_images/Snooz_beta210_SW_COHORT_AVG_35.png
+   :width: 340
+   :alt: Alternative text    
+
+.. image:: ./Slow_Wave_images/Snooz_beta210_SW_COHORT_ALL_50.png
+   :width: 345
+   :alt: Alternative text  
+
+If the :ref:`Slow_wave_classifier` tool has been run on the data, slow-wave categories can be visualized in the images.
+
+Specify axis options, such as setting axis limits or displaying negative values upward.
+
+For additional customization, refer to the Colors and Slow Wave Alignment settings in the left panel.
+
+Finally, select the output folder where the images will be saved.
 

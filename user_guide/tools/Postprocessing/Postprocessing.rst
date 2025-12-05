@@ -12,9 +12,6 @@ Postprocessing
     Compare_PSG_events
     PSA_Cohort_Review
     Detections_Cohort_Review
-    Slow_Wave_Images_Generator
     PSAImages
+    Slow_Wave_Images_Generator
     
-    
-
-
