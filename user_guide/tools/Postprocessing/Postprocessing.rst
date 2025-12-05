@@ -12,6 +12,6 @@ Postprocessing
     Compare_PSG_events
     PSA_Cohort_Review
     Detections_Cohort_Review
-    PSAImages
+    Visualize_EEG_Spectral_Power
     Slow_Wave_Images_Generator
     
