@@ -151,3 +151,10 @@ References
 [2] Vinck, M., Oostenveld, R., van Wingerden, M., Battaglia, F., & Pennartz, C. M. (2011). An improved index of phase-synchronization for electrophysiological data in the presence of volume-conduction, noise and sample-size bias. NeuroImage, 55(4), 1548–1565. https://doi.org/10.1016/j.neuroimage.2011.01.055
 
 [3] Duclos, C., Maschke, C., Mahdid, Y., Nadin, D., Rokos, A., Arbour, C., Badawy, M., Létourneau, J., Owen, A. M., Plourde, G., & Blain-Moraes, S. (2023). Brain responses to propofol in advance of recovery from coma and disorders of consciousness: A preliminary study. American Journal of Respiratory and Critical Care Medicine, 207(5), 602–613. https://doi.org/10.1164/rccm.202105-1223OC
+
+
+Version History
+-----------------
+
+* v2.0.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0
+    - Initial release of the tool.

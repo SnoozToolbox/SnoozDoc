@@ -71,3 +71,4 @@ Version History
     - Initial release of the tool.
 
 * v2.1.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0 
+    - Clarify the number of SW categories by using radio button in the UI.

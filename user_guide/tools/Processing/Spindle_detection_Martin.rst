@@ -131,4 +131,7 @@ Version History
     - Initial release of the tool.
 
 * v2.4.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0
+    - Refactored the output report to distinguish between elapsed clock time and sleep-stage time. 
+    - Added new variables representing the combined N2 + N3 stages.
+    - Events are discarded during non-specific channel artifacts.
 

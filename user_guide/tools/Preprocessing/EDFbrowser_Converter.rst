@@ -55,5 +55,7 @@ Edit the annotation group as you wish.  The default group is EDFbrowser.
 Version History
 -----------------
 
-* v2.0.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1 (and later)
+* v2.0.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
     - Initial release of the tool.
+* v2.1.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0
+    - Supports the new optional time elapsed column.

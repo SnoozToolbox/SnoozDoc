@@ -114,4 +114,8 @@ Version History
     - Initial release of the tool.
 
 * v2.4.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0
-   
+    - Removed the unused variable total_sleep_percent from the sleep report.
+    - Added time_in_bed_min (TIB): total time between lights-off and lights-on.
+    - Added sleep_period_min (SPT): duration between sleep onset and the last scored sleep stage (N1, N2, N3, R).
+    - Updated the definition of sleep_efficiency: time spent in sleep stages over TIB x 100.
+    - Added sleep_maintenance_efficiency: time spent in sleep stages over SPT x 100.

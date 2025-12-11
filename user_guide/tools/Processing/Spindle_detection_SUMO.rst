@@ -135,4 +135,7 @@ The version history of this tool is as follows:
     - Initial release of the tool.
 
 * v2.5.0 : Distributed with CEAMS package version 7.3.0 - Snooz beta 2.1.0
-    - Major update : 
+    - N2 and N3 are selected by default to run the spindle detection.
+    - Refactored the output report to distinguish between elapsed clock time and sleep-stage time. 
+    - Added new variables representing the combined N2 + N3 stages.
+    - Events are discarded during non-specific channel artifacts.

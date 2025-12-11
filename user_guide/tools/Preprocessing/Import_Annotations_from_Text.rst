@@ -93,3 +93,5 @@ Version History
     - Initial release of the tool.
 
 * v2.3.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0
+    - Supports the new optional time elapsed column.
+    - Supports different time formats for event duration (just like for event onset).
