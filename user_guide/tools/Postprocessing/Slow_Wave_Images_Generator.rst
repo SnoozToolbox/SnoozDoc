@@ -114,3 +114,12 @@ For additional customization, refer to the Colors and Slow Wave Alignment settin
 
 Finally, select the output folder where the images will be saved.
 
+
+Version History
+-----------------
+
+* v2.0.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.3.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0
+

@@ -28,4 +28,13 @@ Define the original sleep stage labels from the text file to import to ensure pr
 .. warning::
 
     The user will be informed in the log if no sleep stages file is found for a PSG file or if any original label for sleep stages is missing from the renaming table.
+
+
+Version History
+-----------------
+
+* v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0
 	

@@ -85,3 +85,12 @@ Jaccord index : ``(intersection between e and d) / (union of e and d)``
 The output performance file is written in the same directory as the PSG file.
 The output file is named as the PSG file with an additional suffix "_perf" and the extension .tsv.
 One evaluation file per PSG file is generated.
+
+
+Version History
+-----------------
+
+* v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0

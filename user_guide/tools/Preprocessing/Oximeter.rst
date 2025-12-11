@@ -52,6 +52,13 @@ The invalid section annotations are defined as :
 * `channels` : the list of channels on which the section is invalid, e.g., the oximeter channel, such as 'SpO2'.
 
 
+Version History
+-----------------
 
+* v2.0.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.1.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0
+    - Add minimum saturation line visualization and update instructional text
 
 

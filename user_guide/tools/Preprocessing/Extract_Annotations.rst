@@ -49,3 +49,12 @@ The output file is named as the input file with the suffix defined by the user.
     The time elapsed is only for debug purpose and is not included in the Snooz accessory format.
     Snooz does not support the time elapsed as part of its accessory file.  
     If you want to use the generated file as accessory file in Snooz, make sure to uncheck the option to add the "Time Elapsed".
+
+
+Version History
+-----------------
+
+* v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0

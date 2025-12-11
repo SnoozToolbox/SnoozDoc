@@ -24,3 +24,10 @@ Add your EDF+ files to import annotations and thier corresponding PSG signal fil
 .. note::
 
     The order of the EDF+ annotations files and their corresponding PSG signals file must be the same.
+
+
+Version History
+-----------------
+
+* v2.0.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1 (and later)
+    - Initial release of the tool.

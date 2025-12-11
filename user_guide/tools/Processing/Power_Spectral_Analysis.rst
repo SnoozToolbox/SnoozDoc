@@ -123,3 +123,12 @@ Report
 .. toctree::
    Power_Spectral_Analysis/PSA_per_stage_info_csv
    Power_Spectral_Analysis/PSA_per_event_info_csv
+
+
+Version History
+-----------------
+
+* v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.5.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0

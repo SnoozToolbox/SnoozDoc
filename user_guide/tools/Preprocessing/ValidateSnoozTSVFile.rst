@@ -77,3 +77,10 @@ Errors and Logs
 
 If issues are detected during validation, they are logged in the corresponding ``_validation_log.txt`` file in the `log_path` directory.
 Each error includes the row number and a description of the problem.
+
+
+Version History
+-----------------
+
+* v0.0.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1 (and later)
+    - Initial release of the tool.

@@ -51,4 +51,13 @@ Steps
 
 **1 - Input Files**
 
-Add the .xml annotation files to convert to Snooz .tsv annotation file.  (No edf file needed, only the xml file is mandatory). 
+Add the .xml annotation files to convert to Snooz .tsv annotation file.  (No edf file needed, only the xml file is mandatory).
+
+
+Version History
+-----------------
+
+* v2.0.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0 

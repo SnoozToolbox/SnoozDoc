@@ -110,3 +110,9 @@ Steps
 	- Specify desired display options, such as plotting the mean and standard deviation EEG signal spectral power curve and setting axis limits. (For more options look at the "Colors" settings page in the left panel).
 
 	- Select the output folder to save the images.
+
+Version History
+-----------------
+
+* v2.0.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0
+    - Initial release of the tool.

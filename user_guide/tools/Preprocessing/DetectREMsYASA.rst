@@ -85,3 +85,9 @@ References
 [1] Yetton, B. D., et al. (2016). Automatic detection of rapid eye movements (REMs):A machine learning approach. Journal of neuroscience methods, 259, 72-82.
 
 [2] Agarwal, R., et al. (2005). Detection of rapid-eye movements in sleep studies. IEEE Transactions on biomedical engineering, 52(8), 1390-1396.
+
+Version History
+-----------------
+
+* v0.0.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0
+    - Initial release of the tool.

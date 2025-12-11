@@ -84,3 +84,12 @@ The columns of the Snooz accessory file are as follows:
    3. start_sec: The onset of the annotation in seconds, e.g., 300
    4. duration_sec : The duration of the annotation in second, e.g., 0.9
    5. channels : The list of channels on which the annotation occurs, e.g., [C3-A2]
+
+
+Version History
+-----------------
+
+* v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.3.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0

@@ -41,3 +41,12 @@ For more details on accepted formats, see :ref:`accepted_format`.
     
 The output is a TSV (Tab Separated Values) file containing one row per recording, including the ten longest sleep bouts, 
 as well as the mean and standard deviation of both the ten longest and all sleep bouts for each combination listed above.
+
+
+Version History
+-----------------
+
+* v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0

@@ -68,5 +68,14 @@ Sleep Cycle Cohort file :
 Sleep Cycle specific to each PSG opened: 
 
 * The hypnogram of each PSG is saved in a .png picture file
-* The sleep stages and sleep periods events are saved in a .tsv file 
+* The sleep stages and sleep periods events are saved in a .tsv file
+
+
+Version History
+-----------------
+
+* v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.3.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0 
 

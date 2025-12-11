@@ -125,3 +125,12 @@ The YASA sleep scoring algorithm underwent rigorous evaluation on multiple datas
 References
 ----------
 [1] Vallat, R., & Walker, M. P. (2021). An open-source, high-performance tool for automated sleep staging. *Elife*, 10, e70092.
+
+
+Version History
+-----------------
+
+* v0.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v0.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0

@@ -50,3 +50,10 @@ Edit the annotation group as you wish.  The default group is EDFbrowser.
 	i.e. ``subject1.edf`` and ``subject1.tsv`` **is valid** 
     
         i.e. ``subject1.edf`` and ``subject1_annotation.tsv`` **is not valid**
+
+
+Version History
+-----------------
+
+* v2.0.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1 (and later)
+    - Initial release of the tool.

@@ -131,7 +131,7 @@ Version History
 
 The version history of this tool is as follows:
 
-* v2.0.1 : Distributed with CEAMS package version 7.2.0 - Snooz beta 1.0.1
+* v2.0.1 : Distributed with CEAMS package version 7.2.0 - Snooz beta 2.0.1
     - Initial release of the tool.
 
 * v2.5.0 : Distributed with CEAMS package version 7.3.0 - Snooz beta 2.1.0

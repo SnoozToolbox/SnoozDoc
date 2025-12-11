@@ -127,4 +127,13 @@ Report
 
 References
 -----------------
-[1] Bouchard, M., Lina, J.-M., Gaudreault, P.-O., Lafrenière, A., Dubé, J., Gosselin, N., Carrier, J., 2021. Sleeping at the switch. Elife 10, e64337. https://doi.org/10.7554/eLife.64337 
+[1] Bouchard, M., Lina, J.-M., Gaudreault, P.-O., Lafrenière, A., Dubé, J., Gosselin, N., Carrier, J., 2021. Sleeping at the switch. Elife 10, e64337. https://doi.org/10.7554/eLife.64337
+
+
+Version History
+-----------------
+
+* v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.3.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0 

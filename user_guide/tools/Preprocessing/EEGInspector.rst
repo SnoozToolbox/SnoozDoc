@@ -138,5 +138,9 @@ Annotations are saved as:
 
 Your EEG data is now ready for reliable further processing in Snooz.
 
+Version History
+-----------------
 
+* v2.0.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0
+    - Initial release of the tool.
 

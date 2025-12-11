@@ -40,4 +40,13 @@ Press 'Export' to display all the changes that will be applied at runtime.
 
 .. note::
 
-    Look at the "Annotations Editor" home page for more information. 
+    Look at the "Annotations Editor" home page for more information.
+
+
+Version History
+-----------------
+
+* v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0 

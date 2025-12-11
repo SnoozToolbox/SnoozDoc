@@ -121,5 +121,14 @@ References
 
    [1] Iber, C., American Academy of Sleep Medicine, 2007. The AASM Manual for the Scoring of Sleep and Associated Events: Rules, Terminology and Technical Specifications. American Academy of Sleep Medicine. 
 
-   [2] N. Martin et al., “Topography of age-related changes in sleep spindles,” Neurobiol. Aging, vol. 34, no. 2, pp. 468-476, Feb. 2013, doi: 10.1016/j.neurobiolaging.2012.05.020. 
+[2] N. Martin et al., "Topography of age-related changes in sleep spindles," Neurobiol. Aging, vol. 34, no. 2, pp. 468-476, Feb. 2013, doi: 10.1016/j.neurobiolaging.2012.05.020.
+
+
+Version History
+-----------------
+
+* v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.4.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0
 
