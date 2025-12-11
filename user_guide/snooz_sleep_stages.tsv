@@ -1,3 +1,4 @@
+group   name    start_sec   duration_sec    channels
 stage	9	0	30	[]
 stage	9	30	30	[]
 stage	0	60	30	[]

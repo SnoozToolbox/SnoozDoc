@@ -61,7 +61,7 @@ Ensure the `.readthedocs.yaml` is present and correctly configured for remote bu
 
 This section is for developers who want to write or update the documentation for their tools in Snooz.
 
-### Clone the SnoozDoc repository
+### Clone the SnoozDoc repository in your "snooz_workspace" folder
 ```bash
 git clone https://github.com/SnoozToolbox/SnoozDoc.git
 ```
@@ -74,6 +74,8 @@ Create a new branch if the upcoming release branch is not yet available.
 
 ### ▶️ Create and activate the virtual environment
 
+Still in your "snooz_workspace" folder, create the python virtual environment and activate it.
+
 #### On Linux/macOS:
 ```bash
 $ python3.10 -m venv snooz_doc_env
@@ -82,9 +84,11 @@ $ source snooz_doc_env/bin/activate
 
 #### On Windows:
 ```cmd
+> python3.10 -m venv snooz_doc_env
 > call snooz_doc_env\Scripts\activate.bat
 ```
 ```Powershell
+> python3.10 -m venv snooz_doc_env
 > snooz_doc_env\Scripts\activate.ps1
 ```
 
@@ -103,7 +107,31 @@ $ sphinx-build -b html . html
 
 > This will generate an `html/` folder (locally only — it's ignored by git).
 
-## 👩‍💻 3. Instructions for a Snooz release
+## 👩‍💻 3. Updating the documentation
+
+When you want to update the documentation again, activate the snooz_doc_env environment from the snooz_workspace folder:
+
+On Windows (PowerShell):
+```Powershell
+> snooz_doc_env\Scripts\activate.ps1
+```
+On Linux/macOS:
+```bash
+$ source snooz_doc_env/bin/activate
+```
+
+Make your changes in the SnoozDoc repository.
+
+To validate the result locally, build the HTML documentation from within the SnoozDoc repository:
+
+```bash
+$ sphinx-build -b html . html
+```
+
+Once everything looks good, push your changes to the SnoozDoc repository.
+
+
+## 👩‍💻 4. Instructions for a Snooz release
 
 ### ✅ Add a versioned release to the documentation
 

@@ -11,10 +11,10 @@ J	height	The height of the subject in meters or inches.
 K	weight	The weight of the subject in kg or lbs
 L	bmi	Body Mass Index (kg/m²)
 M	waistline	Waist size meters or inches.
-N	height_unit	"Unit used for the height. Possible values are: ""meters/feets"""
-O	weight_unit	"Unit used for the weight. Possible values are: ""kg/lbs"""
-P	waistline_unit	"Unit used for the waistline. Possible values are: ""cm/inches"""
-Q	cyc_def_option	"Method used to split the sleep period in sleep cycles. The values are defined in the following ""cyc_def..."" parameters.  Possible values are:  ""Minimum criteria""  ""Aeschbach 1993""  ""Feinberg 1979""  ""Mice"""
+N	height_unit	"Unit used for the height. Possible values are: 'meters/feets'"
+O	weight_unit	"Unit used for the weight. Possible values are: 'kg/lbs'"
+P	waistline_unit	"Unit used for the waistline. Possible values are: 'cm/inches'"
+Q	cyc_def_option	"Method used to split the sleep period in sleep cycles. The values are defined in the following 'cyc_def...' parameters.  Possible values are:  'Minimum criteria'  'Aeschbach 1993'  'Feinberg 1979'  'Mice'"
 R	cyc_def_include_soremp	Include a REM sleep periods (REMP) that occur within 15 minutes of sleep onset.
 S	cyc_def_include_last_incomplete	Include the last sleep cycle even if the NREM period (NREMP) or REMP does not meet the minimum duration criteria.
 T	cyc_def_rem_min	Minimum duration without R stage to end the REM period.
@@ -24,8 +24,8 @@ W	cyc_def_last_nrem_valid_min	Minimum duration of the NREMP in minutes to valida
 X	cyc_def_first_rem_min	Minimum duration of the first REM period in minutes.
 Y	cyc_def_mid_rem_min	Minimum duration of the middle REM period in minutes
 Z	cyc_def_last_rem_min	Minimum duration of the last REM period in minutes
-AA	cyc_def_move_end_rem	"Move the end of the REM period to the start of the following NREM period, eliminating the temporal ""gap"" between 2 cycles."
-AB	cyc_def_sleep_stages	"List of valid stages used to define the sleep cycles:  ""N1, N2, N3, R"" or ""N2, N3, R"""
+AA	cyc_def_move_end_rem	"Move the end of the REM period to the start of the following NREM period, eliminating the temporal 'gap' between 2 cycles."
+AB	cyc_def_sleep_stages	"List of valid stages used to define the sleep cycles:  'N1, N2, N3, R' or 'N2, N3, R'"
 AC	epoch_sec	Duration of an epoch in seconds, usually 30 seconds.
 AD	first_epoch_time_win	The timestamp of the first epoch.
 AE	last_epoch_time_win	The timestamp of the last epoch.

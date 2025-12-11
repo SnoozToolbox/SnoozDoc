@@ -18,7 +18,6 @@ The list of the variables included in the events report.
    To download the original info.tsv file : `snooz_beta100_events_report_info.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/snooz_beta100_events_report_info.tsv>`_
 
 .. csv-table:: Events Report
-   :header: "Variable Label", "Variable Definition"
    :file: snooz_beta100_events_report_info.tsv
    :delim: tab
 

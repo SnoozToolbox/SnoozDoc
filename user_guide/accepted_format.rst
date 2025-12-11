@@ -90,9 +90,9 @@ Sleep stages are represented by numbers in Snooz, as shown in the lookup table b
 Sleep staging is included in the annotation file. Snooz expects sleep staging annotations to be grouped by **stage**, and the annotation name represents the corresponding stage.
 
 .. csv-table:: The Snooz annotations for sleep stages
-   :header: "group", "name", "start_sec", "duration_sec", "channels"
    :file: snooz_sleep_stages.tsv
    :delim: tab
+   :header-rows: 1
 
 .. warning::
    Users can rename their sleep stages according to this table using the "Edit Annotations" tool under the Preprocessing menu.  

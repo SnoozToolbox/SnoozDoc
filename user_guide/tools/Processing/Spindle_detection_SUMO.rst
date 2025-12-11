@@ -126,3 +126,13 @@ References
    [2] Kaulen, L., Schwabedal, J.T., Schneider, J., Ritter, P. and Bialonski, S., 2022. Advanced sleep spindle identification with neural networks. Scientific reports, 12(1), p.7686. https://doi.org/10.1038/s41598-022-11210-y  
 
 
+Version History
+-----------------
+
+The version history of this tool is as follows:
+
+* v2.0.1 : Distributed with CEAMS package version 7.2.0 - Snooz beta 1.0.1
+    - Initial release of the tool.
+
+* v2.5.0 : Distributed with CEAMS package version 7.3.0 - Snooz beta 2.1.0
+    - Major update : 
