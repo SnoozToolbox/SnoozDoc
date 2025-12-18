@@ -1,6 +1,6 @@
-===========================================
-Running Snooz on Compute Canada
-===========================================
+================================================
+Running Snooz on Compute Canada for Developers
+================================================
 
 This guide explains how to run Snooz in headless mode on Compute Canada clusters using the command line interface.
 
@@ -47,7 +47,7 @@ Step 2: Set Up Python Environment
 Create Virtual Environment
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-You can check :ref:`Python virtual environment <installation>` for more details.
+You can check :ref:`virt_env` for more details.
 
 Open a terminal in VSCode and run::
 
@@ -67,7 +67,7 @@ Configure Python Interpreter
 Step 3: Install Dependencies
 -----------------------------
 
-1. **Navigate to the Snooz Toolbox directory:**
+1. **Navigate to the Snooz Toolbox repository:**
 
    ::
 
@@ -112,21 +112,17 @@ Organize your files as follows::
     snooz-toolbox/
     └── src/
         └── main/
-            └── python/
-                ├── main.py
-                ├── YourWorkspace.json    # Your pipeline file
-                └── data/                 # Optional: your dataset folder
-
+            └── resources/
+                    └── ComputeCanada/
+                        ├── YourWorkspace.json    # Your pipeline file
+                        └── data/                 # your dataset folder
+                        
 File Placement Options
 ~~~~~~~~~~~~~~~~~~~~~~
 
-**Option 1: Co-locate with main.py** (Recommended for testing)
+**Use custom locations**
 
-Place both your JSON workspace and data in: ``snooz-toolbox/src/main/python/``
-
-**Option 2: Use custom locations**
-
-* Store your JSON file anywhere on the cluster
+* Store your JSON file and data inside the ComputeCanada folder
 * Update paths in your JSON file to point to data locations
 * Use absolute paths when running the command
 
@@ -136,18 +132,11 @@ Running Snooz in Headless Mode
 Basic Usage
 -----------
 
-Navigate to the Python directory::
+Navigate to the ``main.py`` directory::
 
     cd snooz-toolbox/src/main/python
 
 Run Snooz with your workspace::
-
-    python main.py --headless --f YourWorkspace.json
-
-Using Custom Paths
-------------------
-
-If your files are in different locations::
 
     python main.py --headless --f /absolute/path/to/YourWorkspace.json
 
@@ -169,13 +158,13 @@ Create Job Script
 Create a file named ``run_snooz.sh``::
 
     #!/bin/bash
-    #SBATCH --account=def-your_account
+    SBATCH --account=def-your_account
     #SBATCH --time=02:00:00
     #SBATCH --mem=8G
     #SBATCH --cpus-per-task=4
-    #SBATCH --job-name=snooz_analysis
-    #SBATCH --output=snooz_%j.out
-    #SBATCH --error=snooz_%j.err
+    SBATCH --job-name=snooz_analysis
+    SBATCH --output=snooz_%j.out
+    SBATCH --error=snooz_%j.err
 
     # Activate virtual environment
     source ~/snooz_env/bin/activate
@@ -190,8 +179,6 @@ Create a file named ``run_snooz.sh``::
 
 Submit the Job
 --------------
-
-:
 
     sbatch run_snooz.sh
 

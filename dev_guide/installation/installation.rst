@@ -54,6 +54,7 @@ You can download Python from the following link: https://www.python.org/download
 .. warning::
    On Linux, you need to manually install the Qt dev tools to access the designer tool.  Type in the terminal ``sudo apt-get install qttools5-dev``.
 
+.. _virt_env:
 Python virtual environment
 =======================================
 Software using Python often relies on various external libraries. 
