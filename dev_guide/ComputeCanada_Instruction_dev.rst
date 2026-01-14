@@ -15,8 +15,7 @@ Before starting, ensure you have:
 
 * Access to a Compute Canada cluster (Narval, Beluga, Cedar, or Graham)
 * Login credentials at: https://ccdb.alliancecan.ca/security/login
-* Clone of the :ref:`Snooz Toolbox repository <installation>` (snooz-toolbox)
-* Your Snooz packages in: ``src/main/resources/base/packages``
+* Your Snooz packages in: ``src/main/resources/base/packages`` including the CEAMSModules and CEAMSTools versions that match your pipeline.
 * A valid Snooz pipeline JSON file
 
 Installation on Compute Canada
@@ -49,13 +48,18 @@ Create Virtual Environment
 
 You can check :ref:`virt_env` for more details.
 
+Navigate to your prefered directory (if not already there)::
+
+    cd /path/to/folder
+
 Open a terminal in VSCode and run::
 
-    python -m venv ~/snooz_env
+    python3.10 -m venv ~/snooz_env
     source ~/snooz_env/bin/activate
 
 .. note::
    The virtual environment keeps your dependencies isolated and prevents conflicts.
+   Please pay attention to the Python version used (3.10). You may face conflicts using newer versions.
 
 Configure Python Interpreter
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -64,16 +68,18 @@ Configure Python Interpreter
 2. Type: ``Python: Select Interpreter``
 3. Select the interpreter from ``~/snooz_env/bin/python``
 
-Step 3: Install Dependencies
+Step 3: Clone Your snooz-toolbox Repository and Install Dependencies
 -----------------------------
 
-1. **Navigate to the Snooz Toolbox repository:**
+1. **Clone your snooz-toolbox repository**::
+    
+    git clone https://github.com/SnoozToolbox/snooz-toolbox.git
 
-   ::
+    Navigate into the cloned directory::
+    cd snooz-toolbox
 
-       cd /path/to/snooz-toolbox/
 
-2. **Ensure proper file encoding** (if needed)::
+2. **Ensure proper file encoding before installing the dependencies** (if needed)::
 
        dos2unix requirements.txt
 
@@ -97,6 +103,16 @@ Verify Package Installation
 2. Verify that your Snooz package versions match your workspace modules::
 
        ls -la
+
+If your packages are missing, copy them from your local machine to this folder.
+
+The format of the folder should look like this::
+
+    packages/
+    ├── CEAMSModules_X_X_X
+        ├── CEAMSModules
+    └── CEAMSTools_X_X_X
+        ├── CEAMSTools
 
 .. important::
    Package versions must match your CEAMSModules and CEAMSTools versions.

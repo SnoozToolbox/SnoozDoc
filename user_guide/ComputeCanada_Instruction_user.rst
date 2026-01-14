@@ -15,9 +15,8 @@ Before starting, ensure you have:
 
 * Access to a Compute Canada cluster (Narval, Beluga, Cedar, or Graham)
 * Login credentials at: https://ccdb.alliancecan.ca/security/login
-* Your Snooz Toolbox code in a Compute Canada cluster (snooz-toolbox folder)
-* Your Snooz packages
-* A valid Snooz pipeline JSON file
+* Your Snooz packages including the CEAMSModules and CEAMSTools versions that match your pipeline.
+* A valid Snooz pipeline JSON file.
 
 Connecting to Compute Canada
 =============================
@@ -61,24 +60,32 @@ Create Virtual Environment
 
 You can check :ref:`virt_env` for more details.
 
+Navigate to your prefered directory (if not already there)::
+
+    cd /path/to/folder
+
 Type these commands one by one, pressing Enter after each::
 
-    python -m venv ~/snooz_env
+    python3.10 -m venv ~/snooz_env
     source ~/snooz_env/bin/activate
 
 You should see ``(snooz_env)`` appear at the beginning of your command line.
 
 .. note::
    The virtual environment keeps your dependencies isolated and prevents conflicts.
+   Please pay attention to the Python version used (3.10). You may face conflicts using newer versions.
 
-Step 2: Navigate to Snooz Toolbox
+Step 2: Clone Your snooz-toolbox Repository and Install Dependencies
 ----------------------------------
 
-1. **Go to your Snooz Toolbox folder**::
+1. **Clone your snooz-toolbox repository**::
+    
+    git clone https://github.com/SnoozToolbox/snooz-toolbox.git
 
-    cd /path/to/snooz-toolbox/
+    Navigate into the cloned directory::
+    cd snooz-toolbox
 
-2. **Ensure proper file encoding** (if needed write this command in the terminal to have a proper format)::
+2. **Ensure proper file encoding before installing the dependencies** (if needed write this command in the terminal to have a proper format)::
 
     dos2unix requirements.txt
 
@@ -104,6 +111,16 @@ Navigate to the packages folder::
 List the files to verify your packages are there::
 
     ls -la
+
+If your packages are missing, copy them from your local machine to this folder.
+
+The format of the folder should look like this::
+
+    packages/
+    ├── CEAMSModules_X_X_X
+        ├── CEAMSModules
+    └── CEAMSTools_X_X_X
+        ├── CEAMSTools
 
 .. important::
    Package versions must match your CEAMSModules and CEAMSTools versions.
