@@ -1,13 +1,13 @@
-.. _Connectivity_Analysis:
+.. _Analyze_EEG_connectivity:
 
-=======================
-Connectivity Analysis
-=======================
+===========================
+Analyze EEG Connectivity
+===========================
 
 Description
 -----------------------
 
-The **Connectivity Analysis** module computes both functional and directional brain connectivity using two established EEG measures:
+The **Analyze EEG Connectivity** module computes both functional and directional brain connectivity using two established EEG measures:
 
 - **wPLI (Weighted Phase Lag Index)**: estimates non-zero-lag phase synchronization, minimizing volume conduction artifacts.
 - **dPLI (Directed Phase Lag Index)**: estimates the direction of phase-lead/lag between pairs of EEG channels.
@@ -48,11 +48,14 @@ Steps
 - **Frequency Band Selection**:  
   Choose a predefined band (Delta, Theta, Alpha, Beta, Full) or define a custom band to match your research question.
 
-- **Recording Scope**:  
-  Specify which annotated segments to use for connectivity (e.g., N2, REM, or unscored).  
-  For sleep studies, select the appropriate stage. Otherwise, use unscored segments.
+- **Recording Scope Selection**:  
+  Select Sleep Stages to analyze specific stages, Unscored to analyze the full recording or a chosen time segment, or Specific Annotations to base the analysis on event markers.
 
-**4 - Connectivity Configuration**
+
+**4 - Annotation Selection**
+  Select specific annotations/events to perform connectivity analysis on. You can choose multiple annotations if needed.
+
+**5 - Connectivity Configuration**
 
 - **Connectivity Type**:  
   Choose between wPLI or dPLI.
@@ -65,7 +68,7 @@ Steps
 
   Statistical testing ensures connections are not due to chance and provides more reliable connectivity estimates.
 
-**5 - Output Files**
+**6 - Output Files**
 
 All files are saved in the selected Output folder, or next to the input file if "Save in the same folder" is checked.
 

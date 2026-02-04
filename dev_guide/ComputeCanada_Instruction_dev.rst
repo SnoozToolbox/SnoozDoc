@@ -1,0 +1,260 @@
+================================================
+Running Snooz on Compute Canada for Developers
+================================================
+
+This guide explains how to run Snooz in headless mode on Compute Canada clusters using the command line interface.
+
+.. contents:: Table of Contents
+   :depth: 3
+   :local:
+
+Prerequisites
+=============
+
+Before starting, ensure you have:
+
+* Access to a Compute Canada cluster (Narval, Beluga, Cedar, or Graham)
+* Login credentials at: https://ccdb.alliancecan.ca/security/login
+* Your Snooz packages in: ``src/main/resources/base/packages`` including the CEAMSModules and CEAMSTools versions that match your pipeline.
+* A valid Snooz pipeline JSON file
+
+Installation on Compute Canada
+===============================
+
+Step 1: Connect to Your Cluster
+--------------------------------
+
+Using VSCode Remote-SSH Extension
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. **Install the Remote-SSH extension** in VSCode
+
+2. **Configure SSH connection:**
+
+   * Press ``F1`` or ``Ctrl+Shift+P``
+   * Select: ``Remote-SSH: Open SSH Configuration File...``
+   * Add a new host::
+
+       Host narval
+           YourUsername@narval.computecanada.ca
+
+3. **Open your project folder** in VSCode through the remote connection
+
+Step 2: Set Up Python Environment
+----------------------------------
+
+Create Virtual Environment
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+You can check :ref:`virt_env` for more details.
+
+Navigate to your prefered directory (if not already there)::
+
+    cd /path/to/folder
+
+Open a terminal in VSCode and run::
+
+    python3.10 -m venv ~/snooz_env
+    source ~/snooz_env/bin/activate
+
+.. note::
+   The virtual environment keeps your dependencies isolated and prevents conflicts.
+   Please pay attention to the Python version used (3.10). You may face conflicts using newer versions.
+
+Configure Python Interpreter
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+1. Press ``Ctrl+Shift+P``
+2. Type: ``Python: Select Interpreter``
+3. Select the interpreter from ``~/snooz_env/bin/python``
+
+Step 3: Clone Your snooz-toolbox Repository and Install Dependencies
+-----------------------------
+
+1. **Clone your snooz-toolbox repository**::
+    
+    git clone https://github.com/SnoozToolbox/snooz-toolbox.git
+
+    Navigate into the cloned directory::
+    cd snooz-toolbox
+
+
+2. **Ensure proper file encoding before installing the dependencies** (if needed)::
+
+       dos2unix requirements.txt
+
+3. **Install required packages** (excluding GUI dependencies)::
+
+       grep -avE '^(PySide6|PySide6_Addons|PySide6_Essentials|shiboken6)' requirements.txt | pip install -r /dev/stdin
+
+.. tip::
+   This command automatically excludes GUI-related packages that are not needed in headless mode.
+
+Preparing Your Workspace
+=========================
+
+Verify Package Installation
+----------------------------
+
+1. Navigate to the packages directory::
+
+       cd src/main/resources/base/packages
+
+2. Verify that your Snooz package versions match your workspace modules::
+
+       ls -la
+
+If your packages are missing, copy them from your local machine to this folder.
+
+The format of the folder should look like this::
+
+    packages/
+    ├── CEAMSModules_X_X_X
+        ├── CEAMSModules
+    └── CEAMSTools_X_X_X
+        ├── CEAMSTools
+
+.. important::
+   Package versions must match your CEAMSModules and CEAMSTools versions.
+
+Organize Your Files
+-------------------
+
+Project Structure
+~~~~~~~~~~~~~~~~~
+
+Organize your files as follows::
+
+    snooz-toolbox/
+    └── src/
+        └── main/
+            └── resources/
+                    └── ComputeCanada/
+                        ├── YourWorkspace.json    # Your pipeline file
+                        └── data/                 # your dataset folder
+                        
+File Placement Options
+~~~~~~~~~~~~~~~~~~~~~~
+
+**Use custom locations**
+
+* Store your JSON file and data inside the ComputeCanada folder
+* Update paths in your JSON file to point to data locations
+* Use absolute paths when running the command
+
+Running Snooz in Headless Mode
+===============================
+
+Basic Usage
+-----------
+
+Navigate to the ``main.py`` directory::
+
+    cd snooz-toolbox/src/main/python
+
+Run Snooz with your workspace::
+
+    python main.py --headless --f /absolute/path/to/YourWorkspace.json
+
+.. note::
+   When using custom paths:
+   
+   * Use **absolute paths** for reliability
+   * Ensure all data paths in your JSON file are also absolute
+   * Verify file permissions (``chmod +r``) if needed
+
+Advanced Usage: SLURM Job Submission
+=====================================
+
+For long-running processes, submit as a SLURM job.
+
+Create Job Script
+-----------------
+
+Create a file named ``run_snooz.sh``::
+
+    #!/bin/bash
+    SBATCH --account=def-your_account
+    #SBATCH --time=02:00:00
+    #SBATCH --mem=8G
+    #SBATCH --cpus-per-task=4
+    SBATCH --job-name=snooz_analysis
+    SBATCH --output=snooz_%j.out
+    SBATCH --error=snooz_%j.err
+
+    # Activate virtual environment
+    source ~/snooz_env/bin/activate
+
+    # Navigate to working directory
+    cd $HOME/snooz-toolbox/src/main/python
+
+    # Run Snooz
+    python main.py --headless --f YourWorkspace.json
+
+    echo "Job completed at $(date)"
+
+Submit the Job
+--------------
+
+    sbatch run_snooz.sh
+
+Monitor Progress
+----------------
+
+Check job status::
+
+    squeue -u $USER
+
+View output in real-time::
+
+    tail -f snooz_<job_id>.out
+
+Troubleshooting
+===============
+
+Common Issues and Solutions
+---------------------------
+
+Import Errors
+~~~~~~~~~~~~~
+
+**Problem:** ``ModuleNotFoundError: No module named 'package_name'``
+
+**Solution:**
+
+1. Verify virtual environment is activated::
+
+       which python
+
+   Should point to ``~/snooz_env/bin/python``
+
+2. Reinstall dependencies::
+
+       pip install -r requirements.txt
+
+File Not Found
+~~~~~~~~~~~~~~
+
+**Problem:** ``FileNotFoundError: [Errno 2] No such file or directory``
+
+**Solution:**
+
+* Use absolute paths in command and JSON files
+* Verify file exists::
+
+      ls -la /path/to/file
+
+* Check file permissions::
+
+      chmod +r /path/to/file
+
+Memory Errors
+~~~~~~~~~~~~~
+
+**Problem:** Job killed due to memory limit
+
+**Solution:**
+
+Increase memory in SLURM script::
+
+    #SBATCH --mem=16G
