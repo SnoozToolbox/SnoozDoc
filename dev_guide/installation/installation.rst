@@ -55,8 +55,10 @@ You can download Python from the following link: https://www.python.org/download
    On Linux, you need to manually install the Qt dev tools to access the designer tool.  Type in the terminal ``sudo apt-get install qttools5-dev``.
 
 .. _virt_env:
+
 Python virtual environment
 =======================================
+
 Software using Python often relies on various external libraries. 
 Some software may require specific versions of these libraries, so it's strongly advised to create a Python virtual environment dedicated to your Snooz installation.
 
@@ -93,6 +95,7 @@ To install the requirements, type in the terminal or Command Prompt:
 
 Visual Studio Code as IDE
 =======================================
+
 An Integrated Development Environment (IDE) is a software application that combines a source code editor, compiler/interpreter, debugger, and version control integration to streamline the development process within a single interface.
 
 We use Visual Studio Code (VS Code) as our IDE. 
@@ -174,6 +177,7 @@ Define the Python intepreter from the virtual environment ``snooz_310_env``.
 
 Run Snooz
 =======================================
+
 To run Snooz from the source code see : :ref:`run_snooz`
 
 .. toctree::

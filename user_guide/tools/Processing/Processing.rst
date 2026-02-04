@@ -10,6 +10,7 @@ The Processing category includes sleep analyses, event detectors, and power spec
     :maxdepth: 1
     :caption: Contents:
     
+    Analyze_EEG_connectivity
     Power_Spectral_Analysis
     Slow_wave_detection
     Spindle_detection_A7
@@ -19,10 +20,3 @@ The Processing category includes sleep analyses, event detectors, and power spec
     Sleep_Bouts
     Sleep_cycles_export
     Sleep_Report
-    Slow_wave_detection
-    Spindle_detection_Martin
-    Spindle_detection_A7
-    Spindle_detection_SUMO
-    Analyze_EEG_connectivity
-    
-

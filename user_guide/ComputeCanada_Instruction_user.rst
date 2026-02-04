@@ -76,7 +76,7 @@ You should see ``(snooz_env)`` appear at the beginning of your command line.
    Please pay attention to the Python version used (3.10). You may face conflicts using newer versions.
 
 Step 2: Clone Your snooz-toolbox Repository and Install Dependencies
-----------------------------------
+--------------------------------------------------------------------------------------------
 
 1. **Clone your snooz-toolbox repository**::
     

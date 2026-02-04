@@ -69,7 +69,7 @@ Configure Python Interpreter
 3. Select the interpreter from ``~/snooz_env/bin/python``
 
 Step 3: Clone Your snooz-toolbox Repository and Install Dependencies
------------------------------
+----------------------------------------------------------------------
 
 1. **Clone your snooz-toolbox repository**::
     
