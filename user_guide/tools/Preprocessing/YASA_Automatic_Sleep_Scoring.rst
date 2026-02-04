@@ -133,6 +133,6 @@ Version History
 * v0.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
     - Initial release of the tool.
 
-* v0.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0
+* v2.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0
     - Supports discontinuous files.
     - Generates Hypnodensity plots.
