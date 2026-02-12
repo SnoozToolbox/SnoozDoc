@@ -136,9 +136,11 @@ Version History
 * v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
     - Initial release of the tool.
 
-* v2.3.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0 
+* v2.4.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0 
     - Remove REM periods by default when detecting Slow Waves.
     - Slow Wave Density has been added to the Slow Wave report.
     - Refactored the output report to distinguish between elapsed clock time and sleep-stage time. 
     - Added new variables representing the combined N2 + N3 stages.
     - Events are discarded during non-specific channel artifacts.
+    - Fixed reporting of events starting at sleep stage transitions.
+    - Replaced the IIR delta passband filter with a FIR filter using a Hamming window to match the legacy tool.
