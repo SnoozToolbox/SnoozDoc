@@ -93,6 +93,11 @@ The ``requirements.txt`` file is saved in the root folder of the "snooz-toolbox"
 To install the requirements, type in the terminal or Command Prompt:
  | ``pip install -r requirements.txt``
 
+.. warning::
+   To enable running PowerShell scripts on Windows, you need to change the execution policy. 
+   Run this command in PowerShell (no administrator rights required):
+   ``Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser``
+
 Visual Studio Code as IDE
 =======================================
 
