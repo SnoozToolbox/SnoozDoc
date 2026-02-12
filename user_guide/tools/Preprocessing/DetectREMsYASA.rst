@@ -80,6 +80,23 @@ In this step the user can set the parameters for the detection of REMs using YAS
    - **Sleep Stages**: If the hypnogram is loaded, the detection will only be applied to the values defined in "Sleep Stages": Default = 5 (REM).
    - **Remove outliers**: If YES, the algorithm will remove outliers detected by the IsolationForest model. Note that this step will only be applied if the number of detected REMs is greater than 50.
    
+Output Report
+----------------
+The output report includes the following characterstics of the REMs:
+   - **REMs Count**
+   - **Duration** of the REMs period in seconds
+   - **Amplitue** of the REMs (Difference between the peak and trough of the [LOC - ROC])
+   - **Density** of the REMs in cycles and hours
+   - **Variablity** of the densities
+
+The report consists of the average of the mentioned characterstics in
+   - total (all selected stages)
+   - per sleep cycles
+   - per clock hour
+   - per hour spent in each stage
+
+The tool also provides two folders of REMs characterstics and stages including some parameters for each specific REM event for more detailed analysis.
+
 References
 ----------
 [1] Yetton, B. D., et al. (2016). Automatic detection of rapid eye movements (REMs):A machine learning approach. Journal of neuroscience methods, 259, 72-82.
@@ -91,3 +108,6 @@ Version History
 
 * v2.0.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0
     - Initial release of the tool.
+* v3.0.0 : Distributed with CEAMS package version 7.3.0 - Snooz beta 2.1.0
+      - REMs report added to the output of the tool.
+      - The UI of the tool has been updated to be more user-friendly.
