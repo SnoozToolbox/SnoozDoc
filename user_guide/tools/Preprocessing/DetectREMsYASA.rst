@@ -15,6 +15,8 @@ Using this technique, the algorithm identifies signal peaks and extracts key fea
 To ensure reliable performance, the algorithm requires a minimum of 50 detected REMs to apply its model, which is based on the IsolationForest random forest classifier.
 Additionally, if the user selects the "remove outlier" option as True, any outliers detected after applying the IsolationForest will be excluded from the final detection results.
 
+.. note:: Only REMs events that fall within at least one-third of the REM sleep stage are retained. Events occurring outside this threshold are discarded. (This rule is important when a REM event is detected at the transition of two sleep stages.)
+
 **- Usage points:**
    - All output parameters of this algorithm are computed using the filtered LOC and ROC signals. The filtering process is based on the thresholds defined in the DetectionStep.
    - For optimal results, the user should apply this detection only to artifact-free REM sleep data.
