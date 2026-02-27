@@ -1,0 +1,4 @@
+/* Custom CSS for left-aligned table captions */
+.left-align-caption caption {
+    text-align: left !important;
+}
