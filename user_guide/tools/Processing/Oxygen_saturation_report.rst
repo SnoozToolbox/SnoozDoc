@@ -6,11 +6,11 @@ Report Oxygen Saturation
 
 A tool to analyze oxygen saturation, detect oxygen desaturations, and export the :ref:`Oxygen_saturation_report_csv`.
 
-Sleep staging is essential because oxygen saturation is particularly relevant during the sleep period (SP).
-The SP is defined as the duration (in minutes) from the first epoch scored as sleep (N1, N2, N3, R) to the final awakening, including the last epoch scored as sleep.
+Sleep staging is essential because oxygen saturation metrics are particularly relevant during the sleep period (SP).
+The SP is defined as the duration (in minutes) from the first epoch scored as sleep (N1, N2, N3, or R) to the final awakening, including the last epoch scored as sleep.
 
 The desaturation detector is inspired by ABOSA v1.2.2 [1], a freely available automatic oxygen saturation analysis software.
-TODO for more information on the desaturation detection algorithm.
+For more information on the desaturation detection algorithm implemented in Snooz, see :ref:`Oxygen_desaturation_detector`.
 
 .. warning::
 
@@ -45,14 +45,20 @@ For more details on accepted formats, see :ref:`accepted_format`.
 
 **2 - Invalid sections**
 
-The user must select any annotations to be excluded from the oxygen saturation analysis.
+The user must select any annotations to be excluded from the oxygen saturation analysis. Invalid sections can be identified by the user using the :ref:`Oximeter` viewer.
 
 **3 - Detection Settings**
 
 The user must define the oxygen desaturation criteria, including:
-- the oxygen drop threshold (%)
-- the minimum desaturation duration (s)
-- the maximum desaturation duration (s)
+
+- the oxygen drop threshold (3 % or 4%)
+- the minimum desaturation duration (10 s or 5 s)
+- the maximum desaturation duration (180 s or 20 s)
+
+.. image:: ./Oxygen_saturation_report/Oxy_tool_small.png
+   :width: 400
+   :alt: Alternative text
+
 
 **4 - Output Files**
 
@@ -97,6 +103,109 @@ The user can select an output directory to save the following outputs for each r
 .. warning::
 
     For discontinuous recordings, the oxygen saturation graph is generated for each continuous recording session separately.
+
+.. _Oxygen_desaturation_detector:
+
+Desaturation events detector
+------------------------------
+
+The desaturation events are detected based on the following diagram, inspired by ABOSA [1]:
+
+.. image:: ./Oxygen_saturation_report/snooz_beta300_Oxy_desaturation_detector.drawio.png
+   :width: 700
+   :alt: Alternative text
+
+Diagram block descriptions
+--------------------------
+
+The following list summarizes each block shown in the desaturation detector diagram.
+This format is intended for detailed descriptions.
+
+#. **Input: Cleaned SpO2 signal**
+
+   Start from a cleaned oxygen saturation signal after artifact rejection and invalid-section handling.  
+   Artifact samples are identified as values outside the 50-100 % range, NaN values, or rapid transitions detected by squaring a 1 Hz high-pass filtered signal 
+   (4th-order Butterworth applied forward-backward with filtfilt for zero-phase distortion, yielding an effective 8th-order response; threshold > 30). 
+   Adjacent artifact samples are grouped and extended by 1 second in each direction. Short artifacts (≤ 5 s) are linearly interpolated, unless the interpolation slope exceeds √30 ≈ 5.5 %/s, in which case the segment is kept as artifact (NaN). 
+   Long artifacts (> 5 s) are replaced with NaN.
+
+
+#. **Low-pass filter (0.1 Hz)**
+
+   The raw SpO₂ signal is low-pass filtered at 0.1 Hz using a 2nd-order Butterworth filter applied forward-backward with `filtfilt` for zero-phase distortion,  
+   resulting in an effective 4th-order response. This extracts the slow trend used to detect local minima and maxima.
+
+#. **High-pass filter (0.1 Hz)**
+
+   The low-pass filtered SpO₂ signal is high-pass filtered at 0.1 Hz using a 2nd-order Butterworth filter applied forward-backward with `filtfilt` for zero-phase distortion,  
+   resulting in an effective 4th-order response. This emphasizes dynamic signal changes used to refine event onsets.
+
+#. **Rounding and derivative**
+
+   The low-pass filtered SpO₂ is rounded to whole percent values and its time derivative is computed (scaled by the sampling rate) to estimate per-second changes,  
+   so that near-zero slopes correspond to plateaus.
+
+#. **Detect Lmin candidates**
+
+   Candidate local minima are identified on the low-pass filtered signal (minimum peak distance = 5 s, peak prominence = 1 %) as potential desaturation nadirs.  
+   Each minimum's position is refined on the raw SpO₂ signal by searching for the minimum within a 5-second window centered on the low-pass minimum.
+
+#. **Detect Lmax candidates**
+
+   Candidate local maxima are identified on the low-pass filtered signal (minimum peak distance = 5 s, peak prominence = 1 %) as potential pre-desaturation baselines.  
+   Each maximum's position is refined on the raw SpO₂ signal by searching for the maximum within a 5-second window centered on the low-pass maximum.
+
+#. **Pair Lmax-Lmin**
+
+   Local maxima without a corresponding local minimum are discarded. Each potential Lmax–Lmin pair cannot exceed 180 s in duration, and the minimum Lmax–Lmin drop must meet the user-defined threshold (3 % or 4 %).
+
+#. **Adjust Lmax to the right for fall rate**
+
+   The squared high-pass filtered SpO₂ signal is used to identify “activity” peaks. 
+   Each candidate Lmax is iteratively advanced to successive activity peaks occurring before Lmin, 
+   with shifts accepted only if the fall rate between the current Lmax and the candidate peak is greater than or equal to -0.05 %/s.
+
+#. **Adjust Lmax and Lmin for plateau**
+
+   The rounded low-pass SpO₂ trend and its derivative are used to identify plateaus between the currently adjusted Lmax and Lmin.
+   A plateau is defined as a contiguous region between two “edges” where the rounded signal changes value (i.e., where the signal derivative is nonzero) and with a duration of at least 20 s.
+   Event endpoints are adjusted to maximize desaturation depth: if the larger drop occurs before the plateau, Lmin is shifted to the start of the plateau; otherwise, Lmax is shifted to the end of the plateau.
+   This procedure is iteratively repeated to accommodate multiple plateaus within the same candidate desaturation event.
+
+#. **Re-adjust Lmax right for fall rate**
+
+   The right-shift correction on Lmax is re-applied after plateau handling to ensure fall-rate constraints remain valid.
+
+#. **Correct peaks on raw signal**
+
+   Event boundaries are refined within a 5-second window on the raw SpO₂ signal for final measurement accuracy.
+
+#. **Validate event**
+
+   Events are retained only if they satisfy all of the following criteria:
+   
+   - Drop ≥ 3 % or 4 % (user-defined threshold)
+   - Duration ≥ 5 s or 10 s
+   - Average fall rate of the event between −4 %/s and −0.05 %/s
+   - Fall rate in any 1-second sliding window is always greater than −6 %/s
+
+#. **Resolve overlaps**
+
+   Events overlapping with artifacts are excluded. Overlapping candidate events are resolved by keeping the event with the steepest fall rate.
+
+#. **Output: Desaturation events**
+
+   Final accepted desaturation events are exported for reporting. Each event includes the following variables:
+   
+   - group: text label "SpO2"
+   - name: text label "desat_SpO2"
+   - start_sec: event start time in seconds
+   - duration_sec: event duration in seconds
+   - channels: channels involved in the event (left empty)
+   - slope: slope of the event (%/s)
+   - depth: depth of the event (%)
+   - area: area of the event (%·s)
+
 
 Report
 ---------

@@ -2,3 +2,11 @@
 .left-align-caption caption {
     text-align: left !important;
 }
+
+/* Justify documentation text for cleaner HTML layout */
+.rst-content .section p,
+.rst-content .section li {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}
