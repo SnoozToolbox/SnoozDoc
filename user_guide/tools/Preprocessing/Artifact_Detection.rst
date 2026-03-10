@@ -94,6 +94,7 @@ Version History
 * v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
     - Initial release of the tool.
 
-* v2.5.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0 
-    - Handle bad channels and bad channels from "Inspect EEG Channels" properly.
-    - The tool offers two sets of default threshold values depending on the selected sleep stages.
+* v2.6.0 — Distributed with CEAMS package version 7.3.0 / Snooz beta 3.0.0
+    - Handle bad channels properly, including those identified in “Inspect EEG Channels.”
+    - Provide two sets of default threshold values, depending on the selected sleep stages.
+    - Verify alias definitions from step “1 - Input Files” before running the tool.
