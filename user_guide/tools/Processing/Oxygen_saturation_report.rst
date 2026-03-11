@@ -124,10 +124,9 @@ This format is intended for detailed descriptions.
 #. **Input: Cleaned SpO2 signal**
 
    Start from a cleaned oxygen saturation signal after artifact rejection and invalid-section handling.  
-   Artifact samples are identified as values outside the 50-100 % range, NaN values, or rapid transitions detected by squaring a 1 Hz high-pass filtered signal 
-   (4th-order Butterworth applied forward-backward with filtfilt for zero-phase distortion, yielding an effective 8th-order response; threshold > 30). 
-   Adjacent artifact samples are grouped and extended by 1 second in each direction. Short artifacts (≤ 5 s) are linearly interpolated, unless the interpolation slope exceeds √30 ≈ 5.5 %/s, in which case the segment is kept as artifact (NaN). 
-   Long artifacts (> 5 s) are replaced with NaN.
+   Artifact samples are identified as values outside the 50-100% range, NaN values, or rapid transitions detected from the squared high-pass filtered signal (threshold > 30). 
+   For artifact detection, a Butterworth high-pass filter is applied with forward-backward filtfilt (zero phase): the nominal cutoff is 1 Hz, but it is adaptively limited for low sampling rates using cutoff_freq = min(1.0, fs_chan / 3.0) to keep the filter valid and stable. 
+   Using an order-4 design with filtfilt gives an effective 8th-order response. Adjacent artifact samples are grouped and expanded by 1 s on each side. Short artifacts (<= 5 s) are linearly interpolated, unless the interpolation slope exceeds sqrt(30) (~5.5 %/s), in which case the segment is kept as artifact (NaN). Long artifacts (> 5 s) are replaced with NaN.
 
 
 #. **Low-pass filter (0.1 Hz)**
@@ -223,7 +222,8 @@ Version History
 * v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
     - Initial release of the tool.
 
-* v2.4.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
+* v2.5.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
     - The desaturation detector is now inspired by ABOSA [1].
     - The desaturation severity has been added to the report.
+    - Automatic artifact detection has been adapted for low sampling rates (e.g., 1 Hz).
    
