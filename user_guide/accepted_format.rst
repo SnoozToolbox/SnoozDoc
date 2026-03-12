@@ -91,7 +91,7 @@ Sleep staging is included in the annotation file. Snooz expects sleep staging an
 
 .. csv-table:: The Snooz annotations for sleep stages
    :file: snooz_sleep_stages.tsv
-   :delim: tab
+   :delim: 0x09
    :header-rows: 1
 
 .. warning::
