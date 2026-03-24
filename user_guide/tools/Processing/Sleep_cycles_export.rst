@@ -77,7 +77,8 @@ Version History
 * v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
     - Initial release of the tool.
 
-* v2.3.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0 
+* v2.4.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0 
     - Refactor hypnogram plotting to use contours instead of filled bars, and add background colors.
     - Fix Aeschebach method to support two REMPs without NREM between.
+    - Improve path, filename, and extension handling for sleep cycle warning log file.
 

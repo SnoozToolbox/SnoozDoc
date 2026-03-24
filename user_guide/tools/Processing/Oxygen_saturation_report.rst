@@ -222,8 +222,8 @@ Version History
 * v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
     - Initial release of the tool.
 
-* v2.5.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
+* v2.6.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
     - The desaturation detector is now inspired by ABOSA [1].
     - The desaturation severity has been added to the report.
     - Automatic artifact detection has been adapted for low sampling rates (e.g., 1 Hz).
-   
+    - Improve path, filename, and extension handling for sleep cycle warning log file.

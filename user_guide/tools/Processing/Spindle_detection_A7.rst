@@ -153,11 +153,12 @@ Version History
 * v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
     - Initial release of the tool.
 
-* v3.4.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0 
+* v3.5.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0 
     - Supports a user defined sigma band.
     - Refactored the output report to distinguish between elapsed clock time and sleep-stage time. 
     - Added new variables representing the combined N2 + N3 stages.
     - Events are discarded during non-specific channel artifacts.
     - Fixed reporting of events starting at sleep stage transitions.
+    - Improve path, filename, and extension handling for sleep cycle warning log file.
 
 

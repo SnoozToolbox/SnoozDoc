@@ -111,7 +111,8 @@ Version History
 * v2.0.0 : Distributed with CEAMS package version 7.0.0 — Snooz beta 2.0.0
     - Initial release of the tool.
     
-* v3.2.0 : Distributed with CEAMS package version 7.3.0 - Snooz beta 3.0.0
+* v3.3.0 : Distributed with CEAMS package version 7.3.0 - Snooz beta 3.0.0
       - REMs report added to the output of the tool.
       - The UI of the tool has been updated to be more user-friendly.
       - Fixed reporting of events starting at sleep stage transitions.
+      - Improve path, filename, and extension handling for sleep cycle warning log file.

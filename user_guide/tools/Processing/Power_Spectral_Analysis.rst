@@ -131,7 +131,8 @@ Version History
 * v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
     - Initial release of the tool.
 
-* v2.6.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0
+* v2.7.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 2.1.0
     - Refactored the output report to distinguish between elapsed clock time and sleep-stage time. 
     - Added new variables representing the combined N2 + N3 stages.
     - Added support for duplicated annotation names in different annotation groups.
+    - Improve path, filename, and extension handling for sleep cycle warning log file.
