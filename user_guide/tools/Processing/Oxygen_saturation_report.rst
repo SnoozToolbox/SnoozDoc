@@ -73,12 +73,18 @@ The Oxygen Saturation Report for the cohort contains two main categories of metr
 - individual sleep cycles
 - sleep stages
 
-2. **Oxygen desaturation variables** : including:
+2. **Oxygen desaturation variables** :
 
 - oxygen desaturation index (ODI, events per sleep hour)
-- severity (sum of areas under desaturation events, in percent·sec, over the sleep period)
+- desaturation severity (sum of areas under desaturation events, in percent·sec, over the sleep period)
 - percentage of sleep time spent in desaturation
 - average and median desaturation characteristics (duration, area, slope, drop)
+
+3. **Oxygen recovery variables**
+
+Recovery index, recovery severity, percentage of sleep time spent in recovery and the average and median recovery characteristics.
+
+The **Total Severity** corresponds to the sum of the individual desaturation and recovery areas in percent*sec over the valid sleep period (sec).
 
 All variables are computed for the total sleep period. 
 Each recording is saved as one line in the cohort report, with new recordings appended to the existing file. 
@@ -115,8 +121,7 @@ The desaturation events are detected based on the following diagram, inspired by
    :width: 700
    :alt: Alternative text
 
-Diagram block descriptions
---------------------------
+**Diagram block descriptions**
 
 The following list summarizes each block shown in the desaturation detector diagram.
 This format is intended for detailed descriptions.
@@ -177,7 +182,7 @@ This format is intended for detailed descriptions.
 
 #. **Correct peaks on raw signal**
 
-   Event boundaries are refined within a 5-second window on the raw SpO₂ signal for final measurement accuracy.
+   Event boundaries are refined within a 2-second window on the raw SpO₂ signal for final measurement accuracy.
 
 #. **Validate event**
 
@@ -203,6 +208,81 @@ This format is intended for detailed descriptions.
    - channels: channels involved in the event (left empty)
    - slope: slope of the event (%/s)
    - depth: depth of the event (%)
+   - area: area of the event (%·s)
+
+.. _Oxygen_recovery_detector:
+
+Recovery events detector
+------------------------------
+
+The recovery events are detected based on the following diagram, inspired by ABOSA [1]:
+
+.. image:: ./Oxygen_saturation_report/snooz_beta300_Oxy_recovery_detector.drawio.png
+   :width: 500
+   :alt: Alternative text
+
+**Diagram block descriptions**
+
+The following list summarizes each block shown in the recovery detector diagram.
+This format is intended for detailed descriptions.
+
+#. **Input: Cleaned SpO2 signal**
+
+   Start from a cleaned oxygen saturation signal after artifact rejection and invalid-section handling.  
+   Artifact samples are identified as values outside the 50-100% range, NaN values, or rapid transitions detected from the squared high-pass filtered signal (threshold > 30). 
+   For artifact detection, a Butterworth high-pass filter is applied with forward-backward filtfilt (zero phase): the nominal cutoff is 1 Hz, but it is adaptively limited for low sampling rates using cutoff_freq = min(1.0, fs_chan / 3.0) to keep the filter valid and stable. 
+   Using an order-4 design with filtfilt gives an effective 8th-order response. Adjacent artifact samples are grouped and expanded by 1 s on each side. Short artifacts (<= 5 s) are linearly interpolated, unless the interpolation slope exceeds sqrt(30) (~5.5 %/s), in which case the segment is kept as artifact (NaN). Long artifacts (> 5 s) are replaced with NaN.
+
+#. **Low-pass filter (0.1 Hz)**
+
+   The raw SpO₂ signal is low-pass filtered at 0.1 Hz using a 2nd-order Butterworth filter applied forward-backward with `filtfilt` for zero-phase distortion,  
+   resulting in an effective 4th-order response. This extracts the slow trend used to detect local maxima.
+
+#. **Rounding and derivative**
+
+   The low-pass filtered SpO₂ is rounded to whole percent values and its time derivative is computed (scaled by the sampling rate) to estimate per-second changes,  
+   so that near-zero slopes correspond to plateaus.
+
+#. **Detect Lmax candidates**
+
+   Candidate local maxima are identified on the low-pass filtered signal (minimum peak distance = 5 s, peak prominence = 1 %) as potential recovery baselines.  
+   Each maximum's position is refined on the raw SpO₂ signal by searching for the maximum within a 5-second window centered on the low-pass maximum.
+
+#. **Pair desaturation end with Lmax**
+
+   Each desaturation event end is paired with the next candidate Lmax.
+
+#. **Adjust Lmax backward**
+
+   Move recovery end (Lmax) backward just after the last derivative change.
+
+#. **Correct peaks on raw signal**
+
+   Event boundaries are refined within a 2-second window on the raw SpO₂ signal for final measurement accuracy.
+
+#. **Validate event**
+
+   Events are retained only if they satisfy all of the following criteria:
+   
+   - Rise ≥ 2 %
+   - Duration ≥ 3 s and ≤ of the max between 120 s and 2 x the desaturation duration
+   - Average rise rate ≥ 0.05 %/s
+
+#. **Resolve overlaps**
+
+   Events overlapping with artifacts are excluded. Resolve overlapping recovery events by keeping the one with the highest positive recovery slope.
+
+#. **Output: Recovery events**
+
+   Final accepted recovery events are exported for reporting. Each event includes the following variables:
+   
+   - group: text label "SpO2"
+   - name: text label "recovery_SpO2"
+   - start_sec: event start time in seconds
+   - duration_sec: event duration in seconds
+   - channels: channels involved in the event (left empty)
+   - slope: slope of the event (%/s)
+   - rise: rise of the event (%)
    - area: area of the event (%·s)
 
 

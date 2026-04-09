@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" version="29.6.1">
+  <diagram name="Page-1" id="FXvnhMDRajWraT-qTHdd">
+    <mxGraphModel dx="1426" dy="743" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="IsEl3dBew7pBWcOqFinT-1" edge="1" parent="1" source="IsEl3dBew7pBWcOqFinT-3" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;curved=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;entryX=0.086;entryY=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="IsEl3dBew7pBWcOqFinT-7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="220" y="60" />
+            </Array>
+            <mxPoint x="280" y="30" as="sourcePoint" />
+            <mxPoint x="220" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-2" edge="1" parent="1" source="IsEl3dBew7pBWcOqFinT-3" style="rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.666;entryY=-0.031;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="70" />
+            </Array>
+            <mxPoint x="439.8800000000001" y="198.76" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-3" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=0" value="1. Input: Cleaned SpO2 signal" vertex="1">
+          <mxGeometry height="40" width="220" x="200" as="geometry" />
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-4" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#ffe6cc;strokeColor=#d79b00;" value="2. Low-pass filter (0.1 Hz)" vertex="1">
+          <mxGeometry height="40" width="160" x="230" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-6" parent="1" style="rounded=1;whiteSpace=wrap;fillColor=#dae8fc;strokeColor=#6c8ebf;" value="3. Round + derivative" vertex="1">
+          <mxGeometry height="40" width="180" x="450" y="130" as="geometry" />
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-36" edge="1" parent="1" source="IsEl3dBew7pBWcOqFinT-7" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="IsEl3dBew7pBWcOqFinT-10">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-7" parent="1" style="rounded=1;whiteSpace=wrap;" value="4. Detect Lmax candidates" vertex="1">
+          <mxGeometry height="40" width="220" x="200" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-10" parent="1" style="rounded=1;whiteSpace=wrap;" value="5. Pair desaturation end - Lmax" vertex="1">
+          <mxGeometry height="40" width="220" x="200" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-11" parent="1" style="rounded=1;whiteSpace=wrap;" value="6. Adjust Lmax backward" vertex="1">
+          <mxGeometry height="40" width="220" x="200" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-14" parent="1" style="rounded=1;whiteSpace=wrap;textShadow=0;" value="7. Correct peaks on raw signal" vertex="1">
+          <mxGeometry height="40" width="220" x="200" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-15" parent="1" style="rounded=1;whiteSpace=wrap;fontStyle=1;fontColor=default;align=center;" value="8. Validate event:&#xa;rise ≥ 2%&#xa;rise rate ≥ 0.05 %/s&#xa;duration (s): ≥ 3 and &#xa;≤ max(120, 2 × desat. len.)" vertex="1">
+          <mxGeometry height="90" width="280" x="170" y="480" as="geometry" />
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-16" parent="1" style="rounded=1;whiteSpace=wrap;" value="9. Resolve overlaps" vertex="1">
+          <mxGeometry height="40" width="220" x="200" y="600" as="geometry" />
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-17" parent="1" style="rounded=1;whiteSpace=wrap;" value="10. Output: Recovery events" vertex="1">
+          <mxGeometry height="40" width="220" x="200" y="680" as="geometry" />
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-18" edge="1" parent="1" source="IsEl3dBew7pBWcOqFinT-3" style="fillColor=#d5e8d4;strokeColor=#82b366;strokeWidth=2;" target="IsEl3dBew7pBWcOqFinT-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-20" edge="1" parent="1" source="IsEl3dBew7pBWcOqFinT-4" style="fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="IsEl3dBew7pBWcOqFinT-6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="100" />
+            </Array>
+            <mxPoint x="540" y="130" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-22" edge="1" parent="1" style="fillColor=#ffe6cc;strokeColor=#d79b00;strokeWidth=2;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="IsEl3dBew7pBWcOqFinT-7">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310.5" y="120" as="sourcePoint" />
+            <mxPoint x="310" y="150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-25" edge="1" parent="1" source="IsEl3dBew7pBWcOqFinT-10" target="IsEl3dBew7pBWcOqFinT-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-27" edge="1" parent="1" source="IsEl3dBew7pBWcOqFinT-11">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="310" y="400" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-28" edge="1" parent="1" source="IsEl3dBew7pBWcOqFinT-6" style="entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#dae8fc;strokeColor=#6c8ebf;strokeWidth=2;" target="IsEl3dBew7pBWcOqFinT-11">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="310" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-32" edge="1" parent="1" source="IsEl3dBew7pBWcOqFinT-14" target="IsEl3dBew7pBWcOqFinT-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-33" edge="1" parent="1" source="IsEl3dBew7pBWcOqFinT-15" target="IsEl3dBew7pBWcOqFinT-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="IsEl3dBew7pBWcOqFinT-34" edge="1" parent="1" source="IsEl3dBew7pBWcOqFinT-16" target="IsEl3dBew7pBWcOqFinT-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
