@@ -17,4 +17,6 @@ The list of the variables included in the PSA report per sleep stages.
 .. csv-table:: PSA report per stages
    :file: snooz_beta_2_1_0_PSA_per_stages_info.tsv
    :delim: tab
+   :align: left
+   :class: left-align-caption
 

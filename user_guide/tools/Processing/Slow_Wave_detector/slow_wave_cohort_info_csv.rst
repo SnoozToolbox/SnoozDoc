@@ -17,4 +17,6 @@ The list of the variables included in the slow wave cohort report.
 .. csv-table:: Slow wave cohort report
    :file: snooz_beta_2_1_0_slow_wave_cohort_info.tsv
    :delim: tab
+   :align: left
+   :class: left-align-caption
 

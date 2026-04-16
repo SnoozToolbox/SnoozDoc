@@ -17,3 +17,5 @@ The list of the variables included in the sleep report.
 .. csv-table:: Sleep Report
    :file: snooz_beta100_sleep_report_info.tsv
    :delim: tab
+   :align: left
+   :class: left-align-caption

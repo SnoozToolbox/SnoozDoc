@@ -20,6 +20,8 @@ The list of the variables included in the events report.
 .. csv-table:: Events Report
    :file: snooz_beta100_events_report_info.tsv
    :delim: tab
+   :align: left
+   :class: left-align-caption
 
 
 The selection criteria

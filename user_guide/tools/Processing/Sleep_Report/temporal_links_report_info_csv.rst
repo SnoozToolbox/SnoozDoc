@@ -17,4 +17,6 @@ The list of the variables included in the temporal links report.
 .. csv-table:: Temporal Links Report
    :file: snooz_beta100_temporal_links_report_info.tsv
    :delim: tab
+   :align: left
+   :class: left-align-caption
 

@@ -17,4 +17,6 @@ The list of the variables included in the PSA report per selected events.
 .. csv-table:: PSA report per events
    :file: snooz_beta_2_1_0_PSA_per_events_info.tsv
    :delim: tab
+   :align: left
+   :class: left-align-caption
 
