@@ -1,3 +1,4 @@
 {
-    "esbonio.sphinx.confDir": ""
+    "esbonio.sphinx.confDir": "",
+    "python-envs.venvPath": "../snooz_doc_env"
 }
