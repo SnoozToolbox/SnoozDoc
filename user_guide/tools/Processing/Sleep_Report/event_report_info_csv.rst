@@ -21,7 +21,7 @@ The list of the variables included in the events report.
    :file: snooz_beta100_events_report_info.tsv
    :delim: tab
    :align: left
-   :class: left-align-caption
+   :class: left-align-caption wrap-table
 
 
 The selection criteria

@@ -18,5 +18,5 @@ The list of the variables included in the Sleep Bouts Report.
    :file: snooz_beta300_Sleep_bouts_report_info.tsv
    :delim: tab
    :align: left
-   :class: left-align-caption
+   :class: left-align-caption wrap-table
 

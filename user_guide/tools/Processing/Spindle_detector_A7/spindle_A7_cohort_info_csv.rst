@@ -18,5 +18,5 @@ The list of the variables included in the spindle cohort report.
    :file: snooz_beta_3_0_0_spindle_A7_cohort_info.tsv
    :delim: tab
    :align: left
-   :class: left-align-caption
+   :class: left-align-caption wrap-table
 
