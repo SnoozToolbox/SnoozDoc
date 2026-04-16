@@ -12,6 +12,8 @@ Sleep bouts are defined as continuous periods of three sleep stage combinations 
    2. Continuous period of N2, N3 and REM stages
    3. Continuous period of REM stage alone
 
+To see the complete list of variables included in the report, see :ref:`Sleep_bouts_report_csv`.
+
 Steps
 -----------------
 
@@ -41,6 +43,14 @@ For more details on accepted formats, see :ref:`accepted_format`.
     
 The output is a TSV (Tab Separated Values) file containing one row per recording, including the ten longest sleep bouts, 
 as well as the mean and standard deviation of both the ten longest and all sleep bouts for each combination listed above.
+
+See :ref:`Sleep_bouts_report_csv` for the variable definition. 
+
+Report
+---------
+
+.. toctree::
+   Report_Sleep_Bouts/Sleep_bouts_report_csv
 
 
 Version History
