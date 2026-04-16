@@ -1,0 +1,1435 @@
+A	filename	PSG filename
+B	id1	subject identification
+C	cyc_def_option	"Method used to split the sleep period in sleep cycles, it defines the criteria. I.e. : ""Minimum criteria""  ""Aeschbach 1993""  ""Feinberg 1979"""
+D	cyc_def_include_soremp	Include a REM sleep periods (REMP) that occur within 15 minutes of sleep onset.
+E	cyc_def_include_last_incomplete	Include the last sleep cycle even if the NREM period (NREMP) or REMP does not meet the minimum duration criteria.
+F	cyc_def_rem_min	Minimum length without R stage to end the REMP.
+G	cyc_def_first_nrem_min	Minimum length of the first NREMP in minutes.
+H	cyc_def_mid_last_nrem_min	Minimum length of the middle and last NREMP in minutes.
+I	cyc_def_last_nrem_valid_min	Minimum length of the NREMP in minutes to validate the last sleep cycle.
+J	cyc_def_first_rem_min	Minimum length of the first REMP in minutes.
+K	cyc_def_mid_rem_min	Minimum length of the middle REMP in minutes.
+L	cyc_def_last_rem_min	Minimum length of the last REMP in minutes.
+M	cyc_def_move_end_rem	"Move the end of the REMP to the start of the following NREMP, eliminating the temporal ""gap"" between 2 cycles."
+N	cyc_def_sleep_stages	"List of valid stages used to define the sleep cycles:  ""N1, N2, N3, R"" or ""N2, N3, R"""
+O	min_sec	Minimum duration of the spindle in sec.
+P	max_sec	Maximum duration of the spindle in sec.
+Q	sleep_stage_sel	Sleep stages selection to detect spindles in.
+R	detect_in_cycle	Flag to detect spindle in sleep cycles only.
+S	detect_exclude_remp	Flag to exclude rem period from the spindle detection.
+T	spindle_event_name	Spindle event name (specific to the detection algorithm).
+U	thresh_abs_sigma_pow_uv2	Threshold (uv2) for the absolute (mean squared) sigma power (log10)
+V	thresh_rel_sigma_pow_z	Threshold (z-score) for the relative sigma power (z(log10(PSA:11-16Hz/PSA:4.5-30Hz)))
+W	thresh_sigma_cov_z	Threshold (z-score) for the sigma covariance between the broad band (EEGbf) and the sigma (EEGs) signal (z(log10(cov(EEGbf, EEGs))))
+X	thresh_sigma_cor_perc	Threshold (percentile) for the sigma correlation between the broad band (EEGbf) and the sigma (EEGs) signal cov(EEGbf, EEGs)/(std(EEGbf)*std(EEGs))
+Y	artefact_group_name_list	List of groups and names of the artifact excluded from the spindle detection
+Z	chan_label	The label of the channel.
+AA	chan_fs	The sampling rate (Hz) of the channel.
+AB	sleep_cycle_count	Number of sleep cycles.
+AC	sleep_period_min	Total period for detection - Duration (min) of the sleep period.
+AD	total_N1_valid_min	Valid (no artifact) period for detection - Valid duration (min) of the sleep period in N1 stage minus the REM periods if excluded.
+AE	total_N2_valid_min	Valid (no artifact) period for detection - Valid duration (min) of the sleep period in N2 stage minus the REM periods if excluded.
+AF	total_N3_valid_min	Valid (no artifact) period for detection - Valid duration (min) of the sleep period in N3 stage minus the REM periods if excluded.
+AG	total_N2N3_valid_min	Valid (no artifact) period for detection - Valid duration (min) of the sleep period in N2 and N3 stage minus the REM periods if excluded.
+AH	total_NREM_valid_min	Valid (no artifact) period for detection - Valid duration (min) of the sleep period in NREM stage (N1, N2, N3) minus the REM periods if excluded.
+AI	total_R_valid_min	Valid (no artifact) period for detection - Valid duration (min) of the sleep period in REM stage.
+AJ	total_valid_min	Valid (no artifact) period for detection - Valid duration (min) of the sleep stage selected minus thoses included in REM periods if remps are excluded.
+AK	total_N1_spindle_count	Total - Sleep spindle count in N1 stage.
+AL	total_N2_spindle_count	Total - Sleep spindle count in N2 stage.
+AM	total_N3_spindle_count	Total - Sleep spindle count in N3 stage.
+AN	total_N2N3_spindle_count	Total - Sleep spindle count in N2 and N3 stage.
+AO	total_NREM_spindle_count	Total - Sleep spindle count in NREM stage (N1, N2, N3).
+AP	total_R_spindle_count	Total - Sleep spindle count in REM stage.
+AQ	total_spindle_count	Total - Sleep spindle count in all stages.
+AR	total_N1_density	Total - Spindle density (count/min) in N1 stage.
+AS	total_N2_density	Total - Spindle density (count/min) in N2 stage.
+AT	total_N3_density	Total - Spindle density (count/min) in N3 stage.
+AU	total_N2N3_density	Total - Spindle density (count/min) in N2 and N3 stage.
+AV	total_NREM_density	Total - Spindle density (count/min) in NREM stage (N1, N2, N3).
+AW	total_R_density	Total - Spindle density (count/min) in REM stage.
+AX	total_density	Total - Spindle density (count/min)
+AY	total_N1_spindle_sec	Total - Average spindle duration (s) in N1 stage.
+AZ	total_N2_spindle_sec	Total - Average spindle duration (s) in N2 stage.
+BA	total_N3_spindle_sec	Total - Average spindle duration (s) in N3 stage.
+BB	total_N2N3_spindle_sec	Total - Average spindle duration (s) in N2 and N3 stage.
+BC	total_NREM_spindle_sec	Total - Average spindle duration (s) in NREM stage (N1, N2, N3).
+BD	total_R_spindle_sec	Total - Average spindle duration (s) in REM stage.
+BE	total_spindle_sec	Total - Average spindle duration (s)
+BF	total_N1_dom_freq_Hz	Total - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+BG	total_N2_dom_freq_Hz	Total - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+BH	total_N3_dom_freq_Hz	Total - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+BI	total_N2N3_dom_freq_Hz	Total - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+BJ	total_NREM_dom_freq_Hz	Total - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+BK	total_R_dom_freq_Hz	Total - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+BL	total_dom_freq_Hz	Total - Spindle dominant frequency (Hz) where spectral energy is maximum.
+BM	total_N1_avg_freq_Hz	Total - Spindle average frequency (Hz) counting peaks in N1 stage.
+BN	total_N2_avg_freq_Hz	Total - Spindle average frequency (Hz) counting peaks in N2 stage.
+BO	total_N3_avg_freq_Hz	Total - Spindle average frequency (Hz) counting peaks in N3 stage.
+BP	total_N2N3_avg_freq_Hz	Total - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+BQ	total_NREM_avg_freq_Hz	Total - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+BR	total_R_avg_freq_Hz	Total - Spindle average frequency (Hz) counting peaks in REM stage.
+BS	total_avg_freq_Hz	Total - Spindle average frequency (Hz) counting peaks.
+BT	total_N1_amp_pkpk_uV	Total - Average peak-to-peak amplitude (µV) in N1 stage.
+BU	total_N2_amp_pkpk_uV	Total - Average peak-to-peak amplitude (µV) in N2 stage.
+BV	total_N3_amp_pkpk_uV	Total - Average peak-to-peak amplitude (µV) in N3 stage.
+BW	total_N2N3_amp_pkpk_uV	Total - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+BX	total_NREM_amp_pkpk_uV	Total - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+BY	total_R_amp_pkpk_uV	Total - Average peak-to-peak amplitude (µV) in REM stage.
+BZ	total_amp_pkpk_uV	Total - Average peak-to-peak amplitude (µV)
+CA	total_N1_amp_rms_uV	Total - Average rms amplitude (µV) in N1 stage.
+CB	total_N2_amp_rms_uV	Total - Average rms amplitude (µV) in N2 stage.
+CC	total_N3_amp_rms_uV	Total - Average rms amplitude (µV) in N3 stage.
+CD	total_N2N3_amp_rms_uV	Total - Average rms amplitude (µV) in N2 and N3 stage.
+CE	total_NREM_amp_rms_uV	Total - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+CF	total_R_amp_rms_uV	Total - Average rms amplitude (µV) in REM stage.
+CG	total_amp_rms_uV	Total - Average rms (Root Mean Square) amplitude (µV)
+CH	cyc1_valid_min	Cycle 1 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+CI	cyc1_N1_valid_min	Cycle 1 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+CJ	cyc1_N2_valid_min	Cycle 1 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+CK	cyc1_N3_valid_min	Cycle 1 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+CL	cyc1_N2N3_valid_min	Cycle 1 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+CM	cyc1_NREM_valid_min	Cycle 1 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+CN	cyc1_R_valid_min	Cycle 1 - Valid (no artifact) duration (min) in REM stage available for detection.
+CO	cyc1_min	Cycle 1 duration (min) minus the REM periods if excluded.
+CP	cyc1_N1_spindle_count	Cycle 1 - Sleep spindle count in N1 stage.
+CQ	cyc1_N2_spindle_count	Cycle 1 - Sleep spindle count in N2 stage.
+CR	cyc1_N3_spindle_count	Cycle 1 - Sleep spindle count in N3 stage.
+CS	cyc1_N2N3_spindle_count	Cycle 1 - Sleep spindle count in N2 and N3 stage.
+CT	cyc1_NREM_spindle_count	Cycle 1 - Sleep spindle count in NREM stage (N1, N2, N3).
+CU	cyc1_R_spindle_count	Cycle 1 - Sleep spindle count in REM stage.
+CV	cyc1_spindle_count	Cycle 1 - Sleep spindle count in all stages.
+CW	cyc1_N1_density	Cycle 1 - Spindle density (count/min) in N1 stage.
+CX	cyc1_N2_density	Cycle 1 - Spindle density (count/min) in N2 stage.
+CY	cyc1_N3_density	Cycle 1 - Spindle density (count/min) in N3 stage.
+CZ	cyc1_N2N3_density	Cycle 1 - Spindle density (count/min) in N2 and N3 stage.
+DA	cyc1_NREM_density	Cycle 1 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+DB	cyc1_R_density	Cycle 1 - Spindle density (count/min) in REM stage.
+DC	cyc1_density	Cycle 1 - Spindle density (count/min) in all stages.
+DD	cyc1_N1_spindle_sec	Cycle 1 - Average spindle duration (s) in N1 stage.
+DE	cyc1_N2_spindle_sec	Cycle 1 - Average spindle duration (s) in N2 stage.
+DF	cyc1_N3_spindle_sec	Cycle 1 - Average spindle duration (s) in N3 stage.
+DG	cyc1_N2N3_spindle_sec	Cycle 1 - Average spindle duration (s) in N2 and N3 stage.
+DH	cyc1_NREM_spindle_sec	Cycle 1 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+DI	cyc1_R_spindle_sec	Cycle 1 - Average spindle duration (s) in REM stage.
+DJ	cyc1_spindle_sec	Cycle 1 - Average spindle duration (s) in all stages.
+DK	cyc1_N1_dom_freq_Hz	Cycle 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+DL	cyc1_N2_dom_freq_Hz	Cycle 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+DM	cyc1_N3_dom_freq_Hz	Cycle 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+DN	cyc1_N2N3_dom_freq_Hz	Cycle 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+DO	cyc1_NREM_dom_freq_Hz	Cycle 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+DP	cyc1_R_dom_freq_Hz	Cycle 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+DQ	cyc1_dom_freq_Hz	Cycle 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+DR	cyc1_N1_avg_freq_Hz	Cycle 1 - Spindle average frequency (Hz) counting peaks in N1 stage.
+DS	cyc1_N2_avg_freq_Hz	Cycle 1 - Spindle average frequency (Hz) counting peaks in N2 stage.
+DT	cyc1_N3_avg_freq_Hz	Cycle 1 - Spindle average frequency (Hz) counting peaks in N3 stage.
+DU	cyc1_N2N3_avg_freq_Hz	Cycle 1 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+DV	cyc1_NREM_avg_freq_Hz	Cycle 1 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+DW	cyc1_R_avg_freq_Hz	Cycle 1 - Spindle average frequency (Hz) counting peaks in REM stage.
+DX	cyc1_avg_freq_Hz	Cycle 1 - Spindle average frequency (Hz) counting peaks in all stages.
+DY	cyc1_N1_amp_pkpk_uV	Cycle 1 - Average peak-to-peak amplitude (µV) in N1 stage.
+DZ	cyc1_N2_amp_pkpk_uV	Cycle 1 - Average peak-to-peak amplitude (µV) in N2 stage.
+EA	cyc1_N3_amp_pkpk_uV	Cycle 1 - Average peak-to-peak amplitude (µV) in N3 stage.
+EB	cyc1_N2N3_amp_pkpk_uV	Cycle 1 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+EC	cyc1_NREM_amp_pkpk_uV	Cycle 1 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+ED	cyc1_R_amp_pkpk_uV	Cycle 1 - Average peak-to-peak amplitude (µV) in REM stage.
+EE	cyc1_amp_pkpk_uV	Cycle 1 - Average peak-to-peak amplitude (µV) in all stages
+EF	cyc1_N1_amp_rms_uV	Cycle 1 - Average rms amplitude (µV) in N1 stage.
+EG	cyc1_N2_amp_rms_uV	Cycle 1 - Average rms amplitude (µV) in N2 stage.
+EH	cyc1_N3_amp_rms_uV	Cycle 1 - Average rms amplitude (µV) in N3 stage.
+EI	cyc1_N2N3_amp_rms_uV	Cycle 1 - Average rms amplitude (µV) in N2 and N3 stage.
+EJ	cyc1_NREM_amp_rms_uV	Cycle 1 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+EK	cyc1_R_amp_rms_uV	Cycle 1 - Average rms amplitude (µV) in REM stage.
+EL	cyc1_amp_rms_uV	Cycle 1 - Average rms (Root Mean Square) amplitude (µV) in all stages
+EM	cyc2_valid_min	Cycle 2 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+EN	cyc2_N1_valid_min	Cycle 2 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+EO	cyc2_N2_valid_min	Cycle 2 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+EP	cyc2_N3_valid_min	Cycle 2 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+EQ	cyc2_N2N3_valid_min	Cycle 2 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+ER	cyc2_NREM_valid_min	Cycle 2 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+ES	cyc2_R_valid_min	Cycle 2 - Valid (no artifact) duration (min) in REM stage available for detection.
+ET	cyc2_min	Cycle 2 duration (min) minus the REM periods if excluded.
+EU	cyc2_N1_spindle_count	Cycle 2 - Sleep spindle count in N1 stage.
+EV	cyc2_N2_spindle_count	Cycle 2 - Sleep spindle count in N2 stage.
+EW	cyc2_N3_spindle_count	Cycle 2 - Sleep spindle count in N3 stage.
+EX	cyc2_N2N3_spindle_count	Cycle 2 - Sleep spindle count in N2 and N3 stage.
+EY	cyc2_NREM_spindle_count	Cycle 2 - Sleep spindle count in NREM stage (N1, N2, N3).
+EZ	cyc2_R_spindle_count	Cycle 2 - Sleep spindle count in REM stage.
+FA	cyc2_spindle_count	Cycle 2 - Sleep spindle count in all stages.
+FB	cyc2_N1_density	Cycle 2 - Spindle density (count/min) in N1 stage.
+FC	cyc2_N2_density	Cycle 2 - Spindle density (count/min) in N2 stage.
+FD	cyc2_N3_density	Cycle 2 - Spindle density (count/min) in N3 stage.
+FE	cyc2_N2N3_density	Cycle 2 - Spindle density (count/min) in N2 and N3 stage.
+FF	cyc2_NREM_density	Cycle 2 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+FG	cyc2_R_density	Cycle 2 - Spindle density (count/min) in REM stage.
+FH	cyc2_density	Cycle 2 - Spindle density (count/min) in all stages.
+FI	cyc2_N1_spindle_sec	Cycle 2 - Average spindle duration (s) in N1 stage.
+FJ	cyc2_N2_spindle_sec	Cycle 2 - Average spindle duration (s) in N2 stage.
+FK	cyc2_N3_spindle_sec	Cycle 2 - Average spindle duration (s) in N3 stage.
+FL	cyc2_N2N3_spindle_sec	Cycle 2 - Average spindle duration (s) in N2 and N3 stage.
+FM	cyc2_NREM_spindle_sec	Cycle 2 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+FN	cyc2_R_spindle_sec	Cycle 2 - Average spindle duration (s) in REM stage.
+FO	cyc2_spindle_sec	Cycle 2 - Average spindle duration (s) in all stages.
+FP	cyc2_N1_dom_freq_Hz	Cycle 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+FQ	cyc2_N2_dom_freq_Hz	Cycle 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+FR	cyc2_N3_dom_freq_Hz	Cycle 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+FS	cyc2_N2N3_dom_freq_Hz	Cycle 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+FT	cyc2_NREM_dom_freq_Hz	Cycle 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+FU	cyc2_R_dom_freq_Hz	Cycle 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+FV	cyc2_dom_freq_Hz	Cycle 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+FW	cyc2_N1_avg_freq_Hz	Cycle 2 - Spindle average frequency (Hz) counting peaks in N1 stage.
+FX	cyc2_N2_avg_freq_Hz	Cycle 2 - Spindle average frequency (Hz) counting peaks in N2 stage.
+FY	cyc2_N3_avg_freq_Hz	Cycle 2 - Spindle average frequency (Hz) counting peaks in N3 stage.
+FZ	cyc2_N2N3_avg_freq_Hz	Cycle 2 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+GA	cyc2_NREM_avg_freq_Hz	Cycle 2 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+GB	cyc2_R_avg_freq_Hz	Cycle 2 - Spindle average frequency (Hz) counting peaks in REM stage.
+GC	cyc2_avg_freq_Hz	Cycle 2 - Spindle average frequency (Hz) counting peaks in all stages.
+GD	cyc2_N1_amp_pkpk_uV	Cycle 2 - Average peak-to-peak amplitude (µV) in N1 stage.
+GE	cyc2_N2_amp_pkpk_uV	Cycle 2 - Average peak-to-peak amplitude (µV) in N2 stage.
+GF	cyc2_N3_amp_pkpk_uV	Cycle 2 - Average peak-to-peak amplitude (µV) in N3 stage.
+GG	cyc2_N2N3_amp_pkpk_uV	Cycle 2 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+GH	cyc2_NREM_amp_pkpk_uV	Cycle 2 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+GI	cyc2_R_amp_pkpk_uV	Cycle 2 - Average peak-to-peak amplitude (µV) in REM stage.
+GJ	cyc2_amp_pkpk_uV	Cycle 2 - Average peak-to-peak amplitude (µV) in all stages
+GK	cyc2_N1_amp_rms_uV	Cycle 2 - Average rms amplitude (µV) in N1 stage.
+GL	cyc2_N2_amp_rms_uV	Cycle 2 - Average rms amplitude (µV) in N2 stage.
+GM	cyc2_N3_amp_rms_uV	Cycle 2 - Average rms amplitude (µV) in N3 stage.
+GN	cyc2_N2N3_amp_rms_uV	Cycle 2 - Average rms amplitude (µV) in N2 and N3 stage.
+GO	cyc2_NREM_amp_rms_uV	Cycle 2 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+GP	cyc2_R_amp_rms_uV	Cycle 2 - Average rms amplitude (µV) in REM stage.
+GQ	cyc2_amp_rms_uV	Cycle 2 - Average rms (Root Mean Square) amplitude (µV) in all stages
+GR	cyc3_valid_min	Cycle 3 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+GS	cyc3_N1_valid_min	Cycle 3 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+GT	cyc3_N2_valid_min	Cycle 3 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+GU	cyc3_N3_valid_min	Cycle 3 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+GV	cyc3_N2N3_valid_min	Cycle 3 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+GW	cyc3_NREM_valid_min	Cycle 3 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+GX	cyc3_R_valid_min	Cycle 3 - Valid (no artifact) duration (min) in REM stage available for detection.
+GY	cyc3_min	Cycle 3 duration (min) minus the REM periods if excluded.
+GZ	cyc3_N1_spindle_count	Cycle 3 - Sleep spindle count in N1 stage.
+HA	cyc3_N2_spindle_count	Cycle 3 - Sleep spindle count in N2 stage.
+HB	cyc3_N3_spindle_count	Cycle 3 - Sleep spindle count in N3 stage.
+HC	cyc3_N2N3_spindle_count	Cycle 3 - Sleep spindle count in N2 and N3 stage.
+HD	cyc3_NREM_spindle_count	Cycle 3 - Sleep spindle count in NREM stage (N1, N2, N3).
+HE	cyc3_R_spindle_count	Cycle 3 - Sleep spindle count in REM stage.
+HF	cyc3_spindle_count	Cycle 3 - Sleep spindle count in all stages.
+HG	cyc3_N1_density	Cycle 3 - Spindle density (count/min) in N1 stage.
+HH	cyc3_N2_density	Cycle 3 - Spindle density (count/min) in N2 stage.
+HI	cyc3_N3_density	Cycle 3 - Spindle density (count/min) in N3 stage.
+HJ	cyc3_N2N3_density	Cycle 3 - Spindle density (count/min) in N2 and N3 stage.
+HK	cyc3_NREM_density	Cycle 3 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+HL	cyc3_R_density	Cycle 3 - Spindle density (count/min) in REM stage.
+HM	cyc3_density	Cycle 3 - Spindle density (count/min) in all stages.
+HN	cyc3_N1_spindle_sec	Cycle 3 - Average spindle duration (s) in N1 stage.
+HO	cyc3_N2_spindle_sec	Cycle 3 - Average spindle duration (s) in N2 stage.
+HP	cyc3_N3_spindle_sec	Cycle 3 - Average spindle duration (s) in N3 stage.
+HQ	cyc3_N2N3_spindle_sec	Cycle 3 - Average spindle duration (s) in N2 and N3 stage.
+HR	cyc3_NREM_spindle_sec	Cycle 3 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+HS	cyc3_R_spindle_sec	Cycle 3 - Average spindle duration (s) in REM stage.
+HT	cyc3_spindle_sec	Cycle 3 - Average spindle duration (s) in all stages.
+HU	cyc3_N1_dom_freq_Hz	Cycle 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+HV	cyc3_N2_dom_freq_Hz	Cycle 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+HW	cyc3_N3_dom_freq_Hz	Cycle 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+HX	cyc3_N2N3_dom_freq_Hz	Cycle 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+HY	cyc3_NREM_dom_freq_Hz	Cycle 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+HZ	cyc3_R_dom_freq_Hz	Cycle 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+IA	cyc3_dom_freq_Hz	Cycle 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+IB	cyc3_N1_avg_freq_Hz	Cycle 3 - Spindle average frequency (Hz) counting peaks in N1 stage.
+IC	cyc3_N2_avg_freq_Hz	Cycle 3 - Spindle average frequency (Hz) counting peaks in N2 stage.
+ID	cyc3_N3_avg_freq_Hz	Cycle 3 - Spindle average frequency (Hz) counting peaks in N3 stage.
+IE	cyc3_N2N3_avg_freq_Hz	Cycle 3 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+IF	cyc3_NREM_avg_freq_Hz	Cycle 3 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+IG	cyc3_R_avg_freq_Hz	Cycle 3 - Spindle average frequency (Hz) counting peaks in REM stage.
+IH	cyc3_avg_freq_Hz	Cycle 3 - Spindle average frequency (Hz) counting peaks in all stages.
+II	cyc3_N1_amp_pkpk_uV	Cycle 3 - Average peak-to-peak amplitude (µV) in N1 stage.
+IJ	cyc3_N2_amp_pkpk_uV	Cycle 3 - Average peak-to-peak amplitude (µV) in N2 stage.
+IK	cyc3_N3_amp_pkpk_uV	Cycle 3 - Average peak-to-peak amplitude (µV) in N3 stage.
+IL	cyc3_N2N3_amp_pkpk_uV	Cycle 3 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+IM	cyc3_NREM_amp_pkpk_uV	Cycle 3 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+IN	cyc3_R_amp_pkpk_uV	Cycle 3 - Average peak-to-peak amplitude (µV) in REM stage.
+IO	cyc3_amp_pkpk_uV	Cycle 3 - Average peak-to-peak amplitude (µV) in all stages
+IP	cyc3_N1_amp_rms_uV	Cycle 3 - Average rms amplitude (µV) in N1 stage.
+IQ	cyc3_N2_amp_rms_uV	Cycle 3 - Average rms amplitude (µV) in N2 stage.
+IR	cyc3_N3_amp_rms_uV	Cycle 3 - Average rms amplitude (µV) in N3 stage.
+IS	cyc3_N2N3_amp_rms_uV	Cycle 3 - Average rms amplitude (µV) in N2 and N3 stage.
+IT	cyc3_NREM_amp_rms_uV	Cycle 3 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+IU	cyc3_R_amp_rms_uV	Cycle 3 - Average rms amplitude (µV) in REM stage.
+IV	cyc3_amp_rms_uV	Cycle 3 - Average rms (Root Mean Square) amplitude (µV) in all stages
+IW	cyc4_valid_min	Cycle 4 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+IX	cyc4_N1_valid_min	Cycle 4 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+IY	cyc4_N2_valid_min	Cycle 4 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+IZ	cyc4_N3_valid_min	Cycle 4 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+JA	cyc4_N2N3_valid_min	Cycle 4 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+JB	cyc4_NREM_valid_min	Cycle 4 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+JC	cyc4_R_valid_min	Cycle 4 - Valid (no artifact) duration (min) in REM stage available for detection.
+JD	cyc4_min	Cycle 4 duration (min) minus the REM periods if excluded.
+JE	cyc4_N1_spindle_count	Cycle 4 - Sleep spindle count in N1 stage.
+JF	cyc4_N2_spindle_count	Cycle 4 - Sleep spindle count in N2 stage.
+JG	cyc4_N3_spindle_count	Cycle 4 - Sleep spindle count in N3 stage.
+JH	cyc4_N2N3_spindle_count	Cycle 4 - Sleep spindle count in N2 and N3 stage.
+JI	cyc4_NREM_spindle_count	Cycle 4 - Sleep spindle count in NREM stage (N1, N2, N3).
+JJ	cyc4_R_spindle_count	Cycle 4 - Sleep spindle count in REM stage.
+JK	cyc4_spindle_count	Cycle 4 - Sleep spindle count in all stages.
+JL	cyc4_N1_density	Cycle 4 - Spindle density (count/min) in N1 stage.
+JM	cyc4_N2_density	Cycle 4 - Spindle density (count/min) in N2 stage.
+JN	cyc4_N3_density	Cycle 4 - Spindle density (count/min) in N3 stage.
+JO	cyc4_N2N3_density	Cycle 4 - Spindle density (count/min) in N2 and N3 stage.
+JP	cyc4_NREM_density	Cycle 4 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+JQ	cyc4_R_density	Cycle 4 - Spindle density (count/min) in REM stage.
+JR	cyc4_density	Cycle 4 - Spindle density (count/min) in all stages.
+JS	cyc4_N1_spindle_sec	Cycle 4 - Average spindle duration (s) in N1 stage.
+JT	cyc4_N2_spindle_sec	Cycle 4 - Average spindle duration (s) in N2 stage.
+JU	cyc4_N3_spindle_sec	Cycle 4 - Average spindle duration (s) in N3 stage.
+JV	cyc4_N2N3_spindle_sec	Cycle 4 - Average spindle duration (s) in N2 and N3 stage.
+JW	cyc4_NREM_spindle_sec	Cycle 4 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+JX	cyc4_R_spindle_sec	Cycle 4 - Average spindle duration (s) in REM stage.
+JY	cyc4_spindle_sec	Cycle 4 - Average spindle duration (s) in all stages.
+JZ	cyc4_N1_dom_freq_Hz	Cycle 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+KA	cyc4_N2_dom_freq_Hz	Cycle 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+KB	cyc4_N3_dom_freq_Hz	Cycle 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+KC	cyc4_N2N3_dom_freq_Hz	Cycle 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+KD	cyc4_NREM_dom_freq_Hz	Cycle 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+KE	cyc4_R_dom_freq_Hz	Cycle 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+KF	cyc4_dom_freq_Hz	Cycle 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+KG	cyc4_N1_avg_freq_Hz	Cycle 4 - Spindle average frequency (Hz) counting peaks in N1 stage.
+KH	cyc4_N2_avg_freq_Hz	Cycle 4 - Spindle average frequency (Hz) counting peaks in N2 stage.
+KI	cyc4_N3_avg_freq_Hz	Cycle 4 - Spindle average frequency (Hz) counting peaks in N3 stage.
+KJ	cyc4_N2N3_avg_freq_Hz	Cycle 4 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+KK	cyc4_NREM_avg_freq_Hz	Cycle 4 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+KL	cyc4_R_avg_freq_Hz	Cycle 4 - Spindle average frequency (Hz) counting peaks in REM stage.
+KM	cyc4_avg_freq_Hz	Cycle 4 - Spindle average frequency (Hz) counting peaks in all stages.
+KN	cyc4_N1_amp_pkpk_uV	Cycle 4 - Average peak-to-peak amplitude (µV) in N1 stage.
+KO	cyc4_N2_amp_pkpk_uV	Cycle 4 - Average peak-to-peak amplitude (µV) in N2 stage.
+KP	cyc4_N3_amp_pkpk_uV	Cycle 4 - Average peak-to-peak amplitude (µV) in N3 stage.
+KQ	cyc4_N2N3_amp_pkpk_uV	Cycle 4 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+KR	cyc4_NREM_amp_pkpk_uV	Cycle 4 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+KS	cyc4_R_amp_pkpk_uV	Cycle 4 - Average peak-to-peak amplitude (µV) in REM stage.
+KT	cyc4_amp_pkpk_uV	Cycle 4 - Average peak-to-peak amplitude (µV) in all stages
+KU	cyc4_N1_amp_rms_uV	Cycle 4 - Average rms amplitude (µV) in N1 stage.
+KV	cyc4_N2_amp_rms_uV	Cycle 4 - Average rms amplitude (µV) in N2 stage.
+KW	cyc4_N3_amp_rms_uV	Cycle 4 - Average rms amplitude (µV) in N3 stage.
+KX	cyc4_N2N3_amp_rms_uV	Cycle 4 - Average rms amplitude (µV) in N2 and N3 stage.
+KY	cyc4_NREM_amp_rms_uV	Cycle 4 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+KZ	cyc4_R_amp_rms_uV	Cycle 4 - Average rms amplitude (µV) in REM stage.
+LA	cyc4_amp_rms_uV	Cycle 4 - Average rms (Root Mean Square) amplitude (µV) in all stages
+LB	cyc5_valid_min	Cycle 5 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+LC	cyc5_N1_valid_min	Cycle 5 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+LD	cyc5_N2_valid_min	Cycle 5 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+LE	cyc5_N3_valid_min	Cycle 5 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+LF	cyc5_N2N3_valid_min	Cycle 5 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+LG	cyc5_NREM_valid_min	Cycle 5 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+LH	cyc5_R_valid_min	Cycle 5 - Valid (no artifact) duration (min) in REM stage available for detection.
+LI	cyc5_min	Cycle 5 duration (min) minus the REM periods if excluded.
+LJ	cyc5_N1_spindle_count	Cycle 5 - Sleep spindle count in N1 stage.
+LK	cyc5_N2_spindle_count	Cycle 5 - Sleep spindle count in N2 stage.
+LL	cyc5_N3_spindle_count	Cycle 5 - Sleep spindle count in N3 stage.
+LM	cyc5_N2N3_spindle_count	Cycle 5 - Sleep spindle count in N2 and N3 stage.
+LN	cyc5_NREM_spindle_count	Cycle 5 - Sleep spindle count in NREM stage (N1, N2, N3).
+LO	cyc5_R_spindle_count	Cycle 5 - Sleep spindle count in REM stage.
+LP	cyc5_spindle_count	Cycle 5 - Sleep spindle count in all stages.
+LQ	cyc5_N1_density	Cycle 5 - Spindle density (count/min) in N1 stage.
+LR	cyc5_N2_density	Cycle 5 - Spindle density (count/min) in N2 stage.
+LS	cyc5_N3_density	Cycle 5 - Spindle density (count/min) in N3 stage.
+LT	cyc5_N2N3_density	Cycle 5 - Spindle density (count/min) in N2 and N3 stage.
+LU	cyc5_NREM_density	Cycle 5 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+LV	cyc5_R_density	Cycle 5 - Spindle density (count/min) in REM stage.
+LW	cyc5_density	Cycle 5 - Spindle density (count/min) in all stages.
+LX	cyc5_N1_spindle_sec	Cycle 5 - Average spindle duration (s) in N1 stage.
+LY	cyc5_N2_spindle_sec	Cycle 5 - Average spindle duration (s) in N2 stage.
+LZ	cyc5_N3_spindle_sec	Cycle 5 - Average spindle duration (s) in N3 stage.
+MA	cyc5_N2N3_spindle_sec	Cycle 5 - Average spindle duration (s) in N2 and N3 stage.
+MB	cyc5_NREM_spindle_sec	Cycle 5 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+MC	cyc5_R_spindle_sec	Cycle 5 - Average spindle duration (s) in REM stage.
+MD	cyc5_spindle_sec	Cycle 5 - Average spindle duration (s) in all stages.
+ME	cyc5_N1_dom_freq_Hz	Cycle 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+MF	cyc5_N2_dom_freq_Hz	Cycle 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+MG	cyc5_N3_dom_freq_Hz	Cycle 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+MH	cyc5_N2N3_dom_freq_Hz	Cycle 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+MI	cyc5_NREM_dom_freq_Hz	Cycle 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+MJ	cyc5_R_dom_freq_Hz	Cycle 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+MK	cyc5_dom_freq_Hz	Cycle 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+ML	cyc5_N1_avg_freq_Hz	Cycle 5 - Spindle average frequency (Hz) counting peaks in N1 stage.
+MM	cyc5_N2_avg_freq_Hz	Cycle 5 - Spindle average frequency (Hz) counting peaks in N2 stage.
+MN	cyc5_N3_avg_freq_Hz	Cycle 5 - Spindle average frequency (Hz) counting peaks in N3 stage.
+MO	cyc5_N2N3_avg_freq_Hz	Cycle 5 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+MP	cyc5_NREM_avg_freq_Hz	Cycle 5 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+MQ	cyc5_R_avg_freq_Hz	Cycle 5 - Spindle average frequency (Hz) counting peaks in REM stage.
+MR	cyc5_avg_freq_Hz	Cycle 5 - Spindle average frequency (Hz) counting peaks in all stages.
+MS	cyc5_N1_amp_pkpk_uV	Cycle 5 - Average peak-to-peak amplitude (µV) in N1 stage.
+MT	cyc5_N2_amp_pkpk_uV	Cycle 5 - Average peak-to-peak amplitude (µV) in N2 stage.
+MU	cyc5_N3_amp_pkpk_uV	Cycle 5 - Average peak-to-peak amplitude (µV) in N3 stage.
+MV	cyc5_N2N3_amp_pkpk_uV	Cycle 5 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+MW	cyc5_NREM_amp_pkpk_uV	Cycle 5 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+MX	cyc5_R_amp_pkpk_uV	Cycle 5 - Average peak-to-peak amplitude (µV) in REM stage.
+MY	cyc5_amp_pkpk_uV	Cycle 5 - Average peak-to-peak amplitude (µV) in all stages
+MZ	cyc5_N1_amp_rms_uV	Cycle 5 - Average rms amplitude (µV) in N1 stage.
+NA	cyc5_N2_amp_rms_uV	Cycle 5 - Average rms amplitude (µV) in N2 stage.
+NB	cyc5_N3_amp_rms_uV	Cycle 5 - Average rms amplitude (µV) in N3 stage.
+NC	cyc5_N2N3_amp_rms_uV	Cycle 5 - Average rms amplitude (µV) in N2 and N3 stage.
+ND	cyc5_NREM_amp_rms_uV	Cycle 5 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+NE	cyc5_R_amp_rms_uV	Cycle 5 - Average rms amplitude (µV) in REM stage.
+NF	cyc5_amp_rms_uV	Cycle 5 - Average rms (Root Mean Square) amplitude (µV) in all stages
+NG	cyc6_valid_min	Cycle 6 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+NH	cyc6_N1_valid_min	Cycle 6 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+NI	cyc6_N2_valid_min	Cycle 6 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+NJ	cyc6_N3_valid_min	Cycle 6 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+NK	cyc6_N2N3_valid_min	Cycle 6 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+NL	cyc6_NREM_valid_min	Cycle 6 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+NM	cyc6_R_valid_min	Cycle 6 - Valid (no artifact) duration (min) in REM stage available for detection.
+NN	cyc6_min	Cycle 6 duration (min) minus the REM periods if excluded.
+NO	cyc6_N1_spindle_count	Cycle 6 - Sleep spindle count in N1 stage.
+NP	cyc6_N2_spindle_count	Cycle 6 - Sleep spindle count in N2 stage.
+NQ	cyc6_N3_spindle_count	Cycle 6 - Sleep spindle count in N3 stage.
+NR	cyc6_N2N3_spindle_count	Cycle 6 - Sleep spindle count in N2 and N3 stage.
+NS	cyc6_NREM_spindle_count	Cycle 6 - Sleep spindle count in NREM stage (N1, N2, N3).
+NT	cyc6_R_spindle_count	Cycle 6 - Sleep spindle count in REM stage.
+NU	cyc6_spindle_count	Cycle 6 - Sleep spindle count in all stages.
+NV	cyc6_N1_density	Cycle 6 - Spindle density (count/min) in N1 stage.
+NW	cyc6_N2_density	Cycle 6 - Spindle density (count/min) in N2 stage.
+NX	cyc6_N3_density	Cycle 6 - Spindle density (count/min) in N3 stage.
+NY	cyc6_N2N3_density	Cycle 6 - Spindle density (count/min) in N2 and N3 stage.
+NZ	cyc6_NREM_density	Cycle 6 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+OA	cyc6_R_density	Cycle 6 - Spindle density (count/min) in REM stage.
+OB	cyc6_density	Cycle 6 - Spindle density (count/min) in all stages.
+OC	cyc6_N1_spindle_sec	Cycle 6 - Average spindle duration (s) in N1 stage.
+OD	cyc6_N2_spindle_sec	Cycle 6 - Average spindle duration (s) in N2 stage.
+OE	cyc6_N3_spindle_sec	Cycle 6 - Average spindle duration (s) in N3 stage.
+OF	cyc6_N2N3_spindle_sec	Cycle 6 - Average spindle duration (s) in N2 and N3 stage.
+OG	cyc6_NREM_spindle_sec	Cycle 6 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+OH	cyc6_R_spindle_sec	Cycle 6 - Average spindle duration (s) in REM stage.
+OI	cyc6_spindle_sec	Cycle 6 - Average spindle duration (s) in all stages.
+OJ	cyc6_N1_dom_freq_Hz	Cycle 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+OK	cyc6_N2_dom_freq_Hz	Cycle 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+OL	cyc6_N3_dom_freq_Hz	Cycle 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+OM	cyc6_N2N3_dom_freq_Hz	Cycle 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+ON	cyc6_NREM_dom_freq_Hz	Cycle 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+OO	cyc6_R_dom_freq_Hz	Cycle 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+OP	cyc6_dom_freq_Hz	Cycle 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+OQ	cyc6_N1_avg_freq_Hz	Cycle 6 - Spindle average frequency (Hz) counting peaks in N1 stage.
+OR	cyc6_N2_avg_freq_Hz	Cycle 6 - Spindle average frequency (Hz) counting peaks in N2 stage.
+OS	cyc6_N3_avg_freq_Hz	Cycle 6 - Spindle average frequency (Hz) counting peaks in N3 stage.
+OT	cyc6_N2N3_avg_freq_Hz	Cycle 6 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+OU	cyc6_NREM_avg_freq_Hz	Cycle 6 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+OV	cyc6_R_avg_freq_Hz	Cycle 6 - Spindle average frequency (Hz) counting peaks in REM stage.
+OW	cyc6_avg_freq_Hz	Cycle 6 - Spindle average frequency (Hz) counting peaks in all stages.
+OX	cyc6_N1_amp_pkpk_uV	Cycle 6 - Average peak-to-peak amplitude (µV) in N1 stage.
+OY	cyc6_N2_amp_pkpk_uV	Cycle 6 - Average peak-to-peak amplitude (µV) in N2 stage.
+OZ	cyc6_N3_amp_pkpk_uV	Cycle 6 - Average peak-to-peak amplitude (µV) in N3 stage.
+PA	cyc6_N2N3_amp_pkpk_uV	Cycle 6 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+PB	cyc6_NREM_amp_pkpk_uV	Cycle 6 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+PC	cyc6_R_amp_pkpk_uV	Cycle 6 - Average peak-to-peak amplitude (µV) in REM stage.
+PD	cyc6_amp_pkpk_uV	Cycle 6 - Average peak-to-peak amplitude (µV) in all stages
+PE	cyc6_N1_amp_rms_uV	Cycle 6 - Average rms amplitude (µV) in N1 stage.
+PF	cyc6_N2_amp_rms_uV	Cycle 6 - Average rms amplitude (µV) in N2 stage.
+PG	cyc6_N3_amp_rms_uV	Cycle 6 - Average rms amplitude (µV) in N3 stage.
+PH	cyc6_N2N3_amp_rms_uV	Cycle 6 - Average rms amplitude (µV) in N2 and N3 stage.
+PI	cyc6_NREM_amp_rms_uV	Cycle 6 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+PJ	cyc6_R_amp_rms_uV	Cycle 6 - Average rms amplitude (µV) in REM stage.
+PK	cyc6_amp_rms_uV	Cycle 6 - Average rms (Root Mean Square) amplitude (µV) in all stages
+PL	clock_h1_valid_min	Hour 1 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+PM	clock_h1_N1_valid_min	Hour 1 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+PN	clock_h1_N2_valid_min	Hour 1 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+PO	clock_h1_N3_valid_min	Hour 1 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+PP	clock_h1_N2N3_valid_min	Hour 1 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+PQ	clock_h1_NREM_valid_min	Hour 1 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+PR	clock_h1_R_valid_min	Hour 1 - Valid (no artifact) duration (min) in REM stage available for detection.
+PS	clock_h1_min	Hour 1 duration (min) minus the REM periods if excluded.
+PT	clock_h1_N1_spindle_count	Hour 1 - Sleep spindle count in N1 stage.
+PU	clock_h1_N2_spindle_count	Hour 1 - Sleep spindle count in N2 stage.
+PV	clock_h1_N3_spindle_count	Hour 1 - Sleep spindle count in N3 stage.
+PW	clock_h1_N2N3_spindle_count	Hour 1 - Sleep spindle count in N2 and N3 stage.
+PX	clock_h1_NREM_spindle_count	Hour 1 - Sleep spindle count in NREM stage (N1, N2, N3).
+PY	clock_h1_R_spindle_count	Hour 1 - Sleep spindle count in REM stage.
+PZ	clock_h1_spindle_count	Hour 1 - Sleep spindle count in all stages.
+QA	clock_h1_N1_density	Hour 1 - Spindle density (count/min) in N1 stage.
+QB	clock_h1_N2_density	Hour 1 - Spindle density (count/min) in N2 stage.
+QC	clock_h1_N3_density	Hour 1 - Spindle density (count/min) in N3 stage.
+QD	clock_h1_N2N3_density	Hour 1 - Spindle density (count/min) in N2 and N3 stage.
+QE	clock_h1_NREM_density	Hour 1 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+QF	clock_h1_R_density	Hour 1 - Spindle density (count/min) in REM stage.
+QG	clock_h1_density	Hour 1 - Spindle density (count/min) in all stages.
+QH	clock_h1_N1_spindle_sec	Hour 1 - Average spindle duration (s) in N1 stage.
+QI	clock_h1_N2_spindle_sec	Hour 1 - Average spindle duration (s) in N2 stage.
+QJ	clock_h1_N3_spindle_sec	Hour 1 - Average spindle duration (s) in N3 stage.
+QK	clock_h1_N2N3_spindle_sec	Hour 1 - Average spindle duration (s) in N2 and N3 stage.
+QL	clock_h1_NREM_spindle_sec	Hour 1 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+QM	clock_h1_R_spindle_sec	Hour 1 - Average spindle duration (s) in REM stage.
+QN	clock_h1_spindle_sec	Hour 1 - Average spindle duration (s) in all stages.
+QO	clock_h1_N1_dom_freq_Hz	Hour 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+QP	clock_h1_N2_dom_freq_Hz	Hour 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+QQ	clock_h1_N3_dom_freq_Hz	Hour 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+QR	clock_h1_N2N3_dom_freq_Hz	Hour 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+QS	clock_h1_NREM_dom_freq_Hz	Hour 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+QT	clock_h1_R_dom_freq_Hz	Hour 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+QU	clock_h1_dom_freq_Hz	Hour 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+QV	clock_h1_N1_avg_freq_Hz	Hour 1 - Spindle average frequency (Hz) counting peaks in N1 stage.
+QW	clock_h1_N2_avg_freq_Hz	Hour 1 - Spindle average frequency (Hz) counting peaks in N2 stage.
+QX	clock_h1_N3_avg_freq_Hz	Hour 1 - Spindle average frequency (Hz) counting peaks in N3 stage.
+QY	clock_h1_N2N3_avg_freq_Hz	Hour 1 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+QZ	clock_h1_NREM_avg_freq_Hz	Hour 1 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+RA	clock_h1_R_avg_freq_Hz	Hour 1 - Spindle average frequency (Hz) counting peaks in REM stage.
+RB	clock_h1_avg_freq_Hz	Hour 1 - Spindle average frequency (Hz) counting peaks in all stages.
+RC	clock_h1_N1_amp_pkpk_uV	Hour 1 - Average peak-to-peak amplitude (µV) in N1 stage.
+RD	clock_h1_N2_amp_pkpk_uV	Hour 1 - Average peak-to-peak amplitude (µV) in N2 stage.
+RE	clock_h1_N3_amp_pkpk_uV	Hour 1 - Average peak-to-peak amplitude (µV) in N3 stage.
+RF	clock_h1_N2N3_amp_pkpk_uV	Hour 1 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+RG	clock_h1_NREM_amp_pkpk_uV	Hour 1 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+RH	clock_h1_R_amp_pkpk_uV	Hour 1 - Average peak-to-peak amplitude (µV) in REM stage.
+RI	clock_h1_amp_pkpk_uV	Hour 1 - Average peak-to-peak amplitude (µV) in all stages
+RJ	clock_h1_N1_amp_rms_uV	Hour 1 - Average rms amplitude (µV) in N1 stage.
+RK	clock_h1_N2_amp_rms_uV	Hour 1 - Average rms amplitude (µV) in N2 stage.
+RL	clock_h1_N3_amp_rms_uV	Hour 1 - Average rms amplitude (µV) in N3 stage.
+RM	clock_h1_N2N3_amp_rms_uV	Hour 1 - Average rms amplitude (µV) in N2 and N3 stage.
+RN	clock_h1_NREM_amp_rms_uV	Hour 1 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+RO	clock_h1_R_amp_rms_uV	Hour 1 - Average rms amplitude (µV) in REM stage.
+RP	clock_h1_amp_rms_uV	Hour 1 - Average rms (Root Mean Square) amplitude (µV) in all stages
+RQ	clock_h2_valid_min	Hour 2 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+RR	clock_h2_N1_valid_min	Hour 2 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+RS	clock_h2_N2_valid_min	Hour 2 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+RT	clock_h2_N3_valid_min	Hour 2 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+RU	clock_h2_N2N3_valid_min	Hour 2 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+RV	clock_h2_NREM_valid_min	Hour 2 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+RW	clock_h2_R_valid_min	Hour 2 - Valid (no artifact) duration (min) in REM stage available for detection.
+RX	clock_h2_min	Hour 2 duration (min) minus the REM periods if excluded.
+RY	clock_h2_N1_spindle_count	Hour 2 - Sleep spindle count in N1 stage.
+RZ	clock_h2_N2_spindle_count	Hour 2 - Sleep spindle count in N2 stage.
+SA	clock_h2_N3_spindle_count	Hour 2 - Sleep spindle count in N3 stage.
+SB	clock_h2_N2N3_spindle_count	Hour 2 - Sleep spindle count in N2 and N3 stage.
+SC	clock_h2_NREM_spindle_count	Hour 2 - Sleep spindle count in NREM stage (N1, N2, N3).
+SD	clock_h2_R_spindle_count	Hour 2 - Sleep spindle count in REM stage.
+SE	clock_h2_spindle_count	Hour 2 - Sleep spindle count in all stages.
+SF	clock_h2_N1_density	Hour 2 - Spindle density (count/min) in N1 stage.
+SG	clock_h2_N2_density	Hour 2 - Spindle density (count/min) in N2 stage.
+SH	clock_h2_N3_density	Hour 2 - Spindle density (count/min) in N3 stage.
+SI	clock_h2_N2N3_density	Hour 2 - Spindle density (count/min) in N2 and N3 stage.
+SJ	clock_h2_NREM_density	Hour 2 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+SK	clock_h2_R_density	Hour 2 - Spindle density (count/min) in REM stage.
+SL	clock_h2_density	Hour 2 - Spindle density (count/min) in all stages.
+SM	clock_h2_N1_spindle_sec	Hour 2 - Average spindle duration (s) in N1 stage.
+SN	clock_h2_N2_spindle_sec	Hour 2 - Average spindle duration (s) in N2 stage.
+SO	clock_h2_N3_spindle_sec	Hour 2 - Average spindle duration (s) in N3 stage.
+SP	clock_h2_N2N3_spindle_sec	Hour 2 - Average spindle duration (s) in N2 and N3 stage.
+SQ	clock_h2_NREM_spindle_sec	Hour 2 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+SR	clock_h2_R_spindle_sec	Hour 2 - Average spindle duration (s) in REM stage.
+SS	clock_h2_spindle_sec	Hour 2 - Average spindle duration (s) in all stages.
+ST	clock_h2_N1_dom_freq_Hz	Hour 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+SU	clock_h2_N2_dom_freq_Hz	Hour 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+SV	clock_h2_N3_dom_freq_Hz	Hour 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+SW	clock_h2_N2N3_dom_freq_Hz	Hour 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+SX	clock_h2_NREM_dom_freq_Hz	Hour 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+SY	clock_h2_R_dom_freq_Hz	Hour 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+SZ	clock_h2_dom_freq_Hz	Hour 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+TA	clock_h2_N1_avg_freq_Hz	Hour 2 - Spindle average frequency (Hz) counting peaks in N1 stage.
+TB	clock_h2_N2_avg_freq_Hz	Hour 2 - Spindle average frequency (Hz) counting peaks in N2 stage.
+TC	clock_h2_N3_avg_freq_Hz	Hour 2 - Spindle average frequency (Hz) counting peaks in N3 stage.
+TD	clock_h2_N2N3_avg_freq_Hz	Hour 2 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+TE	clock_h2_NREM_avg_freq_Hz	Hour 2 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+TF	clock_h2_R_avg_freq_Hz	Hour 2 - Spindle average frequency (Hz) counting peaks in REM stage.
+TG	clock_h2_avg_freq_Hz	Hour 2 - Spindle average frequency (Hz) counting peaks in all stages.
+TH	clock_h2_N1_amp_pkpk_uV	Hour 2 - Average peak-to-peak amplitude (µV) in N1 stage.
+TI	clock_h2_N2_amp_pkpk_uV	Hour 2 - Average peak-to-peak amplitude (µV) in N2 stage.
+TJ	clock_h2_N3_amp_pkpk_uV	Hour 2 - Average peak-to-peak amplitude (µV) in N3 stage.
+TK	clock_h2_N2N3_amp_pkpk_uV	Hour 2 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+TL	clock_h2_NREM_amp_pkpk_uV	Hour 2 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+TM	clock_h2_R_amp_pkpk_uV	Hour 2 - Average peak-to-peak amplitude (µV) in REM stage.
+TN	clock_h2_amp_pkpk_uV	Hour 2 - Average peak-to-peak amplitude (µV) in all stages
+TO	clock_h2_N1_amp_rms_uV	Hour 2 - Average rms amplitude (µV) in N1 stage.
+TP	clock_h2_N2_amp_rms_uV	Hour 2 - Average rms amplitude (µV) in N2 stage.
+TQ	clock_h2_N3_amp_rms_uV	Hour 2 - Average rms amplitude (µV) in N3 stage.
+TR	clock_h2_N2N3_amp_rms_uV	Hour 2 - Average rms amplitude (µV) in N2 and N3 stage.
+TS	clock_h2_NREM_amp_rms_uV	Hour 2 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+TT	clock_h2_R_amp_rms_uV	Hour 2 - Average rms amplitude (µV) in REM stage.
+TU	clock_h2_amp_rms_uV	Hour 2 - Average rms (Root Mean Square) amplitude (µV) in all stages
+TV	clock_h3_valid_min	Hour 3 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+TW	clock_h3_N1_valid_min	Hour 3 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+TX	clock_h3_N2_valid_min	Hour 3 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+TY	clock_h3_N3_valid_min	Hour 3 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+TZ	clock_h3_N2N3_valid_min	Hour 3 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+UA	clock_h3_NREM_valid_min	Hour 3 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+UB	clock_h3_R_valid_min	Hour 3 - Valid (no artifact) duration (min) in REM stage available for detection.
+UC	clock_h3_min	Hour 3 duration (min) minus the REM periods if excluded.
+UD	clock_h3_N1_spindle_count	Hour 3 - Sleep spindle count in N1 stage.
+UE	clock_h3_N2_spindle_count	Hour 3 - Sleep spindle count in N2 stage.
+UF	clock_h3_N3_spindle_count	Hour 3 - Sleep spindle count in N3 stage.
+UG	clock_h3_N2N3_spindle_count	Hour 3 - Sleep spindle count in N2 and N3 stage.
+UH	clock_h3_NREM_spindle_count	Hour 3 - Sleep spindle count in NREM stage (N1, N2, N3).
+UI	clock_h3_R_spindle_count	Hour 3 - Sleep spindle count in REM stage.
+UJ	clock_h3_spindle_count	Hour 3 - Sleep spindle count in all stages.
+UK	clock_h3_N1_density	Hour 3 - Spindle density (count/min) in N1 stage.
+UL	clock_h3_N2_density	Hour 3 - Spindle density (count/min) in N2 stage.
+UM	clock_h3_N3_density	Hour 3 - Spindle density (count/min) in N3 stage.
+UN	clock_h3_N2N3_density	Hour 3 - Spindle density (count/min) in N2 and N3 stage.
+UO	clock_h3_NREM_density	Hour 3 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+UP	clock_h3_R_density	Hour 3 - Spindle density (count/min) in REM stage.
+UQ	clock_h3_density	Hour 3 - Spindle density (count/min) in all stages.
+UR	clock_h3_N1_spindle_sec	Hour 3 - Average spindle duration (s) in N1 stage.
+US	clock_h3_N2_spindle_sec	Hour 3 - Average spindle duration (s) in N2 stage.
+UT	clock_h3_N3_spindle_sec	Hour 3 - Average spindle duration (s) in N3 stage.
+UU	clock_h3_N2N3_spindle_sec	Hour 3 - Average spindle duration (s) in N2 and N3 stage.
+UV	clock_h3_NREM_spindle_sec	Hour 3 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+UW	clock_h3_R_spindle_sec	Hour 3 - Average spindle duration (s) in REM stage.
+UX	clock_h3_spindle_sec	Hour 3 - Average spindle duration (s) in all stages.
+UY	clock_h3_N1_dom_freq_Hz	Hour 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+UZ	clock_h3_N2_dom_freq_Hz	Hour 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+VA	clock_h3_N3_dom_freq_Hz	Hour 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+VB	clock_h3_N2N3_dom_freq_Hz	Hour 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+VC	clock_h3_NREM_dom_freq_Hz	Hour 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+VD	clock_h3_R_dom_freq_Hz	Hour 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+VE	clock_h3_dom_freq_Hz	Hour 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+VF	clock_h3_N1_avg_freq_Hz	Hour 3 - Spindle average frequency (Hz) counting peaks in N1 stage.
+VG	clock_h3_N2_avg_freq_Hz	Hour 3 - Spindle average frequency (Hz) counting peaks in N2 stage.
+VH	clock_h3_N3_avg_freq_Hz	Hour 3 - Spindle average frequency (Hz) counting peaks in N3 stage.
+VI	clock_h3_N2N3_avg_freq_Hz	Hour 3 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+VJ	clock_h3_NREM_avg_freq_Hz	Hour 3 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+VK	clock_h3_R_avg_freq_Hz	Hour 3 - Spindle average frequency (Hz) counting peaks in REM stage.
+VL	clock_h3_avg_freq_Hz	Hour 3 - Spindle average frequency (Hz) counting peaks in all stages.
+VM	clock_h3_N1_amp_pkpk_uV	Hour 3 - Average peak-to-peak amplitude (µV) in N1 stage.
+VN	clock_h3_N2_amp_pkpk_uV	Hour 3 - Average peak-to-peak amplitude (µV) in N2 stage.
+VO	clock_h3_N3_amp_pkpk_uV	Hour 3 - Average peak-to-peak amplitude (µV) in N3 stage.
+VP	clock_h3_N2N3_amp_pkpk_uV	Hour 3 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+VQ	clock_h3_NREM_amp_pkpk_uV	Hour 3 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+VR	clock_h3_R_amp_pkpk_uV	Hour 3 - Average peak-to-peak amplitude (µV) in REM stage.
+VS	clock_h3_amp_pkpk_uV	Hour 3 - Average peak-to-peak amplitude (µV) in all stages
+VT	clock_h3_N1_amp_rms_uV	Hour 3 - Average rms amplitude (µV) in N1 stage.
+VU	clock_h3_N2_amp_rms_uV	Hour 3 - Average rms amplitude (µV) in N2 stage.
+VV	clock_h3_N3_amp_rms_uV	Hour 3 - Average rms amplitude (µV) in N3 stage.
+VW	clock_h3_N2N3_amp_rms_uV	Hour 3 - Average rms amplitude (µV) in N2 and N3 stage.
+VX	clock_h3_NREM_amp_rms_uV	Hour 3 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+VY	clock_h3_R_amp_rms_uV	Hour 3 - Average rms amplitude (µV) in REM stage.
+VZ	clock_h3_amp_rms_uV	Hour 3 - Average rms (Root Mean Square) amplitude (µV) in all stages
+WA	clock_h4_valid_min	Hour 4 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+WB	clock_h4_N1_valid_min	Hour 4 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+WC	clock_h4_N2_valid_min	Hour 4 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+WD	clock_h4_N3_valid_min	Hour 4 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+WE	clock_h4_N2N3_valid_min	Hour 4 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+WF	clock_h4_NREM_valid_min	Hour 4 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+WG	clock_h4_R_valid_min	Hour 4 - Valid (no artifact) duration (min) in REM stage available for detection.
+WH	clock_h4_min	Hour 4 duration (min) minus the REM periods if excluded.
+WI	clock_h4_N1_spindle_count	Hour 4 - Sleep spindle count in N1 stage.
+WJ	clock_h4_N2_spindle_count	Hour 4 - Sleep spindle count in N2 stage.
+WK	clock_h4_N3_spindle_count	Hour 4 - Sleep spindle count in N3 stage.
+WL	clock_h4_N2N3_spindle_count	Hour 4 - Sleep spindle count in N2 and N3 stage.
+WM	clock_h4_NREM_spindle_count	Hour 4 - Sleep spindle count in NREM stage (N1, N2, N3).
+WN	clock_h4_R_spindle_count	Hour 4 - Sleep spindle count in REM stage.
+WO	clock_h4_spindle_count	Hour 4 - Sleep spindle count in all stages.
+WP	clock_h4_N1_density	Hour 4 - Spindle density (count/min) in N1 stage.
+WQ	clock_h4_N2_density	Hour 4 - Spindle density (count/min) in N2 stage.
+WR	clock_h4_N3_density	Hour 4 - Spindle density (count/min) in N3 stage.
+WS	clock_h4_N2N3_density	Hour 4 - Spindle density (count/min) in N2 and N3 stage.
+WT	clock_h4_NREM_density	Hour 4 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+WU	clock_h4_R_density	Hour 4 - Spindle density (count/min) in REM stage.
+WV	clock_h4_density	Hour 4 - Spindle density (count/min) in all stages.
+WW	clock_h4_N1_spindle_sec	Hour 4 - Average spindle duration (s) in N1 stage.
+WX	clock_h4_N2_spindle_sec	Hour 4 - Average spindle duration (s) in N2 stage.
+WY	clock_h4_N3_spindle_sec	Hour 4 - Average spindle duration (s) in N3 stage.
+WZ	clock_h4_N2N3_spindle_sec	Hour 4 - Average spindle duration (s) in N2 and N3 stage.
+XA	clock_h4_NREM_spindle_sec	Hour 4 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+XB	clock_h4_R_spindle_sec	Hour 4 - Average spindle duration (s) in REM stage.
+XC	clock_h4_spindle_sec	Hour 4 - Average spindle duration (s) in all stages.
+XD	clock_h4_N1_dom_freq_Hz	Hour 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+XE	clock_h4_N2_dom_freq_Hz	Hour 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+XF	clock_h4_N3_dom_freq_Hz	Hour 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+XG	clock_h4_N2N3_dom_freq_Hz	Hour 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+XH	clock_h4_NREM_dom_freq_Hz	Hour 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+XI	clock_h4_R_dom_freq_Hz	Hour 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+XJ	clock_h4_dom_freq_Hz	Hour 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+XK	clock_h4_N1_avg_freq_Hz	Hour 4 - Spindle average frequency (Hz) counting peaks in N1 stage.
+XL	clock_h4_N2_avg_freq_Hz	Hour 4 - Spindle average frequency (Hz) counting peaks in N2 stage.
+XM	clock_h4_N3_avg_freq_Hz	Hour 4 - Spindle average frequency (Hz) counting peaks in N3 stage.
+XN	clock_h4_N2N3_avg_freq_Hz	Hour 4 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+XO	clock_h4_NREM_avg_freq_Hz	Hour 4 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+XP	clock_h4_R_avg_freq_Hz	Hour 4 - Spindle average frequency (Hz) counting peaks in REM stage.
+XQ	clock_h4_avg_freq_Hz	Hour 4 - Spindle average frequency (Hz) counting peaks in all stages.
+XR	clock_h4_N1_amp_pkpk_uV	Hour 4 - Average peak-to-peak amplitude (µV) in N1 stage.
+XS	clock_h4_N2_amp_pkpk_uV	Hour 4 - Average peak-to-peak amplitude (µV) in N2 stage.
+XT	clock_h4_N3_amp_pkpk_uV	Hour 4 - Average peak-to-peak amplitude (µV) in N3 stage.
+XU	clock_h4_N2N3_amp_pkpk_uV	Hour 4 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+XV	clock_h4_NREM_amp_pkpk_uV	Hour 4 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+XW	clock_h4_R_amp_pkpk_uV	Hour 4 - Average peak-to-peak amplitude (µV) in REM stage.
+XX	clock_h4_amp_pkpk_uV	Hour 4 - Average peak-to-peak amplitude (µV) in all stages
+XY	clock_h4_N1_amp_rms_uV	Hour 4 - Average rms amplitude (µV) in N1 stage.
+XZ	clock_h4_N2_amp_rms_uV	Hour 4 - Average rms amplitude (µV) in N2 stage.
+YA	clock_h4_N3_amp_rms_uV	Hour 4 - Average rms amplitude (µV) in N3 stage.
+YB	clock_h4_N2N3_amp_rms_uV	Hour 4 - Average rms amplitude (µV) in N2 and N3 stage.
+YC	clock_h4_NREM_amp_rms_uV	Hour 4 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+YD	clock_h4_R_amp_rms_uV	Hour 4 - Average rms amplitude (µV) in REM stage.
+YE	clock_h4_amp_rms_uV	Hour 4 - Average rms (Root Mean Square) amplitude (µV) in all stages
+YF	clock_h5_valid_min	Hour 5 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+YG	clock_h5_N1_valid_min	Hour 5 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+YH	clock_h5_N2_valid_min	Hour 5 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+YI	clock_h5_N3_valid_min	Hour 5 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+YJ	clock_h5_N2N3_valid_min	Hour 5 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+YK	clock_h5_NREM_valid_min	Hour 5 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+YL	clock_h5_R_valid_min	Hour 5 - Valid (no artifact) duration (min) in REM stage available for detection.
+YM	clock_h5_min	Hour 5 duration (min) minus the REM periods if excluded.
+YN	clock_h5_N1_spindle_count	Hour 5 - Sleep spindle count in N1 stage.
+YO	clock_h5_N2_spindle_count	Hour 5 - Sleep spindle count in N2 stage.
+YP	clock_h5_N3_spindle_count	Hour 5 - Sleep spindle count in N3 stage.
+YQ	clock_h5_N2N3_spindle_count	Hour 5 - Sleep spindle count in N2 and N3 stage.
+YR	clock_h5_NREM_spindle_count	Hour 5 - Sleep spindle count in NREM stage (N1, N2, N3).
+YS	clock_h5_R_spindle_count	Hour 5 - Sleep spindle count in REM stage.
+YT	clock_h5_spindle_count	Hour 5 - Sleep spindle count in all stages.
+YU	clock_h5_N1_density	Hour 5 - Spindle density (count/min) in N1 stage.
+YV	clock_h5_N2_density	Hour 5 - Spindle density (count/min) in N2 stage.
+YW	clock_h5_N3_density	Hour 5 - Spindle density (count/min) in N3 stage.
+YX	clock_h5_N2N3_density	Hour 5 - Spindle density (count/min) in N2 and N3 stage.
+YY	clock_h5_NREM_density	Hour 5 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+YZ	clock_h5_R_density	Hour 5 - Spindle density (count/min) in REM stage.
+ZA	clock_h5_density	Hour 5 - Spindle density (count/min) in all stages.
+ZB	clock_h5_N1_spindle_sec	Hour 5 - Average spindle duration (s) in N1 stage.
+ZC	clock_h5_N2_spindle_sec	Hour 5 - Average spindle duration (s) in N2 stage.
+ZD	clock_h5_N3_spindle_sec	Hour 5 - Average spindle duration (s) in N3 stage.
+ZE	clock_h5_N2N3_spindle_sec	Hour 5 - Average spindle duration (s) in N2 and N3 stage.
+ZF	clock_h5_NREM_spindle_sec	Hour 5 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+ZG	clock_h5_R_spindle_sec	Hour 5 - Average spindle duration (s) in REM stage.
+ZH	clock_h5_spindle_sec	Hour 5 - Average spindle duration (s) in all stages.
+ZI	clock_h5_N1_dom_freq_Hz	Hour 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+ZJ	clock_h5_N2_dom_freq_Hz	Hour 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+ZK	clock_h5_N3_dom_freq_Hz	Hour 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+ZL	clock_h5_N2N3_dom_freq_Hz	Hour 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+ZM	clock_h5_NREM_dom_freq_Hz	Hour 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+ZN	clock_h5_R_dom_freq_Hz	Hour 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+ZO	clock_h5_dom_freq_Hz	Hour 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+ZP	clock_h5_N1_avg_freq_Hz	Hour 5 - Spindle average frequency (Hz) counting peaks in N1 stage.
+ZQ	clock_h5_N2_avg_freq_Hz	Hour 5 - Spindle average frequency (Hz) counting peaks in N2 stage.
+ZR	clock_h5_N3_avg_freq_Hz	Hour 5 - Spindle average frequency (Hz) counting peaks in N3 stage.
+ZS	clock_h5_N2N3_avg_freq_Hz	Hour 5 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+ZT	clock_h5_NREM_avg_freq_Hz	Hour 5 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+ZU	clock_h5_R_avg_freq_Hz	Hour 5 - Spindle average frequency (Hz) counting peaks in REM stage.
+ZV	clock_h5_avg_freq_Hz	Hour 5 - Spindle average frequency (Hz) counting peaks in all stages.
+ZW	clock_h5_N1_amp_pkpk_uV	Hour 5 - Average peak-to-peak amplitude (µV) in N1 stage.
+ZX	clock_h5_N2_amp_pkpk_uV	Hour 5 - Average peak-to-peak amplitude (µV) in N2 stage.
+ZY	clock_h5_N3_amp_pkpk_uV	Hour 5 - Average peak-to-peak amplitude (µV) in N3 stage.
+ZZ	clock_h5_N2N3_amp_pkpk_uV	Hour 5 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+AAA	clock_h5_NREM_amp_pkpk_uV	Hour 5 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+AAB	clock_h5_R_amp_pkpk_uV	Hour 5 - Average peak-to-peak amplitude (µV) in REM stage.
+AAC	clock_h5_amp_pkpk_uV	Hour 5 - Average peak-to-peak amplitude (µV) in all stages
+AAD	clock_h5_N1_amp_rms_uV	Hour 5 - Average rms amplitude (µV) in N1 stage.
+AAE	clock_h5_N2_amp_rms_uV	Hour 5 - Average rms amplitude (µV) in N2 stage.
+AAF	clock_h5_N3_amp_rms_uV	Hour 5 - Average rms amplitude (µV) in N3 stage.
+AAG	clock_h5_N2N3_amp_rms_uV	Hour 5 - Average rms amplitude (µV) in N2 and N3 stage.
+AAH	clock_h5_NREM_amp_rms_uV	Hour 5 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+AAI	clock_h5_R_amp_rms_uV	Hour 5 - Average rms amplitude (µV) in REM stage.
+AAJ	clock_h5_amp_rms_uV	Hour 5 - Average rms (Root Mean Square) amplitude (µV) in all stages
+AAK	clock_h6_valid_min	Hour 6 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+AAL	clock_h6_N1_valid_min	Hour 6 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+AAM	clock_h6_N2_valid_min	Hour 6 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+AAN	clock_h6_N3_valid_min	Hour 6 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+AAO	clock_h6_N2N3_valid_min	Hour 6 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+AAP	clock_h6_NREM_valid_min	Hour 6 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+AAQ	clock_h6_R_valid_min	Hour 6 - Valid (no artifact) duration (min) in REM stage available for detection.
+AAR	clock_h6_min	Hour 6 duration (min) minus the REM periods if excluded.
+AAS	clock_h6_N1_spindle_count	Hour 6 - Sleep spindle count in N1 stage.
+AAT	clock_h6_N2_spindle_count	Hour 6 - Sleep spindle count in N2 stage.
+AAU	clock_h6_N3_spindle_count	Hour 6 - Sleep spindle count in N3 stage.
+AAV	clock_h6_N2N3_spindle_count	Hour 6 - Sleep spindle count in N2 and N3 stage.
+AAW	clock_h6_NREM_spindle_count	Hour 6 - Sleep spindle count in NREM stage (N1, N2, N3).
+AAX	clock_h6_R_spindle_count	Hour 6 - Sleep spindle count in REM stage.
+AAY	clock_h6_spindle_count	Hour 6 - Sleep spindle count in all stages.
+AAZ	clock_h6_N1_density	Hour 6 - Spindle density (count/min) in N1 stage.
+ABA	clock_h6_N2_density	Hour 6 - Spindle density (count/min) in N2 stage.
+ABB	clock_h6_N3_density	Hour 6 - Spindle density (count/min) in N3 stage.
+ABC	clock_h6_N2N3_density	Hour 6 - Spindle density (count/min) in N2 and N3 stage.
+ABD	clock_h6_NREM_density	Hour 6 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+ABE	clock_h6_R_density	Hour 6 - Spindle density (count/min) in REM stage.
+ABF	clock_h6_density	Hour 6 - Spindle density (count/min) in all stages.
+ABG	clock_h6_N1_spindle_sec	Hour 6 - Average spindle duration (s) in N1 stage.
+ABH	clock_h6_N2_spindle_sec	Hour 6 - Average spindle duration (s) in N2 stage.
+ABI	clock_h6_N3_spindle_sec	Hour 6 - Average spindle duration (s) in N3 stage.
+ABJ	clock_h6_N2N3_spindle_sec	Hour 6 - Average spindle duration (s) in N2 and N3 stage.
+ABK	clock_h6_NREM_spindle_sec	Hour 6 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+ABL	clock_h6_R_spindle_sec	Hour 6 - Average spindle duration (s) in REM stage.
+ABM	clock_h6_spindle_sec	Hour 6 - Average spindle duration (s) in all stages.
+ABN	clock_h6_N1_dom_freq_Hz	Hour 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+ABO	clock_h6_N2_dom_freq_Hz	Hour 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+ABP	clock_h6_N3_dom_freq_Hz	Hour 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+ABQ	clock_h6_N2N3_dom_freq_Hz	Hour 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+ABR	clock_h6_NREM_dom_freq_Hz	Hour 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+ABS	clock_h6_R_dom_freq_Hz	Hour 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+ABT	clock_h6_dom_freq_Hz	Hour 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+ABU	clock_h6_N1_avg_freq_Hz	Hour 6 - Spindle average frequency (Hz) counting peaks in N1 stage.
+ABV	clock_h6_N2_avg_freq_Hz	Hour 6 - Spindle average frequency (Hz) counting peaks in N2 stage.
+ABW	clock_h6_N3_avg_freq_Hz	Hour 6 - Spindle average frequency (Hz) counting peaks in N3 stage.
+ABX	clock_h6_N2N3_avg_freq_Hz	Hour 6 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+ABY	clock_h6_NREM_avg_freq_Hz	Hour 6 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+ABZ	clock_h6_R_avg_freq_Hz	Hour 6 - Spindle average frequency (Hz) counting peaks in REM stage.
+ACA	clock_h6_avg_freq_Hz	Hour 6 - Spindle average frequency (Hz) counting peaks in all stages.
+ACB	clock_h6_N1_amp_pkpk_uV	Hour 6 - Average peak-to-peak amplitude (µV) in N1 stage.
+ACC	clock_h6_N2_amp_pkpk_uV	Hour 6 - Average peak-to-peak amplitude (µV) in N2 stage.
+ACD	clock_h6_N3_amp_pkpk_uV	Hour 6 - Average peak-to-peak amplitude (µV) in N3 stage.
+ACE	clock_h6_N2N3_amp_pkpk_uV	Hour 6 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+ACF	clock_h6_NREM_amp_pkpk_uV	Hour 6 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+ACG	clock_h6_R_amp_pkpk_uV	Hour 6 - Average peak-to-peak amplitude (µV) in REM stage.
+ACH	clock_h6_amp_pkpk_uV	Hour 6 - Average peak-to-peak amplitude (µV) in all stages
+ACI	clock_h6_N1_amp_rms_uV	Hour 6 - Average rms amplitude (µV) in N1 stage.
+ACJ	clock_h6_N2_amp_rms_uV	Hour 6 - Average rms amplitude (µV) in N2 stage.
+ACK	clock_h6_N3_amp_rms_uV	Hour 6 - Average rms amplitude (µV) in N3 stage.
+ACL	clock_h6_N2N3_amp_rms_uV	Hour 6 - Average rms amplitude (µV) in N2 and N3 stage.
+ACM	clock_h6_NREM_amp_rms_uV	Hour 6 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+ACN	clock_h6_R_amp_rms_uV	Hour 6 - Average rms amplitude (µV) in REM stage.
+ACO	clock_h6_amp_rms_uV	Hour 6 - Average rms (Root Mean Square) amplitude (µV) in all stages
+ACP	clock_h7_valid_min	Hour 7 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+ACQ	clock_h7_N1_valid_min	Hour 7 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+ACR	clock_h7_N2_valid_min	Hour 7 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+ACS	clock_h7_N3_valid_min	Hour 7 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+ACT	clock_h7_N2N3_valid_min	Hour 7 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+ACU	clock_h7_NREM_valid_min	Hour 7 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+ACV	clock_h7_R_valid_min	Hour 7 - Valid (no artifact) duration (min) in REM stage available for detection.
+ACW	clock_h7_min	Hour 7 duration (min) minus the REM periods if excluded.
+ACX	clock_h7_N1_spindle_count	Hour 7 - Sleep spindle count in N1 stage.
+ACY	clock_h7_N2_spindle_count	Hour 7 - Sleep spindle count in N2 stage.
+ACZ	clock_h7_N3_spindle_count	Hour 7 - Sleep spindle count in N3 stage.
+ADA	clock_h7_N2N3_spindle_count	Hour 7 - Sleep spindle count in N2 and N3 stage.
+ADB	clock_h7_NREM_spindle_count	Hour 7 - Sleep spindle count in NREM stage (N1, N2, N3).
+ADC	clock_h7_R_spindle_count	Hour 7 - Sleep spindle count in REM stage.
+ADD	clock_h7_spindle_count	Hour 7 - Sleep spindle count in all stages.
+ADE	clock_h7_N1_density	Hour 7 - Spindle density (count/min) in N1 stage.
+ADF	clock_h7_N2_density	Hour 7 - Spindle density (count/min) in N2 stage.
+ADG	clock_h7_N3_density	Hour 7 - Spindle density (count/min) in N3 stage.
+ADH	clock_h7_N2N3_density	Hour 7 - Spindle density (count/min) in N2 and N3 stage.
+ADI	clock_h7_NREM_density	Hour 7 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+ADJ	clock_h7_R_density	Hour 7 - Spindle density (count/min) in REM stage.
+ADK	clock_h7_density	Hour 7 - Spindle density (count/min) in all stages.
+ADL	clock_h7_N1_spindle_sec	Hour 7 - Average spindle duration (s) in N1 stage.
+ADM	clock_h7_N2_spindle_sec	Hour 7 - Average spindle duration (s) in N2 stage.
+ADN	clock_h7_N3_spindle_sec	Hour 7 - Average spindle duration (s) in N3 stage.
+ADO	clock_h7_N2N3_spindle_sec	Hour 7 - Average spindle duration (s) in N2 and N3 stage.
+ADP	clock_h7_NREM_spindle_sec	Hour 7 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+ADQ	clock_h7_R_spindle_sec	Hour 7 - Average spindle duration (s) in REM stage.
+ADR	clock_h7_spindle_sec	Hour 7 - Average spindle duration (s) in all stages.
+ADS	clock_h7_N1_dom_freq_Hz	Hour 7 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+ADT	clock_h7_N2_dom_freq_Hz	Hour 7 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+ADU	clock_h7_N3_dom_freq_Hz	Hour 7 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+ADV	clock_h7_N2N3_dom_freq_Hz	Hour 7 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+ADW	clock_h7_NREM_dom_freq_Hz	Hour 7 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+ADX	clock_h7_R_dom_freq_Hz	Hour 7 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+ADY	clock_h7_dom_freq_Hz	Hour 7 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+ADZ	clock_h7_N1_avg_freq_Hz	Hour 7 - Spindle average frequency (Hz) counting peaks in N1 stage.
+AEA	clock_h7_N2_avg_freq_Hz	Hour 7 - Spindle average frequency (Hz) counting peaks in N2 stage.
+AEB	clock_h7_N3_avg_freq_Hz	Hour 7 - Spindle average frequency (Hz) counting peaks in N3 stage.
+AEC	clock_h7_N2N3_avg_freq_Hz	Hour 7 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+AED	clock_h7_NREM_avg_freq_Hz	Hour 7 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+AEE	clock_h7_R_avg_freq_Hz	Hour 7 - Spindle average frequency (Hz) counting peaks in REM stage.
+AEF	clock_h7_avg_freq_Hz	Hour 7 - Spindle average frequency (Hz) counting peaks in all stages.
+AEG	clock_h7_N1_amp_pkpk_uV	Hour 7 - Average peak-to-peak amplitude (µV) in N1 stage.
+AEH	clock_h7_N2_amp_pkpk_uV	Hour 7 - Average peak-to-peak amplitude (µV) in N2 stage.
+AEI	clock_h7_N3_amp_pkpk_uV	Hour 7 - Average peak-to-peak amplitude (µV) in N3 stage.
+AEJ	clock_h7_N2N3_amp_pkpk_uV	Hour 7 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+AEK	clock_h7_NREM_amp_pkpk_uV	Hour 7 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+AEL	clock_h7_R_amp_pkpk_uV	Hour 7 - Average peak-to-peak amplitude (µV) in REM stage.
+AEM	clock_h7_amp_pkpk_uV	Hour 7 - Average peak-to-peak amplitude (µV) in all stages
+AEN	clock_h7_N1_amp_rms_uV	Hour 7 - Average rms amplitude (µV) in N1 stage.
+AEO	clock_h7_N2_amp_rms_uV	Hour 7 - Average rms amplitude (µV) in N2 stage.
+AEP	clock_h7_N3_amp_rms_uV	Hour 7 - Average rms amplitude (µV) in N3 stage.
+AEQ	clock_h7_N2N3_amp_rms_uV	Hour 7 - Average rms amplitude (µV) in N2 and N3 stage.
+AER	clock_h7_NREM_amp_rms_uV	Hour 7 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+AES	clock_h7_R_amp_rms_uV	Hour 7 - Average rms amplitude (µV) in REM stage.
+AET	clock_h7_amp_rms_uV	Hour 7 - Average rms (Root Mean Square) amplitude (µV) in all stages
+AEU	clock_h8_valid_min	Hour 8 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+AEV	clock_h8_N1_valid_min	Hour 8 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+AEW	clock_h8_N2_valid_min	Hour 8 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+AEX	clock_h8_N3_valid_min	Hour 8 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+AEY	clock_h8_N2N3_valid_min	Hour 8 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+AEZ	clock_h8_NREM_valid_min	Hour 8 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+AFA	clock_h8_R_valid_min	Hour 8 - Valid (no artifact) duration (min) in REM stage available for detection.
+AFB	clock_h8_min	Hour 8 duration (min) minus the REM periods if excluded.
+AFC	clock_h8_N1_spindle_count	Hour 8 - Sleep spindle count in N1 stage.
+AFD	clock_h8_N2_spindle_count	Hour 8 - Sleep spindle count in N2 stage.
+AFE	clock_h8_N3_spindle_count	Hour 8 - Sleep spindle count in N3 stage.
+AFF	clock_h8_N2N3_spindle_count	Hour 8 - Sleep spindle count in N2 and N3 stage.
+AFG	clock_h8_NREM_spindle_count	Hour 8 - Sleep spindle count in NREM stage (N1, N2, N3).
+AFH	clock_h8_R_spindle_count	Hour 8 - Sleep spindle count in REM stage.
+AFI	clock_h8_spindle_count	Hour 8 - Sleep spindle count in all stages.
+AFJ	clock_h8_N1_density	Hour 8 - Spindle density (count/min) in N1 stage.
+AFK	clock_h8_N2_density	Hour 8 - Spindle density (count/min) in N2 stage.
+AFL	clock_h8_N3_density	Hour 8 - Spindle density (count/min) in N3 stage.
+AFM	clock_h8_N2N3_density	Hour 8 - Spindle density (count/min) in N2 and N3 stage.
+AFN	clock_h8_NREM_density	Hour 8 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+AFO	clock_h8_R_density	Hour 8 - Spindle density (count/min) in REM stage.
+AFP	clock_h8_density	Hour 8 - Spindle density (count/min) in all stages.
+AFQ	clock_h8_N1_spindle_sec	Hour 8 - Average spindle duration (s) in N1 stage.
+AFR	clock_h8_N2_spindle_sec	Hour 8 - Average spindle duration (s) in N2 stage.
+AFS	clock_h8_N3_spindle_sec	Hour 8 - Average spindle duration (s) in N3 stage.
+AFT	clock_h8_N2N3_spindle_sec	Hour 8 - Average spindle duration (s) in N2 and N3 stage.
+AFU	clock_h8_NREM_spindle_sec	Hour 8 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+AFV	clock_h8_R_spindle_sec	Hour 8 - Average spindle duration (s) in REM stage.
+AFW	clock_h8_spindle_sec	Hour 8 - Average spindle duration (s) in all stages.
+AFX	clock_h8_N1_dom_freq_Hz	Hour 8 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+AFY	clock_h8_N2_dom_freq_Hz	Hour 8 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+AFZ	clock_h8_N3_dom_freq_Hz	Hour 8 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+AGA	clock_h8_N2N3_dom_freq_Hz	Hour 8 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+AGB	clock_h8_NREM_dom_freq_Hz	Hour 8 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+AGC	clock_h8_R_dom_freq_Hz	Hour 8 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+AGD	clock_h8_dom_freq_Hz	Hour 8 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+AGE	clock_h8_N1_avg_freq_Hz	Hour 8 - Spindle average frequency (Hz) counting peaks in N1 stage.
+AGF	clock_h8_N2_avg_freq_Hz	Hour 8 - Spindle average frequency (Hz) counting peaks in N2 stage.
+AGG	clock_h8_N3_avg_freq_Hz	Hour 8 - Spindle average frequency (Hz) counting peaks in N3 stage.
+AGH	clock_h8_N2N3_avg_freq_Hz	Hour 8 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+AGI	clock_h8_NREM_avg_freq_Hz	Hour 8 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+AGJ	clock_h8_R_avg_freq_Hz	Hour 8 - Spindle average frequency (Hz) counting peaks in REM stage.
+AGK	clock_h8_avg_freq_Hz	Hour 8 - Spindle average frequency (Hz) counting peaks in all stages.
+AGL	clock_h8_N1_amp_pkpk_uV	Hour 8 - Average peak-to-peak amplitude (µV) in N1 stage.
+AGM	clock_h8_N2_amp_pkpk_uV	Hour 8 - Average peak-to-peak amplitude (µV) in N2 stage.
+AGN	clock_h8_N3_amp_pkpk_uV	Hour 8 - Average peak-to-peak amplitude (µV) in N3 stage.
+AGO	clock_h8_N2N3_amp_pkpk_uV	Hour 8 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+AGP	clock_h8_NREM_amp_pkpk_uV	Hour 8 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+AGQ	clock_h8_R_amp_pkpk_uV	Hour 8 - Average peak-to-peak amplitude (µV) in REM stage.
+AGR	clock_h8_amp_pkpk_uV	Hour 8 - Average peak-to-peak amplitude (µV) in all stages
+AGS	clock_h8_N1_amp_rms_uV	Hour 8 - Average rms amplitude (µV) in N1 stage.
+AGT	clock_h8_N2_amp_rms_uV	Hour 8 - Average rms amplitude (µV) in N2 stage.
+AGU	clock_h8_N3_amp_rms_uV	Hour 8 - Average rms amplitude (µV) in N3 stage.
+AGV	clock_h8_N2N3_amp_rms_uV	Hour 8 - Average rms amplitude (µV) in N2 and N3 stage.
+AGW	clock_h8_NREM_amp_rms_uV	Hour 8 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+AGX	clock_h8_R_amp_rms_uV	Hour 8 - Average rms amplitude (µV) in REM stage.
+AGY	clock_h8_amp_rms_uV	Hour 8 - Average rms (Root Mean Square) amplitude (µV) in all stages
+AGZ	clock_h9_valid_min	Hour 9 - Valid (no artifact) duration (min) available for detection minus the REM periods if excluded.
+AHA	clock_h9_N1_valid_min	Hour 9 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+AHB	clock_h9_N2_valid_min	Hour 9 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+AHC	clock_h9_N3_valid_min	Hour 9 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+AHD	clock_h9_N2N3_valid_min	Hour 9 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+AHE	clock_h9_NREM_valid_min	Hour 9 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+AHF	clock_h9_R_valid_min	Hour 9 - Valid (no artifact) duration (min) in REM stage available for detection.
+AHG	clock_h9_min	Hour 9 duration (min) minus the REM periods if excluded.
+AHH	clock_h9_N1_spindle_count	Hour 9 - Sleep spindle count in N1 stage.
+AHI	clock_h9_N2_spindle_count	Hour 9 - Sleep spindle count in N2 stage.
+AHJ	clock_h9_N3_spindle_count	Hour 9 - Sleep spindle count in N3 stage.
+AHK	clock_h9_N2N3_spindle_count	Hour 9 - Sleep spindle count in N2 and N3 stage.
+AHL	clock_h9_NREM_spindle_count	Hour 9 - Sleep spindle count in NREM stage (N1, N2, N3).
+AHM	clock_h9_R_spindle_count	Hour 9 - Sleep spindle count in REM stage.
+AHN	clock_h9_spindle_count	Hour 9 - Sleep spindle count in all stages.
+AHO	clock_h9_N1_density	Hour 9 - Spindle density (count/min) in N1 stage.
+AHP	clock_h9_N2_density	Hour 9 - Spindle density (count/min) in N2 stage.
+AHQ	clock_h9_N3_density	Hour 9 - Spindle density (count/min) in N3 stage.
+AHR	clock_h9_N2N3_density	Hour 9 - Spindle density (count/min) in N2 and N3 stage.
+AHS	clock_h9_NREM_density	Hour 9 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+AHT	clock_h9_R_density	Hour 9 - Spindle density (count/min) in REM stage.
+AHU	clock_h9_density	Hour 9 - Spindle density (count/min) in all stages.
+AHV	clock_h9_N1_spindle_sec	Hour 9 - Average spindle duration (s) in N1 stage.
+AHW	clock_h9_N2_spindle_sec	Hour 9 - Average spindle duration (s) in N2 stage.
+AHX	clock_h9_N3_spindle_sec	Hour 9 - Average spindle duration (s) in N3 stage.
+AHY	clock_h9_N2N3_spindle_sec	Hour 9 - Average spindle duration (s) in N2 and N3 stage.
+AHZ	clock_h9_NREM_spindle_sec	Hour 9 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+AIA	clock_h9_R_spindle_sec	Hour 9 - Average spindle duration (s) in REM stage.
+AIB	clock_h9_spindle_sec	Hour 9 - Average spindle duration (s) in all stages.
+AIC	clock_h9_N1_dom_freq_Hz	Hour 9 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+AID	clock_h9_N2_dom_freq_Hz	Hour 9 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+AIE	clock_h9_N3_dom_freq_Hz	Hour 9 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+AIF	clock_h9_N2N3_dom_freq_Hz	Hour 9 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+AIG	clock_h9_NREM_dom_freq_Hz	Hour 9 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+AIH	clock_h9_R_dom_freq_Hz	Hour 9 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+AII	clock_h9_dom_freq_Hz	Hour 9 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+AIJ	clock_h9_N1_avg_freq_Hz	Hour 9 - Spindle average frequency (Hz) counting peaks in N1 stage.
+AIK	clock_h9_N2_avg_freq_Hz	Hour 9 - Spindle average frequency (Hz) counting peaks in N2 stage.
+AIL	clock_h9_N3_avg_freq_Hz	Hour 9 - Spindle average frequency (Hz) counting peaks in N3 stage.
+AIM	clock_h9_N2N3_avg_freq_Hz	Hour 9 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+AIN	clock_h9_NREM_avg_freq_Hz	Hour 9 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+AIO	clock_h9_R_avg_freq_Hz	Hour 9 - Spindle average frequency (Hz) counting peaks in REM stage.
+AIP	clock_h9_avg_freq_Hz	Hour 9 - Spindle average frequency (Hz) counting peaks in all stages.
+AIQ	clock_h9_N1_amp_pkpk_uV	Hour 9 - Average peak-to-peak amplitude (µV) in N1 stage.
+AIR	clock_h9_N2_amp_pkpk_uV	Hour 9 - Average peak-to-peak amplitude (µV) in N2 stage.
+AIS	clock_h9_N3_amp_pkpk_uV	Hour 9 - Average peak-to-peak amplitude (µV) in N3 stage.
+AIT	clock_h9_N2N3_amp_pkpk_uV	Hour 9 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+AIU	clock_h9_NREM_amp_pkpk_uV	Hour 9 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+AIV	clock_h9_R_amp_pkpk_uV	Hour 9 - Average peak-to-peak amplitude (µV) in REM stage.
+AIW	clock_h9_amp_pkpk_uV	Hour 9 - Average peak-to-peak amplitude (µV) in all stages
+AIX	clock_h9_N1_amp_rms_uV	Hour 9 - Average rms amplitude (µV) in N1 stage.
+AIY	clock_h9_N2_amp_rms_uV	Hour 9 - Average rms amplitude (µV) in N2 stage.
+AIZ	clock_h9_N3_amp_rms_uV	Hour 9 - Average rms amplitude (µV) in N3 stage.
+AJA	clock_h9_N2N3_amp_rms_uV	Hour 9 - Average rms amplitude (µV) in N2 and N3 stage.
+AJB	clock_h9_NREM_amp_rms_uV	Hour 9 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+AJC	clock_h9_R_amp_rms_uV	Hour 9 - Average rms amplitude (µV) in REM stage.
+AJD	clock_h9_amp_rms_uV	Hour 9 - Average rms (Root Mean Square) amplitude (µV) in all stages
+AJE	stage_h1_N1_valid_min	Stage Hour 1 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+AJF	stage_h1_N2_valid_min	Stage Hour 1 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+AJG	stage_h1_N3_valid_min	Stage Hour 1 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+AJH	stage_h1_N2N3_valid_min	Stage Hour 1 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+AJI	stage_h1_NREM_valid_min	Stage Hour 1 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+AJJ	stage_h1_R_valid_min	Stage Hour 1 - Valid (no artifact) duration (min) in REM stage available for detection.
+AJK	stage_h1_min	Stage Hour 1 duration (min) minus the REM periods if excluded.
+AJL	stage_h1_N1_spindle_count	Stage Hour 1 - Sleep spindle count in N1 stage.
+AJM	stage_h1_N2_spindle_count	Stage Hour 1 - Sleep spindle count in N2 stage.
+AJN	stage_h1_N3_spindle_count	Stage Hour 1 - Sleep spindle count in N3 stage.
+AJO	stage_h1_N2N3_spindle_count	Stage Hour 1 - Sleep spindle count in N2 and N3 stage.
+AJP	stage_h1_NREM_spindle_count	Stage Hour 1 - Sleep spindle count in NREM stage (N1, N2, N3).
+AJQ	stage_h1_R_spindle_count	Stage Hour 1 - Sleep spindle count in REM stage.
+AJR	stage_h1_spindle_count	Stage Hour 1 - Sleep spindle count in all stages.
+AJS	stage_h1_N1_density	Stage Hour 1 - Spindle density (count/min) in N1 stage.
+AJT	stage_h1_N2_density	Stage Hour 1 - Spindle density (count/min) in N2 stage.
+AJU	stage_h1_N3_density	Stage Hour 1 - Spindle density (count/min) in N3 stage.
+AJV	stage_h1_N2N3_density	Stage Hour 1 - Spindle density (count/min) in N2 and N3 stage.
+AJW	stage_h1_NREM_density	Stage Hour 1 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+AJX	stage_h1_R_density	Stage Hour 1 - Spindle density (count/min) in REM stage.
+AJY	stage_h1_N1_spindle_sec	Stage Hour 1 - Average spindle duration (s) in N1 stage.
+AJZ	stage_h1_N2_spindle_sec	Stage Hour 1 - Average spindle duration (s) in N2 stage.
+AKA	stage_h1_N3_spindle_sec	Stage Hour 1 - Average spindle duration (s) in N3 stage.
+AKB	stage_h1_N2N3_spindle_sec	Stage Hour 1 - Average spindle duration (s) in N2 and N3 stage.
+AKC	stage_h1_NREM_spindle_sec	Stage Hour 1 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+AKD	stage_h1_R_spindle_sec	Stage Hour 1 - Average spindle duration (s) in REM stage.
+AKE	stage_h1_spindle_sec	Stage Hour 1 - Average spindle duration (s) in all stages.
+AKF	stage_h1_N1_dom_freq_Hz	Stage Hour 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+AKG	stage_h1_N2_dom_freq_Hz	Stage Hour 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+AKH	stage_h1_N3_dom_freq_Hz	Stage Hour 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+AKI	stage_h1_N2N3_dom_freq_Hz	Stage Hour 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+AKJ	stage_h1_NREM_dom_freq_Hz	Stage Hour 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+AKK	stage_h1_R_dom_freq_Hz	Stage Hour 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+AKL	stage_h1_dom_freq_Hz	Stage Hour 1 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+AKM	stage_h1_N1_avg_freq_Hz	Stage Hour 1 - Spindle average frequency (Hz) counting peaks in N1 stage.
+AKN	stage_h1_N2_avg_freq_Hz	Stage Hour 1 - Spindle average frequency (Hz) counting peaks in N2 stage.
+AKO	stage_h1_N3_avg_freq_Hz	Stage Hour 1 - Spindle average frequency (Hz) counting peaks in N3 stage.
+AKP	stage_h1_N2N3_avg_freq_Hz	Stage Hour 1 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+AKQ	stage_h1_NREM_avg_freq_Hz	Stage Hour 1 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+AKR	stage_h1_R_avg_freq_Hz	Stage Hour 1 - Spindle average frequency (Hz) counting peaks in REM stage.
+AKS	stage_h1_avg_freq_Hz	Stage Hour 1 - Spindle average frequency (Hz) counting peaks in all stages.
+AKT	stage_h1_N1_amp_pkpk_uV	Stage Hour 1 - Average peak-to-peak amplitude (µV) in N1 stage.
+AKU	stage_h1_N2_amp_pkpk_uV	Stage Hour 1 - Average peak-to-peak amplitude (µV) in N2 stage.
+AKV	stage_h1_N3_amp_pkpk_uV	Stage Hour 1 - Average peak-to-peak amplitude (µV) in N3 stage.
+AKW	stage_h1_N2N3_amp_pkpk_uV	Stage Hour 1 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+AKX	stage_h1_NREM_amp_pkpk_uV	Stage Hour 1 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+AKY	stage_h1_R_amp_pkpk_uV	Stage Hour 1 - Average peak-to-peak amplitude (µV) in REM stage.
+AKZ	stage_h1_amp_pkpk_uV	Stage Hour 1 - Average peak-to-peak amplitude (µV) in all stages
+ALA	stage_h1_N1_amp_rms_uV	Stage Hour 1 - Average rms amplitude (µV) in N1 stage.
+ALB	stage_h1_N2_amp_rms_uV	Stage Hour 1 - Average rms amplitude (µV) in N2 stage.
+ALC	stage_h1_N3_amp_rms_uV	Stage Hour 1 - Average rms amplitude (µV) in N3 stage.
+ALD	stage_h1_N2N3_amp_rms_uV	Stage Hour 1 - Average rms amplitude (µV) in N2 and N3 stage.
+ALE	stage_h1_NREM_amp_rms_uV	Stage Hour 1 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+ALF	stage_h1_R_amp_rms_uV	Stage Hour 1 - Average rms amplitude (µV) in REM stage.
+ALG	stage_h1_amp_rms_uV	Stage Hour 1 - Average rms (Root Mean Square) amplitude (µV) in all stages
+ALH	stage_h2_N1_valid_min	Stage Hour 2 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+ALI	stage_h2_N2_valid_min	Stage Hour 2 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+ALJ	stage_h2_N3_valid_min	Stage Hour 2 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+ALK	stage_h2_N2N3_valid_min	Stage Hour 2 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+ALL	stage_h2_NREM_valid_min	Stage Hour 2 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+ALM	stage_h2_R_valid_min	Stage Hour 2 - Valid (no artifact) duration (min) in REM stage available for detection.
+ALN	stage_h2_min	Stage Hour 2 duration (min) minus the REM periods if excluded.
+ALO	stage_h2_N1_spindle_count	Stage Hour 2 - Sleep spindle count in N1 stage.
+ALP	stage_h2_N2_spindle_count	Stage Hour 2 - Sleep spindle count in N2 stage.
+ALQ	stage_h2_N3_spindle_count	Stage Hour 2 - Sleep spindle count in N3 stage.
+ALR	stage_h2_N2N3_spindle_count	Stage Hour 2 - Sleep spindle count in N2 and N3 stage.
+ALS	stage_h2_NREM_spindle_count	Stage Hour 2 - Sleep spindle count in NREM stage (N1, N2, N3).
+ALT	stage_h2_R_spindle_count	Stage Hour 2 - Sleep spindle count in REM stage.
+ALU	stage_h2_spindle_count	Stage Hour 2 - Sleep spindle count in all stages.
+ALV	stage_h2_N1_density	Stage Hour 2 - Spindle density (count/min) in N1 stage.
+ALW	stage_h2_N2_density	Stage Hour 2 - Spindle density (count/min) in N2 stage.
+ALX	stage_h2_N3_density	Stage Hour 2 - Spindle density (count/min) in N3 stage.
+ALY	stage_h2_N2N3_density	Stage Hour 2 - Spindle density (count/min) in N2 and N3 stage.
+ALZ	stage_h2_NREM_density	Stage Hour 2 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+AMA	stage_h2_R_density	Stage Hour 2 - Spindle density (count/min) in REM stage.
+AMB	stage_h2_N1_spindle_sec	Stage Hour 2 - Average spindle duration (s) in N1 stage.
+AMC	stage_h2_N2_spindle_sec	Stage Hour 2 - Average spindle duration (s) in N2 stage.
+AMD	stage_h2_N3_spindle_sec	Stage Hour 2 - Average spindle duration (s) in N3 stage.
+AME	stage_h2_N2N3_spindle_sec	Stage Hour 2 - Average spindle duration (s) in N2 and N3 stage.
+AMF	stage_h2_NREM_spindle_sec	Stage Hour 2 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+AMG	stage_h2_R_spindle_sec	Stage Hour 2 - Average spindle duration (s) in REM stage.
+AMH	stage_h2_spindle_sec	Stage Hour 2 - Average spindle duration (s) in all stages.
+AMI	stage_h2_N1_dom_freq_Hz	Stage Hour 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+AMJ	stage_h2_N2_dom_freq_Hz	Stage Hour 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+AMK	stage_h2_N3_dom_freq_Hz	Stage Hour 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+AML	stage_h2_N2N3_dom_freq_Hz	Stage Hour 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+AMM	stage_h2_NREM_dom_freq_Hz	Stage Hour 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+AMN	stage_h2_R_dom_freq_Hz	Stage Hour 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+AMO	stage_h2_dom_freq_Hz	Stage Hour 2 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+AMP	stage_h2_N1_avg_freq_Hz	Stage Hour 2 - Spindle average frequency (Hz) counting peaks in N1 stage.
+AMQ	stage_h2_N2_avg_freq_Hz	Stage Hour 2 - Spindle average frequency (Hz) counting peaks in N2 stage.
+AMR	stage_h2_N3_avg_freq_Hz	Stage Hour 2 - Spindle average frequency (Hz) counting peaks in N3 stage.
+AMS	stage_h2_N2N3_avg_freq_Hz	Stage Hour 2 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+AMT	stage_h2_NREM_avg_freq_Hz	Stage Hour 2 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+AMU	stage_h2_R_avg_freq_Hz	Stage Hour 2 - Spindle average frequency (Hz) counting peaks in REM stage.
+AMV	stage_h2_avg_freq_Hz	Stage Hour 2 - Spindle average frequency (Hz) counting peaks in all stages.
+AMW	stage_h2_N1_amp_pkpk_uV	Stage Hour 2 - Average peak-to-peak amplitude (µV) in N1 stage.
+AMX	stage_h2_N2_amp_pkpk_uV	Stage Hour 2 - Average peak-to-peak amplitude (µV) in N2 stage.
+AMY	stage_h2_N3_amp_pkpk_uV	Stage Hour 2 - Average peak-to-peak amplitude (µV) in N3 stage.
+AMZ	stage_h2_N2N3_amp_pkpk_uV	Stage Hour 2 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+ANA	stage_h2_NREM_amp_pkpk_uV	Stage Hour 2 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+ANB	stage_h2_R_amp_pkpk_uV	Stage Hour 2 - Average peak-to-peak amplitude (µV) in REM stage.
+ANC	stage_h2_amp_pkpk_uV	Stage Hour 2 - Average peak-to-peak amplitude (µV) in all stages
+AND	stage_h2_N1_amp_rms_uV	Stage Hour 2 - Average rms amplitude (µV) in N1 stage.
+ANE	stage_h2_N2_amp_rms_uV	Stage Hour 2 - Average rms amplitude (µV) in N2 stage.
+ANF	stage_h2_N3_amp_rms_uV	Stage Hour 2 - Average rms amplitude (µV) in N3 stage.
+ANG	stage_h2_N2N3_amp_rms_uV	Stage Hour 2 - Average rms amplitude (µV) in N2 and N3 stage.
+ANH	stage_h2_NREM_amp_rms_uV	Stage Hour 2 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+ANI	stage_h2_R_amp_rms_uV	Stage Hour 2 - Average rms amplitude (µV) in REM stage.
+ANJ	stage_h2_amp_rms_uV	Stage Hour 2 - Average rms (Root Mean Square) amplitude (µV) in all stages
+ANK	stage_h3_N1_valid_min	Stage Hour 3 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+ANL	stage_h3_N2_valid_min	Stage Hour 3 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+ANM	stage_h3_N3_valid_min	Stage Hour 3 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+ANN	stage_h3_N2N3_valid_min	Stage Hour 3 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+ANO	stage_h3_NREM_valid_min	Stage Hour 3 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+ANP	stage_h3_R_valid_min	Stage Hour 3 - Valid (no artifact) duration (min) in REM stage available for detection.
+ANQ	stage_h3_min	Stage Hour 3 duration (min) minus the REM periods if excluded.
+ANR	stage_h3_N1_spindle_count	Stage Hour 3 - Sleep spindle count in N1 stage.
+ANS	stage_h3_N2_spindle_count	Stage Hour 3 - Sleep spindle count in N2 stage.
+ANT	stage_h3_N3_spindle_count	Stage Hour 3 - Sleep spindle count in N3 stage.
+ANU	stage_h3_N2N3_spindle_count	Stage Hour 3 - Sleep spindle count in N2 and N3 stage.
+ANV	stage_h3_NREM_spindle_count	Stage Hour 3 - Sleep spindle count in NREM stage (N1, N2, N3).
+ANW	stage_h3_R_spindle_count	Stage Hour 3 - Sleep spindle count in REM stage.
+ANX	stage_h3_spindle_count	Stage Hour 3 - Sleep spindle count in all stages.
+ANY	stage_h3_N1_density	Stage Hour 3 - Spindle density (count/min) in N1 stage.
+ANZ	stage_h3_N2_density	Stage Hour 3 - Spindle density (count/min) in N2 stage.
+AOA	stage_h3_N3_density	Stage Hour 3 - Spindle density (count/min) in N3 stage.
+AOB	stage_h3_N2N3_density	Stage Hour 3 - Spindle density (count/min) in N2 and N3 stage.
+AOC	stage_h3_NREM_density	Stage Hour 3 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+AOD	stage_h3_R_density	Stage Hour 3 - Spindle density (count/min) in REM stage.
+AOE	stage_h3_N1_spindle_sec	Stage Hour 3 - Average spindle duration (s) in N1 stage.
+AOF	stage_h3_N2_spindle_sec	Stage Hour 3 - Average spindle duration (s) in N2 stage.
+AOG	stage_h3_N3_spindle_sec	Stage Hour 3 - Average spindle duration (s) in N3 stage.
+AOH	stage_h3_N2N3_spindle_sec	Stage Hour 3 - Average spindle duration (s) in N2 and N3 stage.
+AOI	stage_h3_NREM_spindle_sec	Stage Hour 3 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+AOJ	stage_h3_R_spindle_sec	Stage Hour 3 - Average spindle duration (s) in REM stage.
+AOK	stage_h3_spindle_sec	Stage Hour 3 - Average spindle duration (s) in all stages.
+AOL	stage_h3_N1_dom_freq_Hz	Stage Hour 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+AOM	stage_h3_N2_dom_freq_Hz	Stage Hour 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+AON	stage_h3_N3_dom_freq_Hz	Stage Hour 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+AOO	stage_h3_N2N3_dom_freq_Hz	Stage Hour 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+AOP	stage_h3_NREM_dom_freq_Hz	Stage Hour 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+AOQ	stage_h3_R_dom_freq_Hz	Stage Hour 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+AOR	stage_h3_dom_freq_Hz	Stage Hour 3 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+AOS	stage_h3_N1_avg_freq_Hz	Stage Hour 3 - Spindle average frequency (Hz) counting peaks in N1 stage.
+AOT	stage_h3_N2_avg_freq_Hz	Stage Hour 3 - Spindle average frequency (Hz) counting peaks in N2 stage.
+AOU	stage_h3_N3_avg_freq_Hz	Stage Hour 3 - Spindle average frequency (Hz) counting peaks in N3 stage.
+AOV	stage_h3_N2N3_avg_freq_Hz	Stage Hour 3 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+AOW	stage_h3_NREM_avg_freq_Hz	Stage Hour 3 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+AOX	stage_h3_R_avg_freq_Hz	Stage Hour 3 - Spindle average frequency (Hz) counting peaks in REM stage.
+AOY	stage_h3_avg_freq_Hz	Stage Hour 3 - Spindle average frequency (Hz) counting peaks in all stages.
+AOZ	stage_h3_N1_amp_pkpk_uV	Stage Hour 3 - Average peak-to-peak amplitude (µV) in N1 stage.
+APA	stage_h3_N2_amp_pkpk_uV	Stage Hour 3 - Average peak-to-peak amplitude (µV) in N2 stage.
+APB	stage_h3_N3_amp_pkpk_uV	Stage Hour 3 - Average peak-to-peak amplitude (µV) in N3 stage.
+APC	stage_h3_N2N3_amp_pkpk_uV	Stage Hour 3 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+APD	stage_h3_NREM_amp_pkpk_uV	Stage Hour 3 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+APE	stage_h3_R_amp_pkpk_uV	Stage Hour 3 - Average peak-to-peak amplitude (µV) in REM stage.
+APF	stage_h3_amp_pkpk_uV	Stage Hour 3 - Average peak-to-peak amplitude (µV) in all stages
+APG	stage_h3_N1_amp_rms_uV	Stage Hour 3 - Average rms amplitude (µV) in N1 stage.
+APH	stage_h3_N2_amp_rms_uV	Stage Hour 3 - Average rms amplitude (µV) in N2 stage.
+API	stage_h3_N3_amp_rms_uV	Stage Hour 3 - Average rms amplitude (µV) in N3 stage.
+APJ	stage_h3_N2N3_amp_rms_uV	Stage Hour 3 - Average rms amplitude (µV) in N2 and N3 stage.
+APK	stage_h3_NREM_amp_rms_uV	Stage Hour 3 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+APL	stage_h3_R_amp_rms_uV	Stage Hour 3 - Average rms amplitude (µV) in REM stage.
+APM	stage_h3_amp_rms_uV	Stage Hour 3 - Average rms (Root Mean Square) amplitude (µV) in all stages
+APN	stage_h4_N1_valid_min	Stage Hour 4 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+APO	stage_h4_N2_valid_min	Stage Hour 4 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+APP	stage_h4_N3_valid_min	Stage Hour 4 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+APQ	stage_h4_N2N3_valid_min	Stage Hour 4 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+APR	stage_h4_NREM_valid_min	Stage Hour 4 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+APS	stage_h4_R_valid_min	Stage Hour 4 - Valid (no artifact) duration (min) in REM stage available for detection.
+APT	stage_h4_min	Stage Hour 4 duration (min) minus the REM periods if excluded.
+APU	stage_h4_N1_spindle_count	Stage Hour 4 - Sleep spindle count in N1 stage.
+APV	stage_h4_N2_spindle_count	Stage Hour 4 - Sleep spindle count in N2 stage.
+APW	stage_h4_N3_spindle_count	Stage Hour 4 - Sleep spindle count in N3 stage.
+APX	stage_h4_N2N3_spindle_count	Stage Hour 4 - Sleep spindle count in N2 and N3 stage.
+APY	stage_h4_NREM_spindle_count	Stage Hour 4 - Sleep spindle count in NREM stage (N1, N2, N3).
+APZ	stage_h4_R_spindle_count	Stage Hour 4 - Sleep spindle count in REM stage.
+AQA	stage_h4_spindle_count	Stage Hour 4 - Sleep spindle count in all stages.
+AQB	stage_h4_N1_density	Stage Hour 4 - Spindle density (count/min) in N1 stage.
+AQC	stage_h4_N2_density	Stage Hour 4 - Spindle density (count/min) in N2 stage.
+AQD	stage_h4_N3_density	Stage Hour 4 - Spindle density (count/min) in N3 stage.
+AQE	stage_h4_N2N3_density	Stage Hour 4 - Spindle density (count/min) in N2 and N3 stage.
+AQF	stage_h4_NREM_density	Stage Hour 4 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+AQG	stage_h4_R_density	Stage Hour 4 - Spindle density (count/min) in REM stage.
+AQH	stage_h4_N1_spindle_sec	Stage Hour 4 - Average spindle duration (s) in N1 stage.
+AQI	stage_h4_N2_spindle_sec	Stage Hour 4 - Average spindle duration (s) in N2 stage.
+AQJ	stage_h4_N3_spindle_sec	Stage Hour 4 - Average spindle duration (s) in N3 stage.
+AQK	stage_h4_N2N3_spindle_sec	Stage Hour 4 - Average spindle duration (s) in N2 and N3 stage.
+AQL	stage_h4_NREM_spindle_sec	Stage Hour 4 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+AQM	stage_h4_R_spindle_sec	Stage Hour 4 - Average spindle duration (s) in REM stage.
+AQN	stage_h4_spindle_sec	Stage Hour 4 - Average spindle duration (s) in all stages.
+AQO	stage_h4_N1_dom_freq_Hz	Stage Hour 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+AQP	stage_h4_N2_dom_freq_Hz	Stage Hour 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+AQQ	stage_h4_N3_dom_freq_Hz	Stage Hour 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+AQR	stage_h4_N2N3_dom_freq_Hz	Stage Hour 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+AQS	stage_h4_NREM_dom_freq_Hz	Stage Hour 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+AQT	stage_h4_R_dom_freq_Hz	Stage Hour 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+AQU	stage_h4_dom_freq_Hz	Stage Hour 4 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+AQV	stage_h4_N1_avg_freq_Hz	Stage Hour 4 - Spindle average frequency (Hz) counting peaks in N1 stage.
+AQW	stage_h4_N2_avg_freq_Hz	Stage Hour 4 - Spindle average frequency (Hz) counting peaks in N2 stage.
+AQX	stage_h4_N3_avg_freq_Hz	Stage Hour 4 - Spindle average frequency (Hz) counting peaks in N3 stage.
+AQY	stage_h4_N2N3_avg_freq_Hz	Stage Hour 4 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+AQZ	stage_h4_NREM_avg_freq_Hz	Stage Hour 4 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+ARA	stage_h4_R_avg_freq_Hz	Stage Hour 4 - Spindle average frequency (Hz) counting peaks in REM stage.
+ARB	stage_h4_avg_freq_Hz	Stage Hour 4 - Spindle average frequency (Hz) counting peaks in all stages.
+ARC	stage_h4_N1_amp_pkpk_uV	Stage Hour 4 - Average peak-to-peak amplitude (µV) in N1 stage.
+ARD	stage_h4_N2_amp_pkpk_uV	Stage Hour 4 - Average peak-to-peak amplitude (µV) in N2 stage.
+ARE	stage_h4_N3_amp_pkpk_uV	Stage Hour 4 - Average peak-to-peak amplitude (µV) in N3 stage.
+ARF	stage_h4_N2N3_amp_pkpk_uV	Stage Hour 4 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+ARG	stage_h4_NREM_amp_pkpk_uV	Stage Hour 4 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+ARH	stage_h4_R_amp_pkpk_uV	Stage Hour 4 - Average peak-to-peak amplitude (µV) in REM stage.
+ARI	stage_h4_amp_pkpk_uV	Stage Hour 4 - Average peak-to-peak amplitude (µV) in all stages
+ARJ	stage_h4_N1_amp_rms_uV	Stage Hour 4 - Average rms amplitude (µV) in N1 stage.
+ARK	stage_h4_N2_amp_rms_uV	Stage Hour 4 - Average rms amplitude (µV) in N2 stage.
+ARL	stage_h4_N3_amp_rms_uV	Stage Hour 4 - Average rms amplitude (µV) in N3 stage.
+ARM	stage_h4_N2N3_amp_rms_uV	Stage Hour 4 - Average rms amplitude (µV) in N2 and N3 stage.
+ARN	stage_h4_NREM_amp_rms_uV	Stage Hour 4 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+ARO	stage_h4_R_amp_rms_uV	Stage Hour 4 - Average rms amplitude (µV) in REM stage.
+ARP	stage_h4_amp_rms_uV	Stage Hour 4 - Average rms (Root Mean Square) amplitude (µV) in all stages
+ARQ	stage_h5_N1_valid_min	Stage Hour 5 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+ARR	stage_h5_N2_valid_min	Stage Hour 5 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+ARS	stage_h5_N3_valid_min	Stage Hour 5 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+ART	stage_h5_N2N3_valid_min	Stage Hour 5 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+ARU	stage_h5_NREM_valid_min	Stage Hour 5 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+ARV	stage_h5_R_valid_min	Stage Hour 5 - Valid (no artifact) duration (min) in REM stage available for detection.
+ARW	stage_h5_min	Stage Hour 5 duration (min) minus the REM periods if excluded.
+ARX	stage_h5_N1_spindle_count	Stage Hour 5 - Sleep spindle count in N1 stage.
+ARY	stage_h5_N2_spindle_count	Stage Hour 5 - Sleep spindle count in N2 stage.
+ARZ	stage_h5_N3_spindle_count	Stage Hour 5 - Sleep spindle count in N3 stage.
+ASA	stage_h5_N2N3_spindle_count	Stage Hour 5 - Sleep spindle count in N2 and N3 stage.
+ASB	stage_h5_NREM_spindle_count	Stage Hour 5 - Sleep spindle count in NREM stage (N1, N2, N3).
+ASC	stage_h5_R_spindle_count	Stage Hour 5 - Sleep spindle count in REM stage.
+ASD	stage_h5_spindle_count	Stage Hour 5 - Sleep spindle count in all stages.
+ASE	stage_h5_N1_density	Stage Hour 5 - Spindle density (count/min) in N1 stage.
+ASF	stage_h5_N2_density	Stage Hour 5 - Spindle density (count/min) in N2 stage.
+ASG	stage_h5_N3_density	Stage Hour 5 - Spindle density (count/min) in N3 stage.
+ASH	stage_h5_N2N3_density	Stage Hour 5 - Spindle density (count/min) in N2 and N3 stage.
+ASI	stage_h5_NREM_density	Stage Hour 5 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+ASJ	stage_h5_R_density	Stage Hour 5 - Spindle density (count/min) in REM stage.
+ASK	stage_h5_N1_spindle_sec	Stage Hour 5 - Average spindle duration (s) in N1 stage.
+ASL	stage_h5_N2_spindle_sec	Stage Hour 5 - Average spindle duration (s) in N2 stage.
+ASM	stage_h5_N3_spindle_sec	Stage Hour 5 - Average spindle duration (s) in N3 stage.
+ASN	stage_h5_N2N3_spindle_sec	Stage Hour 5 - Average spindle duration (s) in N2 and N3 stage.
+ASO	stage_h5_NREM_spindle_sec	Stage Hour 5 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+ASP	stage_h5_R_spindle_sec	Stage Hour 5 - Average spindle duration (s) in REM stage.
+ASQ	stage_h5_spindle_sec	Stage Hour 5 - Average spindle duration (s) in all stages.
+ASR	stage_h5_N1_dom_freq_Hz	Stage Hour 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+ASS	stage_h5_N2_dom_freq_Hz	Stage Hour 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+AST	stage_h5_N3_dom_freq_Hz	Stage Hour 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+ASU	stage_h5_N2N3_dom_freq_Hz	Stage Hour 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+ASV	stage_h5_NREM_dom_freq_Hz	Stage Hour 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+ASW	stage_h5_R_dom_freq_Hz	Stage Hour 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+ASX	stage_h5_dom_freq_Hz	Stage Hour 5 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+ASY	stage_h5_N1_avg_freq_Hz	Stage Hour 5 - Spindle average frequency (Hz) counting peaks in N1 stage.
+ASZ	stage_h5_N2_avg_freq_Hz	Stage Hour 5 - Spindle average frequency (Hz) counting peaks in N2 stage.
+ATA	stage_h5_N3_avg_freq_Hz	Stage Hour 5 - Spindle average frequency (Hz) counting peaks in N3 stage.
+ATB	stage_h5_N2N3_avg_freq_Hz	Stage Hour 5 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+ATC	stage_h5_NREM_avg_freq_Hz	Stage Hour 5 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+ATD	stage_h5_R_avg_freq_Hz	Stage Hour 5 - Spindle average frequency (Hz) counting peaks in REM stage.
+ATE	stage_h5_avg_freq_Hz	Stage Hour 5 - Spindle average frequency (Hz) counting peaks in all stages.
+ATF	stage_h5_N1_amp_pkpk_uV	Stage Hour 5 - Average peak-to-peak amplitude (µV) in N1 stage.
+ATG	stage_h5_N2_amp_pkpk_uV	Stage Hour 5 - Average peak-to-peak amplitude (µV) in N2 stage.
+ATH	stage_h5_N3_amp_pkpk_uV	Stage Hour 5 - Average peak-to-peak amplitude (µV) in N3 stage.
+ATI	stage_h5_N2N3_amp_pkpk_uV	Stage Hour 5 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+ATJ	stage_h5_NREM_amp_pkpk_uV	Stage Hour 5 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+ATK	stage_h5_R_amp_pkpk_uV	Stage Hour 5 - Average peak-to-peak amplitude (µV) in REM stage.
+ATL	stage_h5_amp_pkpk_uV	Stage Hour 5 - Average peak-to-peak amplitude (µV) in all stages
+ATM	stage_h5_N1_amp_rms_uV	Stage Hour 5 - Average rms amplitude (µV) in N1 stage.
+ATN	stage_h5_N2_amp_rms_uV	Stage Hour 5 - Average rms amplitude (µV) in N2 stage.
+ATO	stage_h5_N3_amp_rms_uV	Stage Hour 5 - Average rms amplitude (µV) in N3 stage.
+ATP	stage_h5_N2N3_amp_rms_uV	Stage Hour 5 - Average rms amplitude (µV) in N2 and N3 stage.
+ATQ	stage_h5_NREM_amp_rms_uV	Stage Hour 5 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+ATR	stage_h5_R_amp_rms_uV	Stage Hour 5 - Average rms amplitude (µV) in REM stage.
+ATS	stage_h5_amp_rms_uV	Stage Hour 5 - Average rms (Root Mean Square) amplitude (µV) in all stages
+ATT	stage_h6_N1_valid_min	Stage Hour 6 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+ATU	stage_h6_N2_valid_min	Stage Hour 6 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+ATV	stage_h6_N3_valid_min	Stage Hour 6 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+ATW	stage_h6_N2N3_valid_min	Stage Hour 6 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+ATX	stage_h6_NREM_valid_min	Stage Hour 6 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+ATY	stage_h6_R_valid_min	Stage Hour 6 - Valid (no artifact) duration (min) in REM stage available for detection.
+ATZ	stage_h6_min	Stage Hour 6 duration (min) minus the REM periods if excluded.
+AUA	stage_h6_N1_spindle_count	Stage Hour 6 - Sleep spindle count in N1 stage.
+AUB	stage_h6_N2_spindle_count	Stage Hour 6 - Sleep spindle count in N2 stage.
+AUC	stage_h6_N3_spindle_count	Stage Hour 6 - Sleep spindle count in N3 stage.
+AUD	stage_h6_N2N3_spindle_count	Stage Hour 6 - Sleep spindle count in N2 and N3 stage.
+AUE	stage_h6_NREM_spindle_count	Stage Hour 6 - Sleep spindle count in NREM stage (N1, N2, N3).
+AUF	stage_h6_R_spindle_count	Stage Hour 6 - Sleep spindle count in REM stage.
+AUG	stage_h6_spindle_count	Stage Hour 6 - Sleep spindle count in all stages.
+AUH	stage_h6_N1_density	Stage Hour 6 - Spindle density (count/min) in N1 stage.
+AUI	stage_h6_N2_density	Stage Hour 6 - Spindle density (count/min) in N2 stage.
+AUJ	stage_h6_N3_density	Stage Hour 6 - Spindle density (count/min) in N3 stage.
+AUK	stage_h6_N2N3_density	Stage Hour 6 - Spindle density (count/min) in N2 and N3 stage.
+AUL	stage_h6_NREM_density	Stage Hour 6 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+AUM	stage_h6_R_density	Stage Hour 6 - Spindle density (count/min) in REM stage.
+AUN	stage_h6_N1_spindle_sec	Stage Hour 6 - Average spindle duration (s) in N1 stage.
+AUO	stage_h6_N2_spindle_sec	Stage Hour 6 - Average spindle duration (s) in N2 stage.
+AUP	stage_h6_N3_spindle_sec	Stage Hour 6 - Average spindle duration (s) in N3 stage.
+AUQ	stage_h6_N2N3_spindle_sec	Stage Hour 6 - Average spindle duration (s) in N2 and N3 stage.
+AUR	stage_h6_NREM_spindle_sec	Stage Hour 6 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+AUS	stage_h6_R_spindle_sec	Stage Hour 6 - Average spindle duration (s) in REM stage.
+AUT	stage_h6_spindle_sec	Stage Hour 6 - Average spindle duration (s) in all stages.
+AUU	stage_h6_N1_dom_freq_Hz	Stage Hour 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+AUV	stage_h6_N2_dom_freq_Hz	Stage Hour 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+AUW	stage_h6_N3_dom_freq_Hz	Stage Hour 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+AUX	stage_h6_N2N3_dom_freq_Hz	Stage Hour 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+AUY	stage_h6_NREM_dom_freq_Hz	Stage Hour 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+AUZ	stage_h6_R_dom_freq_Hz	Stage Hour 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+AVA	stage_h6_dom_freq_Hz	Stage Hour 6 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+AVB	stage_h6_N1_avg_freq_Hz	Stage Hour 6 - Spindle average frequency (Hz) counting peaks in N1 stage.
+AVC	stage_h6_N2_avg_freq_Hz	Stage Hour 6 - Spindle average frequency (Hz) counting peaks in N2 stage.
+AVD	stage_h6_N3_avg_freq_Hz	Stage Hour 6 - Spindle average frequency (Hz) counting peaks in N3 stage.
+AVE	stage_h6_N2N3_avg_freq_Hz	Stage Hour 6 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+AVF	stage_h6_NREM_avg_freq_Hz	Stage Hour 6 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+AVG	stage_h6_R_avg_freq_Hz	Stage Hour 6 - Spindle average frequency (Hz) counting peaks in REM stage.
+AVH	stage_h6_avg_freq_Hz	Stage Hour 6 - Spindle average frequency (Hz) counting peaks in all stages.
+AVI	stage_h6_N1_amp_pkpk_uV	Stage Hour 6 - Average peak-to-peak amplitude (µV) in N1 stage.
+AVJ	stage_h6_N2_amp_pkpk_uV	Stage Hour 6 - Average peak-to-peak amplitude (µV) in N2 stage.
+AVK	stage_h6_N3_amp_pkpk_uV	Stage Hour 6 - Average peak-to-peak amplitude (µV) in N3 stage.
+AVL	stage_h6_N2N3_amp_pkpk_uV	Stage Hour 6 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+AVM	stage_h6_NREM_amp_pkpk_uV	Stage Hour 6 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+AVN	stage_h6_R_amp_pkpk_uV	Stage Hour 6 - Average peak-to-peak amplitude (µV) in REM stage.
+AVO	stage_h6_amp_pkpk_uV	Stage Hour 6 - Average peak-to-peak amplitude (µV) in all stages
+AVP	stage_h6_N1_amp_rms_uV	Stage Hour 6 - Average rms amplitude (µV) in N1 stage.
+AVQ	stage_h6_N2_amp_rms_uV	Stage Hour 6 - Average rms amplitude (µV) in N2 stage.
+AVR	stage_h6_N3_amp_rms_uV	Stage Hour 6 - Average rms amplitude (µV) in N3 stage.
+AVS	stage_h6_N2N3_amp_rms_uV	Stage Hour 6 - Average rms amplitude (µV) in N2 and N3 stage.
+AVT	stage_h6_NREM_amp_rms_uV	Stage Hour 6 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+AVU	stage_h6_R_amp_rms_uV	Stage Hour 6 - Average rms amplitude (µV) in REM stage.
+AVV	stage_h6_amp_rms_uV	Stage Hour 6 - Average rms (Root Mean Square) amplitude (µV) in all stages
+AVW	stage_h7_N1_valid_min	Stage Hour 7 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+AVX	stage_h7_N2_valid_min	Stage Hour 7 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+AVY	stage_h7_N3_valid_min	Stage Hour 7 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+AVZ	stage_h7_N2N3_valid_min	Stage Hour 7 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+AWA	stage_h7_NREM_valid_min	Stage Hour 7 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+AWB	stage_h7_R_valid_min	Stage Hour 7 - Valid (no artifact) duration (min) in REM stage available for detection.
+AWC	stage_h7_min	Stage Hour 7 duration (min) minus the REM periods if excluded.
+AWD	stage_h7_N1_spindle_count	Stage Hour 7 - Sleep spindle count in N1 stage.
+AWE	stage_h7_N2_spindle_count	Stage Hour 7 - Sleep spindle count in N2 stage.
+AWF	stage_h7_N3_spindle_count	Stage Hour 7 - Sleep spindle count in N3 stage.
+AWG	stage_h7_N2N3_spindle_count	Stage Hour 7 - Sleep spindle count in N2 and N3 stage.
+AWH	stage_h7_NREM_spindle_count	Stage Hour 7 - Sleep spindle count in NREM stage (N1, N2, N3).
+AWI	stage_h7_R_spindle_count	Stage Hour 7 - Sleep spindle count in REM stage.
+AWJ	stage_h7_spindle_count	Stage Hour 7 - Sleep spindle count in all stages.
+AWK	stage_h7_N1_density	Stage Hour 7 - Spindle density (count/min) in N1 stage.
+AWL	stage_h7_N2_density	Stage Hour 7 - Spindle density (count/min) in N2 stage.
+AWM	stage_h7_N3_density	Stage Hour 7 - Spindle density (count/min) in N3 stage.
+AWN	stage_h7_N2N3_density	Stage Hour 7 - Spindle density (count/min) in N2 and N3 stage.
+AWO	stage_h7_NREM_density	Stage Hour 7 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+AWP	stage_h7_R_density	Stage Hour 7 - Spindle density (count/min) in REM stage.
+AWQ	stage_h7_N1_spindle_sec	Stage Hour 7 - Average spindle duration (s) in N1 stage.
+AWR	stage_h7_N2_spindle_sec	Stage Hour 7 - Average spindle duration (s) in N2 stage.
+AWS	stage_h7_N3_spindle_sec	Stage Hour 7 - Average spindle duration (s) in N3 stage.
+AWT	stage_h7_N2N3_spindle_sec	Stage Hour 7 - Average spindle duration (s) in N2 and N3 stage.
+AWU	stage_h7_NREM_spindle_sec	Stage Hour 7 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+AWV	stage_h7_R_spindle_sec	Stage Hour 7 - Average spindle duration (s) in REM stage.
+AWW	stage_h7_spindle_sec	Stage Hour 7 - Average spindle duration (s) in all stages.
+AWX	stage_h7_N1_dom_freq_Hz	Stage Hour 7 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+AWY	stage_h7_N2_dom_freq_Hz	Stage Hour 7 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+AWZ	stage_h7_N3_dom_freq_Hz	Stage Hour 7 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+AXA	stage_h7_N2N3_dom_freq_Hz	Stage Hour 7 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+AXB	stage_h7_NREM_dom_freq_Hz	Stage Hour 7 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+AXC	stage_h7_R_dom_freq_Hz	Stage Hour 7 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+AXD	stage_h7_dom_freq_Hz	Stage Hour 7 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+AXE	stage_h7_N1_avg_freq_Hz	Stage Hour 7 - Spindle average frequency (Hz) counting peaks in N1 stage.
+AXF	stage_h7_N2_avg_freq_Hz	Stage Hour 7 - Spindle average frequency (Hz) counting peaks in N2 stage.
+AXG	stage_h7_N3_avg_freq_Hz	Stage Hour 7 - Spindle average frequency (Hz) counting peaks in N3 stage.
+AXH	stage_h7_N2N3_avg_freq_Hz	Stage Hour 7 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+AXI	stage_h7_NREM_avg_freq_Hz	Stage Hour 7 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+AXJ	stage_h7_R_avg_freq_Hz	Stage Hour 7 - Spindle average frequency (Hz) counting peaks in REM stage.
+AXK	stage_h7_avg_freq_Hz	Stage Hour 7 - Spindle average frequency (Hz) counting peaks in all stages.
+AXL	stage_h7_N1_amp_pkpk_uV	Stage Hour 7 - Average peak-to-peak amplitude (µV) in N1 stage.
+AXM	stage_h7_N2_amp_pkpk_uV	Stage Hour 7 - Average peak-to-peak amplitude (µV) in N2 stage.
+AXN	stage_h7_N3_amp_pkpk_uV	Stage Hour 7 - Average peak-to-peak amplitude (µV) in N3 stage.
+AXO	stage_h7_N2N3_amp_pkpk_uV	Stage Hour 7 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+AXP	stage_h7_NREM_amp_pkpk_uV	Stage Hour 7 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+AXQ	stage_h7_R_amp_pkpk_uV	Stage Hour 7 - Average peak-to-peak amplitude (µV) in REM stage.
+AXR	stage_h7_amp_pkpk_uV	Stage Hour 7 - Average peak-to-peak amplitude (µV) in all stages
+AXS	stage_h7_N1_amp_rms_uV	Stage Hour 7 - Average rms amplitude (µV) in N1 stage.
+AXT	stage_h7_N2_amp_rms_uV	Stage Hour 7 - Average rms amplitude (µV) in N2 stage.
+AXU	stage_h7_N3_amp_rms_uV	Stage Hour 7 - Average rms amplitude (µV) in N3 stage.
+AXV	stage_h7_N2N3_amp_rms_uV	Stage Hour 7 - Average rms amplitude (µV) in N2 and N3 stage.
+AXW	stage_h7_NREM_amp_rms_uV	Stage Hour 7 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+AXX	stage_h7_R_amp_rms_uV	Stage Hour 7 - Average rms amplitude (µV) in REM stage.
+AXY	stage_h7_amp_rms_uV	Stage Hour 7 - Average rms (Root Mean Square) amplitude (µV) in all stages
+AXZ	stage_h8_N1_valid_min	Stage Hour 8 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+AYA	stage_h8_N2_valid_min	Stage Hour 8 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+AYB	stage_h8_N3_valid_min	Stage Hour 8 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+AYC	stage_h8_N2N3_valid_min	Stage Hour 8 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+AYD	stage_h8_NREM_valid_min	Stage Hour 8 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+AYE	stage_h8_R_valid_min	Stage Hour 8 - Valid (no artifact) duration (min) in REM stage available for detection.
+AYF	stage_h8_min	Stage Hour 8 duration (min) minus the REM periods if excluded.
+AYG	stage_h8_N1_spindle_count	Stage Hour 8 - Sleep spindle count in N1 stage.
+AYH	stage_h8_N2_spindle_count	Stage Hour 8 - Sleep spindle count in N2 stage.
+AYI	stage_h8_N3_spindle_count	Stage Hour 8 - Sleep spindle count in N3 stage.
+AYJ	stage_h8_N2N3_spindle_count	Stage Hour 8 - Sleep spindle count in N2 and N3 stage.
+AYK	stage_h8_NREM_spindle_count	Stage Hour 8 - Sleep spindle count in NREM stage (N1, N2, N3).
+AYL	stage_h8_R_spindle_count	Stage Hour 8 - Sleep spindle count in REM stage.
+AYM	stage_h8_spindle_count	Stage Hour 8 - Sleep spindle count in all stages.
+AYN	stage_h8_N1_density	Stage Hour 8 - Spindle density (count/min) in N1 stage.
+AYO	stage_h8_N2_density	Stage Hour 8 - Spindle density (count/min) in N2 stage.
+AYP	stage_h8_N3_density	Stage Hour 8 - Spindle density (count/min) in N3 stage.
+AYQ	stage_h8_N2N3_density	Stage Hour 8 - Spindle density (count/min) in N2 and N3 stage.
+AYR	stage_h8_NREM_density	Stage Hour 8 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+AYS	stage_h8_R_density	Stage Hour 8 - Spindle density (count/min) in REM stage.
+AYT	stage_h8_N1_spindle_sec	Stage Hour 8 - Average spindle duration (s) in N1 stage.
+AYU	stage_h8_N2_spindle_sec	Stage Hour 8 - Average spindle duration (s) in N2 stage.
+AYV	stage_h8_N3_spindle_sec	Stage Hour 8 - Average spindle duration (s) in N3 stage.
+AYW	stage_h8_N2N3_spindle_sec	Stage Hour 8 - Average spindle duration (s) in N2 and N3 stage.
+AYX	stage_h8_NREM_spindle_sec	Stage Hour 8 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+AYY	stage_h8_R_spindle_sec	Stage Hour 8 - Average spindle duration (s) in REM stage.
+AYZ	stage_h8_spindle_sec	Stage Hour 8 - Average spindle duration (s) in all stages.
+AZA	stage_h8_N1_dom_freq_Hz	Stage Hour 8 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+AZB	stage_h8_N2_dom_freq_Hz	Stage Hour 8 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+AZC	stage_h8_N3_dom_freq_Hz	Stage Hour 8 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+AZD	stage_h8_N2N3_dom_freq_Hz	Stage Hour 8 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+AZE	stage_h8_NREM_dom_freq_Hz	Stage Hour 8 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+AZF	stage_h8_R_dom_freq_Hz	Stage Hour 8 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+AZG	stage_h8_dom_freq_Hz	Stage Hour 8 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+AZH	stage_h8_N1_avg_freq_Hz	Stage Hour 8 - Spindle average frequency (Hz) counting peaks in N1 stage.
+AZI	stage_h8_N2_avg_freq_Hz	Stage Hour 8 - Spindle average frequency (Hz) counting peaks in N2 stage.
+AZJ	stage_h8_N3_avg_freq_Hz	Stage Hour 8 - Spindle average frequency (Hz) counting peaks in N3 stage.
+AZK	stage_h8_N2N3_avg_freq_Hz	Stage Hour 8 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+AZL	stage_h8_NREM_avg_freq_Hz	Stage Hour 8 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+AZM	stage_h8_R_avg_freq_Hz	Stage Hour 8 - Spindle average frequency (Hz) counting peaks in REM stage.
+AZN	stage_h8_avg_freq_Hz	Stage Hour 8 - Spindle average frequency (Hz) counting peaks in all stages.
+AZO	stage_h8_N1_amp_pkpk_uV	Stage Hour 8 - Average peak-to-peak amplitude (µV) in N1 stage.
+AZP	stage_h8_N2_amp_pkpk_uV	Stage Hour 8 - Average peak-to-peak amplitude (µV) in N2 stage.
+AZQ	stage_h8_N3_amp_pkpk_uV	Stage Hour 8 - Average peak-to-peak amplitude (µV) in N3 stage.
+AZR	stage_h8_N2N3_amp_pkpk_uV	Stage Hour 8 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+AZS	stage_h8_NREM_amp_pkpk_uV	Stage Hour 8 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+AZT	stage_h8_R_amp_pkpk_uV	Stage Hour 8 - Average peak-to-peak amplitude (µV) in REM stage.
+AZU	stage_h8_amp_pkpk_uV	Stage Hour 8 - Average peak-to-peak amplitude (µV) in all stages
+AZV	stage_h8_N1_amp_rms_uV	Stage Hour 8 - Average rms amplitude (µV) in N1 stage.
+AZW	stage_h8_N2_amp_rms_uV	Stage Hour 8 - Average rms amplitude (µV) in N2 stage.
+AZX	stage_h8_N3_amp_rms_uV	Stage Hour 8 - Average rms amplitude (µV) in N3 stage.
+AZY	stage_h8_N2N3_amp_rms_uV	Stage Hour 8 - Average rms amplitude (µV) in N2 and N3 stage.
+AZZ	stage_h8_NREM_amp_rms_uV	Stage Hour 8 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+BAA	stage_h8_R_amp_rms_uV	Stage Hour 8 - Average rms amplitude (µV) in REM stage.
+BAB	stage_h8_amp_rms_uV	Stage Hour 8 - Average rms (Root Mean Square) amplitude (µV) in all stages
+BAC	stage_h9_N1_valid_min	Stage Hour 9 - Valid (no artifact) duration (min) in N1 stage available for detection minus the REM periods if excluded.
+BAD	stage_h9_N2_valid_min	Stage Hour 9 - Valid (no artifact) duration (min) in N2 stage available for detection minus the REM periods if excluded.
+BAE	stage_h9_N3_valid_min	Stage Hour 9 - Valid (no artifact) duration (min) in N3 stage available for detection minus the REM periods if excluded.
+BAF	stage_h9_N2N3_valid_min	Stage Hour 9 - Valid (no artifact) duration (min) in N2 and N3 stage available for detection minus the REM periods if excluded.
+BAG	stage_h9_NREM_valid_min	Stage Hour 9 - Valid (no artifact) duration (min) in NREM stage (N1, N2, N3) available for detection minus the REM periods if excluded.
+BAH	stage_h9_R_valid_min	Stage Hour 9 - Valid (no artifact) duration (min) in REM stage available for detection.
+BAI	stage_h9_min	Stage Hour 9 duration (min) minus the REM periods if excluded.
+BAJ	stage_h9_N1_spindle_count	Stage Hour 9 - Sleep spindle count in N1 stage.
+BAK	stage_h9_N2_spindle_count	Stage Hour 9 - Sleep spindle count in N2 stage.
+BAL	stage_h9_N3_spindle_count	Stage Hour 9 - Sleep spindle count in N3 stage.
+BAM	stage_h9_N2N3_spindle_count	Stage Hour 9 - Sleep spindle count in N2 and N3 stage.
+BAN	stage_h9_NREM_spindle_count	Stage Hour 9 - Sleep spindle count in NREM stage (N1, N2, N3).
+BAO	stage_h9_R_spindle_count	Stage Hour 9 - Sleep spindle count in REM stage.
+BAP	stage_h9_spindle_count	Stage Hour 9 - Sleep spindle count in all stages.
+BAQ	stage_h9_N1_density	Stage Hour 9 - Spindle density (count/min) in N1 stage.
+BAR	stage_h9_N2_density	Stage Hour 9 - Spindle density (count/min) in N2 stage.
+BAS	stage_h9_N3_density	Stage Hour 9 - Spindle density (count/min) in N3 stage.
+BAT	stage_h9_N2N3_density	Stage Hour 9 - Spindle density (count/min) in N2 and N3 stage.
+BAU	stage_h9_NREM_density	Stage Hour 9 - Spindle density (count/min) in NREM stage (N1, N2, N3).
+BAV	stage_h9_R_density	Stage Hour 9 - Spindle density (count/min) in REM stage.
+BAW	stage_h9_N1_spindle_sec	Stage Hour 9 - Average spindle duration (s) in N1 stage.
+BAX	stage_h9_N2_spindle_sec	Stage Hour 9 - Average spindle duration (s) in N2 stage.
+BAY	stage_h9_N3_spindle_sec	Stage Hour 9 - Average spindle duration (s) in N3 stage.
+BAZ	stage_h9_N2N3_spindle_sec	Stage Hour 9 - Average spindle duration (s) in N2 and N3 stage.
+BBA	stage_h9_NREM_spindle_sec	Stage Hour 9 - Average spindle duration (s) in NREM stage (N1, N2, N3).
+BBB	stage_h9_R_spindle_sec	Stage Hour 9 - Average spindle duration (s) in REM stage.
+BBC	stage_h9_spindle_sec	Stage Hour 9 - Average spindle duration (s) in all stages.
+BBD	stage_h9_N1_dom_freq_Hz	Stage Hour 9 - Spindle dominant frequency (Hz) where spectral energy is maximum in N1 stage.
+BBE	stage_h9_N2_dom_freq_Hz	Stage Hour 9 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 stage.
+BBF	stage_h9_N3_dom_freq_Hz	Stage Hour 9 - Spindle dominant frequency (Hz) where spectral energy is maximum in N3 stage.
+BBG	stage_h9_N2N3_dom_freq_Hz	Stage Hour 9 - Spindle dominant frequency (Hz) where spectral energy is maximum in N2 and N3 stage.
+BBH	stage_h9_NREM_dom_freq_Hz	Stage Hour 9 - Spindle dominant frequency (Hz) where spectral energy is maximum in NREM stage (N1, N2, N3).
+BBI	stage_h9_R_dom_freq_Hz	Stage Hour 9 - Spindle dominant frequency (Hz) where spectral energy is maximum in REM stage.
+BBJ	stage_h9_dom_freq_Hz	Stage Hour 9 - Spindle dominant frequency (Hz) where spectral energy is maximum in all stages.
+BBK	stage_h9_N1_avg_freq_Hz	Stage Hour 9 - Spindle average frequency (Hz) counting peaks in N1 stage.
+BBL	stage_h9_N2_avg_freq_Hz	Stage Hour 9 - Spindle average frequency (Hz) counting peaks in N2 stage.
+BBM	stage_h9_N3_avg_freq_Hz	Stage Hour 9 - Spindle average frequency (Hz) counting peaks in N3 stage.
+BBN	stage_h9_N2N3_avg_freq_Hz	Stage Hour 9 - Spindle average frequency (Hz) counting peaks in N2 and N3 stage.
+BBO	stage_h9_NREM_avg_freq_Hz	Stage Hour 9 - Spindle average frequency (Hz) counting peaks in NREM stage (N1, N2, N3).
+BBP	stage_h9_R_avg_freq_Hz	Stage Hour 9 - Spindle average frequency (Hz) counting peaks in REM stage.
+BBQ	stage_h9_avg_freq_Hz	Stage Hour 9 - Spindle average frequency (Hz) counting peaks in all stages.
+BBR	stage_h9_N1_amp_pkpk_uV	Stage Hour 9 - Average peak-to-peak amplitude (µV) in N1 stage.
+BBS	stage_h9_N2_amp_pkpk_uV	Stage Hour 9 - Average peak-to-peak amplitude (µV) in N2 stage.
+BBT	stage_h9_N3_amp_pkpk_uV	Stage Hour 9 - Average peak-to-peak amplitude (µV) in N3 stage.
+BBU	stage_h9_N2N3_amp_pkpk_uV	Stage Hour 9 - Average peak-to-peak amplitude (µV) in N2 and N3 stage.
+BBV	stage_h9_NREM_amp_pkpk_uV	Stage Hour 9 - Average peak-to-peak amplitude (µV) in NREM stage (N1, N2, N3).
+BBW	stage_h9_R_amp_pkpk_uV	Stage Hour 9 - Average peak-to-peak amplitude (µV) in REM stage.
+BBX	stage_h9_amp_pkpk_uV	Stage Hour 9 - Average peak-to-peak amplitude (µV) in all stages
+BBY	stage_h9_N1_amp_rms_uV	Stage Hour 9 - Average rms amplitude (µV) in N1 stage.
+BBZ	stage_h9_N2_amp_rms_uV	Stage Hour 9 - Average rms amplitude (µV) in N2 stage.
+BCA	stage_h9_N3_amp_rms_uV	Stage Hour 9 - Average rms amplitude (µV) in N3 stage.
+BCB	stage_h9_N2N3_amp_rms_uV	Stage Hour 9 - Average rms amplitude (µV) in N2 and N3 stage.
+BCC	stage_h9_NREM_amp_rms_uV	Stage Hour 9 - Average rms amplitude (µV) in NREM stage (N1, N2, N3).
+BCD	stage_h9_R_amp_rms_uV	Stage Hour 9 - Average rms amplitude (µV) in REM stage.
+BCE	stage_h9_amp_rms_uV	Stage Hour 9 - Average rms (Root Mean Square) amplitude (µV) in all stages
