@@ -114,5 +114,8 @@ Steps
 Version History
 -----------------
 
+* v2.0.1 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
+	- The title of the figures has been removed to allow more flexibility for the users.
+	- Some parameter names have been changed internally to be clearer for developers, leading to an increase in the tool's version number.
 * v2.0.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
     - Initial release of the tool.
