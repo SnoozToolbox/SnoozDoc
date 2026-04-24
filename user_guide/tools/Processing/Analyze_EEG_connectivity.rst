@@ -159,5 +159,5 @@ References
 Version History
 -----------------
 
-* v2.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
+* v2.3.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
     - Initial release of the tool.
