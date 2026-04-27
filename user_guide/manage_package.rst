@@ -51,6 +51,16 @@ To add a package
 
 .. warning::
    
+   **API Compatibility**
+
+   When adding a package, ensure that the package API version is compatible with the current version of Snooz. Incompatible API versions may lead to errors or unexpected behavior.
+   Always refer to the documentation or release notes for compatibility information before adding a new package.
+
+   - Snooz **beta-2.0.0** and Snooz **beta-2.1.0** work with **API=2.0.0**
+   - Snooz **beta-3.0.0** works with **API=3.0.0**
+
+.. warning::
+   
    **Packages in Development**
 
    Users may receive packages to validate before a Snooz release. The received zipped file typically includes two folders named with the version number, such as CEAMSModule_6_9_1 and CEAMSTools_6_9_1.
