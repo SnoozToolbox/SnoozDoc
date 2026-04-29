@@ -1,0 +1,43 @@
+A	filename	PSG filename
+B	N2_N3_1	The 1st longest bout of N2 or N3 sleep.
+C	N2_N3_2	The 2sd longest bout of N2 or N3 sleep.
+D	N2_N3_3	The 3rd longest bout of N2 or N3 sleep.
+E	N2_N3_4	The 4th longest bout of N2 or N3 sleep.
+F	N2_N3_5	The 5th longest bout of N2 or N3 sleep.
+G	N2_N3_6	The 6th longest bout of N2 or N3 sleep.
+H	N2_N3_7	The 7th longest bout of N2 or N3 sleep.
+I	N2_N3_8	The 8th longest bout of N2 or N3 sleep.
+J	N2_N3_9	The 9th longest bout of N2 or N3 sleep.
+K	N2_N3_10	The 10th longest bout of N2 or N3 sleep.
+L	N2_N3_1_10_mean	The mean of the 1st 10 longest bouts of N2 or N3 sleep.
+M	N2_N3_1_10_std	The standard deviation of the 1st 10 longest bouts of N2 or N3 sleep.
+N	N2_N3_mean	The mean of the bouts of N2 or N3 sleep.
+O	N2_N3_std	The standard deviation of the longest bouts of N2 or N3 sleep.
+P	N2_N3_R_1	The 1st longest bout of N2, N3 and REM sleep.
+Q	N2_N3_R_2	The 2sd longest bout of N2, N3 and REM sleep.
+R	N2_N3_R_3	The 3rd longest bout of N2, N3 and REM sleep.
+S	N2_N3_R_4	The 4th longest bout of N2, N3 and REM sleep.
+T	N2_N3_R_5	The 5th longest bout of N2, N3 and REM sleep.
+U	N2_N3_R_6	The 6th longest bout of N2, N3 and REM sleep.
+V	N2_N3_R_7	The 7th longest bout of N2, N3 and REM sleep.
+W	N2_N3_R_8	The 8th longest bout of N2, N3 and REM sleep.
+X	N2_N3_R_9	The 9th longest bout of N2, N3 and REM sleep.
+Y	N2_N3_R_10	The 10th longest bout of N2, N3 and REM sleep.
+Z	N2_N3_R_1_10_mean	The mean of the 1st 10 longest bouts of N2, N3 and REM sleep.
+AA	N2_N3_R_1_10_std	The standard deviation of the 1st 10 longest bouts of N2, N3 and REM sleep.
+AB	N2_N3_R_mean	The mean of the bouts of N2, N3 and REM sleep.
+AC	N2_N3_R_std	The standard deviation of the longest bouts of N2, N3 and REM sleep.
+AD	R_1	The 1st longest bout of REM sleep.
+AE	R_2	The 2sd longest bout of REM sleep.
+AF	R_3	The 3rd longest bout of REM sleep.
+AG	R_4	The 4th longest bout of REM sleep.
+AH	R_5	The 5th longest bout of REM sleep.
+AI	R_6	The 6th longest bout of REM sleep.
+AJ	R_7	The 7th longest bout of REM sleep.
+AK	R_8	The 8th longest bout of REM sleep.
+AL	R_9	The 9th longest bout of REM sleep.
+AM	R_10	The 10th longest bout of REM sleep.
+AN	R_1_10_mean	The mean of the 1st 10 longest bouts of REM sleep.
+AO	R_1_10_std	The standard deviation of the 1st 10 longest bouts of REM sleep.
+AP	R_mean	The mean of the bouts of REM sleep.
+AQ	R_std	The standard deviation of the longest bouts of REM sleep.

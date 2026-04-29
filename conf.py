@@ -3,11 +3,11 @@
 # -- Project information
 
 project = 'Snooz Toolbox'
-copyright = '2023, Valorisation Recherche HSCM, Société en Commandite'
-author = 'Karine Lacourse, David Lévesque'
+copyright = '2023-2026, Valorisation Recherche HSCM, Société en Commandite'
+author = 'Karine Lacourse, David Lévesque, Mohammad Hasan Azad, Hanieh Bazregarzadeh'
 
-release = 'beta-2.0.0'
-version = 'beta-2.0.0'
+release = 'beta-3.0.0'
+version = 'beta-3.0.0'
 
 # -- General configuration
 
@@ -33,6 +33,10 @@ templates_path = ['_templates']
 #import sphinx_pdj_theme
 html_theme = 'sphinx_rtd_theme'
 #html_theme_path = [sphinx_pdj_theme.get_html_theme_path()]
+
+# Add custom CSS
+html_static_path = ['_static']
+html_css_files = ['custom.css']
 
 # -- Options for EPUB output
 epub_show_urls = 'footnote'

@@ -1,8 +1,8 @@
 .. _getting_started:
 
-==========================
+============================
 Getting Started with Snooz
-==========================
+============================
 
 The goal of this document is to  detail how to download, install and launch Snooz.
 
@@ -23,9 +23,12 @@ Snooz has been developed and validated exclusively on Windows 11.
 macOS
 ------
 
-- Snooz is compatible only with Macs featuring the T2 security chip on Intel processors.  
-- It is not supported on Macs with M1 or newer Apple Silicon processors.
-- Snooz is compatible with macOS versions 14.3 (Sonoma) through 15.2 (Sequoia).
+Snooz supports both Intel-based Macs (including those with the T2 security chip) and Apple Silicon Macs (M1 and newer).
+Supported macOS versions: 14.3 (Sonoma) through 15.2 (Sequoia).  
+
+.. warning::
+
+  Make sure to download the correct Snooz installer for your architecture. Two separate links are provided in the email and are clearly labeled: **Intel** and **arm64**.
 
 Linux
 ------
@@ -99,14 +102,25 @@ On Linux platforms
 ---------------------
 
 1. Download the Installer using the link provided in the Snooz email after submitting your profile.
-2. Install Snooz.
-   
-   Open the installer via the Ubuntu software center or Software install and click install  
 
-   or install Snooz via the terminal : ``sudo dpkg -i SnoozSetup.deb``
+    - Two files are available: a **.deb** file and a **.zip** file. 
+    - Recommended - Use the .deb file for easier installation (requires admin rights).
+    - Alternative - Without admin rights, use the .zip file.
+
+2. Recommended - Install Snooz via the **.deb** file.
+
+    - Open the installer via the Ubuntu Software Center (or Software Install) and click Install. 
+    - Or install Snooz via the terminal : ``sudo dpkg -i Linux_SnoozSetup-beta-xxx.deb``
+
+3. Alternative - Install Snooz via the **.zip** file.
+
+    - Open a terminal in your Downloads folder and run: 
+        
+        - ``dpkg-deb -x Linux_SnoozApp-beta-xxx.zip ~/my_snooz_app``
+    - To launch Snooz, type in a terminal: ``~/my_snooz_app/opt/Snooz/Snooz``
 
 .. note::
-  Use the filename of the .deb file you have downloaded.
+    Use the exact filename of the installer you downloaded.
 
 If you encounter issues, see the requirements in :ref:`OS_Compatibility`.
 

@@ -1,11 +1,8 @@
 .. _Slow_wave_detection:
 
 ===============================
-Slow Wave Detection
+Detect Slow Waves
 ===============================
-
-Description
------------------
 
 This tool detects slow waves, on specific sleep stages, with the algorithms inspired from (Bouchard et al. 2021) [1]
 
@@ -58,6 +55,8 @@ Three additional output reports are available :
          - total (all selected stages)
          - per sleep stage
          - per sleep cycle
+         - per clock hour
+         - per hour spent in each sleep stage
 
       See :ref:`slow_wave_cohort_info_csv` for the variable definition. 
    
@@ -65,19 +64,42 @@ Three additional output reports are available :
    
    The Three outputs are needed for the slow wave classifier.
 
+Filter Information
+--------------------
+
+The filter used in the Slow Wave detector is a Butterworth design implemented in second-order-section (SOS) form and applied using bidirectional zero-phase filtering. 
+This approach preserves the requested magnitude response while eliminating phase distortion.
+
+**Bandpass filter parameters:**
+
+- Type: IIR bandpass
+- Family: Butterworth
+- Frequency band: 0.16 Hz to 4 Hz
+- Order: 30 (internally halved before the forward/backward pass)
+- Form: second-order sections (SOS)
+- Application: bidirectional zero-phase filtering (filtfilt)
+
 
 Steps
 -----------------
 
 **1 - Input Files**
 
-   Start by opening your PSG files (.edf, .eeg or .sts).
+Start by opening your PSG files (.edf, .sts or .eeg). 
 
-   * The .tsv file is also needed for the EDF format.
+- **European Data Format (EDF)** : 
+  
+  The corresponding .tsv file is required with .edf. Both files must be saved in the same directory and share the exact same filename.
 
-   * The .sig file is also needed for Stellate format.
+- **Stellate format (up to version 6.2)** : 
+  
+  The corresponding .sig file is required with the .sts. Both files must be saved in the same directory and share the exact same filename.
 
-   * The whole NATUS subject folder is also needed for the .eeg format.
+- **NATUS format (version 9.1)** : 
+  
+  (*CEAMS users only*) The entire NATUS subject folder is required.
+
+For more details on accepted formats, see :ref:`accepted_format`.
 
 **2 - Non valid events**
 
@@ -105,4 +127,21 @@ Report
 
 References
 -----------------
-[1] Bouchard, M., Lina, J.-M., Gaudreault, P.-O., Lafrenière, A., Dubé, J., Gosselin, N., Carrier, J., 2021. Sleeping at the switch. Elife 10, e64337. https://doi.org/10.7554/eLife.64337 
+[1] Bouchard, M., Lina, J.-M., Gaudreault, P.-O., Lafrenière, A., Dubé, J., Gosselin, N., Carrier, J., 2021. Sleeping at the switch. Elife 10, e64337. https://doi.org/10.7554/eLife.64337
+
+
+Version History
+-----------------
+
+* v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.6.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0 
+    - Remove REM periods by default when detecting Slow Waves.
+    - Slow Wave Density has been added to the Slow Wave report.
+    - Refactored the output report to distinguish between elapsed clock time and sleep-stage time. 
+    - Added new variables representing the combined N2 + N3 stages.
+    - Events are discarded during non-specific channel artifacts.
+    - Fixed reporting of events starting at sleep stage transitions.
+    - Replaced the IIR delta passband filter with a FIR filter using a Hamming window to match the legacy tool.
+    - Improve path, filename, and extension handling for sleep cycle warning log file.

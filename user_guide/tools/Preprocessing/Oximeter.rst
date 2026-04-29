@@ -1,11 +1,8 @@
 .. _Oximeter: 
 
-===================
-Oximeter
-===================
-
-Description
------------------
+==========================
+Inspect Oximeter channel 
+==========================
 
 This viewer allows you to mark invalid sections on the oximeter channel in order 
 to generate a valid :ref:`Oxygen_saturation_report_csv` via the tool :ref:`Oxygen_saturation_report`. 
@@ -13,11 +10,9 @@ The invalid sections marked are saved as annotations in the accessory file.
 
 **Open a PSG file**
 
-| There are two mays to open a PSG for the Oximeter Viewer.
-| The user can open a PSG file by navigating to the Snnoz menu :
+To open the Oximeter inspector:
 
-1. "File" -> "Open", and select the Oximeter app.
-2. "Viewers" -> "Oximeter", and click on "Open File" in the left panel of the Oximeter Viewer.
+Navigate to the Snooz menu **"Preprocessing" → "Inspect EEG channels"**, and click on "Open File" in the left panel of the Viewer.
 
 Select the "Montage" and the label to identify the "Oximeter channel".
 
@@ -57,6 +52,13 @@ The invalid section annotations are defined as :
 * `channels` : the list of channels on which the section is invalid, e.g., the oximeter channel, such as 'SpO2'.
 
 
+Version History
+-----------------
 
+* v2.0.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.1.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
+    - Add minimum saturation line visualization and update instructional text
 
 

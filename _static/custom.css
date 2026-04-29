@@ -1,0 +1,19 @@
+/* Custom CSS for left-aligned table captions */
+.left-align-caption caption {
+    text-align: left !important;
+}
+
+/* Wrap text in table cells */
+.wrap-table td,
+.wrap-table th {
+    white-space: normal !important;
+    word-wrap: break-word;
+}
+
+/* Justify documentation text for cleaner HTML layout */
+.rst-content .section p,
+.rst-content .section li {
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+}

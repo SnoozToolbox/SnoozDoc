@@ -1,11 +1,8 @@
 .. _EDFbrowser_Converter:
 
-======================
-Convert EDFbrowser
-======================
-
-Description
------------------
+===========================================
+Convert Annotations from EDFbrowser
+===========================================
 
 This tool converts EDFbrowser .txt annotation files to Snooz .tsv annotation files. 
 In Snooz, annotations are grouped, a feature that does not exist in EDFbrowser. 
@@ -43,7 +40,7 @@ Edit the annotation group as you wish.  The default group is EDFbrowser.
     
     Enjoy the push button "Apply to all files" to convert files in batch.
 
-    Look at the "EDFbrowser Converter" home page and the step pages for more information.
+    Look at the "Convert Annotations from EDFbrowser" home page and the step pages for more information.
      
 .. warning::
 
@@ -53,3 +50,12 @@ Edit the annotation group as you wish.  The default group is EDFbrowser.
 	i.e. ``subject1.edf`` and ``subject1.tsv`` **is valid** 
     
         i.e. ``subject1.edf`` and ``subject1_annotation.tsv`` **is not valid**
+
+
+Version History
+-----------------
+
+* v2.0.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+* v2.1.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
+    - Supports the new optional time elapsed column.

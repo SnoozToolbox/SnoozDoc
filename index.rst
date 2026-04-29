@@ -11,9 +11,12 @@ User's Guide
 ------------
 Want to install and use Snooz? Follow this guide!
 
-* Follow this guide to get you started using Snooz: :doc:`user_guide/getting_started`
-* Follow this guide to manage the Snooz packages: :doc:`user_guide/manage_package`
-* For information about a specific tool, see here: :doc:`user_guide/tools/tools`
+* To get started with Snooz: :doc:`user_guide/getting_started`
+* To manage Snooz packages: :doc:`user_guide/manage_package`
+* For details on required data formats: :doc:`user_guide/accepted_format`
+* For information about a specific tool or app: :doc:`user_guide/tools/tools`
+* For details on EDFbrowser compatibility when using it as a polysomnography viewer with Snooz: :doc:`user_guide/EDFbrowser_compatibility`
+* For instructions on running Snooz on Compute Canada clusters for users: :doc:`user_guide/ComputeCanada_Instruction_user`
 
 .. toctree::
    :maxdepth: 3
@@ -22,9 +25,10 @@ Want to install and use Snooz? Follow this guide!
 
    user_guide/getting_started
    user_guide/manage_package
+   user_guide/accepted_format
    user_guide/tools/tools
-   user_guide/apps/apps
    user_guide/EDFbrowser_compatibility
+   user_guide/ComputeCanada_Instruction_user
    
 Developer's Guide
 -----------------
@@ -34,6 +38,7 @@ Are you a programmer? Want to integrate your process into Snooz? Follow this gui
 * To get the code and start coding, click here: :doc:`dev_guide/installation/installation`
 * To run Snooz from the source code, see : :doc:`dev_guide/run_snooz`
 * To explore examples before creating your first package, see : :doc:`dev_guide/explore_ex`
+* For instructions on running Snooz on Compute Canada clusters for developers: :doc:`dev_guide/ComputeCanada_Instruction_dev`
 * For specific programming questions, check out the How Tos section: :doc:`dev_guide/howtos/howtos`
 * For more details about the Snooz architecture, check out the Information section: :doc:`dev_guide/information/information`
 
@@ -46,6 +51,7 @@ Are you a programmer? Want to integrate your process into Snooz? Follow this gui
    dev_guide/installation/installation
    dev_guide/run_snooz
    dev_guide/explore_ex
+   dev_guide/ComputeCanada_Instruction_dev
    dev_guide/howtos/howtos
    dev_guide/information/information
 

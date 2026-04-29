@@ -1,0 +1,219 @@
+A	filename	PSG filename
+B	id1	subject identification
+C	cyc_def_option	"Method used to split the sleep period in sleep cycles, it defines the criteria. I.e. : ""Minimum criteria""  ""Aeschbach 1993""  ""Feinberg 1979"""
+D	cyc_def_include_soremp	Include a REM sleep periods (REMP) that occur within 15 minutes of sleep onset.
+E	cyc_def_include_last_incomplete	Include the last sleep cycle even if the NREM period (NREMP) or REMP does not meet the minimum duration criteria.
+F	cyc_def_rem_min	Minimum length without R stage to end the REMP.
+G	cyc_def_first_nrem_min	Minimum length of the first NREMP in minutes.
+H	cyc_def_mid_last_nrem_min	Minimum length of the middle and last NREMP in minutes.
+I	cyc_def_last_nrem_valid_min	Minimum length of the NREMP in minutes to validate the last sleep cycle.
+J	cyc_def_first_rem_min	Minimum length of the first REMP in minutes.
+K	cyc_def_mid_rem_min	Minimum length of the middle REMP in minutes.
+L	cyc_def_last_rem_min	Minimum length of the last REMP in minutes.
+M	cyc_def_move_end_rem	"Move the end of the REMP to the start of the following NREMP, eliminating the temporal ""gap"" between 2 cycles."
+N	cyc_def_sleep_stages	"List of valid stages used to define the sleep cycles:  ""N1, N2, N3, R"" or ""N2, N3, R"""
+O	sleep_cycle_count	Number of sleep cycles
+P	desaturation_drop_percent	"Drop level (%) for the oxygen desaturation ""3 or 4"""
+Q	max_slope_drop_sec	"The maximum duration (s) during which the oxygen level is dropping ""120 or 20"""
+R	min_hold_drop_sec	"Minimum duration (s) during which the oxygen level drop is maintained ""10 or 5"""
+S	invalid_events	Group and name annotation labels removed from the oxygen saturation analysis
+T	chan_label	The label of the oxygen channel used for the anlysis
+U	chan_fs	The sampling rate (Hz) of the oxygen channel used for the anlysis
+V	sleep_period_min	Sleep Period (min): The duration (min) from the first epoch scored as sleep (N1, N2, N3, R) to the final awakening (includes last epoch scored as sleep).
+W	total_invalid_min	Invalid duration for oxygen saturation analysis (min).
+X	total_valid_min	Valid (no invalid section) duration for oxygen saturation analysis (min) during the sleep period.
+Y	total_saturation_avg	The average value of the oxygen saturation (%) during the valid sleep period (total_valid_min).
+Z	total_saturation_std	The standard deviation value of the oxygen saturation (%) during the valid sleep period.
+AA	total_saturation_min	The minimum value of the oxygen saturation (%) during the valid sleep period.
+AB	total_saturation_max	The maximum value of the oxygen saturation (%) during the valid sleep period.
+AC	total_below_96_percent	The percentual time spent (%) with an oxygen saturation under 96 % during the valid sleep period.
+AD	total_below_94_percent	The percentual time spent (%) with an oxygen saturation under 94 % during the valid sleep period.
+AE	total_below_92_percent	The percentual time spent (%) with an oxygen saturation under 92 % during the valid sleep period.
+AF	total_below_90_percent	The percentual time spent (%) with an oxygen saturation under 90 % during the valid sleep period.
+AG	total_below_88_percent	The percentual time spent (%) with an oxygen saturation under 88 % during the valid sleep period.
+AH	total_below_85_percent	The percentual time spent (%) with an oxygen saturation under 85 % during the valid sleep period.
+AI	total_below_80_percent	The percentual time spent (%) with an oxygen saturation under 80 % during the valid sleep period.
+AJ	total_below_75_percent	The percentual time spent (%) with an oxygen saturation under 75 % during the valid sleep period.
+AK	total_below_70_percent	The percentual time spent (%) with an oxygen saturation under 70 % during the valid sleep period.
+AL	total_below_60_percent	The percentual time spent (%) with an oxygen saturation under 60 % during the valid sleep period.
+AM	third1_saturation_avg	The average value of the oxygen saturation (%) for the first third of the valid sleep period.
+AN	third1_saturation_std	The standard deviation value of the oxygen saturation (%) for the first third of the valid sleep period.
+AO	third1_saturation_min	The minimum value of the oxygen saturation (%) for the first third of the valid sleep period.
+AP	third1_saturation_max	The maximum value of the oxygen saturation (%) for the first third of the valid sleep period.
+AQ	third2_saturation_avg	The average value of the oxygen saturation (%) for the second third of the valid sleep period.
+AR	third2_saturation_std	The standard deviation value of the oxygen saturation (%) for the second third of the valid sleep period.
+AS	third2_saturation_min	The minimum value of the oxygen saturation (%) for the second third of the valid sleep period.
+AT	third2_saturation_max	The maximum value of the oxygen saturation (%) for the second third of the valid sleep period.
+AU	third3_saturation_avg	The average value of the oxygen saturation (%) for the last third of the valid sleep period.
+AV	third3_saturation_std	The standard deviation value of the oxygen saturation (%) for the last third of the valid sleep period.
+AW	third3_saturation_min	The minimum value of the oxygen saturation (%) for the last third of the valid sleep period.
+AX	third3_saturation_max	The maximum value of the oxygen saturation (%) for the last third of the valid sleep period.
+AY	half1_saturation_avg	The average value of the oxygen saturation (%) for the first half of the valid sleep period.
+AZ	half1_saturation_std	The standard deviation value of the oxygen saturation (%) for the first half of the valid sleep period.
+BA	half1_saturation_min	The minimum value of the oxygen saturation (%) for the first half of the valid sleep period.
+BB	half1_saturation_max	The maximum value of the oxygen saturation (%) for the first half of the valid sleep period.
+BC	half2_saturation_avg	The average value of the oxygen saturation (%) for the last half of the valid sleep period.
+BD	half2_saturation_std	The standard deviation value of the oxygen saturation (%) for the last half of the valid sleep period.
+BE	half2_saturation_min	The minimum value of the oxygen saturation (%) for the last half of the valid sleep period.
+BF	half2_saturation_max	The maximum value of the oxygen saturation (%) for the last half of the valid sleep period.
+BG	N1_saturation_avg	The average value of the oxygen saturation (%) for the N1 stages during the valid sleep period.
+BH	N1_saturation_std	The standard deviation value of the oxygen saturation (%) for the N1 stages during the valid sleep period.
+BI	N1_saturation_min	The minimum value of the oxygen saturation (%) for the N1 stages during the valid sleep period.
+BJ	N1_saturation_max	The maximum value of the oxygen saturation (%) for the N1 stages during the valid sleep period.
+BK	N1_below_96_percent	The percentual time spent (%) with an oxygen saturation under 96 % in N1 stages.
+BL	N1_below_94_percent	The percentual time spent (%) with an oxygen saturation under 94 % in N1 stages.
+BM	N1_below_92_percent	The percentual time spent (%) with an oxygen saturation under 92 % in N1 stages.
+BN	N1_below_90_percent	The percentual time spent (%) with an oxygen saturation under 90 % in N1 stages.
+BO	N1_below_88_percent	The percentual time spent (%) with an oxygen saturation under 88 % in N1 stages.
+BP	N1_below_85_percent	The percentual time spent (%) with an oxygen saturation under 85 % in N1 stages.
+BQ	N1_below_80_percent	The percentual time spent (%) with an oxygen saturation under 80 % in N1 stages.
+BR	N1_below_75_percent	The percentual time spent (%) with an oxygen saturation under 75 % in N1 stages.
+BS	N1_below_70_percent	The percentual time spent (%) with an oxygen saturation under 70 % in N1 stages.
+BT	N1_below_60_percent	The percentual time spent (%) with an oxygen saturation under 60 % in N1 stages.
+BU	N2_saturation_avg	The average value of the oxygen saturation (%) for the N2 stages during the valid sleep period.
+BV	N2_saturation_std	The standard deviation value of the oxygen saturation (%) for the N2 stages during the valid sleep period.
+BW	N2_saturation_min	The minimum value of the oxygen saturation (%) for the N2 stages during the valid sleep period.
+BX	N2_saturation_max	The maximum value of the oxygen saturation (%) for the N2 stages during the valid sleep period.
+BY	N2_below_96_percent	The percentual time spent (%) with an oxygen saturation under 96 % in N2 stages.
+BZ	N2_below_94_percent	The percentual time spent (%) with an oxygen saturation under 94 % in N2 stages.
+CA	N2_below_92_percent	The percentual time spent (%) with an oxygen saturation under 92 % in N2 stages.
+CB	N2_below_90_percent	The percentual time spent (%) with an oxygen saturation under 90 % in N2 stages.
+CC	N2_below_88_percent	The percentual time spent (%) with an oxygen saturation under 88 % in N2 stages.
+CD	N2_below_85_percent	The percentual time spent (%) with an oxygen saturation under 85 % in N2 stages.
+CE	N2_below_80_percent	The percentual time spent (%) with an oxygen saturation under 80 % in N2 stages.
+CF	N2_below_75_percent	The percentual time spent (%) with an oxygen saturation under 75 % in N2 stages.
+CG	N2_below_70_percent	The percentual time spent (%) with an oxygen saturation under 70 % in N2 stages.
+CH	N2_below_60_percent	The percentual time spent (%) with an oxygen saturation under 60 % in N2 stages.
+CI	N3_saturation_avg	The average value of the oxygen saturation (%) for the N3 stages during the valid sleep period.
+CJ	N3_saturation_std	The standard deviation value of the oxygen saturation (%) for the N3 stages during the valid sleep period.
+CK	N3_saturation_min	The minimum value of the oxygen saturation (%) for the N3 stages during the valid sleep period.
+CL	N3_saturation_max	The maximum value of the oxygen saturation (%) for the N3 stages during the valid sleep period.
+CM	N3_below_96_percent	The percentual time spent (%) with an oxygen saturation under 96 % in N3 stages.
+CN	N3_below_94_percent	The percentual time spent (%) with an oxygen saturation under 94 % in N3 stages.
+CO	N3_below_92_percent	The percentual time spent (%) with an oxygen saturation under 92 % in N3 stages.
+CP	N3_below_90_percent	The percentual time spent (%) with an oxygen saturation under 90 % in N3 stages.
+CQ	N3_below_88_percent	The percentual time spent (%) with an oxygen saturation under 88 % in N3 stages.
+CR	N3_below_85_percent	The percentual time spent (%) with an oxygen saturation under 85 % in N3 stages.
+CS	N3_below_80_percent	The percentual time spent (%) with an oxygen saturation under 80 % in N3 stages.
+CT	N3_below_75_percent	The percentual time spent (%) with an oxygen saturation under 75 % in N3 stages.
+CU	N3_below_70_percent	The percentual time spent (%) with an oxygen saturation under 70 % in N3 stages.
+CV	N3_below_60_percent	The percentual time spent (%) with an oxygen saturation under 60 % in N3 stages.
+CW	R_saturation_avg	The average value of the oxygen saturation (%) for the R stages during the valid sleep period.
+CX	R_saturation_std	The standard deviation value of the oxygen saturation (%) for the R stages during the valid sleep period.
+CY	R_saturation_min	The minimum value of the oxygen saturation (%) for the R stages during the valid sleep period.
+CZ	R_saturation_max	The maximum value of the oxygen saturation (%) for the R stages during the valid sleep period.
+DA	R_below_96_percent	The percentual time spent (%) with an oxygen saturation under 96 % in R stages.
+DB	R_below_94_percent	The percentual time spent (%) with an oxygen saturation under 94 % in R stages.
+DC	R_below_92_percent	The percentual time spent (%) with an oxygen saturation under 92 % in R stages.
+DD	R_below_90_percent	The percentual time spent (%) with an oxygen saturation under 90 % in R stages.
+DE	R_below_88_percent	The percentual time spent (%) with an oxygen saturation under 88 % in R stages.
+DF	R_below_85_percent	The percentual time spent (%) with an oxygen saturation under 85 % in R stages.
+DG	R_below_80_percent	The percentual time spent (%) with an oxygen saturation under 80 % in R stages.
+DH	R_below_75_percent	The percentual time spent (%) with an oxygen saturation under 75 % in R stages.
+DI	R_below_70_percent	The percentual time spent (%) with an oxygen saturation under 70 % in R stages.
+DJ	R_below_60_percent	The percentual time spent (%) with an oxygen saturation under 60 % in R stages.
+DK	W_saturation_avg	The average value of the oxygen saturation (%) for the W stages during the valid sleep period.
+DL	W_saturation_std	The standard deviation value of the oxygen saturation (%) for the W stages during the valid sleep period.
+DM	W_saturation_min	The minimum value of the oxygen saturation (%) for the W stages during the valid sleep period.
+DN	W_saturation_max	The maximum value of the oxygen saturation (%) for the W stages during the valid sleep period.
+DO	W_below_96_percent	The percentual time spent (%) with an oxygen saturation under 96 % in W stages.
+DP	W_below_94_percent	The percentual time spent (%) with an oxygen saturation under 94 % in W stages.
+DQ	W_below_92_percent	The percentual time spent (%) with an oxygen saturation under 92 % in W stages.
+DR	W_below_90_percent	The percentual time spent (%) with an oxygen saturation under 90 % in W stages.
+DS	W_below_88_percent	The percentual time spent (%) with an oxygen saturation under 88 % in W stages.
+DT	W_below_85_percent	The percentual time spent (%) with an oxygen saturation under 85 % in W stages.
+DU	W_below_80_percent	The percentual time spent (%) with an oxygen saturation under 80 % in W stages.
+DV	W_below_75_percent	The percentual time spent (%) with an oxygen saturation under 75 % in W stages.
+DW	W_below_70_percent	The percentual time spent (%) with an oxygen saturation under 70 % in W stages.
+DX	W_below_60_percent	The percentual time spent (%) with an oxygen saturation under 60 % in W stages.
+DY	NREM_saturation_avg	The average value of the oxygen saturation (%) for the NREM stages during the valid sleep period.
+DZ	NREM_saturation_std	The standard deviation value of the oxygen saturation (%) for the NREM stages during the valid sleep period.
+EA	NREM_saturation_min	The minimum value of the oxygen saturation (%) for the NREM stages during the valid sleep period.
+EB	NREM_saturation_max	The maximum value of the oxygen saturation (%) for the NREM stages during the valid sleep period.
+EC	NREM_below_96_percent	The percentual time spent (%) with an oxygen saturation under 96 % in NREM stages.
+ED	NREM_below_94_percent	The percentual time spent (%) with an oxygen saturation under 94 % in NREM stages.
+EE	NREM_below_92_percent	The percentual time spent (%) with an oxygen saturation under 92 % in NREM stages.
+EF	NREM_below_90_percent	The percentual time spent (%) with an oxygen saturation under 90 % in NREM stages.
+EG	NREM_below_88_percent	The percentual time spent (%) with an oxygen saturation under 88 % in NREM stages.
+EH	NREM_below_85_percent	The percentual time spent (%) with an oxygen saturation under 85 % in NREM stages.
+EI	NREM_below_80_percent	The percentual time spent (%) with an oxygen saturation under 80 % in NREM stages.
+EJ	NREM_below_75_percent	The percentual time spent (%) with an oxygen saturation under 75 % in NREM stages.
+EK	NREM_below_70_percent	The percentual time spent (%) with an oxygen saturation under 70 % in NREM stages.
+EL	NREM_below_60_percent	The percentual time spent (%) with an oxygen saturation under 60 % in NREM stages.
+EM	N2N3_saturation_avg	The average value of the oxygen saturation (%) for the N2N3 stages during the valid sleep period.
+EN	N2N3_saturation_std	The standard deviation value of the oxygen saturation (%) for the N2N3 stages during the valid sleep period.
+EO	N2N3_saturation_min	The minimum value of the oxygen saturation (%) for the N2N3 stages during the valid sleep period.
+EP	N2N3_saturation_max	The maximum value of the oxygen saturation (%) for the N2N3 stages during the valid sleep period.
+EQ	N2N3_below_96_percent	The percentual time spent (%) with an oxygen saturation under 96 % in N2N3 stages.
+ER	N2N3_below_94_percent	The percentual time spent (%) with an oxygen saturation under 94 % in N2N3 stages.
+ES	N2N3_below_92_percent	The percentual time spent (%) with an oxygen saturation under 92 % in N2N3 stages.
+ET	N2N3_below_90_percent	The percentual time spent (%) with an oxygen saturation under 90 % in N2N3 stages.
+EU	N2N3_below_88_percent	The percentual time spent (%) with an oxygen saturation under 88 % in N2N3 stages.
+EV	N2N3_below_85_percent	The percentual time spent (%) with an oxygen saturation under 85 % in N2N3 stages.
+EW	N2N3_below_80_percent	The percentual time spent (%) with an oxygen saturation under 80 % in N2N3 stages.
+EX	N2N3_below_75_percent	The percentual time spent (%) with an oxygen saturation under 75 % in N2N3 stages.
+EY	N2N3_below_70_percent	The percentual time spent (%) with an oxygen saturation under 70 % in N2N3 stages.
+EZ	N2N3_below_60_percent	The percentual time spent (%) with an oxygen saturation under 60 % in N2N3 stages.
+FA	SLEEP_saturation_avg	The average value of the oxygen saturation (%) for the SLEEP stages during the valid sleep period.
+FB	SLEEP_saturation_std	The standard deviation value of the oxygen saturation (%) for the SLEEP stages during the valid sleep period.
+FC	SLEEP_saturation_min	The minimum value of the oxygen saturation (%) for the SLEEP stages during the valid sleep period.
+FD	SLEEP_saturation_max	The maximum value of the oxygen saturation (%) for the SLEEP stages during the valid sleep period.
+FE	SLEEP_below_96_percent	The percentual time spent (%) with an oxygen saturation under 96 % in SLEEP stages.
+FF	SLEEP_below_94_percent	The percentual time spent (%) with an oxygen saturation under 94 % in SLEEP stages.
+FG	SLEEP_below_92_percent	The percentual time spent (%) with an oxygen saturation under 92 % in SLEEP stages.
+FH	SLEEP_below_90_percent	The percentual time spent (%) with an oxygen saturation under 90 % in SLEEP stages.
+FI	SLEEP_below_88_percent	The percentual time spent (%) with an oxygen saturation under 88 % in SLEEP stages.
+FJ	SLEEP_below_85_percent	The percentual time spent (%) with an oxygen saturation under 85 % in SLEEP stages.
+FK	SLEEP_below_80_percent	The percentual time spent (%) with an oxygen saturation under 80 % in SLEEP stages.
+FL	SLEEP_below_75_percent	The percentual time spent (%) with an oxygen saturation under 75 % in SLEEP stages.
+FM	SLEEP_below_70_percent	The percentual time spent (%) with an oxygen saturation under 70 % in SLEEP stages.
+FN	SLEEP_below_60_percent	The percentual time spent (%) with an oxygen saturation under 60 % in SLEEP stages.
+FO	cyc1_saturation_avg	Cycle 1 - The average value of the oxygen saturation (%).
+FP	cyc1_saturation_std	Cycle 1 - The standard deviation value of the oxygen saturation (%).
+FQ	cyc1_saturation_min	Cycle 1 - The minimum value of the oxygen saturation (%).
+FR	cyc1_saturation_max	Cycle 1 - The maximum value of the oxygen saturation (%).
+FS	cyc2_saturation_avg	Cycle 2 - The average value of the oxygen saturation (%).
+FT	cyc2_saturation_std	Cycle 2 - The standard deviation value of the oxygen saturation (%).
+FU	cyc2_saturation_min	Cycle 2 - The minimum value of the oxygen saturation (%).
+FV	cyc2_saturation_max	Cycle 2 - The maximum value of the oxygen saturation (%).
+FW	cyc3_saturation_avg	Cycle 3 - The average value of the oxygen saturation (%).
+FX	cyc3_saturation_std	Cycle 3 - The standard deviation value of the oxygen saturation (%).
+FY	cyc3_saturation_min	Cycle 3 - The minimum value of the oxygen saturation (%).
+FZ	cyc3_saturation_max	Cycle 3 - The maximum value of the oxygen saturation (%).
+GA	cyc4_saturation_avg	Cycle 4 - The average value of the oxygen saturation (%).
+GB	cyc4_saturation_std	Cycle 4 - The standard deviation value of the oxygen saturation (%).
+GC	cyc4_saturation_min	Cycle 4 - The minimum value of the oxygen saturation (%).
+GD	cyc4_saturation_max	Cycle 4 - The maximum value of the oxygen saturation (%).
+GE	cyc5_saturation_avg	Cycle 5 - The average value of the oxygen saturation (%).
+GF	cyc5_saturation_std	Cycle 5 - The standard deviation value of the oxygen saturation (%).
+GG	cyc5_saturation_min	Cycle 5 - The minimum value of the oxygen saturation (%).
+GH	cyc5_saturation_max	Cycle 5 - The maximum value of the oxygen saturation (%).
+GI	cyc6_saturation_avg	Cycle 6 - The average value of the oxygen saturation (%).
+GJ	cyc6_saturation_std	Cycle 6 - The standard deviation value of the oxygen saturation (%).
+GK	cyc6_saturation_min	Cycle 6 - The minimum value of the oxygen saturation (%).
+GL	cyc6_saturation_max	Cycle 6 - The maximum value of the oxygen saturation (%).
+GM	desat_count	The number of oxygen desaturation during the valid sleep period.
+GN	desat_ODI	The Oxygen Desaturation Index (ODI) : number of desaturations per hour during the valid sleep period.
+GO	desat_severity	Desaturation severity : The sum of areas under the desaturation events in percent*sec over the valid sleep period (sec).
+GP	desat_SP_percent	The percentage of time spent in desaturation during the valid sleep period (SP).
+GQ	desat_dur_avg_sec	The average duration in sec of the oxygen desaturation events occuring during the valid sleep period.
+GR	desat_dur_med_sec	The median value of the duration in sec of the oxygen desaturation events occuring during the valid sleep period.
+GS	desat_area_avg	The average area under the desaturation events in percent*sec.
+GT	desat_area_med	The median area under the desaturation events in percent*sec.
+GU	desat_slope_avg	The average slope of the desaturation events in percent/sec.
+GV	desat_slope_med	The median slope of the desaturation events in percent/sec.
+GW	desat_depth_avg	The average depth of the desaturation events in percent.
+GX	desat_depth_med	The median depth of the desaturation events in percent.
+GY	recovery_count	The number of oxygen recovery events during the valid sleep period.
+GZ	recovery_index	The Recovery Index (RI): number of recovery events per hour during the valid sleep period.
+HA	recovery_severity	Recovery severity: The sum of areas under the recovery events in percent*sec over the valid sleep period (sec).
+HB	recovery_SP_percent	The percentage of time spent in recovery during the valid sleep period (SP).
+HC	recovery_dur_avg_sec	The average duration in sec of the oxygen recovery events occurring during the valid sleep period.
+HD	recovery_dur_med_sec	The median duration in sec of the oxygen recovery events occurring during the valid sleep period.
+HE	recovery_area_avg	The average area under the recovery events in percent*sec.
+HF	recovery_area_med	The median area under the recovery events in percent*sec.
+HG	recovery_slope_avg	The average slope of the recovery events in percent/sec.
+HH	recovery_slope_med	The median slope of the recovery events in percent/sec.
+HI	recovery_depth_avg	The average depth of the recovery events in percent.
+HJ	recovery_depth_med	The median depth of the recovery events in percent.
+HK	total_severity	Total Severity of desaturation and recovery areas by summing individual desaturation and recovery areas in percent*sec over the valid sleep period (sec).

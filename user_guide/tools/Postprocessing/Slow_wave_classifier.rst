@@ -1,11 +1,8 @@
 .. _Slow_wave_classifier:
 
 =================================================
-Slow Wave Classifier
+Classify Slow Waves
 =================================================
-
-Description
------------------
 
 This tool classifies slow waves into categories based on their transition frequency.
 
@@ -64,4 +61,15 @@ A cohort report containing the averaged slow wave characteristics per category i
 The slow wave characteristics are also provided per sleep cycle and segment of night.
 Choose the granularity of the segment you are interested in. 
 
-The histogram of transition frequency values along with the resulting model is saved in the output directory as a .pdf picture. 
+The histogram of transition frequency values along with the resulting model is saved in the output directory as a .pdf picture.
+
+
+Version History
+-----------------
+
+* v2.0.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0 
+    - Clarify the number of SW categories by using radio button in the UI.
+    - Fixed reporting of events starting at sleep stage transitions.

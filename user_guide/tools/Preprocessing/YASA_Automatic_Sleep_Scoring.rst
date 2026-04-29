@@ -1,7 +1,7 @@
 .. _YASA_Automatic_Sleep_Scoring:
 
 ===============================
-YASA Automatic Sleep Scoring
+Score Sleep Stages with YASA 
 ===============================
 
 Description
@@ -63,7 +63,9 @@ Steps
    - If validating the automatic scoring, provide the following accessory files in the same folder as the PSG file:
       - For EDF format: A .tsv file is required.
       - For Stellate format: A .sig file is required.
-      - For NATUS format: The entire subject folder is required.
+      - (*CEAMS users only*) For NATUS format: The entire subject folder is required.
+
+   For more details on accepted formats, see :ref:`accepted_format`.
    
   **Automatic Scoring Mode:**
    - No accessory files are needed.
@@ -123,3 +125,14 @@ The YASA sleep scoring algorithm underwent rigorous evaluation on multiple datas
 References
 ----------
 [1] Vallat, R., & Walker, M. P. (2021). An open-source, high-performance tool for automated sleep staging. *Elife*, 10, e70092.
+
+
+Version History
+-----------------
+
+* v0.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.3.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
+    - Supports discontinuous files.
+    - Generates Hypnodensity plots.

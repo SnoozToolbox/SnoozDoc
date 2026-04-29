@@ -1,11 +1,8 @@
 .. _DominoScreen_Converter:
 
-============================
-Convert DOMINO
-============================
-
-Description
------------------
+==============================================
+Convert Annotations from DOMINOScreen
+==============================================
 
 To convert the DOMINO ASCII accessory files (without sleep stages) to the Snooz accessory .tsv file.
 
@@ -103,7 +100,16 @@ Unsupported format
 * SVB
 * Systolic
 
-
 .. note::
 
-    Look at the "Input Folders" step of the "DOMINOScreen Converter" tool to know how to organize the files in order to convert them to the Snooz accessory .tsv file.
+    Look at the "Input Folders" step of the "Convert Annotations from DOMINOScreen" tool to know how to organize the files in order to convert them to the Snooz accessory .tsv file.
+
+
+Version History
+-----------------
+
+* v2.0.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.1.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
+    - UI improvements for consistent tool and input file descriptions.

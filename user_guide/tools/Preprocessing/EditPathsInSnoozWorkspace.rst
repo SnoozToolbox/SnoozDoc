@@ -4,9 +4,6 @@
 Edit Paths in Snooz Workspace
 ===============================
 
-Description
------------
-
 This tool helps you update the internal paths in your Snooz workspaces (JSON files) to ensure compatibility across different systems.
 
 
@@ -46,3 +43,10 @@ Input
 Output
 ------
  - Updated Snooz workspace files with updated paths
+
+
+Version History
+-----------------
+
+* v2.0.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
+    - Initial release of the tool.

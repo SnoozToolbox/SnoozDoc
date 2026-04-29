@@ -1,10 +1,10 @@
 .. _Oxygen_saturation_report_csv:
 
 =======================================
-Oxygen Saturation Report
+Cohort Oxygen Saturation Report
 =======================================
 
-The list of the variables included in the Oxygen Saturation Report.
+The list of the variables included in the Cohort Oxygen Saturation Report.
 
 .. warning::
 
@@ -12,10 +12,11 @@ The list of the variables included in the Oxygen Saturation Report.
 
 .. note::
 
-   To download the original info.tsv file : `snooz_beta030_PSA_per_stages_info.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/snooz_beta030_Oxy_saturation_report_info.tsv>`_
+   To download the original info.tsv file : `snooz_beta300_Oxy_saturation_report_info.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/snooz_beta300_Oxy_saturation_report_info.tsv>`_
 
-.. csv-table:: Oxygen Saturation Report
-   :header: "Column", "Variable Label", "Variable Definition"
-   :file: snooz_beta030_Oxy_saturation_report_info.tsv
+.. csv-table:: Cohort Oxygen Saturation Report
+   :file: snooz_beta300_Oxy_saturation_report_info.tsv
    :delim: tab
+   :align: left
+   :class: left-align-caption wrap-table
 

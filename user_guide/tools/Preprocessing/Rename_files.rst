@@ -4,9 +4,6 @@
 Rename files
 ===================
 
-Description
------------------
-
 Rename a list of files based on user-defined renaming rules.  A common use case is renaming accessory files to ensure they match the corresponding PSG recording.
 
 .. note::
@@ -32,3 +29,13 @@ Define the renaming rules :
 Output Files : 
 
     The renamed files will be saved in the same folder as the original files.
+
+
+Version History
+-----------------
+
+* v2.0.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.1.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
+    - Fixed workspace loading to properly display files to rename.

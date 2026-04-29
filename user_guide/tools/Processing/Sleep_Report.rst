@@ -1,11 +1,8 @@
 .. _Sleep_Report:
 
 ===============================
-Sleep Report
+Report Sleep Variables
 ===============================
-
-Description
------------------
 
 **Sleep Report, Events Sleep Report, and Temporal Links Report**
 
@@ -32,19 +29,27 @@ This tool generates three types of reports:
 Steps
 -----------------
 
-**Common settings**
-
-	Sleep Cycles : define how the sleep cycles are delimited in your study. The "Minimum criteria" is selected by default. 
+| **Common settings** 
+| Define the sleep cycles criteria for your study. 
+| For more information, see :ref:`Sleep_Cycles_definition`.
 
 **1 - Input Files**
 
-Start by opening your PSG files (.edf, .eeg or .sts).
+Start by opening your PSG files (.edf, .sts or .eeg). 
 
-* The .tsv file is also needed for the EDF format.
+- **European Data Format (EDF)** : 
+  
+  The corresponding .tsv file is required with .edf. Both files must be saved in the same directory and share the exact same filename.
 
-* The .sig file is also needed for Stellate format.
+- **Stellate format (up to version 6.2)** : 
+  
+  The corresponding .sig file is required with the .sts. Both files must be saved in the same directory and share the exact same filename.
 
-* The whole NATUS subject folder is also needed for the .eeg format.
+- **NATUS format (version 9.1)** : 
+  
+  (*CEAMS users only*) The entire NATUS subject folder is required.
+
+For more details on accepted formats, see :ref:`accepted_format`.
 
 **2 - Events Report**
 
@@ -100,4 +105,19 @@ Report
    Sleep_Report/sleep_report_info_csv
    Sleep_Report/event_report_info_csv
    Sleep_Report/temporal_links_report_info_csv
-   
+
+
+Version History
+-----------------
+
+* v2.1.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1
+    - Initial release of the tool.
+
+* v2.6.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
+    - Removed the unused variable total_sleep_percent from the sleep report.
+    - Added time_in_bed_min (TIB): total time between lights-off and lights-on.
+    - Added sleep_period_min (SPT): duration between sleep onset and the last scored sleep stage (N1, N2, N3, R).
+    - Updated the definition of sleep_efficiency: time spent in sleep stages over TIB x 100.
+    - Added sleep_maintenance_efficiency: time spent in sleep stages over SPT x 100.
+    - Improved path, filename, and extension handling for sleep cycle warning log file.
+    - Fixed Subject Info synchronization between the UI and sleep report output.

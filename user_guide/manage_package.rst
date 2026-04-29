@@ -14,7 +14,7 @@ A package can contain four different types of items:
 
 3. **Tools** : Tools are an abstraction layer over a process that provides a user-friendly step-by-step interface. (See :ref:`tools` for more information.)
 
-4. **Apps** : An app is an application that operates within Snooz. (See :ref:`apps` for more information.)
+4. **Apps** : An app is an application that operates within Snooz. (See :ref:`tools` for more information.)
 
 .. note::
 
@@ -48,6 +48,16 @@ To add a package
 6. Press **Apply**.
 7. Close the window.
 8. Verify the version of the tools available in the menu.
+
+.. warning::
+   
+   **API Compatibility**
+
+   When adding a package, ensure that the package API version is compatible with the current version of Snooz. Incompatible API versions may lead to errors or unexpected behavior.
+   Always refer to the documentation or release notes for compatibility information before adding a new package.
+
+   - Snooz **beta-2.0.0** and Snooz **beta-2.1.0** work with **API=2.0.0**
+   - Snooz **beta-3.0.0** works with **API=3.0.0**
 
 .. warning::
    

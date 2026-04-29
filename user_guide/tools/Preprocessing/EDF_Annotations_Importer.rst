@@ -1,11 +1,8 @@
 .. _EDF_Annotations_Importer: 
 
 =============================
-Import EDF Plus Annotations
+Import Annotations from EDF+ 
 =============================
-
-Description
------------------
 
 This tool allows you to import annotations from an EDF+ file (from the signal EDF Annotations) and write them into the Snooz accessory .tsv file.
 
@@ -27,3 +24,13 @@ Add your EDF+ files to import annotations and thier corresponding PSG signal fil
 .. note::
 
     The order of the EDF+ annotations files and their corresponding PSG signals file must be the same.
+
+
+Version History
+-----------------
+
+* v2.0.0 : Distributed with CEAMS package version 7.2.0 — Snooz beta 2.0.1 (and later)
+    - Initial release of the tool.
+
+* v2.1.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
+    - Supports the new optional time elapsed column.

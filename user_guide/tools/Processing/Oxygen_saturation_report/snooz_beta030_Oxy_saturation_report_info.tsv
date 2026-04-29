@@ -1,6 +1,6 @@
 A	filename	PSG filename
 B	id1	subject identification
-C	cyc_def_option	"Method used to split the sleep period in sleep cycles, it defines the criteria. I.e. : ""Minimum criteria""  ""Aeschbach 1993""  ""Feinberg 1979"""
+C	cyc_def_option	"Method used to split the sleep period in sleep cycles, it defines the criteria. I.e. : 'Minimum criteria'  'Aeschbach 1993'  'Feinberg 1979'"
 D	cyc_def_include_soremp	Include a REM sleep periods (REMP) that occur within 15 minutes of sleep onset.
 E	cyc_def_include_last_incomplete	Include the last sleep cycle even if the NREM period (NREMP) or REMP does not meet the minimum duration criteria.
 F	cyc_def_rem_min	Minimum length without R stage to end the REMP.
@@ -10,12 +10,12 @@ I	cyc_def_last_nrem_valid_min	Minimum length of the NREMP in minutes to validate
 J	cyc_def_first_rem_min	Minimum length of the first REMP in minutes.
 K	cyc_def_mid_rem_min	Minimum length of the middle REMP in minutes.
 L	cyc_def_last_rem_min	Minimum length of the last REMP in minutes.
-M	cyc_def_move_end_rem	"Move the end of the REMP to the start of the following NREMP, eliminating the temporal ""gap"" between 2 cycles."
-N	cyc_def_sleep_stages	"List of valid stages used to define the sleep cycles:  ""N1, N2, N3, R"" or ""N2, N3, R"""
+M	cyc_def_move_end_rem	"Move the end of the REMP to the start of the following NREMP, eliminating the temporal 'gap' between 2 cycles."
+N	cyc_def_sleep_stages	"List of valid stages used to define the sleep cycles:  'N1, N2, N3, R' or 'N2, N3, R'"
 O	sleep_cycle_count	Number of sleep cycles
-P	desaturation_drop_percent	"Drop level (%) for the oxygen desaturation ""3 or 4"""
-Q	max_slope_drop_sec	"The maximum duration (s) during which the oxygen level is dropping ""120 or 20"""
-R	min_hold_drop_sec	"Minimum duration (s) during which the oxygen level drop is maintained ""10 or 5"""
+P	desaturation_drop_percent	"Drop level (%) for the oxygen desaturation '3 or 4'"
+Q	max_slope_drop_sec	"The maximum duration (s) during which the oxygen level is dropping '120 or 20'"
+R	min_hold_drop_sec	"Minimum duration (s) during which the oxygen level drop is maintained '10 or 5'"
 S	invalid_events	Group and name annotation labels removed from the oxygen saturation analysis
 T	chan_label	The label of the oxygen channel used for the anlysis
 U	chan_fs	The sampling rate (Hz) of the oxygen channel used for the anlysis
