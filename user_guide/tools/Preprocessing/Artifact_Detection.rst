@@ -98,3 +98,5 @@ Version History
     - Handle bad channels properly, including those identified in “Inspect EEG Channels.”
     - Provide two sets of default threshold values, depending on the selected sleep stages.
     - Verify alias definitions from step “1 - Input Files” before running the tool.
+
+* v2.6.1 — Distributed with CEAMS package version 7.4.0 / Snooz beta 3.1.0 (for testing doc version)
