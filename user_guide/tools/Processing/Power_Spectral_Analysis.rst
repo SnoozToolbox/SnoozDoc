@@ -98,6 +98,24 @@ For more details on accepted formats, see :ref:`accepted_format`.
     Define the width (Hz) of the frequency bands you are interested in. 
     Define also the first and last frequency to analyze (the maximum is half the sampling frequency (Hz) of the channels to analyze).
 
+    **Power spectral analysis methods:**
+
+    - **Standard power spectral analysis :** the power is estimated with the Welch's method for each frequency bin and then averaged across the frequency bins of a frequency band.
+
+    - **Rhythmic/Arhythmic with IRASA method :** the rhythmic/arrhythmic power is estimated with the Irregular Resampling Auto-Spectral Analysis (IRASA) method for each frequency bin and then averaged across the frequency bins of a frequency band [1].
+
+    - **Rhythmic/Arhythmic with FOOOF method :** the rhythmic/arrhythmic power is estimated with the Fitting Oscillations & One-Over-F (FOOOF) method for the averaged power across the frequency bins of a frequency band [2].
+
+    .. note::
+    
+        - The IRASA method is based on the principle that rhythmic and arrhythmic components of the power spectrum can be separated by resampling the signal at non-integer rates. This method is applied on each selected window of the signal, leading to be more time consuming than the FOOOF method which is applied on the averaged power across the frequency bins of a frequency band.
+        
+        - The FOOOF method is based on the principle that the power spectrum can be decomposed into aperiodic (arrhythmic) and periodic (rhythmic) components by fitting a model to the power spectrum.
+
+    .. note::
+    
+        Both **IRASA** (Implemented with yasa library) and **FOOOF** (implemented with fooof library) methods, were implemented with the default parameters of the original publications [1, 2]. For more details on the parameters, see the original publications [1, 2].
+
 **7 - Output File**
     If the analysis is performed per sleep stage :  
 
@@ -117,12 +135,21 @@ For more details on accepted formats, see :ref:`accepted_format`.
     
     The output data is added (appended) to the output file, the output file will be modified each time the tool is run.
 
+.. note::
+
+    If the user selects the rhythmic/arrhythmic power spectral analysis, two separate .tsv report files will be generated, one for the rhythmic power spectral analysis and one for the arrhythmic power spectral analysis.
+
 Report
 ---------
 
 .. toctree::
    Power_Spectral_Analysis/PSA_per_stage_info_csv
    Power_Spectral_Analysis/PSA_per_event_info_csv
+
+References
+----------
+.. [1] Wen, H., & Liu, Z. (2016). Separating fractal and oscillatory components in the power spectrum of neurophysiological signal. Brain topography, 29(1), 13-26.
+.. [2] Donoghue, T., Haller, M., Peterson, E. J., Varma, P., Sebastian, P., Gao, R., ... & Voytek, B. (2020). Parameterizing neural power spectra into periodic and aperiodic components. Nature neuroscience, 23(12), 1655-1665.
 
 
 Version History
@@ -136,3 +163,8 @@ Version History
     - Added new variables representing the combined N2 + N3 stages.
     - Added support for duplicated annotation names in different annotation groups.
     - Improve path, filename, and extension handling for sleep cycle warning log file.
+
+* v3.0.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
+    - Rhythmic/Arhythmic power spectral analysis is now available in addition to the standard spectral analysis.
+    - The output report exports two separate reports for rhythmic and arrhythmic power spectral analysis if the user selects to analyse them.
+    - Some UI modification to be compatible with this new feature.
