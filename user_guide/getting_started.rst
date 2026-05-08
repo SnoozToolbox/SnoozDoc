@@ -33,7 +33,7 @@ Supported macOS versions: 14.3 (Sonoma) through 15.2 (Sequoia).
 Linux
 ------
 
-Snooz has been developed and validated on Ubuntu 22.04 LTS and should be compatible with Ubuntu 24.04 LTS.
+Snooz is built on Ubuntu 22.04 LTS and tested on Ubuntu 24.04 LTS. It is expected to be compatible with recent Ubuntu LTS versions.
 
 
 First Snooz installation
@@ -75,7 +75,6 @@ On macOS platforms
 2. Double-click on the downloaded file to install.
 3. Drag and drop the Snooz application in the Applications folder. 
 4. Since Snooz is not signed yet, you need to mark it as an exception (see the note lower). 
-5. To launch Snooz type the following in the terminal: ``/Applications/Snooz.app/Contents/MacOS/Snooz``
 
 .. note::
   To mark Snooz as an exception: 
@@ -110,14 +109,18 @@ On Linux platforms
 2. Recommended - Install Snooz via the **.deb** file.
 
     - Open the installer via the Ubuntu Software Center (or Software Install) and click Install. 
-    - Or install Snooz via the terminal : ``sudo dpkg -i Linux_SnoozSetup-beta-xxx.deb``
+
+    - Or install Snooz via the terminal :
+
+        - using dpkg (simple direct installation): ``sudo dpkg -i Snooz-Linux-xxx.deb``
+        - using apt (resolves dependencies): ``sudo apt install Snooz-Linux-xxx.deb``
 
 3. Alternative - Install Snooz via the **.zip** file.
 
     - Open a terminal in your Downloads folder and run: 
-        
-        - ``dpkg-deb -x Linux_SnoozApp-beta-xxx.zip ~/my_snooz_app``
-    - To launch Snooz, type in a terminal: ``~/my_snooz_app/opt/Snooz/Snooz``
+
+        - ``mkdir -p ~/.local/opt``
+        - ``unzip Snooz-Linux-xxx.zip -d ~/.local/opt/``
 
 .. note::
     Use the exact filename of the installer you downloaded.
@@ -135,12 +138,45 @@ Type Snooz in the Windows Search.
 On MAC platforms
 --------------------- 
 
-Use Finder to locate Snooz in Applications.
+1. Use Finder to locate Snooz in Applications.
+
+2. Or, launch Snooz from a terminal: 
+
+   - Standard application launch (may require Full Disk Access): ``open -a Snooz`` 
+
+   - Alternative launch method: ``/Applications/Snooz.app/Contents/MacOS/Snooz``
 
 On Linux platforms
 --------------------- 
 
-From the Applications -> Snooz
+1. From the Applications menu, click on **Snooz**.
+
+2. Or, depending on the installation method, launch Snooz from a terminal:
+
+   - For the `.deb` installation: ``/opt/Snooz/Snooz``
+
+   - For the `.zip` installation: ``~/.local/opt/Snooz/Snooz``
+
+Uninstall Snooz
+=================================
+
+On Windows platforms
+---------------------
+1. Open the Start menu and click on Settings (the gear icon).
+2. Click on Apps.
+3. In the Apps & features section, scroll down to find Snooz in the list of installed applications.
+4. Click on Snooz, then click the Uninstall button that appears.
+
+On MAC platforms
+---------------------
+1. Open Finder and navigate to the Applications folder.
+2. Locate the Snooz application.
+3. Right-click (or Control-click) on the Snooz application and select Move to Trash from the context menu.
+
+On Linux platforms
+---------------------
+1. If you installed Snooz using the .deb file, open a terminal and run: ``sudo apt remove snooz``.
+2. If you installed Snooz using the .zip file, simply delete the folder where you extracted the files (e.g., ``~/.local/opt/Snooz``).
 
 
 Update Snooz from the interface
