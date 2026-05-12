@@ -82,9 +82,8 @@ For more details on accepted formats, see :ref:`accepted_format`.
     If the analysis is performed on chosen annotations, select them.
 
 **6 - Spectral Settings**
-    The analysis is performed through many short windows in order to estimate the spectral power.  
-    The procedure is called Short Time Fourier Transform (STFT).
-    Define the window length (s) used to perform each FFT (Fast Fourier Transform) and at which window steps (s) each FFT is performed.
+    The analysis is performed by dividing the signal into multiple short windows to estimate spectral power. 
+    This procedure is based on Welch’s [1] method, which applies a Fast Fourier Transform (FFT) to each window and averages the resulting periodograms. Define the window length (s) used for each FFT and the step size (s) between consecutive windows.
     
     .. note::
 
@@ -102,9 +101,9 @@ For more details on accepted formats, see :ref:`accepted_format`.
 
     - **Standard power spectral analysis :** the power is estimated with the Welch's method for each frequency bin and then averaged across the frequency bins of a frequency band.
 
-    - **Rhythmic/Arhythmic with IRASA method :** the rhythmic/arrhythmic power is estimated with the Irregular Resampling Auto-Spectral Analysis (IRASA) method for each frequency bin and then averaged across the frequency bins of a frequency band [1].
+    - **Rhythmic/Arhythmic with IRASA method :** the rhythmic/arrhythmic power is estimated with the Irregular Resampling Auto-Spectral Analysis (IRASA) method for each frequency bin and then averaged across the frequency bins of a frequency band [2].
 
-    - **Rhythmic/Arhythmic with FOOOF method :** the rhythmic/arrhythmic power is estimated with the Fitting Oscillations & One-Over-F (FOOOF) method for the averaged power across the frequency bins of a frequency band [2].
+    - **Rhythmic/Arhythmic with FOOOF method :** the rhythmic/arrhythmic power is estimated with the Fitting Oscillations & One-Over-F (FOOOF) method for the averaged power across the frequency bins of a frequency band [3].
 
     .. note::
     
@@ -148,8 +147,12 @@ Report
 
 References
 ----------
-.. [1] Wen, H., & Liu, Z. (2016). Separating fractal and oscillatory components in the power spectrum of neurophysiological signal. Brain topography, 29(1), 13-26.
-.. [2] Donoghue, T., Haller, M., Peterson, E. J., Varma, P., Sebastian, P., Gao, R., ... & Voytek, B. (2020). Parameterizing neural power spectra into periodic and aperiodic components. Nature neuroscience, 23(12), 1655-1665.
+
+[1] Welch, P. D. (1967). The use of fast Fourier transform for the estimation of power spectra: A method based on time averaging over short, modified periodograms. IEEE Transactions on audio and electroacoustics, 15(2), 70-73.
+
+[2] Wen, H., & Liu, Z. (2016). Separating fractal and oscillatory components in the power spectrum of neurophysiological signal. Brain topography, 29(1), 13-26.
+
+[3] Donoghue, T., Haller, M., Peterson, E. J., Varma, P., Sebastian, P., Gao, R., ... & Voytek, B. (2020). Parameterizing neural power spectra into periodic and aperiodic components. Nature neuroscience, 23(12), 1655-1665.
 
 
 Version History
