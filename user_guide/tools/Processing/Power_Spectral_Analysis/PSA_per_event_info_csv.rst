@@ -1,14 +1,20 @@
 .. _PSA_per_event_info_csv:
 
-=======================================
-Spectral Report per events definition
-=======================================
+===============================================
+Spectral Power Report per Events Definition
+===============================================
 
-The list of the variables included in the EEG spectral report per selected events. 
+The list of the variables included in the EEG spectral power report per selected events. 
 
-.. warning::
+The reported spectral power is obtained by summing the spectral power
+over all frequency bins contained in the band defined by freq_low_Hz
+and freq_high_Hz.
 
-   If the variable definition is truncated, click on it and then use the right arrow key on your keyboard to view the full definition.
+**This results in units of µV²**, representing the signal variance within
+the selected frequency band.
+
+Each frequency bin is included in exactly one band definition to ensure
+non-overlapping band power estimates when adjacent frequency bands are used.
 
 .. note::
 
@@ -19,4 +25,3 @@ The list of the variables included in the EEG spectral report per selected event
    :delim: tab
    :align: left
    :class: left-align-caption wrap-table
-

@@ -1,14 +1,20 @@
 .. _PSA_per_stage_info_csv:
 
-=======================================
-Spectral Report per stages definition
-=======================================
+=============================================================
+Spectral Power Report per Sleep Stages Definition
+=============================================================
 
 The list of the variables included in the EEG spectral report per sleep stages. 
 
-.. warning::
+The reported spectral power is obtained by summing the spectral power
+over all frequency bins contained in the band defined by freq_low_Hz
+and freq_high_Hz.
 
-   If the variable definition is truncated, click on it and then use the right arrow key on your keyboard to view the full definition.
+**This results in units of µV²**, representing the signal variance within
+the selected frequency band.
+
+Each frequency bin is included in exactly one band definition to ensure
+non-overlapping band power estimates when adjacent frequency bands are used.
 
 .. note::
 
