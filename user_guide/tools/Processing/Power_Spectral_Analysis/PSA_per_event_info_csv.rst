@@ -1,10 +1,10 @@
 .. _PSA_per_event_info_csv:
 
 =======================================
-PSA Report per events definition
+Spectral Report per events definition
 =======================================
 
-The list of the variables included in the PSA report per selected events. 
+The list of the variables included in the EEG spectral report per selected events. 
 
 .. warning::
 
@@ -14,7 +14,7 @@ The list of the variables included in the PSA report per selected events.
 
    To download the original info.tsv file : `snooz_beta_2_1_0_PSA_per_events_info.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/snooz_beta_2_1_0_PSA_per_events_info.tsv>`_
 
-.. csv-table:: PSA report per events
+.. csv-table:: EEG spectral report per events
    :file: snooz_beta_2_1_0_PSA_per_events_info.tsv
    :delim: tab
    :align: left
