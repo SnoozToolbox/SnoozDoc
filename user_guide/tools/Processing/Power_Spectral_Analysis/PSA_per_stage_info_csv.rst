@@ -1,10 +1,10 @@
 .. _PSA_per_stage_info_csv:
 
 =======================================
-PSA Report per stages definition
+Spectral Report per stages definition
 =======================================
 
-The list of the variables included in the PSA report per sleep stages. 
+The list of the variables included in the EEG spectral report per sleep stages. 
 
 .. warning::
 
@@ -14,7 +14,7 @@ The list of the variables included in the PSA report per sleep stages.
 
    To download the original info.tsv file : `snooz_beta_2_1_0_PSA_per_stages_info.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/snooz_beta_2_1_0_PSA_per_stages_info.tsv>`_
 
-.. csv-table:: PSA report per stages
+.. csv-table:: EEG spectral report per stages
    :file: snooz_beta_2_1_0_PSA_per_stages_info.tsv
    :delim: tab
    :align: left
