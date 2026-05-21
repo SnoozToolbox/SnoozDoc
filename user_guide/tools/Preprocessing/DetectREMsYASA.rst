@@ -61,7 +61,7 @@ Output
 The REMs detected events are added in the annotations files (.tsv, .sts or .ent) depending of the format used.
 If the annotations file already includes the group event to be added, the existing entries will be removed before adding the new ones.
 
-Each events is defined by : 
+Each event is defined by : 
    1. group : The group where the events are added (i.e. REM).
    2. name : The name of the event (i.e. YASA_REM)
    3. start_sec : The onset of the event in second. 
@@ -97,8 +97,12 @@ The report consists of the average of the mentioned characterstics in
    - per clock hour
    - per hour spent in each stage
 
-The tool also provides two folders of REMs characterstics and stages including some parameters for each specific REM event for more detailed analysis.
+The tool also provides two folders of REMs characterstics and stages including some parameters for each specific REM event for more detailed analysis. Some of the parameters are as follows:
+   - LOC and ROC absolute amplitude at REM peak (in uV)
+   - LOC and ROC absolute rise and fall slopes (in uV/s)
+   - Start, end, duration, and peak of each REM event (in seconds)
 
+   
 References
 ----------
 [1] Yetton, B. D., et al. (2016). Automatic detection of rapid eye movements (REMs):A machine learning approach. Journal of neuroscience methods, 259, 72-82.
