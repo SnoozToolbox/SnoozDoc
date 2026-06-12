@@ -15,6 +15,7 @@ Want to install and use Snooz? Follow this guide!
 * To manage Snooz packages: :doc:`user_guide/manage_package`
 * For details on required data formats: :doc:`user_guide/accepted_format`
 * For information about a specific tool or app: :doc:`user_guide/tools/tools`
+* For reference on CEAMS modules used to build processes: :doc:`user_guide/modules/modules`
 * For details on EDFbrowser compatibility when using it as a polysomnography viewer with Snooz: :doc:`user_guide/EDFbrowser_compatibility`
 * For instructions on running Snooz on Compute Canada clusters for users: :doc:`user_guide/ComputeCanada_Instruction_user`
 
@@ -27,6 +28,7 @@ Want to install and use Snooz? Follow this guide!
    user_guide/manage_package
    user_guide/accepted_format
    user_guide/tools/tools
+   user_guide/modules/modules
    user_guide/EDFbrowser_compatibility
    user_guide/ComputeCanada_Instruction_user
    
