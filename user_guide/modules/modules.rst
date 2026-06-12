@@ -89,7 +89,7 @@ All modules
      - Detects slow wave events based on the Carrier method.
    * - :ref:`Spectral Detector <module_spectraldetector>`
      - Detectors
-     - 2.1.0
+     - 2.2.0
      - Detects events based on the spectrum.
    * - :ref:`Spindle Detector A7 <module_spindledetectora7>`
      - Detectors
@@ -365,7 +365,7 @@ All modules
      - Automatic sleep stage classification using YASA's machine learning model.
    * - :ref:`Stft <module_stft>`
      - Signal Processing
-     - 2.0.0
+     - 2.1.0
      - Computes the STFT on the signal split into sliding windows.
    * - :ref:`Subtract Signals <module_subtractsignals>`
      - Signal Processing

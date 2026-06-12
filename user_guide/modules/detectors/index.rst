@@ -1,13 +1,5 @@
-.. _modules_detectors:
-
 Detectors
 =========
-
-This section documents the **Detectors** modules from the CEAMSModules package.
-Use these modules to build custom Snooz processes.
-
-Modules
--------
 
 .. toctree::
    :maxdepth: 1
@@ -27,7 +19,7 @@ Quick reference
 ---------------
 
 .. list-table::
-   :widths: 30 15 55
+   :widths: 25 15 60
    :header-rows: 1
    :align: left
    :class: left-align-caption wrap-table
@@ -57,7 +49,7 @@ Quick reference
      - 2.2.0
      - Detects slow wave events based on the Carrier method.
    * - :ref:`Spectral Detector <module_spectraldetector>`
-     - 2.1.0
+     - 2.2.0
      - Detects events based on the spectrum.
    * - :ref:`Spindle Detector A7 <module_spindledetectora7>`
      - 3.0.0

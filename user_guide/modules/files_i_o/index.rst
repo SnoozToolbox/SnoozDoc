@@ -1,13 +1,5 @@
-.. _modules_files_i_o:
-
 Files I/O
 =========
-
-This section documents the **Files I/O** modules from the CEAMSModules package.
-Use these modules to build custom Snooz processes.
-
-Modules
--------
 
 .. toctree::
    :maxdepth: 1
@@ -33,7 +25,7 @@ Quick reference
 ---------------
 
 .. list-table::
-   :widths: 30 15 55
+   :widths: 25 15 60
    :header-rows: 1
    :align: left
    :class: left-align-caption wrap-table

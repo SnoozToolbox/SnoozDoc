@@ -1,13 +1,5 @@
-.. _modules_signal_processing:
-
 Signal Processing
 =================
-
-This section documents the **Signal Processing** modules from the CEAMSModules package.
-Use these modules to build custom Snooz processes.
-
-Modules
--------
 
 .. toctree::
    :maxdepth: 1
@@ -33,7 +25,7 @@ Quick reference
 ---------------
 
 .. list-table::
-   :widths: 30 15 55
+   :widths: 25 15 60
    :header-rows: 1
    :align: left
    :class: left-align-caption wrap-table
@@ -81,7 +73,7 @@ Quick reference
      - 2.0.0
      - Automatic sleep stage classification using YASA's machine learning model.
    * - :ref:`Stft <module_stft>`
-     - 2.0.0
+     - 2.1.0
      - Computes the STFT on the signal split into sliding windows.
    * - :ref:`Subtract Signals <module_subtractsignals>`
      - 2.0.0
