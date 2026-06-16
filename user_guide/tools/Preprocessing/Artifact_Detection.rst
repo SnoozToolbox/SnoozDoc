@@ -1,4 +1,4 @@
-.. _Artifact_Detection:
+﻿.. _Artifact_Detection:
 
 =====================
 Detect EEG Artifacts
@@ -99,4 +99,6 @@ Version History
     - Provide two sets of default threshold values, depending on the selected sleep stages.
     - Verify alias definitions from step “1 - Input Files” before running the tool.
 
-* v2.6.1 — Distributed with CEAMS package version 7.4.0 / Snooz beta 3.1.0 (for testing doc version)
+* v2.7.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
+    - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
+    - Supports a list of EMG channels for the muscle artifact detector.

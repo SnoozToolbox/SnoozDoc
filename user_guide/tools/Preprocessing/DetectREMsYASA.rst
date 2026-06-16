@@ -1,4 +1,4 @@
-.. _DetectREMsYASA:
+﻿.. _DetectREMsYASA:
 
 ===============================
 Detect REM events with YASA
@@ -120,3 +120,6 @@ Version History
       - The UI of the tool has been updated to be more user-friendly.
       - Fixed reporting of events starting at sleep stage transitions.
       - Improve path, filename, and extension handling for sleep cycle warning log file.
+      
+* v3.4.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
+    - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.

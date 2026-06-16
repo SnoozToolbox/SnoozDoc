@@ -1,4 +1,4 @@
-.. _Power_Spectral_Analysis:
+﻿.. _Power_Spectral_Analysis:
 
 ===============================
 Analyze EEG Spectral Power
@@ -171,3 +171,6 @@ Version History
     - Rhythmic/Arhythmic power spectral analysis is now available in addition to the standard spectral analysis.
     - The output report exports two separate reports for rhythmic and arrhythmic power spectral analysis if the user selects to analyse them.
     - Some UI modification to be compatible with this new feature.
+
+* v3.1.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
+    - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.

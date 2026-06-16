@@ -1,4 +1,4 @@
-.. _Classify_REMs_Phasic_Tonic_from_EOG:
+﻿.. _Classify_REMs_Phasic_Tonic_from_EOG:
 
 ==============================================
 Classify REMs into Phasic/Tonic States from EOG
@@ -67,3 +67,5 @@ Version History
 
 * v0.0.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
     - Initial release of the tool.
+* v0.1.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
+    - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.

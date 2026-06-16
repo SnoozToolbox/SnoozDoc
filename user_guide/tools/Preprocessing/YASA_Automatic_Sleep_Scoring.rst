@@ -1,4 +1,4 @@
-.. _YASA_Automatic_Sleep_Scoring:
+﻿.. _YASA_Automatic_Sleep_Scoring:
 
 ===============================
 Score Sleep Stages with YASA 
@@ -136,3 +136,5 @@ Version History
 * v2.3.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
     - Supports discontinuous files.
     - Generates Hypnodensity plots.
+* v2.4.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
+    - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.

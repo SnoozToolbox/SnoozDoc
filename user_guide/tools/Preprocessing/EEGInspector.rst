@@ -143,5 +143,6 @@ Version History
 
 * v2.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
     - Initial release of the tool.
-
-
+    
+* v2.3.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
+    - Improved PSG reader error handling for data-loading failures.

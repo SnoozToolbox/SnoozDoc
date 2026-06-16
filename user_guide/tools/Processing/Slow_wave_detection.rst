@@ -1,4 +1,4 @@
-.. _Slow_wave_detection:
+﻿.. _Slow_wave_detection:
 
 ===============================
 Detect Slow Waves
@@ -145,3 +145,5 @@ Version History
     - Fixed reporting of events starting at sleep stage transitions.
     - Replaced the IIR delta passband filter with a FIR filter using a Hamming window to match the legacy tool.
     - Improve path, filename, and extension handling for sleep cycle warning log file.
+* v2.7.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
+    - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.

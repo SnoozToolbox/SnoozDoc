@@ -1,4 +1,4 @@
-.. _Annotations_Editor: 
+﻿.. _Annotations_Editor: 
 
 ========================
 Edit Snooz Annotations
@@ -51,3 +51,6 @@ Version History
 
 * v2.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
     - UI improvements for consistent tool and input file descriptions.
+
+* v2.3.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
+    - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
