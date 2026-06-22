@@ -164,3 +164,4 @@ Version History
 * v2.5.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
     - Renamed to "Analyze EEG Functional Connectivity" for clarity.
     - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
+    - Add error handling workflow for duplicated sleep stages.
