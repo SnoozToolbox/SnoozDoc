@@ -5,7 +5,7 @@ Spindle Detector A7
 
 **Module name:** ``SpindleDetectorA7``
 
-**Package:** CEAMSModules 7.4.0
+**Package:** CEAMSModules 7.5.0
 
 **Version:** 3.0.0
 

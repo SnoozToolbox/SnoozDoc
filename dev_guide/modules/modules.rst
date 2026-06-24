@@ -85,7 +85,7 @@ All modules
    * - 7
      - :ref:`Oxygen Desaturation Detector <module_oxygendesatdetector>`
      - Detectors
-     - 2.4.0
+     - 2.5.0
      - Analyzes the oxygen channel, detect oxygen desaturations and export oxygen saturation report.
    * - 8
      - :ref:`REMs Detection Yasa <module_remsdetectionyasa>`
@@ -95,7 +95,7 @@ All modules
    * - 9
      - :ref:`Slow Wave Detector <module_slowwavedetector>`
      - Detectors
-     - 2.2.0
+     - 2.3.0
      - Detects slow wave events based on the Carrier method.
    * - 10
      - :ref:`Spectral Detector <module_spectraldetector>`
@@ -145,7 +145,7 @@ All modules
    * - 19
      - :ref:`Event Combine <module_eventcombine>`
      - Events Utilities
-     - 2.0.0
+     - 2.1.0
      - Combines two lists of events, with or without selection.
    * - 20
      - :ref:`Event Compare <module_eventcompare>`
@@ -158,336 +158,326 @@ All modules
      - 2.0.0
      - Creates a pandas Dataframe of events.
    * - 22
-     - :ref:`Event Subdivision <module_eventsubdivision>`
-     - Events Utilities
-     - 0.0.0
-     - Creates a new pandas DataFrame of events with subwindow of every input events named events_names.
-   * - 23
      - :ref:`Events Splitter <module_eventssplitter>`
      - Events Utilities
      - 2.0.0
      - Used to split too long events.
-   * - 24
+   * - 23
      - :ref:`Extend Events <module_extendevents>`
      - Events Utilities
      - 2.0.0
      - Extend or shrink events by a percentage of their duration, applied to each side.
-   * - 25
+   * - 24
      - :ref:`Filter Events <module_filterevents>`
      - Events Utilities
      - 2.0.0
      - Selects  events from specific sleep stages.
-   * - 26
+   * - 25
      - :ref:`Performance By Event <module_performancebyevent>`
      - Events Utilities
      - 2.0.0
      - Compares two sets of events .
-   * - 27
+   * - 26
      - :ref:`PSA Pics Generator <module_psapicsgenerator>`
      - Events Utilities
      - 2.0.1
      - Used to generate figures of Power Spectral Analysis (PSA) data from PSA report files.
-   * - 28
+   * - 27
      - :ref:`REMs Details <module_remsdetails>`
      - Events Utilities
      - 2.2.0
      - Averages REMs events characteristics such as duration, amplitude and density per stage and sleep cycle.
-   * - 29
-     - :ref:`REMs to mini-epochs <module_remseventstominiepochs>`
-     - Events Utilities
-     - 0.0.0
-     - Used to generate a list of mini-epochs identified as a Phasic or Tonic based on the list of detected REMs.
-   * - 30
+   * - 28
      - :ref:`Replace Event In Signals <module_replaceeventinsignals>`
      - Events Utilities
      - 2.1.0
      - Inserts samples from event dataframe inside a signals.
-   * - 31
+   * - 29
      - :ref:`Scoring Completeness <module_scoringcompleteness>`
      - Events Utilities
      - 2.0.0
      - Evaluates if the scoring (events) is unique, complete and specific to the sleep staging.
-   * - 32
+   * - 30
      - :ref:`Signals From Events <module_signalsfromevents>`
      - Events Utilities
-     - 3.0.0
+     - 3.1.0
      - Manages a list of SignalModel from specific events during a recording.
-   * - 33
+   * - 31
      - :ref:`Sleep Stage Events <module_sleepstageevents>`
      - Events Utilities
      - 2.1.0
      - Creates a list of event from specific sleep stages during a recording.
-   * - 34
+   * - 32
      - :ref:`Sleep Stage Rename <module_sleepstagerename>`
      - Events Utilities
      - 2.0.0
      - Renames sleep stage annotation.
-   * - 35
+   * - 33
      - :ref:`Slow Wave Pics Generator <module_slowwavepicsgenerator>`
      - Events Utilities
-     - 3.0.0
+     - 3.1.0
      - Used to generate pictures of slow wave events.
-   * - 36
+   * - 34
      - :ref:`Slow Waves Details <module_slowwavesdetails>`
      - Events Utilities
-     - 2.2.0
+     - 2.3.0
      - Averages slow wave events characteristics such as duration, amplitude, frequency and so on per stage and sleep cycle.
-   * - 37
+   * - 35
      - :ref:`Spindles Details <module_spindlesdetails>`
      - Events Utilities
      - 2.2.0
      - Computes spindles events characteristics such as duration, amplitude, frequency and so on.
-   * - 38
+   * - 36
      - :ref:`Windows To Samples <module_windowstosamples>`
      - Events Utilities
      - 2.0.0
      - Converts information based on windows (i.e. RMS energy) into a time series.
-   * - 39
+   * - 37
      - :ref:`Csv Reader Master <module_csvreadermaster>`
      - Files I/O
      - 2.0.0
      - Reads events from a CSV file.
-   * - 40
+   * - 38
      - :ref:`Detections Cohort Review <module_detectionscohortreview>`
      - Files I/O
      - 2.1.0
      - Reads the spindle/sw output files and generates the "Detected events cohort report" file clean or transposed.
-   * - 41
+   * - 39
      - :ref:`Domino Converter <module_dominoconverter>`
      - Files I/O
      - 2.1.0
      - Converts DOMINO accessory files (ASCII) in one Snooz accessory tsv file.
-   * - 42
+   * - 40
      - :ref:`EDF Annotations Reader <module_edfannotationsreader>`
      - Files I/O
      - 2.0.0
      - Used to read the EDF Annotations signal and create a pandas dataframe with the events.
-   * - 43
+   * - 41
      - :ref:`Edf Xml Reader <module_edfxmlreader>`
      - Files I/O
      - 2.0.0
      - Reads events from a EDF.XML file.
-   * - 44
+   * - 42
      - :ref:`Edf Xml Reader Master <module_edfxmlreadermaster>`
      - Files I/O
      - 2.0.0
      - Reads events from a EDF.XML files or .XML files.
-   * - 45
+   * - 43
      - :ref:`Edf Xml Writer <module_edfxmlwriter>`
      - Files I/O
      - 2.0.0
      - Creates an XML file based on compumedic format.
-   * - 46
+   * - 44
      - :ref:`Event Reader <module_eventreader>`
      - Files I/O
      - 3.0.0
      - Reads events from a Tsv file.
-   * - 47
+   * - 45
      - :ref:`Json Path Editor Master <module_jsonpatheditormaster>`
      - Files I/O
      - 2.0.0
      - Edits JSON files by replacing paths within the JSON structure.
-   * - 48
+   * - 46
      - :ref:`PSA Cohort Review <module_psacohortreview>`
      - Files I/O
      - 2.5.0
      - Reads the PSA output file and generates the PSA file clean or transposed.
-   * - 49
+   * - 47
      - :ref:`PSGReader <module_psgreader>`
      - Files I/O
-     - 2.3.0
+     - 2.5.0
      - Reads a PSG file.
-   * - 50
+   * - 48
      - :ref:`PSGWriter <module_psgwriter>`
      - Files I/O
-     - 2.2.0
+     - 2.3.0
      - Writes a PSG file.
-   * - 51
+   * - 49
      - :ref:`Rename File List <module_renamefilelist>`
      - Files I/O
      - 2.1.0
      - Renames files based on input parameters such as prefix.
-   * - 52
+   * - 50
      - :ref:`Sleep Stages Importer <module_sleepstagesimporter>`
      - Files I/O
      - 2.1.0
      - Imports sleep stages from a textfile into the sleep_stages dataframe.
-   * - 53
+   * - 51
      - :ref:`TSV Validator Master <module_tsvvalidatormaster>`
      - Files I/O
      - 2.0.0
      - Validates TSV files by checking their encoding and structure.
-   * - 54
+   * - 52
      - :ref:`Tsv Writer <module_tsvwriter>`
      - Files I/O
      - 2.0.0
      - Saves events to a CSV file.
-   * - 55
+   * - 53
      - :ref:`Hypnogram <module_hypnogram>`
      - Hypnogram Analysis
      - 2.1.0
      - Displays in the results view an hypnogram and its sleep cycles.
-   * - 56
+   * - 54
      - :ref:`Sleep Bouts <module_sleepbouts>`
      - Hypnogram Analysis
      - 2.0.0
      - Supports sleep bouts operations within a Snooz process.
-   * - 57
+   * - 55
      - :ref:`Sleep Cycles Delimiter <module_sleepcyclesdelimiter>`
      - Hypnogram Analysis
      - 2.4.0
      - Compute the sleep cycles.
-   * - 58
+   * - 56
      - :ref:`Sleep Report <module_sleepreport>`
      - Hypnogram Analysis
      - 2.1.0
      - Generates a sleep report in CSV file.
-   * - 59
+   * - 57
      - :ref:`Alias Signals <module_aliassignals>`
      - Parameters
      - 2.0.0
      - Extract only the signals with a specific Alias.
-   * - 60
+   * - 58
      - :ref:`Constant <module_constant>`
      - Parameters
      - 2.0.0
      - Passes a value to the next node.
-   * - 61
+   * - 59
      - :ref:`Create Dictionary <module_createdict>`
      - Parameters
      - 2.0.0
      - Transforms key-value inputs into a dictionary output while preserving the original value.
-   * - 62
+   * - 60
      - :ref:`Create List of Group Name <module_createlistofgroupname>`
      - Parameters
      - 2.0.0
      - Creates a list of tuples that has two values of group and name.
-   * - 63
+   * - 61
      - :ref:`Create Tuple <module_createtuple>`
      - Parameters
      - 2.0.0
      - Creates a tuple from two input values.
-   * - 64
+   * - 62
      - :ref:`Dictionary <module_dictionary>`
      - Parameters
      - 2.0.0
      - Returns a value based on a key received in input.
-   * - 65
+   * - 63
      - :ref:`String Manip <module_stringmanip>`
      - Parameters
      - 2.0.0
      - Allows string manipulaiton.
-   * - 66
+   * - 64
      - :ref:`Epoch Signal <module_epochsignal>`
      - Signal Processing
      - 2.0.0
      - Segments EEG signals into overlapping or non-overlapping epochs of fixed duration.
-   * - 67
+   * - 65
      - :ref:`Filter Signal <module_filtersignal>`
      - Signal Processing
      - 2.1.0
      - Applies a FIR/IIR filter to EEG signals.
-   * - 68
+   * - 66
      - :ref:`Ica Components <module_icacomponents>`
      - Signal Processing
      - 2.0.0
      - Find components of a signal with idependant component analysis.
-   * - 69
+   * - 67
      - :ref:`Ica Restore <module_icarestore>`
      - Signal Processing
      - 2.0.0
      - Reconstructs signal from ICA components.
-   * - 70
+   * - 68
      - :ref:`Invert Signals <module_invertsignals>`
      - Signal Processing
      - 2.0.0
      - Inverts signals.
-   * - 71
+   * - 69
      - :ref:`IRASA YASA <module_irasayasa>`
      - Signal Processing
      - 0.0.0
      - Spectral power decomposition using IRASA algorithm.
-   * - 72
+   * - 70
      - :ref:`Moving RMS <module_movingrms>`
      - Signal Processing
      - 2.0.0
      - Computes RMS value on a moving window.
-   * - 73
+   * - 71
      - :ref:`PSA Compilation FOOOF <module_psacompilationfooof>`
      - Signal Processing
      - 0.0.0
      - Analyses and reports the PSD output designed specifically for FOOOF analysis.
-   * - 74
+   * - 72
      - :ref:`Remove Channel Artefact <module_removechannelartefact>`
      - Signal Processing
      - 2.0.0
      - Removes full-channel artefacts from signals and events.
-   * - 75
+   * - 73
      - :ref:`Resample <module_resample>`
      - Signal Processing
      - 2.0.0
      - Resamples a signal.
-   * - 76
+   * - 74
      - :ref:`Rescale Signal <module_rescalesignal>`
      - Signal Processing
      - 2.1.0
      - Creates a list of dictionaries with the channels from specific epochs during a recording.
-   * - 77
+   * - 75
      - :ref:`Reset Signal Artefact <module_resetsignalartefact>`
      - Signal Processing
      - 2.1.0
      - Resets the signal that occurs during an artefact.
-   * - 78
+   * - 76
      - :ref:`Score Sleep Stages YASA <module_yasasleepstaging>`
      - Signal Processing
      - 2.0.0
      - Automatic sleep stage classification using YASA's machine learning model.
-   * - 79
+   * - 77
      - :ref:`Stft <module_stft>`
      - Signal Processing
      - 2.1.0
      - Computes the STFT on the signal split into sliding windows.
-   * - 80
+   * - 78
      - :ref:`Subtract Signals <module_subtractsignals>`
      - Signal Processing
      - 2.0.0
      - Subtracts signals from a specific channel from the signals of a list of channels.
-   * - 81
+   * - 79
      - :ref:`Trim Signal <module_trimsignal>`
      - Signal Processing
      - 2.0.0
      - Trims continuous/discontinuous signal segments and their associated events to a time window defined by.
-   * - 82
+   * - 80
      - :ref:`Mutual Info <module_mutualinfo>`
      - Statistics
      - 2.0.0
      - Finds the mutual information between two lists of signals.
-   * - 83
+   * - 81
      - :ref:`PSA Compilation <module_psacompilation>`
      - Statistics
      - 2.2.0
      - Analyses and reports the PSD output.
-   * - 84
+   * - 82
      - :ref:`PSA on Events <module_psaonevents>`
      - Statistics
      - 2.1.0
      - Compiles the PSA run on selected events.
-   * - 85
+   * - 83
      - :ref:`Signal Stats <module_signalstats>`
      - Statistics
      - 2.0.0
      - Computes the mean and standard deviation of the input signals per epoch, per channel.
-   * - 86
+   * - 84
      - :ref:`Sleep Staging Export Results <module_sleepstagingexportresults>`
      - Statistics
      - 2.0.0
      - Processes and visualizes sleep staging results.
-   * - 87
+   * - 85
      - :ref:`Slow Wave Classifier <module_slowwaveclassifier>`
      - Statistics
      - 2.0.0
      - Classifies slow wave events based on a gaussian mixture.
-   * - 88
+   * - 86
      - :ref:`Threshold Computation <module_thresholdcomputation>`
      - Statistics
      - 2.1.0

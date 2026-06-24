@@ -1,7 +1,7 @@
 """
 generate_module_docs.py
 =======================
-Keeps SnoozDoc/user_guide/modules in sync with CEAMSModules.json.
+Keeps SnoozDoc/dev_guide/modules in sync with CEAMSModules.json.
 
 Run:
     python scripts/generate_module_docs.py
@@ -24,7 +24,7 @@ from collections import defaultdict
 from pathlib import Path
 
 CEAMS_BASE = Path(r"E:\CEAMS\snooz_workspace\snooz-package-ceams\modules\CEAMSModules")
-OUTPUT_BASE = Path(r"E:\CEAMS\snooz_workspace\SnoozDoc\user_guide\modules")
+OUTPUT_BASE = Path(r"E:\CEAMS\snooz_workspace\SnoozDoc\dev_guide\modules")
 
 
 # ---------------------------------------------------------------------------
@@ -109,7 +109,8 @@ def load_saved_descriptions() -> dict[str, str]:
     {module_name: description} for every module that already has an entry.
 
     The table rows look like:
-        * - :ref:`Label <module_modulename>`
+        * - 1
+          - :ref:`Label <module_modulename>`
           - Category
           - Version
           - Description text here
@@ -122,18 +123,20 @@ def load_saved_descriptions() -> dict[str, str]:
     lines = modules_rst.read_text(encoding="utf-8").splitlines()
     i = 0
     while i < len(lines):
-        # Detect the start of a data row: a :ref: link line
-        ref_match = re.match(r"\s+\*\s+-\s+:ref:`[^<]+<module_(\w+)>`", lines[i])
-        if ref_match:
-            module_name_lower = ref_match.group(1)   # e.g. "amplitudedetector"
-            # The description is 3 lines further down (category, version, description)
-            if i + 3 < len(lines):
-                desc_line = lines[i + 3].strip()
-                if desc_line.startswith("- "):
-                    desc_line = desc_line[2:].strip()
-                if desc_line:
-                    descriptions[module_name_lower] = desc_line
-            i += 4
+        item_match = re.match(r"\s+\*\s+-\s+(\d+)\s*$", lines[i])
+        if item_match and i + 4 < len(lines):
+            ref_match = re.match(r"\s+-\s+:ref:`[^<]+<module_(\w+)>`", lines[i + 1])
+            if not ref_match:
+                i += 1
+                continue
+
+            module_name_lower = ref_match.group(1)
+            desc_line = lines[i + 4].strip()
+            if desc_line.startswith("- "):
+                desc_line = desc_line[2:].strip()
+            if desc_line:
+                descriptions[module_name_lower] = desc_line
+            i += 5
             continue
         i += 1
     return descriptions
@@ -382,21 +385,23 @@ def build_modules_rst(modules: list[dict], saved: dict[str, str]) -> None:
         "-----------",
         "",
         ".. list-table::",
-        "   :widths: 25 20 15 40",
+        "   :widths: 10 24 18 12 38",
         "   :header-rows: 1",
         "   :align: left",
         "   :class: left-align-caption wrap-table",
         "",
-        "   * - Module",
+        "   * - Item",
+        "     - Module",
         "     - Category",
         "     - Version",
         "     - Description",
     ]
-    for m in sorted(modules, key=lambda x: (x["category"], x["label"].lower())):
+    for item, m in enumerate(sorted(modules, key=lambda x: (x["category"], x["label"].lower())), start=1):
         anchor = f"module_{slugify(m['name']).lower()}"
         desc = get_description(m, saved)
         lines += [
-            f"   * - :ref:`{m['label']} <{anchor}>`",
+            f"   * - {item}",
+            f"     - :ref:`{m['label']} <{anchor}>`",
             f"     - {m['category']}",
             f"     - {m['version']}",
             f"     - {desc}",

@@ -2,7 +2,7 @@
 import re
 from pathlib import Path
 
-MODULES_RST = Path(r"E:\CEAMS\snooz_workspace\SnoozDoc\user_guide\modules\modules.rst")
+MODULES_RST = Path(r"E:\CEAMS\snooz_workspace\SnoozDoc\dev_guide\modules\modules.rst")
 MODULES_DIR = MODULES_RST.parent
 
 CATEGORY_DIRS = {
@@ -17,29 +17,36 @@ CATEGORY_DIRS = {
     "Statistics": "statistics",
 }
 
+ITEM_CELL_RE = re.compile(r"\s*\*\s+-\s+\d+\s*$")
+REF_CELL_RE = re.compile(r"\s*\*\s+-\s+:ref:`([^<]+)\s*<([^>]+)>`")
+
 
 def parse_modules_rst(text: str) -> dict[str, dict]:
-    """Parse anchor -> {label, category, version, description} from modules.rst table."""
+    """Parse anchor -> {item, label, category, version, description} from modules.rst table."""
     modules = {}
     lines = text.splitlines()
     i = 0
     while i < len(lines):
-        ref_match = re.match(
-            r"\s*\*\s+-\s+:ref:`([^<]+)\s*<([^>]+)>`", lines[i]
-        )
-        if ref_match and i + 3 < len(lines):
+        if ITEM_CELL_RE.match(lines[i]) and i + 4 < len(lines):
+            ref_match = REF_CELL_RE.match(lines[i + 1])
+            if not ref_match:
+                i += 1
+                continue
+
+            item = lines[i].strip().removeprefix("* - ").strip()
             label = ref_match.group(1).strip()
             anchor = ref_match.group(2).strip()
-            category = lines[i + 1].strip().removeprefix("- ").strip()
-            version = lines[i + 2].strip().removeprefix("- ").strip()
-            description = lines[i + 3].strip().removeprefix("- ").strip()
+            category = lines[i + 2].strip().removeprefix("- ").strip()
+            version = lines[i + 3].strip().removeprefix("- ").strip()
+            description = lines[i + 4].strip().removeprefix("- ").strip()
             modules[anchor] = {
+                "item": item,
                 "label": label,
                 "category": category,
                 "version": version,
                 "description": description,
             }
-            i += 4
+            i += 5
             continue
         i += 1
     return modules

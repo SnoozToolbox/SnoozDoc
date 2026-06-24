@@ -40,13 +40,13 @@ Quick reference
      - 2.0.0
      - Organizes detection information and saves it into the cache in order to plot it.
    * - :ref:`Oxygen Desaturation Detector <module_oxygendesatdetector>`
-     - 2.4.0
+     - 2.5.0
      - Analyzes the oxygen channel, detect oxygen desaturations and export oxygen saturation report.
    * - :ref:`REMs Detection Yasa <module_remsdetectionyasa>`
      - 3.1.0
      - Detects Rapid Eye Movements (REMs) in EOG sleep recordings using YASA REM detection algorithm.
    * - :ref:`Slow Wave Detector <module_slowwavedetector>`
-     - 2.2.0
+     - 2.3.0
      - Detects slow wave events based on the Carrier method.
    * - :ref:`Spectral Detector <module_spectraldetector>`
      - 2.2.0

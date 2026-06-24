@@ -5,9 +5,9 @@ Slow Wave Pics Generator
 
 **Module name:** ``SlowWavePicsGenerator``
 
-**Package:** CEAMSModules 7.4.0
+**Package:** CEAMSModules 7.5.0
 
-**Version:** 3.0.0
+**Version:** 3.1.0
 
 Overview
 --------

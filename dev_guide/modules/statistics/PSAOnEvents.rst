@@ -5,7 +5,7 @@ PSA on Events
 
 **Module name:** ``PSAOnEvents``
 
-**Package:** CEAMSModules 7.4.0
+**Package:** CEAMSModules 7.5.0
 
 **Version:** 2.1.0
 
