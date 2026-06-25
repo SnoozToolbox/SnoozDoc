@@ -1,4 +1,4 @@
-.. _Extract_Annotations:
+﻿.. _Extract_Annotations:
 
 ==========================
 Extract Snooz Annotations 
@@ -59,3 +59,7 @@ Version History
 
 * v2.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
     - Supports the new optional time elapsed column.
+
+* v2.3.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
+    - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
+    - Add error handling workflow for duplicated sleep stages.

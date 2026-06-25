@@ -1,13 +1,13 @@
 .. _Analyze_EEG_connectivity:
 
-===========================
-Analyze EEG Connectivity
-===========================
+======================================
+Analyze EEG Functional Connectivity
+======================================
 
 Description
 -----------------------
 
-The **Analyze EEG Connectivity** module computes both functional and directional brain connectivity using two established EEG measures:
+The **Analyze EEG Functional Connectivity** module computes both functional and directional brain connectivity using two established EEG measures:
 
 - **wPLI (Weighted Phase Lag Index)**: estimates non-zero-lag phase synchronization, minimizing volume conduction artifacts.
 - **dPLI (Directed Phase Lag Index)**: estimates the direction of phase-lead/lag between pairs of EEG channels.
@@ -161,3 +161,7 @@ Version History
 
 * v2.3.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
     - Initial release of the tool.
+* v2.5.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
+    - Renamed to "Analyze EEG Functional Connectivity" for clarity.
+    - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
+    - Add error handling workflow for duplicated sleep stages.

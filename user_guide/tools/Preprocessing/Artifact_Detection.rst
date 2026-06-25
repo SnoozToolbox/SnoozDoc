@@ -1,4 +1,4 @@
-.. _Artifact_Detection:
+﻿.. _Artifact_Detection:
 
 =====================
 Detect EEG Artifacts
@@ -98,3 +98,8 @@ Version History
     - Handle bad channels properly, including those identified in “Inspect EEG Channels.”
     - Provide two sets of default threshold values, depending on the selected sleep stages.
     - Verify alias definitions from step “1 - Input Files” before running the tool.
+
+* v2.7.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
+    - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
+    - Add error handling workflow for duplicated sleep stages.
+    - Supports a list of EMG channels for the muscle artifact detector.

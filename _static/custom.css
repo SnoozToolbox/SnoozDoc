@@ -4,6 +4,10 @@
 }
 
 /* Wrap text in table cells */
+.wrap-table {
+    table-layout: fixed;
+    width: 100%;
+}
 .wrap-table td,
 .wrap-table th {
     white-space: normal !important;
