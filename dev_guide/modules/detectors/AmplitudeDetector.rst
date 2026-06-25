@@ -5,7 +5,7 @@ Amplitude Detector
 
 **Module name:** ``AmplitudeDetector``
 
-**Package:** CEAMSModules 7.4.0
+**Package:** CEAMSModules 7.5.0
 
 **Version:** 2.0.0
 
