@@ -91,5 +91,5 @@ Version History
 * v2.4.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
     - Update UI to support elapsed clock time and sleep-stage time.
 
-* v2.5.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
+* v2.5.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
    - Show subjects without selected channel or ROI and let users skip them during analysis.

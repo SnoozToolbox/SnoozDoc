@@ -5,7 +5,7 @@ PSA Compilation FOOOF
 
 **Module name:** ``PSACompilationFOOOF``
 
-**Package:** CEAMSModules 7.5.0
+**Package:** CEAMSModules 7.4.0
 
 **Version:** 0.0.0
 

@@ -146,7 +146,7 @@ Version History
     - Replaced the IIR delta passband filter with a FIR filter using a Hamming window to match the legacy tool.
     - Improve path, filename, and extension handling for sleep cycle warning log file.
 
-* v2.8.0: Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
+* v2.8.0: Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
     - Added an error-handling workflow for PSG loading from workspaces, with failed files now displayed in the UI.
     - Added an error-handling workflow for duplicated sleep stages.
     - Replaced the FIR filter with an IIR filter to reduce processing time while maintaining performance equivalent to the legacy detector.

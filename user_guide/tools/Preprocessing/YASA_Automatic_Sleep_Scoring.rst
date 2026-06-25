@@ -136,6 +136,6 @@ Version History
 * v2.3.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
     - Supports discontinuous files.
     - Generates Hypnodensity plots.
-* v2.4.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
+* v2.4.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
     - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
     - Add error handling workflow for duplicated sleep stages.

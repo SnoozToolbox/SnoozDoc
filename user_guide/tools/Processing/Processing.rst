@@ -12,7 +12,6 @@ The Processing category includes sleep analyses, event detectors, and power spec
     
     Analyze_EEG_connectivity
     Power_Spectral_Analysis
-    Classify_REMs_Phasic_Tonic_from_EOG
     Slow_wave_detection
     Spindle_detection_A7
     Spindle_detection_Martin

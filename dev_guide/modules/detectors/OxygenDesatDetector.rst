@@ -5,7 +5,7 @@ Oxygen Desaturation Detector
 
 **Module name:** ``OxygenDesatDetector``
 
-**Package:** CEAMSModules 7.5.0
+**Package:** CEAMSModules 7.4.0
 
 **Version:** 2.5.0
 

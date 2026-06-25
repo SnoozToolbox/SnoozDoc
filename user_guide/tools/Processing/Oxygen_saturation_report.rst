@@ -310,7 +310,7 @@ Version History
     - Improved saturation plotting for non-integer sampling rates.
     - Improved stage statistics calculation processing.
 
-* v2.9.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
+* v2.9.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
     - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
     - Add error handling workflow for duplicated sleep stages.
     - Remove the obsolete 'signal_squared' debug signal.

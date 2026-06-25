@@ -61,6 +61,6 @@ Version History
 * v2.1.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
     - Add minimum saturation line visualization and update instructional text
 
-* v2.3.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
+* v2.3.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
     - Improved PSG reader error handling for data-loading failures.
 

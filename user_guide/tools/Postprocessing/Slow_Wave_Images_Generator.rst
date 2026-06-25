@@ -124,5 +124,5 @@ Version History
 * v2.3.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
     - Refactor Visualize Slow Wave for clarity especially the output file step.
 
-* v2.4.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
+* v2.4.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
     - Added a batch warning dialog when loading PSG files or folders from a workspace if loading is not successful.

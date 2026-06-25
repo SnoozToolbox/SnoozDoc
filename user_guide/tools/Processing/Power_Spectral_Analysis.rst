@@ -167,11 +167,8 @@ Version History
     - Added support for duplicated annotation names in different annotation groups.
     - Improve path, filename, and extension handling for sleep cycle warning log file.
 
-* v3.0.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
+* v3.1.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
     - Rhythmic/Arhythmic power spectral analysis is now available in addition to the standard spectral analysis.
     - The output report exports two separate reports for rhythmic and arrhythmic power spectral analysis if the user selects to analyse them.
-    - Some UI modification to be compatible with this new feature.
-
-* v3.1.0 : Distributed with CEAMS package version 7.4.0 — Snooz beta 3.1.0
     - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
-    - Add error handling workflow for duplicated sleep stages.
+    - Add error handling workflow for duplicated sleep stages in the annotations file.
