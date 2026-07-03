@@ -14,7 +14,7 @@ For more information on the desaturation detection algorithm implemented in Snoo
 
 .. warning::
 
-    The detector includes basic automatic artifact detection (limited to obvious artifacts). 
+    The detector includes basic automatic artifact detection (limited to obvious artifacts). For more detail see :ref:`Oxygen_artifact_detection`.
     Manual annotation of subtle artifacts is recommended prior to analysis. 
     The :ref:`Oximeter` viewer can be used to mark the invalid section. 
 
@@ -45,7 +45,10 @@ For more details on accepted formats, see :ref:`accepted_format`.
 
 **2 - Invalid sections**
 
-The user must select any annotations to be excluded from the oxygen saturation analysis. Invalid sections can be identified by the user using the :ref:`Oximeter` viewer.
+The user must select any annotations to be excluded from the oxygen saturation analysis. 
+Invalid sections can be identified by the user using the :ref:`Oximeter` viewer.
+Major artifacts should be automatically excluded see :ref:`Oxygen_artifact_detection` for more details.
+
 
 **3 - Detection Settings**
 
@@ -284,6 +287,19 @@ This format is intended for detailed descriptions.
    - slope: slope of the event (%/s)
    - rise: rise of the event (%)
    - area: area of the event (%·s)
+
+
+.. _Oxygen_artifact_detection:
+
+Oxygen artifact detector
+------------------------------
+
+Major artifacts are automatically identified using a combination of signal quality criteria. 
+The algorithm detects abrupt signal fluctuations after high-pass filtering, 
+as well as physiologically implausible oxygen saturation values (<50% or >100%). 
+Adjacent artifact samples are merged into continuous artifact segments and extended by a 1-s safety margin. 
+Short artifacts (≤5 s) are linearly interpolated, 
+whereas longer artifact periods are preserved and excluded from subsequent oxygen desaturation and recovery event detection.
 
 
 Report
