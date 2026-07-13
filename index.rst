@@ -17,6 +17,7 @@ Want to install and use Snooz? Follow this guide!
 * For information about a specific tool or app: :doc:`user_guide/tools/tools`
 * For details on EDFbrowser compatibility when using it as a polysomnography viewer with Snooz: :doc:`user_guide/EDFbrowser_compatibility`
 * For instructions on running Snooz on Compute Canada clusters for users: :doc:`user_guide/ComputeCanada_Instruction_user`
+* For video tutorials and demonstrations: :doc:`user_guide/videos`
 
 .. toctree::
    :maxdepth: 3
@@ -29,6 +30,7 @@ Want to install and use Snooz? Follow this guide!
    user_guide/tools/tools
    user_guide/EDFbrowser_compatibility
    user_guide/ComputeCanada_Instruction_user
+   user_guide/videos
    
 Developer's Guide
 -----------------
