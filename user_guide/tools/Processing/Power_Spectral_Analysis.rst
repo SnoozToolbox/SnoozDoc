@@ -101,15 +101,15 @@ For more details on accepted formats, see :ref:`accepted_format`.
 
     - **Standard power spectral analysis :** the power is estimated with the Welch's method for each frequency bin and then averaged across the frequency bins of a frequency band.
 
-    - **Rhythmic/Arhythmic with IRASA method :** the rhythmic/arrhythmic power is estimated with the Irregular Resampling Auto-Spectral Analysis (IRASA) method for each frequency bin and then averaged across the frequency bins of a frequency band [2].
+    - **Periodic/Aperiodic with IRASA method :** the periodic/aperiodic power is estimated with the Irregular Resampling Auto-Spectral Analysis (IRASA) method for each frequency bin and then averaged across the frequency bins of a frequency band [2].
 
-    - **Rhythmic/Arhythmic with FOOOF method :** the rhythmic/arrhythmic power is estimated with the Fitting Oscillations & One-Over-F (FOOOF) method for the averaged power across the frequency bins of a frequency band [3].
+    - **Periodic/Aperiodic with FOOOF method :** the periodic/aperiodic power is estimated with the Fitting Oscillations & One-Over-F (FOOOF) method for the averaged power across the frequency bins of a frequency band [3].
 
     .. note::
     
-        - The IRASA method is based on the principle that rhythmic and arrhythmic components of the power spectrum can be separated by resampling the signal at non-integer rates. This method is applied on each selected window of the signal, leading to be more time consuming than the FOOOF method which is applied on the averaged power across the frequency bins of a frequency band.
+        - The IRASA method is based on the principle that periodic and aperiodic components of the power spectrum can be separated by resampling the signal at non-integer rates. This method is applied on each selected window of the signal, leading to be more time consuming than the FOOOF method which is applied on the averaged power across the frequency bins of a frequency band.
         
-        - The FOOOF method is based on the principle that the power spectrum can be decomposed into aperiodic (arrhythmic) and periodic (rhythmic) components by fitting a model to the power spectrum.
+        - The FOOOF method is based on the principle that the power spectrum can be decomposed into aperiodic (aperiodic) and periodic (periodic) components by fitting a model to the power spectrum.
 
     .. note::
     
@@ -136,7 +136,7 @@ For more details on accepted formats, see :ref:`accepted_format`.
 
 .. note::
 
-    If the user selects the rhythmic/arrhythmic power spectral analysis, two separate .tsv report files will be generated, one for the rhythmic power spectral analysis and one for the arrhythmic power spectral analysis.
+    If the user selects the periodic/aperiodic power spectral analysis, two separate .tsv report files will be generated, one for the periodic power spectral analysis and one for the aperiodic power spectral analysis.
 
 Report
 ---------
@@ -168,8 +168,8 @@ Version History
     - Improve path, filename, and extension handling for sleep cycle warning log file.
 
 * v3.1.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
-    - Rhythmic/Arhythmic power spectral analysis is now available in addition to the standard spectral analysis.
-    - The output report exports two separate reports for rhythmic and arrhythmic power spectral analysis if the user selects to analyse them.
+    - Periodic/Aperiodic power spectral analysis is now available in addition to the standard spectral analysis.
+    - The output report exports two separate reports for periodic and aperiodic power spectral analysis if the user selects to analyse them.
     - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
     - Add error handling workflow for duplicated sleep stages in the annotations file.
 
