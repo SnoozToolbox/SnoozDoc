@@ -137,8 +137,9 @@ Version History
     - Fixed reporting of events starting at sleep stage transitions.
     - Improve path, filename, and extension handling for sleep cycle warning log file.
 
-
-
 * v2.8.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
     - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
     - Add error handling workflow for duplicated sleep stages.
+
+* v2.9.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+    - Sleep cycles in the spindle characteristics files now start at 1 (no more cycle=0).
