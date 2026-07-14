@@ -173,5 +173,6 @@ Version History
     - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
     - Add error handling workflow for duplicated sleep stages in the annotations file.
 
-* v3.1.1 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+* v3.1.2 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
     - Fix the enabling/disabling widgets problem for step 5. Annotations Selection.
+    - Changing occurrences of the word "rhythmic" to "periodic" in the UI and the output report.
