@@ -31,7 +31,7 @@ Quick reference
      - 2.2.0
      - Analyses and reports the PSD output.
    * - :ref:`PSA on Events <module_psaonevents>`
-     - 2.1.0
+     - 3.0.0
      - Compiles the PSA run on selected events.
    * - :ref:`Signal Stats <module_signalstats>`
      - 2.0.0

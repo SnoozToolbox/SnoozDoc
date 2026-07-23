@@ -7,7 +7,7 @@ PSA on Events
 
 **Package:** CEAMSModules 7.5.0
 
-**Version:** 2.1.0
+**Version:** 3.0.0
 
 Overview
 --------
@@ -18,7 +18,7 @@ Inputs
 ------
 
 .. list-table::
-   :widths: 25 20 15 50
+   :widths: 27 19 15 50
    :header-rows: 1
    :align: left
    :class: left-align-caption wrap-table
@@ -78,6 +78,11 @@ Inputs
      - String
      - —
      - Path and filename to write the output.
+   * - ``match_event_channels``
+     - bool
+     - True
+     - | True (default): compile each event only on its annotated channel.
+       | False: use the event intervals for every analyzed PSD channel.
 
 Outputs
 -------

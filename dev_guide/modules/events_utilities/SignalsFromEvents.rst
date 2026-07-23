@@ -7,7 +7,7 @@ Signals From Events
 
 **Package:** CEAMSModules 7.5.0
 
-**Version:** 3.1.0
+**Version:** 4.0.0
 
 Overview
 --------
@@ -22,7 +22,7 @@ Inputs
 ------
 
 .. list-table::
-   :widths: 25 20 15 50
+   :widths: 27 19 15 50
    :header-rows: 1
    :align: left
    :class: left-align-caption wrap-table
@@ -66,6 +66,12 @@ Inputs
      - True
      - | True to create a new list of SignalModel based on the events.
        | False to select items from the list of SignalModel based on the events.
+   * - ``match_event_channels``
+     - bool
+     - True
+     - | True (default): apply a channel-tagged event only on that channel
+       | (empty channels still apply to all signals). False: apply event times
+       | to every input signal (cross-channel analysis).
 
 Outputs
 -------

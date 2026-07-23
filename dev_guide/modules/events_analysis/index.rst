@@ -20,7 +20,7 @@ Quick reference
      - Version
      - Description
    * - :ref:`Event Sleep Report <module_eventsleepreport>`
-     - 2.0.0
+     - 2.0.1
      - Generates event sleep report.
    * - :ref:`Event Temporal Link <module_eventtemporallink>`
      - 2.0.0
