@@ -1,0 +1,124 @@
+filename	PSG filename
+id1	subject identification
+cyc_def_option	"Method used to split the sleep period in sleep cycles, it defines the criteria. I.e. : ""Minimum criteria""  ""Aeschbach 1993""  ""Feinberg 1979"""
+cyc_def_include_soremp	Include a REM sleep periods (REMP) that occur within 15 minutes of sleep onset.
+cyc_def_include_last_incomplete	Include the last sleep cycle even if the NREM period (NREMP) or REMP does not meet the minimum duration criteria.
+cyc_def_rem_min	Minimum length without R stage to end the REMP.
+cyc_def_first_nrem_min	Minimum length of the first NREMP in minutes.
+cyc_def_mid_last_nrem_min	Minimum length of the middle and last NREMP in minutes.
+cyc_def_last_nrem_valid_min	Minimum length of the NREMP in minutes to validate the last sleep cycle.
+cyc_def_first_rem_min	Minimum length of the first REMP in minutes.
+cyc_def_mid_rem_min	Minimum length of the middle REMP in minutes.
+cyc_def_last_rem_min	Minimum length of the last REMP in minutes.
+cyc_def_move_end_rem	"Move the end of the REMP to the start of the following NREMP, eliminating the temporal ""gap"" between 2 cycles."
+cyc_def_sleep_stages	"List of valid stages used to define the sleep cycles:  ""N1, N2, N3, R"" or ""N2, N3, R"""
+artifact_group_name_list	List of groups and names of the artefact excluded from the Power Spectral Analysis
+channel_label	The label of the channel.
+channel_fs	The sampling rate (Hz) of the channel.
+channel_artefact_count	The number of artefacts marked on the channel (i.e. number of events).
+fft_win_sec	The window length in sec used to perform the FFT.
+fft_step_sec	The step in sec between each start point of the window used for the FFT.
+freq_low_Hz	The low frequency (Hz) of the mini band.
+freq_high_Hz	The high frequency (Hz) of the mini band.
+fft_win_count	The number of fft windows in selected annotations.
+fft_win_valid_count	The number of valid fft windows in selected annotations.
+fft_win_Event_count	The number of fft windows in selected annotation Event.
+fft_win_valid_Event_count	The number of valid fft windows in selected annotation Event.
+act_total	The total spectral power (uV^2)
+act_Event	The spectral power (uV^2) in selected annotation Event.
+clock_h1_fft_win_count	Clock Hour 1 - The number of fft windows in selected annotations.
+clock_h1_fft_win_valid_count	Clock Hour 1 - The number of valid fft windows in selected annotations.
+clock_h1_Event_fft_win_count	Clock Hour 1 - The number of fft windows in selected annotation Event.
+clock_h1_Event_fft_win_valid_count	Clock Hour 1 - The number of valid fft windows in selected annotation Event.
+clock_h1_act	Clock Hour 1 - The spectral power (uV^2).
+clock_h1_Event_act	Clock Hour 1 - The spectral power (uV^2) in selected annotation Event.
+clock_h2_fft_win_count	Clock Hour 2 - The number of fft windows in selected annotations.
+clock_h2_fft_win_valid_count	Clock Hour 2 - The number of valid fft windows in selected annotations.
+clock_h2_Event_fft_win_count	Clock Hour 2 - The number of fft windows in selected annotation Event.
+clock_h2_Event_fft_win_valid_count	Clock Hour 2 - The number of valid fft windows in selected annotation Event.
+clock_h2_act	Clock Hour 2 - The spectral power (uV^2).
+clock_h2_Event_act	Clock Hour 2 - The spectral power (uV^2) in selected annotation Event.
+clock_h3_fft_win_count	Clock Hour 3 - The number of fft windows in selected annotations.
+clock_h3_fft_win_valid_count	Clock Hour 3 - The number of valid fft windows in selected annotations.
+clock_h3_Event_fft_win_count	Clock Hour 3 - The number of fft windows in selected annotation Event.
+clock_h3_Event_fft_win_valid_count	Clock Hour 3 - The number of valid fft windows in selected annotation Event.
+clock_h3_act	Clock Hour 3 - The spectral power (uV^2).
+clock_h3_Event_act	Clock Hour 3 - The spectral power (uV^2) in selected annotation Event.
+clock_h4_fft_win_count	Clock Hour 4 - The number of fft windows in selected annotations.
+clock_h4_fft_win_valid_count	Clock Hour 4 - The number of valid fft windows in selected annotations.
+clock_h4_Event_fft_win_count	Clock Hour 4 - The number of fft windows in selected annotation Event.
+clock_h4_Event_fft_win_valid_count	Clock Hour 4 - The number of valid fft windows in selected annotation Event.
+clock_h4_act	Clock Hour 4 - The spectral power (uV^2).
+clock_h4_Event_act	Clock Hour 4 - The spectral power (uV^2) in selected annotation Event.
+clock_h5_fft_win_count	Clock Hour 5 - The number of fft windows in selected annotations.
+clock_h5_fft_win_valid_count	Clock Hour 5 - The number of valid fft windows in selected annotations.
+clock_h5_Event_fft_win_count	Clock Hour 5 - The number of fft windows in selected annotation Event.
+clock_h5_Event_fft_win_valid_count	Clock Hour 5 - The number of valid fft windows in selected annotation Event.
+clock_h5_act	Clock Hour 5 - The spectral power (uV^2).
+clock_h5_Event_act	Clock Hour 5 - The spectral power (uV^2) in selected annotation Event.
+clock_h6_fft_win_count	Clock Hour 6 - The number of fft windows in selected annotations.
+clock_h6_fft_win_valid_count	Clock Hour 6 - The number of valid fft windows in selected annotations.
+clock_h6_Event_fft_win_count	Clock Hour 6 - The number of fft windows in selected annotation Event.
+clock_h6_Event_fft_win_valid_count	Clock Hour 6 - The number of valid fft windows in selected annotation Event.
+clock_h6_act	Clock Hour 6 - The spectral power (uV^2).
+clock_h6_Event_act	Clock Hour 6 - The spectral power (uV^2) in selected annotation Event.
+clock_h7_fft_win_count	Clock Hour 7 - The number of fft windows in selected annotations.
+clock_h7_fft_win_valid_count	Clock Hour 7 - The number of valid fft windows in selected annotations.
+clock_h7_Event_fft_win_count	Clock Hour 7 - The number of fft windows in selected annotation Event.
+clock_h7_Event_fft_win_valid_count	Clock Hour 7 - The number of valid fft windows in selected annotation Event.
+clock_h7_act	Clock Hour 7 - The spectral power (uV^2).
+clock_h7_Event_act	Clock Hour 7 - The spectral power (uV^2) in selected annotation Event.
+clock_h8_fft_win_count	Clock Hour 8 - The number of fft windows in selected annotations.
+clock_h8_fft_win_valid_count	Clock Hour 8 - The number of valid fft windows in selected annotations.
+clock_h8_Event_fft_win_count	Clock Hour 8 - The number of fft windows in selected annotation Event.
+clock_h8_Event_fft_win_valid_count	Clock Hour 8 - The number of valid fft windows in selected annotation Event.
+clock_h8_act	Clock Hour 8 - The spectral power (uV^2).
+clock_h8_Event_act	Clock Hour 8 - The spectral power (uV^2) in selected annotation Event.
+clock_h9_fft_win_count	Clock Hour 9 - The number of fft windows in selected annotations.
+clock_h9_fft_win_valid_count	Clock Hour 9 - The number of valid fft windows in selected annotations.
+clock_h9_Event_fft_win_count	Clock Hour 9 - The number of fft windows in selected annotation Event.
+clock_h9_Event_fft_win_valid_count	Clock Hour 9 - The number of valid fft windows in selected annotation Event.
+clock_h9_act	Clock Hour 9 - The spectral power (uV^2).
+clock_h9_Event_act	Clock Hour 9 - The spectral power (uV^2) in selected annotation Event.
+cyc1_length_min	Cycle 1 - Duration of the cycle in minutes.
+cyc1_fft_win_count	Cycle 1 - The number of fft windows in selected annotations.
+cyc1_fft_win_valid_count	Cycle 1 - The number of valid fft windows in selected annotations.
+cyc1_Event_fft_win_count	Cycle 1 - The number of fft windows in selected annotation Event.
+cyc1_Event_fft_win_valid_count	Cycle 1 - The number of valid fft windows in selected annotation Event.
+cyc1_act	Cycle 1 - The spectral power (uV^2).
+cyc1_Event_act	Cycle 1 - The spectral power (uV^2) in selected annotation Event.
+cyc2_length_min	Cycle 2 - Duration of the cycle in minutes.
+cyc2_fft_win_count	Cycle 2 - The number of fft windows in selected annotations.
+cyc2_fft_win_valid_count	Cycle 2 - The number of valid fft windows in selected annotations.
+cyc2_Event_fft_win_count	Cycle 2 - The number of fft windows in selected annotation Event.
+cyc2_Event_fft_win_valid_count	Cycle 2 - The number of valid fft windows in selected annotation Event.
+cyc2_act	Cycle 2 - The spectral power (uV^2).
+cyc2_Event_act	Cycle 2 - The spectral power (uV^2) in selected annotation Event.
+cyc3_length_min	Cycle 3 - Duration of the cycle in minutes.
+cyc3_fft_win_count	Cycle 3 - The number of fft windows in selected annotations.
+cyc3_fft_win_valid_count	Cycle 3 - The number of valid fft windows in selected annotations.
+cyc3_Event_fft_win_count	Cycle 3 - The number of fft windows in selected annotation Event.
+cyc3_Event_fft_win_valid_count	Cycle 3 - The number of valid fft windows in selected annotation Event.
+cyc3_act	Cycle 3 - The spectral power (uV^2).
+cyc3_Event_act	Cycle 3 - The spectral power (uV^2) in selected annotation Event.
+cyc4_length_min	Cycle 4 - Duration of the cycle in minutes.
+cyc4_fft_win_count	Cycle 4 - The number of fft windows in selected annotations.
+cyc4_fft_win_valid_count	Cycle 4 - The number of valid fft windows in selected annotations.
+cyc4_Event_fft_win_count	Cycle 4 - The number of fft windows in selected annotation Event.
+cyc4_Event_fft_win_valid_count	Cycle 4 - The number of valid fft windows in selected annotation Event.
+cyc4_act	Cycle 4 - The spectral power (uV^2).
+cyc4_Event_act	Cycle 4 - The spectral power (uV^2) in selected annotation Event.
+cyc5_length_min	Cycle 5 - Duration of the cycle in minutes.
+cyc5_fft_win_count	Cycle 5 - The number of fft windows in selected annotations.
+cyc5_fft_win_valid_count	Cycle 5 - The number of valid fft windows in selected annotations.
+cyc5_Event_fft_win_count	Cycle 5 - The number of fft windows in selected annotation Event.
+cyc5_Event_fft_win_valid_count	Cycle 5 - The number of valid fft windows in selected annotation Event.
+cyc5_act	Cycle 5 - The spectral power (uV^2).
+cyc5_Event_act	Cycle 5 - The spectral power (uV^2) in selected annotation Event.
+cyc6_length_min	Cycle 6 - Duration of the cycle in minutes.
+cyc6_fft_win_count	Cycle 6 - The number of fft windows in selected annotations.
+cyc6_fft_win_valid_count	Cycle 6 - The number of valid fft windows in selected annotations.
+cyc6_Event_fft_win_count	Cycle 6 - The number of fft windows in selected annotation Event.
+cyc6_Event_fft_win_valid_count	Cycle 6 - The number of valid fft windows in selected annotation Event.
+cyc6_act	Cycle 6 - The spectral power (uV^2).
+cyc6_Event_act	Cycle 6 - The spectral power (uV^2) in selected annotation Event.

@@ -116,13 +116,13 @@ For more details on accepted formats, see :ref:`accepted_format`.
         Both **IRASA** (Implemented with yasa library) and **FOOOF** (implemented with fooof library) methods, were implemented with the default parameters of the original publications [1, 2]. For more details on the parameters, see the original publications [1, 2].
 
 **7 - Output File**
-    If the analysis is performed per sleep stage :  
+    Whether the analysis is performed per sleep stage or per chosen annotations :  
 
         Define how to average the spectral power across the recording.
 
             - Choose "Total" to generate the average through the whole recording.
             - Choose "Distribution per hour" to generate the average for each elapsed clock hour from hour 1 to 9.
-            - Choose "Distribution per hour spent in each sleep stage" to generate the average for each stage hour from hour 1 to 9.
+            - Choose "Distribution per hour spent in each sleep stage" to generate the average for each stage hour from hour 1 to 9. (Only available if the analysis is performed per sleep stage)
             - Choose "Distribution per sleep cycle" to generate the average per sleep cycle, from sleep cycle 1 to 6.
         
         The maximum number of hours or sleep cycles are defined in the configuration page "Hours and Cycles".
@@ -173,6 +173,8 @@ Version History
     - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
     - Add error handling workflow for duplicated sleep stages in the annotations file.
 
-* v3.1.2 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+* v4.0.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
     - Fix the enabling/disabling widgets problem for step 5. Annotations Selection.
     - Changing occurrences of the word "rhythmic" to "periodic" in the UI and the output report.
+    - Add the possibility to analyze power spectra on an EEG signal based on the timing of an event (e.g., REM tonic) detected in another signal (e.g., EOG).
+    - The event report has also been updated to include all necessary parameters broken down by hours and sleep cycles.

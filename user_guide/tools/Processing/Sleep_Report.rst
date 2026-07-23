@@ -69,6 +69,8 @@ The scrolling menu lists the predefined events report :
 * Respiratory Events Report
 * Snoring report
 * Events report without criteria
+* Events report without criteria-EOG_phasic
+* Events report without criteria-EOG_tonic
 		
 The selection Criteria window details the criteria defined for the selected report. 
 
@@ -121,3 +123,6 @@ Version History
     - Added sleep_maintenance_efficiency: time spent in sleep stages over SPT x 100.
     - Improved path, filename, and extension handling for sleep cycle warning log file.
     - Fixed Subject Info synchronization between the UI and sleep report output.
+
+* v2.7.1 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+    - Added new events report without criteria-EOG_phasic and without criteria-EOG_tonic.
