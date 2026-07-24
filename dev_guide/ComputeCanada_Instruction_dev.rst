@@ -163,6 +163,9 @@ Run Snooz with your workspace::
    * Ensure all data paths in your JSON file are also absolute
    * Verify file permissions (``chmod +r``) if needed
 
+.. note::
+   The log file will be saved (workspace_name_YYYYMMDD_HHMMSS.log) in the same folder as the workspace file.
+
 Advanced Usage: SLURM Job Submission
 =====================================
 

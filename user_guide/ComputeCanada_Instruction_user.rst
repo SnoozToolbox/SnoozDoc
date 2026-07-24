@@ -183,6 +183,9 @@ Example::
 .. note::
    The process will start and show progress in the terminal. Wait until it completes.
 
+.. note::
+   The log file will be saved (workspace_name_YYYYMMDD_HHMMSS.log) in the same folder as the workspace file.
+
 Running Long Jobs with SLURM
 =============================
 
