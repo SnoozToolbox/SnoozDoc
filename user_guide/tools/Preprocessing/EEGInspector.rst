@@ -58,8 +58,10 @@ Then, use the **Browse** button to select your EEG file.
 Select non-brain channels
 -----------------------------
 
-The app may automatically suggest some common non-brain channels.
+The app may automatically suggest common non-brain channels.
 
+* For **128-channel** and **256-channel** montages, face and peripheral electrodes are pre-selected automatically when channel names are recognized.
+* Keyword-based sensors (for example EOG, EMG, ECG) are also suggested when their channel names match known patterns.
 * If the suggested selection is not correct, you can **uncheck** any channels or **check** the correct ones manually.
 * Mark channels such as EOG, EMG, ECG, or other sensors that should be excluded.
 * Click **Confirm Selection** when done, or click **Skip** if you don’t need to remove any channels.
@@ -78,7 +80,7 @@ Wait for the data to load.
 
 .. note::
 
-   For visualization only, signals are downsampled to 250 Hz (if needed) and low-pass filtered at 100 Hz. This does **not** modify your original data.
+   For visualization only, signals are resampled to 256 Hz or 200 Hz (depending on the original sampling rate) and low-pass filtered at 100 Hz. This does **not** modify your original data.
 
 Mark fully artifact channels
 ---------------------------------
@@ -102,7 +104,7 @@ Inspect and mark noisy epochs
 
 Your data will be automatically divided into epochs:
 
-* If your file is **over 1 hour**, you can choose **5 min** or **15 min** epochs.
+* If your file is **over 1 hour**, you can choose **20 min** or **60 min** epochs.
 * If under 1 hour, you can choose **10 s** or **30 s** epochs.
 
 Select the desired epoch length, click **Apply**, and inspect the segments.
@@ -117,16 +119,21 @@ Review the PSD
 In the final step, the app shows the **Power Spectral Density (PSD)** of the cleaned data.
 
 * Check the PSD to confirm that your signal is clean.
+* The page reminds you that any previous EEG Inspector annotations will be replaced with the new ones when you save.
 
-If satisfied, save your annotations.
+If satisfied, click **Save**.
 
 Save annotations
 ----------------------
 
-* Check **Same File** to write to the original file, or **Browse** to select a new file path.
-* To overwrite old annotations with the same `group` and `name`, check **Overwrite**.
+Annotations are always written to the **opened EEG / PSG file** (the same file you selected at the start).
 
-Press **Save File** — a dialog will confirm that the annotations were saved.
+* Press **Save** — a dialog confirms that the EEG Inspector events were saved.
+* Any previous EEG Inspector annotations are **replaced** with the new ones.
+  Only events with ``group`` ``art_inspector`` and names ``non_brain``, ``art_channel``, or ``art_epoch`` are removed and rewritten.
+  Other annotations in the file are left unchanged.
+* At the same time, the PSD of the cleaned signal is saved next to the input file as ``{filename}_PSD.png``,
+  where ``{filename}`` is the input file name without its extension (shown at the top left of the app).
 
 Annotations are saved as: 
 
@@ -146,3 +153,9 @@ Version History
     
 * v2.3.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
     - Improved PSG reader error handling for data-loading failures.
+
+* v2.4.0 : Distributed with CEAMS package version 7.5.0
+    - Automatic non-brain channel suggestions for 256-channel EGI / GSN HydroCel montages.
+    - Annotations are always saved to the opened input file.
+    - Previous ``art_inspector`` annotations are always replaced on save.
+    - Automatic export of the cleaned PSD as ``{filename}_PSD.png`` next to the input file.
