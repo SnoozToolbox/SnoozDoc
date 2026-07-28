@@ -73,7 +73,7 @@ In this step the user can set the parameters for the detection of REMs using YAS
 
 
 Mini-epochs Classification Step
-----------------
+--------------------------------
 In this step, the user can set the parameters for the classification of REMs into phasic and tonic mini-epochs.
 
 General definition:

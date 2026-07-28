@@ -195,7 +195,7 @@ All modules
    * - 29
      - :ref:`PSA Pics Generator <module_psapicsgenerator>`
      - Events Utilities
-     - 2.0.1
+     - 2.0.2
      - Used to generate figures of Power Spectral Analysis (PSA) data from PSA report files.
    * - 30
      - :ref:`REMs Details <module_remsdetails>`
@@ -495,7 +495,7 @@ All modules
    * - 89
      - :ref:`Slow Wave Classifier <module_slowwaveclassifier>`
      - Statistics
-     - 2.0.0
+     - 2.1.0
      - Classifies slow wave events based on a gaussian mixture.
    * - 90
      - :ref:`Threshold Computation <module_thresholdcomputation>`

@@ -23,8 +23,8 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
-CEAMS_BASE = Path(r"E:\CEAMS\snooz_workspace\snooz-package-ceams\modules\CEAMSModules")
-OUTPUT_BASE = Path(r"E:\CEAMS\snooz_workspace\SnoozDoc\dev_guide\modules")
+CEAMS_BASE = Path(r"C:\Users\klacourse\Documents\snooz_workspace\snooz-package-ceams\modules\CEAMSModules")
+OUTPUT_BASE = Path(r"C:\Users\klacourse\Documents\snooz_workspace\SnoozDoc\dev_guide\modules")
 
 
 # ---------------------------------------------------------------------------
