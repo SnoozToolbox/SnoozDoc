@@ -164,7 +164,8 @@ Run Snooz with your workspace::
    * Verify file permissions (``chmod +r``) if needed
 
 .. note::
-   The log file will be saved (workspace_name_YYYYMMDD_HHMMSS.log) in the same folder as the workspace file.
+   - The log file will be saved (workspace_name_YYYYMMDD_HHMMSS.log) in the same folder as the workspace file.
+   - The status of the pipeline whether it has been successfully executed or not will be shown in the terminal.
 
 Advanced Usage: SLURM Job Submission
 =====================================

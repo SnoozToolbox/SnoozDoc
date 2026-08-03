@@ -184,7 +184,8 @@ Example::
    The process will start and show progress in the terminal. Wait until it completes.
 
 .. note::
-   The log file will be saved (workspace_name_YYYYMMDD_HHMMSS.log) in the same folder as the workspace file.
+   - The log file will be saved (workspace_name_YYYYMMDD_HHMMSS.log) in the same folder as the workspace file.
+   - The status of the pipeline whether it has been successfully executed or not will be shown in the terminal.
 
 Running Long Jobs with SLURM
 =============================
