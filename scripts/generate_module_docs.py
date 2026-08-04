@@ -23,8 +23,12 @@ import re
 from collections import defaultdict
 from pathlib import Path
 
-CEAMS_BASE = Path(r"C:\Users\klacourse\Documents\snooz_workspace\snooz-package-ceams\modules\CEAMSModules")
-OUTPUT_BASE = Path(r"C:\Users\klacourse\Documents\snooz_workspace\SnoozDoc\dev_guide\modules")
+SCRIPT_DIR = Path(__file__).resolve().parent
+SNOOZDOC_ROOT = SCRIPT_DIR.parent
+WORKSPACE_ROOT = SNOOZDOC_ROOT.parent
+
+CEAMS_BASE = WORKSPACE_ROOT / "snooz-package-ceams" / "modules" / "CEAMSModules"
+OUTPUT_BASE = SNOOZDOC_ROOT / "dev_guide" / "modules"
 
 
 # ---------------------------------------------------------------------------

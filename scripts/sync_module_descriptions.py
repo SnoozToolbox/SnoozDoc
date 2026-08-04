@@ -2,7 +2,10 @@
 import re
 from pathlib import Path
 
-MODULES_RST = Path(r"E:\CEAMS\snooz_workspace\SnoozDoc\dev_guide\modules\modules.rst")
+SCRIPT_DIR = Path(__file__).resolve().parent
+SNOOZDOC_ROOT = SCRIPT_DIR.parent
+
+MODULES_RST = SNOOZDOC_ROOT / "dev_guide" / "modules" / "modules.rst"
 MODULES_DIR = MODULES_RST.parent
 
 CATEGORY_DIRS = {
