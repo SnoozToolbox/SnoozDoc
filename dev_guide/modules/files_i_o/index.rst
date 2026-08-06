@@ -79,5 +79,5 @@ Quick reference
      - 2.0.0
      - Validates TSV files by checking their encoding and structure.
    * - :ref:`Tsv Writer <module_tsvwriter>`
-     - 2.0.0
+     - 2.1.0
      - Saves events to a CSV file.

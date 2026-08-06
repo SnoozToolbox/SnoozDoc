@@ -330,7 +330,7 @@ All modules
    * - 56
      - :ref:`Tsv Writer <module_tsvwriter>`
      - Files I/O
-     - 2.0.0
+     - 2.1.0
      - Saves events to a CSV file.
    * - 57
      - :ref:`Hypnogram <module_hypnogram>`
