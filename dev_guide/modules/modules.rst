@@ -495,7 +495,7 @@ All modules
    * - 89
      - :ref:`Slow Wave Classifier <module_slowwaveclassifier>`
      - Statistics
-     - 2.1.0
+     - 2.2.0
      - Classifies slow wave events based on a gaussian mixture.
    * - 90
      - :ref:`Threshold Computation <module_thresholdcomputation>`

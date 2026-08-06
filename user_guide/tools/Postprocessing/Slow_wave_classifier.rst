@@ -78,5 +78,6 @@ Version History
 * v2.2.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0 
     - No modification.
 
-* v2.3.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0 
+* v2.4.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0 
     - Handled discrepancies between file entries; a message is displayed when recordings are missing from the slow wave cohort report or the sleep stages files.
+    - Map slow wave categories by transition frequency. Remap KMeans labels so category 1 is assigned to the cluster with the lowest transition frequency (trans_freq_Hz), increasing categories with frequency.
