@@ -245,7 +245,7 @@ All modules
    * - 39
      - :ref:`Spindles Details <module_spindlesdetails>`
      - Events Utilities
-     - 2.3.0
+     - 2.4.0
      - Computes spindles events characteristics such as duration, amplitude, frequency and so on.
    * - 40
      - :ref:`Windows To Samples <module_windowstosamples>`

@@ -33,6 +33,7 @@ Two additional output reports are available :
          * Average frequency (Hz) counting peaks
          * Peak-to-peak amplitude (µV)
          * Root Mean Square (rms) amplitude (µV)
+         * RMS-Duration products (µV*s)
 
    **2. Spindle characteristics averaged by subject level**
       A file with the spindle characteristics averaged per subject.  One file for the cohort, one row per channel.
@@ -48,6 +49,9 @@ Two additional output reports are available :
          - per hour spent in each sleep stage
 
       See :ref:`spindle_A7_cohort_info_csv` for the variable definition. 
+
+.. note::
+   RSAI (RMS Spindle Activity Index) is the sum of RMS-Duration products across all spindles. Other spindle characteristics are averaged values.
 
 Filtering Information
 ---------------------------
@@ -165,5 +169,6 @@ Version History
     - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
     - Add error handling workflow for duplicated sleep stages.
 
-* v3.7.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
-    - Sleep cycles in the spindle characteristics files now start at 1 (no more cycle=0).
+* v3.8.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+   - Sleep cycles in the spindle characteristics files now start at 1 (no longer cycle = 0).
+   - Added RMS Spindle Activity Index to the spindle characteristics files and the cohort report.

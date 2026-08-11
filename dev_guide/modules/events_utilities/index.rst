@@ -108,7 +108,7 @@ Quick reference
      - 2.3.0
      - Averages slow wave events characteristics such as duration, amplitude, frequency and so on per stage and sleep cycle.
    * - :ref:`Spindles Details <module_spindlesdetails>`
-     - 2.3.0
+     - 2.4.0
      - Computes spindles events characteristics such as duration, amplitude, frequency and so on.
    * - :ref:`Windows To Samples <module_windowstosamples>`
      - 2.0.0

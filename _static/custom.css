@@ -14,6 +14,18 @@
     word-wrap: break-word;
 }
 
+/* Make first column narrower for column numbers */
+.wrap-table td:first-child,
+.wrap-table th:first-child {
+    width: 60px;
+}
+
+/* Make second column narrow for variable names */
+.wrap-table td:nth-child(2),
+.wrap-table th:nth-child(2) {
+    width: 220px;
+}
+
 /* Justify documentation text for cleaner HTML layout */
 .rst-content .section p,
 .rst-content .section li {
