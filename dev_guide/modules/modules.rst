@@ -450,7 +450,7 @@ All modules
    * - 80
      - :ref:`Score Sleep Stages YASA <module_yasasleepstaging>`
      - Signal Processing
-     - 2.0.0
+     - 2.1.0
      - Automatic sleep stage classification using YASA's machine learning model.
    * - 81
      - :ref:`Stft <module_stft>`

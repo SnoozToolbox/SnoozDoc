@@ -70,7 +70,7 @@ Quick reference
      - 2.1.0
      - Resets the signal that occurs during an artefact.
    * - :ref:`Score Sleep Stages YASA <module_yasasleepstaging>`
-     - 2.0.0
+     - 2.1.0
      - Automatic sleep stage classification using YASA's machine learning model.
    * - :ref:`Stft <module_stft>`
      - 2.1.0

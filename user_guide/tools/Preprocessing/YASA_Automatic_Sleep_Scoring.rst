@@ -95,8 +95,8 @@ Steps
 - Sleep stage annotations for gold standard are defined with group="stage", and the name values correspond to: 0 (W), 1 (N1), 2 (N2), 3 (N3), 5 (R), and 9 (Unscored).
 
 .. note::
-      Snooz cannot write sleep staging data to NATUS or Stellate formats. 
-      However, the tool can still be used to compare YASA scoring with existing sleep staging in these formats.
+      Snooz cannot write sleep staging data to NATUS format. 
+      However, the tool can still be used to compare YASA scoring with existing sleep staging in this format.
 
 .. note::
       Snooz is capable of processing discontinuous NATUS and Stellate files, which is a valuable feature given the prevalence of discontinuous clinical recordings.
@@ -156,3 +156,5 @@ Version History
 * v2.4.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
     - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
     - Add error handling workflow for duplicated sleep stages.
+* v2.5.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+    - Support for writing into Stellate format has been added.
