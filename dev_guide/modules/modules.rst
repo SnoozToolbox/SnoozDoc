@@ -195,7 +195,7 @@ All modules
    * - 29
      - :ref:`PSA Pics Generator <module_psapicsgenerator>`
      - Events Utilities
-     - 2.0.2
+     - 2.1.0
      - Used to generate figures of Power Spectral Analysis (PSA) data from PSA report files.
    * - 30
      - :ref:`REMs Details <module_remsdetails>`
@@ -240,7 +240,7 @@ All modules
    * - 38
      - :ref:`Slow Waves Details <module_slowwavesdetails>`
      - Events Utilities
-     - 2.3.0
+     - 2.4.0
      - Averages slow wave events characteristics such as duration, amplitude, frequency and so on per stage and sleep cycle.
    * - 39
      - :ref:`Spindles Details <module_spindlesdetails>`
@@ -300,7 +300,7 @@ All modules
    * - 50
      - :ref:`PSA Cohort Review <module_psacohortreview>`
      - Files I/O
-     - 2.5.0
+     - 2.6.0
      - Reads the PSA output file and generates the PSA file clean or transposed.
    * - 51
      - :ref:`PSGReader <module_psgreader>`
@@ -425,7 +425,7 @@ All modules
    * - 75
      - :ref:`PSA Compilation FOOOF <module_psacompilationfooof>`
      - Signal Processing
-     - 0.0.0
+     - 0.0.1
      - Analyses and reports the PSD output designed specifically for FOOOF analysis.
    * - 76
      - :ref:`Remove Channel Artefact <module_removechannelartefact>`
@@ -475,12 +475,12 @@ All modules
    * - 85
      - :ref:`PSA Compilation <module_psacompilation>`
      - Statistics
-     - 2.2.0
+     - 2.2.1
      - Analyses and reports the PSD output.
    * - 86
      - :ref:`PSA on Events <module_psaonevents>`
      - Statistics
-     - 3.0.0
+     - 3.1.0
      - Compiles the PSA run on selected events.
    * - 87
      - :ref:`Signal Stats <module_signalstats>`

@@ -174,7 +174,9 @@ Version History
     - Add error handling workflow for duplicated sleep stages in the annotations file.
 
 * v4.0.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
-    - Fix the enabling/disabling widgets problem for step 5. Annotations Selection.
-    - Changing occurrences of the word "rhythmic" to "periodic" in the UI and the output report.
-    - Add the possibility to analyze power spectra on an EEG signal based on the timing of an event (e.g., REM tonic) detected in another signal (e.g., EOG).
-    - The event report has also been updated to include all necessary parameters broken down by hours and sleep cycles.
+    - Fixed the widget enabling/disabling issue in Step 5: Annotation Selection.
+    - Replaced occurrences of the term "rhythmic" with "periodic" throughout the UI and output reports.
+    - Added support for artifact removal in per-annotation analyses.
+    - Added support for analyzing EEG power spectra based on the timing of events detected in another signal (e.g., REM tonic events detected in EOG signals).
+    - Added power distribution by hour and by sleep cycle to the spectral analysis per-annotation report.
+    - Unified column names across the per-stage and per-event reports.

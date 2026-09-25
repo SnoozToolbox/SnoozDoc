@@ -61,7 +61,7 @@ Quick reference
      - 2.0.0
      - Edits JSON files by replacing paths within the JSON structure.
    * - :ref:`PSA Cohort Review <module_psacohortreview>`
-     - 2.5.0
+     - 2.6.0
      - Reads the PSA output file and generates the PSA file clean or transposed.
    * - :ref:`PSGReader <module_psgreader>`
      - 2.5.0

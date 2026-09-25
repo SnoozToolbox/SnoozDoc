@@ -55,7 +55,7 @@ Quick reference
      - 2.0.0
      - Computes RMS value on a moving window.
    * - :ref:`PSA Compilation FOOOF <module_psacompilationfooof>`
-     - 0.0.0
+     - 0.0.1
      - Analyses and reports the PSD output designed specifically for FOOOF analysis.
    * - :ref:`Remove Channel Artefact <module_removechannelartefact>`
      - 2.0.0

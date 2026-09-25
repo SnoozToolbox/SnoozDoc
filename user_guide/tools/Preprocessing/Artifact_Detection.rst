@@ -131,13 +131,11 @@ The detector uses spectral power estimates computed with Welch's method to ident
 3. The power in the high-frequency band (>25 Hz) is estimated by integrating the power spectrum
 4. An epoch is flagged as a high-frequency burst when all three complementary thresholds are exceeded:
 
-   - **Criterion A (Fixed threshold)**: The log10-transformed power exceeds a fixed threshold defined as the mean of the main Gaussian component plus a user-defined multiple of its standard deviation (SD). The power distribution is modeled using a three-component Gaussian Mixture Model (GMM) to account for the right-skewed distribution often caused by artifacts.
-   
-   - **Criterion B (Adaptive threshold)**: The power exceeds a user-defined multiple of the baseline median power computed from a 30-second window surrounding the segment under evaluation.
-   
-   - **Criterion C (Power ratio threshold)**: The ratio of high-frequency power (25-64 Hz) to broadband power (8-64 Hz) exceeds a user-defined threshold. This criterion helps distinguish true high-frequency bursts from cases where high-frequency activity is masked by strong low-frequency components.
-
-5. An epoch is flagged as an artifact only when all three thresholds are simultaneously exceeded
+    - **Criterion A (Fixed threshold)**: The log10-transformed power exceeds a fixed threshold defined as the mean of the main Gaussian component plus a user-defined multiple of its standard deviation (SD). The power distribution is modeled using a three-component Gaussian Mixture Model (GMM) to account for the right-skewed distribution often caused by artifacts. This distribution is estimated from all selected derivations for the recording; therefore, excluding a derivation with poor signal quality can change the threshold applied to the remaining derivations.
+    
+    - **Criterion B (Adaptive threshold)**: The power exceeds a user-defined multiple of the baseline median power computed from a 30-second window surrounding the segment under evaluation.
+    
+    - **Criterion C (Power ratio threshold)**: The ratio of high-frequency power (25-64 Hz) to broadband power (8-64 Hz) exceeds a user-defined threshold. This criterion helps distinguish true high-frequency bursts from cases where high-frequency activity is masked by strong low-frequency components.
 
 **Fixed Parameters**
 
@@ -150,9 +148,9 @@ The detector uses spectral power estimates computed with Welch's method to ident
 - **Event name**: Output annotation name
 - **Threshold Criteria**:
   
-  - (A) Fixed threshold: mean + X · SD (optimal range: 3-5)
-  - (B) Adaptive threshold: X · baseline median (optimal range: 6-10)
-  - (C) Power ratio: (25-64 Hz power) / (8-64 Hz power) (optimal range: 0.05-0.4)
+  - (A) Fixed threshold: mean + X · SD (optimal range: 3-5, default = 4), computed from all selected derivations
+  - (B) Adaptive threshold: X · baseline median (optimal range: 6-10, default = 8)
+  - (C) Power ratio: (25-64 Hz power) / (8-64 Hz power) (optimal range: 0.05-0.4, default = 0.1)
 
 .. note::
     To enhance detection quality and reduce false positives, particularly during spindles, alpha activity, or beta bursts, it is recommended to first increase the power ratio threshold (C). This requires a greater proportion of signal power in the 25-64 Hz frequency band before a segment is classified as an artifact, helping to distinguish true high-frequency bursts from low-frequency-dominated signals with incidental high-frequency components.
@@ -172,11 +170,9 @@ The detector uses spectral power estimates computed with Welch's method to ident
 3. The power in the high-frequency band (>25 Hz) is estimated by integrating the power spectrum
 4. An epoch is flagged as persistent noise when both complementary thresholds are exceeded:
 
-   - **Criterion A (Fixed threshold)**: The log10-transformed power exceeds a fixed threshold defined as the mean of the main Gaussian component plus a user-defined multiple of its standard deviation (SD). The power distribution is modeled using a three-component Gaussian Mixture Model (GMM) to account for the right-skewed distribution often caused by artifacts.
-   
-   - **Criterion B (Power ratio threshold)**: The ratio of high-frequency power (25-64 Hz) to broadband power (1-64 Hz) exceeds a user-defined threshold. This criterion helps distinguish true persistent noise from cases where high-frequency activity is masked by strong low-frequency components.
-
-5. An epoch is flagged as an artifact only when both thresholds are simultaneously exceeded
+    - **Criterion A (Fixed threshold)**: The log10-transformed power exceeds a fixed threshold defined as the mean of the main Gaussian component plus a user-defined multiple of its standard deviation (SD). The power distribution is modeled using a three-component Gaussian Mixture Model (GMM) to account for the right-skewed distribution often caused by artifacts. This distribution is estimated from all selected derivations for the recording; therefore, excluding a derivation with poor signal quality can change the threshold applied to the remaining derivations.
+    
+    - **Criterion B (Power ratio threshold)**: The ratio of high-frequency power (25-64 Hz) to broadband power (1-64 Hz) exceeds a user-defined threshold. This criterion helps distinguish true persistent noise from cases where high-frequency activity is masked by strong low-frequency components.
 
 **Fixed Parameters**
 
@@ -189,8 +185,8 @@ The detector uses spectral power estimates computed with Welch's method to ident
 - **Event name**: Output annotation name
 - **Threshold Criteria**:
   
-  - (A) Fixed threshold: mean + X · SD (optimal range: 3-5)
-  - (B) Power ratio: (25-64 Hz power) / (1-64 Hz power) (optimal range: 0.1-0.4)
+  - (A) Fixed threshold: mean + X · SD (optimal range: 3-5, default = 4), computed from all selected derivations
+  - (B) Power ratio: (25-64 Hz power) / (1-64 Hz power) (optimal range: 0.1-0.4, default: 0.1)
 
 .. note::
     To reduce false positives, particularly during low-amplitude REM sleep, it is recommended to first increase the power ratio threshold (B). This requires a greater proportion of signal power in the 25-64 Hz frequency band before a segment is classified as an artifact, helping to distinguish true persistent noise from low-frequency-dominated signals with incidental high-frequency components.
@@ -210,11 +206,10 @@ The detector uses spectral power estimates computed with Welch's method to ident
 3. The power at the power line frequency (50 or 60 Hz) is estimated by integrating the power spectrum
 4. An epoch is flagged as power line contamination when both complementary thresholds are exceeded:
 
-   - **Criterion A (Fixed threshold)**: The log10-transformed power at the power line frequency exceeds a fixed threshold defined as the mean of the main Gaussian component plus a user-defined multiple of its standard deviation (SD). The power distribution is modeled using a three-component Gaussian Mixture Model (GMM) to account for the right-skewed distribution often caused by artifacts.
-   
-   - **Criterion B (Power ratio threshold)**: The ratio of power line frequency power (50/60 Hz) to broadband power (1-51/1-61 Hz) exceeds a user-defined threshold. This criterion helps distinguish true power line contamination from cases where power line activity is masked by strong low-frequency components.
+    - **Criterion A (Fixed threshold)**: The log10-transformed power at the power line frequency exceeds a fixed threshold defined as the mean of the main Gaussian component plus a user-defined multiple of its standard deviation (SD). The power distribution is modeled using a three-component Gaussian Mixture Model (GMM) to account for the right-skewed distribution often caused by artifacts. This distribution is estimated from all selected derivations for the recording; therefore, excluding a derivation with poor signal quality can change the threshold applied to the remaining derivations.
+    
+    - **Criterion B (Power ratio threshold)**: The ratio of power line frequency power (50/60 Hz) to broadband power (1-51/1-61 Hz) exceeds a user-defined threshold. This criterion helps distinguish true power line contamination from cases where power line activity is masked by strong low-frequency components.
 
-5. An epoch is flagged as an artifact only when both thresholds are simultaneously exceeded
 
 **Fixed Parameters**
 
@@ -227,8 +222,8 @@ The detector uses spectral power estimates computed with Welch's method to ident
 - **Event name**: Output annotation name
 - **Threshold Criteria**:
   
-  - (A) Fixed threshold: mean + X · SD (optimal range: 0-2, where 0 is the mean)
-  - (B) Power ratio: (50/60 Hz power) / (1-61/1-51 Hz power) (optimal range: 0.05-0.2)
+  - (A) Fixed threshold: mean + X · SD (optimal range: 0-2, default: 0, where 0 is the mean), computed from all selected derivations
+  - (B) Power ratio: (50/60 Hz power) / (1-61/1-51 Hz power) (optimal range: 0.05-0.2, default: 0.1)
 
 .. note::
     To reduce false positives, particularly during low-amplitude REM sleep, it is recommended to first increase the power ratio threshold (B). This requires a greater proportion of signal power at the power line frequency before a segment is classified as an artifact, helping to distinguish true power line contamination from low-frequency-dominated signals with incidental power line components.
@@ -249,7 +244,7 @@ The detector uses spectral power estimates computed with Welch's method to ident
 4. The power below 0.4 Hz is estimated by integrating the power spectrum
 5. An epoch is flagged as baseline variation when the threshold is exceeded:
 
-   - **Fixed threshold**: The log10-transformed power exceeds a fixed threshold defined as the mean of the main Gaussian component plus a user-defined multiple of its standard deviation (SD). The power distribution is modeled using a three-component Gaussian Mixture Model (GMM) to account for the right-skewed distribution often caused by artifacts.
+    - **Fixed threshold**: The log10-transformed power exceeds a fixed threshold defined as the mean of the main Gaussian component plus a user-defined multiple of its standard deviation (SD). The power distribution is modeled using a three-component Gaussian Mixture Model (GMM) to account for the right-skewed distribution often caused by artifacts. This distribution is estimated from all selected derivations for the recording; therefore, excluding a derivation with poor signal quality can change the threshold applied to the remaining derivations.
 
 **Fixed Parameters**
 
@@ -263,7 +258,7 @@ The detector uses spectral power estimates computed with Welch's method to ident
 - **Event name**: Output annotation name
 - **Threshold Criteria**:
   
-  - Fixed threshold: mean + X · SD (optimal range: 3.5-5, default: 4)
+    - Fixed threshold: mean + X · SD (optimal range: 3.5-5, default: 4), computed from all selected derivations
 
 .. warning::
     User-defined bandpass filters applied in the "2 - Filter EEG Signals" step may affect power estimates in the 0-0.4 Hz frequency band, potentially impacting baseline variation detection. Verify that your filter settings preserve the low-frequency components relevant to baseline variation detection.
@@ -307,9 +302,9 @@ The detector uses spectral power estimates computed with Welch's method to ident
 - **Event name - EMG use**: Event name for artifacts detected using both EEG and EMG signals (combined criteria)
 - **Threshold Criteria**:
   
-  - (A) High applied on EEG: X · baseline median (default: 4.5; optimal range: 4-5)
-  - (B) Applied on EMG: X · baseline median (default: 4; optimal range: 3-5)
-  - (C) Low applied on EEG: X · baseline median (default: 3.5; optimal range: 3-4)
+  - (A) High applied on EEG: X · baseline median (optimal range: 5-9, default: 8)
+  - (B) Applied on EMG: X · baseline median (optimal range: 4-6, default: 5)
+  - (C) Low applied on EEG: X · baseline median (optimal range: 4-6, default: 5)
 
 .. note::
     To enhance detection quality and reduce false positives, it is recommended to adjust the threshold values based on the characteristics of your data. Start by increasing the "(A) High applied on EEG" threshold if spindles and alpha waves are being incorrectly flagged as artifacts. Similarly, adjust the "(B) Applied on EMG" and "(C) Low applied on EEG" thresholds if the signal quality varies significantly across your dataset.

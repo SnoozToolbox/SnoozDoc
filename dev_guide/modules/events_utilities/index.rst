@@ -78,7 +78,7 @@ Quick reference
      - 2.0.0
      - Compares two sets of events .
    * - :ref:`PSA Pics Generator <module_psapicsgenerator>`
-     - 2.0.2
+     - 2.1.0
      - Used to generate figures of Power Spectral Analysis (PSA) data from PSA report files.
    * - :ref:`REMs Details <module_remsdetails>`
      - 2.2.0
@@ -105,7 +105,7 @@ Quick reference
      - 3.1.0
      - Used to generate pictures of slow wave events.
    * - :ref:`Slow Waves Details <module_slowwavesdetails>`
-     - 2.3.0
+     - 2.4.0
      - Averages slow wave events characteristics such as duration, amplitude, frequency and so on per stage and sleep cycle.
    * - :ref:`Spindles Details <module_spindlesdetails>`
      - 2.4.0
