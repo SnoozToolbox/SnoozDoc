@@ -1,0 +1,260 @@
+A	filename	The name of the file analysed in this report.
+B	id1	First ID
+C	id2	Second ID
+D	first_name	First name
+E	last_name	Last name
+F	sex	The sex (M, F, X)
+G	birthdate	The birthdate of the subject, yyyy-mm-dd
+H	creation_date	The creation date of the analysed file, yyyy-mm-dd
+I	age	The age of the subject (Integer value)
+J	height	The height of the subject in meters or inches.
+K	weight	The weight of the subject in kg or lbs
+L	bmi	Body Mass Index (kg/m²)
+M	waistline	Waist size meters or inches.
+N	height_unit	"Unit used for the height. Possible values are: ""meters/feets"""
+O	weight_unit	"Unit used for the weight. Possible values are: ""kg/lbs"""
+P	waistline_unit	"Unit used for the waistline. Possible values are: ""cm/inches"""
+Q	cyc_def_option	"Method used to split the sleep period in sleep cycles. The values are defined in the following ""cyc_def..."" parameters.  Possible values are:  ""Minimum criteria""  ""Aeschbach 1993""  ""Feinberg 1979""  ""Mice"""
+R	cyc_def_include_soremp	Include a REM sleep periods (REMP) that occur within 15 minutes of sleep onset.
+S	cyc_def_include_last_incomplete	Include the last sleep cycle even if the NREM period (NREMP) or REMP does not meet the minimum duration criteria.
+T	cyc_def_rem_min	Minimum duration without R stage to end the REM period.
+U	cyc_def_first_nrem_min	Minimum duration of the first NREMP in minutes.
+V	cyc_def_mid_last_nrem_min	Minimum duration of the middle and last NREMP in minutes.
+W	cyc_def_last_nrem_valid_min	Minimum duration of the NREMP in minutes to validate the last sleep cycle.
+X	cyc_def_first_rem_min	Minimum duration of the first REM period in minutes.
+Y	cyc_def_mid_rem_min	Minimum duration of the middle REM period in minutes
+Z	cyc_def_last_rem_min	Minimum duration of the last REM period in minutes
+AA	cyc_def_move_end_rem	"Move the end of the REM period to the start of the following NREM period, eliminating the temporal ""gap"" between 2 cycles."
+AB	cyc_def_sleep_stages	"List of valid stages used to define the sleep cycles:  ""N1, N2, N3, R"" or ""N2, N3, R"""
+AC	epoch_sec	Duration of an epoch in seconds, usually 30 seconds.
+AD	first_epoch_time_win	The timestamp of the first epoch (yyyy-mm-dd hh:mm:ss).
+AE	last_epoch_time_win	The timestamp of the last epoch (yyyy-mm-dd hh:mm:ss).
+AF	time_in_bed_min	(TIB) Total elapsed time between lights-off (first stage scored as awake or asleep) and lights-on (end of last stage scored as awake or asleep). Unscored epochs at the beginning and end of the recording are excluded.
+AG	sleep_period_min	(SPT) Duration of the sleep period defined as the time between the sleep onset and the last sleep stage (N1,N2,N3,R) in minutes.
+AH	sleep_latency_used_in_this_report_min	The sleep latency value used to compute all statistics in the report.
+AI	sleep_latency_aasm_min	The sleep latency based on the valid sleep stages from the AASM (1,2,3,REM)
+AJ	sleep_latency_aeschbach_min	The sleep latency based on the valid sleep stages from Aeschbach rules: (2,3,REM)
+AK	sleep_latency_floyd_min	The sleep latency based on the valid sleep stages from Feinberg rules: (2,3,REM)
+AL	persistant_sleep_latency_min	Persistant sleep is defined as 10 minutes of continious sleep stages. The latency is the time it takes from the beginning of the hypnogram (assumed to be the lights off) to the beginning of the 10 minutes period.
+AM	sleep_latency_N1_min	Latencies for stage N1 and N2 are base on the beginning of the of the hypnogram (scored_stages).
+AN	sleep_latency_N2_min	Latencies for stage N1 and N2 are base on the beginning of the of the hypnogram (scored_stages).
+AO	sleep_latency_N3_min	Latency of the stage N3 is based on the sleep latency.
+AP	sleep_latency_R_min	Latency of the stage REM is based on the sleep latency.
+AQ	total_W_count	Number of epoch in wake during the sleep period.
+AR	wake_1min_count	Number of period of 1 minute of wake during the sleep period.
+AS	wake_2min_count	Number of period of 2 minutes of wake during the sleep period.
+AT	wake_3min_count	Number of period of 3 minutes of wake during the sleep period.
+AU	wake_4min_count	Number of period of 4 minutes of wake during the sleep period.
+AV	wake_5min_count	Number of period of 5 minutes of wake during the sleep period.
+AW	total_W_min	Total time spent in wake during the sleep period in minutes.
+AX	total_sleep_min	(TST) The total sleep time is defined as: sleep_period_min - total_W_min - (Movement duration) - Unscored_min.
+AY	last_wake_min	Duration of the last wake period of the sleep period in minutes.
+AZ	sleep_efficiency	Defined as the time spend in a sleep stage over the total time in bed (TIB) x 100.
+BA	sleep_maintenance_efficiency	Defined as the time spend in a sleep stage over the duration of the sleep period (SPT) x 100.
+BB	Unscored_min	Time spent in an unscored stage during the sleep period in minutes.
+BC	third1_W_min	Time spent in wake during the first third of the sleep period in minutes.
+BD	third1_N1_min	Time spent in N1 during the first third of the sleep period in minutes.
+BE	third1_N2_min	Time spent in N2 during the first third of the sleep period in minutes.
+BF	third1_N3_min	Time spent in N3 during the first third of the sleep period in minutes.
+BG	third1_R_min	Time spent in REM stage during the first third of the sleep period in minutes.
+BH	third1_Unscored_min	Time spent in Unscored stage during the first third of the sleep period in minutes.
+BI	third1_N1N2N3_min	Time spent in NREM stages during the first third of the sleep period in minutes.
+BJ	third1_sleep_min	Time spent in a sleep stage (N1,N2,N3,R) during the first third of the sleep period in minutes.
+BK	third2_W_min	Time spent in wake during the first third of the sleep period in minutes.
+BL	third2_N1_min	Time spent in N1 during the second third of the sleep period in minutes.
+BM	third2_N2_min	Time spent in N2 during the second third of the sleep period in minutes.
+BN	third2_N3_min	Time spent in N3 during the second third of the sleep period in minutes.
+BO	third2_R_min	Time spent in REM stage during the second third of the sleep period in minutes.
+BP	third2_Unscored_min	Time spent in Unscored stage during the second third of the sleep period in minutes.
+BQ	third2_N1N2N3_min	Time spent in NREM stages during the second third of the sleep period in minutes.
+BR	third2_sleep_min	Time spent in a sleep stage (N1,N2,N3,R) during the second third of the sleep period in minutes.
+BS	third3_W_min	Time spent in wake during the first third of the sleep period in minutes.
+BT	third3_N1_min	Time spent in N1 during the second third of the sleep period in minutes.
+BU	third3_N2_min	Time spent in N2 during the second third of the sleep period in minutes.
+BV	third3_N3_min	Time spent in N3 during the second third of the sleep period in minutes.
+BW	third3_R_min	Time spent in REM stage during the second third of the sleep period in minutes.
+BX	third3_Unscored_min	Time spent in Unscored stage during the second third of the sleep period in minutes.
+BY	third3_N1N2N3_min	Time spent in NREM stages during the second third of the sleep period in minutes.
+BZ	third3_sleep_min	Time spent in a sleep stage (N1,N2,N3,R) during the second third of the sleep period in minutes.
+CA	half1_W_min	Time spent in wake during the first half of the sleep period in minutes.
+CB	half1_N1_min	Time spent in N1 during the second half of the sleep period in minutes.
+CC	half1_N2_min	Time spent in N2 during the second half of the sleep period in minutes.
+CD	half1_N3_min	Time spent in N3 during the second half of the sleep period in minutes.
+CE	half1_R_min	Time spent in REM stage during the second half of the sleep period in minutes.
+CF	half1_Unscored_min	Time spent in Unscored stage during the second half of the sleep period in minutes.
+CG	half1_N1N2N3_min	Time spent in NREM stages during the second half of the sleep period in minutes.
+CH	half1_sleep_min	Time spent in a sleep stage (N1,N2,N3,R) during the second half of the sleep period in minutes.
+CI	half2_W_min	Time spent in wake during the first half of the sleep period in minutes.
+CJ	half2_N1_min	Time spent in N1 during the second half of the sleep period in minutes.
+CK	half2_N2_min	Time spent in N2 during the second half of the sleep period in minutes.
+CL	half2_N3_min	Time spent in N3 during the second half of the sleep period in minutes.
+CM	half2_R_min	Time spent in REM stage during the second half of the sleep period in minutes.
+CN	half2_Unscored_min	Time spent in Unscored stage during the second half of the sleep period in minutes.
+CO	half2_N1N2N3_min	Time spent in NREM stages during the second half of the sleep period in minutes.
+CP	half2_sleep_min	Time spent in a sleep stage (N1,N2,N3,R) during the second half of the sleep period in minutes.
+CQ	total_N1_min	Total time spent in N1 during the sleep period in minutes.
+CR	total_N2_min	Total time spent in N2 during the sleep period in minutes.
+CS	total_N3_min	Total time spent in N3 during the sleep period in minutes.
+CT	total_R_min	Total time spent in REM stage during the sleep period in minutes.
+CU	total_Unscored_min	Total time spent in Unscored stage during the sleep period in minutes.
+CV	total_N1N2N3_min	Total time spent in NREM stages during the sleep period in minutes.
+CW	third1_W_percent	The percentage of the total Wake stage spent during the first third of the sleep period.
+CX	third1_N1_percent	The percentage of the total N1 stage spent during the first third of the sleep period.
+CY	third1_N2_percent	The percentage of the total N2 stage spent during the first third of the sleep period.
+CZ	third1_N3_percent	The percentage of the total N3 stage spent during the first third of the sleep period.
+DA	third1_R_percent	The percentage of the total R stage spent during the first third of the sleep period.
+DB	third1_Unscored_percent	The percentage of the total Unscored stage spent during the first third of the sleep period.
+DC	third1_N1N2N3_percent	The percentage of the total NREM stages spent during the first third of the sleep period.
+DD	third1_sleep_percent	Percentage of time spent in a sleep stage (N1,N2,N3,R) during the first third of the sleep period.
+DE	third2_W_percent	The percentage of the total Wake stage spent during the second third of the sleep period.
+DF	third2_N1_percent	The percentage of the total N1 stage spent during the second third of the sleep period.
+DG	third2_N2_percent	The percentage of the total N2 stage spent during the second third of the sleep period.
+DH	third2_N3_percent	The percentage of the total N3 stage spent during the second third of the sleep period.
+DI	third2_R_percent	The percentage of the total R stage spent during the second third of the sleep period.
+DJ	third2_Unscored_percent	The percentage of the total Unscored stage spent during the second third of the sleep period.
+DK	third2_N1N2N3_percent	The percentage of the total NREM stages spent during the second third of the sleep period.
+DL	third2_sleep_percent	Percentage of time spent in a sleep stage (N1,N2,N3,R) during the second third of the sleep period.
+DM	third3_W_percent	The percentage of the total Wake stage spent during the last third of the sleep period.
+DN	third3_N1_percent	The percentage of the total N1 stage spent during the last third of the sleep period.
+DO	third3_N2_percent	The percentage of the total N2 stage spent during the last third of the sleep period.
+DP	third3_N3_percent	The percentage of the total N3 stage spent during the last third of the sleep period.
+DQ	third3_R_percent	The percentage of the total R stage spent during the last third of the sleep period.
+DR	third3_Unscored_percent	The percentage of the total Unscored stage spent during the last third of the sleep period.
+DS	third3_N1N2N3_percent	The percentage of the total NREM stages spent during the last third of the sleep period.
+DT	third3_sleep_percent	Percentage of time spent in a sleep stage (N1,N2,N3,R) during the last third of the sleep period.
+DU	half1_W_percent	The percentage of the total Wake stage spent during the first half of the sleep period.
+DV	half1_N1_percent	The percentage of the total N1 stage spent during the first half of the sleep period.
+DW	half1_N2_percent	The percentage of the total N2 stage spent during the first half of the sleep period.
+DX	half1_N3_percent	The percentage of the total N3 stage spent during the first half of the sleep period.
+DY	half1_R_percent	The percentage of the total R stage spent during the first half of the sleep period.
+DZ	half1_Unscored_percent	The percentage of the total Unscored stage spent during the first half of the sleep period.
+EA	half1_N1N2N3_percent	The percentage of the total NREM stages spent during the first half of the sleep period.
+EB	half1_sleep_percent	Percentage of time spent in a sleep stage (N1,N2,N3,R) during the first half of the sleep period.
+EC	half2_W_percent	The percentage of the total Wake stage spent during the second half of the sleep period.
+ED	half2_N1_percent	The percentage of the total N1 stage spent during the second half of the sleep period.
+EE	half2_N2_percent	The percentage of the total N2 stage spent during the second half of the sleep period.
+EF	half2_N3_percent	The percentage of the total N3 stage spent during the second half of the sleep period.
+EG	half2_R_percent	The percentage of the total R stage spent during the second half of the sleep period.
+EH	half2_Unscored_percent	The percentage of the total Unscored stage spent during the second half of the sleep period.
+EI	half2_N1N2N3_percent	The percentage of the total NREM stages spent during the second half of the sleep period.
+EJ	half2_sleep_percent	Percentage of time spent in a sleep stage (N1,N2,N3,R) during the second half of the sleep period.
+EK	total_W_percent	Percentage of time spent in a wake stage during the sleep period.
+EL	total_N1_percent	Percentage of time spent in N1 stage during the sleep period.
+EM	total_N2_percent	Percentage of time spent in N2 stage during the sleep period.
+EN	total_N3_percent	Percentage of time spent in N3 stage during the sleep period.
+EO	total_R_percent	Percentage of time spent in REM stage during the sleep period.
+EP	total_Unscored_percent	Percentage of time spent in an unscored stage during the sleep period.
+EQ	total_N1N2N3_percent	Percentage of time spent in NREM stages during the sleep period.
+ER	sleep_cycle_count	Number of sleep cycles detected based on the sleep cycle parameters used.
+ES	cyc1_nrem_min	Cycle 1 - Time spend in NREM period during the first cycle.
+ET	cyc1_R_min	Cycle 1 - Time spend in REM stage during the first cycle.
+EU	cyc1_min	Cycle 1 - Duration of the first cycle
+EV	cyc2_nrem_min	Cycle 2 - Time spend in NREM period during the first cycle.
+EW	cyc2_R_min	Cycle 2 - Time spend in REM stage during the first cycle.
+EX	cyc2_min	Cycle 2 - Duration of the first cycle
+EY	cyc3_nrem_min	Cycle 3 - Time spend in NREM period during the first cycle.
+EZ	cyc3_R_min	Cycle 3 - Time spend in REM stage during the first cycle.
+FA	cyc3_min	Cycle 3 - Duration of the first cycle
+FB	cyc4_nrem_min	Cycle 4 - Time spend in NREM period during the first cycle.
+FC	cyc4_R_min	Cycle 4 - Time spend in REM stage during the first cycle.
+FD	cyc4_min	Cycle 4 - Duration of the first cycle
+FE	cyc5_nrem_min	Cycle 5 - Time spend in NREM period during the first cycle.
+FF	cyc5_R_min	Cycle 5 - Time spend in REM stage during the first cycle.
+FG	cyc5_min	Cycle 5 - Duration of the first cycle
+FH	cyc6_nrem_min	Cycle 6 - Time spend in NREM period during the first cycle.
+FI	cyc6_R_min	Cycle 6 - Time spend in REM stage during the first cycle.
+FJ	cyc6_min	Cycle 6 - Duration of the first cycle
+FK	rem_intervals_mean	Mean of intervals between REM periods.
+FL	rem_total_R_min	Total time spend in REM stage during all REM periods in minutes.
+FM	rem_total_N1N2N3_min	Total time spend in NREM stages during all REM periods in minutes.
+FN	rem_total_W_min	Total time spend in wake stage during all REM periods in minutes.
+FO	rem_total_Unscored_min	Total time spend in unscored stage during all REM periods in minutes.
+FP	rem_total_time_min	Total time spend all REM periods in minutes.
+FQ	rem_fragmentation_count	Number of REM fragments. A continious sequence of REM stages count as one fragment.
+FR	rem_R_efficiency_percent	Ratio of time spent in a REM stage during all REM periods.
+FS	rem_count	Number of REM periods.
+FT	rem1_interval_min	Delay between the sleep onset and the first REM period in minutes.
+FU	rem1_R_min	Time spent in REM stage during the REM period in minutes.
+FV	rem1_N1N2N3_min	Time spent in a NREM stages during the REM period in minutes.
+FW	rem1_W_min	Time spent in wake stage during the REM period in minutes.
+FX	rem1_Unscored_min	Time spent in unscored stage during the REM period in minutes.
+FY	rem1_min	Duration of the REM period in minutes.
+FZ	rem1_fragmentation_count	Fragmentation count during the REM period. A continious sequence of REM stages count as one fragment.
+GA	rem1_efficiency_percent	Percent of time spend in REM stage during the REM period.
+GB	rem2_interval_min	REM 2 - Time interval in minutes between the beginning of a REM period and the beginning of the previous REM period.
+GC	rem2_R_min	REM 2 - Time spent in REM stage during the REM period in minutes.
+GD	rem2_N1N2N3_min	REM 2 - Time spent in a NREM stages during the REM period in minutes.
+GE	rem2_W_min	REM 2 - Time spent in wake stage during the REM period in minutes.
+GF	rem2_Unscored_min	REM 2 - Time spent in unscored stage during the REM period in minutes.
+GG	rem2_min	REM 2 - Duration of the REM period in minutes.
+GH	rem2_fragmentation_count	REM 2 - Fragmentation count during the REM period. A continious sequence of REM stages count as one fragment.
+GI	rem2_efficiency_percent	REM 2 - Percent of time spend in REM stage during the REM period.
+GJ	rem3_interval_min	REM 3 - Time interval in minutes between the beginning of a REM period and the beginning of the previous REM period.
+GK	rem3_R_min	REM 3 - Time spent in REM stage during the REM period in minutes.
+GL	rem3_N1N2N3_min	REM 3 - Time spent in a NREM stages during the REM period in minutes.
+GM	rem3_W_min	REM 3 - Time spent in wake stage during the REM period in minutes.
+GN	rem3_Unscored_min	REM 3 - Time spent in unscored stage during the REM period in minutes.
+GO	rem3_min	REM 3 - Duration of the REM period in minutes.
+GP	rem3_fragmentation_count	REM 3 - Fragmentation count during the REM period. A continious sequence of REM stages count as one fragment.
+GQ	rem3_efficiency_percent	REM 3 - Percent of time spend in REM stage during the REM period.
+GR	rem4_interval_min	REM 4 - Time interval in minutes between the beginning of a REM period and the beginning of the previous REM period.
+GS	rem4_R_min	REM 4 - Time spent in REM stage during the REM period in minutes.
+GT	rem4_N1N2N3_min	REM 4 - Time spent in a NREM stages during the REM period in minutes.
+GU	rem4_W_min	REM 4 - Time spent in wake stage during the REM period in minutes.
+GV	rem4_Unscored_min	REM 4 - Time spent in unscored stage during the REM period in minutes.
+GW	rem4_min	REM 4 - Duration of the REM period in minutes.
+GX	rem4_fragmentation_count	REM 4 - Fragmentation count during the REM period. A continious sequence of REM stages count as one fragment.
+GY	rem4_efficiency_percent	REM 4 - Percent of time spend in REM stage during the REM period.
+GZ	rem5_interval_min	REM 5 - Time interval in minutes between the beginning of a REM period and the beginning of the previous REM period.
+HA	rem5_R_min	REM 5 - Time spent in REM stage during the REM period in minutes.
+HB	rem5_N1N2N3_min	REM 5 - Time spent in a NREM stages during the REM period in minutes.
+HC	rem5_W_min	REM 5 - Time spent in wake stage during the REM period in minutes.
+HD	rem5_Unscored_min	REM 5 - Time spent in unscored stage during the REM period in minutes.
+HE	rem5_min	REM 5 - Duration of the REM period in minutes.
+HF	rem5_fragmentation_count	REM 5 - Fragmentation count during the REM period. A continious sequence of REM stages count as one fragment.
+HG	rem5_efficiency_percent	REM 5 - Percent of time spend in REM stage during the REM period.
+HH	rem6_interval_min	REM 6 - Time interval in minutes between the beginning of a REM period and the beginning of the previous REM period.
+HI	rem6_R_min	REM 6 - Time spent in REM stage during the REM period in minutes.
+HJ	rem6_N1N2N3_min	REM 6 - Time spent in a NREM stages during the REM period in minutes.
+HK	rem6_W_min	REM 6 - Time spent in wake stage during the REM period in minutes.
+HL	rem6_Unscored_min	REM 6 - Time spent in unscored stage during the REM period in minutes.
+HM	rem6_min	REM 6 - Duration of the REM period in minutes.
+HN	rem6_fragmentation_count	REM 6 - Fragmentation count during the REM period. A continious sequence of REM stages count as one fragment.
+HO	rem6_efficiency_percent	REM 6 - Percent of time spend in REM stage during the REM period.
+HP	W_to_N1_count	Count of transition between two stages during the whole recording.
+HQ	W_to_N2_count	Count of transition between two stages during the whole recording.
+HR	W_to_N3_count	Count of transition between two stages during the whole recording.
+HS	W_to_R_count	Count of transition between two stages during the whole recording.
+HT	W_to_Unscored_count	Count of transition between two stages during the whole recording.
+HU	W_to_any_count	Count of transition between two stages during the whole recording.
+HV	N1_to_W_count	Count of transition between two stages during the whole recording.
+HW	N1_to_N2_count	Count of transition between two stages during the whole recording.
+HX	N1_to_N3_count	Count of transition between two stages during the whole recording.
+HY	N1_to_R_count	Count of transition between two stages during the whole recording.
+HZ	N1_to_Unscored_count	Count of transition between two stages during the whole recording.
+IA	N1_to_any_count	Count of transition between two stages during the whole recording.
+IB	N2_to_W_count	Count of transition between two stages during the whole recording.
+IC	N2_to_N1_count	Count of transition between two stages during the whole recording.
+ID	N2_to_N3_count	Count of transition between two stages during the whole recording.
+IE	N2_to_R_count	Count of transition between two stages during the whole recording.
+IF	N2_to_Unscored_count	Count of transition between two stages during the whole recording.
+IG	N2_to_any_count	Count of transition between two stages during the whole recording.
+IH	N3_to_W_count	Count of transition between two stages during the whole recording.
+II	N3_to_N1_count	Count of transition between two stages during the whole recording.
+IJ	N3_to_N2_count	Count of transition between two stages during the whole recording.
+IK	N3_to_R_count	Count of transition between two stages during the whole recording.
+IL	N3_to_Unscored_count	Count of transition between two stages during the whole recording.
+IM	N3_to_any_count	Count of transition between two stages during the whole recording.
+IN	R_to_W_count	Count of transition between two stages during the whole recording.
+IO	R_to_N1_count	Count of transition between two stages during the whole recording.
+IP	R_to_N2_count	Count of transition between two stages during the whole recording.
+IQ	R_to_N3_count	Count of transition between two stages during the whole recording.
+IR	R_to_Unscored_count	Count of transition between two stages during the whole recording.
+IS	R_to_any_count	Count of transition between two stages during the whole recording.
+IT	Unscored_to_W_count	Count of transition between two stages during the whole recording.
+IU	Unscored_to_N1_count	Count of transition between two stages during the whole recording.
+IV	Unscored_to_N2_count	Count of transition between two stages during the whole recording.
+IW	Unscored_to_N3_count	Count of transition between two stages during the whole recording.
+IX	Unscored_to_R_count	Count of transition between two stages during the whole recording.
+IY	Unscored_to_any_count	Count of transition between two stages during the whole recording.
+IZ	any_to_any_count	Total count of all transitions between any two stages.
