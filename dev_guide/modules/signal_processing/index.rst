@@ -49,7 +49,7 @@ Quick reference
      - 2.0.0
      - Inverts signals.
    * - :ref:`IRASA YASA <module_irasayasa>`
-     - 0.0.0
+     - 0.0.1
      - Spectral power decomposition using IRASA algorithm.
    * - :ref:`Moving RMS <module_movingrms>`
      - 2.0.0
@@ -70,7 +70,7 @@ Quick reference
      - 2.1.0
      - Resets the signal that occurs during an artefact.
    * - :ref:`Score Sleep Stages YASA <module_yasasleepstaging>`
-     - 2.1.0
+     - 2.2.0
      - Automatic sleep stage classification using YASA's machine learning model.
    * - :ref:`Stft <module_stft>`
      - 2.1.0

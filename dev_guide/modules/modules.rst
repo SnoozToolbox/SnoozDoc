@@ -105,7 +105,7 @@ All modules
    * - 11
      - :ref:`Slow Wave Detector <module_slowwavedetector>`
      - Detectors
-     - 2.3.0
+     - 2.4.0
      - Detects slow wave events based on the Carrier method.
    * - 12
      - :ref:`Spectral Detector <module_spectraldetector>`
@@ -240,7 +240,7 @@ All modules
    * - 38
      - :ref:`Slow Waves Details <module_slowwavesdetails>`
      - Events Utilities
-     - 2.4.0
+     - 2.5.0
      - Averages slow wave events characteristics such as duration, amplitude, frequency and so on per stage and sleep cycle.
    * - 39
      - :ref:`Spindles Details <module_spindlesdetails>`
@@ -415,7 +415,7 @@ All modules
    * - 73
      - :ref:`IRASA YASA <module_irasayasa>`
      - Signal Processing
-     - 0.0.0
+     - 0.0.1
      - Spectral power decomposition using IRASA algorithm.
    * - 74
      - :ref:`Moving RMS <module_movingrms>`
@@ -450,7 +450,7 @@ All modules
    * - 80
      - :ref:`Score Sleep Stages YASA <module_yasasleepstaging>`
      - Signal Processing
-     - 2.1.0
+     - 2.2.0
      - Automatic sleep stage classification using YASA's machine learning model.
    * - 81
      - :ref:`Stft <module_stft>`

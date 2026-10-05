@@ -105,7 +105,7 @@ Quick reference
      - 3.1.0
      - Used to generate pictures of slow wave events.
    * - :ref:`Slow Waves Details <module_slowwavesdetails>`
-     - 2.4.0
+     - 2.5.0
      - Averages slow wave events characteristics such as duration, amplitude, frequency and so on per stage and sleep cycle.
    * - :ref:`Spindles Details <module_spindlesdetails>`
      - 2.4.0

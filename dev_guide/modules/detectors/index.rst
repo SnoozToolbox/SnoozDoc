@@ -46,7 +46,7 @@ Quick reference
      - 3.1.0
      - Detects Rapid Eye Movements (REMs) in EOG sleep recordings using YASA REM detection algorithm.
    * - :ref:`Slow Wave Detector <module_slowwavedetector>`
-     - 2.3.0
+     - 2.4.0
      - Detects slow wave events based on the Carrier method.
    * - :ref:`Spectral Detector <module_spectraldetector>`
      - 2.2.0
