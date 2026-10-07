@@ -181,5 +181,6 @@ Version History
     - Added power distribution by hour and by sleep cycle to the spectral analysis per-annotation report.
     - Unified column names across the per-stage and per-event reports.
     - Ensure the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
+    - Make spectral bin selection robust to non-integer sampling rates and support minimum bandwidths as narrow as the frequency-bin resolution. 
 
     
