@@ -173,10 +173,13 @@ Version History
     - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
     - Add error handling workflow for duplicated sleep stages in the annotations file.
 
-* v4.0.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+* v4.2.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
     - Fixed the widget enabling/disabling issue in Step 5: Annotation Selection.
     - Replaced occurrences of the term "rhythmic" with "periodic" throughout the UI and output reports.
     - Added support for artifact removal in per-annotation analyses.
     - Added support for analyzing EEG power spectra based on the timing of events detected in another signal (e.g., REM tonic events detected in EOG signals).
     - Added power distribution by hour and by sleep cycle to the spectral analysis per-annotation report.
     - Unified column names across the per-stage and per-event reports.
+    - Ensure the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
+
+    

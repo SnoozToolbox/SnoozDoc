@@ -124,5 +124,7 @@ Version History
     - Improved path, filename, and extension handling for sleep cycle warning log file.
     - Fixed Subject Info synchronization between the UI and sleep report output.
 
-* v2.7.1 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+* v2.8.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
     - Added new events report without criteria-EOG_phasic and without criteria-EOG_tonic.
+    - Ensure the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
+    

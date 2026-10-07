@@ -31,5 +31,5 @@ Quick reference
      - 2.4.0
      - Compute the sleep cycles.
    * - :ref:`Sleep Report <module_sleepreport>`
-     - 2.1.0
+     - 2.2.0
      - Generates a sleep report in CSV file.

@@ -7,7 +7,7 @@ Spindles Details
 
 **Package:** CEAMSModules 7.5.0
 
-**Version:** 2.4.0
+**Version:** 2.5.0
 
 Overview
 --------

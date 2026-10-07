@@ -133,6 +133,7 @@ Version History
     - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
     - Add error handling workflow for duplicated sleep stages.
 
-* v3.5.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+* v3.6.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
     - Mini-epochs classification step added to the tool.
     - Add REMs report detailed information in a .tsv file.
+    - Ensure the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.

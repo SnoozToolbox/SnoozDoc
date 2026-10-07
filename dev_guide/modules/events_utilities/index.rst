@@ -81,7 +81,7 @@ Quick reference
      - 2.1.0
      - Used to generate figures of Power Spectral Analysis (PSA) data from PSA report files.
    * - :ref:`REMs Details <module_remsdetails>`
-     - 2.2.0
+     - 2.3.0
      - Averages REMs events characteristics such as duration, amplitude and density per stage and sleep cycle.
    * - :ref:`REMs to mini-epochs <module_remseventstominiepochs>`
      - 0.0.0
@@ -105,10 +105,10 @@ Quick reference
      - 3.1.0
      - Used to generate pictures of slow wave events.
    * - :ref:`Slow Waves Details <module_slowwavesdetails>`
-     - 2.5.0
+     - 2.6.0
      - Averages slow wave events characteristics such as duration, amplitude, frequency and so on per stage and sleep cycle.
    * - :ref:`Spindles Details <module_spindlesdetails>`
-     - 2.4.0
+     - 2.5.0
      - Computes spindles events characteristics such as duration, amplitude, frequency and so on.
    * - :ref:`Windows To Samples <module_windowstosamples>`
      - 2.0.0

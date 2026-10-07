@@ -152,5 +152,7 @@ Version History
     - Replaced the FIR filter with an IIR filter to reduce processing time while maintaining performance equivalent to the legacy detector.
     - Fixed Results View to allow exploration of detected events marked on the signal.
 
-* v2.9.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+* v2.11.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
     - Slow-wave detection can now be performed on PSG recordings without sleep-stage scoring.
+    - Added pos_peak_sec and neg_peak_sec as slow-wave characteristics and support for unscored data. 
+    - Ensure the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.

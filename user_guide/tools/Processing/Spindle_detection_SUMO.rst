@@ -153,3 +153,4 @@ The version history of this tool is as follows:
 * v2.11.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
     - Sleep cycles in the spindle characteristics files now start at 1 (no more cycle=0).
     - Added RMS Spindle Activity Index to the spindle characteristics files and the cohort report.
+    - Ensure the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.

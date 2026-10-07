@@ -55,7 +55,7 @@ Quick reference
      - 2.0.0
      - Computes RMS value on a moving window.
    * - :ref:`PSA Compilation FOOOF <module_psacompilationfooof>`
-     - 0.0.1
+     - 0.1.0
      - Analyses and reports the PSD output designed specifically for FOOOF analysis.
    * - :ref:`Remove Channel Artefact <module_removechannelartefact>`
      - 2.0.0
@@ -73,7 +73,7 @@ Quick reference
      - 2.2.0
      - Automatic sleep stage classification using YASA's machine learning model.
    * - :ref:`Stft <module_stft>`
-     - 2.1.0
+     - 2.2.0
      - Computes the STFT on the signal split into sliding windows.
    * - :ref:`Subtract Signals <module_subtractsignals>`
      - 2.0.0

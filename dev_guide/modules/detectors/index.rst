@@ -40,7 +40,7 @@ Quick reference
      - 2.0.0
      - Organizes detection information and saves it into the cache in order to plot it.
    * - :ref:`Oxygen Desaturation Detector <module_oxygendesatdetector>`
-     - 2.5.0
+     - 2.6.0
      - Analyzes the oxygen channel, detect oxygen desaturations and export oxygen saturation report.
    * - :ref:`REMs Detection Yasa <module_remsdetectionyasa>`
      - 3.1.0

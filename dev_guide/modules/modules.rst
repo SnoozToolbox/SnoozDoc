@@ -95,7 +95,7 @@ All modules
    * - 9
      - :ref:`Oxygen Desaturation Detector <module_oxygendesatdetector>`
      - Detectors
-     - 2.5.0
+     - 2.6.0
      - Analyzes the oxygen channel, detect oxygen desaturations and export oxygen saturation report.
    * - 10
      - :ref:`REMs Detection Yasa <module_remsdetectionyasa>`
@@ -125,7 +125,7 @@ All modules
    * - 15
      - :ref:`Event Sleep Report <module_eventsleepreport>`
      - Events Analysis
-     - 2.0.1
+     - 2.1.0
      - Generates event sleep report.
    * - 16
      - :ref:`Event Temporal Link <module_eventtemporallink>`
@@ -200,7 +200,7 @@ All modules
    * - 30
      - :ref:`REMs Details <module_remsdetails>`
      - Events Utilities
-     - 2.2.0
+     - 2.3.0
      - Averages REMs events characteristics such as duration, amplitude and density per stage and sleep cycle.
    * - 31
      - :ref:`REMs to mini-epochs <module_remseventstominiepochs>`
@@ -240,12 +240,12 @@ All modules
    * - 38
      - :ref:`Slow Waves Details <module_slowwavesdetails>`
      - Events Utilities
-     - 2.5.0
+     - 2.6.0
      - Averages slow wave events characteristics such as duration, amplitude, frequency and so on per stage and sleep cycle.
    * - 39
      - :ref:`Spindles Details <module_spindlesdetails>`
      - Events Utilities
-     - 2.4.0
+     - 2.5.0
      - Computes spindles events characteristics such as duration, amplitude, frequency and so on.
    * - 40
      - :ref:`Windows To Samples <module_windowstosamples>`
@@ -350,7 +350,7 @@ All modules
    * - 60
      - :ref:`Sleep Report <module_sleepreport>`
      - Hypnogram Analysis
-     - 2.1.0
+     - 2.2.0
      - Generates a sleep report in CSV file.
    * - 61
      - :ref:`Alias Signals <module_aliassignals>`
@@ -425,7 +425,7 @@ All modules
    * - 75
      - :ref:`PSA Compilation FOOOF <module_psacompilationfooof>`
      - Signal Processing
-     - 0.0.1
+     - 0.1.0
      - Analyses and reports the PSD output designed specifically for FOOOF analysis.
    * - 76
      - :ref:`Remove Channel Artefact <module_removechannelartefact>`
@@ -455,7 +455,7 @@ All modules
    * - 81
      - :ref:`Stft <module_stft>`
      - Signal Processing
-     - 2.1.0
+     - 2.2.0
      - Computes the STFT on the signal split into sliding windows.
    * - 82
      - :ref:`Subtract Signals <module_subtractsignals>`
@@ -475,12 +475,12 @@ All modules
    * - 85
      - :ref:`PSA Compilation <module_psacompilation>`
      - Statistics
-     - 2.2.1
+     - 2.3.0
      - Analyses and reports the PSD output.
    * - 86
      - :ref:`PSA on Events <module_psaonevents>`
      - Statistics
-     - 3.1.0
+     - 3.2.0
      - Compiles the PSA run on selected events.
    * - 87
      - :ref:`Signal Stats <module_signalstats>`

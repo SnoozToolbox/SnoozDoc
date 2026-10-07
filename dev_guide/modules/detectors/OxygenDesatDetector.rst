@@ -7,7 +7,7 @@ Oxygen Desaturation Detector
 
 **Package:** CEAMSModules 7.5.0
 
-**Version:** 2.5.0
+**Version:** 2.6.0
 
 Overview
 --------
