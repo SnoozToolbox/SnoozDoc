@@ -1,0 +1,21 @@
+.. _spindle_Martin_characteristics_info_csv:
+
+============================================
+Spindle characteristics report (Martin)
+============================================
+
+The list of the variables included in the spindle cohort report. 
+
+.. warning::
+
+   If the variable definition is truncated, click on it and then use the right arrow key on your keyboard to view the full definition.
+
+.. note::
+
+   To download the original info.tsv file : `snooz_1_1_0_spindle_Martin_characteristics_info.tsv <https://f004.backblazeb2.com/file/snooz-release/doc/snooz_1_1_0_spindle_Martin_characteristics_info.tsv>`_
+
+.. csv-table:: Spindle Martin characteristics report
+   :file: snooz_1_1_0_spindle_Martin_characteristics_info.tsv
+   :delim: tab
+   :align: left
+   :class: left-align-caption wrap-table

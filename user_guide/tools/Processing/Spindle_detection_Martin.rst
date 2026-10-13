@@ -31,8 +31,11 @@ Two additional output reports are available :
          * Dominent frequency (Hz), where spectral energy is maximum
          * Average frequency (Hz) counting peaks
          * Peak-to-peak amplitude (µV)
+         * Duration from onset to maximum peak-to-peak amplitude (s)
          * Root Mean Square (rms) amplitude (µV)
          * RMS-Duration products (µV*s)
+
+      See :ref:`spindle_Martin_characteristics_info_csv` for the variable definition. 
 
    **2. Spindle characteristics averaged by subject level**
       A file with the spindle characteristics averaged per subject.  One file for the cohort, one row per channel.
@@ -118,6 +121,7 @@ Report
 -----------------
 
 .. toctree::
+   Spindle_detector_Martin/spindle_Martin_characteristics_info_csv
    Spindle_detector_Martin/spindle_Martin_cohort_info_csv
       
 References
@@ -146,7 +150,8 @@ Version History
     - Add error handling workflow for duplicated sleep stages.
 
 * v2.11.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
-    - Sleep cycles in the spindle characteristics files now start at 1 (no more cycle=0).
-    - Added RMS Spindle Activity Index to the spindle characteristics files and the cohort report.
-    - Ensure the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
-    
+    - Updated spindle characteristics files so that sleep cycle numbering starts at 1 instead of 0.
+    - Added the Spindle RMS-Duration product and the duration from onset to maximum peak-to-peak amplitude to the spindle characteristics report.
+    - Added the RMS Spindle Activity Index and the average duration from onset to peak to the cohort report.
+    - Added the per-event characteristics dictionary file for the spindle characteristics report.
+    - Ensured that the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
