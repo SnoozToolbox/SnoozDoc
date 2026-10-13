@@ -98,7 +98,9 @@ Each event is defined by :
    4. duration_sec : The duration of the event in second.
    5. channels : The list of channels on which the event occurs.
 
-The tool also provides two folders of **REMs characteristics** and **REMs sleep stages** including some parameters for each specific REM event for more detailed analysis. The **characteristics folder** includes two files:
+The tool also provides two folders of **REMs characteristics** and **REMs sleep stages** including some parameters for each specific REM event for more detailed analysis. 
+
+The **characteristics folder** includes two files:
    - **Event file** : Contains all events in Snooz annotation format.
    - **Summary file** : contains the following characteristics of the REMs:
       - LOC and ROC absolute amplitude at REM peak (in uV)
@@ -108,7 +110,8 @@ The tool also provides two folders of **REMs characteristics** and **REMs sleep 
 Report
 ----------------
 .. toctree::
-   DetectREMsYASA/REMsReport_info
+   DetectREMsYASA/REMs_Per-event_Report_info
+   DetectREMsYASA/REMs_Per-subject_Report_info
 
 
 References
@@ -121,19 +124,20 @@ Version History
 -----------------
 
 * v2.0.0 : Distributed with CEAMS package version 7.0.0 — Snooz beta 2.0.0
-    - Initial release of the tool.
-    
-* v3.3.0 : Distributed with CEAMS package version 7.3.0 - Snooz beta 3.0.0
-    - REMs report added to the output of the tool.
-    - The UI of the tool has been updated to be more user-friendly.
-    - Fixed reporting of events starting at sleep stage transitions.
-    - Improve path, filename, and extension handling for sleep cycle warning log file.
-      
+   - Initial release of the tool.
+
+* v3.3.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
+   - Added the REMs report to the tool output.
+   - Updated the tool UI to be more user-friendly.
+   - Fixed reporting of events starting at sleep stage transitions.
+   - Improved path, filename, and extension handling for the sleep cycle warning log file.
+
 * v3.4.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
-    - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
-    - Add error handling workflow for duplicated sleep stages.
+   - Added an error-handling workflow for PSG loading from workspaces and displayed failed files in the UI.
+   - Added an error-handling workflow for duplicated sleep stages.
 
 * v3.6.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
-    - Mini-epochs classification step added to the tool.
-    - Add REMs report detailed information in a .tsv file.
-    - Ensure the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
+   - Added the mini-epoch classification step to the tool.
+   - Added the cohort-level (per-subject) REM activity report to the tool output.
+   - Added the per-event characteristics dictionary file for the REM characteristics report.
+   - Ensured that the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
