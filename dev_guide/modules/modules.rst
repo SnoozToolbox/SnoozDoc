@@ -100,7 +100,7 @@ All modules
    * - 10
      - :ref:`REMs Detection Yasa <module_remsdetectionyasa>`
      - Detectors
-     - 3.1.0
+     - 4.0.0
      - Detects Rapid Eye Movements (REMs) in EOG sleep recordings using YASA REM detection algorithm.
    * - 11
      - :ref:`Slow Wave Detector <module_slowwavedetector>`
