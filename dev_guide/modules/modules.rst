@@ -150,7 +150,7 @@ All modules
    * - 20
      - :ref:`Drop/Rename Events <module_droprenameevents>`
      - Events Utilities
-     - 2.0.0
+     - 2.1.0
      - Drops events and/or rename events group and/or name.
    * - 21
      - :ref:`Event Combine <module_eventcombine>`
@@ -305,7 +305,7 @@ All modules
    * - 51
      - :ref:`PSGReader <module_psgreader>`
      - Files I/O
-     - 2.5.0
+     - 2.5.1
      - Reads a PSG file.
    * - 52
      - :ref:`PSGWriter <module_psgwriter>`

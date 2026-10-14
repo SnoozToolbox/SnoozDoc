@@ -51,7 +51,7 @@ Quick reference
      - 2.1.0
      - Discards too long, too short or events that occur during artefacts.
    * - :ref:`Drop/Rename Events <module_droprenameevents>`
-     - 2.0.0
+     - 2.1.0
      - Drops events and/or rename events group and/or name.
    * - :ref:`Event Combine <module_eventcombine>`
      - 2.1.0
