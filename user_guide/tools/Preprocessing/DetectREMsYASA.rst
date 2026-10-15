@@ -136,7 +136,7 @@ Version History
    - Added an error-handling workflow for PSG loading from workspaces and displayed failed files in the UI.
    - Added an error-handling workflow for duplicated sleep stages.
 
-* v3.6.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+* v3.6.1 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
    - Added the mini-epoch classification step to the tool.
    - Added the cohort-level (per-subject) REM activity report to the tool output.
    - Added the per-event characteristics dictionary file for the REM characteristics report.
