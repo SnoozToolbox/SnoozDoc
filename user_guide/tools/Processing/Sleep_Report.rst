@@ -126,5 +126,5 @@ Version History
 
 * v2.8.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
     - Added new events report without criteria-EOG_phasic and without criteria-EOG_tonic.
-    - Ensure the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
-    
+    - Ensured the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
+    - Fixed an issue where the sex value in the UI did not match the exported report.
