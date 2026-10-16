@@ -94,11 +94,12 @@ Version History
     - Initial release of the tool.
 
 * v2.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
-    - UI improvements for consistent tool and input file descriptions.
+    - Improved UI for consistent tool and input file descriptions.
     
 * v2.3.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
-    - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
-    - Add error handling workflow for duplicated sleep stages.
+    - Added error handling workflow for PSG loading from workspaces and display failed files in the UI.
+    - Added error handling workflow for duplicated sleep stages.
 
-* v2.4.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
-    - Includes a fix in the TSV Writer module to support an empty list of annotations.
+* v2.5.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+    - Fixed the TSV Writer module to support an empty list of annotations.
+    - Improved validation dialogs using TableDialog.
