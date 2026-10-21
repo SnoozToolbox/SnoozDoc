@@ -7,7 +7,7 @@ PSA on Events
 
 **Package:** CEAMSModules 7.5.0
 
-**Version:** 3.2.0
+**Version:** 3.3.0
 
 Overview
 --------
