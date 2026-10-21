@@ -23,8 +23,7 @@ Snooz has been developed and validated exclusively on Windows 11.
 macOS
 ------
 
-Snooz supports both Intel-based Macs (including those with the T2 security chip) and Apple Silicon Macs (M1 and newer).
-Supported macOS versions: 14.3 (Sonoma) through 15.2 (Sequoia).  
+Snooz supports Intel-based Macs and Apple Silicon Macs (M1 and newer), running macOS 15 (Sequoia) or later. 
 
 .. warning::
 
@@ -51,7 +50,7 @@ On Windows platforms
 
 .. warning::  
 
-    Snooz is not signed yet!
+    Snooz is not signed yet for Windows!
     If you get this warning below :  
      
     1. Click on More info.
@@ -74,13 +73,6 @@ On macOS platforms
 1. Download the Installer using the link provided in the Snooz email after submitting your profile.
 2. Double-click on the downloaded file to install.
 3. Drag and drop the Snooz application in the Applications folder. 
-4. Since Snooz is not signed yet, you need to mark it as an exception (see the note lower). 
-
-.. note::
-  To mark Snooz as an exception: 
-    | Open a terminal and type either :
-    | ``find /Applications/Snooz.app -exec xattr -c {} \;`` or 
-    | ``xattr -cr /Applications/Snooz.app``, depending on your environment.
 
 .. warning::  
   Ensure that Snooz has full disk access to launch it from the Launchpad by following these steps:
