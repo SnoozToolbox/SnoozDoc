@@ -480,7 +480,7 @@ All modules
    * - 86
      - :ref:`PSA on Events <module_psaonevents>`
      - Statistics
-     - 3.3.0
+     - 3.4.0
      - Compiles the PSA run on selected events.
    * - 87
      - :ref:`Signal Stats <module_signalstats>`
