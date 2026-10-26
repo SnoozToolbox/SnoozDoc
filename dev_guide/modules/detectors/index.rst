@@ -55,5 +55,5 @@ Quick reference
      - 3.0.0
      - Detects spindles based on the a7 algorithm.
    * - :ref:`Spindle Detector Sumo <module_spindledetectorsumo>`
-     - 3.0.0
+     - 3.1.0
      - Detects spindles based on the SUMO deep learning algorithm.

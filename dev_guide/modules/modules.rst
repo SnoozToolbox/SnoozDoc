@@ -120,7 +120,7 @@ All modules
    * - 14
      - :ref:`Spindle Detector Sumo <module_spindledetectorsumo>`
      - Detectors
-     - 3.0.0
+     - 3.1.0
      - Detects spindles based on the SUMO deep learning algorithm.
    * - 15
      - :ref:`Event Sleep Report <module_eventsleepreport>`
