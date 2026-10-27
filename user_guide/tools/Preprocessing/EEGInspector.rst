@@ -154,8 +154,9 @@ Version History
 * v2.3.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
     - Improved PSG reader error handling for data-loading failures.
 
-* v2.4.0 : Distributed with CEAMS package version 7.5.0
+* v2.4.1 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
     - Automatic non-brain channel suggestions for 256-channel EGI / GSN HydroCel montages.
     - Annotations are always saved to the opened input file.
     - Previous ``art_inspector`` annotations are always replaced on save.
     - Automatic export of the cleaned PSD as ``{filename}_PSD.png`` next to the input file.
+    - Minor UI updates on the first step.
