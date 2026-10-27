@@ -82,7 +82,8 @@ Version History
     - Fix Aeschebach method to support two REMPs without NREM between.
     - Improve path, filename, and extension handling for sleep cycle warning log file.
 
-* v2.6.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
-    - Includes a fix in the TSV Writer module to support an empty list of annotations.
-    - Fix sleep cycle handling for a single NREM period without REM
+* v2.6.1 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+    - Added support for an empty list of annotations in the TSV Writer module.
+    - Fixed sleep cycle handling for a single NREM period without REM
+    - Updated UI pictures.
 

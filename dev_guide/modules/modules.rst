@@ -345,7 +345,7 @@ All modules
    * - 59
      - :ref:`Sleep Cycles Delimiter <module_sleepcyclesdelimiter>`
      - Hypnogram Analysis
-     - 2.5.0
+     - 2.5.1
      - Compute the sleep cycles.
    * - 60
      - :ref:`Sleep Report <module_sleepreport>`
