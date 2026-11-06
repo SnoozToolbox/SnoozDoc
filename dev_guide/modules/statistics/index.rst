@@ -28,7 +28,7 @@ Quick reference
      - 2.0.0
      - Finds the mutual information between two lists of signals.
    * - :ref:`PSA Compilation <module_psacompilation>`
-     - 2.3.0
+     - 2.4.0
      - Analyses and reports the PSD output.
    * - :ref:`PSA on Events <module_psaonevents>`
      - 3.4.0

@@ -475,7 +475,7 @@ All modules
    * - 85
      - :ref:`PSA Compilation <module_psacompilation>`
      - Statistics
-     - 2.3.0
+     - 2.4.0
      - Analyses and reports the PSD output.
    * - 86
      - :ref:`PSA on Events <module_psaonevents>`
