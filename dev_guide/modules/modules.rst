@@ -425,7 +425,7 @@ All modules
    * - 75
      - :ref:`PSA Compilation FOOOF <module_psacompilationfooof>`
      - Signal Processing
-     - 0.1.0
+     - 0.2.0
      - Analyses and reports the PSD output designed specifically for FOOOF analysis.
    * - 76
      - :ref:`Remove Channel Artefact <module_removechannelartefact>`
@@ -475,7 +475,7 @@ All modules
    * - 85
      - :ref:`PSA Compilation <module_psacompilation>`
      - Statistics
-     - 2.4.0
+     - 2.3.0
      - Analyses and reports the PSD output.
    * - 86
      - :ref:`PSA on Events <module_psaonevents>`
