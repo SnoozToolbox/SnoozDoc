@@ -125,7 +125,7 @@ All modules
    * - 15
      - :ref:`Event Sleep Report <module_eventsleepreport>`
      - Events Analysis
-     - 2.1.0
+     - 2.3.0
      - Generates event sleep report.
    * - 16
      - :ref:`Event Temporal Link <module_eventtemporallink>`

@@ -124,7 +124,10 @@ Version History
     - Improved path, filename, and extension handling for sleep cycle warning log file.
     - Fixed Subject Info synchronization between the UI and sleep report output.
 
-* v2.8.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+* v2.9.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
     - Added new events report without criteria-EOG_phasic and without criteria-EOG_tonic.
     - Ensured the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
     - Fixed an issue where the sex value in the UI did not match the exported report.
+    - Added `id1` and `id2` fields to event and temporal link reports.
+    - Fixed event list filename generation when using filtered selection groups and names.
+    - Fixed cleanup of the temporal link model in the UI.
