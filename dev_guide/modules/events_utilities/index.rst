@@ -54,13 +54,13 @@ Quick reference
      - 2.1.0
      - Drops events and/or rename events group and/or name.
    * - :ref:`Event Combine <module_eventcombine>`
-     - 2.1.0
+     - 2.2.0
      - Combines two lists of events, with or without selection.
    * - :ref:`Event Compare <module_eventcompare>`
      - 2.0.0
      - Compares two sets of events .
    * - :ref:`Event Creator <module_eventcreator>`
-     - 2.0.0
+     - 2.1.0
      - Creates a pandas Dataframe of events.
    * - :ref:`Event Subdivision <module_eventsubdivision>`
      - 1.0.0
@@ -87,13 +87,13 @@ Quick reference
      - 0.0.0
      - REMs to mini-epochs
    * - :ref:`Replace Event In Signals <module_replaceeventinsignals>`
-     - 2.1.0
+     - 2.2.0
      - Inserts samples from event dataframe inside a signals.
    * - :ref:`Scoring Completeness <module_scoringcompleteness>`
      - 2.0.0
      - Evaluates if the scoring (events) is unique, complete and specific to the sleep staging.
    * - :ref:`Signals From Events <module_signalsfromevents>`
-     - 4.0.0
+     - 4.1.0
      - Manages a list of SignalModel from specific events during a recording.
    * - :ref:`Sleep Stage Events <module_sleepstageevents>`
      - 2.1.0

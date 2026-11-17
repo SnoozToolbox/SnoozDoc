@@ -90,12 +90,12 @@ All modules
    * - 8
      - :ref:`Detection View <module_detectionview>`
      - Detectors
-     - 2.0.0
+     - 2.1.0
      - Organizes detection information and saves it into the cache in order to plot it.
    * - 9
      - :ref:`Oxygen Desaturation Detector <module_oxygendesatdetector>`
      - Detectors
-     - 2.6.0
+     - 2.8.0
      - Analyzes the oxygen channel, detect oxygen desaturations and export oxygen saturation report.
    * - 10
      - :ref:`REMs Detection Yasa <module_remsdetectionyasa>`
@@ -105,7 +105,7 @@ All modules
    * - 11
      - :ref:`Slow Wave Detector <module_slowwavedetector>`
      - Detectors
-     - 2.4.0
+     - 2.5.0
      - Detects slow wave events based on the Carrier method.
    * - 12
      - :ref:`Spectral Detector <module_spectraldetector>`
@@ -115,7 +115,7 @@ All modules
    * - 13
      - :ref:`Spindle Detector A7 <module_spindledetectora7>`
      - Detectors
-     - 3.0.0
+     - 3.1.0
      - Detects spindles based on the a7 algorithm.
    * - 14
      - :ref:`Spindle Detector Sumo <module_spindledetectorsumo>`
@@ -155,7 +155,7 @@ All modules
    * - 21
      - :ref:`Event Combine <module_eventcombine>`
      - Events Utilities
-     - 2.1.0
+     - 2.2.0
      - Combines two lists of events, with or without selection.
    * - 22
      - :ref:`Event Compare <module_eventcompare>`
@@ -165,7 +165,7 @@ All modules
    * - 23
      - :ref:`Event Creator <module_eventcreator>`
      - Events Utilities
-     - 2.0.0
+     - 2.1.0
      - Creates a pandas Dataframe of events.
    * - 24
      - :ref:`Event Subdivision <module_eventsubdivision>`
@@ -210,7 +210,7 @@ All modules
    * - 32
      - :ref:`Replace Event In Signals <module_replaceeventinsignals>`
      - Events Utilities
-     - 2.1.0
+     - 2.2.0
      - Inserts samples from event dataframe inside a signals.
    * - 33
      - :ref:`Scoring Completeness <module_scoringcompleteness>`
@@ -220,7 +220,7 @@ All modules
    * - 34
      - :ref:`Signals From Events <module_signalsfromevents>`
      - Events Utilities
-     - 4.0.0
+     - 4.1.0
      - Manages a list of SignalModel from specific events during a recording.
    * - 35
      - :ref:`Sleep Stage Events <module_sleepstageevents>`
@@ -275,12 +275,12 @@ All modules
    * - 45
      - :ref:`Edf Xml Reader <module_edfxmlreader>`
      - Files I/O
-     - 2.0.0
+     - 2.1.0
      - Reads events from a EDF.XML file.
    * - 46
      - :ref:`Edf Xml Reader Master <module_edfxmlreadermaster>`
      - Files I/O
-     - 2.0.0
+     - 2.1.0
      - Reads events from a EDF.XML files or .XML files.
    * - 47
      - :ref:`Edf Xml Writer <module_edfxmlwriter>`
@@ -340,7 +340,7 @@ All modules
    * - 58
      - :ref:`Sleep Bouts <module_sleepbouts>`
      - Hypnogram Analysis
-     - 2.0.0
+     - 2.1.0
      - Supports sleep bouts operations within a Snooz process.
    * - 59
      - :ref:`Sleep Cycles Delimiter <module_sleepcyclesdelimiter>`
@@ -355,12 +355,12 @@ All modules
    * - 61
      - :ref:`Alias Signals <module_aliassignals>`
      - Parameters
-     - 2.0.0
+     - 2.1.0
      - Extract only the signals with a specific Alias.
    * - 62
      - :ref:`Constant <module_constant>`
      - Parameters
-     - 2.0.0
+     - 2.1.0
      - Passes a value to the next node.
    * - 63
      - :ref:`Create Dictionary <module_createdict>`
@@ -395,22 +395,22 @@ All modules
    * - 69
      - :ref:`Filter Signal <module_filtersignal>`
      - Signal Processing
-     - 2.1.0
+     - 2.2.0
      - Applies a FIR/IIR filter to EEG signals.
    * - 70
      - :ref:`Ica Components <module_icacomponents>`
      - Signal Processing
-     - 2.0.0
+     - 2.1.0
      - Find components of a signal with idependant component analysis.
    * - 71
      - :ref:`Ica Restore <module_icarestore>`
      - Signal Processing
-     - 2.0.0
+     - 2.1.0
      - Reconstructs signal from ICA components.
    * - 72
      - :ref:`Invert Signals <module_invertsignals>`
      - Signal Processing
-     - 2.0.0
+     - 2.1.0
      - Inverts signals.
    * - 73
      - :ref:`IRASA YASA <module_irasayasa>`
@@ -435,12 +435,12 @@ All modules
    * - 77
      - :ref:`Resample <module_resample>`
      - Signal Processing
-     - 2.0.0
+     - 2.1.0
      - Resamples a signal.
    * - 78
      - :ref:`Rescale Signal <module_rescalesignal>`
      - Signal Processing
-     - 2.1.0
+     - 2.2.0
      - Creates a list of dictionaries with the channels from specific epochs during a recording.
    * - 79
      - :ref:`Reset Signal Artefact <module_resetsignalartefact>`
@@ -455,12 +455,12 @@ All modules
    * - 81
      - :ref:`Stft <module_stft>`
      - Signal Processing
-     - 2.2.0
+     - 2.3.0
      - Computes the STFT on the signal split into sliding windows.
    * - 82
      - :ref:`Subtract Signals <module_subtractsignals>`
      - Signal Processing
-     - 2.0.0
+     - 2.1.0
      - Subtracts signals from a specific channel from the signals of a list of channels.
    * - 83
      - :ref:`Trim Signal <module_trimsignal>`
@@ -470,7 +470,7 @@ All modules
    * - 84
      - :ref:`Mutual Info <module_mutualinfo>`
      - Statistics
-     - 2.0.0
+     - 2.1.0
      - Finds the mutual information between two lists of signals.
    * - 85
      - :ref:`PSA Compilation <module_psacompilation>`

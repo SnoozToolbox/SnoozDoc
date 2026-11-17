@@ -25,10 +25,10 @@ Quick reference
      - Version
      - Description
    * - :ref:`Alias Signals <module_aliassignals>`
-     - 2.0.0
+     - 2.1.0
      - Extract only the signals with a specific Alias.
    * - :ref:`Constant <module_constant>`
-     - 2.0.0
+     - 2.1.0
      - Passes a value to the next node.
    * - :ref:`Create Dictionary <module_createdict>`
      - 2.0.0

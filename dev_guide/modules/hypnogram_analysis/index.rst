@@ -25,7 +25,7 @@ Quick reference
      - 2.1.0
      - Displays in the results view an hypnogram and its sleep cycles.
    * - :ref:`Sleep Bouts <module_sleepbouts>`
-     - 2.0.0
+     - 2.1.0
      - Supports sleep bouts operations within a Snooz process.
    * - :ref:`Sleep Cycles Delimiter <module_sleepcyclesdelimiter>`
      - 2.6.0

@@ -61,3 +61,6 @@ Version History
 
 * v2.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
     - UI improvements for consistent tool and input file descriptions.
+
+* v2.3.0 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
+    - Excluded filename path from the output report.

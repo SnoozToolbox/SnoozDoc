@@ -46,10 +46,10 @@ Quick reference
      - 2.0.0
      - Used to read the EDF Annotations signal and create a pandas dataframe with the events.
    * - :ref:`Edf Xml Reader <module_edfxmlreader>`
-     - 2.0.0
+     - 2.1.0
      - Reads events from a EDF.XML file.
    * - :ref:`Edf Xml Reader Master <module_edfxmlreadermaster>`
-     - 2.0.0
+     - 2.1.0
      - Reads events from a EDF.XML files or .XML files.
    * - :ref:`Edf Xml Writer <module_edfxmlwriter>`
      - 2.0.0

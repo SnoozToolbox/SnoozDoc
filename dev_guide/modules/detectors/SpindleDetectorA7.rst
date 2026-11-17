@@ -7,7 +7,7 @@ Spindle Detector A7
 
 **Package:** CEAMSModules 7.5.0
 
-**Version:** 3.0.0
+**Version:** 3.1.0
 
 Overview
 --------

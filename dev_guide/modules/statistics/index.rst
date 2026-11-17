@@ -25,7 +25,7 @@ Quick reference
      - Version
      - Description
    * - :ref:`Mutual Info <module_mutualinfo>`
-     - 2.0.0
+     - 2.1.0
      - Finds the mutual information between two lists of signals.
    * - :ref:`PSA Compilation <module_psacompilation>`
      - 2.3.0

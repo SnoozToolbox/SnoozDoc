@@ -319,17 +319,18 @@ Version History
     - Initial release of the tool.
 
 * v2.8.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
-    - The desaturation/recovery detector is now inspired by ABOSA [1].
-    - Desaturation severity has been added to the report.
-    - Automatic artifact detection has been adapted for low sampling rates (e.g., 1 Hz).
+    - The desaturation/recovery detector was updated to be inspired by ABOSA [1].
+    - Desaturation severity was added to the report.
+    - Automatic artifact detection was adapted for low sampling rates (e.g., 1 Hz).
     - Improved path, filename, and extension handling for sleep cycle warning log file.
     - Improved saturation plotting for non-integer sampling rates.
     - Improved stage statistics calculation processing.
 
 * v2.9.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
-    - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
-    - Add error handling workflow for duplicated sleep stages.
-    - Remove the obsolete 'signal_squared' debug signal.
+    - Added error handling workflow for PSG loading from workspaces and display failed files in the UI.
+    - Added error handling workflow for duplicated sleep stages.
+    - Removed the obsolete 'signal_squared' debug signal.
 
-* v2.10.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
-    - Ensure the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
+* v2.11.0 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
+    - Ensured the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
+    - Made annotations, including artifact, desat and recovery, now channel specific.
