@@ -173,7 +173,7 @@ Version History
     - Added an error-handling workflow for loading PSG files from workspaces and displaying failed files in the UI.
     - Added an error-handling workflow for duplicated sleep stages.
 
-* v3.9.0: Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+* v3.9.0: Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
     - Updated spindle characteristics files so that sleep cycle numbering starts at 1 instead of 0.
     - Added the Spindle RMS-Duration product and the duration from onset to maximum peak-to-peak amplitude to the spindle characteristics report.
     - Added the RMS Spindle Activity Index and the average duration from onset to peak to the cohort report.

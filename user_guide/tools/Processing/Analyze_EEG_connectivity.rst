@@ -196,7 +196,7 @@ Version History
     - Renamed to "Analyze EEG Functional Connectivity" for clarity.
     - Added error handling workflow for PSG loading from workspaces and display failed files in the UI.
     - Added error handling workflow for duplicated sleep stages.
-* v2.7.0: Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+* v2.7.0: Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
     - Added Amplitude Envelope Correlation (AEC) connectivity with leakage correction.
     - Added Network Properties analysis for wPLI (requires ≥ 32 channels), supporting minimum spanning tree or custom threshold approaches.
     - Added TSV exports for network properties and participation coefficients.

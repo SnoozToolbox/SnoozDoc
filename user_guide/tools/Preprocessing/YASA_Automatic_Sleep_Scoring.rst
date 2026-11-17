@@ -153,6 +153,6 @@ Version History
 * v2.4.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
     - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
     - Add error handling workflow for duplicated sleep stages.
-* v2.6.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+* v2.6.0 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
     - Support for writing sleep stages into Stellate format has been added.
     - Support for writing sleep stages into NATUS format has been added.

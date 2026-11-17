@@ -61,6 +61,6 @@ Version History
 * v2.1.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
     - Added support for the new optional time elapsed column.
 
-* v2.3.0 : Distributed with CEAMS package version 7.5.0 — Snooz 1.1.0
+* v2.3.0 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
     - Fixed the TSV Writer module to support an empty list of annotations.
     - Improved validation dialogs using TableDialog.
