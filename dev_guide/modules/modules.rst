@@ -55,22 +55,22 @@ All modules
    * - 1
      - :ref:`AEC Connectivity <module_aecconnectivity>`
      - Connectivity Analysis
-     - 0.0.0
+     - 0.0.1
      - AEC Connectivity
    * - 2
      - :ref:`Dpli Connectivity <module_dpliconnectivity>`
      - Connectivity Analysis
-     - 2.1.0
+     - 2.1.1
      - Computes per-epoch, surrogate-corrected Directed Phase Lag Index (dPLI) matrices from EEG epochs.
    * - 3
      - :ref:`Network Properties <module_networkproperties>`
      - Connectivity Analysis
-     - 0.0.0
+     - 0.0.1
      - Network Properties
    * - 4
      - :ref:`Wpli Connectivity <module_wpliconnectivity>`
      - Connectivity Analysis
-     - 2.1.0
+     - 2.1.1
      - Computes per-epoch, surrogate-corrected Weighted Phase Lag Index (wPLI) matrices from EEG epochs.
    * - 5
      - :ref:`A4Precise Events <module_a4preciseevents>`
@@ -100,7 +100,7 @@ All modules
    * - 10
      - :ref:`REMs Detection Yasa <module_remsdetectionyasa>`
      - Detectors
-     - 4.0.0
+     - 4.0.1
      - Detects Rapid Eye Movements (REMs) in EOG sleep recordings using YASA REM detection algorithm.
    * - 11
      - :ref:`Slow Wave Detector <module_slowwavedetector>`
@@ -120,7 +120,7 @@ All modules
    * - 14
      - :ref:`Spindle Detector Sumo <module_spindledetectorsumo>`
      - Detectors
-     - 3.1.0
+     - 3.1.1
      - Detects spindles based on the SUMO deep learning algorithm.
    * - 15
      - :ref:`Event Sleep Report <module_eventsleepreport>`
@@ -135,7 +135,7 @@ All modules
    * - 17
      - :ref:`Connectivity Details <module_connectivitydetails>`
      - Events Utilities
-     - 2.0.0
+     - 2.0.1
      - Saving connectivity results  to disk.
    * - 18
      - :ref:`Define Event Group <module_defineeventgroup>`
@@ -145,7 +145,7 @@ All modules
    * - 19
      - :ref:`Discard Events <module_discardevents>`
      - Events Utilities
-     - 2.1.0
+     - 2.1.1
      - Discards too long, too short or events that occur during artefacts.
    * - 20
      - :ref:`Drop/Rename Events <module_droprenameevents>`
@@ -160,7 +160,7 @@ All modules
    * - 22
      - :ref:`Event Compare <module_eventcompare>`
      - Events Utilities
-     - 2.0.0
+     - 2.0.1
      - Compares two sets of events .
    * - 23
      - :ref:`Event Creator <module_eventcreator>`
@@ -170,7 +170,7 @@ All modules
    * - 24
      - :ref:`Event Subdivision <module_eventsubdivision>`
      - Events Utilities
-     - 1.0.0
+     - 1.0.1
      - Event Subdivision
    * - 25
      - :ref:`Events Splitter <module_eventssplitter>`
@@ -180,7 +180,7 @@ All modules
    * - 26
      - :ref:`Extend Events <module_extendevents>`
      - Events Utilities
-     - 2.0.0
+     - 2.0.1
      - Extend or shrink events by a percentage of their duration, applied to each side.
    * - 27
      - :ref:`Filter Events <module_filterevents>`
@@ -190,22 +190,22 @@ All modules
    * - 28
      - :ref:`Performance By Event <module_performancebyevent>`
      - Events Utilities
-     - 2.0.0
+     - 2.0.1
      - Compares two sets of events .
    * - 29
      - :ref:`PSA Pics Generator <module_psapicsgenerator>`
      - Events Utilities
-     - 2.1.0
+     - 2.1.1
      - Used to generate figures of Power Spectral Analysis (PSA) data from PSA report files.
    * - 30
      - :ref:`REMs Details <module_remsdetails>`
      - Events Utilities
-     - 2.3.0
+     - 2.3.1
      - Averages REMs events characteristics such as duration, amplitude and density per stage and sleep cycle.
    * - 31
      - :ref:`REMs to mini-epochs <module_remseventstominiepochs>`
      - Events Utilities
-     - 0.0.0
+     - 0.0.1
      - REMs to mini-epochs
    * - 32
      - :ref:`Replace Event In Signals <module_replaceeventinsignals>`
@@ -230,12 +230,12 @@ All modules
    * - 36
      - :ref:`Sleep Stage Rename <module_sleepstagerename>`
      - Events Utilities
-     - 2.0.0
+     - 2.0.1
      - Renames sleep stage annotation.
    * - 37
      - :ref:`Slow Wave Pics Generator <module_slowwavepicsgenerator>`
      - Events Utilities
-     - 3.1.0
+     - 3.1.1
      - Used to generate pictures of slow wave events.
    * - 38
      - :ref:`Slow Waves Details <module_slowwavesdetails>`
@@ -255,22 +255,22 @@ All modules
    * - 41
      - :ref:`Csv Reader Master <module_csvreadermaster>`
      - Files I/O
-     - 2.1.0
+     - 2.1.1
      - Reads events from a CSV file.
    * - 42
      - :ref:`Detections Cohort Review <module_detectionscohortreview>`
      - Files I/O
-     - 2.1.0
+     - 2.1.1
      - Reads the spindle/sw output files and generates the "Detected events cohort report" file clean or transposed.
    * - 43
      - :ref:`Domino Converter <module_dominoconverter>`
      - Files I/O
-     - 2.1.0
+     - 2.1.1
      - Converts DOMINO accessory files (ASCII) in one Snooz accessory tsv file.
    * - 44
      - :ref:`EDF Annotations Reader <module_edfannotationsreader>`
      - Files I/O
-     - 2.0.0
+     - 2.0.1
      - Used to read the EDF Annotations signal and create a pandas dataframe with the events.
    * - 45
      - :ref:`Edf Xml Reader <module_edfxmlreader>`
@@ -290,42 +290,42 @@ All modules
    * - 48
      - :ref:`Event Reader <module_eventreader>`
      - Files I/O
-     - 3.0.0
+     - 3.0.1
      - Reads events from a Tsv file.
    * - 49
      - :ref:`Json Path Editor Master <module_jsonpatheditormaster>`
      - Files I/O
-     - 2.0.0
+     - 2.0.1
      - Edits JSON files by replacing paths within the JSON structure.
    * - 50
      - :ref:`PSA Cohort Review <module_psacohortreview>`
      - Files I/O
-     - 2.6.0
+     - 2.6.1
      - Reads the PSA output file and generates the PSA file clean or transposed.
    * - 51
      - :ref:`PSGReader <module_psgreader>`
      - Files I/O
-     - 2.5.1
+     - 2.5.3
      - Reads a PSG file.
    * - 52
      - :ref:`PSGWriter <module_psgwriter>`
      - Files I/O
-     - 2.3.0
+     - 2.3.1
      - Writes a PSG file.
    * - 53
      - :ref:`Rename File List <module_renamefilelist>`
      - Files I/O
-     - 2.1.0
+     - 2.1.1
      - Renames files based on input parameters such as prefix.
    * - 54
      - :ref:`Sleep Stages Importer <module_sleepstagesimporter>`
      - Files I/O
-     - 2.1.0
+     - 2.1.2
      - Imports sleep stages from a textfile into the sleep_stages dataframe.
    * - 55
      - :ref:`TSV Validator Master <module_tsvvalidatormaster>`
      - Files I/O
-     - 2.0.0
+     - 2.0.1
      - Validates TSV files by checking their encoding and structure.
    * - 56
      - :ref:`Tsv Writer <module_tsvwriter>`
@@ -345,7 +345,7 @@ All modules
    * - 59
      - :ref:`Sleep Cycles Delimiter <module_sleepcyclesdelimiter>`
      - Hypnogram Analysis
-     - 2.6.0
+     - 2.6.2
      - Compute the sleep cycles.
    * - 60
      - :ref:`Sleep Report <module_sleepreport>`
@@ -365,17 +365,17 @@ All modules
    * - 63
      - :ref:`Create Dictionary <module_createdict>`
      - Parameters
-     - 2.0.0
+     - 2.0.1
      - Transforms key-value inputs into a dictionary output while preserving the original value.
    * - 64
      - :ref:`Create List of Group Name <module_createlistofgroupname>`
      - Parameters
-     - 2.0.0
+     - 2.0.1
      - Creates a list of tuples that has two values of group and name.
    * - 65
      - :ref:`Create Tuple <module_createtuple>`
      - Parameters
-     - 2.0.0
+     - 2.0.1
      - Creates a tuple from two input values.
    * - 66
      - :ref:`Dictionary <module_dictionary>`
@@ -390,7 +390,7 @@ All modules
    * - 68
      - :ref:`Epoch Signal <module_epochsignal>`
      - Signal Processing
-     - 2.0.0
+     - 2.0.1
      - Segments EEG signals into overlapping or non-overlapping epochs of fixed duration.
    * - 69
      - :ref:`Filter Signal <module_filtersignal>`
@@ -400,7 +400,7 @@ All modules
    * - 70
      - :ref:`Ica Components <module_icacomponents>`
      - Signal Processing
-     - 2.1.0
+     - 2.1.1
      - Find components of a signal with idependant component analysis.
    * - 71
      - :ref:`Ica Restore <module_icarestore>`
@@ -415,7 +415,7 @@ All modules
    * - 73
      - :ref:`IRASA YASA <module_irasayasa>`
      - Signal Processing
-     - 0.0.1
+     - 0.0.2
      - Spectral power decomposition using IRASA algorithm.
    * - 74
      - :ref:`Moving RMS <module_movingrms>`
@@ -425,12 +425,12 @@ All modules
    * - 75
      - :ref:`PSA Compilation FOOOF <module_psacompilationfooof>`
      - Signal Processing
-     - 0.2.0
+     - 0.2.1
      - Analyses and reports the PSD output designed specifically for FOOOF analysis.
    * - 76
      - :ref:`Remove Channel Artefact <module_removechannelartefact>`
      - Signal Processing
-     - 2.0.0
+     - 2.0.1
      - Removes full-channel artefacts from signals and events.
    * - 77
      - :ref:`Resample <module_resample>`
@@ -450,7 +450,7 @@ All modules
    * - 80
      - :ref:`Score Sleep Stages YASA <module_yasasleepstaging>`
      - Signal Processing
-     - 2.2.0
+     - 2.2.1
      - Automatic sleep stage classification using YASA's machine learning model.
    * - 81
      - :ref:`Stft <module_stft>`
@@ -465,7 +465,7 @@ All modules
    * - 83
      - :ref:`Trim Signal <module_trimsignal>`
      - Signal Processing
-     - 2.0.0
+     - 2.0.1
      - Trims continuous/discontinuous signal segments and their associated events to a time window defined by.
    * - 84
      - :ref:`Mutual Info <module_mutualinfo>`
@@ -485,20 +485,20 @@ All modules
    * - 87
      - :ref:`Signal Stats <module_signalstats>`
      - Statistics
-     - 2.0.0
+     - 2.0.1
      - Computes the mean and standard deviation of the input signals per epoch, per channel.
    * - 88
      - :ref:`Sleep Staging Export Results <module_sleepstagingexportresults>`
      - Statistics
-     - 2.0.0
+     - 2.0.1
      - Processes and visualizes sleep staging results.
    * - 89
      - :ref:`Slow Wave Classifier <module_slowwaveclassifier>`
      - Statistics
-     - 2.2.1
+     - 2.2.2
      - Classifies slow wave events based on a gaussian mixture.
    * - 90
      - :ref:`Threshold Computation <module_thresholdcomputation>`
      - Statistics
-     - 2.1.0
+     - 2.1.1
      - Computes the value to threshold (i.e. µV) from a signals (i.e. EEG time series)

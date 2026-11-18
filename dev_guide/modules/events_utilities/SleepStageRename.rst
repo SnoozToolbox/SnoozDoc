@@ -7,7 +7,7 @@ Sleep Stage Rename
 
 **Package:** CEAMSModules 7.5.0
 
-**Version:** 2.0.0
+**Version:** 2.0.1
 
 Overview
 --------

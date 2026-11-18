@@ -7,7 +7,7 @@ Slow Wave Classifier
 
 **Package:** CEAMSModules 7.5.0
 
-**Version:** 2.2.1
+**Version:** 2.2.2
 
 Overview
 --------

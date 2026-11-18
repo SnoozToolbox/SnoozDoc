@@ -22,14 +22,14 @@ Quick reference
      - Version
      - Description
    * - :ref:`AEC Connectivity <module_aecconnectivity>`
-     - 0.0.0
+     - 0.0.1
      - AEC Connectivity
    * - :ref:`Dpli Connectivity <module_dpliconnectivity>`
-     - 2.1.0
+     - 2.1.1
      - Computes per-epoch, surrogate-corrected Directed Phase Lag Index (dPLI) matrices from EEG epochs.
    * - :ref:`Network Properties <module_networkproperties>`
-     - 0.0.0
+     - 0.0.1
      - Network Properties
    * - :ref:`Wpli Connectivity <module_wpliconnectivity>`
-     - 2.1.0
+     - 2.1.1
      - Computes per-epoch, surrogate-corrected Weighted Phase Lag Index (wPLI) matrices from EEG epochs.

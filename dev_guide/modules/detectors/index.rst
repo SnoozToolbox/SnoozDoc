@@ -43,7 +43,7 @@ Quick reference
      - 2.8.0
      - Analyzes the oxygen channel, detect oxygen desaturations and export oxygen saturation report.
    * - :ref:`REMs Detection Yasa <module_remsdetectionyasa>`
-     - 4.0.0
+     - 4.0.1
      - Detects Rapid Eye Movements (REMs) in EOG sleep recordings using YASA REM detection algorithm.
    * - :ref:`Slow Wave Detector <module_slowwavedetector>`
      - 2.5.0
@@ -55,5 +55,5 @@ Quick reference
      - 3.1.0
      - Detects spindles based on the a7 algorithm.
    * - :ref:`Spindle Detector Sumo <module_spindledetectorsumo>`
-     - 3.1.0
+     - 3.1.1
      - Detects spindles based on the SUMO deep learning algorithm.

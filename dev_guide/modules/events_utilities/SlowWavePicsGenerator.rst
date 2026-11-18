@@ -7,7 +7,7 @@ Slow Wave Pics Generator
 
 **Package:** CEAMSModules 7.5.0
 
-**Version:** 3.1.0
+**Version:** 3.1.1
 
 Overview
 --------

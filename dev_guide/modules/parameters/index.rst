@@ -31,13 +31,13 @@ Quick reference
      - 2.1.0
      - Passes a value to the next node.
    * - :ref:`Create Dictionary <module_createdict>`
-     - 2.0.0
+     - 2.0.1
      - Transforms key-value inputs into a dictionary output while preserving the original value.
    * - :ref:`Create List of Group Name <module_createlistofgroupname>`
-     - 2.0.0
+     - 2.0.1
      - Creates a list of tuples that has two values of group and name.
    * - :ref:`Create Tuple <module_createtuple>`
-     - 2.0.0
+     - 2.0.1
      - Creates a tuple from two input values.
    * - :ref:`Dictionary <module_dictionary>`
      - 2.0.0

@@ -42,13 +42,13 @@ Quick reference
      - Version
      - Description
    * - :ref:`Connectivity Details <module_connectivitydetails>`
-     - 2.0.0
+     - 2.0.1
      - Saving connectivity results  to disk.
    * - :ref:`Define Event Group <module_defineeventgroup>`
      - 2.0.0
      - Defines groups to events.
    * - :ref:`Discard Events <module_discardevents>`
-     - 2.1.0
+     - 2.1.1
      - Discards too long, too short or events that occur during artefacts.
    * - :ref:`Drop/Rename Events <module_droprenameevents>`
      - 2.1.0
@@ -57,34 +57,34 @@ Quick reference
      - 2.2.0
      - Combines two lists of events, with or without selection.
    * - :ref:`Event Compare <module_eventcompare>`
-     - 2.0.0
+     - 2.0.1
      - Compares two sets of events .
    * - :ref:`Event Creator <module_eventcreator>`
      - 2.1.0
      - Creates a pandas Dataframe of events.
    * - :ref:`Event Subdivision <module_eventsubdivision>`
-     - 1.0.0
+     - 1.0.1
      - Event Subdivision
    * - :ref:`Events Splitter <module_eventssplitter>`
      - 2.0.0
      - Used to split too long events.
    * - :ref:`Extend Events <module_extendevents>`
-     - 2.0.0
+     - 2.0.1
      - Extend or shrink events by a percentage of their duration, applied to each side.
    * - :ref:`Filter Events <module_filterevents>`
      - 2.0.0
      - Selects  events from specific sleep stages.
    * - :ref:`Performance By Event <module_performancebyevent>`
-     - 2.0.0
+     - 2.0.1
      - Compares two sets of events .
    * - :ref:`PSA Pics Generator <module_psapicsgenerator>`
-     - 2.1.0
+     - 2.1.1
      - Used to generate figures of Power Spectral Analysis (PSA) data from PSA report files.
    * - :ref:`REMs Details <module_remsdetails>`
-     - 2.3.0
+     - 2.3.1
      - Averages REMs events characteristics such as duration, amplitude and density per stage and sleep cycle.
    * - :ref:`REMs to mini-epochs <module_remseventstominiepochs>`
-     - 0.0.0
+     - 0.0.1
      - REMs to mini-epochs
    * - :ref:`Replace Event In Signals <module_replaceeventinsignals>`
      - 2.2.0
@@ -99,10 +99,10 @@ Quick reference
      - 2.1.0
      - Creates a list of event from specific sleep stages during a recording.
    * - :ref:`Sleep Stage Rename <module_sleepstagerename>`
-     - 2.0.0
+     - 2.0.1
      - Renames sleep stage annotation.
    * - :ref:`Slow Wave Pics Generator <module_slowwavepicsgenerator>`
-     - 3.1.0
+     - 3.1.1
      - Used to generate pictures of slow wave events.
    * - :ref:`Slow Waves Details <module_slowwavesdetails>`
      - 2.6.0

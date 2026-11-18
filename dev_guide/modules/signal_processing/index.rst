@@ -34,13 +34,13 @@ Quick reference
      - Version
      - Description
    * - :ref:`Epoch Signal <module_epochsignal>`
-     - 2.0.0
+     - 2.0.1
      - Segments EEG signals into overlapping or non-overlapping epochs of fixed duration.
    * - :ref:`Filter Signal <module_filtersignal>`
      - 2.2.0
      - Applies a FIR/IIR filter to EEG signals.
    * - :ref:`Ica Components <module_icacomponents>`
-     - 2.1.0
+     - 2.1.1
      - Find components of a signal with idependant component analysis.
    * - :ref:`Ica Restore <module_icarestore>`
      - 2.1.0
@@ -49,16 +49,16 @@ Quick reference
      - 2.1.0
      - Inverts signals.
    * - :ref:`IRASA YASA <module_irasayasa>`
-     - 0.0.1
+     - 0.0.2
      - Spectral power decomposition using IRASA algorithm.
    * - :ref:`Moving RMS <module_movingrms>`
      - 2.0.0
      - Computes RMS value on a moving window.
    * - :ref:`PSA Compilation FOOOF <module_psacompilationfooof>`
-     - 0.2.0
+     - 0.2.1
      - Analyses and reports the PSD output designed specifically for FOOOF analysis.
    * - :ref:`Remove Channel Artefact <module_removechannelartefact>`
-     - 2.0.0
+     - 2.0.1
      - Removes full-channel artefacts from signals and events.
    * - :ref:`Resample <module_resample>`
      - 2.1.0
@@ -70,7 +70,7 @@ Quick reference
      - 2.1.0
      - Resets the signal that occurs during an artefact.
    * - :ref:`Score Sleep Stages YASA <module_yasasleepstaging>`
-     - 2.2.0
+     - 2.2.1
      - Automatic sleep stage classification using YASA's machine learning model.
    * - :ref:`Stft <module_stft>`
      - 2.3.0
@@ -79,5 +79,5 @@ Quick reference
      - 2.1.0
      - Subtracts signals from a specific channel from the signals of a list of channels.
    * - :ref:`Trim Signal <module_trimsignal>`
-     - 2.0.0
+     - 2.0.1
      - Trims continuous/discontinuous signal segments and their associated events to a time window defined by.

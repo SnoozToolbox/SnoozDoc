@@ -7,7 +7,7 @@ Sleep Cycles Delimiter
 
 **Package:** CEAMSModules 7.5.0
 
-**Version:** 2.6.0
+**Version:** 2.6.2
 
 Overview
 --------
