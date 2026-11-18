@@ -69,9 +69,10 @@ To export the transposed report, define how to average the spectral power across
     * **Total** to output the average through the whole recording.
     * **Distribution per clock hour** to output the average per real clock hour, from hour 1 to 9. 
     * **Distribution per hour spent in each sleep stage** to output the average per stage when it reaches an hour, from hour 1 to 9. 
-    * **Distribution per sleep cycle** to output the average per sleep cycle, from sleep cycle 1 to 6. 
-    * **Distribution per annotation** to output the average per selected annotation. No cycle or hour information is available for this option.
-      
+    * **Distribution per sleep cycle** to output the average per sleep cycle, from sleep cycle 1 to 6.
+
+Only the choices found in the report are listed. For a report of the analysis per annotation, the averages are given for each annotation, and **Distribution per hour spent in each sleep stage** is not available.
+
 The maximum number of hours and sleep cycles, and the starting point (either the first sleep stage or the sleep onset) are defined when running the :ref:`Power_Spectral_Analysis` tool.
 
 Define the filename to save the exported files (the sufix _clean or _transposed will be added to the filename)
@@ -93,3 +94,7 @@ Version History
 
 * v2.5.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
    - Show subjects without selected channel or ROI and let users skip them during analysis.
+
+* v2.6.1 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
+   - Adapted to the per-annotation reports of the Power Spectral Analysis tool, which now have the same distributions as the per-stage reports (total, per clock hour, per sleep cycle); the "Distribution per annotation" option was removed.
+   - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).

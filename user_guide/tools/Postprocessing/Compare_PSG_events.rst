@@ -100,6 +100,7 @@ Version History
     - Added error handling workflow for PSG loading from workspaces and display failed files in the UI.
     - Added error handling workflow for duplicated sleep stages.
 
-* v2.5.0 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
+* v2.5.1 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
     - Fixed the TSV Writer module to support an empty list of annotations.
     - Improved validation dialogs using TableDialog.
+    - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).

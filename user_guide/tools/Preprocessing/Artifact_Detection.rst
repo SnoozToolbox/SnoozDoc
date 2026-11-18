@@ -331,6 +331,8 @@ Version History
     - Add error handling workflow for duplicated sleep stages.
     - Supports a list of EMG channels for the muscle artifact detector.
 
-* v2.8.0 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
+* v2.8.2 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
     - Support artifact detection when no EMG channel is available.
     - Updated the UI to clarify that spectral power estimation is based on the Welch method rather than STFT.
+    - Fixed option labels that were cut in the Detectors Settings step.
+    - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).

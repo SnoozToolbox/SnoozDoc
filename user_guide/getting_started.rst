@@ -149,6 +149,16 @@ On Linux platforms
 
    - For the `.zip` installation: ``~/.local/opt/Snooz/Snooz``
 
+Choose the light or dark theme
+=================================
+
+Snooz has a light theme and a dark theme. To change the theme:
+
+* Navigate to File > Settings > General Settings (macOS: Snooz > Preferences > General Settings) and choose the **Theme**.
+* Or click the moon button (the sun button in the dark theme) at the right of the menu bar. On macOS, this button is at the top right of the Home page.
+
+Snooz asks before restarting to show the new theme. The tool or process that is open will be closed: save your workspace first to keep its settings.
+
 Uninstall Snooz
 =================================
 
@@ -175,7 +185,7 @@ Update Snooz from the interface
 =================================
 
 1. Launch the Snooz application already installed on your desktop.  
-2. Navigate to the menu Help > About Snooz (macOS : Snooz > About Snooz)
+2. On the Home page, click **Check for updates**, or navigate to the menu Help > About (macOS : Snooz > About Snooz)
 3. If the installed version is older than the released version **download** Snooz for your OS.
 4. Close Snooz to avoid errors during the installation.  
 5. (Optional) You can uninstall the previous version of Snooz to delete obsolete packages.  

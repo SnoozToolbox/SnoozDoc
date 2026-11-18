@@ -141,7 +141,7 @@ For more details on accepted formats, see :ref:`accepted_format`.
         when results differ substantially; similar quality scores alone do not
         establish equivalent periodic or aperiodic results.
 
-**7 - Output File**
+**7 - Output Files**
     Whether the analysis is performed per sleep stage or per chosen annotations :  
 
         Define how to average the spectral power across the recording.
@@ -224,7 +224,7 @@ Version History
     - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
     - Add error handling workflow for duplicated sleep stages in the annotations file.
 
-* v4.6.0 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
+* v4.6.2 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
     - Fixed the widget enabling/disabling issue in Step 5: Annotation Selection.
     - Replaced occurrences of the term "rhythmic" with "periodic" throughout the UI and output reports.
     - Added support for artifact removal in per-annotation analyses.
@@ -238,3 +238,5 @@ Version History
     - Fixed filter cutoff validation prior to running the analysis.
     - Fixed workspace loading to keep FOOOF and IRASA settings.
     - Added full-model FOOOF fitting error and squared-correlation indicators to the periodic and aperiodic reports.
+    - Fixed labels that were cut in the Spectral Settings and Output Files steps.
+    - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).

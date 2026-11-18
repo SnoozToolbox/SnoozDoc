@@ -12,7 +12,7 @@ The invalid sections marked are saved as annotations in the accessory file.
 
 To open the Oximeter inspector:
 
-Navigate to the Snooz menu **"Preprocessing" → "Inspect EEG channels"**, and click on "Open File" in the left panel of the Viewer.
+Navigate to the Snooz menu **"Preprocessing" → "Inspect Oximeter channel"**, and click on "Open File" in the left panel of the Viewer.
 
 Select the "Montage" and the label to identify the "Oximeter channel".
 
@@ -63,4 +63,8 @@ Version History
 
 * v2.3.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
     - Improved PSG reader error handling for data-loading failures.
+
+* v2.3.2 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
+    - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+    - Made the plot follow the dark theme of Snooz.
 

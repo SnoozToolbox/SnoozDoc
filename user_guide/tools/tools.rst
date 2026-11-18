@@ -15,6 +15,11 @@ The tools and apps installed in Snooz are organized into three categories, each 
 2. **Processing**: Includes sleep reports, event detectors, and EEG spectral power analysis.
 3. **Postprocessing**: Includes secondary analyses such as performance evaluation of detected events, review of cohort reports, and tools for visualizing results.
 
+Tools and apps can also be opened from the Snooz Home page:
+
+* Type a few words in the **Search a tool** box (e.g., spindle, EDF, report), then click the tool or app found.
+* Click **Browse tools** under a category of **Your analysis workflow** to list the tools of this category.
+
 A new user
 -----------
 
@@ -43,15 +48,16 @@ Below is an example of an empty tool to guide you through the interface.
    :width: 700
    :alt: Alternative text    
 
-**1.** Launch the tool from the menu bar of Snooz.  
+**1.** Launch the tool from the menu bar or the Home page of Snooz.  
 
 **2.** The Snooz left panel allows you to navigate across views.  
    
    .. note::
 
-      * Home : The Snooz Home page with the recents files list.
+      * Home : The Snooz Home page, to search a tool, browse the analysis workflow, reopen a recent workspace or process, and find help (**Example data**, **Give feedback**, **Check for updates**).
       * Tool : The step-by-step interface for the current tool.
       * Process : The pipeline with the interconnected modules.
+      * App : The app currently open. This button is shown only while an app is open; the **X** button next to it closes the app.
   
 
 **3.** The steps panel and the "Previous" and "Next" buttons allow you to navigate through each step of the tool.  
@@ -60,15 +66,19 @@ Below is an example of an empty tool to guide you through the interface.
 
       * The introduction step is the home page of the tool. It describes how to use it. 
       * The number of steps is specific to each tool.
-      * Each step describes what the user must define as settings.  
+      * Each step describes what the user must define as settings.
+      * After pressing **Run**, a step whose settings must be fixed is shown in red (see 5).
 
 **4.** The user can save the workspace (.json file) at any moment. The workspace includes all the settings defined by the user in the current tool.   
    
-**5.** Press the green push button to run the tool.  
+**5.** Press the **Run** button to run the tool.  
    
    .. warning::  
       
-      The user will be informed if a required setting for the run has not been defined by the user.
+      Before running, Snooz checks the settings of each step in order. At the first step with a setting to fix, Snooz opens the step, shows it in red with the note "Check the settings of this step", and explains what to fix in a message. Fix the setting, then press **Run** again.
+
+While the tool runs, a progress window shows the file being analysed and the number of files (e.g., "Analysing file 2 of 10"), the module that is running, the elapsed time and, after the first file, an estimate of the time left.
+Snooz is busy until the process is completed. At the end, Snooz tells you that the process completed successfully, or lists the files that could not be processed, with the module that stopped each one and the reason.
 
 
 Load a Workspace for a Specific Tool
@@ -76,13 +86,13 @@ Load a Workspace for a Specific Tool
 
 A workspace can correspond to a tool with some or all of its settings predefined for a specific analysis—including recordings and channel selections.
 
-* To open a previously saved workspace, navigate to the menu **File** -> **Load Workspace**.
+* To open a previously saved workspace, navigate to the menu **File** -> **Load workspace**, or click **Load a workspace** on the Home page.
 
 * In the file browser window, select the ``.json`` file and click Open.
 
 .. warning::  
    
-   The `.json` file includes the Snooz API version (e.g., ``"package_api_version": "2.0.0"``) as well as any package dependencies.  
+   The `.json` file includes the Snooz API version (e.g., ``"item_api_version": "3.0.0"``) as well as any package dependencies.  
    Make sure to use a workspace compatible with your installed version of Snooz.  
    If you're continuing an analysis started with an older version of Snooz, the workspace file may be obsolete.  
    As a workaround, simply import the recordings and the corresponding channel selection directly into the tool using the menu from the newly installed version of Snooz. See :ref:`import_file_selection`.

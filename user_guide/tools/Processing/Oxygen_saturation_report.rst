@@ -334,3 +334,5 @@ Version History
 * v2.11.0 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
     - Ensured the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
     - Made annotations, including artifact, desat and recovery, now channel specific.
+    - Fixed parts of the introduction text that kept their own font and a white background.
+    - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
