@@ -85,6 +85,9 @@ The building blocks
    * - Link button
      - QPushButton, ``flat``, ``variant`` = ``link``, ``focusPolicy`` TabFocus: shows a hidden part of the page ("› Methods and references")
      - blue text
+   * - Illustration
+     - A drawing of the code, in the colors of the theme (palette ``Text`` and ``Link``), painted on a QLabel without picture, in a card with a small caption (Detect Spindles with A7: ``SpindleDetectionDoc.py``). Snooz puts a picture (QLabel with a pixmap) in a white card, made for pictures on a white background
+     - sharp, light and dark themes
    * - References
      - QVBoxLayout ``references_layout`` (margins 0, 6, 0, 0; spacing 8): a line ``references_line`` (QFrame HLine, Plain), then a QLabel ``references_label``, ``font``: 10 pt, ``wordWrap``, ``variant`` = ``help``, rich text, ``openExternalLinks`` true, one reference per line (``<br/>``). Under the text that cites them, see `Writing the texts`_
      - a line, then the references: 13 px, muted, blue links
