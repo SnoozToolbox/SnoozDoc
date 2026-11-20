@@ -85,6 +85,9 @@ The building blocks
    * - Link button
      - QPushButton, ``flat``, ``variant`` = ``link``, ``focusPolicy`` TabFocus: shows a hidden part of the page ("› Methods and references")
      - blue text
+   * - References
+     - QVBoxLayout ``references_layout`` (margins 0, 6, 0, 0; spacing 8): a line ``references_line`` (QFrame HLine, Plain), then a QLabel ``references_label``, ``font``: 10 pt, ``wordWrap``, ``variant`` = ``help``, rich text, ``openExternalLinks`` true, one reference per line (``<br/>``). Under the text that cites them, see `Writing the texts`_
+     - a line, then the references: 13 px, muted, blue links
 
 **Adding the variant property in Qt Designer:** select the widget, click **+** at the top of the Property Editor, choose **String**, name it ``variant``, then type the value. Untick *translatable*: the value is not a text for the user.
 
@@ -142,7 +145,7 @@ The first page of a tool presents it. From top to bottom:
 5. **Methods and references**, shown on demand:
 
    - two link buttons in a QHBoxLayout with a spacer: ``methods_show_button`` ("› Methods and references") and ``methods_hide_button`` ("⌄ Methods and references", property ``visible`` false), then a help "The details of each setting are shown in its own step.";
-   - a QWidget ``methods_widget`` (property ``visible`` false) holding the methods and the references;
+   - a QWidget ``methods_widget`` (property ``visible`` false) holding the methods, then the references block (a line, then the references);
    - connections (Signal/Slot Editor): ``clicked()`` of ``methods_show_button`` to ``show()`` of ``methods_widget`` and ``methods_hide_button`` and to ``hide()`` of itself; ``clicked()`` of ``methods_hide_button`` to ``hide()`` of ``methods_widget`` and of itself and to ``show()`` of ``methods_show_button``.
 
 The settings view of a module
@@ -155,6 +158,16 @@ The settings view of a module is shown in its window in the process designer, wh
 - **The generated form** has a card with one field per input (``<input>_label`` and ``<input>_lineedit``, used by ``<Module>SettingsView.py``). Replace the labels (the names of the inputs) by words ("Minimum duration", not ``min_duration``), put the unit after the field, and choose the right widget for each input (QDoubleSpinBox, QComboBox, QCheckBox...), changing the code of ``<Module>SettingsView.py`` with it (``setText``/``text`` become ``setValue``/``value``...).
 - A module without settings the user can edit keeps an empty settings view (see :ref:`module_howtos`).
 
+Pages shared by several tools
+==================================
+
+Some step forms are used by several tools: the step of another tool inherits the class of the step. For example, ``NonValidEventStep`` of Analyze EEG Spectral Power is used by the event steps of 9 tools. The settings views of the modules are shared the same way.
+
+- **No page title:** each tool gives the step its own name.
+- **Keep every widget name:** the steps that inherit the form use them (``setText``, ``setEnabled``).
+- **A page of lists** (files, events, channels): the lists take the whole page (no ``content_widget`` of 800 px, the cards side by side fill the page), and its helps are tooltips, on the title of the list or on the control they describe, so the lists keep their room.
+- **Check** the page in every tool that uses it. Raise the version of each of these tools when you redesign the pages of that tool.
+
 Writing the texts
 ==================================
 
@@ -166,6 +179,11 @@ Writing the texts
 - **Step description** (``description`` of the step in the json file of the tool, shown in the steps column): one or two sentences. The page holds the rest.
 - **Abbreviations:** write them in full ("power spectral analysis", not "PSA"), except the usual units and formats (Hz, EDF, FFT).
 - **Tooltips:** put the tooltip of a setting on its label, so the help mark (?) is next to the name of the setting. No tooltip that only repeats the name of the widget ("Check to perform the analysis on N1." on the check box N1). When you remove a description from the page, keep the most accurate description in the tooltip.
+- **References:** the same format everywhere, APA style: numbered in the order of the text ([1], [2]...); up to 20 authors, "&" before the last one; the journal and the volume in italics; a dash (–) between the pages; the DOI link at the end. They go in the references block, where a line separates them from the text that cites them. A text set by the code (a text box) never holds its references: put them in the references block of the form, and hide the block when the text has no reference. The text of a reference:
+
+  .. code-block:: html
+
+     [1] Feinberg, I., &amp; Floyd, T. C. (1979). Systematic trends across the night in human sleep cycles. <i>Psychophysiology</i>, <i>16</i>(3), 283–291. <a href="https://doi.org/10.1111/j.1469-8986.1979.tb02991.x">https://doi.org/10.1111/j.1469-8986.1979.tb02991.x</a>
 
 Things not to do
 ==================================
@@ -181,6 +199,7 @@ Redesigning an existing tool
 
 1. **Before** changing anything, save workspaces of the original pages: one with the default settings, one with every setting changed. A workspace saved before the redesign must open in the redesigned tool and give the same results.
 2. **Redesign** the pages. Keep every input widget: its object name, its class, its default value or state, its range, whether it is enabled, and its signal connections. Keep the name of every widget used in the code of the step (search ``self.<name>`` in the .py file of the step), labels included. Keep the tooltips.
+   A text box whose text the code sets or saves stays a text box: frameless (``frameShape`` NoFrame), with ``variant`` = ``help`` for a muted text.
 3. **Check:** the workspaces saved the same way after the redesign must be identical to the ones saved before (only the version of the package changes if it was raised), no tooltip is missing, no text is cut.
 4. Raise the version of the tool (``tool_version`` in the json file of the tool and ``item_version`` of the tool in the json file of the package) and add a line to the Version History of its documentation page.
 
@@ -196,6 +215,8 @@ Checklist
 - Introduction page: Before you start, What you will do, Accepted files, Methods and references on demand.
 - Settings view of a module: no page title, the inputs as fields with words and units.
 - Texts short, information kept, abbreviations in full, tooltips on the labels and never only repeating a name.
+- References after a line, in APA style with their DOI link, 10 pt, muted.
+- Page shared by several tools: no title, widget names kept, checked in every tool; a page of lists: helps in tooltips.
 - No style sheet, color, font family, other font size or QTextEdit for a fixed text.
 - Python file generated with pyside6-uic 6.8.2.
 - Checked in Snooz in the light and dark themes, at about 1300 px, 1500 px and maximized: no text cut.

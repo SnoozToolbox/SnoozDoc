@@ -5,9 +5,9 @@ Sleep Cycles Delimiter
 
 **Module name:** ``SleepCyclesDelimiter``
 
-**Package:** CEAMSModules 7.5.0
+**Package:** CEAMSModules 7.6.0
 
-**Version:** 2.6.2
+**Version:** 2.6.3
 
 Overview
 --------

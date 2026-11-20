@@ -28,7 +28,7 @@ Quick reference
      - 2.1.0
      - Supports sleep bouts operations within a Snooz process.
    * - :ref:`Sleep Cycles Delimiter <module_sleepcyclesdelimiter>`
-     - 2.6.2
+     - 2.6.3
      - Compute the sleep cycles.
    * - :ref:`Sleep Report <module_sleepreport>`
      - 2.2.0

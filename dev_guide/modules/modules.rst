@@ -305,7 +305,7 @@ All modules
    * - 51
      - :ref:`PSGReader <module_psgreader>`
      - Files I/O
-     - 2.5.3
+     - 2.5.4
      - Reads a PSG file.
    * - 52
      - :ref:`PSGWriter <module_psgwriter>`
@@ -345,7 +345,7 @@ All modules
    * - 59
      - :ref:`Sleep Cycles Delimiter <module_sleepcyclesdelimiter>`
      - Hypnogram Analysis
-     - 2.6.2
+     - 2.6.3
      - Compute the sleep cycles.
    * - 60
      - :ref:`Sleep Report <module_sleepreport>`

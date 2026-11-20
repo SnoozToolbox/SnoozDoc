@@ -64,7 +64,7 @@ Quick reference
      - 2.6.1
      - Reads the PSA output file and generates the PSA file clean or transposed.
    * - :ref:`PSGReader <module_psgreader>`
-     - 2.5.3
+     - 2.5.4
      - Reads a PSG file.
    * - :ref:`PSGWriter <module_psgwriter>`
      - 2.3.1

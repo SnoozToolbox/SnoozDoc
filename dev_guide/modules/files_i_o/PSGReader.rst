@@ -5,9 +5,9 @@ PSGReader
 
 **Module name:** ``PSGReader``
 
-**Package:** CEAMSModules 7.5.0
+**Package:** CEAMSModules 7.6.0
 
-**Version:** 2.5.3
+**Version:** 2.5.4
 
 Overview
 --------

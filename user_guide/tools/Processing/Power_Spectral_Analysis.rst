@@ -243,3 +243,6 @@ Version History
 
 * v4.6.3 : Distributed with CEAMS package version 7.6.0
     - Redesigned the pages of the tool: the settings come first, in cards, with a short help; the limits and the things to do first are in callouts, and how the methods work at the end of the pages. The introduction lists the steps and the accepted files, with the methods and references on demand.
+    - Redesigned the pages shared with other tools: Sleep Cycles, Input Files, Events to exclude and Annotations Selection. The helps of the event lists are in tooltips.
+    - The Montages and Channels tables of the Input Files step show the name of the file; its tooltip shows the whole path.
+    - The references follow one format: APA style, with a DOI link.
