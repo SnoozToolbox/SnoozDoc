@@ -16,3 +16,4 @@ It is assumed that you have already explored Snooz and have an understanding of 
    module_howtos
    tool_howtos
    forms_style_howtos
+   tool_design_howtos

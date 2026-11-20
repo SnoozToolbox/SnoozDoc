@@ -240,3 +240,6 @@ Version History
     - Added full-model FOOOF fitting error and squared-correlation indicators to the periodic and aperiodic reports.
     - Fixed labels that were cut in the Spectral Settings and Output Files steps.
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+
+* v4.6.3 : Distributed with CEAMS package version 7.6.0
+    - Redesigned the pages of the tool: the settings come first, in cards, with a short help; the limits and the things to do first are in callouts, and how the methods work at the end of the pages. The introduction lists the steps and the accepted files, with the methods and references on demand.

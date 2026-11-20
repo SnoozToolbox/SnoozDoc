@@ -7,6 +7,8 @@ How Tos - Tool
 
 To know what is the role of a tool in Snooz, see :ref:`technical_overview`.
 
+Design the pages of your tool as described in :ref:`tool_design_howtos`.
+
 .. contents::
    :local:
 

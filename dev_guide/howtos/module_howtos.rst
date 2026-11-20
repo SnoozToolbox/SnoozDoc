@@ -6,6 +6,8 @@ How Tos - Module
 
 To know what is the role of a module in Snooz, see :ref:`technical_overview`.
 
+Design the settings view of your module as described in :ref:`tool_design_howtos`.
+
 .. contents::
    :local:
 
