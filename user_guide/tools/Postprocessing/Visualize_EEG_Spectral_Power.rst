@@ -121,7 +121,8 @@ Version History
 	- The title of the figures has been removed to allow more flexibility for the users.
 	- Some parameter names have been changed internally to be clearer for developers, leading to an increase in the tool's version number.
 
-* v2.1.1 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
+* v2.2.0 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
 	- Added separate logarithmic scale options for the X axis (frequency) and the Y axis (power) in the Output Files step.
 	- Added support for the per-annotation reports of the Power Spectral Analysis tool: the annotations are drawn in place of the sleep stages (sleep-stage and annotation reports cannot be mixed in one run).
 	- Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+	- Improved plotting range, stage selection, font choices, and PDF export safety
