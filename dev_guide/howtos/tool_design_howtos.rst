@@ -30,7 +30,7 @@ The forms only **mark** their widgets: a frame shape or a ``variant`` dynamic pr
 
 - Never set a style sheet, a color or a font family in a form, and no colored HTML (such as a red "NOTE:"). Use the building blocks below.
 - Qt Designer does not load the Snooz style sheet: cards and callouts look plain there. Check the look in Snooz, in the light and the dark theme.
-- The callouts, the step numbers and the link buttons need a Snooz version that has the TOOL PAGES rules (the release after Snooz Toolbox 1.1.0). An older Snooz shows them plain.
+- The callouts, the step numbers, the link buttons and the muted text boxes need Snooz Toolbox 1.2.0 or later (TOOL PAGES rules of its style sheet). An older Snooz shows them plain.
 
 The building blocks
 ==================================
