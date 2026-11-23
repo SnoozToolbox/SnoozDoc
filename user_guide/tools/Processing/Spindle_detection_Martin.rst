@@ -159,5 +159,5 @@ Version History
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
 
 * v2.11.3 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
-    - Redesigned the pages of the tool, including those shared with other tools (Sleep Cycles, Input Files, Non valid events), with a new illustration of a spindle. The references are in APA style, with a DOI link.
+    - Redesigned the pages and the step descriptions of the tool, including those shared with other tools (Sleep Cycles, Input Files, Non valid events), with a new illustration of a spindle. The references are in APA style, with a DOI link.
     - Corrected the sigma band in the description of the Martin settings (11.1-14.9 Hz).
