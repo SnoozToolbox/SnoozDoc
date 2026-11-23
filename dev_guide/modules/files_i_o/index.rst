@@ -37,7 +37,7 @@ Quick reference
      - 2.1.1
      - Reads events from a CSV file.
    * - :ref:`Detections Cohort Review <module_detectionscohortreview>`
-     - 2.1.1
+     - 2.1.2
      - Reads the spindle/sw output files and generates the "Detected events cohort report" file clean or transposed.
    * - :ref:`Domino Converter <module_dominoconverter>`
      - 2.1.1

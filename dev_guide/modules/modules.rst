@@ -260,7 +260,7 @@ All modules
    * - 42
      - :ref:`Detections Cohort Review <module_detectionscohortreview>`
      - Files I/O
-     - 2.1.1
+     - 2.1.2
      - Reads the spindle/sw output files and generates the "Detected events cohort report" file clean or transposed.
    * - 43
      - :ref:`Domino Converter <module_dominoconverter>`

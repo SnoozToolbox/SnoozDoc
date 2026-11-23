@@ -36,7 +36,7 @@ Region Of Interest :
       
       Rename your channel labels first. Adding the ROIs must be the final step.
 
-**2 - Output Files**
+**2 - Output File**
 
 Check the reports you want to generate:
 
@@ -55,7 +55,7 @@ The output file is a .tsv (tab separated values) file.
 
 .. Warning::
    
-   The current output is added (appended) to the existing output file.
+   The output files are overwritten if they exist. To put several cohort reports together, add them all in step 1 - Input Files.
 
 
 Version History
@@ -69,3 +69,7 @@ Version History
 
 * v2.2.1 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+
+* v2.2.2 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+    - Redesigned the pages and the step descriptions of the tool, including the Input Files page (settings view of the Detections Cohort Review module).
+    - Corrected the introduction (the output files are overwritten, not appended), the tooltips of the reports to export and the step number in the warnings of the Output File step.
