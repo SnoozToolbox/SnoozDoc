@@ -34,7 +34,6 @@ Three additional output reports are available :
          * Frequency (Hz): inverse of total duration (1/T on image A)
          * Peak-to-peak amplitude (µV): corresponds to H to D on image (A)
          * Negative peak amplitude (µV): corresponds to H on image (A)
-         * Positive peak amplitude (µV): corresponds to D on image (A)
          * Negative half-wave duration (s): duration of negative portion
          * Negative peak occurrence (s): time from wave onset to negative peak
          * Positive half-wave duration (s): duration of positive portion
@@ -48,7 +47,7 @@ Three additional output reports are available :
       See :ref:`slow_wave_characteristics_info_csv` for the variable definition. 
 
    **2. Sleep stages**
-      Files with the sleep stages selected for detection (useful to compute the slow wave density per division of the night). One file per recording, one row per sleep satge.
+      Files with the sleep stages selected for detection (useful to compute the slow wave density per division of the night). One file per recording, one row per sleep stage. Not written for recordings without sleep stages.
 
    **3. Slow wave characteristics averaged by subject level**
       A file with the slow wave characteristics averaged per subject.  One file for the cohort, one row per channel.
@@ -72,17 +71,20 @@ Three additional output reports are available :
 Filter Information
 --------------------
 
-The filter used in the Slow Wave detector is a Butterworth design implemented in second-order-section (SOS) form and applied using bidirectional zero-phase filtering. 
+The filter used in the Slow Wave detector is a Chebyshev type II design implemented in second-order-section (SOS) form and applied using bidirectional zero-phase filtering. 
+It is designed to match the response of the legacy FIR filter (Hamming window), with a shorter processing time.
 This approach preserves the requested magnitude response while eliminating phase distortion.
 
 **Bandpass filter parameters:**
 
 - Type: IIR bandpass
-- Family: Butterworth
-- Frequency band: 0.16 Hz to 4 Hz
-- Order: 30 (internally halved before the forward/backward pass)
+- Family: Chebyshev type II
+- Frequency band: 0.16 Hz to 4 Hz by default (Band-pass filter in step 3 - Detection Criteria); the upper edge of the passband is set to 98% of the high cutoff
+- Stopbands: below 75% of the low cutoff and above 105% of the upper edge of the passband
+- Passband ripple: 0.25 dB at most; stopband attenuation: 46 dB at least
+- Order: the lowest order that meets these specifications
 - Form: second-order sections (SOS)
-- Application: bidirectional zero-phase filtering (filtfilt)
+- Application: bidirectional zero-phase filtering (sosfiltfilt)
 
 
 Steps
@@ -114,7 +116,7 @@ For more details on accepted formats, see :ref:`accepted_format`.
       
       Artefacts must be previously detected and saved in the accessory file.
 
-**3 - Detection Criterias**
+**3 - Detection Criteria**
 
    Choose the criteria to detect slow wave and select the sleep stages you want to detect slow wave in.
 
@@ -164,3 +166,8 @@ Version History
     - Ensure the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
     - Added the per-event characteristics dictionary file for the slow-wave characteristics report.
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+
+* v2.11.2 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+    - Redesigned the pages and the step descriptions of the tool, including those shared with other tools (Sleep Cycles, Input Files, Non valid events), with new illustrations of a slow wave and of its phase. The references are in APA style, with a DOI link.
+    - Corrected the name of step 3 (Detection Criteria).
+    - Corrected the Detection Criteria and Output Files pages: the two frequencies are the cutoffs of the band-pass filter (not a criterion on the wave frequency), the characteristics are saved in the folder "slow_wave_characteristics", and the characteristics file has no positive peak amplitude.
