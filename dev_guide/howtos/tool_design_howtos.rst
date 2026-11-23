@@ -113,7 +113,7 @@ Making a step page, step by step
 
    - Two short cards go side by side: a QHBoxLayout, spacing 16, ``layoutStretch`` ``1,1``. End each card with a vertical spacer, so their contents stay at the top.
    - A group that can be turned on or off starts with its check box, in bold, as the card title.
-   - A card alone and short (two fields) takes half the width: put it in a QHBoxLayout with a horizontal spacer, ``layoutStretch`` ``1,1``.
+   - A card alone and short (two fields) takes half the width: put it in a QHBoxLayout (spacing 16) with a fixed horizontal spacer of 16 px and a horizontal spacer, ``layoutStretch`` ``1,0,1``. Qt adds no spacing next to a spacer: without the fixed spacer, the card is 8 px wider than the cards of a row below it.
 
 5. **Lay out the settings in each card.**
 

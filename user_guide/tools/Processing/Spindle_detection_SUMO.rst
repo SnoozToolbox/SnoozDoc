@@ -164,3 +164,6 @@ The version history of this tool is as follows:
     - Cleaned up the introduction picture.
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
 
+* v2.13.3 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+    - Redesigned the pages of the tool, including those shared with other tools (Sleep Cycles, Input Files, Non valid events), with a new illustration of a spindle. The references are in APA style, with a DOI link.
+    - Fixed the Detection Settings page, which did not show the event group saved in a workspace.
