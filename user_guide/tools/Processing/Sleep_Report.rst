@@ -17,12 +17,12 @@ This tool generates three types of reports:
 * **Events Sleep Report**
 
     A breakdown of selected events based on the report criteria, categorized by sleep stage, cycle, and thirds and halves of the night.  
-    Predefined report criteria included in Snooz: Arousals Report, Bruxism Report, PLM Report, Respiratory Events Report, Snoring report.
+    Predefined report criteria included in Snooz: Arousals Report, Bruxism Report, four PLM reports, Respiratory Events Report, Snoring report and events reports without criteria.
     To look at the report variables and their definitions, see : :ref:`event_report_info_csv`  
 
 * **Temporal Links Report**: 
 
-   The relationship between two selected events within a specified time window, such as the occurrence of event 1 starting before the start of event 2.
+   The events of two events reports that occur together: one event starts within the analysis window (0.5 s by default) after the start or the end of the other, or the two events overlap. For example, arousals that start just after the end of respiratory events.
    To look at the report variables and their definitions, see : :ref:`temporal_links_report_info_csv`  
 
 
@@ -65,12 +65,15 @@ The scrolling menu lists the predefined events report :
 
 * Arousals Report
 * Bruxism Report
-* PLM Report
+* PLMS Report-sleep only
+* PLM Total Report-recording time
+* PLM Report-awake in sleep period
+* PLM Report-before sleep onset
 * Respiratory Events Report
 * Snoring report
-* Events report without criteria
-* Events report without criteria-EOG_phasic
-* Events report without criteria-EOG_tonic
+* Events report without criteria-sleep only
+* Events report without criteria-EOG_Phasic
+* Events report without criteria-EOG_Tonic
 		
 The selection Criteria window details the criteria defined for the selected report. 
 
@@ -85,13 +88,21 @@ The selection Criteria window details the criteria defined for the selected repo
 	
 **3 - Temporal Links**
 
-The length of the time window defining a possible link between 2 events is 0.5 s by default.
+Check the pairs of events reports to link, among the events reports added in step 2. The events of the 1st report are called events 1, and the events of the 2nd report events 2.
 
-Check all the temporal links you want to generate a report for. The temporal link must be defined between 2 events type.
+The analysis window (0.5 s by default) is the maximum delay between the start or the end of an event and the start of the linked event. Two events are linked when:
+
+* **After a start**: one event starts within the analysis window after the start of the other.
+* **After an end**: one event starts within the analysis window after the end of the other.
+* **Overlap**: the two events overlap in time (the analysis window is not used).
+
+For each case, in both orders (events 1 then events 2, and events 2 then events 1), the report gives the number of links, the index per hour and the percentage of events 1 and events 2 linked, plus the mean delay (s) after a start or an end. It also counts the events linked in at least one case.
+
+The index per hour uses the total sleep time, or the period of the events reports: the recording time (bruxism, PLM recording time), the time before sleep onset, or the time awake in the sleep period.
 
 .. warning::
 
-   Make sure the "tsv report" option is checked to generate the temporal links reports.
+   Make sure the "Temporal links reports (.tsv)" option is checked to generate the temporal links reports.
 	
 **4 - Generate Reports**
 
@@ -132,3 +143,8 @@ Version History
     - Fixed event list filename generation when using filtered selection groups and names.
     - Fixed cleanup of the temporal link model in the UI.
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+
+* v2.9.2 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+    - Redesigned the pages and the step descriptions of the tool, including the Sleep Cycles page shared with other tools.
+    - Corrected the introduction: the report filenames start with the prefix (not a suffix), and the list of the predefined events reports.
+    - Clarified the definition of the temporal links in the introduction and in the Temporal Links step.
