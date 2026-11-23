@@ -50,11 +50,14 @@ The YASA sleep staging algorithm is an open-source tool trained on over 30,000 h
 
 Output Files
 ------------
-This tool has four main outputs when runing in "Compare with Expert Scoring mode":
-   - The detected sleep stages are stored in a Snooz accessory file (If the accessory file was provided, the detected sleep stages will be stored in the same accessory file).
-   - The expert annotated and predicted hypnogram along with the confusion matrix, accuracy, average confidence, and Kappa score are exported as a PDF file.
-   - The hypnodensity plot is exported as a separate PDF file.
-   - A complete cohort report is generated in a tsv file, which includes the subject names, accuracy, average confidence, Kappa score, and f1-scores for each subject.
+In both modes, the detected sleep stages are stored in a Snooz accessory file (If the accessory file was provided, the detected sleep stages will be stored in the same accessory file).
+
+When running in "Compare with Expert Scoring" mode, three more outputs are saved in the destination folder:
+   - The expert annotated and predicted hypnogram along with the confusion matrix, accuracy, average confidence, and Kappa score are exported as a PDF file named as the PSG file.
+   - The hypnodensity plot is exported as a separate PDF file (<PSG filename>_hypnodensity_plot.pdf).
+   - A complete cohort report is generated in a tsv file (YASA_sleep_staging_metrics_cohort_report.tsv), which includes the subject names, accuracy, average confidence, Kappa score, and f1-scores for each subject. New subjects are added at the end of the file.
+
+When running in "Automatic Scoring" mode, the hypnodensity plot is saved as a PDF file next to the PSG file (<PSG filename>_hypnodensity_plot.pdf).
 
 Steps
 -----
@@ -157,3 +160,6 @@ Version History
     - Support for writing sleep stages into Stellate format has been added.
     - Support for writing sleep stages into NATUS format has been added.
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+* v2.6.2 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+    - Redesigned the pages and the step descriptions of the tool, including the Input Files page shared with other tools. The reference is in APA style, with a DOI link.
+    - Fixed the messages of the Export Scoring step, which named the step '3 - Export Results'.
