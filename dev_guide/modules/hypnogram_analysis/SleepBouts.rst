@@ -5,9 +5,9 @@ Sleep Bouts
 
 **Module name:** ``SleepBouts``
 
-**Package:** CEAMSModules 7.5.0
+**Package:** CEAMSModules 7.6.0
 
-**Version:** 2.1.0
+**Version:** 2.1.1
 
 Overview
 --------

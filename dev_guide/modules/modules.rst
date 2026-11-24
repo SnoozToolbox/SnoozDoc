@@ -340,7 +340,7 @@ All modules
    * - 58
      - :ref:`Sleep Bouts <module_sleepbouts>`
      - Hypnogram Analysis
-     - 2.1.0
+     - 2.1.1
      - Supports sleep bouts operations within a Snooz process.
    * - 59
      - :ref:`Sleep Cycles Delimiter <module_sleepcyclesdelimiter>`

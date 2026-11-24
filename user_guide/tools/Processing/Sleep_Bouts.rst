@@ -17,10 +17,6 @@ To see the complete list of variables included in the report, see :ref:`Sleep_bo
 Steps
 -----------------
 
-| **Common settings** 
-| Define the sleep cycles criteria for your study. 
-| For more information, see :ref:`Sleep_Cycles_definition`.
-
 **1 - Input Files**
 
 Start by opening your PSG files (.edf, .sts or .eeg). 
@@ -39,10 +35,11 @@ Start by opening your PSG files (.edf, .sts or .eeg).
 
 For more details on accepted formats, see :ref:`accepted_format`.
 
-**2 - Output Files**
+**2 - Output File**
     
 The output is a TSV (Tab Separated Values) file containing one row per recording, including the ten longest sleep bouts, 
 as well as the mean and standard deviation of both the ten longest and all sleep bouts for each combination listed above.
+If the file already exists, the results are added at the end of it.
 
 See :ref:`Sleep_bouts_report_csv` for the variable definition. 
 
@@ -65,3 +62,6 @@ Version History
 * v2.3.0 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
     - Excluded filename path from the output report.
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+
+* v2.3.1 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+    - Redesigned the pages and the step descriptions of the tool, including Input Files, shared with other tools, with a new illustration of the sleep bouts.
