@@ -44,7 +44,7 @@ Steps
    - Fewer than 2 channels
    - Fewer than 2 valid epochs
 
-**3 - Filtering**
+**3 - Filter Settings**
 
 - **Frequency Band Selection**:  
   Choose a predefined band (Delta, Theta, Alpha, Beta, Full) or define a custom band to match your research question.
@@ -56,7 +56,7 @@ Steps
 **4 - Annotation Selection**
   Select specific annotations/events to perform connectivity analysis on. You can choose multiple annotations if needed.
 
-**5 - Connectivity Configuration**
+**5 - Connectivity Settings**
 
 - **Connectivity Type**:  
   Choose between wPLI, dPLI, or AEC.
@@ -178,13 +178,13 @@ References
 
 [1] Stam, C. J., & van Straaten, E. C. W. (2012). Go with the flow: Use of a directed phase lag index (dPLI) to characterize patterns of phase relations in a large-scale model of brain dynamics. NeuroImage, 62(3), 1415–1428. https://doi.org/10.1016/j.neuroimage.2012.05.050
 
-[2] Vinck, M., Oostenveld, R., van Wingerden, M., Battaglia, F., & Pennartz, C. M. (2011). An improved index of phase-synchronization for electrophysiological data in the presence of volume-conduction, noise and sample-size bias. NeuroImage, 55(4), 1548–1565. https://doi.org/10.1016/j.neuroimage.2011.01.055
+[2] Vinck, M., Oostenveld, R., van Wingerden, M., Battaglia, F., & Pennartz, C. M. A. (2011). An improved index of phase-synchronization for electrophysiological data in the presence of volume-conduction, noise and sample-size bias. NeuroImage, 55(4), 1548–1565. https://doi.org/10.1016/j.neuroimage.2011.01.055
 
 [3] Hipp, J. F., Hawellek, D. J., Corbetta, M., Siegel, M., & Engel, A. K. (2012). Large-scale cortical correlation structure of spontaneous oscillatory activity. Nature Neuroscience, 15(6), 884–890. https://doi.org/10.1038/nn.3101
 
-[4] Duclos, C., Maschke, C., Mahdid, Y., Nadin, D., Rokos, A., Arbour, C., Badawy, M., Létourneau, J., Owen, A. M., Plourde, G., & Blain-Moraes, S. (2023). Brain responses to propofol in advance of recovery from coma and disorders of consciousness: A preliminary study. American Journal of Respiratory and Critical Care Medicine, 207(5), 602–613. https://doi.org/10.1164/rccm.202105-1223OC
+[4] Duclos, C., Maschke, C., Mahdid, Y., Nadin, D., Rokos, A., Arbour, C., Badawy, M., Létourneau, J., Owen, A. M., Plourde, G., & Blain-Moraes, S. (2022). Brain responses to propofol in advance of recovery from coma and disorders of consciousness: A preliminary study. American Journal of Respiratory and Critical Care Medicine, 205(2), 171–182. https://doi.org/10.1164/rccm.202105-1223OC
 
-[5] Rubinov, M., & Sporns, O. (2010). Complex network measures of brain connectivity: Uses and interpretations. NeuroImage, 52(3), 1059–1072. https://doi.org/10.1016/j.neuroimage.2009.10.003
+[5] Rubinov, M., & Sporns, O. (2010). Complex network measures of brain connectivity: Uses and interpretations. NeuroImage, 52(3), 1059–1069. https://doi.org/10.1016/j.neuroimage.2009.10.003
 
 
 Version History
@@ -202,3 +202,7 @@ Version History
     - Added TSV exports for network properties and participation coefficients.
     - Fixed restoration of EEG connectivity settings from saved workspaces.
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+* v2.7.2 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+    - Redesigned the pages and the step descriptions of the tool, including those shared with other tools (Input Files, Events Exclusion, Annotation Selection). The references are in APA style, with a DOI link.
+    - Corrected the name of step 2 (Events Exclusion).
+    - Corrected the references of the introduction (numbering, year, volume and pages of Duclos et al., pages of Rubinov and Sporns) and the number of channels needed for the head connectivity plot (at least 4) and for the network properties (at least 32).
