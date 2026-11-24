@@ -24,14 +24,13 @@ REM Period (REMP)
 * The end is defined as the last R stage of the REMP or the beginning of the next NREMP.
 * The REMP begins at the first stage R.
 
-The hypnogram below shows six complete sleep cycles (NREMP + REMP) and one incomplete cycle at the end of the night.
+The hypnogram below (learn-nsrr01, minimum criteria) shows six complete sleep cycles (NREMP + REMP), labeled C1 to C6 above it, and one incomplete cycle at the end of the night, in gray.
 The Y-axis indicates sleep stages, and the X-axis shows time from recording start (hours).
-Cycles 1-6 are labeled above the hypnogram (e.g., C1-C6); the final incomplete cycle is unlabeled.
 NREM periods appear in blue and REM periods in green.
 
-.. image:: ./cycle_min_learn-nsrr01_90.png
+.. image:: ./sleep_cycles_learn-nsrr01.png
     :width: 700
-    :alt: Alternative text
+    :alt: Hypnogram of learn-nsrr01 and its sleep cycles
 
 Steps
 ===============================
@@ -65,10 +64,15 @@ Sleep Cycle Cohort file :
 * Each row corresponds to a period and the group identifies the PSG recording.  
 * New PSG recording are added in the .tsv file if it exists otherwise it is created.
 
+Hypnogram images : 
+
+* The hypnogram of each PSG is saved in the folder of the cohort file, named after the cohort file and the PSG file, then the suffix (for example: cycles_learn-nsrr01_hyp.pdf).
+* Without an extension in the suffix, the image is saved as a .pdf file (.png is also supported).
+
 Sleep Cycle specific to each PSG opened: 
 
-* The hypnogram of each PSG is saved in a .png picture file
-* The sleep stages and sleep periods events are saved in a .tsv file
+* The sleep stages and sleep periods events are saved in a .tsv file next to the PSG file (<PSG filename>_stage_cycle.tsv).
+* If the sleep cycles delimitation gives warnings, they are written in a log file next to the PSG file (<PSG filename>_Cycle_WARNING.txt).
 
 
 Version History
@@ -88,3 +92,8 @@ Version History
     - Updated UI pictures.
     - Removed absolute PSG paths from the output report
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+
+* v2.7.2 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+    - Redesigned the pages and the step descriptions of the tool, including those shared with other tools (Input Files, Cycle Definition).
+    - Corrected the Output Files page: the hypnogram images are saved in the folder of the cohort report, and the log file is written only when there are warnings.
+    - Replaced the hypnogram image of the introduction with a drawing in the colors of the theme (same recording and cycles).
