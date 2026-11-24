@@ -43,7 +43,7 @@ Quick reference
      - 2.1.1
      - Converts DOMINO accessory files (ASCII) in one Snooz accessory tsv file.
    * - :ref:`EDF Annotations Reader <module_edfannotationsreader>`
-     - 2.0.1
+     - 2.0.2
      - Used to read the EDF Annotations signal and create a pandas dataframe with the events.
    * - :ref:`Edf Xml Reader <module_edfxmlreader>`
      - 2.1.0

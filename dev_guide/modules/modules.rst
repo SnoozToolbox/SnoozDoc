@@ -270,7 +270,7 @@ All modules
    * - 44
      - :ref:`EDF Annotations Reader <module_edfannotationsreader>`
      - Files I/O
-     - 2.0.1
+     - 2.0.2
      - Used to read the EDF Annotations signal and create a pandas dataframe with the events.
    * - 45
      - :ref:`Edf Xml Reader <module_edfxmlreader>`
