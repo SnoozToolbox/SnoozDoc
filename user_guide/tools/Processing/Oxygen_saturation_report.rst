@@ -43,7 +43,7 @@ Start by opening your PSG files (.edf, .sts or .eeg).
 
 For more details on accepted formats, see :ref:`accepted_format`.
 
-**2 - Invalid sections**
+**2 - Non valid sections**
 
 The user must select any annotations to be excluded from the oxygen saturation analysis. 
 Invalid sections can be identified by the user using the :ref:`Oximeter` viewer.
@@ -95,7 +95,7 @@ The user specifies the file location to save the Cohort Oxygen Saturation Report
 
 **Optional outputs**
 
-The detected desaturation events can be saved in the accessory file associated with the recording, for review.
+The detected desaturation and recovery events and the detected artifacts (group SpO2, names desat_SpO2, recovery_SpO2 and art_SpO2) can be saved in the accessory file associated with the recording, for review.
 
 The user can select an output directory to save the following outputs for each recording :
 
@@ -336,3 +336,7 @@ Version History
     - Made annotations, including artifact, desat and recovery, now channel specific.
     - Fixed parts of the introduction text that kept their own font and a white background.
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+
+* v2.11.1 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+    - Redesigned the pages and the step descriptions of the tool, including those shared with other tools (Sleep Cycles, Input Files, Non valid sections), with a new illustration of a desaturation. The reference is in APA style, with a DOI link.
+    - Corrected the Output Files page: the events written in the accessory file also include the artefacts detected (art_SpO2).
