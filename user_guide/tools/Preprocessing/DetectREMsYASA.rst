@@ -4,21 +4,20 @@
 Detect REM events with YASA
 ===============================
 
-This tool utilizes the Yet Another Splindle Algorithm (YASA) rapid eye movments (REMs) detector algorithm. It also classifies the detected REMs into phasic and tonic mini-epochs.
+This tool utilizes the Yet Another Spindle Algorithm (YASA) rapid eye movements (REMs) detector algorithm. It also classifies the detected REMs into phasic and tonic mini-epochs.
 
 Algorithm Details
 ------------------
 
-This algorithm uses the idea from the methodologies proposed in [1] and [2], primarily building upon Agwal’s [2] approach, which applies amplitude thresholding to the negative product of the LOC and ROC filtered signals.
+This algorithm uses the idea from the methodologies proposed in [1] and [2], primarily building upon Agarwal’s [2] approach, which applies amplitude thresholding to the negative product of the LOC and ROC filtered signals.
 Using this technique, the algorithm identifies signal peaks and extracts key features, including the duration of the REM period, the peak absolute values of ROC and LOC, as well as the absolute rise and fall slopes for both signals.
 
-To ensure reliable performance, the algorithm requires a minimum of 50 detected REMs to apply its model, which is based on the IsolationForest random forest classifier.
-Additionally, if the user selects the "remove outlier" option as True, any outliers detected after applying the IsolationForest will be excluded from the final detection results.
+If the user selects the "Remove outliers" option (Detector Step), the outliers are detected with an Isolation Forest (scikit-learn) and removed from the detected REMs. This step is only applied when at least 50 REMs are detected.
 
-.. note:: Only REMs events that fall within at least one-third of the REM sleep stage are retained. Events occurring outside this threshold are discarded. (This rule is important when a REM event is detected at the transition of two sleep stages.)
+.. note:: With the sleep stages (Scored, in Detector Step), a REM event is retained when the epoch at one third of its duration from its start, or at one third of its duration from its end, is scored REM sleep (R). Other events are discarded. (This rule is important when a REM event is detected at the transition of two sleep stages.)
 
 **- Usage points:**
-   - All output parameters of this algorithm are computed using the filtered LOC and ROC signals. The filtering process is based on the thresholds defined in the DetectionStep.
+   - All output parameters of this algorithm are computed using the filtered LOC and ROC signals. The filtering process is based on the REM frequency band defined in the Detector Step.
    - For optimal results, the user should apply this detection only to artifact-free REM sleep data.
 
 
@@ -51,7 +50,7 @@ PSG files including header and events are needed.
 
 For more details on accepted formats, see :ref:`accepted_format`.
 
-.. note:: Annotation files are not required for the functionality of this tool. However, if provided, they must include sleep staging. The REMs report is only generated when an annotation file is supplied. Without one, the tool performs REMs detection solely based on the algorithm's detection criteria, and detections may occur in any sleep stage.
+.. note:: Annotation files are not required for the functionality of this tool. However, if provided, they must include sleep staging. The REMs report is only generated with the sleep stages (Scored, in Detector Step). Without them (Unscored), the tool performs REMs detection solely based on the algorithm's detection criteria, on the whole recording.
 
 .. note:: If you do not have annotation files, we highly recommend using the "Score Sleep Stages with YASA" tool first to generate an annotation file, and then running this tool for more reliable REMs detection.
 
@@ -68,8 +67,8 @@ In this step the user can set the parameters for the detection of REMs using YAS
    - **Duration**: Minimum and maximum duration of the REM.
    - **REM frequency**: Minimum and maximum frequency of the REM.
    - **Relative prominence**: Scales the minimum prominence threshold as a fraction of minimum amplitude. (e.g., 0.5 means peaks must stand out by at least half of the minimum amplitude).
-   - **Remove outliers**: If YES, the algorithm will remove outliers detected by the IsolationForest model. Note that this step will only be applied if the number of detected REMs is greater than 50.
-   - **Sleep stages selection**: If "Scored" is selected, the algorithm will only consider REMs stages for detection. If "Unscored" is selected, the algorithm will consider all sleep stages for detection and you don't need to provide an annotation file.
+   - **Remove outliers**: If checked, the algorithm will remove outliers detected by the IsolationForest model. Note that this step will only be applied if at least 50 REMs are detected.
+   - **Sleep stages selection**: If "Scored" is selected, the algorithm will only consider the REM sleep (R) epochs for detection, and the REMs report is generated. If "Unscored" is selected, the algorithm detects the REMs on the whole recording, without the sleep stages, and no REMs report is generated.
 
 
 Mini-epochs Classification Step
@@ -82,14 +81,14 @@ General definition:
 
 Mini-epochs classification parameters:
    - **Mini-epoch event group**: The group category in the annotation file (default is "REM").
-   - **Phasic/Tonic event name**: The name of the event in the annotation file (default is "EOG_Phasice" and "EOG_Tonic").
+   - **Phasic/Tonic event name**: The name of the event in the annotation file (default is "EOG_Phasic" and "EOG_Tonic").
    - **Length of mini-epoch**: The duration of the mini-epoch in seconds (default is 3 seconds).
 
 
 Output
 ------
-The REMs detected events are added in the annotations files (.tsv, .sts or .ent) depending of the format used.
-If the annotations file already includes the group event to be added, the existing entries will be removed before adding the new ones.
+The REMs detected events and the phasic and tonic mini-epochs are added in the annotations files (.tsv, .sts or .ent) depending of the format used.
+If the annotations file already includes events with the same group and name as the events to be added, the existing entries will be removed before adding the new ones.
 
 Each event is defined by : 
    1. group : The group where the events are added (i.e. REM).
@@ -98,7 +97,7 @@ Each event is defined by :
    4. duration_sec : The duration of the event in second.
    5. channels : The list of channels on which the event occurs.
 
-The tool also provides two folders of **REMs characteristics** and **REMs sleep stages** including some parameters for each specific REM event for more detailed analysis. 
+The tool also provides two folders of **REMs characteristics** (rems_characteristics) and **REMs sleep stages** (rems_sleep_stages), saved in the folder of the cohort report, including some parameters for each specific REM event for more detailed analysis. 
 
 The **characteristics folder** includes two files:
    - **Event file** : Contains all events in Snooz annotation format.
@@ -142,3 +141,8 @@ Version History
    - Added the per-event characteristics dictionary file for the REM characteristics report.
    - Ensured that the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
    - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+
+* v3.6.3 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+   - Redesigned the pages and the step descriptions of the tool, including those shared with other tools (Sleep Cycles, Input Files), with a new illustration of the REM events. The references are in APA style, with a DOI link.
+   - Corrected the descriptions of the outlier removal (Algorithm's Details) and of the location of the REM characteristics folder, saved next to the cohort report (Output File).
+   - Removed the Parameters Description step: the detection criteria are described in the tooltips of Detector Step.
