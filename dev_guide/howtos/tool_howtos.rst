@@ -162,19 +162,21 @@ In your Python class that manages the UI, import the Base64 variable and set the
 
 **Example:**
 
-The **SleepBouts** tool from the CEAMS package includes an image on its introduction page.
-The file ``sleep_bouts.png`` is converted to Base64 and stored in ``art_image_data.py``.
-The file ``IntroStep.py`` then loads the image and sets it on the QLabel as follows:
+The **Detect Artifacts** tool (``DetectArtifacts``) from the CEAMS package shows an example of a flat signal on its step ``FlatlineStep``.
+The file ``flatlined.png`` is converted to Base64 by ``create_images_file.py`` and stored in ``art_image_data.py``.
+The file ``FlatlineStep.py`` then loads the image and sets it on the QLabel as follows:
 
 .. code-block:: python
 
     def _load_embedded_image(self):
-        """Load the embedded base64 image data into label_5."""
-        from .art_image_data import SLEEP_BOUTS_IMAGE_BASE64
-        image_bytes = base64.b64decode(SLEEP_BOUTS_IMAGE_BASE64)
+        """Load the embedded base64 image data into label_2."""
+        from .art_image_data import FLATLINED_IMAGE_BASE64
+        image_bytes = base64.b64decode(FLATLINED_IMAGE_BASE64)
         pixmap = QPixmap()
         pixmap.loadFromData(image_bytes)
-        self.label_5.setPixmap(pixmap)
+        self.label_2.setPixmap(pixmap)
+
+An illustration (a drawing rather than a picture of a signal) is drawn by the code instead, in the colors of the theme: see Illustration in :ref:`tool_design_howtos`.
 
 
 How to add a resource to a step

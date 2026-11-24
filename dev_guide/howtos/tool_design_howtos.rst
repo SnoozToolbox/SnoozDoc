@@ -118,8 +118,10 @@ Making a step page, step by step
 5. **Lay out the settings in each card.**
 
    - Settings with a value: a QGridLayout, horizontal spacing 12, vertical spacing 10. Label in column 0, field in column 1, unit in column 2, a horizontal spacer in column 3. The label has no unit: the unit is after the field.
+   - The minimum and maximum of the same value: one QGridLayout per card, with the columns label | "Min" | field | "Max" | field | unit.
    - Options (check boxes, radio buttons) with a help: the option, its help under it (``indent`` 26) in a QVBoxLayout (spacing 2), a line between two options. The radio buttons of one choice have the same parent, so they are exclusive.
    - One small help line at the end of the card when the settings need it ("IIR bandpass, order 6"). The details go in About.
+   - A button with a tooltip keeps its own width. Stretched, its centered text runs under the help mark (?).
 
 6. **Add the callouts.** A limit to respect (sampling rate, minimum duration) goes in an amber callout under the cards; something to do before setting the step goes in a blue callout under the header. The title says what it is about ("Highest cutoff frequency"), the text says what to do.
 7. **Put the method last.** How the method works, the formulas and the examples go in **About ...** at the end of the page ("About the filters", "About the frequency resolution").
@@ -142,10 +144,10 @@ The introduction page
 The first page of a tool presents it. From top to bottom:
 
 1. **Header:** the name of the tool, and one sentence: what the tool computes or does.
-2. **Before you start** (blue callout): what to set first, for example **Common settings › Sleep Cycles**, in the left panel.
-3. **What you will do** (heading and card): one row per step, in a QGridLayout (horizontal spacing 12, vertical spacing 10, ``columnStretch`` ``0,0,0,1``): the step number (column 0, item alignment top), the name of the step in bold (column 1), a fixed horizontal spacer of 16 px (column 2, first row only), what the user does in the step in a muted label (column 3). A line spanning the 4 columns between two steps.
+2. **Before you start** (blue callout), only when something must be done before the steps of the tool: **Common settings › Sleep Cycles**, in the left panel, or a file or option prepared in another tool (for example, the cohort report option of a detection tool). Take it from the original page. Never add one that repeats a step (What you will do, the step description): a tool with nothing to do first has no Before you start.
+3. **What you will do** (heading and card): one row per step, in a QGridLayout (horizontal spacing 12, vertical spacing 10, ``columnStretch`` ``0,0,0,1``): the step number (column 0, item alignment top), the name of the step in bold (column 1), a fixed horizontal spacer of 16 px (column 2, first row only), what the user does in the step in a muted label (column 3). A line spanning the 4 columns between two steps. Optionally, a heading and a card after it give advice for the tool: what the user must know about the data ("Sleep stages", "Channels").
 4. **Accepted files** (heading and card), if the tool reads PSG files: a QGridLayout (horizontal spacing 32, vertical spacing 6): the format in bold, then what it needs.
-5. **Methods and references**, shown on demand:
+5. **Methods and references**, shown on demand. Name the links "Methods" when the tool cites nothing, and leave them out when there is no method to describe.
 
    - two link buttons in a QHBoxLayout with a spacer: ``methods_show_button`` ("› Methods and references") and ``methods_hide_button`` ("⌄ Methods and references", property ``visible`` false), then a help "The details of each setting are shown in its own step.";
    - a QWidget ``methods_widget`` (property ``visible`` false) holding the methods, then the references block (a line, then the references);
@@ -168,8 +170,19 @@ Some step forms are used by several tools: the step of another tool inherits the
 
 - **No page title:** each tool gives the step its own name.
 - **Keep every widget name:** the steps that inherit the form use them (``setText``, ``setEnabled``).
-- **A page of lists** (files, events, channels): the lists take the whole page (no ``content_widget`` of 800 px, the cards side by side fill the page), and its helps are tooltips, on the title of the list or on the control they describe, so the lists keep their room.
+- **A page of lists:** see below.
 - **Check** the page in every tool that uses it. Raise the version of each of these tools when you redesign the pages of that tool.
+
+A page of lists
+==================================
+
+A page of lists (files, events, channels, reports):
+
+- **The lists take the whole page:** no ``content_widget`` of 800 px, the cards side by side fill the page.
+- **Title:** a step of the tool keeps its header (the name of the step and a subtitle). A page shared by several tools and the settings view of a module have no title.
+- **A card per list:** a bold title (its help in the tooltip), the list, then a row with a small help on the left (stretch 1) and the buttons on the right ("Choose files", "Clear all").
+- **Helps in tooltips,** on the title of the list or on the control they describe, so the lists keep their room.
+- **A message box** (a read-only text box filled by the code) goes under the lists, at full width, and the lists get a minimum height (240 px): the toolbox makes a read-only text box as high as its text, which would squeeze the lists.
 
 Writing the texts
 ==================================
@@ -179,7 +192,12 @@ Writing the texts
 - **Page title:** the name of the step, as written in the json file of the tool (the steps column).
 - **Subtitle:** what the step is for, in one sentence.
 - **Callouts:** a title of a few words, then one sentence.
-- **Step description** (``description`` of the step in the json file of the tool, shown in the steps column): one or two sentences. The page holds the rest.
+- **Step description** (``description`` of the step in the json file of the tool, shown in the steps column, left of the pages): what the user does in the step, in one or two short sentences (30 words at most), with the meaning of the step's row in What you will do. The page holds the rest.
+
+  - Plain text: no blank lines, lists, HTML layout or file formats (the accepted files are in the introduction, the details on the page).
+  - No "Click", "i.e." or "your study"; no "To define..." (write "Define..."). Start with a capital letter, end with a period.
+  - Rewrite the description of every step of the tool you redesign, the first step (the page of the tool) excepted: it keeps its link to Read more!.
+  - A step description is a display text: a workspace keeps the one it was saved with.
 - **Abbreviations:** write them in full ("power spectral analysis", not "PSA"), except the usual units and formats (Hz, EDF, FFT).
 - **Tooltips:** put the tooltip of a setting on its label, so the help mark (?) is next to the name of the setting. No tooltip that only repeats the name of the widget ("Check to perform the analysis on N1." on the check box N1). When you remove a description from the page, keep the most accurate description in the tooltip.
 - **References:** the same format everywhere, APA style: numbered in the order of the text ([1], [2]...); up to 20 authors, "&" before the last one; the journal and the volume in italics; a dash (–) between the pages; the DOI link at the end. They go in the references block, where a line separates them from the text that cites them. A text set by the code (a text box) never holds its references: put them in the references block of the form, and hide the block when the text has no reference. The text of a reference:
@@ -202,8 +220,8 @@ Redesigning an existing tool
 
 1. **Before** changing anything, save workspaces of the original pages: one with the default settings, one with every setting changed. A workspace saved before the redesign must open in the redesigned tool and give the same results.
 2. **Redesign** the pages. Keep every input widget: its object name, its class, its default value or state, its range, whether it is enabled, and its signal connections. Keep the name of every widget used in the code of the step (search ``self.<name>`` in the .py file of the step), labels included. Keep the tooltips.
-   A text box whose text the code sets or saves stays a text box: frameless (``frameShape`` NoFrame), with ``variant`` = ``help`` for a muted text.
-3. **Check:** the workspaces saved the same way after the redesign must be identical to the ones saved before (only the version of the package changes if it was raised), no tooltip is missing, no text is cut.
+   A text box whose text the code sets or saves stays a text box: frameless (``frameShape`` NoFrame), with ``variant`` = ``help`` for a muted text. A text box the code only enables or disables can become a muted QLabel with the same name. Keep the button groups of the form (``<buttongroups>``): its radio buttons refer to them.
+3. **Check:** the workspaces saved the same way after the redesign must be identical to the ones saved before (only the versions and the step descriptions change), no tooltip is missing, no text is cut.
 4. Raise the version of the tool (``tool_version`` in the json file of the tool and ``item_version`` of the tool in the json file of the package) and add a line to the Version History of its documentation page.
 
 Checklist
@@ -215,12 +233,14 @@ Checklist
 - Limits in amber callouts, things to do first in blue callouts, each with a title.
 - How the method works last, in About.
 - ``content_widget`` at most 800 px wide, in ``content_row`` (stretch ``1,0``), vertical spacer at the bottom.
-- Introduction page: Before you start, What you will do, Accepted files, Methods and references on demand.
+- Introduction page: Before you start (only when something must be done first, never repeating a step), What you will do, advice for the tool (if needed), Accepted files, Methods and references on demand ("Methods" when nothing is cited).
+- Steps column: each step description is one or two short sentences (30 words at most), what the user does, without blank lines, lists or file formats.
 - Settings view of a module: no page title, the inputs as fields with words and units.
 - Texts short, information kept, abbreviations in full, tooltips on the labels and never only repeating a name.
 - References after a line, in APA style with their DOI link, 10 pt, muted.
-- Page shared by several tools: no title, widget names kept, checked in every tool; a page of lists: helps in tooltips.
+- Page shared by several tools: no title, widget names kept, checked in every tool.
+- Page of lists: the whole page, a card per list (help in the tooltip of its title, buttons on the right), message box under the lists; a step of the tool keeps its title.
 - No style sheet, color, font family, other font size or QTextEdit for a fixed text.
 - Python file generated with pyside6-uic 6.8.2.
 - Checked in Snooz in the light and dark themes, at about 1300 px, 1500 px and maximized: no text cut.
-- Existing tool: same saved workspaces before and after, tooltips kept, tool version raised.
+- Existing tool: same saved workspaces before and after, button groups and tooltips kept, tool version raised.
