@@ -35,20 +35,20 @@ i.e. TP-samples=500 means 500 samples from the expert events are correctly detec
 * Pro : the performance evaluation is conservative (strict)
 * Con : many shorter ``d`` can match a longer ``e`` without significant penalty, therefore not suited for event density.
 
-Metrics are also computed in the events domain with the use of the Jaccord index. 
+Metrics are also computed in the events domain with the use of the Jaccard index. 
 
-**Jaccord index** : ``(intersection between e and d) / (union of e and d)``
+**Jaccard index** : ``(intersection between e and d) / (union of e and d)``
 
-To considere a ``d`` as a TP, the jaccord index must exceed a certain threshold.
-Only one ``d`` can match a ``e``, the one with the highest Jaccord index.
+To consider a ``d`` as a TP, the Jaccard index must exceed a certain threshold.
+Only one ``d`` can match a ``e``, the one with the highest Jaccard index.
 
 * Pro : Suited for event density.
-* Con : Need to define a Jaccord index threshold.
+* Con : Need to define a Jaccard index threshold.
 
 Steps
 -----------------
 
-**1 - Input Files**
+**1 - PSG Input Files**
 
 Start by opening your PSG files (.edf, .sts or .eeg). 
 
@@ -66,25 +66,26 @@ Start by opening your PSG files (.edf, .sts or .eeg).
 
 For more details on accepted formats, see :ref:`accepted_format`.
 
-**2 - Expert Annotation**
+**2 - Expert annotation**
 	
 Select for each PSG file the expert events as gold standard.
 
-**3 - Detection Event**
+**3 - Detector annotation**
 	
 Select for each PSG file the detections to be compared against the expert events. 
 
-**4 - Output Files**
+**4 - Output File**
 
 Select the sleep stages to perform the comparison in. (I.e. N2 for sleep spindles.)
 
-Define the jaccord index threhold to compute the performance evaluation. 
+Define the Jaccard index threshold to compute the performance evaluation. 
 
-Jaccord index : ``(intersection between e and d) / (union of e and d)``
+Jaccard index : ``(intersection between e and d) / (union of e and d)``
 
 The output performance file is written in the same directory as the PSG file.
 The output file is named as the PSG file with an additional suffix "_perf" and the extension .tsv.
 One evaluation file per PSG file is generated.
+Optionally, the true positive (TP) events and the false negative and false positive (FN/FP) events are exported in files named as the PSG file with the suffixes _TP and _FNFP.
 
 
 Version History
@@ -104,3 +105,6 @@ Version History
     - Fixed the TSV Writer module to support an empty list of annotations.
     - Improved validation dialogs using TableDialog.
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+
+* v2.5.2 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+    - Redesigned the pages and the step descriptions of the tool, including those shared with other tools (PSG Input Files, Expert annotation, Detector annotation).
