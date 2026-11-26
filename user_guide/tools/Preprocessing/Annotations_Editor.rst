@@ -59,3 +59,6 @@ Version History
 * v2.4.1 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
     - Fix to preserve original group and name labels in the views and avoid duplicates when multiple labels are renamed to the same value.
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+
+* v2.4.2 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+    - Redesigned the pages and the step descriptions of the tool.
