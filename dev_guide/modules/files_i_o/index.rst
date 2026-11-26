@@ -40,7 +40,7 @@ Quick reference
      - 2.1.2
      - Reads the spindle/sw output files and generates the "Detected events cohort report" file clean or transposed.
    * - :ref:`Domino Converter <module_dominoconverter>`
-     - 2.1.1
+     - 2.1.2
      - Converts DOMINO accessory files (ASCII) in one Snooz accessory tsv file.
    * - :ref:`EDF Annotations Reader <module_edfannotationsreader>`
      - 2.0.2

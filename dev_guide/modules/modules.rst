@@ -265,7 +265,7 @@ All modules
    * - 43
      - :ref:`Domino Converter <module_dominoconverter>`
      - Files I/O
-     - 2.1.1
+     - 2.1.2
      - Converts DOMINO accessory files (ASCII) in one Snooz accessory tsv file.
    * - 44
      - :ref:`EDF Annotations Reader <module_edfannotationsreader>`
