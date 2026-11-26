@@ -336,3 +336,7 @@ Version History
     - Updated the UI to clarify that spectral power estimation is based on the Welch method rather than STFT.
     - Fixed option labels that were cut in the Detectors Settings step.
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+
+* v2.8.3 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+    - Redesigned the pages and the step descriptions of the tool. The pictures of real EEG are replaced by illustrations of simulated artifacts, drawn by the tool.
+    - Corrected the tooltips of the flatline threshold (in µV²), of the muscle artifact thresholds (in times the baseline median) and of the group and name of the artifact events common to all the detectors.

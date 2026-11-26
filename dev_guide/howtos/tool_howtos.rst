@@ -162,21 +162,22 @@ In your Python class that manages the UI, import the Base64 variable and set the
 
 **Example:**
 
-The **Detect Artifacts** tool (``DetectArtifacts``) from the CEAMS package shows an example of a flat signal on its step ``FlatlineStep``.
-The file ``flatlined.png`` is converted to Base64 by ``create_images_file.py`` and stored in ``art_image_data.py``.
-The file ``FlatlineStep.py`` then loads the image and sets it on the QLabel as follows:
+The **Classify Slow Waves** tool (``SlowWaveClassification``) from the CEAMS package shows a histogram of transition frequencies on its step ``SSWCIntroStep``.
+The file ``transition_frequency.png`` is converted to Base64 by ``create_images_file.py`` and stored in ``art_image_data.py``.
+The file ``SSWCIntroStep.py`` then loads the image and sets it on the QLabel as follows:
 
 .. code-block:: python
 
     def _load_embedded_image(self):
-        """Load the embedded base64 image data into label_2."""
-        from .art_image_data import FLATLINED_IMAGE_BASE64
-        image_bytes = base64.b64decode(FLATLINED_IMAGE_BASE64)
+        """Load the embedded base64 image data into image_hist."""
+        from .art_image_data import TRANSITION_FREQUENCY_IMAGE_BASE64
+        image_bytes = base64.b64decode(TRANSITION_FREQUENCY_IMAGE_BASE64)
         pixmap = QPixmap()
         pixmap.loadFromData(image_bytes)
-        self.label_2.setPixmap(pixmap)
+        self.image_hist.setPixmap(pixmap)
 
-An illustration (a drawing rather than a picture of a signal) is drawn by the code instead, in the colors of the theme: see Illustration in :ref:`tool_design_howtos`.
+An illustration (a drawing, such as a simulated signal) is drawn by the code instead, in the colors of the theme: see Illustration in :ref:`tool_design_howtos`.
+The **Detect EEG Artifacts** tool draws its simulated artifacts this way (``artifact_drawing.py``).
 
 
 How to add a resource to a step
