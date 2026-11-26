@@ -76,7 +76,7 @@ File encoding :
 **Output**
 
 Annotations will be appended to the Snooz accessory .tsv file for each corresponding PSG file (named after the PSG file).
-Any previously saved annotations in the file with the same group, name, and channels as the new annotations will be deleted before appending the new data.
+Any previously saved annotations in the file with the same group and name as the new annotations, on every channel, will be deleted before appending the new data.
 	
 The columns of the Snooz accessory file are as follows:
    1. group : The category of the annotation (annotations with different names can be grouped into the same category), e.g. spindle
@@ -99,3 +99,7 @@ Version History
 * v2.3.2 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
     - Fixed parts of the introduction text that kept their own font and a white background.
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+
+* v2.3.3 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+    - Redesigned the pages and the step descriptions of the tool.
+    - Corrected the introduction: the annotations removed before the import are those with the same group and name, on every channel.
