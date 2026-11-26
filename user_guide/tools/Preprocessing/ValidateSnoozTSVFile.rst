@@ -48,13 +48,15 @@ Outputs
 Expected Column Format
 ----------------------
 
-Each TSV file is expected to have exactly the following five columns, in order:
+Each TSV file is expected to have the following five columns, in order:
 
 - ``group`` (str) — category of the annotation (e.g., ``stage``)
 - ``name`` (str or int) — label or identifier of the annotation
 - ``start_sec`` (float or int) — annotation start time in seconds
 - ``duration_sec`` (float or int) — annotation duration in seconds
 - ``channels`` (str) — channels to which the annotation applies
+
+A sixth column, ``time elapsed (HH:MM:SS)``, is accepted after them.
 
 
 Validation Logic
@@ -89,3 +91,6 @@ Version History
 
 * v2.0.1 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+
+* v2.0.2 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+    - Redesigned the pages and the step descriptions of the tool. The introduction lists all the checks of the validation.
