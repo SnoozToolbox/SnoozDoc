@@ -58,7 +58,7 @@ Quick reference
      - 3.0.1
      - Reads events from a Tsv file.
    * - :ref:`Json Path Editor Master <module_jsonpatheditormaster>`
-     - 2.0.1
+     - 2.0.2
      - Edits JSON files by replacing paths within the JSON structure.
    * - :ref:`PSA Cohort Review <module_psacohortreview>`
      - 2.6.1

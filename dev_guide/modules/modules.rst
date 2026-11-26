@@ -295,7 +295,7 @@ All modules
    * - 49
      - :ref:`Json Path Editor Master <module_jsonpatheditormaster>`
      - Files I/O
-     - 2.0.1
+     - 2.0.2
      - Edits JSON files by replacing paths within the JSON structure.
    * - 50
      - :ref:`PSA Cohort Review <module_psacohortreview>`

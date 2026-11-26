@@ -5,9 +5,9 @@ Json Path Editor Master
 
 **Module name:** ``JsonPathEditorMaster``
 
-**Package:** CEAMSModules 7.5.0
+**Package:** CEAMSModules 7.6.0
 
-**Version:** 2.0.1
+**Version:** 2.0.2
 
 Overview
 --------

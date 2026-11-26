@@ -13,11 +13,11 @@ Key Features
 1. Path Adaptation
 
       - Automatically updates paths stored in Snooz workspace files when transferring them to a different machine or environment
-      - Supports both absolute and relative paths
+      - Finds the absolute Windows paths (``C:/`` or ``C:\``) and the network paths (``//`` or ``\\``) written in the workspaces
 
 
 2. System Compatibility
-      - Converts between Windows (\) and Unix (/) path formats
+      - Shows the paths with ``/`` as separator, Windows paths written with ``\`` included
       - Adjusts for changes in directory depth or structure
 
 How to Use
@@ -37,12 +37,12 @@ Input
 -----
  - Snooz workspace files (.json)
  - Paths as plain strings inside the workspace
- - utput folder and suffix for saving modified files
+ - Output folder and suffix for saving modified files
 
 
 Output
 ------
- - Updated Snooz workspace files with updated paths
+ - Updated Snooz workspace files with updated paths, saved in the output folder as ``<name>_<suffix>.json`` (the original files are not changed)
 
 
 Version History
@@ -53,3 +53,7 @@ Version History
 
 * v2.0.1 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+
+* v2.0.2 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+    - Redesigned the pages and the step descriptions of the tool, including the settings view of the Json Path Editor Master module. The step Setting Step is now named Edit Paths.
+    - Corrected the introduction: the paths found are the absolute Windows paths and the network paths, not the relative paths.
