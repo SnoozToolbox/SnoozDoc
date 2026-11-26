@@ -9,6 +9,10 @@ In Snooz, annotations are grouped, a feature that does not exist in EDFbrowser.
 This tool allows you to add annotations to the 'stage' and 'art_snooz' groups.
 Additionally, you can optionally add any annotation to any group.
 
+.. warning::
+
+    The converted file is written next to the annotation file, with the same name: a .tsv file with that name is replaced.
+
 Steps
 -----------------
 
@@ -65,3 +69,7 @@ Version History
     - Fixed the TSV Writer module to support an empty list of annotations.
     - Improved validation dialogs using TableDialog.
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+
+* v2.3.2 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+    - Redesigned the pages and the step descriptions of the tool, including the settings view of the Csv Reader Master module.
+    - Fixed Select All in the selection steps: with no file selected, it wrote an error in the console.

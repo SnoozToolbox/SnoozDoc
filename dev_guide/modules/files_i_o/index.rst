@@ -34,7 +34,7 @@ Quick reference
      - Version
      - Description
    * - :ref:`Csv Reader Master <module_csvreadermaster>`
-     - 2.1.1
+     - 2.1.2
      - Reads events from a CSV file.
    * - :ref:`Detections Cohort Review <module_detectionscohortreview>`
      - 2.1.2

@@ -255,7 +255,7 @@ All modules
    * - 41
      - :ref:`Csv Reader Master <module_csvreadermaster>`
      - Files I/O
-     - 2.1.1
+     - 2.1.2
      - Reads events from a CSV file.
    * - 42
      - :ref:`Detections Cohort Review <module_detectionscohortreview>`
