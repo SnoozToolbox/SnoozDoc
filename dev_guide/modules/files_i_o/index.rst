@@ -73,7 +73,7 @@ Quick reference
      - 2.1.1
      - Renames files based on input parameters such as prefix.
    * - :ref:`Sleep Stages Importer <module_sleepstagesimporter>`
-     - 2.1.2
+     - 2.1.3
      - Imports sleep stages from a textfile into the sleep_stages dataframe.
    * - :ref:`TSV Validator Master <module_tsvvalidatormaster>`
      - 2.0.1

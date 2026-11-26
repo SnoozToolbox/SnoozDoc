@@ -5,9 +5,9 @@ Sleep Stages Importer
 
 **Module name:** ``SleepStagesImporter``
 
-**Package:** CEAMSModules 7.5.0
+**Package:** CEAMSModules 7.6.0
 
-**Version:** 2.1.2
+**Version:** 2.1.3
 
 Overview
 --------

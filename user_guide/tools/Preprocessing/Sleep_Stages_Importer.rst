@@ -10,7 +10,7 @@ Tool to import sleep stages from a text file (.csv, .tsv, .txt) into the accesso
 
     **File format**  
 
-    PSG files are mandatory, and the only supported format is .edf. The sleep stages file must cover the entire recording, filling gaps with 'Unscored' stages.  One sleep stage per row. The file can include extraneous columns.  Missing stages will be filled with "Unscored" stages at the end to match the recording length.
+    PSG files are mandatory, and the only supported format is .edf. The sleep stages file must cover the entire recording, filling gaps with 'Unscored' stages.  One sleep stage per row. The file can include extraneous columns.  When the file is shorter than the recording, the last epochs keep their stage in the accessory file ("Unscored" when it had none). A file longer than the recording is not imported.
 
 Steps
 -----------------
@@ -44,3 +44,8 @@ Version History
 * v2.3.1 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
     - Fixed the "Original Label" text that was cut in the Input Stages Files step.
     - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+
+* v2.3.2 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+    - Redesigned the pages and the step descriptions of the tool, including the settings view of the Sleep Stages Importer module. The list of sleep stages files shows the file names (the whole path in a tooltip).
+    - Corrected the introduction: when the file is shorter than the recording, the last epochs keep their stage in the accessory file.
+    - Fixed the Input Stages Files step: cancelling the file dialog emptied the list, and Clear all left empty rows.

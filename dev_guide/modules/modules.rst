@@ -320,7 +320,7 @@ All modules
    * - 54
      - :ref:`Sleep Stages Importer <module_sleepstagesimporter>`
      - Files I/O
-     - 2.1.2
+     - 2.1.3
      - Imports sleep stages from a textfile into the sleep_stages dataframe.
    * - 55
      - :ref:`TSV Validator Master <module_tsvvalidatormaster>`
