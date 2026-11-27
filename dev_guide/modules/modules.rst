@@ -315,7 +315,7 @@ All modules
    * - 53
      - :ref:`Rename File List <module_renamefilelist>`
      - Files I/O
-     - 2.1.1
+     - 2.1.2
      - Renames files based on input parameters such as prefix.
    * - 54
      - :ref:`Sleep Stages Importer <module_sleepstagesimporter>`

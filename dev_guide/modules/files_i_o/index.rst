@@ -70,7 +70,7 @@ Quick reference
      - 2.3.1
      - Writes a PSG file.
    * - :ref:`Rename File List <module_renamefilelist>`
-     - 2.1.1
+     - 2.1.2
      - Renames files based on input parameters such as prefix.
    * - :ref:`Sleep Stages Importer <module_sleepstagesimporter>`
      - 2.1.3
