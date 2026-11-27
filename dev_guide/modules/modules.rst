@@ -195,7 +195,7 @@ All modules
    * - 29
      - :ref:`PSA Pics Generator <module_psapicsgenerator>`
      - Events Utilities
-     - 2.1.1
+     - 2.1.2
      - Used to generate figures of Power Spectral Analysis (PSA) data from PSA report files.
    * - 30
      - :ref:`REMs Details <module_remsdetails>`

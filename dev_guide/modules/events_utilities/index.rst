@@ -78,7 +78,7 @@ Quick reference
      - 2.0.1
      - Compares two sets of events .
    * - :ref:`PSA Pics Generator <module_psapicsgenerator>`
-     - 2.1.1
+     - 2.1.2
      - Used to generate figures of Power Spectral Analysis (PSA) data from PSA report files.
    * - :ref:`REMs Details <module_remsdetails>`
      - 2.3.1

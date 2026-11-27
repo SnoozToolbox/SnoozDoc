@@ -16,12 +16,13 @@ Steps
 **1 - Input Files :**
 
 	- Add your EEG spectral power report file (.tsv), which is generated from the :ref:`Power_Spectral_Analysis` tool.
-	- Select the channels in the "Subject Channel List" or "Cohort Channel List".
+	- Select the channels in "Channels of the subject" or "Channels of the cohort". The channel labels cannot be edited in this tool.
 
 	- ROIs :
 	    - Add ROIs and select them. 
 	    - You can create ROIs to group channels with similar labels (e.g., C3-A2, C3-M2, C3) together.  
 	    - You can choose to analyze either channels or ROIs, or both.
+	    - Check "blank" to leave the ROI empty when data are missing for the mean, otherwise the missing data are ignored. The ROI is named ``ROI_`` followed by its channel labels, with ``_b`` at the end when "blank" is checked.
 
 .. NOTE::
 
@@ -30,8 +31,9 @@ Steps
 
 
 **2 - Group Definition :**
-	- Assign a cohort group to each report file.  Any cohort group label is accepted.  
-	- The number of cohort groups is unlimited.
+	- Assign a group to each report file. Any group label is accepted.
+	- The number of groups is unlimited.
+	- At the cohort level, the report files with the same group label are put together.
 	
 	.. warning::
 
@@ -105,11 +107,13 @@ Steps
 				   :width: 500
 				   :alt: per cohort per channel mean and SD image
 
-	- Select the prefered sleep stages, and section to display the EEG spectral power images.
+	- Select the preferred sleep stages, and the section to display ("Total", a sleep cycle, a clock hour or a stage hour). "All" plots the power of all the stages together. Some reports are computed on annotations instead of sleep stages (step "Section Selection" of the :ref:`Power_Spectral_Analysis` tool): for these reports, the annotations are plotted in place of the sleep stages, and the sleep stage selection is not used. A run cannot mix reports computed per sleep stage and reports computed on annotations. The section must be in the reports: check the distributions you need in the step "Output Files" of the :ref:`Power_Spectral_Analysis` tool.
 
-	- Specify desired display options, such as plotting the mean and standard deviation EEG signal spectral power curve and setting axis limits. (For more options look at the "Colors" settings page in the left panel).
+	- Specify desired display options, such as plotting the mean and standard deviation EEG signal spectral power curve and setting axis limits.
+	- In the optional settings "Colors", define the first four colors of the pictures (ten colors are available). With "Auto", the colors are blue, red, green, purple, orange, brown, pink, gray, olive and cyan. On every picture, the sleep stages are differentiated by the line style.
 
-	- Select the output folder to save the images.
+	- Select the output folder to save the images. The pictures are .pdf files, and existing pictures with the same names are replaced.
+	- At the group level, a picture is named with the report file name, the channel or ROI label, the section and the stages, then ``_mean`` or ``_mean_std`` (for example ``learn-nsrr01_PSA_report_EEG_psa_Total_All_mean_std.pdf``); "One picture per group" adds ``avg``. At the cohort level, a picture is named ``cohort_psa``, then the display option and the section, and the channel or ROI label for one picture per channel (for example ``cohort_psa_mean_std_Total_EEG.pdf``).
 
 Version History
 -----------------
@@ -125,3 +129,7 @@ Version History
 	- Added separate logarithmic scale options for the X axis (frequency) and the Y axis (power) in the Output Files step.
 	- Added support for the per-annotation reports of the Power Spectral Analysis tool: the annotations are drawn in place of the sleep stages (sleep-stage and annotation reports cannot be mixed in one run).
 	- Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
+
+* v2.2.1 : Distributed with CEAMS package version 7.6.0 — Snooz Toolbox 1.2.0
+	- Redesigned the pages and the step descriptions of the tool.
+	- Corrected the Output Files page: the pictures are named with the report file name (not the PSG recording).
