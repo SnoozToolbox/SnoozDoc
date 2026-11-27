@@ -1,0 +1,18 @@
+A	group	Event group (slow wave)
+B	name	Slow wave event name (specific to the detection algorithm)
+C	cycle	Sleep cycle number (1-based) during which the slow wave occurred (NaN for unscored)
+D	stage	Sleep stage during which the slow wave occurred (1=N1, 2=N2, 3=N3, 5=REM, 9=Unscored)
+E	start_sec	Slow wave start time (s)
+F	duration_sec	Slow wave total duration (s)
+G	channels	Channel label(s) where the slow wave was detected
+H	pkpk_amp_uV	Slow wave peak-to-peak amplitude (uV)
+I	freq_Hz	Slow wave frequency (Hz), inverse of the duration
+J	neg_amp_uV	Slow wave negative amplitude (uV)
+K	neg_sec	Slow wave negative half-wave duration (s)
+L	neg_peak_sec	Duration (s) from slow wave onset to the negative peak
+M	pos_sec	Slow wave positive half-wave duration (s)
+N	pos_peak_sec	Duration (s) from slow wave onset to the positive peak
+O	slope_0_min	Slope from slow wave onset to the negative peak (uV/s)
+P	slope_min_max	Slope from the negative peak to the positive peak (uV/s)
+Q	slope_max_0	Slope from the positive peak to the end of the slow wave (uV/s)
+R	trans_freq_Hz	Transition frequency (Hz), calculated as the inverse of twice the duration between the negative and positive peaks. 1/(2*(pos_peak_sec-neg_peak_sec))

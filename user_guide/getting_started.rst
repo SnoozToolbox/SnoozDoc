@@ -23,8 +23,7 @@ Snooz has been developed and validated exclusively on Windows 11.
 macOS
 ------
 
-Snooz supports both Intel-based Macs (including those with the T2 security chip) and Apple Silicon Macs (M1 and newer).
-Supported macOS versions: 14.3 (Sonoma) through 15.2 (Sequoia).  
+Snooz supports Intel-based Macs and Apple Silicon Macs (M1 and newer), running macOS 15 (Sequoia) or later. 
 
 .. warning::
 
@@ -51,7 +50,7 @@ On Windows platforms
 
 .. warning::  
 
-    Snooz is not signed yet!
+    Snooz is not signed yet for Windows!
     If you get this warning below :  
      
     1. Click on More info.
@@ -74,13 +73,6 @@ On macOS platforms
 1. Download the Installer using the link provided in the Snooz email after submitting your profile.
 2. Double-click on the downloaded file to install.
 3. Drag and drop the Snooz application in the Applications folder. 
-4. Since Snooz is not signed yet, you need to mark it as an exception (see the note lower). 
-
-.. note::
-  To mark Snooz as an exception: 
-    | Open a terminal and type either :
-    | ``find /Applications/Snooz.app -exec xattr -c {} \;`` or 
-    | ``xattr -cr /Applications/Snooz.app``, depending on your environment.
 
 .. warning::  
   Ensure that Snooz has full disk access to launch it from the Launchpad by following these steps:
@@ -157,6 +149,16 @@ On Linux platforms
 
    - For the `.zip` installation: ``~/.local/opt/Snooz/Snooz``
 
+Choose the light or dark theme
+=================================
+
+Snooz has a light theme and a dark theme. To change the theme:
+
+* Navigate to File > Settings > General Settings (macOS: Snooz > Preferences > General Settings) and choose the **Theme**.
+* Or click the moon button (the sun button in the dark theme) at the right of the menu bar. On macOS, this button is at the top right of the Home page.
+
+Snooz asks before restarting to show the new theme. The tool or process that is open will be closed: save your workspace first to keep its settings.
+
 Uninstall Snooz
 =================================
 
@@ -183,7 +185,7 @@ Update Snooz from the interface
 =================================
 
 1. Launch the Snooz application already installed on your desktop.  
-2. Navigate to the menu Help > About Snooz (macOS : Snooz > About Snooz)
+2. On the Home page, click **Check for updates**, or navigate to the menu Help > About (macOS : Snooz > About Snooz)
 3. If the installed version is older than the released version **download** Snooz for your OS.
 4. Close Snooz to avoid errors during the installation.  
 5. (Optional) You can uninstall the previous version of Snooz to delete obsolete packages.  

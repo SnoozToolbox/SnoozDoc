@@ -126,3 +126,6 @@ Version History
 
 * v2.4.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
     - Added a batch warning dialog when loading PSG files or folders from a workspace if loading is not successful.
+
+* v2.5.0 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
+   - Fixed axis-limit bounds and accept both decimal (, and .) separators

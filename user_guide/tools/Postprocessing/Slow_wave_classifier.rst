@@ -24,7 +24,8 @@ Steps
 
 **1 - Input Files**
 
-Add the slow wave characteristics report, the slow wave cohort report and the sleep stages files for your cohort. 
+Add the slow wave characteristics files, the slow wave cohort report, and the sleep stage files for your cohort.  
+The list of recordings to be processed is taken from the slow wave characteristics files.
 
 .. note::
    
@@ -73,3 +74,12 @@ Version History
 * v2.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0 
     - Clarify the number of SW categories by using radio button in the UI.
     - Fixed reporting of events starting at sleep stage transitions.
+
+* v2.2.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0 
+    - No modification.
+
+* v2.4.2 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0 
+    - Handled discrepancies between file entries; a message is displayed when recordings are missing from the slow wave cohort report or the sleep stages files.
+    - Map slow wave categories by transition frequency. Remap KMeans labels so category 1 is assigned to the cluster with the lowest transition frequency (trans_freq_Hz), increasing categories with frequency.
+    - Adding a fixed random_state parameter to the classifier to ensure reproducibility of the results.
+    - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).

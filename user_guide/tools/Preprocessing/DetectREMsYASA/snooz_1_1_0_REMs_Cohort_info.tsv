@@ -1,0 +1,273 @@
+A	filename	PSG filename
+B	id1	subject identification
+C	cyc_def_option	"Method used to split the sleep period in sleep cycles, it defines the criteria. I.e. : ""Minimum criteria""  ""Aeschbach 1993""  ""Feinberg 1979"""
+D	cyc_def_include_soremp	Include a REM sleep periods (REMP) that occur within 15 minutes of sleep onset.
+E	cyc_def_include_last_incomplete	Include the last sleep cycle even if the NREM period (NREMP) or REMP does not meet the minimum duration criteria.
+F	cyc_def_rem_min	Minimum length without R stage to end the REMP.
+G	cyc_def_first_nrem_min	Minimum length of the first NREMP in minutes.
+H	cyc_def_mid_last_nrem_min	Minimum length of the middle and last NREMP in minutes.
+I	cyc_def_last_nrem_valid_min	Minimum length of the NREMP in minutes to validate the last sleep cycle.
+J	cyc_def_first_rem_min	Minimum length of the first REMP in minutes.
+K	cyc_def_mid_rem_min	Minimum length of the middle REMP in minutes.
+L	cyc_def_last_rem_min	Minimum length of the last REMP in minutes.
+M	cyc_def_move_end_rem	"Move the end of the REMP to the start of the following NREMP, eliminating the temporal ""gap"" between 2 cycles."
+N	cyc_def_sleep_stages	"List of valid stages used to define the sleep cycles:  ""N1, N2, N3, R"" or ""N2, N3, R"""
+O	stage_sel	Sleep stages selection to detect REMs in.
+P	rems_event_name	REMs event name (specific to the detection algorithm).
+Q	chan_label	The label of the channel.
+R	chan_fs	The sampling rate (Hz) of the channel.
+S	cyc_count	Number of sleep cycles.
+T	recording_min	Recording duration (min) from lights off to lights on.
+U	sleep_period_min	Total period for detection - Duration (min) of the sleep period.
+V	total_R_valid_min	Valid (no artifact) period for detection - Valid duration (min) of the sleep period in REM stage.
+W	total_R_rems_count	Total - REMs count in REM stage.
+X	total_R_rems_sec	Total - Average REMs duration (s) in REM stage.
+Y	total_R_amplitude_uV	Total - Average REMs amplitude (uV) in REM stage.
+Z	total_R_rems_density	Total - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+AA	total_R_phasic_pct	Total - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+AB	total_R_tonic_pct	Total - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+AC	total_R_Energy_PkPk_uv2	Total - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+AD	total_R_PkPk_REMs_Activity_Index	Total - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+AE	cyc1_R_valid_min	Cycle 1 - Valid (no artifact) duration (min) in REM stage available for detection.
+AF	cyc1_min	Cycle 1 duration (min).
+AG	cyc1_R_rems_count	Cycle 1 - REMs count in REM stage.
+AH	cyc1_R_rems_sec	Cycle 1 - Average REMs duration (s) in REM stage.
+AI	cyc1_R_amplitude_uV	Cycle 1 - Average REMs amplitude (uV) in REM stage.
+AJ	cyc1_R_rems_density	Cycle 1 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+AK	cyc1_R_phasic_pct	Cycle 1 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+AL	cyc1_R_tonic_pct	Cycle 1 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+AM	cyc1_R_Energy_PkPk_uv2	Cycle 1 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+AN	cyc1_R_PkPk_REMs_Activity_Index	Cycle 1 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+AO	cyc2_R_valid_min	Cycle 2 - Valid (no artifact) duration (min) in REM stage available for detection.
+AP	cyc2_min	Cycle 2 duration (min).
+AQ	cyc2_R_rems_count	Cycle 2 - REMs count in REM stage.
+AR	cyc2_R_rems_sec	Cycle 2 - Average REMs duration (s) in REM stage.
+AS	cyc2_R_amplitude_uV	Cycle 2 - Average REMs amplitude (uV) in REM stage.
+AT	cyc2_R_rems_density	Cycle 2 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+AU	cyc2_R_phasic_pct	Cycle 2 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+AV	cyc2_R_tonic_pct	Cycle 2 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+AW	cyc2_R_Energy_PkPk_uv2	Cycle 2 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+AX	cyc2_R_PkPk_REMs_Activity_Index	Cycle 2 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+AY	cyc3_R_valid_min	Cycle 3 - Valid (no artifact) duration (min) in REM stage available for detection.
+AZ	cyc3_min	Cycle 3 duration (min).
+BA	cyc3_R_rems_count	Cycle 3 - REMs count in REM stage.
+BB	cyc3_R_rems_sec	Cycle 3 - Average REMs duration (s) in REM stage.
+BC	cyc3_R_amplitude_uV	Cycle 3 - Average REMs amplitude (uV) in REM stage.
+BD	cyc3_R_rems_density	Cycle 3 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+BE	cyc3_R_phasic_pct	Cycle 3 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+BF	cyc3_R_tonic_pct	Cycle 3 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+BG	cyc3_R_Energy_PkPk_uv2	Cycle 3 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+BH	cyc3_R_PkPk_REMs_Activity_Index	Cycle 3 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+BI	cyc4_R_valid_min	Cycle 4 - Valid (no artifact) duration (min) in REM stage available for detection.
+BJ	cyc4_min	Cycle 4 duration (min).
+BK	cyc4_R_rems_count	Cycle 4 - REMs count in REM stage.
+BL	cyc4_R_rems_sec	Cycle 4 - Average REMs duration (s) in REM stage.
+BM	cyc4_R_amplitude_uV	Cycle 4 - Average REMs amplitude (uV) in REM stage.
+BN	cyc4_R_rems_density	Cycle 4 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+BO	cyc4_R_phasic_pct	Cycle 4 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+BP	cyc4_R_tonic_pct	Cycle 4 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+BQ	cyc4_R_Energy_PkPk_uv2	Cycle 4 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+BR	cyc4_R_PkPk_REMs_Activity_Index	Cycle 4 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+BS	cyc5_R_valid_min	Cycle 5 - Valid (no artifact) duration (min) in REM stage available for detection.
+BT	cyc5_min	Cycle 5 duration (min).
+BU	cyc5_R_rems_count	Cycle 5 - REMs count in REM stage.
+BV	cyc5_R_rems_sec	Cycle 5 - Average REMs duration (s) in REM stage.
+BW	cyc5_R_amplitude_uV	Cycle 5 - Average REMs amplitude (uV) in REM stage.
+BX	cyc5_R_rems_density	Cycle 5 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+BY	cyc5_R_phasic_pct	Cycle 5 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+BZ	cyc5_R_tonic_pct	Cycle 5 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+CA	cyc5_R_Energy_PkPk_uv2	Cycle 5 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+CB	cyc5_R_PkPk_REMs_Activity_Index	Cycle 5 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+CC	cyc6_R_valid_min	Cycle 6 - Valid (no artifact) duration (min) in REM stage available for detection.
+CD	cyc6_min	Cycle 6 duration (min).
+CE	cyc6_R_rems_count	Cycle 6 - REMs count in REM stage.
+CF	cyc6_R_rems_sec	Cycle 6 - Average REMs duration (s) in REM stage.
+CG	cyc6_R_amplitude_uV	Cycle 6 - Average REMs amplitude (uV) in REM stage.
+CH	cyc6_R_rems_density	Cycle 6 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+CI	cyc6_R_phasic_pct	Cycle 6 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+CJ	cyc6_R_tonic_pct	Cycle 6 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+CK	cyc6_R_Energy_PkPk_uv2	Cycle 6 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+CL	cyc6_R_PkPk_REMs_Activity_Index	Cycle 6 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+CM	rems_density_var	Variance of REMs density across all sleep cycles.
+CN	clock_h1_R_valid_min	Hour 1 - Valid (no artifact) duration (min) in REM stage available for detection.
+CO	clock_h1_min	Hour 1 duration (min).
+CP	clock_h1_R_rems_count	Hour 1 - REMs count in REM stage.
+CQ	clock_h1_R_rems_sec	Hour 1 - Average REMs duration (s) in REM stage.
+CR	clock_h1_R_amplitude_uV	Hour 1 - Average REMs amplitude (µV) in REM stage.
+CS	clock_h1_R_rems_density	Hour 1 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+CT	clock_h1_R_phasic_pct	Hour 1 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+CU	clock_h1_R_tonic_pct	Hour 1 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+CV	clock_h1_R_Energy_PkPk_uv2	Hour 1 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+CW	clock_h1_R_PkPk_REMs_Activity_Index	Hour 1 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+CX	clock_h2_R_valid_min	Hour 2 - Valid (no artifact) duration (min) in REM stage available for detection.
+CY	clock_h2_min	Hour 2 duration (min).
+CZ	clock_h2_R_rems_count	Hour 2 - REMs count in REM stage.
+DA	clock_h2_R_rems_sec	Hour 2 - Average REMs duration (s) in REM stage.
+DB	clock_h2_R_amplitude_uV	Hour 2 - Average REMs amplitude (µV) in REM stage.
+DC	clock_h2_R_rems_density	Hour 2 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+DD	clock_h2_R_phasic_pct	Hour 2 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+DE	clock_h2_R_tonic_pct	Hour 2 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+DF	clock_h2_R_Energy_PkPk_uv2	Hour 2 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+DG	clock_h2_R_PkPk_REMs_Activity_Index	Hour 2 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+DH	clock_h3_R_valid_min	Hour 3 - Valid (no artifact) duration (min) in REM stage available for detection.
+DI	clock_h3_min	Hour 3 duration (min).
+DJ	clock_h3_R_rems_count	Hour 3 - REMs count in REM stage.
+DK	clock_h3_R_rems_sec	Hour 3 - Average REMs duration (s) in REM stage.
+DL	clock_h3_R_amplitude_uV	Hour 3 - Average REMs amplitude (µV) in REM stage.
+DM	clock_h3_R_rems_density	Hour 3 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+DN	clock_h3_R_phasic_pct	Hour 3 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+DO	clock_h3_R_tonic_pct	Hour 3 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+DP	clock_h3_R_Energy_PkPk_uv2	Hour 3 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+DQ	clock_h3_R_PkPk_REMs_Activity_Index	Hour 3 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+DR	clock_h4_R_valid_min	Hour 4 - Valid (no artifact) duration (min) in REM stage available for detection.
+DS	clock_h4_min	Hour 4 duration (min).
+DT	clock_h4_R_rems_count	Hour 4 - REMs count in REM stage.
+DU	clock_h4_R_rems_sec	Hour 4 - Average REMs duration (s) in REM stage.
+DV	clock_h4_R_amplitude_uV	Hour 4 - Average REMs amplitude (µV) in REM stage.
+DW	clock_h4_R_rems_density	Hour 4 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+DX	clock_h4_R_phasic_pct	Hour 4 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+DY	clock_h4_R_tonic_pct	Hour 4 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+DZ	clock_h4_R_Energy_PkPk_uv2	Hour 4 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+EA	clock_h4_R_PkPk_REMs_Activity_Index	Hour 4 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+EB	clock_h5_R_valid_min	Hour 5 - Valid (no artifact) duration (min) in REM stage available for detection.
+EC	clock_h5_min	Hour 5 duration (min).
+ED	clock_h5_R_rems_count	Hour 5 - REMs count in REM stage.
+EE	clock_h5_R_rems_sec	Hour 5 - Average REMs duration (s) in REM stage.
+EF	clock_h5_R_amplitude_uV	Hour 5 - Average REMs amplitude (µV) in REM stage.
+EG	clock_h5_R_rems_density	Hour 5 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+EH	clock_h5_R_phasic_pct	Hour 5 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+EI	clock_h5_R_tonic_pct	Hour 5 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+EJ	clock_h5_R_Energy_PkPk_uv2	Hour 5 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+EK	clock_h5_R_PkPk_REMs_Activity_Index	Hour 5 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+EL	clock_h6_R_valid_min	Hour 6 - Valid (no artifact) duration (min) in REM stage available for detection.
+EM	clock_h6_min	Hour 6 duration (min).
+EN	clock_h6_R_rems_count	Hour 6 - REMs count in REM stage.
+EO	clock_h6_R_rems_sec	Hour 6 - Average REMs duration (s) in REM stage.
+EP	clock_h6_R_amplitude_uV	Hour 6 - Average REMs amplitude (µV) in REM stage.
+EQ	clock_h6_R_rems_density	Hour 6 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+ER	clock_h6_R_phasic_pct	Hour 6 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+ES	clock_h6_R_tonic_pct	Hour 6 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+ET	clock_h6_R_Energy_PkPk_uv2	Hour 6 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+EU	clock_h6_R_PkPk_REMs_Activity_Index	Hour 6 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+EV	clock_h7_R_valid_min	Hour 7 - Valid (no artifact) duration (min) in REM stage available for detection.
+EW	clock_h7_min	Hour 7 duration (min).
+EX	clock_h7_R_rems_count	Hour 7 - REMs count in REM stage.
+EY	clock_h7_R_rems_sec	Hour 7 - Average REMs duration (s) in REM stage.
+EZ	clock_h7_R_amplitude_uV	Hour 7 - Average REMs amplitude (µV) in REM stage.
+FA	clock_h7_R_rems_density	Hour 7 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+FB	clock_h7_R_phasic_pct	Hour 7 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+FC	clock_h7_R_tonic_pct	Hour 7 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+FD	clock_h7_R_Energy_PkPk_uv2	Hour 7 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+FE	clock_h7_R_PkPk_REMs_Activity_Index	Hour 7 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+FF	clock_h8_R_valid_min	Hour 8 - Valid (no artifact) duration (min) in REM stage available for detection.
+FG	clock_h8_min	Hour 8 duration (min).
+FH	clock_h8_R_rems_count	Hour 8 - REMs count in REM stage.
+FI	clock_h8_R_rems_sec	Hour 8 - Average REMs duration (s) in REM stage.
+FJ	clock_h8_R_amplitude_uV	Hour 8 - Average REMs amplitude (µV) in REM stage.
+FK	clock_h8_R_rems_density	Hour 8 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+FL	clock_h8_R_phasic_pct	Hour 8 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+FM	clock_h8_R_tonic_pct	Hour 8 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+FN	clock_h8_R_Energy_PkPk_uv2	Hour 8 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+FO	clock_h8_R_PkPk_REMs_Activity_Index	Hour 8 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+FP	clock_h9_R_valid_min	Hour 9 - Valid (no artifact) duration (min) in REM stage available for detection.
+FQ	clock_h9_min	Hour 9 duration (min).
+FR	clock_h9_R_rems_count	Hour 9 - REMs count in REM stage.
+FS	clock_h9_R_rems_sec	Hour 9 - Average REMs duration (s) in REM stage.
+FT	clock_h9_R_amplitude_uV	Hour 9 - Average REMs amplitude (µV) in REM stage.
+FU	clock_h9_R_rems_density	Hour 9 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+FV	clock_h9_R_phasic_pct	Hour 9 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+FW	clock_h9_R_tonic_pct	Hour 9 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+FX	clock_h9_R_Energy_PkPk_uv2	Hour 9 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+FY	clock_h9_R_PkPk_REMs_Activity_Index	Hour 9 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+FZ	clock_h_rems_density_var	Variance of REMs density across all clock hours.
+GA	stage_h1_R_valid_min	Stage Hour 1 - Valid (no artifact) duration (min) in REM stage available for detection.
+GB	stage_h1_min	Stage Hour 1 duration (min).
+GC	stage_h1_R_rems_count	Stage Hour 1 - REMs count in REM stage.
+GD	stage_h1_R_rems_sec	Stage Hour 1 - Average REMs duration (s) in REM stage.
+GE	stage_h1_R_amplitude_uV	Stage Hour 1 - Average REMs amplitude (µV) in REM stage.
+GF	stage_h1_R_rems_density	Stage Hour 1 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+GG	stage_h1_R_phasic_pct	Stage Hour 1 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+GH	stage_h1_R_tonic_pct	Stage Hour 1 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+GI	stage_h1_R_Energy_PkPk_uv2	Stage Hour 1 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+GJ	stage_h1_R_PkPk_REMs_Activity_Index	Stage Hour 1 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+GK	stage_h2_R_valid_min	Stage Hour 2 - Valid (no artifact) duration (min) in REM stage available for detection.
+GL	stage_h2_min	Stage Hour 2 duration (min).
+GM	stage_h2_R_rems_count	Stage Hour 2 - REMs count in REM stage.
+GN	stage_h2_R_rems_sec	Stage Hour 2 - Average REMs duration (s) in REM stage.
+GO	stage_h2_R_amplitude_uV	Stage Hour 2 - Average REMs amplitude (µV) in REM stage.
+GP	stage_h2_R_rems_density	Stage Hour 2 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+GQ	stage_h2_R_phasic_pct	Stage Hour 2 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+GR	stage_h2_R_tonic_pct	Stage Hour 2 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+GS	stage_h2_R_Energy_PkPk_uv2	Stage Hour 2 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+GT	stage_h2_R_PkPk_REMs_Activity_Index	Stage Hour 2 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+GU	stage_h3_R_valid_min	Stage Hour 3 - Valid (no artifact) duration (min) in REM stage available for detection.
+GV	stage_h3_min	Stage Hour 3 duration (min).
+GW	stage_h3_R_rems_count	Stage Hour 3 - REMs count in REM stage.
+GX	stage_h3_R_rems_sec	Stage Hour 3 - Average REMs duration (s) in REM stage.
+GY	stage_h3_R_amplitude_uV	Stage Hour 3 - Average REMs amplitude (µV) in REM stage.
+GZ	stage_h3_R_rems_density	Stage Hour 3 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+HA	stage_h3_R_phasic_pct	Stage Hour 3 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+HB	stage_h3_R_tonic_pct	Stage Hour 3 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+HC	stage_h3_R_Energy_PkPk_uv2	Stage Hour 3 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+HD	stage_h3_R_PkPk_REMs_Activity_Index	Stage Hour 3 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+HE	stage_h4_R_valid_min	Stage Hour 4 - Valid (no artifact) duration (min) in REM stage available for detection.
+HF	stage_h4_min	Stage Hour 4 duration (min).
+HG	stage_h4_R_rems_count	Stage Hour 4 - REMs count in REM stage.
+HH	stage_h4_R_rems_sec	Stage Hour 4 - Average REMs duration (s) in REM stage.
+HI	stage_h4_R_amplitude_uV	Stage Hour 4 - Average REMs amplitude (µV) in REM stage.
+HJ	stage_h4_R_rems_density	Stage Hour 4 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+HK	stage_h4_R_phasic_pct	Stage Hour 4 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+HL	stage_h4_R_tonic_pct	Stage Hour 4 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+HM	stage_h4_R_Energy_PkPk_uv2	Stage Hour 4 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+HN	stage_h4_R_PkPk_REMs_Activity_Index	Stage Hour 4 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+HO	stage_h5_R_valid_min	Stage Hour 5 - Valid (no artifact) duration (min) in REM stage available for detection.
+HP	stage_h5_min	Stage Hour 5 duration (min).
+HQ	stage_h5_R_rems_count	Stage Hour 5 - REMs count in REM stage.
+HR	stage_h5_R_rems_sec	Stage Hour 5 - Average REMs duration (s) in REM stage.
+HS	stage_h5_R_amplitude_uV	Stage Hour 5 - Average REMs amplitude (µV) in REM stage.
+HT	stage_h5_R_rems_density	Stage Hour 5 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+HU	stage_h5_R_phasic_pct	Stage Hour 5 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+HV	stage_h5_R_tonic_pct	Stage Hour 5 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+HW	stage_h5_R_Energy_PkPk_uv2	Stage Hour 5 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+HX	stage_h5_R_PkPk_REMs_Activity_Index	Stage Hour 5 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+HY	stage_h6_R_valid_min	Stage Hour 6 - Valid (no artifact) duration (min) in REM stage available for detection.
+HZ	stage_h6_min	Stage Hour 6 duration (min).
+IA	stage_h6_R_rems_count	Stage Hour 6 - REMs count in REM stage.
+IB	stage_h6_R_rems_sec	Stage Hour 6 - Average REMs duration (s) in REM stage.
+IC	stage_h6_R_amplitude_uV	Stage Hour 6 - Average REMs amplitude (µV) in REM stage.
+ID	stage_h6_R_rems_density	Stage Hour 6 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+IE	stage_h6_R_phasic_pct	Stage Hour 6 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+IF	stage_h6_R_tonic_pct	Stage Hour 6 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+IG	stage_h6_R_Energy_PkPk_uv2	Stage Hour 6 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+IH	stage_h6_R_PkPk_REMs_Activity_Index	Stage Hour 6 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+II	stage_h7_R_valid_min	Stage Hour 7 - Valid (no artifact) duration (min) in REM stage available for detection.
+IJ	stage_h7_min	Stage Hour 7 duration (min).
+IK	stage_h7_R_rems_count	Stage Hour 7 - REMs count in REM stage.
+IL	stage_h7_R_rems_sec	Stage Hour 7 - Average REMs duration (s) in REM stage.
+IM	stage_h7_R_amplitude_uV	Stage Hour 7 - Average REMs amplitude (µV) in REM stage.
+IN	stage_h7_R_rems_density	Stage Hour 7 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+IO	stage_h7_R_phasic_pct	Stage Hour 7 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+IP	stage_h7_R_tonic_pct	Stage Hour 7 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+IQ	stage_h7_R_Energy_PkPk_uv2	Stage Hour 7 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+IR	stage_h7_R_PkPk_REMs_Activity_Index	Stage Hour 7 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+IS	stage_h8_R_valid_min	Stage Hour 8 - Valid (no artifact) duration (min) in REM stage available for detection.
+IT	stage_h8_min	Stage Hour 8 duration (min).
+IU	stage_h8_R_rems_count	Stage Hour 8 - REMs count in REM stage.
+IV	stage_h8_R_rems_sec	Stage Hour 8 - Average REMs duration (s) in REM stage.
+IW	stage_h8_R_amplitude_uV	Stage Hour 8 - Average REMs amplitude (µV) in REM stage.
+IX	stage_h8_R_rems_density	Stage Hour 8 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+IY	stage_h8_R_phasic_pct	Stage Hour 8 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+IZ	stage_h8_R_tonic_pct	Stage Hour 8 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+JA	stage_h8_R_Energy_PkPk_uv2	Stage Hour 8 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+JB	stage_h8_R_PkPk_REMs_Activity_Index	Stage Hour 8 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+JC	stage_h9_R_valid_min	Stage Hour 9 - Valid (no artifact) duration (min) in REM stage available for detection.
+JD	stage_h9_min	Stage Hour 9 duration (min).
+JE	stage_h9_R_rems_count	Stage Hour 9 - REMs count in REM stage.
+JF	stage_h9_R_rems_sec	Stage Hour 9 - Average REMs duration (s) in REM stage.
+JG	stage_h9_R_amplitude_uV	Stage Hour 9 - Average REMs amplitude (µV) in REM stage.
+JH	stage_h9_R_rems_density	Stage Hour 9 - REMs density (count/epoch) in REM stage. Epoch duration is 30 seconds.
+JI	stage_h9_R_phasic_pct	Stage Hour 9 - Phasic REM percentage in REM stage. Ratio of total REM event duration to total REM stage epoch duration (%).
+JJ	stage_h9_R_tonic_pct	Stage Hour 9 - Tonic REM percentage in REM stage. Complement of phasic REM percentage (100 - phasic REM percentage).
+JK	stage_h9_R_Energy_PkPk_uv2	Stage Hour 9 - Average peak-to-peak REM energy (uv squared) in REM stage. Per-event energy is amplitude_uV squared.
+JL	stage_h9_R_PkPk_REMs_Activity_Index	Stage Hour 9 - Peak-to-peak REMs activity index in REM stage. Sum of per-event energies (amplitude_uV squared).
+JM	stage_h_rems_density_var	Variance of REMs density across all stage hours.

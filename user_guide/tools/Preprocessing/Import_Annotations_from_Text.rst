@@ -95,3 +95,7 @@ Version History
 * v2.3.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
     - Supports the new optional time elapsed column.
     - Supports different time formats for event duration (just like for event onset).
+
+* v2.3.2 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
+    - Fixed parts of the introduction text that kept their own font and a white background.
+    - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).

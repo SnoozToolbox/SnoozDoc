@@ -30,7 +30,7 @@ To manage the packages via Snooz.
 - Navigate to **File -> Settings -> Packages**.
    - (On macOS : Navigate to **Snooz -> Preferences or Settings -> Packages**)
 
-During the initial installation of Snooz, the packages that come with Snooz are activated (checked) by default. Each package can be expanded, allowing you to activate (check) or deactivate (uncheck) individual tools, modules or apps within the package.
+During the initial installation of Snooz, the latest version of each package that comes with Snooz is activated (checked) by default; the older versions are also installed, but deactivated (unchecked). Each package can be expanded, allowing you to activate (check) or deactivate (uncheck) individual tools, modules or apps within the package.
 
     .. image:: ./packages.png
       :width: 1000
@@ -57,7 +57,7 @@ To add a package
    Always refer to the documentation or release notes for compatibility information before adding a new package.
 
    - Snooz **beta-2.0.0** and Snooz **beta-2.1.0** work with **API=2.0.0**
-   - Snooz **beta-3.0.0** works with **API=3.0.0**
+   - Snooz **beta-3.0.0**, Snooz **1.0.0** and Snooz Toolbox **1.1.0** work with **API=3.0.0**
 
 .. warning::
    

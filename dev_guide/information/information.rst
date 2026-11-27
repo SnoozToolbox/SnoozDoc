@@ -56,6 +56,8 @@ The main purpose of versioning is to ensure the ability to reproduce past analys
 The idea is to increment the version (in XX.XX.XX format) of the modules, tools, apps, and packages involved in a design modification, 
 ensuring the old design remains intact and usable with the previous version.
 
+In practice, Snooz uses a fixed-version, snapshot-based approach for packages. A package release defines an exact set of modules, tools, and apps that are loaded together. This guarantees that a pipeline remains reproducible, because the system activates the exact package snapshot declared in the dependencies rather than resolving the newest compatible code dynamically. In this model, a module or tool may keep the same item version across several package releases if its behavior has not changed, while the package version still advances to reflect the release in which it was shipped. This prioritizes stability and deterministic execution over dynamic compatibility.
+
 The versioning format with three digits (i.e., 01.02.03) indicates the significance of a modification. 
 To guide users on how to increment the version (XX.XX.XX format), the following rules apply:
 

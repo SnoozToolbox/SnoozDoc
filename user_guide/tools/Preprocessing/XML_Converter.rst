@@ -62,3 +62,10 @@ Version History
 
 * v2.2.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0 
     - Supports the new optional time elapsed column.
+
+* v2.3.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
+    - Includes an update of the Event Combine module to support a list of channels; the conversion itself is unchanged.
+
+* v2.4.1 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
+    - Includes a fix in the TSV Writer module to support an empty list of annotations.
+    - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).

@@ -25,10 +25,10 @@ To launch the Signal Generator tool :
 
 Once the tool is opened, you can explore its steps.  The tool consists of four configuration steps: 
 
-1. **Intro step** explains what the tool is.
+1. **Intro** explains what the tool is.
 2. **First signal** is a parameters step to configure the first signal.
 3. **Second signal** is a parameters step to configure the second signal.
-4. **Output step**  is a parameters step to set the output filename.
+4. **Output file** is a parameters step to set the output filename.
 
 .. image:: ./explore_ex/SignalGenerator_Tool.png
    :width: 700
@@ -66,7 +66,7 @@ Let's explore how to create a process using the same modules as the Signal Gener
 - In Snooz, navigate to **Dev Tools -> New process**.
 
 .. warning::
-   If you don't see the Examples category in the Module Library, click on the **Options** button and check the packages ExampleModulesPackage 0.0.0 and ExampleToolsPackage 0.0.0.
+   If you don't see the Examples category in the Module Library, click on the **Options** button and check the packages ExampleModulesPackage 0.1.0 and ExampleToolsPackage 0.1.0.
 
 - Drag and drop the modules from the **Examples** category to reproduce the same process as the Signal Generator tool shown above.
 - Connect the outputs with the inputs by clicking on the circle and dragging the link to the input.
@@ -77,7 +77,7 @@ Configure a process
 Configuring a process involves setting up each module instantiated within the process.
 To configure an instantiated module, double-click on it. 
 
-This will open a dialog with three tabs: 
+This will open a window next to the module, with three tabs:
 
 - **Settings** : Contains text fields for specific inputs.
 - **Results** : Displays information about the last run of the module.
@@ -107,9 +107,9 @@ The process is saved in a .json file, which can be opened in Snooz.
 
 To open a process :
 
-- In Snooz, navigate to **Dev Tools -> Open Process**.
+- In Snooz, navigate to **Dev Tools -> Open process**.
 
-You can also open it by navigating to **File -> Open Workspace**.
+You can also open it by navigating to **File -> Load workspace**.
 
 To run a process properly configured :
 
@@ -668,12 +668,8 @@ The Display Annotations App is a demo app used to display the annotations listed
 To launch the Display Annotations App :
 
    - Launch Snooz (F5) from VS Code
-   - Option 1
-      - In Snooz, navigate to **File -> Open** menu.
-      - Select the Display Annotations.
-   - Option 2
-      - In Snooz, navigate to **Examples -> Display Annotations** menu.
-      - Press **Open File** button in the left panel.
+   - In Snooz, navigate to **Examples -> Display Annotations** menu.
+   - Press **Open File** button in the left panel.
    - Choose the PSG file for which you want to display annotations.
 
 
@@ -728,7 +724,7 @@ Your new app is also added to the description file (``ExampleAppsPackage.json``)
         ]
     }
 
-The two ``endpoint_name`` added mean that the app can be accessed by the **File -> Open** and the **Examples** menu.
+The ``menu_endpoint`` adds the app to the **Examples** menu. The ``file_menu_endpoint`` is not used by Snooz for now (there is no **File -> Open** menu).
 
 
 Packages

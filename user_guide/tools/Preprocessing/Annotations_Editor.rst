@@ -55,3 +55,7 @@ Version History
 * v2.3.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
     - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
     - Add error handling workflow for duplicated sleep stages.
+
+* v2.4.1 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
+    - Fix to preserve original group and name labels in the views and avoid duplicates when multiple labels are renamed to the same value.
+    - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).

@@ -99,30 +99,56 @@ For more details on accepted formats, see :ref:`accepted_format`.
 
     **Power spectral analysis methods:**
 
-    - **Standard power spectral analysis :** the power is estimated with the Welch's method for each frequency bin and then averaged across the frequency bins of a frequency band.
-
-    - **Rhythmic/Arhythmic with IRASA method :** the rhythmic/arrhythmic power is estimated with the Irregular Resampling Auto-Spectral Analysis (IRASA) method for each frequency bin and then averaged across the frequency bins of a frequency band [2].
-
-    - **Rhythmic/Arhythmic with FOOOF method :** the rhythmic/arrhythmic power is estimated with the Fitting Oscillations & One-Over-F (FOOOF) method for the averaged power across the frequency bins of a frequency band [3].
-
-    .. note::
+    - **Standard power spectral analysis** 
     
-        - The IRASA method is based on the principle that rhythmic and arrhythmic components of the power spectrum can be separated by resampling the signal at non-integer rates. This method is applied on each selected window of the signal, leading to be more time consuming than the FOOOF method which is applied on the averaged power across the frequency bins of a frequency band.
-        
-        - The FOOOF method is based on the principle that the power spectrum can be decomposed into aperiodic (arrhythmic) and periodic (rhythmic) components by fitting a model to the power spectrum.
+    The power is estimated with the Welch's method for each frequency bin and then averaged across the frequency bins of a frequency band.
 
-    .. note::
+
+    - **Periodic/Aperiodic with IRASA method** 
     
-        Both **IRASA** (Implemented with yasa library) and **FOOOF** (implemented with fooof library) methods, were implemented with the default parameters of the original publications [1, 2]. For more details on the parameters, see the original publications [1, 2].
+    The periodic/aperiodic power is estimated with the Irregular Resampling Auto-Spectral Analysis (IRASA) method for each frequency bin and then averaged across the frequency bins of a frequency band [2].
 
-**7 - Output File**
-    If the analysis is performed per sleep stage :  
+    The IRASA method is based on the principle that periodic and aperiodic components of the power spectrum can be separated by resampling the signal at non-integer rates. This method is applied on each selected window of the signal, leading to be more time consuming than the FOOOF method which is applied on the averaged power across the frequency bins of a frequency band.
+
+    IRASA, implemented with yasa library, methods, were implemented with the default parameters of the original publications [2].
+
+
+    - **Periodic/Aperiodic with FOOOF method** 
+    
+    The periodic/aperiodic power is estimated with the Fitting Oscillations & One-Over-F (FOOOF) method for the averaged power across the frequency bins of a frequency band [3].
+
+    The FOOOF method is based on the principle that the power spectrum can be decomposed into aperiodic (aperiodic) and periodic (periodic) components by fitting a model to the power spectrum.
+
+    FOOOF, implemented with fooof library, methods, were implemented with the default parameters of the original publications [3].
+
+    .. warning::
+
+        **FOOOF numerical sensitivity and reproducibility**
+
+        FOOOF uses peak detection and numerical optimization to separate periodic
+        and aperiodic components. Small numerical differences in the input spectrum
+        or fitting calculations can change the detected peaks or fitted parameters,
+        particularly for weak, overlapping or near-threshold peaks.
+
+        Results may therefore differ across operating systems, library versions or
+        numerical environments, even with the same data and analysis settings.
+        Differences need not be limited to the last decimal places: some fits can
+        produce noticeably different component powers while retaining similar
+        full-model error and R2 scores.
+
+        For reproducibility, record the Snooz and package versions, analysis
+        settings and numerical environment. Inspect the spectrum and fitted model
+        when results differ substantially; similar quality scores alone do not
+        establish equivalent periodic or aperiodic results.
+
+**7 - Output Files**
+    Whether the analysis is performed per sleep stage or per chosen annotations :  
 
         Define how to average the spectral power across the recording.
 
             - Choose "Total" to generate the average through the whole recording.
             - Choose "Distribution per hour" to generate the average for each elapsed clock hour from hour 1 to 9.
-            - Choose "Distribution per hour spent in each sleep stage" to generate the average for each stage hour from hour 1 to 9.
+            - Choose "Distribution per hour spent in each sleep stage" to generate the average for each stage hour from hour 1 to 9. (Only available if the analysis is performed per sleep stage)
             - Choose "Distribution per sleep cycle" to generate the average per sleep cycle, from sleep cycle 1 to 6.
         
         The maximum number of hours or sleep cycles are defined in the configuration page "Hours and Cycles".
@@ -130,16 +156,41 @@ For more details on accepted formats, see :ref:`accepted_format`.
  
     The output file is a .tsv (tab separated values) file. Each line is specific to a subject, a channel and a frequency band. 
 
-.. warning::
+    .. warning::
+        The output data is added (appended) to the output file, the output file will be modified each time the tool is run.
+
+    **Periodic/aperiodic report**
+
+    If the user selects the periodic/aperiodic power spectral analysis, two separate .tsv report files will be generated, one for the periodic power spectral analysis and one for the aperiodic power spectral analysis.
+
+    **FOOOF report**
     
-    The output data is added (appended) to the output file, the output file will be modified each time the tool is run.
+    The FOOOF periodic and aperiodic reports include columns ending in ``_fit_err`` and ``_fit_r2``. The prefix identifies the analyzed period and, when applicable, the sleep stage. For example, ``clock_h7_W_fit_err`` describes the fit for wakefulness during elapsed clock hour 7.
 
-.. note::
+    These indicators describe the **full fitted model** (periodic and aperiodic
+    components combined) over the analyzed frequency range. They do not measure
+    the accuracy of an individual peak or of either component separately. The same
+    scores are reported in both component reports and repeated across frequency
+    band rows for a given subject, channel and analyzed period.
 
-    If the user selects the rhythmic/arrhythmic power spectral analysis, two separate .tsv report files will be generated, one for the rhythmic power spectral analysis and one for the arrhythmic power spectral analysis.
+    ``_fit_err``
+        Mean absolute difference between the input log10 power spectrum and the
+        full fitted model. Lower values indicate a closer fit. The error is
+        expressed in log10 power space, not as a percentage or in linear power
+        units. It is missing when no fit was performed or no finite error is
+        available.
 
-Report
----------
+    ``_fit_r2``
+        Squared Pearson correlation between the input log10 power spectrum and
+        the full fitted model. Values closer to 1 indicate stronger agreement in
+        spectral shape, but do not guarantee accurate peak parameters or component
+        separation. It is missing when no fit was performed or the metric is
+        undefined.
+
+    No quality rejection threshold is applied: these indicators are provided for
+    inspection, and a low R2 or high error alone does not exclude the result from
+    the report. Missing indicators must not be interpreted as zero error or a
+    successful fit.
 
 .. toctree::
    Power_Spectral_Analysis/PSA_per_stage_info_csv
@@ -168,7 +219,24 @@ Version History
     - Improve path, filename, and extension handling for sleep cycle warning log file.
 
 * v3.1.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
-    - Rhythmic/Arhythmic power spectral analysis is now available in addition to the standard spectral analysis.
-    - The output report exports two separate reports for rhythmic and arrhythmic power spectral analysis if the user selects to analyse them.
+    - Periodic/Aperiodic power spectral analysis is now available in addition to the standard spectral analysis.
+    - The output report exports two separate reports for periodic and aperiodic power spectral analysis if the user selects to analyse them.
     - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
     - Add error handling workflow for duplicated sleep stages in the annotations file.
+
+* v4.6.2 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
+    - Fixed the widget enabling/disabling issue in Step 5: Annotation Selection.
+    - Replaced occurrences of the term "rhythmic" with "periodic" throughout the UI and output reports.
+    - Added support for artifact removal in per-annotation analyses.
+    - Added support for analyzing EEG power spectra based on the timing of events detected in another signal (e.g., REM tonic events detected in EOG signals).
+    - Added power distribution by hour and by sleep cycle to the spectral analysis per-annotation report.
+    - Unified column names across the per-stage and per-event reports.
+    - Ensure the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
+    - Made spectral bin selection robust to non-integer sampling rates and support minimum bandwidths as narrow as the frequency-bin resolution. 
+    - Optimized the report writing.
+    - Fixed minimum FFT window duration checks, particularly for non-integer sampling rates.
+    - Fixed filter cutoff validation prior to running the analysis.
+    - Fixed workspace loading to keep FOOOF and IRASA settings.
+    - Added full-model FOOOF fitting error and squared-correlation indicators to the periodic and aperiodic reports.
+    - Fixed labels that were cut in the Spectral Settings and Output Files steps.
+    - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).

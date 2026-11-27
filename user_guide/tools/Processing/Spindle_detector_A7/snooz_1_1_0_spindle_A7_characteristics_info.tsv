@@ -1,0 +1,13 @@
+A	group	Event group (spindle)
+B	name	Spindle event name (specific to the detection algorithm)
+C	start_sec	Spindle start time (s)
+D	duration_sec	Spindle total duration (s)
+E	channels	Channel label(s) where the spindle was detected
+F	stage	Sleep stage during which the spindle occurred (1=N1, 2=N2, 3=N3, 5=REM)
+G	cycle	Sleep cycle number (1-based) during which the spindle occurred
+H	dom_freq_Hz	Spindle dominant frequency (Hz), where spectral energy is maximum
+I	avg_freq_Hz	Spindle average frequency (Hz), counting peaks
+J	amp_pkpk_uV	Spindle peak-to-peak amplitude (uV)
+K	peak_sec	Duration (s) from spindle onset to the maximum peak-to-peak amplitude
+L	amp_rms_uV	Spindle Root Mean Square (RMS) amplitude (uV)
+M	rms_dur_uVsec	RMS Spindle Activity Index component: RMS amplitude x spindle duration (uV sec)

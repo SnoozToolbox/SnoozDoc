@@ -25,23 +25,23 @@ Quick reference
      - Version
      - Description
    * - :ref:`Mutual Info <module_mutualinfo>`
-     - 2.0.0
+     - 2.1.0
      - Finds the mutual information between two lists of signals.
    * - :ref:`PSA Compilation <module_psacompilation>`
-     - 2.2.0
+     - 2.3.0
      - Analyses and reports the PSD output.
    * - :ref:`PSA on Events <module_psaonevents>`
-     - 2.1.0
+     - 3.4.0
      - Compiles the PSA run on selected events.
    * - :ref:`Signal Stats <module_signalstats>`
-     - 2.0.0
+     - 2.0.1
      - Computes the mean and standard deviation of the input signals per epoch, per channel.
    * - :ref:`Sleep Staging Export Results <module_sleepstagingexportresults>`
-     - 2.0.0
+     - 2.0.1
      - Processes and visualizes sleep staging results.
    * - :ref:`Slow Wave Classifier <module_slowwaveclassifier>`
-     - 2.0.0
+     - 2.2.2
      - Classifies slow wave events based on a gaussian mixture.
    * - :ref:`Threshold Computation <module_thresholdcomputation>`
-     - 2.1.0
+     - 2.1.1
      - Computes the value to threshold (i.e. µV) from a signals (i.e. EEG time series)

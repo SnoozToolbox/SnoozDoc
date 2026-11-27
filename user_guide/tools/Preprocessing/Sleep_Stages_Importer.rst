@@ -40,3 +40,7 @@ Version History
     - Update UI description for 'number of rows to skip' in text importers.
     - UI improvements for consistent tool and input file descriptions.
     - Improve path, filename, and extension handling.
+
+* v2.3.1 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
+    - Fixed the "Original Label" text that was cut in the Input Stages Files step.
+    - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).

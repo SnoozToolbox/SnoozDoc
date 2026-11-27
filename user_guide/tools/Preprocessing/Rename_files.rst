@@ -39,3 +39,6 @@ Version History
 
 * v2.1.0 : Distributed with CEAMS package version 7.3.0 — Snooz beta 3.0.0
     - Fixed workspace loading to properly display files to rename.
+
+* v2.1.1 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
+    - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).

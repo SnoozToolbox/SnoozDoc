@@ -1,0 +1,8 @@
+A	group	Event group (REMs)
+B	name	REMs event name (specific to the detection algorithm)
+C	cycle	Sleep cycle number (1-based) during which the REM occurred
+D	stage	Sleep stage during which the REM occurred (1=N1, 2=N2, 3=N3, 5=REM)
+E	start_sec	REM start time (s)
+F	duration_sec	REM total duration (s)
+G	amplitude_uV	REM peak-to-peak amplitude (uV) of the difference between the left and right EOG channels
+H	channels	Channel labels used to detect the REM

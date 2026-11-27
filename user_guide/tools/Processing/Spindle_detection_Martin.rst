@@ -31,7 +31,11 @@ Two additional output reports are available :
          * Dominent frequency (Hz), where spectral energy is maximum
          * Average frequency (Hz) counting peaks
          * Peak-to-peak amplitude (µV)
+         * Duration from onset to maximum peak-to-peak amplitude (s)
          * Root Mean Square (rms) amplitude (µV)
+         * RMS-Duration products (µV*s)
+
+      See :ref:`spindle_Martin_characteristics_info_csv` for the variable definition. 
 
    **2. Spindle characteristics averaged by subject level**
       A file with the spindle characteristics averaged per subject.  One file for the cohort, one row per channel.
@@ -47,6 +51,9 @@ Two additional output reports are available :
          - per hour spent in each sleep stage
 
       See :ref:`spindle_Martin_cohort_info_csv` for the variable definition. 
+
+.. note::
+   RSAI (RMS Spindle Activity Index) is the sum of RMS-Duration products across all spindles. Other spindle characteristics are averaged values.
 
 Filtering Information
 ---------------------------
@@ -114,6 +121,7 @@ Report
 -----------------
 
 .. toctree::
+   Spindle_detector_Martin/spindle_Martin_characteristics_info_csv
    Spindle_detector_Martin/spindle_Martin_cohort_info_csv
       
 References
@@ -121,7 +129,7 @@ References
 
    [1] Iber, C., American Academy of Sleep Medicine, 2007. The AASM Manual for the Scoring of Sleep and Associated Events: Rules, Terminology and Technical Specifications. American Academy of Sleep Medicine. 
 
-[2] N. Martin et al., "Topography of age-related changes in sleep spindles," Neurobiol. Aging, vol. 34, no. 2, pp. 468-476, Feb. 2013, doi: 10.1016/j.neurobiolaging.2012.05.020.
+   [2] N. Martin et al., "Topography of age-related changes in sleep spindles," Neurobiol. Aging, vol. 34, no. 2, pp. 468-476, Feb. 2013, doi: 10.1016/j.neurobiolaging.2012.05.020.
 
 
 Version History
@@ -137,8 +145,15 @@ Version History
     - Fixed reporting of events starting at sleep stage transitions.
     - Improve path, filename, and extension handling for sleep cycle warning log file.
 
-
-
 * v2.8.0 : Distributed with CEAMS package version 7.4.0 — Snooz 1.0.0
     - Add error handling workflow for PSG loading from workspaces and display failed files in the UI.
     - Add error handling workflow for duplicated sleep stages.
+
+* v2.11.2 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
+    - Updated spindle characteristics files so that sleep cycle numbering starts at 1 instead of 0.
+    - Added the Spindle RMS-Duration product and the duration from onset to maximum peak-to-peak amplitude to the spindle characteristics report.
+    - Added the RMS Spindle Activity Index and the average duration from onset to peak to the cohort report.
+    - Added the per-event characteristics dictionary file for the spindle characteristics report.
+    - Ensured that the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
+    - Cleaned up the introduction picture.
+    - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).

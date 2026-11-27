@@ -29,18 +29,23 @@ Three additional output reports are available :
       Files with the signal characteristic of each slow wave event. One file per recording, one row per event.
 
       The characteristics included are : 
+      
+         * Total wave duration (s): corresponds to T on image (A)
+         * Frequency (Hz): inverse of total duration (1/T on image A)
+         * Peak-to-peak amplitude (µV): corresponds to H to D on image (A)
+         * Negative peak amplitude (µV): corresponds to H on image (A)
+         * Positive peak amplitude (µV): corresponds to D on image (A)
+         * Negative half-wave duration (s): duration of negative portion
+         * Negative peak occurrence (s): time from wave onset to negative peak
+         * Positive half-wave duration (s): duration of positive portion
+         * Positive peak occurrence (s): time from wave onset to positive peak
+         * Slopes (µV/s)
+            - Slope to negative peak (µV/s): from zero-crossing to negative peak
+            - Slope from positive peak (µV/s): from positive peak to zero-crossing
+            - Transition slope (µV/s): from negative peak to positive peak
+         * Transition frequency (Hz): inverse of twice the peak-to-peak interval [1/(2*tau) on image A]
 
-         * peak-to-peak amplitude (µV) corresponds to H to D on the image (A)
-         * duration (s) corresponds to T on the image (A)
-         * frequency (Hz) corresponds to 1/T on the image (A)
-         * negative peak amplitude (µV) correspond to H on the image (A)
-         * negative duration (s) 
-         * positive duration (s)
-         * transition frequency (Hz) corresponds to 1/(2 tau) on the image (A)
-         * slopes (µV/s)
-            - from the 0 crossing to the min of the negative component
-            - from the min of the negative component to the max of the positive component
-            - from the max of the positive to the 0 crossing
+      See :ref:`slow_wave_characteristics_info_csv` for the variable definition. 
 
    **2. Sleep stages**
       Files with the sleep stages selected for detection (useful to compute the slow wave density per division of the night). One file per recording, one row per sleep satge.
@@ -122,6 +127,7 @@ Report
 ---------------------------------------------------
 
 .. toctree::
+   Slow_Wave_detector/slow_wave_characteristics_info_csv
    Slow_Wave_detector/slow_wave_cohort_info_csv
 
 
@@ -151,3 +157,10 @@ Version History
     - Added an error-handling workflow for duplicated sleep stages.
     - Replaced the FIR filter with an IIR filter to reduce processing time while maintaining performance equivalent to the legacy detector.
     - Fixed Results View to allow exploration of detected events marked on the signal.
+
+* v2.11.1 : Distributed with CEAMS package version 7.5.0 — Snooz Toolbox 1.1.0
+    - Slow-wave detection can now be performed on PSG recordings without sleep-stage scoring.
+    - Added pos_peak_sec and neg_peak_sec as slow-wave characteristics and support for unscored data. 
+    - Ensure the multilingual PSG header reader uses UTF-8 encoding to generate valid UTF-8 reports.
+    - Added the per-event characteristics dictionary file for the slow-wave characteristics report.
+    - Updated the forms to the new look of Snooz Toolbox 1.1.0 (Inter font, light and dark themes).
