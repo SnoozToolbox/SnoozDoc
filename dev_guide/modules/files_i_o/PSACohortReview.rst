@@ -5,9 +5,9 @@ PSA Cohort Review
 
 **Module name:** ``PSACohortReview``
 
-**Package:** CEAMSModules 7.5.0
+**Package:** CEAMSModules 7.6.0
 
-**Version:** 2.6.1
+**Version:** 2.6.2
 
 Overview
 --------

@@ -300,7 +300,7 @@ All modules
    * - 50
      - :ref:`PSA Cohort Review <module_psacohortreview>`
      - Files I/O
-     - 2.6.1
+     - 2.6.2
      - Reads the PSA output file and generates the PSA file clean or transposed.
    * - 51
      - :ref:`PSGReader <module_psgreader>`
