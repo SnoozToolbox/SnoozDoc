@@ -5,9 +5,9 @@ Slow Wave Classifier
 
 **Module name:** ``SlowWaveClassifier``
 
-**Package:** CEAMSModules 7.5.0
+**Package:** CEAMSModules 7.6.0
 
-**Version:** 2.2.2
+**Version:** 2.2.3
 
 Overview
 --------

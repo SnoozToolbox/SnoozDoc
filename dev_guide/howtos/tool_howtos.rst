@@ -162,22 +162,22 @@ In your Python class that manages the UI, import the Base64 variable and set the
 
 **Example:**
 
-The **Classify Slow Waves** tool (``SlowWaveClassification``) from the CEAMS package shows a histogram of transition frequencies on its step ``SSWCIntroStep``.
-The file ``transition_frequency.png`` is converted to Base64 by ``create_images_file.py`` and stored in ``art_image_data.py``.
-The file ``SSWCIntroStep.py`` then loads the image and sets it on the QLabel as follows:
+The **Visualize Slow Waves** tool (``SlowWaveImages``) from the CEAMS package shows the curve of a slow wave on its step ``SlowWaveAlignment``.
+The file ``SW_signal_curve.png`` is converted to Base64 by ``create_images_file.py`` and stored in ``sw_alignment_data.py``.
+The file ``SlowWaveAlignment.py`` then loads the image and sets it on the QLabel as follows:
 
 .. code-block:: python
 
     def _load_embedded_image(self):
-        """Load the embedded base64 image data into image_hist."""
-        from .art_image_data import TRANSITION_FREQUENCY_IMAGE_BASE64
-        image_bytes = base64.b64decode(TRANSITION_FREQUENCY_IMAGE_BASE64)
+        """Load the embedded base64 image data into label_7."""
+        from .sw_alignment_data import SW_SIGNAL_CURVE_IMAGE_BASE64
+        image_bytes = base64.b64decode(SW_SIGNAL_CURVE_IMAGE_BASE64)
         pixmap = QPixmap()
         pixmap.loadFromData(image_bytes)
-        self.image_hist.setPixmap(pixmap)
+        self.label_7.setPixmap(pixmap)
 
 An illustration (a drawing, such as a simulated signal) is drawn by the code instead, in the colors of the theme: see Illustration in :ref:`tool_design_howtos`.
-The **Detect EEG Artifacts** tool draws its simulated artifacts this way (``artifact_drawing.py``).
+The **Detect EEG Artifacts** tool draws its simulated artifacts this way (``artifact_drawing.py``), and the **Classify Slow Waves** tool its histogram of transition frequencies (``classification_drawing.py``).
 
 
 How to add a resource to a step

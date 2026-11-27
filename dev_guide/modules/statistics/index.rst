@@ -40,7 +40,7 @@ Quick reference
      - 2.0.1
      - Processes and visualizes sleep staging results.
    * - :ref:`Slow Wave Classifier <module_slowwaveclassifier>`
-     - 2.2.2
+     - 2.2.3
      - Classifies slow wave events based on a gaussian mixture.
    * - :ref:`Threshold Computation <module_thresholdcomputation>`
      - 2.1.1
