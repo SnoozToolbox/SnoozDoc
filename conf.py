@@ -6,8 +6,8 @@ project = 'Snooz Toolbox'
 copyright = '2023-2026, Valorisation Recherche HSCM, Société en Commandite'
 author = 'Karine Lacourse, David Lévesque, Mohammad Hasan Azad, Hanieh Bazregarzadeh'
 
-release = '1.0.0'
-version = '1.0.0'
+release = '1.1.0'
+version = '1.1.0'
 
 # -- General configuration
 
